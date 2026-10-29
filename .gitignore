@@ -1,0 +1,7 @@
+in/
+out/
+_work/
+_st/
+__pycache__/
+*.pyc
+log.txt

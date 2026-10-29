@@ -1,0 +1,1 @@
+Swati Talks Tech. PHP, PHP2Shell, CVE, CVSS, CISA, FBI, NSA, SBI, RCE, zero-day, exploit, ransomware, phishing, malware, API, AI, LLM, ChatGPT, Claude, Anthropic, OpenAI, GitHub, Codespaces, Kubernetes, AWS, Azure, Linux, Windows, iPhone, Android, Wi-Fi, VPN, 2FA, OTP, UPI, Aadhaar, dark web, patch, firewall.
