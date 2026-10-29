@@ -17,6 +17,6 @@ GitHub Actions doing the heavy rendering.
 - `docs/PLAN_GUIDE.md` – plan.json format and the scene template catalogue.
 - `docs/examples/` – Black October plan (reference for a full news explainer).
 - `reels/<slug>/` – per-Reel transcript, plan, status, review images. `reels/glossary.txt` – words Whisper should spell right.
-- `.github/workflows/` – prepare, render, self-test. `ci/` – small helpers.
+- `.github/workflows/reel.yml` – the pipeline (prepare, render, self-test). `ci/` – small helpers.
 
 Engine version: see `VERSION` in `engine/reel.py`. The Claude skill "talking-head-reel-editor" drives all of this.
