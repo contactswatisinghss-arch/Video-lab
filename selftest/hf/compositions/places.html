@@ -1,0 +1,45 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #pl-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 900px;
+      background: radial-gradient(120% 75% at 50% 25%, rgba(7,10,18,.8) 0%, rgba(7,10,18,0) 100%); }
+    #pl-head { position: absolute; top: 230px; left: 0; width: 1080px; text-align: center;
+      font: 700 76px/1 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.03em; }
+    #pl-head span { display: block; margin-top: 14px; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .3em; color: #FF3B4E; }
+    .pl-card { position: absolute; left: 140px; width: 800px; height: 190px; border-radius: 36px;
+      background: rgba(7,10,18,.84); border: 3px solid rgba(255,59,78,.55); }
+    #pl-jp { top: 400px; } #pl-dk { top: 615px; }
+    .pl-flag { position: absolute; left: 34px; top: 35px; width: 120px; height: 120px; border-radius: 28px; background: #141a28; }
+    .pl-name { position: absolute; left: 186px; top: 36px; font: 700 68px 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.02em; }
+    .pl-status { position: absolute; left: 190px; top: 118px; font: 700 26px 'JetBrains Mono', monospace; color: #FF3B4E; letter-spacing: .1em; }
+    .pl-x { position: absolute; right: 40px; top: 55px; width: 80px; height: 80px; }
+  </style>
+  <div id="root" data-composition-id="places" data-width="1080" data-height="1920">
+    <div id="pl-scrim"></div>
+    <div id="pl-head">Government sites<span>WENT OFFLINE</span></div>
+    <div class="pl-card" id="pl-jp">
+      <svg class="pl-flag" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="#F2F4F7"/><circle cx="60" cy="60" r="26" fill="#FF3B4E"/></svg>
+      <div class="pl-name">Japan</div><div class="pl-status">STATUS: DOWN</div>
+      <svg class="pl-x" viewBox="0 0 80 80"><path id="pl-x1" d="M14 14 L66 66 M66 14 L14 66" stroke="#FF3B4E" stroke-width="10" stroke-linecap="round" fill="none" stroke-dasharray="148" stroke-dashoffset="148"/></svg>
+    </div>
+    <div class="pl-card" id="pl-dk">
+      <svg class="pl-flag" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="#C8102E"/><rect x="38" width="16" height="120" fill="#F2F4F7"/><rect y="52" width="120" height="16" fill="#F2F4F7"/></svg>
+      <div class="pl-name">Denmark</div><div class="pl-status">STATUS: DOWN</div>
+      <svg class="pl-x" viewBox="0 0 80 80"><path id="pl-x2" d="M14 14 L66 66 M66 14 L14 66" stroke="#FF3B4E" stroke-width="10" stroke-linecap="round" fill="none" stroke-dasharray="148" stroke-dashoffset="148"/></svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= find('government') - 0.05 }};          // this scene's start on the film clock
+      tl.fromTo("#pl-scrim", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+      tl.fromTo("#pl-head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0);
+      tl.fromTo("#pl-head span", { opacity: 0 }, { opacity: 1, duration: 0.15 }, {{find:down}} - S);
+      tl.fromTo("#pl-jp", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, {{= find('japan') - 0.25 }} - S);
+      tl.fromTo("#pl-x1", { attr: { "stroke-dashoffset": 148 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, {{= find('japan') + 0.2 }} - S);
+      tl.fromTo("#pl-dk", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, {{= find('denmark') - 0.25 }} - S);
+      tl.fromTo("#pl-x2", { attr: { "stroke-dashoffset": 148 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, {{= find('denmark') + 0.2 }} - S);
+      window.__timelines["places"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #ot-card { position: absolute; left: 90px; top: 250px; width: 900px; height: 470px; border-radius: 44px; background: rgba(7,10,18,.9);
+      border: 3px solid rgba(124,92,255,.7); }
+    #ot-k { position: absolute; top: 56px; left: 0; width: 900px; text-align: center; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .2em; color: #7C5CFF; }
+    #ot-t { position: absolute; top: 120px; left: 0; width: 900px; text-align: center; font: 700 86px/1.02 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.03em; }
+    #ot-follow { position: absolute; top: 760px; left: 340px; width: 400px; height: 104px; border-radius: 52px; background: #2EE59D;
+      font: 800 46px 'Inter', sans-serif; color: #070A12; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1080" data-height="1920">
+    <div id="ot-card">
+      <div id="ot-k">PART 2 · NEXT</div>
+      <div id="ot-t">When hackers hit<br/>the real world</div>
+    </div>
+    <div id="ot-follow">+ Follow</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#ot-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
+      tl.fromTo("#ot-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.2);
+      tl.fromTo("#ot-t", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.3);
+      tl.fromTo("#ot-follow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)" }, {{find:follow}} - {{= find('part') - 0.1 }} - 0.1);
+      window.__timelines["outro"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,49 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #stat-card { position: absolute; left: 90px; top: 250px; width: 900px; height: 560px; border-radius: 44px;
+      background: rgba(7,10,18,.82); box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+    #stat-ring { position: absolute; left: 60px; top: 70px; width: 420px; height: 420px; }
+    #stat-num { position: absolute; left: 60px; top: 70px; width: 420px; height: 420px; display: flex;
+      align-items: center; justify-content: center; font: 700 132px 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.04em; }
+    #stat-num small { font-size: 72px; color: #FF3B4E; margin-left: 4px; }
+    #stat-copy { position: absolute; left: 520px; top: 150px; width: 340px; }
+    #stat-k { font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #3DE0FF; }
+    #stat-t { margin-top: 18px; font: 700 50px/1.04 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.02em; }
+    #stat-t em { font-style: normal; color: #FF3B4E; }
+    #stat-exp { position: absolute; left: 520px; top: 330px; width: 330px; padding: 18px 22px; border-radius: 22px;
+      background: #FF3B4E; font: 700 30px/1.15 'JetBrains Mono', monospace; color: #F2F4F7; letter-spacing: .04em; }
+  </style>
+  <div id="root" data-composition-id="stat" data-width="1080" data-height="1920">
+    <div id="stat-card">
+      <svg id="stat-ring" viewBox="0 0 420 420">
+        <circle cx="210" cy="210" r="180" fill="none" stroke="rgba(242,244,247,.12)" stroke-width="26" />
+        <circle id="stat-arc" cx="210" cy="210" r="180" fill="none" stroke="#FF3B4E" stroke-width="26" stroke-linecap="round"
+                stroke-dasharray="1131" stroke-dashoffset="1131" transform="rotate(-90 210 210)" />
+      </svg>
+      <div id="stat-num"><span id="stat-val">0</span><small>%</small></div>
+      <div id="stat-copy">
+        <div id="stat-k">OF ALL WEBSITES</div>
+        <div id="stat-t">run on <em>PHP</em></div>
+      </div>
+      <div id="stat-exp">2 CRITICAL FLAWS → ALL EXPOSED</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const n = { v: 0 };
+      tl.fromTo("#stat-card", { opacity: 0, y: 40, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, 0);
+      tl.fromTo("#stat-arc", { attr: { "stroke-dashoffset": 1131 } }, { attr: { "stroke-dashoffset": 1131 * 0.3 }, duration: 0.9, ease: "power3.out" }, 0.15);
+      tl.fromTo(n, { v: 0 }, { v: 70, duration: 0.9, ease: "power3.out",
+        onUpdate: function () { document.getElementById("stat-val").textContent = Math.round(n.v); } }, 0.15);
+      tl.fromTo("#stat-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.4);
+      tl.fromTo("#stat-t", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.55);
+      // second beat on "critical": the risk lands on the same card
+      const S = {{= find('websites') - 1.15 }};
+      tl.fromTo("#stat-exp", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.4, ease: "back.out(2)" }, {{find:critical}} - S);
+      tl.to("#stat-arc", { attr: { "stroke-dashoffset": 0 }, duration: 0.6, ease: "power2.inOut" }, {{find:exposed}} - S);
+      window.__timelines["stat"] = tl;
+    })();
+  </script>
+</template>

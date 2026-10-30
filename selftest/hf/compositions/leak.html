@@ -1,0 +1,43 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #lk-panel { position: absolute; left: 70px; top: 250px; width: 940px; height: 520px; border-radius: 40px; background: rgba(7,10,18,.86); }
+    #lk-title { position: absolute; left: 60px; top: 48px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #3DE0FF; }
+    #lk-line { position: absolute; left: 110px; top: 250px; width: 720px; height: 8px; border-radius: 4px; background: rgba(242,244,247,.18); }
+    #lk-fill { position: absolute; left: 0; top: 0; width: 720px; height: 8px; border-radius: 4px; background: #FF3B4E; transform-origin: 0 50%; }
+    .lk-node { position: absolute; top: 222px; width: 64px; height: 64px; border-radius: 32px; }
+    #lk-n1 { left: 78px; background: #FF3B4E; } #lk-n2 { left: 798px; background: #2EE59D; }
+    .lk-date { position: absolute; top: 320px; font: 700 52px 'Space Grotesk', sans-serif; letter-spacing: -.02em; }
+    .lk-what { position: absolute; top: 386px; font: 600 32px 'Inter', sans-serif; color: #F2F4F7; }
+    #lk-d1 { left: 60px; color: #FF3B4E; } #lk-w1 { left: 60px; }
+    #lk-d2 { right: 60px; color: #2EE59D; text-align: right; } #lk-w2 { right: 60px; text-align: right; }
+    #lk-gap { position: absolute; left: 0; width: 940px; top: 150px; text-align: center; font: 700 40px 'Space Grotesk', sans-serif; color: #F2F4F7; }
+    #lk-gap b { color: #FF3B4E; }
+  </style>
+  <div id="root" data-composition-id="leak" data-width="1080" data-height="1920">
+    <div id="lk-panel">
+      <div id="lk-title">HOW IT LEAKED</div>
+      <div id="lk-gap">the leak beat the fix by <b>1 day</b></div>
+      <div id="lk-line"><div id="lk-fill"></div></div>
+      <div class="lk-node" id="lk-n1"></div><div class="lk-node" id="lk-n2"></div>
+      <div class="lk-date" id="lk-d1">21 OCT</div><div class="lk-what" id="lk-w1">flaw leaked</div>
+      <div class="lk-date" id="lk-d2">22 OCT</div><div class="lk-what" id="lk-w2">fix was planned</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= find('flaw') - 0.1 }};
+      tl.fromTo("#lk-panel", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0);
+      tl.fromTo("#lk-title", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.15);
+      tl.fromTo("#lk-n2", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(1.6)" }, 0.25);
+      tl.fromTo(["#lk-d2", "#lk-w2"], { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.06 }, 0.3);
+      // on "leaked": the red node lands on the earlier day and the line floods red
+      tl.fromTo("#lk-n1", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(1.6)" }, {{find:leaked}} - S);
+      tl.fromTo(["#lk-d1", "#lk-w1"], { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.06 }, {{find:leaked}} - S + 0.05);
+      tl.fromTo("#lk-fill", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, {{find:leaked}} - S + 0.1);
+      tl.fromTo("#lk-gap", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, {{find:before}} - S);
+      window.__timelines["leak"] = tl;
+    })();
+  </script>
+</template>

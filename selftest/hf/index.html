@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"
+  data-composition-variables='[
+    {"id":"color-ground","type":"color","label":"Ground","default":"#070A12"},
+    {"id":"color-ink","type":"color","label":"Ink","default":"#F2F4F7"},
+    {"id":"color-threat","type":"color","label":"Threat","default":"#FF3B4E"},
+    {"id":"color-fix","type":"color","label":"Fix","default":"#2EE59D"},
+    {"id":"color-signal","type":"color","label":"Signal","default":"#3DE0FF"}
+  ]'>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070A12; }
+    #footage { position: absolute; inset: 0; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 42%; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+</head>
+<body>
+  <!-- Self-test Reel: the footage plays full frame; each beat is its own scene, timed to spoken words. -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="footage" class="clip" data-start="0" data-duration="{{dur}}" data-track-index="0" style="z-index:1">
+      <div id="cam">
+        <video id="base" src="assets/base.mp4" data-has-audio="true" playsinline></video>
+      </div>
+    </div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0.05" data-duration="{{= find('websites') - 1.2 }}"
+         data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="stat" data-composition-id="stat" data-composition-src="compositions/stat.html"
+         data-start="{{= find('websites') - 1.15 }}" data-duration="{{= find('government') - find('websites') + 1.05 }}"
+         data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="places" data-composition-id="places" data-composition-src="compositions/places.html"
+         data-start="{{= find('government') - 0.05 }}" data-duration="{{= find('flaw') - find('government') - 0.05 }}"
+         data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="leak" data-composition-id="leak" data-composition-src="compositions/leak.html"
+         data-start="{{= find('flaw') - 0.1 }}" data-duration="{{= find('patched') - find('flaw') - 0.25 }}"
+         data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="fix" data-composition-id="fix" data-composition-src="compositions/fix.html"
+         data-start="{{= find('patched') - 0.35 }}" data-duration="{{= find('part') - find('patched') + 0.25 }}"
+         data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+         data-start="{{= find('part') - 0.1 }}" data-duration="{{= dur - find('part') + 0.1 }}"
+         data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="7" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // Camera: hard punch-ins on the hook and on the turn ("leaked"), a release on the fix.
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cam", { scale: 1.14 }, 0)
+      .set("#cam", { scale: 1.0 }, {{= find('websites') - 1.15 }})
+      .set("#cam", { scale: 1.07 }, {{= find('government') - 0.05 }})
+      .set("#cam", { scale: 1.16 }, {{find:leaked}})
+      .set("#cam", { scale: 1.0 }, {{= find('patched') - 0.35 }});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>
