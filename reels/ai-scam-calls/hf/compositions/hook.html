@@ -1,0 +1,51 @@
+<template>
+  <!-- HOOK (glass type): a frosted carbon pane over the light wall; title is on frame 0 (thumbnail);
+       the lock stamp lands on "access". -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #hk-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 820px;
+      background: linear-gradient(180deg, rgba(10,11,14,.55) 0%, rgba(10,11,14,.25) 70%, rgba(10,11,14,0) 100%); }
+    #hk-pane { position: absolute; left: 60px; top: 186px; width: 960px; height: 420px; border-radius: 44px; overflow: hidden;
+      background: rgba(12,14,18,.62); backdrop-filter: blur(24px) saturate(130%); -webkit-backdrop-filter: blur(24px) saturate(130%);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.16), 0 30px 70px rgba(0,0,0,.35); }
+    #hk-k { position: absolute; left: 56px; top: 48px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #FFB547; }
+    #hk-k b { color: #F5F6F8; font-weight: 700; }
+    #hk-t { position: absolute; left: 52px; top: 104px; font: 700 132px/0.92 'Space Grotesk', sans-serif; letter-spacing: -.045em; color: #F5F6F8; }
+    .hk-l { display: block; }
+    .hk-w { display: inline-block; }
+    #hk-sheen { position: absolute; top: -120px; left: 0; width: 200px; height: 700px;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.22), rgba(255,255,255,0)); }
+    #hk-stamp { position: absolute; left: 590px; top: 552px; width: 390px; height: 112px; border-radius: 22px;
+      border: 7px solid #FFB547; background: rgba(12,14,18,.9); display: flex; align-items: center; justify-content: center; gap: 18px;
+      font: 700 46px 'JetBrains Mono', monospace; letter-spacing: .06em; color: #FFB547; }
+    #hk-stamp svg { width: 58px; height: 58px; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hk-scrim"></div>
+    <div id="hk-pane">
+      <div id="hk-k">GEMINI 4 CARBON <b>·</b> OCT 28</div>
+      <div id="hk-t"><span class="hk-l"><span class="hk-w" id="hk-w1">Google's</span></span><span class="hk-l"><span class="hk-w" id="hk-w2">strongest</span> <span class="hk-w" id="hk-w3">AI</span></span></div>
+      <div id="hk-sheen"></div>
+    </div>
+    <div id="hk-stamp"><svg viewBox="0 0 60 60"><rect x="8" y="26" width="44" height="30" rx="6" fill="#FFB547"/><path d="M17 26V18a13 13 0 0 1 26 0v8" fill="none" stroke="#FFB547" stroke-width="6"/></svg>NO ACCESS</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // frame 0 already reads (thumbnail): pane and words start visible and settle in
+      tl.fromTo("#hk-scrim", { opacity: 0.7 }, { opacity: 1, duration: 0.3 }, 0);
+      tl.fromTo("#hk-pane", { opacity: 0.85, y: 20, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, 0);
+      tl.fromTo(".hk-w", { opacity: 0.35, y: 36, filter: "blur(6px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.34, ease: "expo.out", stagger: 0.08 }, 0);
+      tl.fromTo("#hk-k", { opacity: 0.4 }, { opacity: 1, duration: 0.25 }, 0.1);
+      tl.fromTo("#hk-sheen", { x: -300, rotation: 16 }, { x: 1150, rotation: 16, duration: 0.9, ease: "power2.inOut" }, {{at:w11-0.2}});
+      // "strongest" gets a beat
+      tl.fromTo("#hk-w2", { color: "#F5F6F8" }, { color: "#FFB547", duration: 0.15 }, {{at:w11}});
+      // "access" -> stamp slams on
+      tl.fromTo("#hk-stamp", { opacity: 0, scale: 1.6, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.28, ease: "back.out(2.2)" }, {{at:w18-0.05}});
+      tl.fromTo("#hk-pane", { x: 0 }, { x: 10, duration: 0.05, ease: "none", yoyo: true, repeat: 3 }, {{at:w18+0.2}});
+      tl.to("#hk-pane, #hk-stamp, #hk-scrim", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w31-0.2}});
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

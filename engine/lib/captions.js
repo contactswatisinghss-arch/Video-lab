@@ -38,8 +38,9 @@
       var next = out[gi + 1];
       var start = Math.max(0.05, ws[0].start - 0.04);
       var end = ws[ws.length - 1].end + hold;
-      if (next) end = Math.min(end, next[0].start - 0.06);
-      end = Math.max(end, ws[ws.length - 1].end + 0.08);
+      // never overlap the next group (it appears 0.04 s before its first word): the next group always wins
+      if (next) end = Math.min(end, Math.max(0.05, next[0].start - 0.04) - 0.02);
+      end = Math.max(end, start + 0.12);
       return { words: ws, start: start, end: end };
     });
   }

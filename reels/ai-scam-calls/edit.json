@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "slug": "ai-scam-calls",
+  "title": "Gemini 4 Carbon: Google's strongest AI, locked",
+  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.0,
+           "remove": [[11.1, 14.75], [17.25, 19.45], [24.8, 31.66], [51.5, 52.8]]},
+  "fixes": [["pre -release", "pre-release"]],
+  "fonts": ["Space Grotesk"],
+  "cover_at": 0.6,
+  "audio": {"loudnorm": true},
+  "post": {
+    "caption": "Google's strongest AI… and you can't use it 🔒\n\nGemini 4 Carbon finds, validates and patches security flaws. The same skills could help attackers, so Google is giving it to vetted cyber-defenders first.\n\nShould AI this powerful stay locked? Tell me 👇\nFollow: I'll test it the day it opens.",
+    "hashtags": ["#Gemini4", "#GoogleAI", "#Cybersecurity", "#AINews", "#TechNews"]
+  }
+}
