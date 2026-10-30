@@ -1,1 +1,2 @@
-"""Reel engine package. See engine/reel.py and docs/."""
+"""Reel engine v2: topic-independent media work for the HyperFrames Reel pipeline."""
+VERSION = "2.0.0"
