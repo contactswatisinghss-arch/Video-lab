@@ -1,0 +1,395 @@
+{
+ "duration": 21.7,
+ "raw_duration": 24.64,
+ "keeps": [
+  [
+   0.0,
+   1.8333
+  ],
+  [
+   2.2333,
+   5.0333
+  ],
+  [
+   5.3,
+   8.3667
+  ],
+  [
+   8.7333,
+   11.8
+  ],
+  [
+   12.1,
+   14.5
+  ],
+  [
+   14.8,
+   15.8333
+  ],
+  [
+   16.1333,
+   20.2667
+  ],
+  [
+   20.6,
+   23.9667
+  ]
+ ],
+ "removed_seconds": 2.94,
+ "words": [
+  {
+   "id": "w0",
+   "text": "They",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "id": "w1",
+   "text": "are",
+   "start": 0.14,
+   "end": 0.26
+  },
+  {
+   "id": "w2",
+   "text": "calling",
+   "start": 0.26,
+   "end": 0.62
+  },
+  {
+   "id": "w3",
+   "text": "it",
+   "start": 0.62,
+   "end": 0.8
+  },
+  {
+   "id": "w4",
+   "text": "Black",
+   "start": 0.8,
+   "end": 1.08
+  },
+  {
+   "id": "w5",
+   "text": "October.",
+   "start": 1.08,
+   "end": 1.72
+  },
+  {
+   "id": "w6",
+   "text": "70",
+   "start": 1.94,
+   "end": 2.26
+  },
+  {
+   "id": "w7",
+   "text": "%",
+   "start": 2.26,
+   "end": 2.7
+  },
+  {
+   "id": "w8",
+   "text": "of",
+   "start": 2.7,
+   "end": 3.04
+  },
+  {
+   "id": "w9",
+   "text": "websites",
+   "start": 3.04,
+   "end": 3.48
+  },
+  {
+   "id": "w10",
+   "text": "run",
+   "start": 3.48,
+   "end": 3.86
+  },
+  {
+   "id": "w11",
+   "text": "on",
+   "start": 3.86,
+   "end": 4.08
+  },
+  {
+   "id": "w12",
+   "text": "PHP,",
+   "start": 4.08,
+   "end": 4.52
+  },
+  {
+   "id": "w13",
+   "text": "and",
+   "start": 4.733,
+   "end": 4.913
+  },
+  {
+   "id": "w14",
+   "text": "two",
+   "start": 4.913,
+   "end": 5.173
+  },
+  {
+   "id": "w15",
+   "text": "critical",
+   "start": 5.173,
+   "end": 5.673
+  },
+  {
+   "id": "w16",
+   "text": "flaws",
+   "start": 5.673,
+   "end": 6.033
+  },
+  {
+   "id": "w17",
+   "text": "just",
+   "start": 6.033,
+   "end": 6.393
+  },
+  {
+   "id": "w18",
+   "text": "left",
+   "start": 6.393,
+   "end": 6.733
+  },
+  {
+   "id": "w19",
+   "text": "them",
+   "start": 6.733,
+   "end": 7.013
+  },
+  {
+   "id": "w20",
+   "text": "exposed.",
+   "start": 7.013,
+   "end": 7.573
+  },
+  {
+   "id": "w21",
+   "text": "Government",
+   "start": 7.827,
+   "end": 8.207
+  },
+  {
+   "id": "w22",
+   "text": "sites",
+   "start": 8.207,
+   "end": 8.627
+  },
+  {
+   "id": "w23",
+   "text": "went",
+   "start": 8.627,
+   "end": 8.967
+  },
+  {
+   "id": "w24",
+   "text": "down",
+   "start": 8.967,
+   "end": 9.267
+  },
+  {
+   "id": "w25",
+   "text": "in",
+   "start": 9.267,
+   "end": 9.427
+  },
+  {
+   "id": "w26",
+   "text": "Japan",
+   "start": 9.427,
+   "end": 9.707
+  },
+  {
+   "id": "w27",
+   "text": "and",
+   "start": 9.707,
+   "end": 10.167
+  },
+  {
+   "id": "w28",
+   "text": "Denmark.",
+   "start": 10.167,
+   "end": 10.647
+  },
+  {
+   "id": "w29",
+   "text": "The",
+   "start": 10.867,
+   "end": 11.027
+  },
+  {
+   "id": "w30",
+   "text": "flaw",
+   "start": 11.027,
+   "end": 11.267
+  },
+  {
+   "id": "w31",
+   "text": "leaked",
+   "start": 11.267,
+   "end": 11.587
+  },
+  {
+   "id": "w32",
+   "text": "one",
+   "start": 11.587,
+   "end": 11.927
+  },
+  {
+   "id": "w33",
+   "text": "day",
+   "start": 11.927,
+   "end": 12.207
+  },
+  {
+   "id": "w34",
+   "text": "before",
+   "start": 12.207,
+   "end": 12.527
+  },
+  {
+   "id": "w35",
+   "text": "the",
+   "start": 12.527,
+   "end": 12.747
+  },
+  {
+   "id": "w36",
+   "text": "fix.",
+   "start": 12.747,
+   "end": 13.047
+  },
+  {
+   "id": "w37",
+   "text": "Now",
+   "start": 13.267,
+   "end": 13.447
+  },
+  {
+   "id": "w38",
+   "text": "it",
+   "start": 13.447,
+   "end": 13.587
+  },
+  {
+   "id": "w39",
+   "text": "is",
+   "start": 13.587,
+   "end": 13.747
+  },
+  {
+   "id": "w40",
+   "text": "patched.",
+   "start": 13.747,
+   "end": 14.087
+  },
+  {
+   "id": "w41",
+   "text": "If",
+   "start": 14.327,
+   "end": 14.467
+  },
+  {
+   "id": "w42",
+   "text": "you",
+   "start": 14.467,
+   "end": 14.607
+  },
+  {
+   "id": "w43",
+   "text": "own",
+   "start": 14.607,
+   "end": 14.787
+  },
+  {
+   "id": "w44",
+   "text": "a",
+   "start": 14.787,
+   "end": 14.907
+  },
+  {
+   "id": "w45",
+   "text": "website,",
+   "start": 14.907,
+   "end": 15.387
+  },
+  {
+   "id": "w46",
+   "text": "ask",
+   "start": 15.727,
+   "end": 15.927
+  },
+  {
+   "id": "w47",
+   "text": "your",
+   "start": 15.927,
+   "end": 16.127
+  },
+  {
+   "id": "w48",
+   "text": "host",
+   "start": 16.127,
+   "end": 16.467
+  },
+  {
+   "id": "w49",
+   "text": "to",
+   "start": 16.467,
+   "end": 16.707
+  },
+  {
+   "id": "w50",
+   "text": "update",
+   "start": 16.707,
+   "end": 17.067
+  },
+  {
+   "id": "w51",
+   "text": "PHP",
+   "start": 17.067,
+   "end": 17.707
+  },
+  {
+   "id": "w52",
+   "text": "today.",
+   "start": 17.707,
+   "end": 18.207
+  },
+  {
+   "id": "w53",
+   "text": "Part",
+   "start": 18.433,
+   "end": 18.633
+  },
+  {
+   "id": "w54",
+   "text": "2",
+   "start": 18.633,
+   "end": 18.953
+  },
+  {
+   "id": "w55",
+   "text": "is",
+   "start": 18.953,
+   "end": 19.133
+  },
+  {
+   "id": "w56",
+   "text": "coming,",
+   "start": 19.133,
+   "end": 19.533
+  },
+  {
+   "id": "w57",
+   "text": "so",
+   "start": 19.833,
+   "end": 20.013
+  },
+  {
+   "id": "w58",
+   "text": "follow.",
+   "start": 20.013,
+   "end": 20.373
+  }
+ ]
+}
