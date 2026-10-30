@@ -14,7 +14,22 @@ def loudness(video):
     m = re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)
     return float(m[-1]) if m else None
 
-def analyse(video, out, url=None, model="small.en"):
+def metrics(info):
+    """Engagement numbers from a yt-dlp info dict (saves are never public; shares rarely are)."""
+    if not info: return {}
+    g = lambda k: info.get(k)
+    v = g("view_count") or 0
+    m = {"title": g("title"), "uploader": g("uploader") or g("channel"), "followers": g("channel_follower_count"),
+         "upload_date": g("upload_date"), "views": g("view_count"), "likes": g("like_count"),
+         "comments": g("comment_count"), "shares": g("repost_count"), "platform": g("extractor_key"),
+         "url": g("webpage_url") or g("original_url")}
+    if v:
+        if m["likes"] is not None: m["like_rate"] = round(m["likes"] / v, 4)
+        if m["comments"] is not None: m["comment_rate"] = round(m["comments"] / v, 5)
+        if m["followers"]: m["views_per_follower"] = round(v / m["followers"], 2)
+    return {k: x for k, x in m.items() if x is not None}
+
+def analyse(video, out, url=None, model="small.en", info=None):
     os.makedirs(out, exist_ok=True)
     meta = probe(video)
     d = meta["duration"]
@@ -28,7 +43,7 @@ def analyse(video, out, url=None, model="small.en"):
     speech = sum(w["e"] - w["s"] for w in words)
     first3 = " ".join(w["w"] for w in words if w["s"] < 3.0)
     res = {
-        "url": url, "duration": round(d, 2), "size": [meta["width"], meta["height"]], "fps": meta["fps"],
+        "url": url, "engagement": metrics(info), "duration": round(d, 2), "size": [meta["width"], meta["height"]], "fps": meta["fps"],
         "cuts": len(cuts), "cut_times": cuts[:80],
         "avg_shot_s": round(sum(shots) / len(shots), 2) if shots else None,
         "shortest_shot_s": round(min(shots), 2) if shots else None,
