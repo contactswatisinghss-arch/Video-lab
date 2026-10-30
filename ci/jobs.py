@@ -10,6 +10,7 @@ Jobs
   references  references/queue.txt has a name without analysis, or a release tagged ref-<name>
   selftest    selftest/run.txt changed  -> selftest/out/result.json
 Each job writes a status.json (ok, log tail, links) so Claude can follow along without Actions logs.
+status/heartbeat.json is pushed as each job starts, so a stuck or slow job is visible.
 """
 import glob, hashlib, json, os, re, shutil, subprocess, sys, time, traceback
 
@@ -133,7 +134,7 @@ def hf_check_snap_render(build, out_dir, quality):
     summary["snapshot_ok"] = rc2 == 0
     t0 = time.time()
     render = os.path.join(out_dir, "render.mp4")
-    sh(f"hyperframes render --quality {quality} --fps 30 --output {os.path.abspath(render)}", cwd=build, timeout=7200)
+    sh(f"hyperframes render --quality {quality} --fps 30 --output {os.path.abspath(render)}", cwd=build, timeout=int(E("RENDER_TIMEOUT", "3000")))
     summary["render_seconds"] = round(time.time() - t0)
     return summary, render
 
@@ -436,6 +437,22 @@ def queue():
                 out.append((parts[0], parts[1]))
     return out
 
+HEARTBEAT = "status/heartbeat.json"
+
+def heartbeat(state, jobs=None, current=None):
+    """Push a tiny 'what is running now' file right away (Claude can't see Actions logs). Never fails the run."""
+    try:
+        jsave(HEARTBEAT, {"state": state, "current": current, "pending": jobs, "time": NOW(), "run": E("RUN_URL")})
+        sh(["git", "config", "user.name", "reel-bot"]); sh(["git", "config", "user.email", "reel-bot@users.noreply.github.com"])
+        sh(["git", "add", "-f", HEARTBEAT]); sh(["git", "commit", "-q", "-m", f"reel-bot: heartbeat {state} {current or ''}".strip()], check=False)
+        br = E("BRANCH", "main")
+        for i in range(3):
+            if sh(["git", "pull", "-q", "--rebase", "--autostash", "-X", "theirs", "origin", br], check=False)[0] == 0 and \
+               sh(["git", "push", "-q", "origin", f"HEAD:{br}"], check=False)[0] == 0: return
+            time.sleep(3)
+    except Exception as e:
+        log(f"heartbeat failed: {e}")
+
 def commit(msg):
     paths = sorted(p for p in changed_paths if os.path.exists(p))
     if not paths: log("Nothing to commit"); return
@@ -446,7 +463,7 @@ def commit(msg):
     sh(["git", "commit", "-q", "-m", msg])
     br = E("BRANCH", "main")
     for i in range(6):
-        if sh(["git", "pull", "-q", "--rebase", "-X", "theirs", "origin", br], check=False)[0] == 0 and \
+        if sh(["git", "pull", "-q", "--rebase", "--autostash", "-X", "theirs", "origin", br], check=False)[0] == 0 and \
            sh(["git", "push", "-q", "origin", f"HEAD:{br}"], check=False)[0] == 0: return
         time.sleep(5 * (i + 1))
     raise RuntimeError("could not push results")
@@ -458,9 +475,11 @@ def main():
     jobs = pending()
     log(f"Pending: {jobs}")
     done = []
+    names = [" ".join(map(str, j[:2])) for j in jobs]
     for j in jobs:
         kind = j[0]
         log(f"\n======== {kind} {' '.join(map(str, j[1:]))} ========")
+        heartbeat("running", names, " ".join(map(str, j[:2])))
         try:
             if kind == "prepare": job_prepare(j[1])
             elif kind == "preview": job_preview(j[1])
@@ -473,6 +492,7 @@ def main():
             done.append(" ".join(map(str, j[:2])))
         except Exception:
             log(traceback.format_exc())
+    if jobs: jsave(HEARTBEAT, {"state": "idle", "last": names, "done": done, "time": NOW(), "run": E("RUN_URL")}); changed_paths.add(HEARTBEAT)
     commit("reel-bot: " + (", ".join(done) or "no-op"))
 
 if __name__ == "__main__":
