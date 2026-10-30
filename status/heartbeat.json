@@ -1,10 +1,12 @@
 {
-  "state": "running",
-  "current": "selftest",
-  "pending": [
+  "state": "idle",
+  "last": [
     "final ai-scam-calls",
     "selftest"
   ],
-  "time": "2026-10-30 12:04:33 UTC",
+  "done": [
+    "final ai-scam-calls"
+  ],
+  "time": "2026-10-30 12:07:21 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41051532728"
 }
