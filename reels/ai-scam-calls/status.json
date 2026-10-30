@@ -1,0 +1,30 @@
+{
+  "slug": "ai-scam-calls",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-10-30 10:11:10 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41037334588",
+  "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/ai-scam-calls",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-10-30 10:11:10 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41037334588",
+    "raw": "ABB933AB-675B-4712-8DD3-089D62409CC4.mp4",
+    "words": 208,
+    "duration": 76.566667,
+    "warnings": [
+      "HDR (iPhone) source: converted to standard range.",
+      "Audio is quiet (mean -36.3 dB): loudness is normalised, but background noise rises too.",
+      "5 low-confidence words (check names/jargon): at(w28), speed(w29), considering(w69), that(w73), Access(w82)"
+    ],
+    "token": ""
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-10-30 10:11:10 UTC"
+    }
+  ]
+}
