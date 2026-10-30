@@ -15,6 +15,9 @@ status/heartbeat.json is pushed as each job starts, and each job's results are c
 """
 import glob, hashlib, json, os, re, shutil, subprocess, sys, time, traceback
 
+# jobs.py runs as `python ci/jobs.py`, so put the repo root on the path for `from engine... import`
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 E = os.environ.get
 NOW = lambda: time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 VIDEO_EXT = (".mp4", ".mov", ".m4v", ".mkv", ".webm")
