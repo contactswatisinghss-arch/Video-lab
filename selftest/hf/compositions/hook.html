@@ -39,7 +39,7 @@
       // a red scan passes down the title once, like a security sweep
       tl.fromTo("#hook-scan", { y: 0, opacity: 0 }, { y: 360, opacity: 1, duration: 0.55, ease: "power2.inOut" }, 0.45);
       tl.to("#hook-scan", { opacity: 0, duration: 0.15 }, 1.0);
-      tl.fromTo("#hook-kicker", { opacity: 0, letterSpacing: "0.5em" }, { opacity: 1, letterSpacing: "0.2em", duration: 0.5, ease: "expo.out" }, 0.3);
+      tl.fromTo("#hook-kicker", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0.3);
       tl.fromTo("#hook-sub", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.9);
       window.__timelines["hook"] = tl;
     })();

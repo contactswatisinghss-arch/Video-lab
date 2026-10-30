@@ -171,6 +171,18 @@ def load_edit(reel_dir):
     p = os.path.join(reel_dir, "edit.json")
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
 
+GSAP_TAG = '<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>'
+
+def harden_html(txt, fontfaces, is_root):
+    """Safety net for HyperFrames rules that are easy to forget (they fail the render, not the local preview):
+    the root page must load GSAP itself; each <template> scene is linted alone, so it needs its own @font-face."""
+    if is_root and "gsap.timeline" in txt and not re.search(r'<script[^>]+src="[^"]*gsap(\.min)?\.js"', txt):
+        txt = txt.replace("</head>", "  " + GSAP_TAG + "\n</head>", 1) if "</head>" in txt else GSAP_TAG + "\n" + txt
+    if not is_root and fontfaces and txt.lstrip().startswith("<template") and "@font-face" not in txt:
+        if "<style>" in txt: txt = txt.replace("<style>", "<style>\n" + fontfaces + "\n", 1)
+        else: txt = txt.replace("<template>", "<template>\n<style>\n" + fontfaces + "\n</style>", 1)
+    return txt
+
 def build_project(reel_dir, out_dir, fontfaces=""):
     """Copy reels/<slug>/hf to out_dir with tokens resolved; write timeline.json. No video needed."""
     edit = load_edit(reel_dir)
@@ -189,8 +201,9 @@ def build_project(reel_dir, out_dir, fontfaces=""):
         for f in files:
             sp, dp = os.path.join(root, f), os.path.join(out_dir, rel, f)
             if f.endswith((".html", ".css", ".js", ".json", ".svg", ".md")):
-                txt = open(sp, encoding="utf-8").read()
-                open(dp, "w", encoding="utf-8").write(resolve(txt, tl, fontfaces, where=os.path.join(rel, f)))
+                txt = resolve(open(sp, encoding="utf-8").read(), tl, fontfaces, where=os.path.join(rel, f))
+                if f.endswith(".html"): txt = harden_html(txt, fontfaces, is_root=(rel == "." and f == "index.html"))
+                open(dp, "w", encoding="utf-8").write(txt)
             else:
                 shutil.copy(sp, dp)
     json.dump(tl.to_json(), open(os.path.join(reel_dir, "timeline.json"), "w"), indent=1)

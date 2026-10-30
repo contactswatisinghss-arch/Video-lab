@@ -13,20 +13,19 @@
     {{fontfaces}}
     html, body { margin: 0; background: #000; }
     #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070A12; }
-    #footage { position: absolute; inset: 0; }
     #cam { position: absolute; inset: 0; transform-origin: 50% 42%; }
     #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 </head>
 <body>
   <!-- Self-test Reel: the footage plays full frame; each beat is its own scene, timed to spoken words. -->
   <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
        data-width="1080" data-height="1920" data-fps="30">
 
-    <div id="footage" class="clip" data-start="0" data-duration="{{dur}}" data-track-index="0" style="z-index:1">
-      <div id="cam">
-        <video id="base" src="assets/base.mp4" data-has-audio="true" playsinline></video>
-      </div>
+    <!-- footage: an untimed camera wrapper (punch-ins tween it) around the timed video -->
+    <div id="cam" style="z-index:1">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
     </div>
 
     <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"

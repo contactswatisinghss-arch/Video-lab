@@ -1,2 +1,1 @@
-Change this file to re-run the self-test.
-run 2
+run 2: after GSAP/footage/font fixes (2026-10-30)
