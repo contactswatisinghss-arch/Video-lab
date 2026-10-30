@@ -4,13 +4,14 @@ pending work even if GitHub skipped a queued run.
 Jobs
   prepare     release published (tag = reel slug) or reels/<slug>/PREPARE changed
               -> transcript.json/.txt, words.tsv, meta.json, frames.jpg; proxy.mp4 attached to the release
-  preview     reels/<slug>/{edit.json, hf/**} changed since the last preview
+  preview     reels/<slug>/{edit.json, hf/**} changed since the last preview (or the last preview failed)
               -> HyperFrames check + review sheets + draft render (preview.mp4 on the release)
-  final       reels/<slug>/RENDER created/changed (the approval)  -> final_reel.mp4, cover.jpg, caption.txt on the release
+  final       reels/<slug>/RENDER created/changed (the approval), or the last final failed
+              -> final_reel.mp4, cover.jpg, caption.txt on the release
   references  references/queue.txt has a name without analysis, or a release tagged ref-<name>
   selftest    selftest/run.txt changed  -> selftest/out/result.json
 Each job writes a status.json (ok, log tail, links) so Claude can follow along without Actions logs.
-status/heartbeat.json is pushed as each job starts, so a stuck or slow job is visible.
+status/heartbeat.json is pushed as each job starts, and each job's results are committed as soon as it ends.
 """
 import glob, hashlib, json, os, re, shutil, subprocess, sys, time, traceback
 
@@ -70,7 +71,13 @@ def raw_asset(tag):
     return max(vids, key=lambda x: x[1])[0]
 
 def upload(tag, *files):
-    sh(["gh", "release", "upload", tag, *files, "--clobber"])
+    """Upload to the release; retries because GitHub's API has brief outages (a 503 cost us a preview once)."""
+    for i in range(4):
+        rc, _ = sh(["gh", "release", "upload", tag, *files, "--clobber"], check=False, timeout=900)
+        if rc == 0: return
+        log(f"upload attempt {i + 1} failed (exit {rc}); retrying")
+        time.sleep(15 * (i + 1))
+    raise RuntimeError(f"could not upload {', '.join(os.path.basename(f) for f in files)} to release {tag} after 4 tries")
 
 # ------------------------------------------------------------------ status
 def status_path(slug): return os.path.join("reels", slug, "status.json")
@@ -414,9 +421,11 @@ def pending():
         if not (os.path.exists(os.path.join(d, "transcript.json")) and os.path.exists(os.path.join(d, "hf", "index.html"))): continue
         if os.path.exists(os.path.join(d, "RENDER")):
             h = fhash(os.path.join(d, "RENDER"), os.path.join(d, "edit.json"), os.path.join(d, "transcript.json"), os.path.join(d, "hf"))
-            if h != (st.get("final") or {}).get("hash"): jobs.append(("final", slug)); continue
+            fin = st.get("final") or {}
+            if h != fin.get("hash") or not fin.get("ok"): jobs.append(("final", slug)); continue
         h = fhash(os.path.join(d, "edit.json"), os.path.join(d, "transcript.json"), os.path.join(d, "hf"))
-        if h != (st.get("preview") or {}).get("hash"): jobs.append(("preview", slug))
+        pv = st.get("preview") or {}
+        if h != pv.get("hash") or not pv.get("ok"): jobs.append(("preview", slug))
     for name, url in queue():
         if not os.path.exists(os.path.join("references", name, "status.json")): jobs.append(("references", name, url))
     if os.path.exists("selftest/run.txt") and fhash("selftest/run.txt") != (jload("selftest/last_run.json", {}) or {}).get("token"):
@@ -490,6 +499,11 @@ def main():
             elif kind == "ref_release": job_reference(j[1], tag=j[2])
             elif kind == "selftest": job_selftest()
             done.append(" ".join(map(str, j[:2])))
+        except Exception:
+            log(traceback.format_exc())
+        # save each job's results as soon as it finishes, so a slow later job never hides them
+        try:
+            commit("reel-bot: " + " ".join(map(str, j[:2]))); changed_paths.clear()
         except Exception:
             log(traceback.format_exc())
     if jobs: jsave(HEARTBEAT, {"state": "idle", "last": names, "done": done, "time": NOW(), "run": E("RUN_URL")}); changed_paths.add(HEARTBEAT)
