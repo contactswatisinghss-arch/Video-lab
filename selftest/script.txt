@@ -1,0 +1,1 @@
+They are calling it Black October. Seventy percent of websites run on PHP, and two critical flaws just left them exposed. Government sites went down in Japan and Denmark. The flaw leaked one day before the fix. Now it is patched. If you own a website, ask your host to update PHP today. Part two is coming, so follow.

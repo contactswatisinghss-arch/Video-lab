@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "slug": "selftest",
+  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.2, "remove": []},
+  "fixes": [["seventy percent", "70%"]],
+  "fonts": ["Space Grotesk"],
+  "cover_at": 1.2,
+  "post": {"caption": "Self-test render", "hashtags": ["#test"]}
+}

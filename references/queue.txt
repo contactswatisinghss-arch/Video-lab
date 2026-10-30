@@ -1,0 +1,4 @@
+# Reference Reels to study. One per line:
+#   name  url                      a specific Reel/Short (Instagram, YouTube, TikTok...)
+#   search name  query words...    find and rank top Shorts on a topic by views, analyse the top 3
+# name = lowercase-with-hyphens. If a download is blocked, attach the video to a release tagged ref-<name>.

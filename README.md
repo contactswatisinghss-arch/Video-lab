@@ -1,22 +1,27 @@
-# Video-lab · Swati Talks Tech Reel pipeline
+# Video-lab · Swati Talks Tech Reel pipeline (v2)
 
-Raw talking-head or demo video → edited 1080×1920 Instagram Reel, with Claude planning the edit and
-GitHub Actions doing the heavy rendering.
+Raw talking-head or demo video → an edited 1080×1920 Instagram Reel whose graphics are designed for that
+video. Claude plans and designs; GitHub Actions does the heavy work.
 
-## How a Reel goes through (what Swati does is in bold)
-1. **Create a release** on this repo: tag = the Reel's short name (e.g. `black-october`), attach the raw video, Publish.
-2. `Prepare reel` workflow transcribes it (Whisper, word timings), checks audio/format, and commits
-   `reels/<slug>/transcript.json`, `transcript.txt`, `meta.json`, `frames.jpg`, `status.json`.
-3. **Tell Claude** "new reel: <slug>". Claude reads those files, researches and fact-checks, and drafts the storyboard with a preview sheet.
-4. **Approve** (or ask for changes). Claude pushes `reels/<slug>/plan.json`.
-5. `Render reel` workflow renders the full-quality Reel and attaches `final_reel.mp4`, `cover.jpg`, `caption.txt` to the release.
-6. **Download** `final_reel.mp4` from the release page, post, then delete the release to free space.
+| Tool | Job |
+|---|---|
+| Whisper (faster-whisper) | transcript with a timing for every word |
+| FFmpeg | iPhone HDR → SDR, cutting pauses and retakes, loudness, encoding |
+| HyperFrames (HeyGen, open source) | the Reel's graphics, captions and motion as HTML + GSAP, checked and rendered to MP4 |
+| yt-dlp | downloads reference Reels (with views/likes/comments) so what works can be studied |
+
+## A Reel, start to finish (Swati's steps in bold)
+1. **Create a release** on this repo: tag = short name (e.g. `ai-scams`), attach the raw video, Publish.
+2. GitHub transcribes it and makes an edit-friendly copy (`reels/<slug>/`, `proxy.mp4` on the release).
+3. **Tell Claude** "new reel: ai-scams". Claude researches what works, writes the storyboard, fact-checks, designs the composition.
+4. GitHub checks it with HyperFrames and renders a draft: **watch `preview.mp4`** on the release, approve or ask for changes.
+5. Claude approves the render; GitHub renders the final: **download `final_reel.mp4`**, post, then delete the release.
 
 ## Layout
-- `engine/` – the editing engine (`python3 -m engine.reel prepare|render|sheet|selftest`).
-- `docs/PLAN_GUIDE.md` – plan.json format and the scene template catalogue.
-- `docs/examples/` – Black October plan (reference for a full news explainer).
-- `reels/<slug>/` – per-Reel transcript, plan, status, review images. `reels/glossary.txt` – words Whisper should spell right.
-- `.github/workflows/reel.yml` – the pipeline (prepare, render, self-test). `ci/` – small helpers.
-
-Engine version: see `VERSION` in `engine/reel.py`. The Claude skill "talking-head-reel-editor" drives all of this.
+- `engine/` topic-independent media work (`python3 -m engine prepare|timeline|build|preview|refs|finish`).
+- `docs/REEL_GUIDE.md` how a Reel project is built. `docs/TECHNIQUES.md` the technique library + evidence scoreboard.
+  `docs/techniques/` working scene for each technique. `docs/STYLE.md` living style notes.
+- `reels/<slug>/` one Reel. `reels/glossary.txt` words Whisper should spell right.
+- `references/queue.txt` reference Reels / topic searches to study; `references/<name>/` their analysis.
+- `selftest/` an example Reel project; changing `selftest/run.txt` runs the whole pipeline (and the technique gallery).
+- `ci/` everything the workflow runs. `.github/workflows/reels.yml` the one workflow file.
