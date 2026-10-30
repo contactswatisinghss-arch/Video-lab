@@ -1,94 +1,13 @@
 {
-  "ok": false,
+  "ok": true,
   "strict": false,
-  "browserSkipped": true,
+  "browserSkipped": false,
   "lint": {
-    "ok": false,
-    "errorCount": 4,
-    "warningCount": 1,
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
     "infoCount": 0,
-    "findings": [
-      {
-        "code": "media_missing_data_start",
-        "severity": "error",
-        "message": "<video id=\"base\"> has src but no data-start. HyperFrames cannot own playback for untimed media, so preview and render behavior can diverge.",
-        "selector": "#base",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/selftest/index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "This <video> sits inside the timed <div id=\"footage\"> (data-start=\"0\"), and the wrapper's data-start would then clash. Move the <video> out as a direct child of the stage and give it that wrapper's data-start=\"0\" and data-duration=\"21.700\"."
-      },
-      {
-        "code": "missing_gsap_script",
-        "severity": "error",
-        "message": "Composition uses GSAP but no GSAP script is loaded. The animation will not run.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/selftest/index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Add <script src=\"https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js\"></script> before your animation script."
-      },
-      {
-        "code": "nested_structure_needs_subcomposition",
-        "severity": "warning",
-        "message": "<div id=\"footage\"> is a timeline element that contains nested <div id=\"cam\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
-        "selector": "#footage",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/selftest/index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Move <div id=\"footage\"> and its contents into a sub-composition file and mount it with data-composition-src."
-      },
-      {
-        "code": "gsap_non_transform_motion",
-        "severity": "error",
-        "message": "GSAP tween on \"#hook-kicker\" uses motion that snaps to integer device pixels: letterSpacing. Layout and text-reflow properties snap during browser layout; roundProps rounds the tween value. Slow motion or an ease-out tail then stutters under the seek-by-frame capture engine. Animate transforms (x/y/scale/opacity) instead.",
-        "selector": "#hook-kicker",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/selftest/compositions/hook.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "do not animate letterSpacing (they reflow text and snap glyph positions): for letterSpacing, split the text into per-character elements and animate each glyph's x (the spread), since uniform scale is NOT equivalent, or hold the final value statically. Transforms interpolate sub-pixel and stay smooth at any speed."
-      },
-      {
-        "code": "font_family_without_font_face",
-        "severity": "error",
-        "message": "Font family used without @font-face declaration: space grotesk. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/selftest/compositions/hook.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file."
-      }
-    ],
+    "findings": [],
     "filesScanned": 8
   },
   "runtime": {
@@ -104,8 +23,18 @@
     "warningCount": 0,
     "infoCount": 0,
     "findings": [],
-    "duration": 0,
-    "samples": [],
+    "duration": 21.7,
+    "samples": [
+      1.206,
+      3.617,
+      6.028,
+      8.439,
+      10.85,
+      13.261,
+      15.672,
+      18.083,
+      20.494
+    ],
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
     "tolerance": 2,
@@ -128,19 +57,172 @@
     "infoCount": 0,
     "findings": [],
     "enabled": true,
-    "samples": [],
-    "checked": 0,
-    "passed": 0
+    "samples": [
+      1.206,
+      6.028,
+      10.85,
+      15.672,
+      20.494
+    ],
+    "checked": 44,
+    "passed": 44
   },
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 0,
+    "warningCount": 6,
     "infoCount": 0,
-    "findings": [],
-    "enabled": false,
-    "step": 0,
-    "samples": 0
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"O C T O B E R\" (7 words) is on screen 1.70 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "O C T O B E R",
+        "selector": "#hook-l2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 120.69,
+          "y": 433.64,
+          "width": 249.7,
+          "height": 253.5200000000001
+        },
+        "time": 0.203,
+        "words": 7,
+        "seconds": 1.7,
+        "floorSeconds": 1.95
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"the week PHP broke the web\" (6 words) is on screen 0.90 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "the week PHP broke the web",
+        "selector": "#hook-sub",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 236.95,
+          "y": 676,
+          "width": 606.0799999999999,
+          "height": 54
+        },
+        "time": 1.006,
+        "words": 6,
+        "seconds": 0.896,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"OF ALL WEBSITES\" renders at 26 px for 5.49 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "OF ALL WEBSITES",
+        "selector": "#stat-k",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stat.html",
+        "bbox": {
+          "x": 610,
+          "y": 400,
+          "width": 288.61,
+          "height": 35
+        },
+        "time": 2.37,
+        "times": [
+          2.37
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 5.487,
+        "elements": [
+          {
+            "selector": "#stat-k",
+            "text": "OF ALL WEBSITES",
+            "fontPx": 26,
+            "time": 2.37,
+            "seconds": 5.487
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"STATUS: DOWN\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "STATUS: DOWN",
+        "selector": "#pl-jp > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/places.html",
+        "bbox": {
+          "x": 326.15,
+          "y": 521,
+          "width": 218.41,
+          "height": 35
+        },
+        "time": 9.353,
+        "times": [
+          9.353,
+          9.977
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 1.622,
+        "elements": [
+          {
+            "selector": "#pl-jp > div:nth-of-type(2)",
+            "text": "STATUS: DOWN",
+            "fontPx": 26,
+            "time": 9.353,
+            "seconds": 1.622
+          },
+          {
+            "selector": "#pl-dk > div:nth-of-type(2)",
+            "text": "STATUS: DOWN",
+            "fontPx": 26,
+            "time": 9.977,
+            "seconds": 0.998
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"the leak beat the fix by 1 day\" (8 words) is on screen 1.14 s (±0.01 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
+        "text": "the leak beat the fix by 1 day",
+        "selector": "#lk-gap",
+        "dataAttributes": {},
+        "sourceFile": "compositions/leak.html",
+        "bbox": {
+          "x": 258.7,
+          "y": 400,
+          "width": 562.5799999999999,
+          "height": 51
+        },
+        "time": 12.269,
+        "words": 8,
+        "seconds": 1.138,
+        "floorSeconds": 2.175
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"+ Follow\" (1 word) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "+ Follow",
+        "selector": "#ot-follow",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 445.92,
+          "y": 784.21,
+          "width": 188.13999999999993,
+          "height": 55.58000000000004
+        },
+        "time": 20.001,
+        "words": 1,
+        "seconds": 1.703,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 174
   },
   "audio": {
     "ok": true,
@@ -160,9 +242,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "7807c693-d2a8-4923-a98f-f977c5a88146",
+    "id": "7e4285c4-6875-47de-a496-bffe5e8a5bf5",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/selftest/.hyperframes/artifacts/checks/7807c693-d2a8-4923-a98f-f977c5a88146.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/selftest/.hyperframes/artifacts/checks/7e4285c4-6875-47de-a496-bffe5e8a5bf5.json",
     "attribution": "unversioned"
   },
   "_meta": {
