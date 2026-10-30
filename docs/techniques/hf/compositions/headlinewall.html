@@ -1,0 +1,35 @@
+<template>
+  <!-- HEADLINE WALL: many recreated headlines (never screenshots/logos) fill a wall, the camera pulls back to show scale,
+       then one headline is singled out. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    #hw-scrim { position: absolute; inset: 0; background: rgba(7,10,18,.72); }
+    #hw-wall { position: absolute; left: -260px; top: 120px; width: 1600px; height: 1300px; transform-origin: 50% 40%; }
+    .hw-card { position: absolute; width: 470px; height: 230px; padding: 26px; box-sizing: border-box; background: #F4F1EA;
+      box-shadow: 0 12px 24px rgba(0,0,0,.4); font: 700 34px/1.12 'Source Serif 4', 'EB Garamond', serif; color: #070A12; }
+    .hw-card small { display: block; font: 700 18px 'JetBrains Mono', monospace; color: #FF3B4E; letter-spacing: .12em; margin-bottom: 10px; }
+    .hw-card.hw-hot { box-shadow: 0 0 0 8px #FF3B4E, 0 30px 60px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="headlinewall" data-width="1080" data-height="1920">
+    <div id="hw-scrim"></div><div id="hw-wall"></div>
+  </div>
+  <script>
+    (function () {
+      const wall = document.getElementById("hw-wall");
+      const heads = [["WIRE", "Critical flaw found in PHP"], ["TECH DESK", "Governments take sites offline"], ["SECURITY", "Patch now, agencies warn"],
+        ["NEWS", "Exploit video spreads online"], ["BUSINESS", "Banks review exposure"], ["WORLD", "Japan, Denmark sites down"],
+        ["ANALYSIS", "Why one bug hit 70% of the web"], ["ALERT", "Attacks begin within hours"], ["OPINION", "The leak beat the fix"]];
+      heads.forEach(([o, h], i) => {
+        const c = i % 3, r = Math.floor(i / 3);
+        wall.insertAdjacentHTML("beforeend", `<div class="hw-card" id="hw-c${i}" style="left:${40 + c * 510}px;top:${40 + r * 270}px"><small>${o}</small>${h}</div>`);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#hw-scrim", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+      heads.forEach((h, i) => tl.fromTo("#hw-c" + i, { opacity: 0, scale: 1.3, rotation: (i % 2 ? 3 : -3) }, { opacity: 1, scale: 1, rotation: (i % 2 ? 1 : -1), duration: 0.28, ease: "expo.out" }, 0.1 + i * 0.09));
+      tl.fromTo("#hw-wall", { scale: 1.25 }, { scale: 0.9, duration: 1.6, ease: "power2.inOut" }, 0.1);
+      tl.to("#hw-wall", { scale: 1.35, x: 700, y: -270, duration: 0.7, ease: "power3.inOut" }, 1.9);   // centre the singled-out card
+      tl.fromTo("#hw-c6", { boxShadow: "0 0 0 0px #FF3B4E, 0 12px 24px rgba(0,0,0,.4)" }, { boxShadow: "0 0 0 10px #FF3B4E, 0 30px 60px rgba(0,0,0,.6)", duration: 0.25 }, 2.1);
+      window.__timelines["headlinewall"] = tl;
+    })();
+  </script>
+</template>

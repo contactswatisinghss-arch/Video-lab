@@ -1,0 +1,35 @@
+<template>
+  <!-- FRAME BREAK: a framed picture, then the subject bursts past the frame edge (an icon/graphic here; with
+       `hyperframes remove-background` the speaker's cutout can break the frame too). -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #fb-frame { position: absolute; left: 190px; top: 380px; width: 700px; height: 520px; border-radius: 12px; background: #142033;
+      box-shadow: 0 0 0 18px #F4F1EA, 0 40px 80px rgba(0,0,0,.55); overflow: hidden; }
+    #fb-grid { position: absolute; inset: 0; background: linear-gradient(rgba(61,224,255,.18) 2px, transparent 2px) 0 0/100% 52px,
+      linear-gradient(90deg, rgba(61,224,255,.18) 2px, transparent 2px) 0 0/58px 100%; }
+    #fb-cap { position: absolute; left: 190px; top: 930px; width: 700px; text-align: center; font: 700 34px 'Space Grotesk', sans-serif; color: #F2F4F7; }
+    #fb-hero { position: absolute; left: 330px; top: 420px; width: 420px; height: 420px; }
+  </style>
+  <div id="root" data-composition-id="framebreak" data-width="1080" data-height="1920">
+    <div id="fb-frame"><div id="fb-grid"></div></div>
+    <svg id="fb-hero" viewBox="0 0 420 420">
+      <path d="M210 20 380 80 372 210C362 300 300 360 210 400 120 360 58 300 48 210L40 80Z" fill="#FF3B4E" stroke="#070A12" stroke-width="10"/>
+      <path d="M150 150 270 270M270 150 150 270" stroke="#F2F4F7" stroke-width="28" stroke-linecap="round"/>
+    </svg>
+    <div id="fb-cap">security just broke out of the box</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#fb-frame", { opacity: 0, scale: 0.9, rotation: -3 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.45, ease: "expo.out" }, 0);
+      // inside the frame first (small, behind the border line)...
+      tl.fromTo("#fb-hero", { opacity: 0, scale: 0.45, y: 120 }, { opacity: 1, scale: 0.6, y: 90, duration: 0.35, ease: "power2.out" }, 0.4);
+      // ...then it breaks out: overshoots past the top edge, landing bigger than the frame
+      tl.to("#fb-hero", { scale: 1.25, y: -170, rotation: 8, duration: 0.5, ease: "back.out(2.2)" }, 1.1);
+      tl.to("#fb-frame", { rotation: -4, x: -10, duration: 0.12, ease: "power2.out" }, 1.15);
+      tl.to("#fb-frame", { rotation: -2, x: 0, duration: 0.3, ease: "power2.out" }, 1.27);
+      tl.fromTo("#fb-cap", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 1.6);
+      window.__timelines["framebreak"] = tl;
+    })();
+  </script>
+</template>

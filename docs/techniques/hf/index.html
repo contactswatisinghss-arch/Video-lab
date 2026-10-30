@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070A12; }
+    #footage { position: absolute; inset: 0; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 40%; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    #labels { position: absolute; inset: 0; z-index: 9; pointer-events: none; }
+    .lbl { position: absolute; left: 0; width: 1080px; top: 1560px; text-align: center; font: 700 30px 'JetBrains Mono', monospace;
+      letter-spacing: .2em; color: #F2F4F7; text-shadow: 0 2px 10px rgba(0,0,0,.7); }
+  </style>
+</head>
+<body>
+  <!-- Technique gallery: one scene per technique, 3.2s each, over the footage. Starting code to ADAPT per Reel, never to reuse as-is. -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}" data-width="1080" data-height="1920" data-fps="30">
+    <div id="footage" class="clip" data-start="0" data-duration="{{dur}}" data-track-index="0" style="z-index:1">
+      <div id="cam"><video id="base" src="assets/base.mp4" data-has-audio="true" playsinline></video></div>
+    </div>
+    <div id="orbit" data-composition-id="orbit" data-composition-src="compositions/orbit.html" data-start="0.0" data-duration="3.2" data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="corkwall" data-composition-id="corkwall" data-composition-src="compositions/corkwall.html" data-start="3.2" data-duration="3.2" data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="numberchart" data-composition-id="numberchart" data-composition-src="compositions/numberchart.html" data-start="6.4" data-duration="3.2" data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="framebreak" data-composition-id="framebreak" data-composition-src="compositions/framebreak.html" data-start="9.6" data-duration="3.2" data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="digitalzoom" data-composition-id="digitalzoom" data-composition-src="compositions/digitalzoom.html" data-start="12.8" data-duration="3.2" data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="phone" data-composition-id="phone" data-composition-src="compositions/phone.html" data-start="16.0" data-duration="3.2" data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="checklist" data-composition-id="checklist" data-composition-src="compositions/checklist.html" data-start="19.2" data-duration="3.2" data-track-index="7" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="headlinewall" data-composition-id="headlinewall" data-composition-src="compositions/headlinewall.html" data-start="22.4" data-duration="3.2" data-track-index="8" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="zoomthrough" data-composition-id="zoomthrough" data-composition-src="compositions/zoomthrough.html" data-start="25.6" data-duration="3.2" data-track-index="9" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="spotlight" data-composition-id="spotlight" data-composition-src="compositions/spotlight.html" data-start="28.8" data-duration="3.2" data-track-index="10" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="doodle" data-composition-id="doodle" data-composition-src="compositions/doodle.html" data-start="32.0" data-duration="3.2" data-track-index="11" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="cover" data-composition-id="cover" data-composition-src="compositions/cover.html" data-start="35.2" data-duration="3.2" data-track-index="12" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="papercut" data-composition-id="papercut" data-composition-src="compositions/papercut.html" data-start="38.4" data-duration="3.2" data-track-index="13" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="glass" data-composition-id="glass" data-composition-src="compositions/glass.html" data-start="41.6" data-duration="3.2" data-track-index="14" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="labels">
+      <div class="lbl clip" id="lbl-orbit" data-start="0.0" data-duration="3.2">01 · ORBIT</div>
+      <div class="lbl clip" id="lbl-corkwall" data-start="3.2" data-duration="3.2">02 · CORK WALL</div>
+      <div class="lbl clip" id="lbl-numberchart" data-start="6.4" data-duration="3.2">03 · NUMBER CHART</div>
+      <div class="lbl clip" id="lbl-framebreak" data-start="9.6" data-duration="3.2">04 · FRAME BREAK</div>
+      <div class="lbl clip" id="lbl-digitalzoom" data-start="12.8" data-duration="3.2">05 · DIGITAL ZOOM</div>
+      <div class="lbl clip" id="lbl-phone" data-start="16.0" data-duration="3.2">06 · PHONE MOCK-UP</div>
+      <div class="lbl clip" id="lbl-checklist" data-start="19.2" data-duration="3.2">07 · CHECKLIST</div>
+      <div class="lbl clip" id="lbl-headlinewall" data-start="22.4" data-duration="3.2">08 · HEADLINE WALL</div>
+      <div class="lbl clip" id="lbl-zoomthrough" data-start="25.6" data-duration="3.2">09 · ZOOM-THROUGH CUT</div>
+      <div class="lbl clip" id="lbl-spotlight" data-start="28.8" data-duration="3.2">10 · SPOTLIGHT</div>
+      <div class="lbl clip" id="lbl-doodle" data-start="32.0" data-duration="3.2">11 · DOODLE BOARD</div>
+      <div class="lbl clip" id="lbl-cover" data-start="35.2" data-duration="3.2">12 · COVER STORY</div>
+      <div class="lbl clip" id="lbl-papercut" data-start="38.4" data-duration="3.2">13 · PAPER CUT</div>
+      <div class="lbl clip" id="lbl-glass" data-start="41.6" data-duration="3.2">14 · GLASS TYPE</div>
+    </div>
+  </div>
+  <script>
+    // DIGITAL ZOOM lives on the camera: snap into a region, hold, ease back out.
+    const tl = gsap.timeline({ paused: true });
+    const Z = 12.8;
+    tl.fromTo("#cam", { scale: 1, x: 0, y: 0 }, { scale: 2.0, x: -180, y: 260, duration: 0.35, ease: "expo.out" }, Z + 0.3)
+      .to("#cam", { scale: 2.6, x: -260, y: 380, duration: 1.2, ease: "power1.inOut" }, Z + 0.7)
+      .to("#cam", { scale: 1, x: 0, y: 0, duration: 0.4, ease: "power3.inOut" }, Z + 2.6);
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>

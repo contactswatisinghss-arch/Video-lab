@@ -1,0 +1,44 @@
+<template>
+  <!-- ORBIT: related things circle a central subject; depth comes from scale + opacity, motion is one linear turn. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #ob-core { position: absolute; left: 400px; top: 400px; width: 280px; height: 280px; border-radius: 140px;
+      background: radial-gradient(circle at 35% 30%, #3DE0FF, #1b5fd0 70%); box-shadow: 0 0 80px rgba(61,224,255,.55);
+      display: flex; align-items: center; justify-content: center; font: 700 64px 'Space Grotesk', sans-serif; color: #070A12; }
+    .ob-tile { position: absolute; left: 0; top: 0; width: 150px; height: 150px; border-radius: 36px; background: rgba(7,10,18,.88);
+      border: 3px solid rgba(61,224,255,.6); display: flex; align-items: center; justify-content: center; }
+    .ob-tile svg { width: 82px; height: 82px; }
+  </style>
+  <div id="root" data-composition-id="orbit" data-width="1080" data-height="1920">
+    <div id="ob-ring" style="position:absolute;inset:0">
+      <div class="ob-tile" id="ob-t0"><svg viewBox="0 0 100 100"><rect x="8" y="16" width="84" height="64" rx="10" fill="none" stroke="#F2F4F7" stroke-width="8"/><path d="M8 32h84" stroke="#F2F4F7" stroke-width="8"/></svg></div>
+      <div class="ob-tile" id="ob-t1"><svg viewBox="0 0 100 100"><path d="M50 6 90 20 88 52C84 74 68 88 50 96 32 88 16 74 12 52L10 20Z" fill="#2EE59D"/></svg></div>
+      <div class="ob-tile" id="ob-t2"><svg viewBox="0 0 100 100"><rect x="26" y="4" width="48" height="92" rx="10" fill="none" stroke="#F2F4F7" stroke-width="8"/></svg></div>
+      <div class="ob-tile" id="ob-t3"><svg viewBox="0 0 100 100"><path d="M10 70 50 20 90 70Z" fill="#FF3B4E"/><rect x="46" y="38" width="8" height="18" fill="#070A12"/></svg></div>
+      <div class="ob-tile" id="ob-t4"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#F2F4F7" stroke-width="8"/><path d="M10 50h80M50 10c-20 25-20 55 0 80M50 10c20 25 20 55 0 80" stroke="#F2F4F7" stroke-width="6" fill="none"/></svg></div>
+      <div class="ob-tile" id="ob-t5"><svg viewBox="0 0 100 100"><rect x="18" y="44" width="64" height="48" rx="8" fill="#F2F4F7"/><path d="M32 44V30a18 18 0 0 1 36 0v14" fill="none" stroke="#F2F4F7" stroke-width="8"/></svg></div>
+    </div>
+    <div id="ob-core">AI</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const st = { a: 0 }, N = 6, CX = 540, CY = 540, RX = 400, RY = 150;
+      function place() {
+        for (let i = 0; i < N; i++) {
+          const ang = st.a + i * Math.PI * 2 / N, z = Math.sin(ang);          // z: -1 back .. 1 front
+          const el = document.getElementById("ob-t" + i);
+          const s = 0.72 + 0.28 * (z + 1) / 2;
+          el.style.transform = `translate(${CX + Math.cos(ang) * RX - 75}px, ${CY + z * RY - 75}px) scale(${s})`;
+          el.style.opacity = (0.45 + 0.55 * (z + 1) / 2).toFixed(3);
+          el.style.zIndex = z > 0 ? 3 : 1;
+        }
+      }
+      tl.fromTo("#ob-core", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.6)" }, 0);
+      tl.fromTo("#ob-ring", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.15);
+      tl.fromTo(st, { a: 0 }, { a: Math.PI * 1.1, duration: 3.2, ease: "none", onUpdate: place }, 0);
+      place();
+      window.__timelines["orbit"] = tl;
+    })();
+  </script>
+</template>

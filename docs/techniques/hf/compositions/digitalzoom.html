@@ -1,0 +1,26 @@
+<template>
+  <!-- DIGITAL ZOOM: the camera itself (#cam in index.html) snaps into a region; this layer adds the HUD that sells it. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #dz-ret { position: absolute; left: 340px; top: 470px; width: 400px; height: 400px; }
+    #dz-hud { position: absolute; left: 80px; top: 250px; font: 700 30px 'JetBrains Mono', monospace; color: #FFC53D; letter-spacing: .12em; }
+    #dz-hud b { color: #F2F4F7; }
+  </style>
+  <div id="root" data-composition-id="digitalzoom" data-width="1080" data-height="1920">
+    <svg id="dz-ret" viewBox="0 0 400 400" fill="none" stroke="#FFC53D" stroke-width="8">
+      <path d="M10 90V10h80M310 10h80v80M390 310v80h-80M90 390H10v-80"/><circle cx="200" cy="200" r="10" fill="#FFC53D"/>
+    </svg>
+    <div id="dz-hud">● REC  <b id="dz-x">1.0×</b></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true }), z = { v: 1 };
+      tl.fromTo("#dz-ret", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, 0.05);
+      tl.to("#dz-ret", { scale: 0.7, opacity: 0, duration: 0.3, ease: "power2.in" }, 0.35);
+      tl.fromTo("#dz-hud", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.2);
+      tl.fromTo(z, { v: 1 }, { v: 2.6, duration: 1.55, ease: "power1.inOut",
+        onUpdate: () => { document.getElementById("dz-x").textContent = z.v.toFixed(1) + "×"; } }, 0.3);
+      window.__timelines["digitalzoom"] = tl;
+    })();
+  </script>
+</template>

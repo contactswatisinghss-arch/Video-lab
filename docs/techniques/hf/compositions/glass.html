@@ -1,0 +1,27 @@
+<template>
+  <!-- GLASS TYPE: frosted glass over the footage (backdrop blur + dark base so it never goes white-on-white),
+       big type with a light sheen passing across. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #gl-pane { position: absolute; left: 90px; top: 300px; width: 900px; height: 560px; border-radius: 48px;
+      background: rgba(15,16,22,.42); backdrop-filter: blur(26px) saturate(140%); -webkit-backdrop-filter: blur(26px) saturate(140%);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.22), 0 40px 80px rgba(0,0,0,.35); overflow: hidden; }
+    #gl-k { position: absolute; left: 60px; top: 56px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .2em; color: rgba(242,244,247,.8); }
+    #gl-t { position: absolute; left: 56px; top: 110px; font: 700 150px/0.9 'Space Grotesk', sans-serif; letter-spacing: -.04em; color: #F2F4F7; }
+    #gl-sheen { position: absolute; top: -100px; left: 0; width: 220px; height: 800px;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.28), rgba(255,255,255,0)); }
+  </style>
+  <div id="root" data-composition-id="glass" data-width="1080" data-height="1920">
+    <div id="gl-pane"><div id="gl-k">ZERO-CLICK ATTACK</div><div id="gl-t">No tap<br/>needed.</div><div id="gl-sheen"></div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#gl-pane", { opacity: 0, y: 50, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "expo.out" }, 0);
+      tl.fromTo("#gl-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.35);
+      tl.fromTo("#gl-t", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" }, 0.45);
+      tl.fromTo("#gl-sheen", { x: -300, rotation: 18 }, { x: 1100, rotation: 18, duration: 0.9, ease: "power2.inOut" }, 1.1);
+      window.__timelines["glass"] = tl;
+    })();
+  </script>
+</template>

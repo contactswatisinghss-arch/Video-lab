@@ -1,0 +1,27 @@
+<template>
+  <!-- SPOTLIGHT: the frame dims except a pool of light that moves to the detail that matters, with a label. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #sp-dark { position: absolute; inset: 0;
+      background: radial-gradient(circle var(--r, 180px) at var(--x, 540px) var(--y, 760px), rgba(7,10,18,0) 0%, rgba(7,10,18,0) 85%, rgba(7,10,18,.86) 100%); }
+    #sp-ring { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    #sp-tag { position: absolute; left: 0; top: 0; padding: 14px 24px; border-radius: 30px; background: #FFC53D; font: 800 34px 'Inter', sans-serif; color: #070A12; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="spotlight" data-width="1080" data-height="1920">
+    <div id="sp-dark"></div>
+    <div id="sp-tag">This is the giveaway</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const L = { x: 540, y: 760, r: 900 }, dark = document.getElementById("sp-dark"), tag = document.getElementById("sp-tag");
+      const draw = () => { dark.style.setProperty("--x", L.x + "px"); dark.style.setProperty("--y", L.y + "px"); dark.style.setProperty("--r", L.r + "px");
+        tag.style.transform = `translate(${L.x - 200}px, ${L.y - L.r - 90}px)`; };
+      tl.fromTo(L, { r: 900 }, { r: 200, duration: 0.6, ease: "power3.out", onUpdate: draw }, 0);
+      tl.to(L, { x: 700, y: 560, duration: 0.7, ease: "power2.inOut", onUpdate: draw }, 1.0);
+      tl.fromTo(tag, { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.6);
+      draw();
+      window.__timelines["spotlight"] = tl;
+    })();
+  </script>
+</template>

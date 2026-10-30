@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "cuts": {"keep_head": true, "keep_tail": true},
+  "fonts": ["Space Grotesk", "Caveat", "Source Serif 4", "Abril Fatface"],
+  "cover_at": 1.0
+}

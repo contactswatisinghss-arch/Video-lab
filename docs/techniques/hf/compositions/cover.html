@@ -1,0 +1,32 @@
+<template>
+  <!-- COVER STORY: the frame becomes a magazine cover: masthead, issue line, cover lines around the speaker, a barcode. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #cv-mast { position: absolute; left: 0; top: 190px; width: 1080px; text-align: center; font: 400 230px/0.85 'Abril Fatface', 'Playfair Display', serif;
+      color: #FF3B4E; letter-spacing: -.02em; text-shadow: 0 8px 30px rgba(0,0,0,.35); }
+    #cv-issue { position: absolute; left: 70px; top: 420px; width: 940px; display: flex; justify-content: space-between;
+      font: 700 24px 'JetBrains Mono', monospace; color: #F2F4F7; letter-spacing: .14em; border-top: 3px solid #F2F4F7; padding-top: 12px; }
+    .cv-line { position: absolute; width: 330px; font: 700 46px/1.02 'Space Grotesk', sans-serif; color: #F2F4F7; text-shadow: 0 4px 16px rgba(0,0,0,.7); }
+    .cv-line small { display: block; font: 700 22px 'JetBrains Mono', monospace; color: #FFC53D; letter-spacing: .12em; margin-bottom: 8px; }
+    #cv-l1 { left: 70px; top: 560px; } #cv-l2 { right: 70px; top: 760px; text-align: right; } #cv-l3 { left: 70px; top: 1000px; }
+    #cv-bar { position: absolute; right: 80px; top: 1040px; width: 170px; height: 110px; background: #F2F4F7; padding: 10px; box-sizing: border-box; }
+  </style>
+  <div id="root" data-composition-id="cover" data-width="1080" data-height="1920">
+    <div id="cv-mast">BYTE</div>
+    <div id="cv-issue"><span>ISSUE 42</span><span>OCT 2026</span><span>THE SECURITY ISSUE</span></div>
+    <div class="cv-line" id="cv-l1"><small>EXCLUSIVE</small>The bug that broke the web</div>
+    <div class="cv-line" id="cv-l2"><small>INSIDE</small>Who patched it, who didn't</div>
+    <div class="cv-line" id="cv-l3"><small>PLUS</small>3 checks for your site</div>
+    <svg id="cv-bar" viewBox="0 0 150 90"><g fill="#070A12"><rect x="0" y="0" width="4" height="70"/><rect x="8" width="2" height="70"/><rect x="14" width="6" height="70"/><rect x="24" width="2" height="70"/><rect x="30" width="4" height="70"/><rect x="38" width="8" height="70"/><rect x="50" width="2" height="70"/><rect x="56" width="4" height="70"/><rect x="64" width="2" height="70"/><rect x="70" width="6" height="70"/><rect x="80" width="4" height="70"/><rect x="88" width="2" height="70"/><rect x="94" width="8" height="70"/><rect x="106" width="2" height="70"/><rect x="112" width="4" height="70"/><rect x="120" width="6" height="70"/><rect x="130" width="2" height="70"/><rect x="136" width="4" height="70"/><rect x="144" width="6" height="70"/></g></svg>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#cv-mast", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0);
+      tl.fromTo("#cv-issue", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power3.out" }, 0.3);
+      ["#cv-l1", "#cv-l2", "#cv-l3"].forEach((s, i) => tl.fromTo(s, { opacity: 0, x: i === 1 ? 40 : -40 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 0.7 + i * 0.3));
+      tl.fromTo("#cv-bar", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.7);
+      window.__timelines["cover"] = tl;
+    })();
+  </script>
+</template>

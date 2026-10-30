@@ -1,0 +1,26 @@
+<template>
+  <!-- ZOOM-THROUGH CUT: a button/object on screen grows past the frame; its fill becomes the next scene (a cause for the cut). -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    #zt-pill { position: absolute; left: 340px; top: 560px; width: 400px; height: 120px; border-radius: 60px; background: #7C5CFF;
+      display: flex; align-items: center; justify-content: center; font: 800 44px 'Inter', sans-serif; color: #F2F4F7; box-shadow: 0 20px 50px rgba(124,92,255,.5); }
+    #zt-next { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    #zt-next b { font: 700 150px/0.9 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.04em; }
+    #zt-next span { margin-top: 26px; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .3em; color: #070A12; background: #F2F4F7; padding: 10px 20px; }
+  </style>
+  <div id="root" data-composition-id="zoomthrough" data-width="1080" data-height="1920">
+    <div id="zt-pill"><span id="zt-lab">See how ▸</span></div>
+    <div id="zt-next"><b>HOW IT<br/>WORKS</b><span>CHAPTER 2</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#zt-pill", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 0.05);
+      tl.to("#zt-pill", { scale: 0.92, duration: 0.1, ease: "power2.in" }, 0.9);              // the "press"
+      tl.to("#zt-lab", { opacity: 0, duration: 0.12 }, 1.0);
+      tl.to("#zt-pill", { scale: 26, borderRadius: 0, duration: 0.45, ease: "power3.in" }, 1.0); // through it
+      tl.fromTo("#zt-next", { opacity: 0, scale: 1.25, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 1.38);
+      window.__timelines["zoomthrough"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,28 @@
+<template>
+  <!-- PAPER CUT: torn-paper layers with real shadows, moving in stop-motion steps (12 fps feel) like a handmade collage. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .pc-layer { position: absolute; left: 0; top: 0; width: 1080px; height: 1100px; filter: drop-shadow(0 14px 10px rgba(0,0,0,.35)); }
+    #pc-title { position: absolute; left: 120px; top: 460px; width: 840px; text-align: center; font: 400 104px/0.95 'Abril Fatface', serif; color: #070A12; }
+    #pc-stamp { position: absolute; left: 650px; top: 300px; width: 230px; height: 230px; border-radius: 115px; background: #FF3B4E;
+      display: flex; align-items: center; justify-content: center; text-align: center; font: 700 34px/1 'JetBrains Mono', monospace; color: #F4F1EA; }
+  </style>
+  <div id="root" data-composition-id="papercut" data-width="1080" data-height="1920">
+    <svg class="pc-layer" id="pc-l1" viewBox="0 0 1080 1100"><path fill="#2a3a5a" d="M0 230 L60 214 L120 236 L200 210 L270 232 L360 204 L430 228 L520 206 L600 230 L690 208 L760 232 L850 210 L930 236 L1010 214 L1080 230 L1080 900 L0 900Z"/></svg>
+    <svg class="pc-layer" id="pc-l2" viewBox="0 0 1080 1100"><path fill="#F4F1EA" d="M80 380 L150 362 L230 386 L320 360 L400 384 L490 358 L580 382 L660 360 L750 386 L840 362 L1000 380 L990 760 L900 742 L820 768 L720 744 L640 770 L540 746 L450 772 L360 746 L270 770 L180 748 L90 770Z"/></svg>
+    <div id="pc-title">CUT &amp; PASTE<br/>SCAMS</div>
+    <div id="pc-stamp">NEW<br/>WAVE</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const stop = "steps(4)";                                   // stop-motion: few positions, no smooth easing
+      tl.fromTo("#pc-l1", { y: 300, rotation: -3 }, { y: 0, rotation: 0, duration: 0.5, ease: stop }, 0);
+      tl.fromTo("#pc-l2", { y: 400, rotation: 4 }, { y: 0, rotation: -1, duration: 0.5, ease: stop }, 0.25);
+      tl.fromTo("#pc-title", { opacity: 0, y: 60, rotation: 3 }, { opacity: 1, y: 0, rotation: -1, duration: 0.4, ease: stop }, 0.6);
+      tl.fromTo("#pc-stamp", { scale: 2, rotation: -40, opacity: 0 }, { scale: 1, rotation: 12, opacity: 1, duration: 0.33, ease: "steps(3)" }, 1.2);
+      tl.to("#pc-title", { rotation: 0.5, duration: 1.2, ease: "steps(6)" }, 1.6);   // the handmade "boil"
+      window.__timelines["papercut"] = tl;
+    })();
+  </script>
+</template>

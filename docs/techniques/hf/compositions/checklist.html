@@ -1,0 +1,34 @@
+<template>
+  <!-- CHECKLIST: the "what to do" beat; each box ticks on the word that names it. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #ck-card { position: absolute; left: 80px; top: 240px; width: 920px; height: 700px; border-radius: 40px; background: rgba(7,10,18,.9);
+      border: 3px solid rgba(46,229,157,.5); }
+    #ck-title { position: absolute; left: 56px; top: 48px; font: 700 58px 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.02em; }
+    .ck-row { position: absolute; left: 56px; width: 800px; height: 100px; display: flex; align-items: center; font: 600 42px 'Inter', sans-serif; color: #F2F4F7; }
+    .ck-box { position: relative; width: 66px; height: 66px; border-radius: 16px; border: 4px solid rgba(242,244,247,.5); margin-right: 30px; flex: none; }
+    .ck-fill { position: absolute; inset: -4px; border-radius: 16px; background: #2EE59D; }
+    .ck-tick { position: absolute; inset: 0; }
+  </style>
+  <div id="root" data-composition-id="checklist" data-width="1080" data-height="1920">
+    <div id="ck-card"><div id="ck-title">Do this today</div></div>
+  </div>
+  <script>
+    (function () {
+      const card = document.getElementById("ck-card");
+      const rows = ["Update your apps", "Turn on 2FA", "Use a password manager", "Ignore texted links"];
+      rows.forEach((r, i) => card.insertAdjacentHTML("beforeend",
+        `<div class="ck-row" id="ck-r${i}" style="top:${170 + i * 125}px"><div class="ck-box"><div class="ck-fill" id="ck-f${i}"></div>
+         <svg class="ck-tick" viewBox="0 0 66 66"><path id="ck-t${i}" d="M14 34 L28 47 L52 20" fill="none" stroke="#070A12" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="60" stroke-dashoffset="60"/></svg></div>${r}</div>`));
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#ck-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0);
+      rows.forEach((r, i) => {
+        const t = 0.45 + i * 0.6;
+        tl.fromTo("#ck-r" + i, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, t - 0.15);
+        tl.fromTo("#ck-f" + i, { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)" }, t + 0.1);
+        tl.fromTo("#ck-t" + i, { attr: { "stroke-dashoffset": 60 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.2, ease: "power2.out" }, t + 0.2);
+      });
+      window.__timelines["checklist"] = tl;
+    })();
+  </script>
+</template>

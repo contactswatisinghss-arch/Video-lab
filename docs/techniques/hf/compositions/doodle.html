@@ -1,0 +1,30 @@
+<template>
+  <!-- DOODLE BOARD: hand-drawn marks (circle, arrow, underline, a scribbled note) draw on over the footage or a graphic. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #dd-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #dd-note { position: absolute; left: 600px; top: 270px; width: 420px; font: 700 70px/1 'Caveat', cursive; color: #FFC53D; transform-origin: 0 50%; }
+    #dd-word { position: absolute; left: 140px; top: 470px; width: 800px; text-align: center; font: 700 96px 'Space Grotesk', sans-serif; color: #F2F4F7;
+      text-shadow: 0 6px 20px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="doodle" data-width="1080" data-height="1920">
+    <div id="dd-word">Never share OTPs</div>
+    <svg id="dd-svg" viewBox="0 0 1080 1920" fill="none" stroke="#FFC53D" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path id="dd-circ" d="M560 470c140-14 300 6 330 56 30 54-90 96-260 98-180 2-330-30-330-86 0-50 120-74 270-78" stroke-dasharray="1400" stroke-dashoffset="1400"/>
+      <path id="dd-under" d="M200 640c160-16 420-20 680-6" stroke-dasharray="700" stroke-dashoffset="700"/>
+      <path id="dd-arrow" d="M760 380c-30 30-60 50-90 70m90-70-12 44m12-44-44 6" stroke-dasharray="260" stroke-dashoffset="260"/>
+    </svg>
+    <div id="dd-note">not even to "the bank"</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#dd-word", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.05);
+      tl.fromTo("#dd-circ", { attr: { "stroke-dashoffset": 1400 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.6, ease: "power1.inOut" }, 0.45);
+      tl.fromTo("#dd-under", { attr: { "stroke-dashoffset": 700 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, 1.1);
+      tl.fromTo("#dd-arrow", { attr: { "stroke-dashoffset": 260 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, 1.5);
+      tl.fromTo("#dd-note", { opacity: 0, scaleX: 0.2 }, { opacity: 1, scaleX: 1, duration: 0.45, ease: "steps(6)" }, 1.75);
+      window.__timelines["doodle"] = tl;
+    })();
+  </script>
+</template>

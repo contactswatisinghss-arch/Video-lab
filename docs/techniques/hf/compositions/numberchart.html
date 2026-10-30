@@ -1,0 +1,42 @@
+<template>
+  <!-- NUMBER CHART: bars grow while their values count up; the one that matters is the accent colour. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #nc-card { position: absolute; left: 70px; top: 230px; width: 940px; height: 760px; border-radius: 40px; background: rgba(7,10,18,.88); }
+    #nc-title { position: absolute; left: 56px; top: 44px; font: 700 50px 'Space Grotesk', sans-serif; color: #F2F4F7; letter-spacing: -.02em; }
+    #nc-title span { display: block; font: 700 24px 'JetBrains Mono', monospace; color: #3DE0FF; letter-spacing: .14em; margin-top: 8px; }
+    .nc-bar { position: absolute; bottom: 110px; width: 120px; border-radius: 18px 18px 6px 6px; background: rgba(242,244,247,.25); transform-origin: 50% 100%; }
+    .nc-val { position: absolute; bottom: 0; width: 160px; text-align: center; font: 700 44px 'Space Grotesk', sans-serif; color: #F2F4F7; }
+    .nc-lab { position: absolute; bottom: 52px; width: 160px; text-align: center; font: 700 24px 'JetBrains Mono', monospace; color: rgba(242,244,247,.7); }
+    #nc-b4 { background: #FF3B4E; }
+  </style>
+  <div id="root" data-composition-id="numberchart" data-width="1080" data-height="1920">
+    <div id="nc-card">
+      <div id="nc-title">Share of websites<span>BY SERVER LANGUAGE</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const card = document.getElementById("nc-card");
+      const data = [["JAVA", 5], ["RUBY", 6], ["JS", 4], ["ASP", 6], ["PHP", 74]];
+      const MAXH = 460;
+      data.forEach(([lab, v], i) => {
+        const x = 70 + i * 170;
+        card.insertAdjacentHTML("beforeend",
+          `<div class="nc-bar" id="nc-b${i}" style="left:${x + 20}px;height:${Math.max(24, MAXH * v / 74)}px;bottom:200px"></div>
+           <div class="nc-val" id="nc-v${i}" style="left:${x}px;bottom:${206 + Math.max(24, MAXH * v / 74)}px">0%</div>
+           <div class="nc-lab" style="left:${x}px;bottom:140px">${lab}</div>`);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#nc-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0);
+      data.forEach(([lab, v], i) => {
+        const t = 0.35 + i * 0.12, n = { v: 0 };
+        tl.fromTo("#nc-b" + i, { scaleY: 0 }, { scaleY: 1, duration: i === 4 ? 1.1 : 0.6, ease: "power3.out" }, t);
+        tl.fromTo(n, { v: 0 }, { v: v, duration: i === 4 ? 1.1 : 0.6, ease: "power3.out",
+          onUpdate: () => { document.getElementById("nc-v" + i).textContent = Math.round(n.v) + "%"; } }, t);
+        tl.fromTo("#nc-v" + i, { opacity: 0 }, { opacity: 1, duration: 0.15 }, t);
+      });
+      window.__timelines["numberchart"] = tl;
+    })();
+  </script>
+</template>
