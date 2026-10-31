@@ -39,6 +39,10 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
   Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
+- Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
+  realistic flicker-on at the start; text = channel name, a topic word, or a fun tech word like `git`/`</>`),
+  plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
+  echo the Reel's palette. Track which set was used per Reel in the results log so repeats are spaced out.
 
 ## Learned from references
 (none yet: add a line per reference with the measured numbers and the one thing worth stealing)
