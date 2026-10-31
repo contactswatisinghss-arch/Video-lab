@@ -34,6 +34,11 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   behind her with a topic-specific scene via `hyperframes remove-background` (cutout layered over a designed
   background; ~2 fps on CPU, check hair edges in the preview); (c) "split" looks: footage in a frame/phone/screen
   over a designed set. Default: alternate, and never two replaced backgrounds back to back.
+- **Swati's preference (30 Oct 2026): keep her real room, add set dressing** (plants, wooden slat wall, shelf, soft
+  lamp glow) rather than swapping the background. Digital version: decor layered on the empty wall areas and
+  frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
+  Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
+  Try it on the next Reel's preview and show a before/after frame first.
 
 ## Learned from references
 (none yet: add a line per reference with the measured numbers and the one thing worth stealing)
