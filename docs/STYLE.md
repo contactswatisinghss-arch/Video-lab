@@ -40,7 +40,7 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
-  realistic flicker-on at the start; text = channel name, a topic word, or a fun tech word like `git`/`</>`),
+  realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
   echo the Reel's palette. Track which set was used per Reel in the results log so repeats are spaced out.
 
