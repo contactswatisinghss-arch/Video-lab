@@ -1,45 +1,45 @@
-# Binance heist, Part 2: script (instagram-agent /ig-reel)
+# Binance heist, Part 2: why crypto exists and where it falls short (v3)
 
-Spoken script, one line per beat. Pace 165 wpm. No dates on screen.
+One line per beat, 165 wpm, no dates on screen ("2008 crash" is history, not a posting date).
 
 ```
-3 billion in stolen crypto just got frozen.
-You were told that can't happen.
-So what is crypto, really?
-Money that only exists as records, like Bitcoin or Ether.
-Those records live on a blockchain,
-a shared ledger, like a Google Doc
-copied across thousands of computers,
-so nobody can quietly go back and edit it.
-Every transfer is public, right there on Etherscan.
-That's how firms like TRM Labs tracked the stolen money live.
-Now here's what most people miss.
-Bitcoin has no company behind it.
-On the Bitcoin network itself, nobody can freeze it.
-Stablecoins are different. USDT belongs to Tether. USDC belongs to Circle.
-Those companies can freeze coins,
-and together they froze about 2.4 billion.
-So decentralized? Not quite.
-Then there's Binance, holding the keys
-for millions of people who never touch a blockchain.
-Convenient. Also one giant target.
-Bitcoin dropped about 5% that day.
-So here's my question for any tech, from Bitcoin to ChatGPT.
-Who holds the off switch? Tether? Binance? You?
+Crypto was invented so nobody could freeze your money.
+3 billion just got frozen.
+Start with a 20 dollar note in your hand.
+If you hold it, it's yours.
+Your bank balance is different.
+It's just a number in a Chase or Barclays database,
+which is why a bank can freeze it with one click.
+After the 2008 crash, when banks got bailed out,
+someone called Satoshi Nakamoto proposed Bitcoin.
+Digital cash. No bank, no Visa, no PayPal in the middle.
+Instead of one bank's database, there's a blockchain,
+a shared ledger copied across thousands of computers.
+Not even Bitcoin's creator can quietly edit it.
+Your coins open with a private key.
+Whoever holds it, holds the money.
+So where does Bitcoin fall short?
+Lose your key and the money is gone forever.
+So most of us hand our keys
+to an exchange like Binance.
+Which means we rebuilt the bank.
+One company. One giant target.
+The 3 billion that got frozen? Mostly stablecoins.
+USDT and USDC are digital dollars run by Tether and Circle.
+And they froze about 2.4 billion.
+Bitcoin itself can't be frozen like that.
+That's the promise. And the risk.
+So ask this about any tech, from Bitcoin to ChatGPT.
+Who actually holds the keys? Tether? Binance? You?
 Save this.
 Next time someone says crypto can't be frozen, you'll know.
 ```
 
 ## Scores
-- Hook (hookscore.py): 82.3 STRONG
-- Beats (beats.py --wpm 165 --target 60): 25 beats, 65.8 s, no beat over 4 s, loop on "crypto, frozen", no flags
-- Human (detect.py): 83.1 PASS (burstiness 83, specificity 100, slop 100, fingerprint 100, voice 71)
-
-## Hooks considered
-- 82.3 STRONG (shooting): "3 billion in stolen crypto just got frozen. You were told that can't happen."
-- 80.8 STRONG: "You think crypto can't be frozen? Three billion just was."
-- 64.8 OK: "Crypto can't be frozen. Except three billion dollars of it just was."
+- Hook (hookscore.py): 75.1 STRONG (first line is 3.3 s, 0.3 s over the timing tool's limit; the number lands in line 2)
+- Beats (beats.py --wpm 165 --target 80): 225 words, 81.8 s, no beat over 4 s, loop on "crypto"
+- Human (detect.py): 77.7 PASS
 
 ## Sources
-- Yahoo Finance (Tether 1.567B + Circle 800M frozen; BTC about -5%): https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html
-- Gizmodo (about 3B frozen in total; SAFU covers users): https://gizmodo.com/how-hackers-stole-6-3-billion-from-binance-in-minutes-2000833158
+- Yahoo Finance (Tether 1.567B + Circle 800M frozen): https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html
+- Gizmodo: https://gizmodo.com/how-hackers-stole-6-3-billion-from-binance-in-minutes-2000833158
