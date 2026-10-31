@@ -13,6 +13,10 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - Meaning colours: red = threat/risk, green = fix/action. Other colours are free per Reel.
 - Optional small handle tag; branding is not required on every frame.
 
+## Gemini 4 Carbon (30 Oct 2026, auto-approved test run)
+- Look: carbon-black frosted panels over her light wall; amber = locked/access. Techniques: glass type, orbit,
+  double-edged split (new), access-list checklist, step cards, loader end card. Awaiting her stats.
+
 ## What Swati liked (Black October, Oct 2026)
 - Caption timing and sync.
 - Real graphics that carry information: news-style headline cards (recreated, never screenshots/logos), a severity meter, a globe with pins, a cracked "stack" diagram, a timeline turning red at the turning point, a shield + fixed versions, a Part 2 end card.
@@ -21,6 +25,15 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 ## Rules
 - Every graphic carries information. Icons and diagrams only, never anything resembling real attack commands or tooling.
 - Facts on screen are verified (numbers, dates, versions, IDs, headlines). Sources go in the pinned comment.
+- **No specific dates** in on-screen graphics, captions or the pinned comment (Swati, 30 Oct 2026): say "just announced",
+  "this week" etc. so a Reel doesn't look stale later. (Gemini 4 Carbon Reel was left as is.)
+- Footage is mostly shot at home at night on a plain wall: vary the look per Reel (see "Backgrounds").
+
+## Backgrounds (to keep Reels from looking the same)
+- Option per Reel, picked in the storyboard: (a) keep the real room, regraded/relit per topic; (b) replace the wall
+  behind her with a topic-specific scene via `hyperframes remove-background` (cutout layered over a designed
+  background; ~2 fps on CPU, check hair edges in the preview); (c) "split" looks: footage in a frame/phone/screen
+  over a designed set. Default: alternate, and never two replaced backgrounds back to back.
 
 ## Learned from references
 (none yet: add a line per reference with the measured numbers and the one thing worth stealing)
