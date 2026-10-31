@@ -40,12 +40,20 @@ The editing techniques are chosen by Claude from evidence and recommended in the
   - **selftest**: `selftest/run.txt` changed → `selftest/out/result.json`, `check.json`, `gallery_check.json`,
     `sheet.jpg`, `gallery_sheet.jpg`, review sheets, yt-dlp probe.
   - Every stage writes `status.json` (`reels/<slug>/status.json` keyed by stage: ok, hash, top_errors, log tail,
-    links). Claude can't see Actions logs: read these files.
+    links) and each job commits as soon as it ends; `status/heartbeat.json` shows what is running right now.
+    Claude can't see Actions logs: read these files. A failed stage re-runs on the next push automatically.
 - **Sandbox facts:** npm/CDNs blocked, so the real HyperFrames CLI runs only on GitHub; locally use
   `python3 -m engine preview`. Cloning public GitHub repos works: `git clone --depth 1
   https://github.com/heygen-com/hyperframes` for the HyperFrames skill (`skills/hyperframes/`, read `motion.md`)
   and the registry (`registry/blocks`, `registry/components`, ~450 items). Whisper can't run here (it runs on GitHub).
-  Fetch engine/docs/reel files with `get_file_contents` into a local working copy.
+  Fetch engine/docs/reel files with `get_file_contents` into a local working copy (the repo is private and can't be
+  cloned from the sandbox; `transcript.json` comes back inline, so write it to a local file before running
+  `python3 -m engine timeline/preview`).
+- **Waiting on GitHub:** you only act during a turn. After every push that starts a job, schedule a check-in with
+  the session's scheduling tool (send_later: ~15 min for prepare/preview, ~25 for final) and chain the next one
+  from each check-in, so the work continues while Swati is away. Delete leftover check-ins once delivered.
+- **Instagram toolkit:** the `instagram-agent` skill (hook scorer, caption linter, humanizer, viral research,
+  audit). Use it at the steps marked below.
 
 ## Workflow for a new Reel
 
@@ -76,6 +84,8 @@ scheduling tool exists. `ok: false` → explain the log line plainly and fix.
   or work from web-search evidence and say so. Small samples are hints, not proof.
 
 ### 4. Strategy pass (strategist hat on)
+- **Score the opening:** put her 2–4 candidate opening lines (and any re-record suggestion) through the
+  instagram-agent hook scorer (`hookscore.py`); under 50 = say a 10-second re-record of the hook would beat any edit.
 - **Angle:** the one idea, why a non-techie cares, the payoff. For news, check freshness; post within 24–48 h.
 - **Hook:** stakes in her words in the first 1–2 s plus an on-screen title on frame 0 (the thumbnail). Slow
   opening → `cuts.remove` it, or tell her a 10-second hook re-record beats any edit (no reordering).
@@ -84,16 +94,20 @@ scheduling tool exists. `ok: false` → explain the log line plainly and fix.
 - **Rhythm:** a visual beat every 3–6 s (match the references' avg shot length), each landing on its word.
 
 ### 5. Fact-check everything on screen
-Numbers, dates, versions, CVEs, quotes, headlines (recreated cards only, never screenshots or logos). Primary
+Numbers, versions, CVEs, quotes, headlines (recreated cards only, never screenshots or logos). Primary
 sources. Unverifiable → off the screen, tell Swati. Keep sources for the pinned comment.
+**No specific dates** on screen, in the caption or the pinned comment (Swati's rule): "just announced", "this week".
 
 ### 6. Storyboard = the one approval pause
 Write `reels/<slug>/BRIEF.md`: audience, angle, hook, length/cut decisions, look (palette, type, motion
 language, why it fits this topic), and a **beat table**: time · her words · technique · what appears ·
 **why (evidence)** (e.g. "number chart: 3 of top 5 refs for 'PHP breach' open on a stat; median 410K views, 4.1%
 likes"). 3–6 different techniques per Reel, one per beat, never the gallery scene unchanged.
-Build the composition (step 7) far enough to render the local preview sheet, then show Swati: the sheet image,
-the beat table, flags, and one question: approve, or what to change. Don't ask her to choose techniques.
+Include the **room look** for this Reel (docs/STYLE.md "Backgrounds"): her real room plus a different set-dressing
+combination each time (original techie neon sign, plants, wood slat wall, shelf, lamp glow), shown as a
+before/after frame. Build the composition (step 7) far enough to render the local preview sheet, then show Swati:
+the sheet image, the beat table, flags, and one question: approve, or what to change. Don't ask her to choose
+techniques. If she has said "auto-approve" for a run, skip the pause, say which reading you took, and keep going.
 
 ### 7. Design and build the composition
 - Fetch `docs/techniques/hf/compositions/*.html` (working scenes for all techniques) and
@@ -102,6 +116,10 @@ the beat table, flags, and one question: approve, or what to change. Don't ask h
 - Write `reels/<slug>/edit.json` (cuts, fixes, fonts, hf_add, cover_at, post) and `reels/<slug>/hf/`
   (`index.html`, `compositions/*.html`, captions scene using `{{lib:captions}}` + `{{words}}`), anchored with
   `{{find:word}}` / `{{at:wN}}` tokens, following REEL_GUIDE's HyperFrames rules and vertical layout.
+  Pitfalls already hit: every scene's root is `#root`, so never select `#root …` in a script (it hits the main
+  page); list the scene's own ids. GSAP must load in index `<head>` (the build adds it). The `<video>` carries
+  `data-start`/`data-duration` inside an untimed `#cam` wrapper. Her face sits roughly y 650–1100 on her usual
+  framing; graphics in the top band (180–680), captions ~1200, with dark panels over her light wall.
 - Locally: copy `transcript.json` in, run `python3 -m engine timeline --reel <dir>` then
   `python3 -m engine preview --reel <dir> --times … --out sheet.jpg` and **look**: overflow, overlaps, empty
   stretches, face covered, text outside 168–1330 px, frame 0 lacks a title.
@@ -116,18 +134,22 @@ On approval write `reels/<slug>/RENDER` (e.g. `approved <date>`). 10–25 min. W
 
 ### 9. Package for posting
 Ready to paste: caption (first line = searchable hook with keywords, 2–4 short lines, CTA to comment/share/follow),
-3–5 hashtags, pinned comment with sources, cover (`cover.jpg` or which moment), best posting time if known. Also
-put caption/hashtags in `edit.json → post` so they land in `caption.txt`. After posting, remind her to delete
-the release to free space.
+max 5 hashtags, pinned comment with sources, cover (`cover.jpg` or which moment), best posting time if known.
+Run the caption through the instagram-agent humanizer (`humanize.py` + `detect.py`) and linter (`caption.py` with
+2–3 search phrases); fix every FAIL. Put caption/hashtags in `edit.json → post` so they land in `caption.txt`.
+Download help for her: release page → Assets → `final_reel.mp4` → Share → Save Video (or the direct link
+`…/releases/download/<slug>/final_reel.mp4`, logged in to GitHub). After posting, remind her to delete the
+release to free space. Log the Reel (slug, hook formula, first line, room look) in `instagram/log.md`.
 
 ### 10. Learn
 - Misheard words → `reels/glossary.txt`.
 - Swati's likes/dislikes → `docs/STYLE.md`. New technique seen working → row in TECHNIQUES.md plus a gallery
   scene in `docs/techniques/hf/compositions/` (and its slot in the gallery `index.html`), then change
   `selftest/run.txt` and check `selftest/out/result.json`.
-- Ask for 24 h and 7-day stats (views, avg watch time, % watched to end, shares, saves, follows; she can see
-  saves/shares in her insights) → `reels/<slug>/results.md` and the STYLE.md results log; feed which techniques
-  and hooks performed into the next storyboard. Her own results outweigh other creators' references.
+- Ask for 24 h and 7-day stats (views, avg watch time, hold at 3 s, % watched to end, shares, saves, follows; she
+  can see saves/shares in her insights) → `reels/<slug>/results.md` and the STYLE.md results log; once there are
+  several Reels, run the instagram-agent audit mode (outlier multiple, sends per reach). Feed which techniques,
+  hooks and room looks performed into the next storyboard. Her own results outweigh other creators' references.
 - Engine/CI changes: test locally first, bump `VERSION` in `engine/__init__.py`, run the selftest, pin
   `HF_VERSION` in `ci/config.env` once a HyperFrames version passes.
 
