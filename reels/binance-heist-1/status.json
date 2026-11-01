@@ -1,9 +1,9 @@
 {
   "slug": "binance-heist-1",
-  "stage": "prepare",
-  "ok": true,
-  "time": "2026-11-01 00:50:36 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41257837391",
+  "stage": "preview",
+  "ok": false,
+  "time": "2026-11-01 10:29:32 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297322383",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-1",
   "prepare": {
     "stage": "prepare",
@@ -24,6 +24,19 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-01 00:50:36 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": false,
+      "time": "2026-11-01 10:29:32 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": false,
+    "time": "2026-11-01 10:29:32 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297322383",
+    "hash": "524f5aaf8972323c",
+    "error": "ed by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>,…\",\"needsAlpha\":false}\n  [INFO] [Render] Failure summary {\"renderJobId\":\"748c4843-6c87-4137-ac47-3a40763ba4a8\",\"failedStage\":\"Compiling composition\",\"error\":\"1 composition file referenced by data-composition-src cannot be rendered:\\n  - compositions/ledger.html: the file does not exist\\n\\nCheck that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\",\"elapsedMs\":51,\"stageTimings\":{},\"isTimeout\":false,\"workers\":\"auto\",\"protocolTimeout\":300000,\"observedFailedPhase\":\"compile\",\"observedLastPhase\":\"compile\",\"observedLastStatus\":\"error\",\"browserDiagnostics\":{\"total\":0,\"errors\":0,\"pageErrors\":0,\"requestFailed\":0,\"httpErrors\":0,\"navigationStarts\":0,\"navigationFailures\":0,\"consoleErrors\":0,\"consoleWarnings\":0},\"browserConsoleErrors\":[]}\n  \n  ✗  Render failed\n  \n     1 composition file referenced by data-composition-src cannot be rendered:\n       - compositions/ledger.html: the file does not exist\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
+  }
 }
