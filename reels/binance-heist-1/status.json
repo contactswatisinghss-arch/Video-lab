@@ -2,8 +2,8 @@
   "slug": "binance-heist-1",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-01 11:40:55 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41300184175",
+  "time": "2026-11-01 12:01:09 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41301982324",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-1",
   "prepare": {
     "stage": "prepare",
@@ -44,38 +44,26 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-01 11:40:55 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-01 12:01:09 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-01 11:40:55 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41300184175",
-    "hash": "72c3f5d30653d919",
+    "time": "2026-11-01 12:01:09 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41301982324",
+    "hash": "0f6c5bd61d2427e0",
     "check": {
       "parsed": true,
-      "ok": false,
-      "errors": 1,
-      "warnings": 8,
-      "top_errors": [
-        {
-          "severity": "error",
-          "code": "contrast_aa_failure",
-          "message": "Contrast is 1.42:1; WCAG AA requires 3:1.",
-          "selector": "#neon",
-          "time": 87.827,
-          "section": "findings"
-        }
-      ],
+      "ok": true,
+      "errors": 0,
+      "warnings": 3,
+      "top_errors": [],
       "top_warnings": [
-        {
-          "severity": "warning",
-          "code": "contrast_aa_failure",
-          "message": "Contrast is 2.44:1; WCAG AA requires 3:1.",
-          "selector": "div > div:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(3) > b",
-          "time": 33.78,
-          "section": "findings"
-        },
         {
           "severity": "warning",
           "code": "line_unread",
@@ -95,38 +83,6 @@
         {
           "severity": "warning",
           "code": "line_unread",
-          "message": "\"#4130\" (1 word) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#s3-col > b:nth-of-type(4)",
-          "time": 83.402,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "line_unread",
-          "message": "\"1\" (1 word) is on screen 0.20 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tt-c2 > b:nth-of-type(2)",
-          "time": 92.069,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "line_unread",
-          "message": "\"2\" (1 word) is on screen 0.10 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tt-c1 > b:nth-of-type(3)",
-          "time": 92.107,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "line_unread",
-          "message": "\"3\" (1 word) is on screen 0.13 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tt-c1 > b:nth-of-type(4)",
-          "time": 92.145,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "line_unread",
           "message": "\"The coins sit in their wallet\" (6 words) is on screen 1.57 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
           "selector": "#yo-their > b:nth-of-type(1)",
           "time": 102.904,
@@ -136,7 +92,7 @@
     },
     "hf_version": "0.8.226",
     "snapshot_ok": true,
-    "render_seconds": 802,
+    "render_seconds": 779,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-1/preview.mp4"
   }
 }
