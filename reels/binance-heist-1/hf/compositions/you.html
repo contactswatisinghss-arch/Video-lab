@@ -1,0 +1,82 @@
+<template>
+  <!-- YOU: your app balance -> the coins sit in their wallet; "only as safe as their weakest laptop"; scam alert for fake "Binance refund" DMs. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(8,10,14,.6) 0%, rgba(8,10,14,.3) 72%, rgba(8,10,14,0) 100%); }
+    .pane { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.84); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    .kick { position: absolute; left: 54px; top: 42px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #F3BA2F; }
+    .ttl { position: absolute; left: 50px; font: 700 72px/1.02 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #F7F8FA; }
+    .y { color: #F3BA2F; } .r { color: #FF4757; } .g { color: #35E39A; } .m { color: #9AA3B2; }
+    .lbl { font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
+    .chip { position: absolute; height: 72px; padding: 0 26px; border-radius: 36px; display: flex; align-items: center; gap: 14px;
+      font: 700 32px 'Space Grotesk', sans-serif; color: #F7F8FA; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 2px rgba(255,255,255,.16); }
+    .node { position: absolute; width: 250px; height: 220px; border-radius: 28px; background: rgba(255,255,255,.06);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+      font: 700 30px 'Space Grotesk', sans-serif; color: #F7F8FA; text-align: center; }
+    .node svg { width: 92px; height: 92px; }
+
+    #yo-a, #yo-b { position: absolute; inset: 0; }
+    #yo-app { position: absolute; left: 54px; top: 110px; width: 300px; height: 330px; border-radius: 36px; background: rgba(255,255,255,.06);
+      box-shadow: inset 0 0 0 3px rgba(255,255,255,.2); text-align: center; padding-top: 40px; box-sizing: border-box; }
+    #yo-app b { display: block; font: 700 64px 'Space Grotesk', sans-serif; color: #F7F8FA; margin-top: 22px; }
+    #yo-app span { display: block; font: 600 24px 'JetBrains Mono', monospace; color: #9AA3B2; }
+    #yo-arrow { position: absolute; left: 372px; top: 250px; width: 150px; height: 24px; }
+    #yo-their { position: absolute; left: 540px; top: 110px; width: 380px; height: 330px; border-radius: 36px; background: rgba(243,186,47,.10);
+      box-shadow: inset 0 0 0 3px #F3BA2F; padding: 36px 30px; box-sizing: border-box; }
+    #yo-their b { display: block; font: 700 46px/1.06 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #yo-their span { display: block; font: 600 24px 'JetBrains Mono', monospace; color: #F3BA2F; margin-top: 14px; }
+    #yo-weak { position: absolute; left: 54px; top: 446px; height: 0; }
+    #yo-safe { position: absolute; left: 54px; top: 110px; width: 860px; font: 700 66px/1.06 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #yo-scam { position: absolute; left: 54px; top: 120px; width: 860px; height: 300px; border-radius: 30px; background: rgba(255,71,87,.12);
+      box-shadow: inset 0 0 0 4px #FF4757; padding: 34px 36px; box-sizing: border-box; }
+    #yo-dm { width: 600px; height: 92px; border-radius: 46px; background: #F7F8FA; display: flex; align-items: center; padding: 0 30px; box-sizing: border-box;
+      font: 600 30px 'Space Grotesk', sans-serif; color: #0B0E14; gap: 14px; }
+    #yo-dm u { color: #2F6BFF; }
+    #yo-sc { position: absolute; left: 36px; top: 160px; display: flex; align-items: center; gap: 18px; font: 700 76px 'Space Grotesk', sans-serif; color: #FF4757; }
+    #yo-sc svg { width: 84px; height: 84px; }
+
+  </style>
+  <div id="root" data-composition-id="you" data-width="1080" data-height="1920">
+    <div class="scrim" id="yo-scrim"></div>
+    <div class="pane" id="yo-pane">
+      <div id="yo-a">
+        <div class="kick">WHAT IT MEANS FOR YOU</div>
+        <div id="yo-app"><span>YOUR APP SHOWS</span><b>0.5 ETH</b><span>Binance · Coinbase</span></div>
+        <svg id="yo-arrow" viewBox="0 0 150 24"><path d="M4 12h120" stroke="#F3BA2F" stroke-width="7" stroke-linecap="round"/><path d="M124 2l22 10-22 10z" fill="#F3BA2F"/></svg>
+        <div id="yo-their"><b>The coins sit in<br><span class="y" style="font:inherit;color:#F3BA2F;margin:0;display:inline">their</span> wallet</b><span>not yours</span></div>
+      </div>
+      <div id="yo-b">
+        <div id="yo-safe">Your money is only as safe as <span class="r">their weakest laptop.</span></div>
+      </div>
+      <div id="yo-scam">
+        <div id="yo-dm"><svg width="34" height="34" viewBox="0 0 34 34"><path d="M4 6h26v18H12l-8 6z" fill="none" stroke="#0B0E14" stroke-width="3" stroke-linejoin="round"/></svg>"Binance refund: <u>claim here</u>"</div>
+        <div id="yo-sc"><svg viewBox="0 0 84 84"><path d="M42 6l38 70H4z" fill="none" stroke="#FF4757" stroke-width="7" stroke-linejoin="round"/><path d="M42 30v24M42 62v4" stroke="#FF4757" stroke-width="7" stroke-linecap="round"/></svg>SCAM</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w285-0.04}};
+      tl.fromTo("#yo-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#yo-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
+      tl.set("#yo-b, #yo-scam, #yo-their, #yo-arrow", { opacity: 0 }, 0);
+      tl.fromTo("#yo-app", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.32, ease: "expo.out" }, {{at:w288}} - S);
+      tl.fromTo("#yo-arrow", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.25, ease: "expo.out" }, {{at:w294}} - S);
+      tl.fromTo("#yo-their", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.32, ease: "expo.out" }, {{at:w299}} - S);
+      tl.to("#yo-a", { opacity: 0, duration: 0.14 }, {{at:w302}} - S - 0.14);
+      tl.to("#yo-b", { opacity: 1, duration: 0.14 }, {{at:w302}} - S);
+      tl.fromTo("#yo-safe", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.34, ease: "expo.out" }, {{at:w303}} - S);
+      tl.to("#yo-b", { opacity: 0, duration: 0.14 }, {{at:w313}} - S + 0.3);
+      tl.fromTo("#yo-scam", { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, {{at:w313}} - S + 0.44);
+      tl.set("#yo-sc", { opacity: 0 }, 0);
+      tl.fromTo("#yo-sc", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.2)" }, {{at:w323}} - S);
+      tl.fromTo("#yo-scam", { x: 0 }, { x: 10, duration: 0.05, ease: "none", yoyo: true, repeat: 3 }, {{at:w325}} - S);
+      tl.to("#yo-pane, #yo-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w326}} - S - 0.2);
+      window.__timelines["you"] = tl;
+    })();
+  </script>
+</template>
