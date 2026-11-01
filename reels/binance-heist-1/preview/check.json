@@ -18,29 +18,29 @@
     "findings": []
   },
   "layout": {
-    "ok": false,
-    "errorCount": 2,
-    "warningCount": 1,
-    "infoCount": 1,
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 2,
     "findings": [
       {
         "code": "text_occluded",
-        "severity": "error",
-        "time": 20.268,
+        "severity": "info",
+        "time": 6.756,
         "selector": "#neon",
         "message": "Text is hidden beneath an opaque element.",
         "rect": {
-          "left": 888.84,
-          "top": 474.78,
-          "right": 1015.26,
-          "bottom": 573.96,
-          "width": 126.42,
-          "height": 99.18
+          "left": 876.6,
+          "top": 689.36,
+          "right": 998.58,
+          "bottom": 785.06,
+          "width": 121.98,
+          "height": 95.7
         },
-        "containerSelector": "#lg-pane",
+        "containerSelector": "#hk-scrim",
         "text": "</>",
         "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
-        "coveredFraction": 1,
+        "coveredFraction": 0.67,
         "lifetime": {
           "start": 0,
           "end": 121.607
@@ -48,94 +48,17 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 888.84,
-          "y": 474.78,
-          "width": 126.42,
-          "height": 99.18
+          "x": 876.6,
+          "y": 689.36,
+          "width": 121.98,
+          "height": 95.7
         },
         "firstSeen": 6.756,
-        "lastSeen": 114.851,
-        "occurrences": 9,
+        "lastSeen": 6.756,
+        "occurrences": 1,
         "heldMs": 0,
         "times": [
-          6.756,
-          20.268,
-          33.78,
-          47.292,
-          60.804,
-          74.315,
-          87.827,
-          101.339,
-          114.851
-        ]
-      },
-      {
-        "code": "content_overlap",
-        "severity": "error",
-        "time": 61.823,
-        "selector": "#neon",
-        "message": "Two text blocks overlap and may render unreadable.",
-        "rect": {
-          "left": 870.48,
-          "top": 486.45,
-          "right": 990.24,
-          "bottom": 580.41,
-          "width": 119.76,
-          "height": 93.96
-        },
-        "containerSelector": "#s1-who > s:nth-of-type(1)",
-        "text": "</>",
-        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 870.48,
-          "y": 486.45,
-          "width": 119.76,
-          "height": 93.96
-        },
-        "firstSeen": 61.823,
-        "lastSeen": 95.112,
-        "occurrences": 3,
-        "heldMs": 679.000000000002,
-        "times": [
-          61.823,
-          62.502,
-          95.112
-        ]
-      },
-      {
-        "code": "content_overlap",
-        "severity": "warning",
-        "time": 74.315,
-        "selector": "#s2-evil",
-        "message": "Two text blocks overlap and may render unreadable.",
-        "rect": {
-          "left": 146,
-          "top": 393,
-          "right": 688.92,
-          "bottom": 540.27,
-          "width": 542.92,
-          "height": 147.27
-        },
-        "containerSelector": "#s2-from",
-        "text": "\"Send everything to me.\"",
-        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
-        "dataAttributes": {},
-        "sourceFile": "compositions/step2.html",
-        "bbox": {
-          "x": 146,
-          "y": 393,
-          "width": 542.92,
-          "height": 147.27
-        },
-        "firstSeen": 74.315,
-        "lastSeen": 74.731,
-        "occurrences": 2,
-        "heldMs": 415.9999999999968,
-        "times": [
-          74.315,
-          74.731
+          6.756
         ]
       },
       {
@@ -198,7 +121,7 @@
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
     "tolerance": 2,
-    "totalIssueCount": 4,
+    "totalIssueCount": 2,
     "truncated": false
   },
   "motion": {
@@ -211,11 +134,40 @@
     "samples": 0
   },
   "contrast": {
-    "ok": true,
-    "errorCount": 0,
+    "ok": false,
+    "errorCount": 1,
     "warningCount": 1,
     "infoCount": 0,
     "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.42:1; WCAG AA requires 3:1.",
+        "text": "</>",
+        "fg": "rgb(255,231,163)",
+        "bg": "rgb(213,195,154)",
+        "ratio": 1.42,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(119,108,76)",
+        "large": true,
+        "selector": "#neon",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 870.4800415039062,
+          "y": 689.488037109375,
+          "width": 119.7618408203125,
+          "height": 93.9599609375
+        },
+        "time": 87.827,
+        "times": [
+          6.756,
+          33.78,
+          60.804,
+          87.827,
+          114.851
+        ]
+      },
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
@@ -251,12 +203,12 @@
       114.851
     ],
     "checked": 35,
-    "passed": 34
+    "passed": 29
   },
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 16,
+    "warningCount": 14,
     "infoCount": 0,
     "findings": [
       {
@@ -429,56 +381,6 @@
             "seconds": 5.887
           }
         ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"SOURCE\" renders at 24 px for 5.48 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "SOURCE",
-        "selector": "span.m",
-        "dataAttributes": {},
-        "sourceFile": "compositions/step1.html",
-        "bbox": {
-          "x": 136,
-          "y": 576.58,
-          "width": 86.41,
-          "height": 31
-        },
-        "time": 51.769,
-        "times": [
-          51.769
-        ],
-        "fontPx": 24,
-        "floorPx": 28,
-        "seconds": 5.482,
-        "elements": [
-          {
-            "selector": "span.m",
-            "text": "SOURCE",
-            "fontPx": 24,
-            "time": 51.769,
-            "seconds": 5.482
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"Who pressed it? doesn't matter\" (5 words) is on screen 1.17 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
-        "text": "Who pressed it? doesn't matter",
-        "selector": "#s1-who",
-        "dataAttributes": {},
-        "sourceFile": "compositions/step1.html",
-        "bbox": {
-          "x": 696,
-          "y": 441.86,
-          "width": 286,
-          "height": 140.59000000000003
-        },
-        "time": 61.501,
-        "words": 5,
-        "seconds": 1.167,
-        "floorSeconds": 1.5
       },
       {
         "code": "text_below_floor",
@@ -798,9 +700,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "9cb8564c-c867-41f8-834e-c90b9045b064",
+    "id": "7f67b96a-5d4b-4b01-a25c-c939d90d2c9e",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-1/.hyperframes/artifacts/checks/9cb8564c-c867-41f8-834e-c90b9045b064.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-1/.hyperframes/artifacts/checks/7f67b96a-5d4b-4b01-a25c-c939d90d2c9e.json",
     "attribution": "unversioned"
   },
   "_meta": {
