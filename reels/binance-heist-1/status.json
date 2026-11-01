@@ -2,8 +2,8 @@
   "slug": "binance-heist-1",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-01 11:19:56 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41299890735",
+  "time": "2026-11-01 11:40:55 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41300184175",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-1",
   "prepare": {
     "stage": "prepare",
@@ -39,19 +39,24 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-01 11:19:56 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-01 11:40:55 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-01 11:19:56 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41299890735",
-    "hash": "1bafc8c4af687aea",
+    "time": "2026-11-01 11:40:55 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41300184175",
+    "hash": "72c3f5d30653d919",
     "check": {
       "parsed": true,
       "ok": false,
       "errors": 1,
-      "warnings": 15,
+      "warnings": 8,
       "top_errors": [
         {
           "severity": "error",
@@ -73,50 +78,18 @@
         },
         {
           "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"investigators\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#hk-nk > small:nth-of-type(1)",
-          "time": 16.038,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
           "code": "line_unread",
-          "message": "\"EVERY COIN = A RECORD ON A BLOCKCHAIN\" (7 words) is on screen 0.33 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+          "message": "\"EVERY COIN = A RECORD ON A BLOCKCHAIN\" (7 words) is on screen 1.43 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
           "selector": "#lg-bl",
-          "time": 25.643,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"copy #1\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#lg-copies > div:nth-of-type(1)",
-          "time": 27.407,
+          "time": 24.54,
           "section": "findings"
         },
         {
           "severity": "warning",
           "code": "line_unread",
-          "message": "\"→ the money is gone\" (4 words) is on screen 1.00 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+          "message": "\"→ the money is gone\" (4 words) is on screen 1.19 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
           "selector": "#lg-gone > span:nth-of-type(1)",
-          "time": 32.8,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"offline · the vault\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#ex-cold > span:nth-of-type(1)",
-          "time": 39.182,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"NOW SERVING\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#s3-tok > span:nth-of-type(1)",
-          "time": 77.755,
+          "time": 32.61,
           "section": "findings"
         },
         {
@@ -153,41 +126,17 @@
         },
         {
           "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"CHAIN 05\" at 23 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#tt-chains > div:nth-of-type(5)",
-          "time": 94.606,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
           "code": "line_unread",
-          "message": "\"CHAIN 10\" (2 words) is on screen 0.34 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tt-chains > div:nth-of-type(10)",
-          "time": 94.936,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"YOUR APP SHOWS\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#yo-app > span:nth-of-type(1)",
-          "time": 100.29,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "line_unread",
-          "message": "\"The coins sit in their wallet\" (6 words) is on screen 0.88 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+          "message": "\"The coins sit in their wallet\" (6 words) is on screen 1.57 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
           "selector": "#yo-their > b:nth-of-type(1)",
-          "time": 103.602,
+          "time": 102.904,
           "section": "findings"
         }
       ]
     },
     "hf_version": "0.8.226",
     "snapshot_ok": true,
-    "render_seconds": 773,
+    "render_seconds": 802,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-1/preview.mp4"
   }
 }

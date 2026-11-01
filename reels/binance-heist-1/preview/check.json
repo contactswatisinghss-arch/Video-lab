@@ -21,7 +21,7 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 2,
+    "infoCount": 3,
     "findings": [
       {
         "code": "text_occluded",
@@ -104,6 +104,40 @@
         "times": [
           33.78
         ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 87.827,
+        "selector": "#s3-c > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 696,
+          "top": 390,
+          "right": 864.02,
+          "bottom": 464,
+          "width": 168.02,
+          "height": 74
+        },
+        "containerSelector": "#s3-match",
+        "text": "PRE-SIGNED REQUESTS",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.44,
+        "dataAttributes": {},
+        "sourceFile": "compositions/step3.html",
+        "bbox": {
+          "x": 696,
+          "y": 390,
+          "width": 168.02,
+          "height": 74
+        },
+        "firstSeen": 87.827,
+        "lastSeen": 87.827,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          87.827
+        ]
       }
     ],
     "duration": 121.607,
@@ -121,7 +155,7 @@
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
     "tolerance": 2,
-    "totalIssueCount": 2,
+    "totalIssueCount": 3,
     "truncated": false
   },
   "motion": {
@@ -208,52 +242,13 @@
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 14,
+    "warningCount": 7,
     "infoCount": 0,
     "findings": [
       {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"investigators\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "investigators",
-        "selector": "#hk-nk > small:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/hook.html",
-        "bbox": {
-          "x": 735.75,
-          "y": 558.66,
-          "width": 187.2,
-          "height": 31
-        },
-        "time": 16.038,
-        "times": [
-          0,
-          16.038
-        ],
-        "fontPx": 24,
-        "floorPx": 28,
-        "seconds": 2.03,
-        "elements": [
-          {
-            "selector": "#hk-nk > small:nth-of-type(1)",
-            "text": "investigators",
-            "fontPx": 24,
-            "time": 16.038,
-            "seconds": 2.03
-          },
-          {
-            "selector": "#hk-barl",
-            "text": "HOT WALLET BALANCE",
-            "fontPx": 25.61,
-            "time": 0,
-            "seconds": 4.669
-          }
-        ]
-      },
-      {
         "code": "line_unread",
         "severity": "warning",
-        "message": "\"EVERY COIN = A RECORD ON A BLOCKCHAIN\" (7 words) is on screen 0.33 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "message": "\"EVERY COIN = A RECORD ON A BLOCKCHAIN\" (7 words) is on screen 1.43 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
         "text": "EVERY COIN = A RECORD ON A BLOCKCHAIN",
         "selector": "#lg-bl",
         "dataAttributes": {},
@@ -261,165 +256,32 @@
         "bbox": {
           "x": 356,
           "y": 580,
-          "width": 654.17,
-          "height": 35
+          "width": 495.04999999999995,
+          "height": 72
         },
-        "time": 25.643,
+        "time": 24.54,
         "words": 7,
-        "seconds": 0.33,
+        "seconds": 1.434,
         "floorSeconds": 1.95
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"copy #1\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "copy #1",
-        "selector": "#lg-copies > div:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ledger.html",
-        "bbox": {
-          "x": 750.45,
-          "y": 362.5,
-          "width": 100.81,
-          "height": 31
-        },
-        "time": 27.407,
-        "times": [
-          27.407,
-          27.61,
-          27.61
-        ],
-        "fontPx": 24,
-        "floorPx": 28,
-        "seconds": 2.436,
-        "elements": [
-          {
-            "selector": "#lg-copies > div:nth-of-type(1)",
-            "text": "copy #1",
-            "fontPx": 24,
-            "time": 27.407,
-            "seconds": 2.436
-          },
-          {
-            "selector": "#lg-copies > div:nth-of-type(2)",
-            "text": "copy #2",
-            "fontPx": 24,
-            "time": 27.61,
-            "seconds": 2.233
-          },
-          {
-            "selector": "#lg-copies > div:nth-of-type(3)",
-            "text": "copy #3",
-            "fontPx": 24,
-            "time": 27.61,
-            "seconds": 2.233
-          }
-        ]
       },
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "\"→ the money is gone\" (4 words) is on screen 1.00 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "message": "\"→ the money is gone\" (4 words) is on screen 1.19 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
         "text": "→ the money is gone",
         "selector": "#lg-gone > span:nth-of-type(1)",
         "dataAttributes": {},
         "sourceFile": "compositions/ledger.html",
         "bbox": {
-          "x": 557.47,
-          "y": 470.77,
-          "width": 323.53999999999996,
-          "height": 37.5
+          "x": 558.96,
+          "y": 470.61,
+          "width": 320.99,
+          "height": 37.20999999999998
         },
-        "time": 32.8,
+        "time": 32.61,
         "words": 4,
-        "seconds": 1.002,
+        "seconds": 1.193,
         "floorSeconds": 1.275
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"offline · the vault\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "offline · the vault",
-        "selector": "#ex-cold > span:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/exch.html",
-        "bbox": {
-          "x": 140,
-          "y": 393.4,
-          "width": 296.41,
-          "height": 35
-        },
-        "time": 39.182,
-        "times": [
-          39.182,
-          39.994,
-          42.634
-        ],
-        "fontPx": 26,
-        "floorPx": 28,
-        "seconds": 5.888,
-        "elements": [
-          {
-            "selector": "#ex-cold > span:nth-of-type(1)",
-            "text": "offline · the vault",
-            "fontPx": 26,
-            "time": 39.182,
-            "seconds": 5.888
-          },
-          {
-            "selector": "#ex-hot > span:nth-of-type(1)",
-            "text": "online 24/7",
-            "fontPx": 26,
-            "time": 39.994,
-            "seconds": 8.527
-          },
-          {
-            "selector": "#ex-till",
-            "text": "= cash in the till",
-            "fontPx": 26,
-            "time": 42.634,
-            "seconds": 5.887
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"NOW SERVING\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "NOW SERVING",
-        "selector": "#s3-tok > span:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/step3.html",
-        "bbox": {
-          "x": 217.3,
-          "y": 322.3,
-          "width": 205.39,
-          "height": 34.91
-        },
-        "time": 77.755,
-        "times": [
-          77.755,
-          85.47
-        ],
-        "fontPx": 25.93,
-        "floorPx": 28,
-        "seconds": 6.903,
-        "elements": [
-          {
-            "selector": "#s3-tok > span:nth-of-type(1)",
-            "text": "NOW SERVING",
-            "fontPx": 25.93,
-            "time": 77.755,
-            "seconds": 6.903
-          },
-          {
-            "selector": "#s3-c > span:nth-of-type(1)",
-            "text": "PRE-SIGNED REQUESTS",
-            "fontPx": 26,
-            "time": 85.47,
-            "seconds": 6.497
-          }
-        ]
       },
       {
         "code": "line_unread",
@@ -498,183 +360,22 @@
         "floorSeconds": 0.4
       },
       {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"CHAIN 05\" at 23 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "CHAIN 05",
-        "selector": "#tt-chains > div:nth-of-type(5)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/total.html",
-        "bbox": {
-          "x": 783.62,
-          "y": 508.15,
-          "width": 109.59,
-          "height": 29.49
-        },
-        "time": 94.606,
-        "times": [
-          93.997,
-          94.403,
-          94.606,
-          94.606,
-          94.606,
-          94.606,
-          94.809,
-          94.809,
-          94.809
-        ],
-        "fontPx": 22.83,
-        "floorPx": 28,
-        "seconds": 0.812,
-        "elements": [
-          {
-            "selector": "#tt-chains > div:nth-of-type(5)",
-            "text": "CHAIN 05",
-            "fontPx": 22.83,
-            "time": 94.606,
-            "seconds": 0.812
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(8)",
-            "text": "CHAIN 08",
-            "fontPx": 23.8,
-            "time": 94.809,
-            "seconds": 0.609
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(1)",
-            "text": "CHAIN 01",
-            "fontPx": 24,
-            "time": 94.403,
-            "seconds": 1.015
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(2)",
-            "text": "CHAIN 02",
-            "fontPx": 24,
-            "time": 94.606,
-            "seconds": 0.812
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(3)",
-            "text": "CHAIN 03",
-            "fontPx": 24,
-            "time": 94.606,
-            "seconds": 0.812
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(4)",
-            "text": "CHAIN 04",
-            "fontPx": 24,
-            "time": 94.606,
-            "seconds": 0.812
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(6)",
-            "text": "CHAIN 06",
-            "fontPx": 24,
-            "time": 94.809,
-            "seconds": 0.609
-          },
-          {
-            "selector": "#tt-chains > div:nth-of-type(7)",
-            "text": "CHAIN 07",
-            "fontPx": 24,
-            "time": 94.809,
-            "seconds": 0.609
-          },
-          {
-            "selector": "#tt-lbl",
-            "text": "ACROSS 10 BLOCKCHAINS",
-            "fontPx": 26,
-            "time": 93.997,
-            "seconds": 1.421
-          }
-        ]
-      },
-      {
         "code": "line_unread",
         "severity": "warning",
-        "message": "\"CHAIN 10\" (2 words) is on screen 0.34 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
-        "text": "CHAIN 10",
-        "selector": "#tt-chains > div:nth-of-type(10)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/total.html",
-        "bbox": {
-          "x": 779.7,
-          "y": 567.65,
-          "width": 117.43000000000006,
-          "height": 31.600000000000023
-        },
-        "time": 94.936,
-        "words": 2,
-        "seconds": 0.343,
-        "floorSeconds": 0.4
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"YOUR APP SHOWS\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "YOUR APP SHOWS",
-        "selector": "#yo-app > span:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/you.html",
-        "bbox": {
-          "x": 159.19,
-          "y": 332.52,
-          "width": 201.61,
-          "height": 31
-        },
-        "time": 100.29,
-        "times": [
-          100.29,
-          100.29,
-          103.742
-        ],
-        "fontPx": 24,
-        "floorPx": 28,
-        "seconds": 4.264,
-        "elements": [
-          {
-            "selector": "#yo-app > span:nth-of-type(1)",
-            "text": "YOUR APP SHOWS",
-            "fontPx": 24,
-            "time": 100.29,
-            "seconds": 4.264
-          },
-          {
-            "selector": "#yo-app > span:nth-of-type(2)",
-            "text": "Binance · Coinbase",
-            "fontPx": 24,
-            "time": 100.29,
-            "seconds": 4.264
-          },
-          {
-            "selector": "#yo-their > span:nth-of-type(1)",
-            "text": "not yours",
-            "fontPx": 24,
-            "time": 103.742,
-            "seconds": 0.812
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"The coins sit in their wallet\" (6 words) is on screen 0.88 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "message": "\"The coins sit in their wallet\" (6 words) is on screen 1.57 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
         "text": "The coins sit in their wallet",
         "selector": "#yo-their > b:nth-of-type(1)",
         "dataAttributes": {},
         "sourceFile": "compositions/you.html",
         "bbox": {
-          "x": 626.36,
+          "x": 637.18,
           "y": 317,
-          "width": 282.4,
+          "width": 282.40999999999997,
           "height": 155.5
         },
-        "time": 103.602,
+        "time": 102.904,
         "words": 6,
-        "seconds": 0.875,
+        "seconds": 1.574,
         "floorSeconds": 1.725
       }
     ],
@@ -700,9 +401,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "7f67b96a-5d4b-4b01-a25c-c939d90d2c9e",
+    "id": "e53499be-1c96-405c-9dea-a7b633411133",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-1/.hyperframes/artifacts/checks/7f67b96a-5d4b-4b01-a25c-c939d90d2c9e.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-1/.hyperframes/artifacts/checks/e53499be-1c96-405c-9dea-a7b633411133.json",
     "attribution": "unversioned"
   },
   "_meta": {
