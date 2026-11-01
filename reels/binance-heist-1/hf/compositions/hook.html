@@ -1,0 +1,103 @@
+<template>
+  <!-- HOOK: "$6.3B STOLEN" is on frame 0 (thumbnail). A wallet bar drains on "swept away"; three red stamps land on
+       "no guns / no masks / not one line of code"; then the record bar chart (Bybit vs Binance), the 20-minute ring,
+       and the attribution chip. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #hk-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(8,10,14,.62) 0%, rgba(8,10,14,.32) 72%, rgba(8,10,14,0) 100%); }
+    #hk-pane { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.80); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    #hk-k { position: absolute; left: 54px; top: 44px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #F3BA2F; }
+    #hk-k b { color: #FF4757; }
+    #hk-num { position: absolute; left: 48px; top: 88px; font: 700 196px/1 'Space Grotesk', sans-serif; letter-spacing: -.05em; color: #F7F8FA; }
+    #hk-num span { color: #F3BA2F; }
+    #hk-st { position: absolute; left: 560px; top: 128px; font: 700 92px/1 'Space Grotesk', sans-serif; letter-spacing: -.03em; color: #FF4757; }
+    #hk-barbox { position: absolute; left: 54px; top: 322px; width: 860px; height: 26px; border-radius: 13px; background: rgba(255,255,255,.10); overflow: hidden; }
+    #hk-bar { position: absolute; left: 0; top: 0; width: 860px; height: 26px; border-radius: 13px; background: linear-gradient(90deg, #F3BA2F, #FFD66B); transform-origin: 0 50%; }
+    #hk-barl { position: absolute; left: 54px; top: 364px; font: 600 26px 'JetBrains Mono', monospace; color: #9AA3B2; letter-spacing: .06em; }
+    .hk-stamp { position: absolute; height: 70px; padding: 0 24px; border-radius: 16px; border: 5px solid #FF4757; background: rgba(11,14,20,.95);
+      display: flex; align-items: center; gap: 14px; font: 700 32px 'JetBrains Mono', monospace; letter-spacing: .04em; color: #FF4757; }
+    .hk-stamp svg { width: 36px; height: 36px; }
+    #hk-s1 { left: 104px; top: 478px; }
+    #hk-s2 { left: 420px; top: 478px; }
+    #hk-s3 { left: 104px; top: 562px; }
+    /* phase 2: record */
+    #hk-p2 { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.86); box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    #hk-p2t { position: absolute; left: 54px; top: 40px; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #F3BA2F; }
+    .hk-row { position: absolute; left: 54px; width: 860px; height: 110px; }
+    .hk-rl { position: absolute; left: 0; top: 0; font: 600 34px 'Space Grotesk', sans-serif; color: #C9CFD8; }
+    .hk-rb { position: absolute; left: 0; top: 48px; height: 52px; border-radius: 12px; transform-origin: 0 50%; }
+    .hk-rv { position: absolute; top: 50px; font: 700 46px 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #hk-r1 { top: 104px; } #hk-r1 .hk-rb { width: 190px; background: #5B6575; } #hk-r1 .hk-rv { left: 210px; }
+    #hk-r2 { top: 236px; } #hk-r2 .hk-rb { width: 640px; background: linear-gradient(90deg, #F3BA2F, #FF8A3D); } #hk-r2 .hk-rv { left: 660px; color: #F3BA2F; }
+    #hk-x4 { position: absolute; right: 54px; top: 34px; height: 64px; padding: 0 22px; border-radius: 32px; background: #FF4757;
+      font: 700 34px 'Space Grotesk', sans-serif; color: #fff; display: flex; align-items: center; }
+    #hk-timer { position: absolute; left: 54px; top: 352px; display: flex; align-items: center; gap: 22px; }
+    #hk-timer svg { width: 74px; height: 74px; }
+    #hk-timer b { font: 700 56px 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #hk-timer i { font: 600 30px 'JetBrains Mono', monospace; color: #9AA3B2; font-style: normal; }
+    #hk-ring { stroke-dasharray: 201; stroke-dashoffset: 201; }
+    #hk-nk { position: absolute; left: 110px; top: 528px; height: 92px; padding: 0 32px; border-radius: 46px; background: rgba(11,14,20,.92);
+      box-shadow: inset 0 0 0 3px #FF4757; display: flex; align-items: center; gap: 18px; font: 700 38px 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #hk-nk small { font: 600 24px 'JetBrains Mono', monospace; color: #9AA3B2; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hk-scrim"></div>
+    <div id="hk-pane">
+      <div id="hk-k">BINANCE <b>·</b> BIGGEST CRYPTO HEIST</div>
+      <div id="hk-num">$6.3<span>B</span></div>
+      <div id="hk-st">STOLEN</div>
+      <div id="hk-barbox"><div id="hk-bar"></div></div>
+      <div id="hk-barl">HOT WALLET BALANCE</div>
+    </div>
+    <div class="hk-stamp" id="hk-s1"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="#FF4757" stroke-width="5"/><path d="M11 11l26 26" stroke="#FF4757" stroke-width="5"/></svg>NO GUNS</div>
+    <div class="hk-stamp" id="hk-s2"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="#FF4757" stroke-width="5"/><path d="M11 11l26 26" stroke="#FF4757" stroke-width="5"/></svg>NO MASKS</div>
+    <div class="hk-stamp" id="hk-s3"><svg viewBox="0 0 48 48"><path d="M17 14L7 24l10 10M31 14l10 10-10 10" fill="none" stroke="#FF4757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>0 LINES OF CODE BROKEN</div>
+
+    <div id="hk-p2">
+      <div id="hk-p2t">BIGGEST CRYPTO THEFT EVER</div>
+      <div id="hk-x4">4×</div>
+      <div class="hk-row" id="hk-r1"><div class="hk-rl">Bybit · old record</div><div class="hk-rb"></div><div class="hk-rv">$1.5B</div></div>
+      <div class="hk-row" id="hk-r2"><div class="hk-rl">Binance</div><div class="hk-rb"></div><div class="hk-rv">$6.3B</div></div>
+      <div id="hk-timer"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="8"/><circle id="hk-ring" cx="40" cy="40" r="32" fill="none" stroke="#FF4757" stroke-width="8" stroke-linecap="round" transform="rotate(-90 40 40)"/></svg><b>~20 min</b><i>most of it gone</i></div>
+    </div>
+    <div id="hk-nk">Linked to North Korean hackers <small>investigators</small></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // frame 0 reads: pane and number already visible, settle in
+      tl.fromTo("#hk-scrim", { opacity: 0.7 }, { opacity: 1, duration: 0.3 }, 0);
+      tl.fromTo("#hk-pane", { opacity: 0.9, y: 16, scale: 0.985 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, 0);
+      tl.fromTo("#hk-num", { opacity: 0.6, x: -18, filter: "blur(5px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+      tl.fromTo("#hk-st", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w3-0.05}});
+      // "swept away": the wallet bar drains
+      tl.fromTo("#hk-bar", { scaleX: 1 }, { scaleX: 0.04, duration: 1.0, ease: "power3.in" }, {{at:w5-0.05}});
+      tl.fromTo("#hk-bar", { background: "linear-gradient(90deg, #F3BA2F, #FFD66B)" }, { background: "linear-gradient(90deg, #FF4757, #FF4757)", duration: 0.3 }, {{at:w6}});
+      // stamps
+      tl.to("#hk-barbox, #hk-barl", { opacity: 0, duration: 0.15 }, {{at:w9-0.2}});
+      tl.fromTo("#hk-s1", { opacity: 0, scale: 1.5, rotation: -10 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.24, ease: "back.out(2.2)" }, {{at:w9-0.04}});
+      tl.fromTo("#hk-s2", { opacity: 0, scale: 1.5, rotation: 10 }, { opacity: 1, scale: 1, rotation: 3, duration: 0.24, ease: "back.out(2.2)" }, {{at:w11-0.04}});
+      tl.fromTo("#hk-s3", { opacity: 0, scale: 1.5, rotation: -8 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.26, ease: "back.out(2.2)" }, {{at:w13-0.04}});
+      tl.fromTo("#hk-s3", { x: 0 }, { x: 9, duration: 0.05, ease: "none", yoyo: true, repeat: 3 }, {{at:w20}});
+      // phase 2: the record
+      tl.to("#hk-pane, #hk-s1, #hk-s2, #hk-s3", { opacity: 0, y: -24, duration: 0.18, ease: "power2.in" }, {{at:w25-0.15}});
+      tl.fromTo("#hk-p2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, {{at:w25-0.05}});
+      tl.fromTo("#hk-r1 .hk-rb", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "expo.out" }, {{at:w26}});
+      tl.fromTo("#hk-r1 .hk-rv", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w26+0.2}});
+      tl.fromTo("#hk-r2 .hk-rb", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, {{at:w31}});
+      tl.fromTo("#hk-r2 .hk-rv", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.25, ease: "expo.out" }, {{at:w31+0.35}});
+      tl.fromTo("#hk-x4", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.4)" }, {{at:w33}});
+      tl.fromTo("#hk-timer", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w34}});
+      tl.fromTo("#hk-ring", { strokeDashoffset: 201 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" }, {{at:w37}});
+      // attribution
+      tl.to("#hk-timer", { opacity: 0, duration: 0.15 }, {{at:w41-0.15}});
+      tl.fromTo("#hk-nk", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.32, ease: "expo.out" }, {{at:w41}});
+      tl.to("#hk-p2, #hk-nk, #hk-scrim", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w48-0.25}});
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>
