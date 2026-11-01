@@ -10,7 +10,8 @@
     #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
     /* room set dressing for this reel: an original warm neon "</>" sign on the wall to her right (static, no flicker) */
     #neon { position: absolute; left: 846px; top: 800px; font: 700 66px 'JetBrains Mono', monospace; color: #FFE7A3;
-      text-shadow: 0 0 6px #FFD15C, 0 0 18px #F3BA2F, 0 0 42px rgba(243,186,47,.75); letter-spacing: -.04em; opacity: .9; }
+      text-shadow: 0 0 6px #FFD15C, 0 0 18px #F3BA2F, 0 0 42px rgba(243,186,47,.75); letter-spacing: -.04em; opacity: .95;
+      padding: 6px 22px 10px; border-radius: 16px; background: rgba(14,11,9,.88); box-shadow: 0 0 0 2px rgba(255,209,92,.18), 0 10px 30px rgba(0,0,0,.35); }
     #floor { position: absolute; left: 0; bottom: 0; width: 1080px; height: 260px;
       background: linear-gradient(180deg, rgba(10,12,17,0), rgba(10,12,17,.85)); }
   </style>
@@ -24,7 +25,7 @@
 
     <div id="cam" style="z-index:1">
       <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
-      <div id="neon">&lt;/&gt;</div>
+      <div id="neon" data-layout-ignore data-layout-allow-occlusion>&lt;/&gt;</div>
     </div>
     <div id="floor" style="z-index:2"></div>
 

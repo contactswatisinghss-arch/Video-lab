@@ -39,7 +39,7 @@
     <div class="pane" id="tt-pane">
       <div id="tt-a">
         <div class="kick">IN TOTAL</div>
-        <div id="tt-num"><span>$</span><div class="tt-w"><div class="tt-c" id="tt-c1"><b>0</b><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b></div></div><span>.</span><div class="tt-w"><div class="tt-c" id="tt-c2"><b>0</b><b>1</b><b>2</b><b>3</b></div></div><span id="tt-B">B</span></div>
+        <div id="tt-num"><span>$</span><div class="tt-w"><div class="tt-c" id="tt-c1"><b data-layout-ignore>0</b><b data-layout-ignore>1</b><b data-layout-ignore>2</b><b data-layout-ignore>3</b><b data-layout-ignore>4</b><b data-layout-ignore>5</b><b>6</b></div></div><span>.</span><div class="tt-w"><div class="tt-c" id="tt-c2"><b data-layout-ignore>0</b><b data-layout-ignore>1</b><b data-layout-ignore>2</b><b>3</b></div></div><span id="tt-B">B</span></div>
         <div class="lbl" id="tt-lbl">ACROSS 10 BLOCKCHAINS</div>
         <div id="tt-chains"><div class="tt-ch">CHAIN 01</div><div class="tt-ch">CHAIN 02</div><div class="tt-ch">CHAIN 03</div><div class="tt-ch">CHAIN 04</div><div class="tt-ch">CHAIN 05</div><div class="tt-ch">CHAIN 06</div><div class="tt-ch">CHAIN 07</div><div class="tt-ch">CHAIN 08</div><div class="tt-ch">CHAIN 09</div><div class="tt-ch">CHAIN 10</div></div>
       </div>
@@ -61,7 +61,7 @@
       tl.fromTo("#tt-c1", { y: 0 }, { y: -1200, duration: 0.9, ease: "power3.out" }, 0.1);
       tl.fromTo("#tt-c2", { y: 0 }, { y: -600, duration: 0.9, ease: "power3.out" }, 0.1);
       tl.fromTo("#tt-lbl", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.25 }, {{at:w272}} - S);
-      tl.fromTo(".tt-ch", { opacity: 0, y: 16, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "back.out(2)", stagger: 0.06 }, {{at:w273}} - S);
+      tl.fromTo(".tt-ch", { opacity: 0, y: 16, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "back.out(2)", stagger: 0.03 }, {{at:w272}} - S);
       tl.to("#tt-a", { opacity: 0, duration: 0.14 }, {{at:w275}} - S - 0.1);
       tl.to("#tt-b", { opacity: 1, duration: 0.14 }, {{at:w275}} - S + 0.04);
       tl.fromTo("#tt-lock", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, {{at:w276}} - S);
