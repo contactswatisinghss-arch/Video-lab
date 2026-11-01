@@ -14,6 +14,9 @@ Tokens Claude can write anywhere in hf/*.html|css|js (resolved at build time):
   {{words}}                   JSON array of final words [{id,text,start,end}] (fixes applied)
   {{fontfaces}}               @font-face rules for edit.json "fonts"
   {{lib:captions}}            the caption helper library (engine/lib/captions.js)
+
+edit.json "speed" (e.g. 1.1) plays the cut video faster with the pitch kept (FFmpeg atempo); every token,
+{{dur}} and {{words}} is on the sped-up clock, so graphics stay on their words.
 """
 import ast, json, math, os, re, shutil
 from .util import run, ReelError
@@ -96,7 +99,10 @@ class Timeline:
         self.edit = edit
         fixed, self.alias = apply_fixes(words, edit.get("fixes"))
         self.keeps = plan_keeps(fixed, self.raw_duration, edit.get("cuts", {}))
-        self.remap = make_remap(self.keeps)
+        self.speed = float(edit.get("speed") or 1.0)
+        if not 0.5 <= self.speed <= 2.0: raise ReelError(f"edit.json speed {self.speed} is outside 0.5-2.0")
+        base, sp = make_remap(self.keeps), self.speed
+        self.remap = lambda t: base(t) / sp
         self.duration = round(self.remap(self.raw_duration), 3)
         inside = lambda w: any(a <= (w["s"] + w["e"]) / 2 <= b for a, b in self.keeps)
         self.words = [dict(id=w["id"], text=w["w"], start=round(self.remap(w["s"]), 3),
@@ -126,7 +132,7 @@ class Timeline:
         raise ReelError(f"find('{text}'): no word '{text}' in the transcript")
 
     def to_json(self):
-        return {"duration": self.duration, "raw_duration": self.raw_duration, "keeps": self.keeps,
+        return {"duration": self.duration, "raw_duration": self.raw_duration, "keeps": self.keeps, "speed": self.speed,
                 "removed_seconds": round(self.raw_duration - self.duration, 2), "words": self.words}
 
 EXPR = re.compile(r"\{\{=\s*(.+?)\s*\}\}")
@@ -218,7 +224,8 @@ def build_project(reel_dir, out_dir, fontfaces=""):
     return tl, warn
 
 def build_base(proxy, tl, out, loudnorm=True, fps=30):
-    """Cut the proxy to the kept segments in one pass, normalise loudness, keyframe every second."""
+    """Cut the proxy to the kept segments in one pass, apply edit.json speed (pitch kept), normalise loudness,
+    keyframe every second."""
     segs = tl.keeps
     parts, labels = [], []
     for i, (a, b) in enumerate(segs):
@@ -226,8 +233,11 @@ def build_base(proxy, tl, out, loudnorm=True, fps=30):
                      f"[0:a]atrim=start={a:.3f}:end={b:.3f},asetpts=PTS-STARTPTS,"
                      f"afade=t=in:d=0.015,afade=t=out:st={max(0, b - a - 0.02):.3f}:d=0.02[a{i}]")
         labels.append(f"[v{i}][a{i}]")
-    fc = ";".join(parts) + ";" + "".join(labels) + f"concat=n={len(segs)}:v=1:a=1[v][a0]"
-    fc += ";[a0]" + ("loudnorm=I=-14:TP=-1.5:LRA=11," if loudnorm else "") + "aresample=48000[a]"
+    sp = float(getattr(tl, "speed", 1.0) or 1.0)
+    fc = ";".join(parts) + ";" + "".join(labels) + f"concat=n={len(segs)}:v=1:a=1[vc][a0]"
+    fc += f";[vc]setpts=PTS/{sp:.4f}[v]" if abs(sp - 1) > 1e-3 else ";[vc]null[v]"
+    tempo = f"atempo={sp:.4f}," if abs(sp - 1) > 1e-3 else ""
+    fc += ";[a0]" + tempo + ("loudnorm=I=-14:TP=-1.5:LRA=11," if loudnorm else "") + "aresample=48000[a]"
     script = out + ".filter.txt"; open(script, "w").write(fc)
     run(["ffmpeg", "-y", "-i", proxy, "-filter_complex_script", script, "-map", "[v]", "-map", "[a]",
          "-r", str(fps), "-c:v", "libx264", "-crf", "16", "-preset", "veryfast", "-g", str(fps),
