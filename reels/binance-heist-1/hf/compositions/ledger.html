@@ -92,7 +92,7 @@
       tl.to("#lg-coin", { opacity: 0.25, scale: 0.85, duration: 0.25 }, {{at:w63}} - S);
       tl.fromTo(".lg-blk", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out", stagger: 0.12 }, {{at:w67}} - S);
       tl.fromTo(".lg-lnk", { scaleX: 0 }, { scaleX: 1, duration: 0.2, stagger: 0.12 }, {{at:w70}} - S);
-      tl.fromTo("#lg-bl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w67}} - S + 0.3);
+      tl.fromTo("#lg-bl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w63}} - S + 0.1);
       // public ledger like a shared doc
       tl.to("#lg-b", { opacity: 0, duration: 0.14 }, {{at:w74}} - S - 0.14);
       tl.to("#lg-c", { opacity: 1, duration: 0.14 }, {{at:w74}} - S);
@@ -107,7 +107,7 @@
       tl.fromTo("#lg-kt", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w91}} - S);
       tl.to("#lg-key", { rotation: 35, y: 60, opacity: 0.3, duration: 0.45, ease: "power3.in" }, {{at:w96}} - S);
       tl.to("#lg-key path, #lg-key circle", { stroke: "#FF4757", duration: 0.2 }, {{at:w96}} - S);
-      tl.fromTo("#lg-gone", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, {{at:w96}} - S + 0.15);
+      tl.fromTo("#lg-gone", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, {{at:w96}} - S - 0.1);
       tl.to("#lg-pane, #lg-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w102}} - S - 0.2);
       window.__timelines["ledger"] = tl;
     })();
