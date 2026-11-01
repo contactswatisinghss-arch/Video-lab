@@ -1,13 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "final ai-scam-calls",
-    "selftest"
+  "state": "running",
+  "current": "prepare binance-heist-1",
+  "pending": [
+    "prepare binance-heist-1"
   ],
-  "done": [
-    "final ai-scam-calls",
-    "selftest"
-  ],
-  "time": "2026-10-30 12:48:40 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41056317572"
+  "time": "2026-11-01 00:42:36 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41257837391"
 }
