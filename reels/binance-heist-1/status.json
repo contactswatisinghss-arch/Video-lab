@@ -1,9 +1,9 @@
 {
   "slug": "binance-heist-1",
   "stage": "preview",
-  "ok": false,
-  "time": "2026-11-01 10:29:32 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297322383",
+  "ok": true,
+  "time": "2026-11-01 10:50:53 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297380760",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-1",
   "prepare": {
     "stage": "prepare",
@@ -29,14 +29,192 @@
       "stage": "preview",
       "ok": false,
       "time": "2026-11-01 10:29:32 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-01 10:50:53 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
-    "ok": false,
-    "time": "2026-11-01 10:29:32 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297322383",
-    "hash": "524f5aaf8972323c",
-    "error": "ed by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>,…\",\"needsAlpha\":false}\n  [INFO] [Render] Failure summary {\"renderJobId\":\"748c4843-6c87-4137-ac47-3a40763ba4a8\",\"failedStage\":\"Compiling composition\",\"error\":\"1 composition file referenced by data-composition-src cannot be rendered:\\n  - compositions/ledger.html: the file does not exist\\n\\nCheck that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\",\"elapsedMs\":51,\"stageTimings\":{},\"isTimeout\":false,\"workers\":\"auto\",\"protocolTimeout\":300000,\"observedFailedPhase\":\"compile\",\"observedLastPhase\":\"compile\",\"observedLastStatus\":\"error\",\"browserDiagnostics\":{\"total\":0,\"errors\":0,\"pageErrors\":0,\"requestFailed\":0,\"httpErrors\":0,\"navigationStarts\":0,\"navigationFailures\":0,\"consoleErrors\":0,\"consoleWarnings\":0},\"browserConsoleErrors\":[]}\n  \n  ✗  Render failed\n  \n     1 composition file referenced by data-composition-src cannot be rendered:\n       - compositions/ledger.html: the file does not exist\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
+    "ok": true,
+    "time": "2026-11-01 10:50:53 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41297380760",
+    "hash": "330e19c8f9b4f9f6",
+    "check": {
+      "parsed": true,
+      "ok": false,
+      "errors": 2,
+      "warnings": 18,
+      "top_errors": [
+        {
+          "severity": "error",
+          "code": "text_occluded",
+          "message": "Text is hidden beneath an opaque element.",
+          "selector": "#neon",
+          "time": 20.268,
+          "section": "findings"
+        },
+        {
+          "severity": "error",
+          "code": "content_overlap",
+          "message": "Two text blocks overlap and may render unreadable.",
+          "selector": "#neon",
+          "time": 61.823,
+          "section": "findings"
+        }
+      ],
+      "top_warnings": [
+        {
+          "severity": "warning",
+          "code": "content_overlap",
+          "message": "Two text blocks overlap and may render unreadable.",
+          "selector": "#s2-evil",
+          "time": 74.315,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 2.44:1; WCAG AA requires 3:1.",
+          "selector": "div > div:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(3) > b",
+          "time": 33.78,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"investigators\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#hk-nk > small:nth-of-type(1)",
+          "time": 16.038,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"EVERY COIN = A RECORD ON A BLOCKCHAIN\" (7 words) is on screen 0.33 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#lg-bl",
+          "time": 25.643,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"copy #1\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#lg-copies > div:nth-of-type(1)",
+          "time": 27.407,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"→ the money is gone\" (4 words) is on screen 1.00 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#lg-gone > span:nth-of-type(1)",
+          "time": 32.8,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"offline · the vault\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#ex-cold > span:nth-of-type(1)",
+          "time": 39.182,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"SOURCE\" renders at 24 px for 5.48 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "span.m",
+          "time": 51.769,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"Who pressed it? doesn't matter\" (5 words) is on screen 1.17 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#s1-who",
+          "time": 61.501,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"NOW SERVING\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#s3-tok > span:nth-of-type(1)",
+          "time": 77.755,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"#4130\" (1 word) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#s3-col > b:nth-of-type(4)",
+          "time": 83.402,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"1\" (1 word) is on screen 0.20 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#tt-c2 > b:nth-of-type(2)",
+          "time": 92.069,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"2\" (1 word) is on screen 0.10 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#tt-c1 > b:nth-of-type(3)",
+          "time": 92.107,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"3\" (1 word) is on screen 0.13 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#tt-c1 > b:nth-of-type(4)",
+          "time": 92.145,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"CHAIN 05\" at 23 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#tt-chains > div:nth-of-type(5)",
+          "time": 94.606,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"CHAIN 10\" (2 words) is on screen 0.34 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#tt-chains > div:nth-of-type(10)",
+          "time": 94.936,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "text_below_floor",
+          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"YOUR APP SHOWS\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+          "selector": "#yo-app > span:nth-of-type(1)",
+          "time": 100.29,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "line_unread",
+          "message": "\"The coins sit in their wallet\" (6 words) is on screen 0.88 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+          "selector": "#yo-their > b:nth-of-type(1)",
+          "time": 103.602,
+          "section": "findings"
+        }
+      ]
+    },
+    "hf_version": "0.8.226",
+    "snapshot_ok": true,
+    "render_seconds": 789,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-1/preview.mp4"
   }
 }
