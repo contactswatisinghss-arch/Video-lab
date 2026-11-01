@@ -1,0 +1,37 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.40-   5.52] $6 .3 billion stolen, just swept away from Binance.   | w0..w8
+[   6.34-  10.76] No guns, no masks, not one single line of code was broken.   | w9..w20
+[  11.48-  17.44] You should know how. The biggest crypto heist in history, beating Bibbit's record.   | w21..w33
+[  18.22-  20.50] Most of it gone in 20 minutes.   | w34..w40
+[  21.10-  23.50] Investigators link it to North Korean hackers.   | w41..w47
+[  24.44-  29.40] So how do you rob a bank without breaking in? Crypto is digital money.   | w48..w61
+[  29.56-  33.12] You can't hold it. Every coin is a record on a blockchain.   | w62..w73
+[  33.78-  38.00] A public ledger like a Google Doc. Nobody can quietly edit.   | w74..w84
+[  38.84-  42.34] You can hold it to yourself with a key, but you lose the key   | w85..w98
+[  42.34-  43.18] and it's gone.   | w99..w101
+[  44.02-  48.50] So most people let an exchange like Binance hold it. Think of it as   | w102..w115
+[  48.50-  53.44] a bank for crypto. It keeps some coins online 24 -7 in a hot   | w116..w129
+[  53.44-  58.30] wallet, like cash, ready for withdrawals. That hot wallet,   | w130..w138
+[  58.98-  61.78] called Binance 14, was the target.   | w139..w144
+[  62.46-  67.84] So step one, how did they weigh in? It started, Binance says, with one   | w145..w158
+[  67.84-  68.86] engineer's laptop.   | w159..w160
+[  69.62-  73.16] From there, hackers reached the system that signs withdrawals.   | w161..w169
+[  74.02-  74.74] Here is the catch.   | w170..w173
+[  75.44-  79.86] A blockchain like Ethereum only checks if the signature is valid. It doesn't care   | w174..w187
+[  79.86-  82.90] who pressed the button. Step two, the trap.   | w188..w195
+[  83.58-  87.18] On Ethereum, a wallet can also carry standing instructions.   | w196..w204
+[  87.88-  89.98] Like a standing order at your bank.   | w205..w211
+[  90.60-  98.75] They wanted one on Binance 14 saying, send everything to me. Step three, the   | w212..w225
+[  98.75-  99.07] timing.   | w226..w226
+[  99.83- 104.61] Each Ethereum transaction needs the next serial number, like a token number in a   | w227..w240
+[ 104.61- 108.45] bank check. On a busy wallet, it never stops moving.   | w241..w250
+[ 109.17- 115.73] So they pre -signed 50 requests, one matched, and that single transaction moved about   | w251..w264
+[ 115.73- 117.43] $2 .5 billion.   | w265..w267
+[ 118.65- 126.71] $6 .3 billion left across 10 blockchains. No lock was broken. Binance's own system   | w268..w281
+[ 126.71- 127.55] did the signing.   | w282..w284
+[ 128.47- 132.85] So if your crypto sits on Binance or Coinbase, it's not in your wallet,   | w285..w298
+[ 133.01- 138.55] it's in theirs. And your money is only as safe as their weakest laptop.   | w299..w312
+[ 138.65- 144.07] So if you find any DM with Binance refund link, it's a scam.   | w313..w325
+[ 144.79- 148.71] In part two, we'll talk about how $3 billion of it got frozen when   | w326..w339
+[ 148.71- 150.19] crypto isn't supposed to.   | w340..w343
+[ 151.02- 154.32] Keep following me because the $6 billion story isn't over yet.   | w344..w354
