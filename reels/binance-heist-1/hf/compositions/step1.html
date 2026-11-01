@@ -1,0 +1,77 @@
+<template>
+  <!-- STEP 1: laptop -> withdrawal-signing system (arrow draws on "hackers reached"); THE CATCH: a signed withdrawal card, VALID tick on "valid", "who pressed it? doesn't matter". -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(8,10,14,.6) 0%, rgba(8,10,14,.3) 72%, rgba(8,10,14,0) 100%); }
+    .pane { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.84); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    .kick { position: absolute; left: 54px; top: 42px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #F3BA2F; }
+    .ttl { position: absolute; left: 50px; font: 700 72px/1.02 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #F7F8FA; }
+    .y { color: #F3BA2F; } .r { color: #FF4757; } .g { color: #35E39A; } .m { color: #9AA3B2; }
+    .lbl { font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
+    .chip { position: absolute; height: 72px; padding: 0 26px; border-radius: 36px; display: flex; align-items: center; gap: 14px;
+      font: 700 32px 'Space Grotesk', sans-serif; color: #F7F8FA; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 2px rgba(255,255,255,.16); }
+    .node { position: absolute; width: 250px; height: 220px; border-radius: 28px; background: rgba(255,255,255,.06);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+      font: 700 30px 'Space Grotesk', sans-serif; color: #F7F8FA; text-align: center; }
+    .node svg { width: 92px; height: 92px; }
+
+    #s1-a, #s1-b { position: absolute; inset: 0; }
+    #s1-n1 { left: 54px; top: 130px; } #s1-n2 { left: 664px; top: 130px; }
+    #s1-arrow { position: absolute; left: 318px; top: 228px; width: 330px; height: 24px; }
+    #s1-line { stroke-dasharray: 320; stroke-dashoffset: 320; }
+    #s1-note { position: absolute; left: 54px; top: 380px; }
+    #s1-sig { position: absolute; left: 54px; top: 112px; width: 560px; height: 250px; border-radius: 22px; background: #F7F8FA; padding: 28px 30px; box-sizing: border-box; }
+    #s1-sig b { display: block; font: 700 28px 'JetBrains Mono', monospace; color: #0B0E14; }
+    #s1-sig svg { position: absolute; left: 30px; top: 92px; width: 300px; height: 90px; }
+    #s1-path { stroke-dasharray: 520; stroke-dashoffset: 520; }
+    #s1-ok { position: absolute; left: 640px; top: 140px; width: 280px; height: 96px; border-radius: 48px; background: #35E39A;
+      display: flex; align-items: center; justify-content: center; gap: 12px; font: 700 40px 'Space Grotesk', sans-serif; color: #0B0E14; }
+    #s1-who { position: absolute; left: 640px; top: 262px; width: 290px; font: 700 40px/1.12 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    #s1-who s { color: #9AA3B2; text-decoration-thickness: 5px; text-decoration-color: #FF4757; }
+
+  </style>
+  <div id="root" data-composition-id="step1" data-width="1080" data-height="1920">
+    <div class="scrim" id="s1-scrim"></div>
+    <div class="pane" id="s1-pane">
+      <div id="s1-a">
+        <div class="kick">STEP 1 · THE WAY IN</div>
+        <div class="node" id="s1-n1"><svg viewBox="0 0 100 100"><rect x="18" y="22" width="64" height="42" rx="4" fill="none" stroke="#FF4757" stroke-width="6"/><path d="M8 76h84" stroke="#FF4757" stroke-width="7" stroke-linecap="round"/><path d="M40 36l20 14M60 36L40 50" stroke="#FF4757" stroke-width="5" stroke-linecap="round"/></svg><span>One engineer's<br>laptop</span></div>
+        <svg id="s1-arrow" viewBox="0 0 330 24"><path id="s1-line" d="M4 12h300" stroke="#FF4757" stroke-width="7" stroke-linecap="round"/><path id="s1-head" d="M300 2l22 10-22 10z" fill="#FF4757"/></svg>
+        <div class="node" id="s1-n2"><svg viewBox="0 0 100 100"><rect x="18" y="14" width="64" height="22" rx="4" fill="none" stroke="#F3BA2F" stroke-width="6"/><rect x="18" y="42" width="64" height="22" rx="4" fill="none" stroke="#F3BA2F" stroke-width="6"/><path d="M30 25h8M30 53h8M50 74v12M34 86h32" stroke="#F3BA2F" stroke-width="6" stroke-linecap="round"/></svg><span>System that<br>signs withdrawals</span></div>
+        <div class="chip" id="s1-note"><span class="m" style="font:600 24px 'JetBrains Mono',monospace">SOURCE</span>Binance's own account</div>
+      </div>
+      <div id="s1-b">
+        <div class="kick">THE CATCH</div>
+        <div id="s1-sig"><b>WITHDRAWAL · BINANCE 14</b><svg viewBox="0 0 300 90"><path id="s1-path" d="M8 62c30-50 50-50 40 0s40-60 60-10 30 20 50-20 40 40 70 10 40-20 60-10" fill="none" stroke="#0B0E14" stroke-width="6" stroke-linecap="round"/></svg></div>
+        <div id="s1-ok"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M7 21l9 9 17-19" fill="none" stroke="#0B0E14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>VALID</div>
+        <div id="s1-who">Who pressed it?<br><s>doesn't matter</s></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w145-0.04}};
+      tl.fromTo("#s1-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#s1-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
+      tl.set("#s1-b, #s1-n2, #s1-head, #s1-note", { opacity: 0 }, 0);
+      tl.fromTo("#s1-n1", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, {{at:w158}} - S);
+      tl.fromTo("#s1-note", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25 }, {{at:w155}} - S);
+      tl.fromTo("#s1-line", { strokeDashoffset: 320 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, {{at:w163}} - S);
+      tl.to("#s1-head", { opacity: 1, duration: 0.1 }, {{at:w163}} - S + 0.45);
+      tl.fromTo("#s1-n2", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, {{at:w166}} - S);
+      tl.to("#s1-a", { opacity: 0, duration: 0.14 }, {{at:w170}} - S - 0.14);
+      tl.to("#s1-b", { opacity: 1, duration: 0.14 }, {{at:w170}} - S);
+      tl.set("#s1-ok, #s1-who", { opacity: 0 }, 0);
+      tl.fromTo("#s1-sig", { opacity: 0, rotation: -3, y: 20 }, { opacity: 1, rotation: 0, y: 0, duration: 0.34, ease: "expo.out" }, {{at:w175}} - S);
+      tl.fromTo("#s1-path", { strokeDashoffset: 520 }, { strokeDashoffset: 0, duration: 0.7, ease: "power1.inOut" }, {{at:w179}} - S);
+      tl.fromTo("#s1-ok", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.4)" }, {{at:w184}} - S);
+      tl.fromTo("#s1-who", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.28, ease: "expo.out" }, {{at:w186}} - S);
+      tl.to("#s1-pane, #s1-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w192}} - S - 0.2);
+      window.__timelines["step1"] = tl;
+    })();
+  </script>
+</template>
