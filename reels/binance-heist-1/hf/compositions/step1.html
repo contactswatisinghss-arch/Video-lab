@@ -10,7 +10,7 @@
     .kick { position: absolute; left: 54px; top: 42px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #F3BA2F; }
     .ttl { position: absolute; left: 50px; font: 700 72px/1.02 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #F7F8FA; }
     .y { color: #F3BA2F; } .r { color: #FF4757; } .g { color: #35E39A; } .m { color: #9AA3B2; }
-    .lbl { font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
+    .lbl { font: 600 28px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
     .chip { position: absolute; height: 72px; padding: 0 26px; border-radius: 36px; display: flex; align-items: center; gap: 14px;
       font: 700 32px 'Space Grotesk', sans-serif; color: #F7F8FA; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 2px rgba(255,255,255,.16); }
     .node { position: absolute; width: 250px; height: 220px; border-radius: 28px; background: rgba(255,255,255,.06);
@@ -41,7 +41,7 @@
         <div class="node" id="s1-n1"><svg viewBox="0 0 100 100"><rect x="18" y="22" width="64" height="42" rx="4" fill="none" stroke="#FF4757" stroke-width="6"/><path d="M8 76h84" stroke="#FF4757" stroke-width="7" stroke-linecap="round"/><path d="M40 36l20 14M60 36L40 50" stroke="#FF4757" stroke-width="5" stroke-linecap="round"/></svg><span>One engineer's<br>laptop</span></div>
         <svg id="s1-arrow" viewBox="0 0 330 24"><path id="s1-line" d="M4 12h300" stroke="#FF4757" stroke-width="7" stroke-linecap="round"/><path id="s1-head" d="M300 2l22 10-22 10z" fill="#FF4757"/></svg>
         <div class="node" id="s1-n2"><svg viewBox="0 0 100 100"><rect x="18" y="14" width="64" height="22" rx="4" fill="none" stroke="#F3BA2F" stroke-width="6"/><rect x="18" y="42" width="64" height="22" rx="4" fill="none" stroke="#F3BA2F" stroke-width="6"/><path d="M30 25h8M30 53h8M50 74v12M34 86h32" stroke="#F3BA2F" stroke-width="6" stroke-linecap="round"/></svg><span>System that<br>signs withdrawals</span></div>
-        <div class="chip" id="s1-note"><span class="m" style="font:600 24px 'JetBrains Mono',monospace">SOURCE</span>Binance's own account</div>
+        <div class="chip" id="s1-note"><span class="m" style="font:600 28px 'JetBrains Mono',monospace">SOURCE</span>Binance's own account</div>
       </div>
       <div id="s1-b">
         <div class="kick">THE CATCH</div>
@@ -58,8 +58,8 @@
       tl.fromTo("#s1-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
       tl.fromTo("#s1-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
       tl.set("#s1-b, #s1-n2, #s1-head, #s1-note", { opacity: 0 }, 0);
-      tl.fromTo("#s1-n1", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, {{at:w158}} - S);
-      tl.fromTo("#s1-note", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25 }, {{at:w155}} - S);
+      tl.fromTo("#s1-n1", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, {{at:w147}} - S);
+      tl.fromTo("#s1-note", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25 }, {{at:w153}} - S);
       tl.fromTo("#s1-line", { strokeDashoffset: 320 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, {{at:w163}} - S);
       tl.to("#s1-head", { opacity: 1, duration: 0.1 }, {{at:w163}} - S + 0.45);
       tl.fromTo("#s1-n2", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, {{at:w166}} - S);
@@ -69,7 +69,7 @@
       tl.fromTo("#s1-sig", { opacity: 0, rotation: -3, y: 20 }, { opacity: 1, rotation: 0, y: 0, duration: 0.34, ease: "expo.out" }, {{at:w175}} - S);
       tl.fromTo("#s1-path", { strokeDashoffset: 520 }, { strokeDashoffset: 0, duration: 0.7, ease: "power1.inOut" }, {{at:w179}} - S);
       tl.fromTo("#s1-ok", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.4)" }, {{at:w184}} - S);
-      tl.fromTo("#s1-who", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.28, ease: "expo.out" }, {{at:w186}} - S);
+      tl.fromTo("#s1-who", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.28, ease: "expo.out" }, {{at:w185}} - S - 0.3);
       tl.to("#s1-pane, #s1-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w192}} - S - 0.2);
       window.__timelines["step1"] = tl;
     })();
