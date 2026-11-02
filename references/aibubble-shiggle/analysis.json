@@ -1,0 +1,35 @@
+{
+  "url": "https://www.tiktok.com/@shigglegitter9000/video/7701452584590019854",
+  "engagement": {
+    "title": "POP THAT BUBBLE! #china #us #ai #aibubble #stockmarket ",
+    "uploader": "shigglegitter9000",
+    "upload_date": "20261027",
+    "views": 1200000,
+    "likes": 136700,
+    "comments": 1030,
+    "shares": 3249,
+    "platform": "TikTok",
+    "url": "https://www.tiktok.com/@shigglegitter9000/video/7701452584590019854",
+    "like_rate": 0.1139,
+    "comment_rate": 0.00086
+  },
+  "duration": 32.0,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.11,
+  "cuts": 1,
+  "cut_times": [
+    6.433
+  ],
+  "avg_shot_s": 16.0,
+  "shortest_shot_s": 6.43,
+  "cuts_in_first_3s": 0,
+  "words": 104,
+  "words_per_sec": 3.25,
+  "speech_ratio": 0.9,
+  "hook_words_first_3s": "So the AI bubble in China just popped,",
+  "first_word_at": 0.0,
+  "loudness_lufs": -21.7
+}
