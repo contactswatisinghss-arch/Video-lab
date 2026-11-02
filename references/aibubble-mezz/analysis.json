@@ -1,0 +1,33 @@
+{
+  "url": "https://www.instagram.com/reel/Db9KCpQBV4q",
+  "engagement": {
+    "title": "Video by michael__mezz",
+    "uploader": "michael mezzatesta",
+    "upload_date": "20260812",
+    "likes": 173982,
+    "comments": 1718,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/reel/Db9KCpQBV4q"
+  },
+  "duration": 117.89,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 3,
+  "cut_times": [
+    15.433,
+    30.9,
+    80.033
+  ],
+  "avg_shot_s": 29.47,
+  "shortest_shot_s": 15.43,
+  "cuts_in_first_3s": 0,
+  "words": 434,
+  "words_per_sec": 3.68,
+  "speech_ratio": 0.9,
+  "hook_words_first_3s": "When all the AI companies are preparing to IPO at the",
+  "first_word_at": 0.0,
+  "loudness_lufs": -14.5
+}
