@@ -1,0 +1,32 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.53-   5.67] 3 billion of stolen crypto got frozen. This is part two of the biggest   | w0..w13
+[   5.67-   7.65] crypto heist in human history.   | w14..w18
+[   8.63-  10.45] You should know how and why.   | w19..w24
+[  11.21-  14.77] Crypto was invented so nobody could freeze your money.   | w25..w33
+[  15.55-  18.99] Start with a $20 note in your hand. If you hold it, it's yours.   | w34..w47
+[  19.89-  21.45] Your bank balance is different.   | w48..w52
+[  22.19-  27.29] It's just a number in bank's database, which is why a bank can freeze   | w53..w66
+[  27.29-  28.73] it with one click.   | w67..w70
+[  29.64-  35.76] After 2008 crash, when banks got bailed out, Satoshi Nakamoto proposed Bitcoin.   | w71..w82
+[  36.94-  39.70] Digital cash, no bank, no Visa,   | w83..w88
+[  40.46-  42.12] no PayPal in the middle.   | w89..w93
+[  42.82-  45.82] Instead of one bank's database, there is a blockchain,   | w94..w102
+[  46.56-  50.02] a shared ledger copied across thousands of computers.   | w103..w110
+[  50.88-  56.60] Not even Bitcoin's creator can quietly edit it. So how did 3 billion get   | w111..w124
+[  56.60-  57.06] frozen?   | w125..w125
+[  57.99-  60.21] Because not all crypto is Bitcoin.   | w126..w131
+[  61.31-  65.53] Most of the frozen money was stable coins, USDT and USDC.   | w132..w142
+[  66.50-  72.06] They're digital dollars run by companies like Tether and Circle. And those companies have   | w143..w156
+[  72.06-  76.68] a freeze button. They pressed it. About 2 .4 billion locked.   | w157..w167
+[  77.48-  82.94] Bitcoin and Ether have no company and no button. That's why the rest is   | w168..w181
+[  82.94-  88.26] still out there. And here is where Bitcoin's big idea falls short.   | w182..w193
+[  89.29-  93.33] Your Bitcoin opens with a private key. You lose it and it's gone. So   | w194..w207
+[  93.33-  98.01] most of us hand our private keys to an exchange like Binance, which holds   | w208..w221
+[  98.01- 103.99] them for you. Like Chase holds your cash, which means we quietly rebuilt the   | w222..w235
+[ 103.99- 105.87] bank, a digital bank.   | w236..w239
+[ 106.65- 111.35] One company, one giant target. So ask this about any tech,   | w240..w250
+[ 112.01- 116.03] from Bitcoin to Charge Pity. Who actually holds the keys?   | w251..w260
+[ 116.89- 117.21] Tether,   | w261..w261
+[ 117.91- 118.89] Binance or you?   | w262..w264
+[ 119.83- 122.35] Follow if crypto finally makes more sense.   | w265..w271
+[ 123.17- 126.99] Next time someone says crypto can't be frozen, you would know why.   | w272..w283

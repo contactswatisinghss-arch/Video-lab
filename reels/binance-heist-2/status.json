@@ -1,0 +1,29 @@
+{
+  "slug": "binance-heist-2",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-11-02 01:40:42 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41373127590",
+  "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-2",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-11-02 01:40:42 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41373127590",
+    "raw": "2E01DC1F-8B8A-4639-B178-909436CEC11F.mov",
+    "words": 284,
+    "duration": 128.466667,
+    "warnings": [
+      "Raw length 128s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
+      "6 low-confidence words (check names/jargon): two(w10), Because(w126), coins,(w139), rebuilt(w234), Charge(w254), Pity.(w255)"
+    ],
+    "token": ""
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-02 01:40:42 UTC"
+    }
+  ]
+}
