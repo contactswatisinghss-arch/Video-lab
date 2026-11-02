@@ -2,3 +2,9 @@
 #   name  url                      a specific Reel/Short (Instagram, YouTube, TikTok...)
 #   search name  query words...    find and rank top Shorts on a topic by views, analyse the top 3
 # name = lowercase-with-hyphens. If a download is blocked, attach the video to a release tagged ref-<name>.
+aibubble-blakeley https://www.tiktok.com/@graceblakeley0/video/7700205600323423521
+aibubble-misseatinggood https://www.tiktok.com/@misseatinggood/video/7690003855915945248
+aibubble-mezz https://www.instagram.com/reel/Db9KCpQBV4q
+aibubble-dailymail https://www.tiktok.com/@dailymail/video/7702417501446999309
+aibubble-shiggle https://www.tiktok.com/@shigglegitter9000/video/7701452584590019854
+search aibubble-yt china ai bubble burst dot com
