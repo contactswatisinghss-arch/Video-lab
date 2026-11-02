@@ -48,7 +48,7 @@
       tl.set("#ou-b, #ou-k", { opacity: 0 }, 0);
       tl.fromTo("#ou-f", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, {{at:w265}} - S + 0.05);
       tl.fromTo("#ou-s", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w266}} - S);
-      tl.fromTo("#ou-f", { scale: 1 }, { scale: 1.08, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, {{at:w269}} - S);
+      tl.to("#ou-f", { scale: 1.08, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, {{at:w269}} - S);
       tl.to("#ou-a", { opacity: 0, duration: 0.14 }, {{at:w272}} - S - 0.14);
       tl.to("#ou-b", { opacity: 1, duration: 0.14 }, {{at:w272}} - S);
       tl.fromTo("#ou-k", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w280}} - S - 0.6);
