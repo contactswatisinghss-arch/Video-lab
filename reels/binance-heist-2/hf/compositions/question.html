@@ -1,0 +1,47 @@
+<template>
+  <!-- THE TURN: so how did $3B freeze? Because not all crypto is Bitcoin. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(8,10,14,.6) 0%, rgba(8,10,14,.3) 72%, rgba(8,10,14,0) 100%); }
+    .pane { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.84); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    .ph { position: absolute; inset: 0; }
+    .kick { position: absolute; left: 54px; top: 42px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #7FD3FF; }
+    .ttl { position: absolute; left: 50px; font: 700 72px/1.04 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #F7F8FA; }
+    .y { color: #F3BA2F; } .r { color: #FF6E7B; } .g { color: #35E39A; } .i { color: #7FD3FF; } .m { color: #9AA3B2; }
+    .lbl { font: 600 28px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
+    .chip { position: absolute; height: 72px; padding: 0 26px; border-radius: 36px; display: flex; align-items: center; gap: 14px;
+      font: 700 32px 'Space Grotesk', sans-serif; color: #F7F8FA; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 2px rgba(255,255,255,.16); }
+    .card { position: absolute; border-radius: 26px; background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); }
+    #qu-q { position: absolute; left: 50px; top: 100px; font: 700 96px/1.02 'Space Grotesk'; letter-spacing: -.04em; color: #F7F8FA; }
+    #qu-a { left: 54px; top: 360px; box-shadow: inset 0 0 0 3px #F3BA2F; }
+    #qu-ice { position: absolute; right: 70px; top: 90px; width: 190px; height: 190px; }
+
+  </style>
+  <div id="root" data-composition-id="question" data-width="1080" data-height="1920">
+    <div class="scrim" id="qu-scrim"></div>
+    <div class="pane" id="qu-pane">
+      <div class="kick">SO WAIT</div>
+      <div id="qu-q">How did <span class="i">$3B</span><br>freeze?</div>
+      <div id="qu-ice"><svg viewBox="0 0 100 100"><path d="M50 6v88M12 28l76 44M88 28L12 72" stroke="#7FD3FF" stroke-width="6" stroke-linecap="round"/><path d="M40 12l10 10 10-10M40 88l10-10 10 10M14 40l14 2-6-12M86 60l-14-2 6 12M86 40l-14 2 6-12M14 60l14-2-6 12" fill="none" stroke="#7FD3FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="chip" id="qu-a">Not all crypto is <span class="y">Bitcoin</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w119-0.04}};
+      tl.fromTo("#qu-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#qu-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
+      tl.set("#qu-a", { opacity: 0 }, 0);
+      tl.fromTo("#qu-q", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w119}} - S + 0.05);
+      tl.fromTo("#qu-ice", { opacity: 0, rotation: -60, scale: 0.4 }, { opacity: 1, rotation: 0, scale: 1, duration: 0.5, ease: "expo.out" }, {{at:w125}} - S - 0.3);
+      tl.fromTo("#qu-a", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w126}} - S - 0.2);
+      tl.to("#qu-pane, #qu-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w132}} - S - 0.2);
+
+      window.__timelines["question"] = tl;
+    })();
+  </script>
+</template>
