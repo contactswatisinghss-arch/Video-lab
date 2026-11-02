@@ -1,0 +1,47 @@
+{
+  "url": "https://www.tiktok.com/@graceblakeley0/video/7700205600323423521",
+  "engagement": {
+    "title": "The Big Short: AI edition ",
+    "uploader": "graceblakeley0",
+    "upload_date": "20261024",
+    "views": 1200000,
+    "likes": 108300,
+    "comments": 1074,
+    "shares": 13400,
+    "platform": "TikTok",
+    "url": "https://www.tiktok.com/@graceblakeley0/video/7700205600323423521",
+    "like_rate": 0.0902,
+    "comment_rate": 0.00089
+  },
+  "duration": 129.75,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 13,
+  "cut_times": [
+    0.7,
+    2.3,
+    5.0,
+    24.033,
+    30.967,
+    38.2,
+    41.167,
+    77.4,
+    82.533,
+    100.067,
+    103.067,
+    111.067,
+    112.633
+  ],
+  "avg_shot_s": 9.27,
+  "shortest_shot_s": 0.7,
+  "cuts_in_first_3s": 2,
+  "words": 394,
+  "words_per_sec": 3.04,
+  "speech_ratio": 0.88,
+  "hook_words_first_3s": "Remember 2008? When the whole world economy imploded",
+  "first_word_at": 0.0,
+  "loudness_lufs": -16.3
+}
