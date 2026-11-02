@@ -1,0 +1,72 @@
+<template>
+  <!-- STABLECOINS: USDT and USDC are digital dollars run by companies (Tether, Circle) that have a freeze button. They pressed it: ~$2.4B locked. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(8,10,14,.6) 0%, rgba(8,10,14,.3) 72%, rgba(8,10,14,0) 100%); }
+    .pane { position: absolute; left: 56px; top: 176px; width: 968px; height: 476px; border-radius: 42px; overflow: hidden;
+      background: rgba(11,14,20,.84); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.4); }
+    .ph { position: absolute; inset: 0; }
+    .kick { position: absolute; left: 54px; top: 42px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #7FD3FF; }
+    .ttl { position: absolute; left: 50px; font: 700 72px/1.04 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #F7F8FA; }
+    .y { color: #F3BA2F; } .r { color: #FF6E7B; } .g { color: #35E39A; } .i { color: #7FD3FF; } .m { color: #9AA3B2; }
+    .lbl { font: 600 28px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #9AA3B2; }
+    .chip { position: absolute; height: 72px; padding: 0 26px; border-radius: 36px; display: flex; align-items: center; gap: 14px;
+      font: 700 32px 'Space Grotesk', sans-serif; color: #F7F8FA; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 2px rgba(255,255,255,.16); }
+    .card { position: absolute; border-radius: 26px; background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); }
+    #sb-t1 { left: 54px; top: 110px; } #sb-t2 { left: 260px; top: 110px; }
+    .tok { height: 84px; font: 700 40px 'JetBrains Mono', monospace; padding: 0 28px; box-shadow: inset 0 0 0 3px #35E39A; }
+    #sb-dd { top: 230px; }
+    #sb-run { position: absolute; left: 54px; top: 404px; }
+    #sb-btn { position: absolute; left: 90px; top: 110px; width: 260px; height: 260px; border-radius: 130px;
+      background: radial-gradient(circle at 40% 35%, #BDEBFF, #4FB6EE 60%, #2B7FB0); box-shadow: 0 16px 0 #1E5E86, 0 0 0 10px rgba(127,211,255,.18);
+      display: flex; align-items: center; justify-content: center; font: 700 44px 'Space Grotesk'; color: #0B1A26; }
+    #sb-pr { position: absolute; left: 420px; top: 120px; font: 700 64px/1.04 'Space Grotesk'; color: #F7F8FA; }
+    #sb-amt { position: absolute; left: 420px; top: 300px; height: 96px; padding: 0 30px; border-radius: 48px; background: rgba(127,211,255,.14);
+      box-shadow: inset 0 0 0 4px #7FD3FF; display: flex; align-items: center; font: 700 52px 'Space Grotesk'; color: #7FD3FF; }
+
+  </style>
+  <div id="root" data-composition-id="stable" data-width="1080" data-height="1920">
+    <div class="scrim" id="sb-scrim"></div>
+    <div class="pane" id="sb-pane">
+      <div class="ph" id="sb-a">
+        <div class="kick">MOST OF THE FROZEN MONEY</div>
+        <div class="chip tok" id="sb-t1">USDT</div>
+        <div class="chip tok" id="sb-t2">USDC</div>
+        <div class="ttl" id="sb-dd" style="font-size:60px">Stablecoins = <span class="g">digital dollars</span></div>
+        <div class="lbl" id="sb-run">RUN BY COMPANIES · TETHER · CIRCLE</div>
+      </div>
+      <div class="ph" id="sb-b">
+        <div class="kick">AND THOSE COMPANIES HAVE</div>
+        <div id="sb-btn">FREEZE</div>
+        <div id="sb-pr">A freeze<br>button.</div>
+        <div id="sb-pr2" style="position:absolute;left:420px;top:120px;font:700 64px/1.04 'Space Grotesk';color:#F7F8FA">They<br><span class="i">pressed it.</span></div>
+        <div id="sb-amt">~$2.4B locked</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w132-0.04}};
+      tl.fromTo("#sb-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#sb-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
+      tl.set("#sb-b, #sb-dd, #sb-run, #sb-amt, #sb-pr2", { opacity: 0 }, 0);
+      tl.fromTo("#sb-t1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, {{at:w138}} - S - 0.2);
+      tl.fromTo("#sb-t2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, {{at:w140}} - S - 0.1);
+      tl.fromTo("#sb-dd", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w143}} - S - 0.2);
+      tl.fromTo("#sb-run", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w148}} - S - 0.3);
+      tl.to("#sb-a", { opacity: 0, duration: 0.14 }, {{at:w153}} - S - 0.14);
+      tl.to("#sb-b", { opacity: 1, duration: 0.14 }, {{at:w153}} - S);
+      tl.fromTo("#sb-btn", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, {{at:w156}} - S - 0.3);
+      tl.to("#sb-btn", { y: 12, boxShadow: "0 4px 0 #1E5E86, 0 0 0 30px rgba(127,211,255,.35)", duration: 0.12, ease: "power2.in" }, {{at:w161}} - S);
+      tl.to("#sb-pr", { opacity: 0, duration: 0.14 }, {{at:w160}} - S - 0.14);
+      tl.to("#sb-pr2", { opacity: 1, duration: 0.14 }, {{at:w160}} - S);
+      tl.fromTo("#sb-amt", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w163}} - S - 0.1);
+      tl.to("#sb-pane, #sb-scrim", { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w168}} - S - 0.2);
+
+      window.__timelines["stable"] = tl;
+    })();
+  </script>
+</template>
