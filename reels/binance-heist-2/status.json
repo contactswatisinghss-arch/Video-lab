@@ -2,8 +2,8 @@
   "slug": "binance-heist-2",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-02 04:12:05 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41385935484",
+  "time": "2026-11-02 06:11:22 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41396202185",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-2",
   "prepare": {
     "stage": "prepare",
@@ -39,14 +39,32 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-02 04:12:05 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-02 06:11:22 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-02 06:11:22 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-02 04:12:05 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41385935484",
+    "time": "2026-11-02 06:11:22 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41396202185",
     "hash": "463bdd7d1d787ea0",
+    "note": "covered by final render"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-02 06:11:22 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41396202185",
+    "hash": "87f58d005696b8cd",
     "check": {
       "parsed": true,
       "ok": true,
@@ -55,9 +73,11 @@
       "top_errors": [],
       "top_warnings": []
     },
-    "hf_version": "0.8.230",
+    "hf_version": "0.9.0",
     "snapshot_ok": true,
-    "render_seconds": 464,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-2/preview.mp4"
+    "render_seconds": 906,
+    "seconds": 96.5,
+    "size_mb": 161.8,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-2/final_reel.mp4"
   }
 }
