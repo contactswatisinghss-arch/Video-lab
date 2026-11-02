@@ -2,8 +2,8 @@
   "slug": "binance-heist-2",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-02 03:48:39 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41383482635",
+  "time": "2026-11-02 04:12:05 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41385935484",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/binance-heist-2",
   "prepare": {
     "stage": "prepare",
@@ -34,34 +34,30 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-02 03:48:39 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-02 04:12:05 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-02 03:48:39 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41383482635",
-    "hash": "10cd594cfe5f8031",
+    "time": "2026-11-02 04:12:05 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41385935484",
+    "hash": "463bdd7d1d787ea0",
     "check": {
       "parsed": true,
       "ok": true,
       "errors": 0,
-      "warnings": 1,
+      "warnings": 0,
       "top_errors": [],
-      "top_warnings": [
-        {
-          "severity": "warning",
-          "code": "gsap_repeated_fromto_without_baseline",
-          "message": "2 tl.fromTo() calls target \"#ou-f\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
-          "selector": "#ou-f",
-          "time": 0,
-          "section": "findings"
-        }
-      ]
+      "top_warnings": []
     },
     "hf_version": "0.8.230",
     "snapshot_ok": true,
-    "render_seconds": 544,
+    "render_seconds": 464,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/binance-heist-2/preview.mp4"
   }
 }

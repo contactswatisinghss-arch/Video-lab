@@ -5,26 +5,9 @@
   "lint": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 1,
+    "warningCount": 0,
     "infoCount": 0,
-    "findings": [
-      {
-        "code": "gsap_repeated_fromto_without_baseline",
-        "severity": "warning",
-        "message": "2 tl.fromTo() calls target \"#ou-f\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
-        "selector": "#ou-f",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-2/compositions/outro.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 0.09000000000000626s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
-      }
-    ],
+    "findings": [],
     "filesScanned": 13
   },
   "runtime": {
@@ -112,9 +95,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "164cc160-f777-4e9d-b80d-85a97dadb256",
+    "id": "38ec3998-46bb-46c1-9b7d-9d389d56126d",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-2/.hyperframes/artifacts/checks/164cc160-f777-4e9d-b80d-85a97dadb256.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/binance-heist-2/.hyperframes/artifacts/checks/38ec3998-46bb-46c1-9b7d-9d389d56126d.json",
     "attribution": "unversioned"
   },
   "_meta": {
