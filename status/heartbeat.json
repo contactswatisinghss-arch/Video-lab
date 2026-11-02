@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "prepare binance-heist-2",
-  "pending": [
+  "state": "idle",
+  "last": [
     "prepare binance-heist-2"
   ],
-  "time": "2026-11-02 01:34:51 UTC",
+  "done": [
+    "prepare binance-heist-2"
+  ],
+  "time": "2026-11-02 01:40:44 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41373127590"
 }
