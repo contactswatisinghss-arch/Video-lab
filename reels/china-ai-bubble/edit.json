@@ -1,0 +1,30 @@
+{
+ "version": 2,
+ "slug": "china-ai-bubble",
+ "title": "China's AI bubble burst: the dot-com playbook",
+ "speed": 1.15,
+ "bg_remove": true,
+ "cuts": {
+  "max_pause": 0.3,
+  "pad": 0.08,
+  "keep_head": 0.3,
+  "keep_tail": 0.6,
+  "remove": [[0.0, 1.58], [15.38, 19.18], [49.0, 49.32], [78.3, 78.95], [139.22, 141.85]]
+ },
+ "fixes": [
+  ["RoboMaker unitry,", "robot maker Unitree,"],
+  ["unitries", "Unitree's"],
+  ["anythingendingit .com", "anything ending in .com"],
+  ["8 ,000", "8,000"],
+  ["40 %", "40%"],
+  ["42 %", "42%"],
+  ["57 %", "57%"],
+  ["80 %", "80%"],
+  ["we had", "We had"],
+  ["stops", "stops."]
+ ],
+ "fonts": ["Space Grotesk"],
+ "cover_at": 0.5,
+ "audio": {"loudnorm": true},
+ "post": {"caption": "", "hashtags": []}
+}

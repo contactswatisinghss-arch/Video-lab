@@ -39,13 +39,20 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
   Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
+- **Update (3 Nov 2026, china-ai-bubble): Swati asked for the background to be REPLACED** with a panelled wall and real
+  depth, so it doesn't look like she's sitting on a bed against a wall. Pipeline: edit.json `"bg_remove": true` makes CI
+  run `hyperframes remove-background` on the cut base video (cutout cached on the release as `cutout-<hash>.webm`);
+  index.html stacks base video (audio) < designed `#set` < cutout `#cam`. Depth cues: blurred shelf/plant, lamp glow,
+  vignette, soft shadow behind her, set moving ~35% of the camera punch-ins. Treat this as her default until she says otherwise.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
   echo the Reel's palette. Track which set was used per Reel in the results log so repeats are spaced out.
 
 ## Learned from references
-(none yet: add a line per reference with the measured numbers and the one thing worth stealing)
+- AI-bubble refs (Nov 2026): @misseatinggood 1.6M, 24% likes: dot-com flashback then "sound familiar?", cut every 1.4 s;
+  @graceblakeley0 1.2M: "Remember 2008?" past-crash parallel; @michael__mezz 3M: "you might think this isn't your problem";
+  @shigglegitter9000 1.1M: one take, no numbers. Steal: the past-crash parallel + a "this is your problem" turn.
 
 ## Results log
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |

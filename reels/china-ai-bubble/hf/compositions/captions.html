@@ -1,0 +1,46 @@
+<template>
+  <!-- Captions: Inter Black word pop; amber = money/hype, cyan = dot-com, red = loss, green = survive/follow. -->
+  <style>
+    #cp-stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    .cap-group { position: absolute; left: 0; width: 1080px; top: 1340px; text-align: center; overflow: visible; }
+    .cap-line { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 900; color: #FFFFFF; line-height: 1.05;
+      letter-spacing: -.01em; text-shadow: 0 4px 20px rgba(0,0,0,.75), 0 2px 5px rgba(0,0,0,.7); padding: 0 40px; }
+    .cap-word { display: inline-block; position: relative; transform-origin: 50% 70%; }
+    .cap-word .cap-txt { position: relative; z-index: 1; }
+    .cap-word.em-y, .cap-word.em-r, .cap-word.em-g, .cap-word.em-i { margin: 0 12px; }
+    .cap-word.em-y::before, .cap-word.em-r::before, .cap-word.em-g::before, .cap-word.em-i::before { content: ""; position: absolute; left: -12px; right: -12px;
+      top: 6%; bottom: 2%; border-radius: 14px; z-index: 0; }
+    .cap-word.em-y::before { background: #F3B04A; }
+    .cap-word.em-r::before { background: #FF4757; }
+    .cap-word.em-g::before { background: #35E39A; }
+    .cap-word.em-i::before { background: #7FD3FF; }
+    .cap-word.em-y .cap-txt, .cap-word.em-g .cap-txt, .cap-word.em-i .cap-txt { color: #0B0E14; text-shadow: none; }
+    .cap-word.em-r .cap-txt { text-shadow: none; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cp-stage"></div>
+  </div>
+  <script>
+    {{lib:captions}}
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const words = {{words}};
+      HFCaps.build({
+        tl, container: "#cp-stage", words, idPrefix: "cp",
+        maxWords: 3, maxChars: 20, pauseBreak: 0.24, hold: 0.35,
+        emphasis: { "em-y": ["$480", "billion", "8,000", "250", "42%", "57%", "hope", "future.", "future", "free.", "free"],
+                    "em-i": [".com", "Nasdaq", "internet", "internet."],
+                    "em-r": ["lost", "40%", "halved.", "popped.", "pop?", "80%", "$5", "trillion.", "90%.", "wrong,", "idle,", "unused."],
+                    "em-g": ["survive", "Follow", "real.", "tech."] },
+        font: { family: "Inter", weight: 900, size: 88, min: 56, maxWidth: 940 },
+        word(tl, span, w, grp, i) {
+          const big = /em-/.test(span.className);
+          tl.fromTo(span, { opacity: 0, scale: 0.6, y: 18 },
+            { opacity: 1, scale: big ? 1.08 : 1, y: 0, duration: 0.16, ease: "back.out(2)" }, Math.max(grp.start, w.start - 0.04));
+        },
+        exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); },
+      });
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

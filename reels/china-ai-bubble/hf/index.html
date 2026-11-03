@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #2a1c13; }
+    #basewrap { position: absolute; inset: 0; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    /* designed set: walnut slat wall with depth (lamp glow, blurred shelf + plant, vignette, soft shadow behind her) */
+    #set { position: absolute; inset: 0; overflow: hidden; background: #2a1c13; transform-origin: 50% 42%; }
+    #set .wall { position: absolute; inset: -20px;
+      background: repeating-linear-gradient(90deg, rgba(0,0,0,.55) 0 6px, rgba(0,0,0,0) 6px 10px, rgba(255,255,255,.035) 10px 12px, rgba(0,0,0,0) 12px 66px),
+                  repeating-linear-gradient(90deg, #5b3a22 0 22px, #4f321d 22px 44px, #573620 44px 66px);
+      filter: blur(2.2px) saturate(.9); }
+    #set .grain { position: absolute; inset: 0; opacity: .18; mix-blend-mode: overlay; background: repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, rgba(0,0,0,0) 1px 7px); }
+    #set .rail { position: absolute; left: 0; right: 0; top: 1180px; height: 26px; background: linear-gradient(#3a2414, #22140b); box-shadow: 0 10px 24px rgba(0,0,0,.6); filter: blur(1.5px); }
+    #set .wainscot { position: absolute; left: 0; right: 0; top: 1206px; bottom: 0; background: repeating-linear-gradient(90deg, rgba(0,0,0,.5) 0 4px, rgba(0,0,0,0) 4px 180px), linear-gradient(#3b2516, #1c110a); filter: blur(2.5px); }
+    #set .glow { position: absolute; left: -220px; top: 180px; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(255,186,110,.55), rgba(255,160,80,.18) 40%, rgba(0,0,0,0) 70%); mix-blend-mode: screen; }
+    #set .lamp { position: absolute; left: 70px; top: 760px; width: 150px; height: 110px; border-radius: 12px 12px 60px 60px / 12px 12px 30px 30px; background: radial-gradient(ellipse at 50% 80%, #ffe2b0, #f5a85a 60%, #a86431); filter: blur(5px); box-shadow: 0 0 120px 40px rgba(255,170,90,.45); }
+    #set .lampstem { position: absolute; left: 141px; top: 865px; width: 8px; height: 320px; background: #1a110a; filter: blur(4px); }
+    #set .neon { position: absolute; left: 820px; top: 760px; font: 700 96px 'JetBrains Mono', monospace; color: #ffd9a0; text-shadow: 0 0 8px #ffb347, 0 0 24px #ff9a2e, 0 0 60px #ff7a00; filter: blur(1.4px); opacity: .9; }
+    #set .shelf { position: absolute; right: -20px; top: 1000px; width: 330px; height: 18px; background: #24160d; box-shadow: 0 14px 30px rgba(0,0,0,.7); filter: blur(5px); }
+    #set .obj { position: absolute; right: 30px; top: 860px; width: 300px; height: 140px; }
+    #set .book { position: absolute; bottom: 0; border-radius: 3px; filter: blur(6px); }
+    #set .plant { position: absolute; left: -90px; top: 1180px; width: 420px; height: 900px; filter: blur(10px); opacity: .95; }
+    #set .plant i { position: absolute; width: 150px; height: 60px; border-radius: 100% 0; background: #2f4a24; transform-origin: 0 50%; }
+    #set .pot { position: absolute; left: 150px; top: 600px; width: 200px; height: 220px; border-radius: 14px; background: #6b3b24; }
+    #set .shadow { position: absolute; left: 160px; top: 560px; width: 820px; height: 1400px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,.5), rgba(0,0,0,0) 65%); filter: blur(30px); }
+    #vig { position: absolute; inset: 0; background: radial-gradient(ellipse 72% 58% at 50% 46%, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 100%); pointer-events: none; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 42%; }
+    #cut { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: saturate(1.04) contrast(1.03); }
+    #warm { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(255,170,90,.10), rgba(0,0,0,0) 45%); mix-blend-mode: soft-light; pointer-events: none; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- China's AI bubble vs dot-com. Her room is replaced by a designed walnut-panelled set (cutout from hyperframes remove-background). -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="basewrap" style="z-index:0">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+    <div id="set" style="z-index:1" data-layout-ignore data-layout-allow-occlusion>
+      <div class="wall"></div><div class="grain"></div><div class="rail"></div><div class="wainscot"></div>
+      <div class="glow"></div><div class="lampstem"></div><div class="lamp"></div>
+      <div class="neon">{ }</div>
+      <div class="obj"><div class="book" style="left:20px;width:34px;height:120px;background:#7a2e22"></div>
+        <div class="book" style="left:58px;width:28px;height:104px;background:#c8a46a"></div>
+        <div class="book" style="left:90px;width:40px;height:126px;background:#2e4a5c"></div>
+        <div class="book" style="left:170px;width:80px;height:80px;border-radius:50%;background:#e6d8c2"></div></div>
+      <div class="shelf"></div>
+      <div class="plant"><i style="left:200px;top:120px;transform:rotate(-40deg)"></i><i style="left:200px;top:200px;transform:rotate(-70deg)"></i>
+        <i style="left:200px;top:260px;transform:rotate(-20deg);background:#3c5c2c"></i><i style="left:200px;top:330px;transform:rotate(-55deg)"></i>
+        <i style="left:200px;top:420px;transform:rotate(-30deg);background:#3c5c2c"></i><i style="left:200px;top:500px;transform:rotate(-65deg)"></i>
+        <div class="pot"></div></div>
+      <div class="shadow"></div>
+    </div>
+    <div id="cam" style="z-index:2">
+      <video id="cut" src="assets/cutout.webm" data-start="0" data-media-start="0" data-duration="{{dur}}" data-track-index="13" muted playsinline></video>
+    </div>
+    <div id="warm" style="z-index:2"></div>
+    <div id="vig" style="z-index:3"></div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w22) - 0.04 }}" data-track-index="1" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="crash" data-composition-id="crash" data-composition-src="compositions/crash.html"
+         data-start="{{at:w22-0.04}}" data-duration="{{= at(w63) - at(w22) }}" data-track-index="2" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="bubble" data-composition-id="bubble" data-composition-src="compositions/bubble.html"
+         data-start="{{at:w63-0.04}}" data-duration="{{= at(w107) - at(w63) }}" data-track-index="3" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="dotcom" data-composition-id="dotcom" data-composition-src="compositions/dotcom.html"
+         data-start="{{at:w107-0.04}}" data-duration="{{= at(w128) - at(w107) }}" data-track-index="4" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="reasons" data-composition-id="reasons" data-composition-src="compositions/reasons.html"
+         data-start="{{at:w128-0.04}}" data-duration="{{= at(w182) - at(w128) }}" data-track-index="5" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="build" data-composition-id="build" data-composition-src="compositions/build.html"
+         data-start="{{at:w182-0.04}}" data-duration="{{= at(w250) - at(w182) }}" data-track-index="6" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="twist" data-composition-id="twist" data-composition-src="compositions/twist.html"
+         data-start="{{at:w250-0.04}}" data-duration="{{= at(w287) - at(w250) }}" data-track-index="7" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="lesson" data-composition-id="lesson" data-composition-src="compositions/lesson.html"
+         data-start="{{at:w287-0.04}}" data-duration="{{= at(w327) - at(w287) }}" data-track-index="8" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="survive" data-composition-id="survive" data-composition-src="compositions/survive.html"
+         data-start="{{at:w327-0.04}}" data-duration="{{= at(w347) - at(w327) }}" data-track-index="9" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+         data-start="{{at:w347-0.04}}" data-duration="{{= dur - at(w347) + 0.04 }}" data-track-index="10" data-track-kind="graphics" style="z-index:4"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="12" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // Camera: lift her 100 px so the wall above her head is free for graphics; the set moves less than she does (depth).
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cam", { y: -100, scale: 1.04 }, 0).set("#set", { scale: 1.0 }, 0)
+      .set("#cam", { scale: 1.08 }, {{at:w3}})
+      .set("#set", { scale: 1.028 }, {{at:w3}})
+      .set("#cam", { scale: 1.00 }, {{at:w11}})
+      .set("#set", { scale: 1.000 }, {{at:w11}})
+      .set("#cam", { scale: 1.08 }, {{at:w28}})
+      .set("#set", { scale: 1.028 }, {{at:w28}})
+      .set("#cam", { scale: 1.00 }, {{at:w34}})
+      .set("#set", { scale: 1.000 }, {{at:w34}})
+      .set("#cam", { scale: 1.10 }, {{at:w62}})
+      .set("#set", { scale: 1.035 }, {{at:w62}})
+      .set("#cam", { scale: 1.00 }, {{at:w63}})
+      .set("#set", { scale: 1.000 }, {{at:w63}})
+      .set("#cam", { scale: 1.10 }, {{at:w106}})
+      .set("#set", { scale: 1.035 }, {{at:w106}})
+      .set("#cam", { scale: 1.00 }, {{at:w107}})
+      .set("#set", { scale: 1.000 }, {{at:w107}})
+      .set("#cam", { scale: 1.08 }, {{at:w126}})
+      .set("#set", { scale: 1.028 }, {{at:w126}})
+      .set("#cam", { scale: 1.00 }, {{at:w128}})
+      .set("#set", { scale: 1.000 }, {{at:w128}})
+      .set("#cam", { scale: 1.08 }, {{at:w151}})
+      .set("#set", { scale: 1.028 }, {{at:w151}})
+      .set("#cam", { scale: 1.00 }, {{at:w160}})
+      .set("#set", { scale: 1.000 }, {{at:w160}})
+      .set("#cam", { scale: 1.08 }, {{at:w209}})
+      .set("#set", { scale: 1.028 }, {{at:w209}})
+      .set("#cam", { scale: 1.00 }, {{at:w216}})
+      .set("#set", { scale: 1.000 }, {{at:w216}})
+      .set("#cam", { scale: 1.08 }, {{at:w243}})
+      .set("#set", { scale: 1.028 }, {{at:w243}})
+      .set("#cam", { scale: 1.00 }, {{at:w250}})
+      .set("#set", { scale: 1.000 }, {{at:w250}})
+      .set("#cam", { scale: 1.10 }, {{at:w265}})
+      .set("#set", { scale: 1.035 }, {{at:w265}})
+      .set("#cam", { scale: 1.00 }, {{at:w266}})
+      .set("#set", { scale: 1.000 }, {{at:w266}})
+      .set("#cam", { scale: 1.08 }, {{at:w288}})
+      .set("#set", { scale: 1.028 }, {{at:w288}})
+      .set("#cam", { scale: 1.00 }, {{at:w297}})
+      .set("#set", { scale: 1.000 }, {{at:w297}})
+      .set("#cam", { scale: 1.10 }, {{at:w312}})
+      .set("#set", { scale: 1.035 }, {{at:w312}})
+      .set("#cam", { scale: 1.00 }, {{at:w327}})
+      .set("#set", { scale: 1.000 }, {{at:w327}})
+      .set("#cam", { scale: 1.06 }, {{at:w347}})
+      .set("#set", { scale: 1.021 }, {{at:w347}});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>
