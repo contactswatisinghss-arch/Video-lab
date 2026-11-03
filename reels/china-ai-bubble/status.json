@@ -2,8 +2,8 @@
   "slug": "china-ai-bubble",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-03 14:22:56 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41632048848",
+  "time": "2026-11-03 16:05:41 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41667089042",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/china-ai-bubble",
   "prepare": {
     "stage": "prepare",
@@ -35,14 +35,32 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-03 14:22:56 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-03 16:05:41 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-03 16:05:41 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-03 14:22:56 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41632048848",
-    "hash": "d13258df2c141f5d",
+    "time": "2026-11-03 16:05:41 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41667089042",
+    "hash": "4aeef2b394802725",
+    "note": "covered by final render"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-03 16:05:41 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41667089042",
+    "hash": "ab083bd6c41744d8",
     "check": {
       "parsed": true,
       "ok": true,
@@ -102,7 +120,9 @@
     },
     "hf_version": "0.9.8",
     "snapshot_ok": true,
-    "render_seconds": 2203,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/china-ai-bubble/preview.mp4"
+    "render_seconds": 807,
+    "seconds": 111.0,
+    "size_mb": 282.2,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/china-ai-bubble/final_reel.mp4"
   }
 }
