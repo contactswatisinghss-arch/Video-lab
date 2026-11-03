@@ -1,21 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "references aibubble-blakeley",
-    "references aibubble-misseatinggood",
-    "references aibubble-mezz",
-    "references aibubble-dailymail",
-    "references aibubble-shiggle",
-    "references aibubble-yt"
+  "state": "running",
+  "current": "prepare china-ai-bubble",
+  "pending": [
+    "prepare china-ai-bubble"
   ],
-  "done": [
-    "references aibubble-blakeley",
-    "references aibubble-misseatinggood",
-    "references aibubble-mezz",
-    "references aibubble-dailymail",
-    "references aibubble-shiggle",
-    "references aibubble-yt"
-  ],
-  "time": "2026-11-02 08:45:29 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41414645391"
+  "time": "2026-11-03 08:54:12 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41606618973"
 }
