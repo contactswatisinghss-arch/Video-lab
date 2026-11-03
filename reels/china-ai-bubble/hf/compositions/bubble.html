@@ -21,7 +21,7 @@
     #bb-hope { left: 40px; height: 40px; background: linear-gradient(180deg, #F3B04A, #B8761E); }
     #bb-earn { left: 260px; height: 40px; background: #35E39A; }
     .bl { position: absolute; bottom: -46px; width: 210px; text-align: center; font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .06em; color: #C9CFD8; }
-    #bb-ball { position: absolute; left: 640px; top: 110px; width: 260px; height: 260px; border-radius: 50%; transform: scale(.35);
+    #bb-ball { position: absolute; left: 640px; top: 110px; width: 260px; height: 260px; border-radius: 50%;
       background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.7), rgba(243,176,74,.35) 40%, rgba(243,176,74,.08) 72%); box-shadow: inset 0 0 0 4px rgba(243,176,74,.7), 0 0 60px rgba(243,176,74,.25); }
     #bb-pop { position: absolute; left: 640px; top: 150px; width: 260px; text-align: center; font: 700 76px 'Space Grotesk'; color: #FF6E6E; }
     #bb-pay { position: absolute; left: 610px; top: 384px; width: 330px; font: 700 30px/1.15 'Space Grotesk'; color: #F7F8FA; }
@@ -51,6 +51,7 @@
       tl.fromTo("#bb-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
       tl.fromTo("#bb-pane", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0);
       tl.set("#bb-b, #bb-pop, #bb-pay", { opacity: 0 }, 0);
+      tl.set("#bb-ball", { scale: 0.35 }, 0);
       tl.fromTo("#bb-q", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w73}} - S - 0.2);
       tl.to("#bb-a", { opacity: 0, duration: 0.14 }, {{at:w90}} - S - 0.14);
       tl.to("#bb-b", { opacity: 1, duration: 0.14 }, {{at:w90}} - S);
