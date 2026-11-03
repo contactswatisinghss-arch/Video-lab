@@ -1,9 +1,9 @@
 {
   "slug": "china-ai-bubble",
-  "stage": "prepare",
+  "stage": "preview",
   "ok": true,
-  "time": "2026-11-03 09:28:50 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41606618973",
+  "time": "2026-11-03 11:51:01 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41614411878",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/china-ai-bubble",
   "prepare": {
     "stage": "prepare",
@@ -25,6 +25,56 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-03 09:28:50 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-03 11:51:01 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": true,
+    "time": "2026-11-03 11:51:01 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41614411878",
+    "hash": "08537720c8478624",
+    "check": {
+      "parsed": true,
+      "ok": false,
+      "errors": 1,
+      "warnings": 2,
+      "top_errors": [
+        {
+          "severity": "error",
+          "code": "gsap_css_transform_conflict",
+          "message": "\"#bb-ball\" has CSS `transform: scale(.35)` and a GSAP tween animates scale. GSAP will overwrite the full CSS transform, discarding any translateX(-50%) centering or CSS scale value.",
+          "selector": "#bb-ball",
+          "time": 0,
+          "section": "findings"
+        }
+      ],
+      "top_warnings": [
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#cr-line",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#tw-line",
+          "time": 0,
+          "section": "findings"
+        }
+      ]
+    },
+    "hf_version": "0.9.8",
+    "snapshot_ok": true,
+    "render_seconds": 1930,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/china-ai-bubble/preview.mp4"
+  }
 }
