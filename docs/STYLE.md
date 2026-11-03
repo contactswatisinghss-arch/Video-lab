@@ -43,7 +43,7 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   depth, so it doesn't look like she's sitting on a bed against a wall. Pipeline: edit.json `"bg_remove": true` makes CI
   run `hyperframes remove-background` on the cut base video (cutout cached on the release as `cutout-<hash>.webm`);
   index.html stacks base video (audio) < designed `#set` < cutout `#cam`. Depth cues: blurred shelf/plant, lamp glow,
-  vignette, soft shadow behind her, set moving ~35% of the camera punch-ins. Treat this as her default until she says otherwise.
+  vignette, soft shadow behind her, set moving ~35% of the camera punch-ins. Superseded by the final-review feedback below.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
@@ -57,3 +57,6 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 ## Results log
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |
 |---|---|---|---|---|---|---|---|---|---|
+
+## Final-review feedback: China AI bubble
+- Swati found the replacement background unnatural. Final uses the original room with background removal, artificial set, tint and vignette disabled. Keep the existing graphics, text, animations, cuts and pacing. Prefer the original background for future edits unless she requests a change.

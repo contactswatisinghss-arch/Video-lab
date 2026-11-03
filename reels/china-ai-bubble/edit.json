@@ -3,7 +3,7 @@
  "slug": "china-ai-bubble",
  "title": "China's AI bubble burst: the dot-com playbook",
  "speed": 1.15,
- "bg_remove": true,
+ "bg_remove": false,
  "cuts": {
   "max_pause": 0.3,
   "pad": 0.08,
