@@ -1,11 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "preview china-ai-bubble"
+  "state": "running",
+  "current": "final china-ai-bubble",
+  "pending": [
+    "final china-ai-bubble"
   ],
-  "done": [
-    "preview china-ai-bubble"
-  ],
-  "time": "2026-11-03 14:22:58 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41632048848"
+  "time": "2026-11-03 15:46:23 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/41667089042"
 }
