@@ -39,11 +39,9 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
   Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
-- **Update (3 Nov 2026, china-ai-bubble): Swati asked for the background to be REPLACED** with a panelled wall and real
-  depth, so it doesn't look like she's sitting on a bed against a wall. Pipeline: edit.json `"bg_remove": true` makes CI
-  run `hyperframes remove-background` on the cut base video (cutout cached on the release as `cutout-<hash>.webm`);
-  index.html stacks base video (audio) < designed `#set` < cutout `#cam`. Depth cues: blurred shelf/plant, lamp glow,
-  vignette, soft shadow behind her, set moving ~35% of the camera punch-ins. Superseded by the final-review feedback below.
+- **Background replacement: DON'T (Swati, Nov 2026).** Tried on china-ai-bubble (cutout over a designed walnut-panelled set):
+  she found it "very unnatural". Keep her real room; at most a warm grade + vignette, and only subtle decor on empty wall
+  areas that never passes behind her. The `bg_remove` option in edit.json (ci/bgjobs.py) stays available but is off by default.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
@@ -57,6 +55,3 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 ## Results log
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |
 |---|---|---|---|---|---|---|---|---|---|
-
-## Final-review feedback: China AI bubble
-- Swati found the replacement background unnatural. Final uses the original room with background removal, artificial set, tint and vignette disabled. Keep the existing graphics, text, animations, cuts and pacing. Prefer the original background for future edits unless she requests a change.

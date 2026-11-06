@@ -6,19 +6,23 @@
     {{fontfaces}}
     html, body { margin: 0; background: #000; }
     #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #2a1c13; }
-    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: saturate(1.04) contrast(1.03); }
+    #vig { position: absolute; inset: 0; background: radial-gradient(ellipse 72% 58% at 50% 46%, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 100%); pointer-events: none; }
     #cam { position: absolute; inset: 0; transform-origin: 50% 42%; }
+    #warm { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(255,170,90,.10), rgba(0,0,0,0) 45%); mix-blend-mode: soft-light; pointer-events: none; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 </head>
 <body>
-  <!-- Original room footage with the approved graphics, captions and camera punch-ins. -->
+  <!-- China's AI bubble vs dot-com. Her real room, warm grade + vignette (Swati: no background replacement). -->
   <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
        data-width="1080" data-height="1920" data-fps="30">
 
     <div id="cam" style="z-index:0">
       <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
     </div>
+    <div id="warm" style="z-index:2"></div>
+    <div id="vig" style="z-index:3"></div>
 
     <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
          data-start="0" data-duration="{{= at(w22) - 0.04 }}" data-track-index="1" data-track-kind="graphics" style="z-index:4"></div>
@@ -46,32 +50,32 @@
   </div>
 
   <script>
-    // Preserve the approved punch-in timing on the complete original footage.
+    // Camera: lift her 100 px so the wall above her head is free for graphics (scale >= 1.1 keeps the frame filled).
     const tl = gsap.timeline({ paused: true });
-    tl.set("#cam", { y: 0, scale: 1.04 }, 0)
-      .set("#cam", { scale: 1.08 }, {{at:w3}})
-      .set("#cam", { scale: 1.00 }, {{at:w11}})
-      .set("#cam", { scale: 1.08 }, {{at:w28}})
-      .set("#cam", { scale: 1.00 }, {{at:w34}})
-      .set("#cam", { scale: 1.10 }, {{at:w62}})
-      .set("#cam", { scale: 1.00 }, {{at:w63}})
-      .set("#cam", { scale: 1.10 }, {{at:w106}})
-      .set("#cam", { scale: 1.00 }, {{at:w107}})
-      .set("#cam", { scale: 1.08 }, {{at:w126}})
-      .set("#cam", { scale: 1.00 }, {{at:w128}})
-      .set("#cam", { scale: 1.08 }, {{at:w151}})
-      .set("#cam", { scale: 1.00 }, {{at:w160}})
-      .set("#cam", { scale: 1.08 }, {{at:w209}})
-      .set("#cam", { scale: 1.00 }, {{at:w216}})
-      .set("#cam", { scale: 1.08 }, {{at:w243}})
-      .set("#cam", { scale: 1.00 }, {{at:w250}})
-      .set("#cam", { scale: 1.10 }, {{at:w265}})
-      .set("#cam", { scale: 1.00 }, {{at:w266}})
-      .set("#cam", { scale: 1.08 }, {{at:w288}})
-      .set("#cam", { scale: 1.00 }, {{at:w297}})
-      .set("#cam", { scale: 1.10 }, {{at:w312}})
-      .set("#cam", { scale: 1.00 }, {{at:w327}})
-      .set("#cam", { scale: 1.06 }, {{at:w347}});
+    tl.set("#cam", { y: -100, scale: 1.10 }, 0)
+      .set("#cam", { scale: 1.16 }, {{at:w3}})
+      .set("#cam", { scale: 1.10 }, {{at:w11}})
+      .set("#cam", { scale: 1.16 }, {{at:w28}})
+      .set("#cam", { scale: 1.10 }, {{at:w34}})
+      .set("#cam", { scale: 1.18 }, {{at:w62}})
+      .set("#cam", { scale: 1.10 }, {{at:w63}})
+      .set("#cam", { scale: 1.18 }, {{at:w106}})
+      .set("#cam", { scale: 1.10 }, {{at:w107}})
+      .set("#cam", { scale: 1.16 }, {{at:w126}})
+      .set("#cam", { scale: 1.10 }, {{at:w128}})
+      .set("#cam", { scale: 1.16 }, {{at:w151}})
+      .set("#cam", { scale: 1.10 }, {{at:w160}})
+      .set("#cam", { scale: 1.16 }, {{at:w209}})
+      .set("#cam", { scale: 1.10 }, {{at:w216}})
+      .set("#cam", { scale: 1.16 }, {{at:w243}})
+      .set("#cam", { scale: 1.10 }, {{at:w250}})
+      .set("#cam", { scale: 1.18 }, {{at:w265}})
+      .set("#cam", { scale: 1.10 }, {{at:w266}})
+      .set("#cam", { scale: 1.16 }, {{at:w288}})
+      .set("#cam", { scale: 1.10 }, {{at:w297}})
+      .set("#cam", { scale: 1.18 }, {{at:w312}})
+      .set("#cam", { scale: 1.10 }, {{at:w327}})
+      .set("#cam", { scale: 1.14 }, {{at:w347}});
     window.__timelines["main"] = tl;
   </script>
 </body>
