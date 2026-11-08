@@ -1,0 +1,40 @@
+{
+  "url": "https://www.instagram.com/reel/De1orNXAg8N/",
+  "engagement": {
+    "title": "Video by solocontent.studio",
+    "uploader": "Caroline Zook @ Solo Content Studio",
+    "upload_date": "20261023",
+    "likes": 1153,
+    "comments": 620,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/reel/De1orNXAg8N/"
+  },
+  "duration": 116.98,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 10,
+  "cut_times": [
+    12.167,
+    18.233,
+    25.4,
+    32.367,
+    39.8,
+    47.367,
+    50.3,
+    55.933,
+    68.133,
+    98.9
+  ],
+  "avg_shot_s": 10.63,
+  "shortest_shot_s": 2.93,
+  "cuts_in_first_3s": 0,
+  "words": 452,
+  "words_per_sec": 3.86,
+  "speech_ratio": 0.88,
+  "hook_words_first_3s": "Why did 139 ,000 people watch her type out",
+  "first_word_at": 0.0,
+  "loudness_lufs": -14.1
+}
