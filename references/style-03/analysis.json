@@ -1,0 +1,36 @@
+{
+  "url": "https://www.instagram.com/reel/Dd6ue5FRZU2/",
+  "engagement": {
+    "title": "Video by itsmegkilgore",
+    "uploader": "Meg Kilgore | The Startup Mom\u2122",
+    "upload_date": "20260930",
+    "likes": 12672,
+    "comments": 48766,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/reel/Dd6ue5FRZU2/"
+  },
+  "duration": 45.79,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 6,
+  "cut_times": [
+    6.833,
+    24.533,
+    30.433,
+    34.167,
+    39.667,
+    42.867
+  ],
+  "avg_shot_s": 6.54,
+  "shortest_shot_s": 2.92,
+  "cuts_in_first_3s": 0,
+  "words": 168,
+  "words_per_sec": 3.67,
+  "speech_ratio": 0.78,
+  "hook_words_first_3s": "We learned how to yap, we learned how to edit. And now, we're gonna learn how to",
+  "first_word_at": 0.0,
+  "loudness_lufs": -14.2
+}
