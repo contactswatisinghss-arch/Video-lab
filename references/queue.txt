@@ -8,3 +8,7 @@ aibubble-mezz https://www.instagram.com/reel/Db9KCpQBV4q
 aibubble-dailymail https://www.tiktok.com/@dailymail/video/7702417501446999309
 aibubble-shiggle https://www.tiktok.com/@shigglegitter9000/video/7701452584590019854
 search aibubble-yt china ai bubble burst dot com
+style-01 https://www.instagram.com/reel/DfcUSdnyTtt/
+style-02 https://www.instagram.com/reel/De1orNXAg8N/
+style-03 https://www.instagram.com/reel/Dd6ue5FRZU2/
+style-04 https://www.instagram.com/reel/DdCvFdHsnj1/
