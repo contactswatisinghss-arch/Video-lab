@@ -1,0 +1,18 @@
+[  0.00] Why do some solid -state batteries need to be squeezed?
+[  2.46] Let me show you with this clay and a piece of plastic.
+[  5.14] In these batteries, a solid material carries lithium ion between the electrodes.
+[  9.10] Imagine this clay is the lithium metal and this plastic is the
+[ 11.68] solid material.
+[ 12.62] They need to stay in contact, but as the battery discharges, lithium
+[ 15.98] leaves the metal and tiny gaps open up between where the two
+[ 19.76] materials meet.
+[ 20.68] A rigid solid can't flow into the gap the way a liquid
+[ 22.84] can.
+[ 23.24] Those gaps make it harder for ions to cross.
+[ 25.34] Applying pressure helps the soft lithium stay pressed against the solid surface
+[ 28.78] like this.
+[ 29.56] But maintaining that pressure across a battery pack takes extra pressure.
+[ 33.34] And this adds weight and takes up space.
+[ 35.24] So engineers want that same reliable contact with less pressure, leaving more
+[ 38.52] room for the parts that actually store energy.
+[ 40.80] You're welcome.
