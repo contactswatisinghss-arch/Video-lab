@@ -1,11 +1,12 @@
 {
-  "state": "idle",
-  "last": [
-    "final china-ai-bubble"
+  "state": "running",
+  "current": "references style-01",
+  "pending": [
+    "references style-01",
+    "references style-02",
+    "references style-03",
+    "references style-04"
   ],
-  "done": [
-    "final china-ai-bubble"
-  ],
-  "time": "2026-11-06 08:01:21 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42181107423"
+  "time": "2026-11-08 23:25:15 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42535008344"
 }
