@@ -22,6 +22,34 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - Real graphics that carry information: news-style headline cards (recreated, never screenshots/logos), a severity meter, a globe with pins, a cracked "stack" diagram, a timeline turning red at the turning point, a shield + fixed versions, a Part 2 end card.
 - She disliked: plain text cards, basic fonts, no visuals.
 
+## Swati's picked style references (8 Nov 2026: "the edit is becoming a bit boring")
+She chose these herself, so they outweigh topic research for LOOK and PACE. references/style-01..04.
+Instagram gave likes/comments but no views, so engagement below is likes + comments only.
+- style-01 @emmyxtech (solid-state batteries, 42 s, 2.3K likes): a visual change every **1.7 s** (24 cuts). Mixes
+  her talking head with a **physical prop demo** (clay + plastic disc to show "squeezing"), labelled 3D diagram
+  cards, macro/lab cutaways, and a burst of 10 rapid cuts at 36 s. Small white caps captions, one phrase at a time.
+- style-04 @soojintech (AI fundamentals, 58 s, 44.5K likes / 17K comments): **top-half inserts** every 2–4 s that
+  cover the upper half of the frame while she stays visible below (her own web app, a city photo tilting in, an
+  office photo, a cat-with-book "Bob the librarian" metaphor for RAG). Hook frame has **floating keyword stickers**
+  (RAG, MCP, Tokens, Context Window…) in outlined pink type around her. Sentence-case white captions, one short line.
+- style-02 @solocontent.studio (story structure breakdown, 117 s, 620 comments) and style-03 @itsmegkilgore
+  (Claude edits my reels, 46 s, **48.8K comments vs 12.7K likes**): slower cuts (6–11 s) but a curiosity hook
+  ("Why did 139,000 people watch…") and a **comment-keyword CTA** at the end ("Comment DEMO and I'll show you…").
+  That CTA is what drives comments to 2–4× likes in 03 and 04.
+- Common to all four: first word at 0.0 s, 3.4–3.9 words/s, speech 78–90% of the runtime (no dead air).
+
+### What to change in Swati's edits
+1. **Pace**: a new visual every 2–3 s on average (was a beat every 3–6 s). Mix of: graphic card, top-half insert,
+   punch-in, prop/object shot, quick-cut burst on the payoff line.
+2. **Top-half inserts** as the default B-roll format (recreated UI, diagrams, photos she supplies or generated
+   illustrations), sliding/tilting in, her face kept visible below. Never real logos or screenshots of news sites.
+3. **Keyword sticker cloud** on the hook frame (the topic's 4–8 key terms popping in around her) = a strong thumbnail.
+4. **One playful metaphor visual** per Reel (like "Bob the librarian cat"), so it isn't all diagrams.
+5. **Lighter captions** to test: smaller, one short line, so the inserts carry the energy (A/B against Inter 900).
+6. **Ask her to film one prop shot** when the topic allows (her hands showing an object) — cheapest "real" B-roll.
+7. **Comment-keyword CTA** ending ("Comment X and I'll send you…") — only if she can deliver the DM (needs an
+   auto-DM tool or manual replies); suggest it in the storyboard, don't add it silently.
+
 ## Rules
 - Every graphic carries information. Icons and diagrams only, never anything resembling real attack commands or tooling.
 - Facts on screen are verified (numbers, dates, versions, IDs, headlines). Sources go in the pinned comment.
