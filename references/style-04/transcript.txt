@@ -1,0 +1,24 @@
+[  0.00] If you had to learn the fundamentals of AI in one day,
+[  3.32] here's how I do it.
+[  4.30] Go to this website and open a window.
+[  6.26] Okay, let's learn about RAG.
+[  8.18] RAG, retrieval augmented generation, is a technique that helps a language model
+[ 12.22] find relevant information before answering you.
+[ 15.26] Now think of it this way, Bob knows a lot about the
+[ 17.58] world.
+[ 18.00] And if you ask how big is Central Park, he can probably
+[ 21.02] answer.
+[ 21.70] But if you ask, where's my company's IT desk?
+[ 24.46] He won't know the answer unless you give him your company documents.
+[ 27.70] Now Bob can search those documents, find the relevant information, and answer
+[ 31.78] you correctly instead of guessing.
+[ 33.68] That's RAG.
+[ 34.52] It gives AI relevant context before it generates an answer.
+[ 37.86] And there are eight more AI fundamental concepts you can't miss on
+[ 40.96] this site.
+[ 41.70] I built this with Replit by brainstorming on simpler ways to explain
+[ 44.86] each term in a way that is easy to understand with real
+[ 47.90] world use cases.
+[ 49.22] I use Replit's free mode to keep building and iterating without worrying
+[ 52.92] about the cost of every prompt until we land it on this.
+[ 56.08] Comment, learn, and I'll send you the site.

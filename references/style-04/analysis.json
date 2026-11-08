@@ -1,0 +1,40 @@
+{
+  "url": "https://www.instagram.com/reel/DdCvFdHsnj1/",
+  "engagement": {
+    "title": "Video by soojintech",
+    "uploader": "Soojin | Tech & AI",
+    "upload_date": "20260908",
+    "likes": 44518,
+    "comments": 17067,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/reel/DdCvFdHsnj1/"
+  },
+  "duration": 58.14,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 10,
+  "cut_times": [
+    0.033,
+    4.233,
+    7.2,
+    12.9,
+    39.567,
+    40.767,
+    42.8,
+    49.333,
+    52.133,
+    54.667
+  ],
+  "avg_shot_s": 5.29,
+  "shortest_shot_s": 0.03,
+  "cuts_in_first_3s": 1,
+  "words": 197,
+  "words_per_sec": 3.39,
+  "speech_ratio": 0.9,
+  "hook_words_first_3s": "If you had to learn the fundamentals of AI in one day,",
+  "first_word_at": 0.0,
+  "loudness_lufs": -14.1
+}
