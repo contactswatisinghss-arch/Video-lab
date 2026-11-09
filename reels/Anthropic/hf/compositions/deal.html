@@ -1,0 +1,53 @@
+<template>
+  <!-- DEAL (top insert, stat slam): "REPORTEDLY" tag on "reportedly"; a row of generators switches on from "generators";
+       1.7 GW slams in on "gigawatts"; "≈ $3.4B · gas-fired" underneath on "power". Source line: Financial Times. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #dl-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
+      background: linear-gradient(180deg, #151821 0%, #0D0F14 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -3px 0 rgba(255,176,32,.5); }
+    #dl-kick { position: absolute; left: 60px; top: 190px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #FFB020; }
+    #dl-rep { position: absolute; left: 700px; top: 180px; padding: 6px 16px; border-radius: 14px; font: 700 26px 'JetBrains Mono', monospace;
+      letter-spacing: .12em; color: #0D0F14; background: #F5F1E8; }
+    #dl-gens { position: absolute; left: 60px; top: 250px; }
+    #dl-big { position: absolute; left: 52px; top: 380px; font: 800 190px/1 'Sora', sans-serif; letter-spacing: -.06em; color: #FFB020; transform-origin: 0% 60%; }
+    #dl-big small { font-size: 96px; letter-spacing: -.03em; }
+    #dl-sub { position: absolute; left: 62px; top: 590px; font: 700 40px 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; }
+    #dl-src { position: absolute; left: 62px; top: 650px; font: 600 24px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .06em; }
+  </style>
+  <div id="root" data-composition-id="deal" data-width="1080" data-height="1920">
+    <div id="dl-panel">
+      <div id="dl-kick">ANTHROPIC SECURED</div>
+      <div id="dl-rep">REPORTEDLY</div>
+      <svg id="dl-gens" viewBox="0 0 960 110" width="960" height="110">
+        <g id="dl-g">
+          <g id="dl-g1"><rect x="0" y="20" width="170" height="80" rx="14" fill="#1C2130" stroke="#3A4256" stroke-width="3"/><path d="M92 30 L66 66 H84 L76 92 L106 54 H88 Z" fill="#3A4256" class="dl-z"/></g>
+          <g id="dl-g2"><rect x="196" y="20" width="170" height="80" rx="14" fill="#1C2130" stroke="#3A4256" stroke-width="3"/><path d="M288 30 L262 66 H280 L272 92 L302 54 H284 Z" fill="#3A4256" class="dl-z"/></g>
+          <g id="dl-g3"><rect x="392" y="20" width="170" height="80" rx="14" fill="#1C2130" stroke="#3A4256" stroke-width="3"/><path d="M484 30 L458 66 H476 L468 92 L498 54 H480 Z" fill="#3A4256" class="dl-z"/></g>
+          <g id="dl-g4"><rect x="588" y="20" width="170" height="80" rx="14" fill="#1C2130" stroke="#3A4256" stroke-width="3"/><path d="M680 30 L654 66 H672 L664 92 L694 54 H676 Z" fill="#3A4256" class="dl-z"/></g>
+          <g id="dl-g5"><rect x="784" y="20" width="170" height="80" rx="14" fill="#1C2130" stroke="#3A4256" stroke-width="3"/><path d="M876 30 L850 66 H868 L860 92 L890 54 H872 Z" fill="#3A4256" class="dl-z"/></g>
+        </g>
+      </svg>
+      <div id="dl-big">1.7<small> GW</small></div>
+      <div id="dl-sub">of gas-fired generators · about $3.4B</div>
+      <div id="dl-src">SOURCE: FINANCIAL TIMES</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w187-0.04}};
+      tl.fromTo("#dl-panel", { y: -720 }, { y: 0, duration: 0.42, ease: "expo.out" }, 0);
+      tl.fromTo("#dl-kick", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 0.14);
+      tl.fromTo("#dl-rep", { opacity: 0, scale: 0.5, rotation: 6 }, { opacity: 1, scale: 1, rotation: 3, duration: 0.24, ease: "back.out(2.4)" }, {{at:w191}} - S - 0.04);
+      ["#dl-g1", "#dl-g2", "#dl-g3", "#dl-g4", "#dl-g5"].forEach((id, i) => {
+        tl.to(id + " rect", { stroke: "#FFB020", duration: 0.15 }, {{at:w195}} - S + i * 0.12);
+        tl.to(id + " .dl-z", { fill: "#FFB020", duration: 0.15 }, {{at:w195}} - S + i * 0.12);
+      });
+      tl.fromTo("#dl-big", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.32, ease: "expo.out" }, {{at:w200}} - S - 0.04);
+      tl.fromTo("#dl-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w203}} - S - 0.04);
+      tl.fromTo("#dl-src", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w203}} - S + 0.1);
+      tl.to("#dl-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w205}} - S - 0.16);
+      window.__timelines["deal"] = tl;
+    })();
+  </script>
+</template>

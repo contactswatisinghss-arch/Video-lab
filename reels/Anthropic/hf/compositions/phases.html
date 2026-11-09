@@ -1,0 +1,60 @@
+<template>
+  <!-- PHASES (top insert): the cake layers again as a ladder; a red BOTTLENECK marker slides down a layer each time
+       one is solved (models ✓ -> GPUs ✓ -> ENERGY), landing on "next layer". Then "power it" / "scale it" chips. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #ph-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
+      background: linear-gradient(180deg, #151821 0%, #0D0F14 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -3px 0 rgba(255,176,32,.5); }
+    #ph-kick { position: absolute; left: 60px; top: 190px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #FFB020; }
+    .ph-bar { position: absolute; left: 60px; width: 520px; height: 96px; border-radius: 22px; display: flex; align-items: center; padding: 0 28px;
+      box-sizing: border-box; background: rgba(245,241,232,.06); box-shadow: inset 0 0 0 2px rgba(245,241,232,.14);
+      font: 700 42px 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; }
+    .ph-ok { position: absolute; right: 22px; top: 20px; width: 56px; height: 56px; }
+    #ph-b3 { color: #FFB020; }
+    #ph-mark { position: absolute; left: 600px; top: 250px; height: 96px; display: flex; align-items: center; gap: 12px; }
+    #ph-mark span { padding: 10px 20px; border-radius: 16px; background: #FF4D3D; color: #FFFFFF; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .08em; }
+    .ph-chip { position: absolute; top: 590px; height: 80px; padding: 0 30px; border-radius: 40px; display: flex; align-items: center;
+      background: #FFB020; color: #0D0F14; font: 800 40px 'Sora', sans-serif; letter-spacing: -.02em; }
+  </style>
+  <div id="root" data-composition-id="phases" data-width="1080" data-height="1920">
+    <div id="ph-panel">
+      <div id="ph-kick">EACH FIX EXPOSES THE NEXT LAYER</div>
+      <div class="ph-bar" id="ph-b1" style="top:250px">Models
+        <svg class="ph-ok" id="ph-o1" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="#2EE59D"/><path d="M16 29 L25 38 L41 20" stroke="#0D0F14" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="ph-bar" id="ph-b2" style="top:362px">GPUs + data centres
+        <svg class="ph-ok" id="ph-o2" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="#2EE59D"/><path d="M16 29 L25 38 L41 20" stroke="#0D0F14" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="ph-bar" id="ph-b3" style="top:474px">Energy</div>
+      <div id="ph-mark">
+        <svg viewBox="0 0 40 40" width="40" height="40"><path d="M36 20 L6 4 V36 Z" fill="#FF4D3D"/></svg>
+        <span>BOTTLENECK</span>
+      </div>
+      <div class="ph-chip" id="ph-c1" style="left:60px">Power it</div>
+      <div class="ph-chip" id="ph-c2" style="left:300px">Scale it</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w225-0.04}};
+      // reverse the triangle so it points at the bar on its left
+      tl.set("#ph-mark svg", { scaleX: -1 }, 0);
+      tl.fromTo("#ph-panel", { y: -720 }, { y: 0, duration: 0.42, ease: "expo.out" }, 0);
+      tl.fromTo("#ph-kick", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 0.14);
+      tl.fromTo("#ph-b1, #ph-b2, #ph-b3", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.08, ease: "expo.out" }, {{at:w229}} - S - 0.08);
+      tl.set("#ph-o1, #ph-o2", { opacity: 0 }, 0);
+      tl.fromTo("#ph-mark", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.26, ease: "expo.out" }, {{at:w236}} - S - 0.06);
+      // solved -> the bottleneck drops a layer
+      tl.fromTo("#ph-o1", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2.4)" }, {{at:w237}} - S);
+      tl.to("#ph-mark", { y: 112, duration: 0.3, ease: "back.out(1.6)" }, {{at:w238}} - S);
+      tl.fromTo("#ph-o2", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2.4)" }, {{at:w240}} - S);
+      tl.to("#ph-mark", { y: 224, duration: 0.3, ease: "back.out(1.6)" }, {{at:w243}} - S);
+      tl.to("#ph-b3", { boxShadow: "inset 0 0 0 4px #FF4D3D", duration: 0.2 }, {{at:w243}} - S + 0.2);
+      tl.fromTo("#ph-c1", { opacity: 0, y: 24, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.26, ease: "back.out(2)" }, {{at:w250}} - S - 0.05);
+      tl.fromTo("#ph-c2", { opacity: 0, y: 24, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.26, ease: "back.out(2)" }, {{at:w252}} - S - 0.05);
+      tl.to("#ph-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w256}} - S - 0.16);
+      window.__timelines["phases"] = tl;
+    })();
+  </script>
+</template>
