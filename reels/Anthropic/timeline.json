@@ -1,0 +1,1432 @@
+{
+ "duration": 74.818,
+ "raw_duration": 112.366667,
+ "keeps": [
+  [
+   0.0,
+   8.1667
+  ],
+  [
+   20.7667,
+   26.3333
+  ],
+  [
+   26.7333,
+   30.0
+  ],
+  [
+   32.0333,
+   35.3
+  ],
+  [
+   35.4333,
+   36.2
+  ],
+  [
+   36.5,
+   36.9333
+  ],
+  [
+   37.0667,
+   37.6333
+  ],
+  [
+   37.8,
+   40.0
+  ],
+  [
+   40.4333,
+   44.5
+  ],
+  [
+   54.2333,
+   58.4
+  ],
+  [
+   58.6,
+   64.0
+  ],
+  [
+   64.4333,
+   65.6333
+  ],
+  [
+   66.1,
+   66.6
+  ],
+  [
+   67.2667,
+   71.6333
+  ],
+  [
+   72.0667,
+   72.4667
+  ],
+  [
+   72.6667,
+   85.3
+  ],
+  [
+   85.6667,
+   87.8667
+  ],
+  [
+   88.0333,
+   89.0667
+  ],
+  [
+   89.6333,
+   101.2
+  ],
+  [
+   101.3333,
+   107.6
+  ],
+  [
+   107.7333,
+   112.0
+  ]
+ ],
+ "speed": 1.1,
+ "removed_seconds": 37.55,
+ "words": [
+  {
+   "id": "w0",
+   "text": "Anthropic",
+   "start": 0.245,
+   "end": 1.118
+  },
+  {
+   "id": "w1",
+   "text": "is",
+   "start": 1.118,
+   "end": 1.245
+  },
+  {
+   "id": "w2",
+   "text": "reportedly",
+   "start": 1.245,
+   "end": 1.736
+  },
+  {
+   "id": "w3",
+   "text": "making",
+   "start": 1.736,
+   "end": 2.118
+  },
+  {
+   "id": "w4",
+   "text": "a",
+   "start": 2.118,
+   "end": 2.355
+  },
+  {
+   "id": "w5",
+   "text": "$3.4",
+   "start": 2.355,
+   "end": 3.082
+  },
+  {
+   "id": "w7",
+   "text": "billion",
+   "start": 3.082,
+   "end": 3.445
+  },
+  {
+   "id": "w8",
+   "text": "bet",
+   "start": 3.445,
+   "end": 4.064
+  },
+  {
+   "id": "w9",
+   "text": "when",
+   "start": 4.064,
+   "end": 4.7
+  },
+  {
+   "id": "w10",
+   "text": "there",
+   "start": 4.7,
+   "end": 4.864
+  },
+  {
+   "id": "w11",
+   "text": "has",
+   "start": 4.864,
+   "end": 5.045
+  },
+  {
+   "id": "w12",
+   "text": "been",
+   "start": 5.045,
+   "end": 5.191
+  },
+  {
+   "id": "w13",
+   "text": "a",
+   "start": 5.191,
+   "end": 5.355
+  },
+  {
+   "id": "w14",
+   "text": "bloodbath",
+   "start": 5.355,
+   "end": 5.736
+  },
+  {
+   "id": "w15",
+   "text": "at",
+   "start": 5.736,
+   "end": 5.9
+  },
+  {
+   "id": "w16",
+   "text": "the",
+   "start": 5.9,
+   "end": 6.045
+  },
+  {
+   "id": "w17",
+   "text": "Wall",
+   "start": 6.045,
+   "end": 6.173
+  },
+  {
+   "id": "w18",
+   "text": "Street",
+   "start": 6.173,
+   "end": 6.391
+  },
+  {
+   "id": "w19",
+   "text": "in",
+   "start": 6.391,
+   "end": 6.573
+  },
+  {
+   "id": "w20",
+   "text": "the",
+   "start": 6.573,
+   "end": 6.7
+  },
+  {
+   "id": "w21",
+   "text": "entire",
+   "start": 6.7,
+   "end": 7.009
+  },
+  {
+   "id": "w22",
+   "text": "week.",
+   "start": 7.009,
+   "end": 7.355
+  },
+  {
+   "id": "w60",
+   "text": "it",
+   "start": 7.455,
+   "end": 7.582
+  },
+  {
+   "id": "w61",
+   "text": "did",
+   "start": 7.582,
+   "end": 7.709
+  },
+  {
+   "id": "w62",
+   "text": "not",
+   "start": 7.709,
+   "end": 7.873
+  },
+  {
+   "id": "w63",
+   "text": "spend",
+   "start": 7.873,
+   "end": 8.2
+  },
+  {
+   "id": "w64",
+   "text": "on",
+   "start": 8.2,
+   "end": 8.4
+  },
+  {
+   "id": "w65",
+   "text": "a",
+   "start": 8.4,
+   "end": 8.527
+  },
+  {
+   "id": "w66",
+   "text": "new",
+   "start": 8.527,
+   "end": 8.673
+  },
+  {
+   "id": "w67",
+   "text": "AI",
+   "start": 8.673,
+   "end": 8.927
+  },
+  {
+   "id": "w68",
+   "text": "model",
+   "start": 8.927,
+   "end": 9.273
+  },
+  {
+   "id": "w69",
+   "text": "or",
+   "start": 9.273,
+   "end": 9.545
+  },
+  {
+   "id": "w70",
+   "text": "on",
+   "start": 9.545,
+   "end": 9.709
+  },
+  {
+   "id": "w71",
+   "text": "the",
+   "start": 9.709,
+   "end": 9.873
+  },
+  {
+   "id": "w72",
+   "text": "GPUs,",
+   "start": 9.873,
+   "end": 10.255
+  },
+  {
+   "id": "w73",
+   "text": "but",
+   "start": 10.473,
+   "end": 11.018
+  },
+  {
+   "id": "w74",
+   "text": "on",
+   "start": 11.018,
+   "end": 11.291
+  },
+  {
+   "id": "w75",
+   "text": "electricity",
+   "start": 11.291,
+   "end": 11.782
+  },
+  {
+   "id": "w76",
+   "text": "generators.",
+   "start": 11.782,
+   "end": 12.4
+  },
+  {
+   "id": "w77",
+   "text": "But",
+   "start": 12.564,
+   "end": 12.945
+  },
+  {
+   "id": "w78",
+   "text": "why",
+   "start": 12.945,
+   "end": 13.164
+  },
+  {
+   "id": "w79",
+   "text": "would",
+   "start": 13.164,
+   "end": 13.4
+  },
+  {
+   "id": "w80",
+   "text": "the",
+   "start": 13.4,
+   "end": 13.564
+  },
+  {
+   "id": "w81",
+   "text": "company",
+   "start": 13.564,
+   "end": 13.891
+  },
+  {
+   "id": "w82",
+   "text": "behind",
+   "start": 13.891,
+   "end": 14.345
+  },
+  {
+   "id": "w83",
+   "text": "Claude",
+   "start": 14.345,
+   "end": 14.691
+  },
+  {
+   "id": "w84",
+   "text": "need",
+   "start": 14.691,
+   "end": 15.091
+  },
+  {
+   "id": "w85",
+   "text": "those?",
+   "start": 15.091,
+   "end": 15.455
+  },
+  {
+   "id": "w89",
+   "text": "For",
+   "start": 15.533,
+   "end": 15.715
+  },
+  {
+   "id": "w90",
+   "text": "most",
+   "start": 15.715,
+   "end": 15.988
+  },
+  {
+   "id": "w91",
+   "text": "of",
+   "start": 15.988,
+   "end": 16.133
+  },
+  {
+   "id": "w92",
+   "text": "us,",
+   "start": 16.133,
+   "end": 16.406
+  },
+  {
+   "id": "w93",
+   "text": "the",
+   "start": 16.624,
+   "end": 16.679
+  },
+  {
+   "id": "w94",
+   "text": "AI",
+   "start": 16.679,
+   "end": 16.97
+  },
+  {
+   "id": "w95",
+   "text": "race",
+   "start": 16.97,
+   "end": 17.242
+  },
+  {
+   "id": "w96",
+   "text": "started",
+   "start": 17.242,
+   "end": 17.606
+  },
+  {
+   "id": "w97",
+   "text": "with",
+   "start": 17.606,
+   "end": 17.824
+  },
+  {
+   "id": "w98",
+   "text": "models.",
+   "start": 17.824,
+   "end": 18.352
+  },
+  {
+   "id": "w99",
+   "text": "ChatGPT,",
+   "start": 18.503,
+   "end": 19.049
+  },
+  {
+   "id": "w100",
+   "text": "Claude,",
+   "start": 19.194,
+   "end": 19.43
+  },
+  {
+   "id": "w101",
+   "text": "Gemini.",
+   "start": 19.6,
+   "end": 19.945
+  },
+  {
+   "id": "w102",
+   "text": "Who",
+   "start": 20.121,
+   "end": 20.248
+  },
+  {
+   "id": "w103",
+   "text": "is",
+   "start": 20.248,
+   "end": 20.448
+  },
+  {
+   "id": "w104",
+   "text": "the",
+   "start": 20.448,
+   "end": 20.576
+  },
+  {
+   "id": "w105",
+   "text": "smarter",
+   "start": 20.576,
+   "end": 20.921
+  },
+  {
+   "id": "w106",
+   "text": "and",
+   "start": 20.921,
+   "end": 21.158
+  },
+  {
+   "id": "w107",
+   "text": "who",
+   "start": 21.158,
+   "end": 21.285
+  },
+  {
+   "id": "w108",
+   "text": "is",
+   "start": 21.285,
+   "end": 21.448
+  },
+  {
+   "id": "w109",
+   "text": "faster?",
+   "start": 21.448,
+   "end": 21.939
+  },
+  {
+   "id": "w110",
+   "text": "Then",
+   "start": 22.127,
+   "end": 22.255
+  },
+  {
+   "id": "w111",
+   "text": "came",
+   "start": 22.255,
+   "end": 22.509
+  },
+  {
+   "id": "w112",
+   "text": "the",
+   "start": 22.509,
+   "end": 22.673
+  },
+  {
+   "id": "w113",
+   "text": "race",
+   "start": 22.673,
+   "end": 22.891
+  },
+  {
+   "id": "w114",
+   "text": "of",
+   "start": 22.891,
+   "end": 23.091
+  },
+  {
+   "id": "w115",
+   "text": "NVIDIA's",
+   "start": 23.091,
+   "end": 23.709
+  },
+  {
+   "id": "w116",
+   "text": "GPUs",
+   "start": 23.709,
+   "end": 24.055
+  },
+  {
+   "id": "w117",
+   "text": "and",
+   "start": 24.055,
+   "end": 24.418
+  },
+  {
+   "id": "w118",
+   "text": "massive",
+   "start": 24.418,
+   "end": 24.855
+  },
+  {
+   "id": "w119",
+   "text": "data",
+   "start": 24.855,
+   "end": 25.127
+  },
+  {
+   "id": "w120",
+   "text": "centers.",
+   "start": 25.127,
+   "end": 25.636
+  },
+  {
+   "id": "w142",
+   "text": "At",
+   "start": 25.806,
+   "end": 25.988
+  },
+  {
+   "id": "w143",
+   "text": "the",
+   "start": 25.988,
+   "end": 26.133
+  },
+  {
+   "id": "w144",
+   "text": "top",
+   "start": 26.133,
+   "end": 26.315
+  },
+  {
+   "id": "w145",
+   "text": "are",
+   "start": 26.315,
+   "end": 26.497
+  },
+  {
+   "id": "w146",
+   "text": "the",
+   "start": 26.497,
+   "end": 26.624
+  },
+  {
+   "id": "w147",
+   "text": "applications",
+   "start": 26.624,
+   "end": 27.097
+  },
+  {
+   "id": "w148",
+   "text": "we",
+   "start": 27.097,
+   "end": 27.388
+  },
+  {
+   "id": "w149",
+   "text": "use,",
+   "start": 27.388,
+   "end": 27.77
+  },
+  {
+   "id": "w150",
+   "text": "underneath",
+   "start": 27.842,
+   "end": 28.261
+  },
+  {
+   "id": "w151",
+   "text": "are",
+   "start": 28.261,
+   "end": 28.515
+  },
+  {
+   "id": "w152",
+   "text": "the",
+   "start": 28.515,
+   "end": 28.679
+  },
+  {
+   "id": "w153",
+   "text": "AI",
+   "start": 28.679,
+   "end": 28.915
+  },
+  {
+   "id": "w154",
+   "text": "models,",
+   "start": 28.915,
+   "end": 29.424
+  },
+  {
+   "id": "w155",
+   "text": "then",
+   "start": 29.606,
+   "end": 29.879
+  },
+  {
+   "id": "w156",
+   "text": "the",
+   "start": 29.879,
+   "end": 30.042
+  },
+  {
+   "id": "w157",
+   "text": "infrastructure",
+   "start": 30.042,
+   "end": 30.606
+  },
+  {
+   "id": "w158",
+   "text": "like",
+   "start": 30.606,
+   "end": 31.006
+  },
+  {
+   "id": "w159",
+   "text": "data",
+   "start": 31.006,
+   "end": 31.315
+  },
+  {
+   "id": "w160",
+   "text": "centers",
+   "start": 31.315,
+   "end": 31.642
+  },
+  {
+   "id": "w161",
+   "text": "and",
+   "start": 31.642,
+   "end": 31.952
+  },
+  {
+   "id": "w162",
+   "text": "networks,",
+   "start": 31.952,
+   "end": 32.424
+  },
+  {
+   "id": "w163",
+   "text": "and",
+   "start": 32.679,
+   "end": 32.988
+  },
+  {
+   "id": "w164",
+   "text": "below",
+   "start": 32.988,
+   "end": 33.206
+  },
+  {
+   "id": "w165",
+   "text": "that",
+   "start": 33.206,
+   "end": 33.515
+  },
+  {
+   "id": "w166",
+   "text": "we",
+   "start": 33.515,
+   "end": 33.697
+  },
+  {
+   "id": "w167",
+   "text": "have",
+   "start": 33.697,
+   "end": 33.933
+  },
+  {
+   "id": "w168",
+   "text": "chips.",
+   "start": 33.933,
+   "end": 34.333
+  },
+  {
+   "id": "w169",
+   "text": "At",
+   "start": 34.521,
+   "end": 34.739
+  },
+  {
+   "id": "w170",
+   "text": "the",
+   "start": 34.739,
+   "end": 34.867
+  },
+  {
+   "id": "w171",
+   "text": "very",
+   "start": 34.867,
+   "end": 35.049
+  },
+  {
+   "id": "w172",
+   "text": "bottom,",
+   "start": 35.049,
+   "end": 35.43
+  },
+  {
+   "id": "w173",
+   "text": "energy.",
+   "start": 35.588,
+   "end": 35.879
+  },
+  {
+   "id": "w174",
+   "text": "Every",
+   "start": 36.055,
+   "end": 36.4
+  },
+  {
+   "id": "w175",
+   "text": "single",
+   "start": 36.4,
+   "end": 36.764
+  },
+  {
+   "id": "w176",
+   "text": "answer",
+   "start": 36.764,
+   "end": 37.2
+  },
+  {
+   "id": "w177",
+   "text": "you",
+   "start": 37.2,
+   "end": 37.4
+  },
+  {
+   "id": "w178",
+   "text": "get",
+   "start": 37.4,
+   "end": 37.6
+  },
+  {
+   "id": "w179",
+   "text": "from",
+   "start": 37.6,
+   "end": 37.836
+  },
+  {
+   "id": "w180",
+   "text": "AI",
+   "start": 37.836,
+   "end": 38.145
+  },
+  {
+   "id": "w181",
+   "text": "depends",
+   "start": 38.145,
+   "end": 38.455
+  },
+  {
+   "id": "w182",
+   "text": "on",
+   "start": 38.455,
+   "end": 38.745
+  },
+  {
+   "id": "w183",
+   "text": "all",
+   "start": 38.745,
+   "end": 38.982
+  },
+  {
+   "id": "w184",
+   "text": "these",
+   "start": 38.982,
+   "end": 39.218
+  },
+  {
+   "id": "w185",
+   "text": "five",
+   "start": 39.218,
+   "end": 39.473
+  },
+  {
+   "id": "w186",
+   "text": "layers.",
+   "start": 39.473,
+   "end": 39.855
+  },
+  {
+   "id": "w187",
+   "text": "And",
+   "start": 40.024,
+   "end": 40.079
+  },
+  {
+   "id": "w188",
+   "text": "now,",
+   "start": 40.079,
+   "end": 40.224
+  },
+  {
+   "id": "w189",
+   "text": "Anthropic",
+   "start": 40.388,
+   "end": 40.588
+  },
+  {
+   "id": "w190",
+   "text": "has",
+   "start": 40.588,
+   "end": 40.824
+  },
+  {
+   "id": "w191",
+   "text": "reportedly",
+   "start": 40.824,
+   "end": 41.351
+  },
+  {
+   "id": "w192",
+   "text": "secured",
+   "start": 41.351,
+   "end": 41.861
+  },
+  {
+   "id": "w193",
+   "text": "commitments",
+   "start": 41.861,
+   "end": 42.442
+  },
+  {
+   "id": "w194",
+   "text": "for",
+   "start": 42.442,
+   "end": 42.733
+  },
+  {
+   "id": "w195",
+   "text": "generators",
+   "start": 42.733,
+   "end": 43.261
+  },
+  {
+   "id": "w196",
+   "text": "capable",
+   "start": 43.261,
+   "end": 43.679
+  },
+  {
+   "id": "w197",
+   "text": "of",
+   "start": 43.679,
+   "end": 44.024
+  },
+  {
+   "id": "w198",
+   "text": "producing",
+   "start": 44.024,
+   "end": 44.497
+  },
+  {
+   "id": "w199",
+   "text": "around",
+   "start": 44.497,
+   "end": 44.915
+  },
+  {
+   "id": "w200",
+   "text": "1.7",
+   "start": 44.915,
+   "end": 46.479
+  },
+  {
+   "id": "w202",
+   "text": "gigawatts",
+   "start": 46.479,
+   "end": 46.97
+  },
+  {
+   "id": "w203",
+   "text": "of",
+   "start": 46.97,
+   "end": 47.279
+  },
+  {
+   "id": "w204",
+   "text": "power.",
+   "start": 47.279,
+   "end": 47.697
+  },
+  {
+   "id": "w205",
+   "text": "Because",
+   "start": 47.788,
+   "end": 48.606
+  },
+  {
+   "id": "w206",
+   "text": "you",
+   "start": 48.606,
+   "end": 48.824
+  },
+  {
+   "id": "w207",
+   "text": "can",
+   "start": 48.824,
+   "end": 49.061
+  },
+  {
+   "id": "w208",
+   "text": "build",
+   "start": 49.061,
+   "end": 49.279
+  },
+  {
+   "id": "w209",
+   "text": "the",
+   "start": 49.279,
+   "end": 49.442
+  },
+  {
+   "id": "w210",
+   "text": "smartest",
+   "start": 49.442,
+   "end": 49.697
+  },
+  {
+   "id": "w211",
+   "text": "model",
+   "start": 49.697,
+   "end": 50.17
+  },
+  {
+   "id": "w212",
+   "text": "and",
+   "start": 50.17,
+   "end": 50.424
+  },
+  {
+   "id": "w213",
+   "text": "buy",
+   "start": 50.424,
+   "end": 50.624
+  },
+  {
+   "id": "w214",
+   "text": "thousands",
+   "start": 50.624,
+   "end": 51.042
+  },
+  {
+   "id": "w215",
+   "text": "of",
+   "start": 51.042,
+   "end": 51.333
+  },
+  {
+   "id": "w216",
+   "text": "GPUs,",
+   "start": 51.333,
+   "end": 51.697
+  },
+  {
+   "id": "w217",
+   "text": "but",
+   "start": 51.873,
+   "end": 52.091
+  },
+  {
+   "id": "w218",
+   "text": "without",
+   "start": 52.091,
+   "end": 52.364
+  },
+  {
+   "id": "w219",
+   "text": "enough",
+   "start": 52.364,
+   "end": 53.127
+  },
+  {
+   "id": "w220",
+   "text": "electricity,",
+   "start": 53.127,
+   "end": 53.691
+  },
+  {
+   "id": "w221",
+   "text": "none",
+   "start": 53.885,
+   "end": 54.067
+  },
+  {
+   "id": "w222",
+   "text": "of",
+   "start": 54.067,
+   "end": 54.212
+  },
+  {
+   "id": "w223",
+   "text": "it",
+   "start": 54.212,
+   "end": 54.376
+  },
+  {
+   "id": "w224",
+   "text": "runs.",
+   "start": 54.376,
+   "end": 54.63
+  },
+  {
+   "id": "w225",
+   "text": "So",
+   "start": 54.806,
+   "end": 54.933
+  },
+  {
+   "id": "w226",
+   "text": "we",
+   "start": 54.933,
+   "end": 55.042
+  },
+  {
+   "id": "w227",
+   "text": "are",
+   "start": 55.042,
+   "end": 55.152
+  },
+  {
+   "id": "w228",
+   "text": "experiencing",
+   "start": 55.152,
+   "end": 55.752
+  },
+  {
+   "id": "w229",
+   "text": "different",
+   "start": 55.752,
+   "end": 56.242
+  },
+  {
+   "id": "w230",
+   "text": "phases",
+   "start": 56.242,
+   "end": 56.661
+  },
+  {
+   "id": "w231",
+   "text": "of",
+   "start": 56.661,
+   "end": 56.897
+  },
+  {
+   "id": "w232",
+   "text": "AI",
+   "start": 56.897,
+   "end": 57.133
+  },
+  {
+   "id": "w233",
+   "text": "race",
+   "start": 57.133,
+   "end": 57.515
+  },
+  {
+   "id": "w234",
+   "text": "where",
+   "start": 57.515,
+   "end": 57.824
+  },
+  {
+   "id": "w235",
+   "text": "each",
+   "start": 57.824,
+   "end": 58.17
+  },
+  {
+   "id": "w236",
+   "text": "bottleneck",
+   "start": 58.17,
+   "end": 58.642
+  },
+  {
+   "id": "w237",
+   "text": "solved",
+   "start": 58.642,
+   "end": 59.097
+  },
+  {
+   "id": "w238",
+   "text": "exposes",
+   "start": 59.097,
+   "end": 60.042
+  },
+  {
+   "id": "w239",
+   "text": "the",
+   "start": 60.042,
+   "end": 60.261
+  },
+  {
+   "id": "w240",
+   "text": "challenges",
+   "start": 60.261,
+   "end": 60.697
+  },
+  {
+   "id": "w241",
+   "text": "from",
+   "start": 60.697,
+   "end": 60.952
+  },
+  {
+   "id": "w242",
+   "text": "the",
+   "start": 60.952,
+   "end": 61.079
+  },
+  {
+   "id": "w243",
+   "text": "next",
+   "start": 61.079,
+   "end": 61.261
+  },
+  {
+   "id": "w244",
+   "text": "layer.",
+   "start": 61.261,
+   "end": 61.57
+  },
+  {
+   "id": "w245",
+   "text": "It's",
+   "start": 61.715,
+   "end": 62.261
+  },
+  {
+   "id": "w246",
+   "text": "also",
+   "start": 62.261,
+   "end": 62.515
+  },
+  {
+   "id": "w247",
+   "text": "about",
+   "start": 62.515,
+   "end": 62.77
+  },
+  {
+   "id": "w248",
+   "text": "who",
+   "start": 62.77,
+   "end": 63.024
+  },
+  {
+   "id": "w249",
+   "text": "can",
+   "start": 63.024,
+   "end": 63.242
+  },
+  {
+   "id": "w250",
+   "text": "power",
+   "start": 63.242,
+   "end": 63.606
+  },
+  {
+   "id": "w251",
+   "text": "and",
+   "start": 63.606,
+   "end": 63.842
+  },
+  {
+   "id": "w252",
+   "text": "scale",
+   "start": 63.842,
+   "end": 64.115
+  },
+  {
+   "id": "w253",
+   "text": "the",
+   "start": 64.115,
+   "end": 64.315
+  },
+  {
+   "id": "w254",
+   "text": "entire",
+   "start": 64.315,
+   "end": 64.697
+  },
+  {
+   "id": "w255",
+   "text": "system.",
+   "start": 64.697,
+   "end": 65.152
+  },
+  {
+   "id": "w256",
+   "text": "And",
+   "start": 65.321,
+   "end": 65.812
+  },
+  {
+   "id": "w257",
+   "text": "that",
+   "start": 65.812,
+   "end": 65.976
+  },
+  {
+   "id": "w258",
+   "text": "might",
+   "start": 65.976,
+   "end": 66.267
+  },
+  {
+   "id": "w259",
+   "text": "be",
+   "start": 66.267,
+   "end": 66.539
+  },
+  {
+   "id": "w260",
+   "text": "where",
+   "start": 66.539,
+   "end": 66.812
+  },
+  {
+   "id": "w261",
+   "text": "the",
+   "start": 66.812,
+   "end": 67.03
+  },
+  {
+   "id": "w262",
+   "text": "next",
+   "start": 67.03,
+   "end": 67.412
+  },
+  {
+   "id": "w263",
+   "text": "big",
+   "start": 67.412,
+   "end": 67.812
+  },
+  {
+   "id": "w264",
+   "text": "AI",
+   "start": 67.812,
+   "end": 68.158
+  },
+  {
+   "id": "w265",
+   "text": "battle",
+   "start": 68.158,
+   "end": 68.449
+  },
+  {
+   "id": "w266",
+   "text": "is",
+   "start": 68.449,
+   "end": 68.649
+  },
+  {
+   "id": "w267",
+   "text": "fought.",
+   "start": 68.649,
+   "end": 68.976
+  },
+  {
+   "id": "w268",
+   "text": "Keep",
+   "start": 69.03,
+   "end": 69.939
+  },
+  {
+   "id": "w269",
+   "text": "following",
+   "start": 69.939,
+   "end": 70.23
+  },
+  {
+   "id": "w270",
+   "text": "me",
+   "start": 70.23,
+   "end": 70.43
+  },
+  {
+   "id": "w271",
+   "text": "for",
+   "start": 70.43,
+   "end": 70.594
+  },
+  {
+   "id": "w272",
+   "text": "more,",
+   "start": 70.594,
+   "end": 70.849
+  },
+  {
+   "id": "w273",
+   "text": "where",
+   "start": 71.018,
+   "end": 71.182
+  },
+  {
+   "id": "w274",
+   "text": "I'll",
+   "start": 71.182,
+   "end": 71.418
+  },
+  {
+   "id": "w275",
+   "text": "keep",
+   "start": 71.418,
+   "end": 71.564
+  },
+  {
+   "id": "w276",
+   "text": "breaking",
+   "start": 71.564,
+   "end": 71.891
+  },
+  {
+   "id": "w277",
+   "text": "down",
+   "start": 71.891,
+   "end": 72.2
+  },
+  {
+   "id": "w278",
+   "text": "AI",
+   "start": 72.2,
+   "end": 72.509
+  },
+  {
+   "id": "w279",
+   "text": "and",
+   "start": 72.509,
+   "end": 72.909
+  },
+  {
+   "id": "w280",
+   "text": "tech",
+   "start": 72.909,
+   "end": 73.127
+  },
+  {
+   "id": "w281",
+   "text": "in",
+   "start": 73.127,
+   "end": 73.346
+  },
+  {
+   "id": "w282",
+   "text": "simpler",
+   "start": 73.346,
+   "end": 73.582
+  },
+  {
+   "id": "w283",
+   "text": "terms",
+   "start": 73.582,
+   "end": 73.855
+  },
+  {
+   "id": "w284",
+   "text": "for",
+   "start": 73.855,
+   "end": 74.018
+  },
+  {
+   "id": "w285",
+   "text": "you.",
+   "start": 74.018,
+   "end": 74.2
+  }
+ ]
+}
