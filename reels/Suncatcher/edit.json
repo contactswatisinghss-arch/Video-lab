@@ -18,5 +18,8 @@
  "fonts": ["Space Grotesk"],
  "cover_at": 0.4,
  "audio": {"loudnorm": true},
- "post": {"caption": "", "hashtags": []}
+ "post": {
+  "caption": "Google just ran AI in space. An AI chip in orbit answered a question from Earth.\nWhy? One AI data centre uses as much power as 100,000 homes, and in the right orbit the sun almost never sets.\nThe catch: space has no air to cool the chips. The next test decides it.\nFollow so you don't miss Part 2.",
+  "hashtags": ["#ai", "#google", "#space", "#technews", "#datacenter"]
+ }
 }
