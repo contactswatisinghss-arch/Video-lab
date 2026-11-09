@@ -7,13 +7,20 @@
     html, body { margin: 0; background: #000; }
     #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070B1A; }
     #cam { position: absolute; inset: 0; transform-origin: 50% 38%; }
-    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: saturate(1.05) contrast(1.04); }
-    #grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,16,40,.18) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(10,16,40,.35) 100%); pointer-events: none; }
+    /* Sun-kissed look (Swati, 9 Nov): the HDR->SDR conversion left the room dusty and yellow.
+       #sk filter: neutralise the yellow cast (blue up, red down a touch), clear the haze (deeper blacks,
+       mids pulled down so the face doesn't blow out), a little more colour. Then a soft peach glow from the
+       window side and a light neutral vignette. No blue gradient, no sepia. */
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: url(#sk); }
+    #glow { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen;
+      background: radial-gradient(70% 50% at 95% 30%, rgba(255,186,150,.22) 0%, rgba(255,170,140,.06) 55%, rgba(0,0,0,0) 100%); }
+    #vig { position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(110% 80% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.26) 100%); }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 </head>
 <body>
-  <!-- Suncatcher: AI in orbit. Her real (daytime) room, light cool grade. Style refs 01-04: a visual change every 2-3 s,
+  <!-- Suncatcher: AI in orbit. Her real (daytime) room, warm sun-kissed grade. Style refs 01-04: a visual change every 2-3 s,
        top-half inserts with her pushed down below them (style-04), keyword stickers on the hook, one metaphor (laptop in a sleeping bag). -->
   <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
        data-width="1080" data-height="1920" data-fps="30">
@@ -21,7 +28,19 @@
     <div id="cam" style="z-index:0">
       <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
     </div>
-    <div id="grade" style="z-index:1"></div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="sk" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0.975 0 0 0 0  0 0.99 0 0 0  0 0 1.09 0 0  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="gamma" amplitude="1.05" exponent="1.14" offset="-0.03"/>
+          <feFuncG type="gamma" amplitude="1.05" exponent="1.14" offset="-0.03"/>
+          <feFuncB type="gamma" amplitude="1.05" exponent="1.14" offset="-0.03"/>
+        </feComponentTransfer>
+        <feColorMatrix type="saturate" values="1.1"/>
+      </filter>
+    </svg>
+    <div id="glow" style="z-index:1"></div>
+    <div id="vig" style="z-index:1"></div>
 
     <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
          data-start="0" data-duration="{{= at(w26) - 0.04 }}" data-track-index="1" data-track-kind="graphics" style="z-index:4"></div>
