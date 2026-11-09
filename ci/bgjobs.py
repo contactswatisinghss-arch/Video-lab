@@ -5,9 +5,10 @@ edit.json  "bg_remove": true   (or {"quality": "best"})
   -> assets/cutout.webm (alpha), so the composition can put a designed set behind her (index.html stacks
   base video for audio < #set < cutout). It is slow (~2 fps on CPU), so the cutout is cached on the release as
   cutout-<hash of base.mp4>.webm: a preview and the final with the same cuts reuse one cutout.
+Also: every run catches up on published releases whose release-triggered run was dropped (see bottom).
 run.sh calls this file; everything else is jobs.py unchanged.
 """
-import importlib.util, os, shutil, sys, time
+import importlib.util, json, os, shutil, sys, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
@@ -48,6 +49,36 @@ def raw_asset(tag):
     if not vids: raise RuntimeError(f"Release '{tag}' has no raw video attached. Attach the video to the release.")
     return max(vids, key=lambda x: x[1])[0]
 J.raw_asset = raw_asset
+
+# ------------------------------------------------------------------ catch up on dropped releases
+# GitHub keeps only ONE waiting run per concurrency group, so when several videos are uploaded close
+# together, some release-triggered runs are silently dropped. Every run now also prepares any published
+# reel release that has no transcript and no prepare attempt yet. (A failed prepare re-runs via PREPARE.)
+def unprepared_releases():
+    try:
+        rc, out = J.sh(["gh", "release", "list", "--limit", "50", "--exclude-drafts", "--json", "tagName"], check=False, timeout=120)
+        if rc != 0: return []
+        tags = [r["tagName"] for r in json.loads(out)]
+    except Exception as e:
+        J.log(f"release catch-up skipped: {e}"); return []
+    todo = []
+    for tag in tags:
+        if not tag or tag.startswith("ref-") or "/" in tag: continue
+        if os.path.exists(os.path.join("reels", tag, "transcript.json")): continue
+        if "prepare" in (J.jload(J.status_path(tag), {}) or {}): continue
+        todo.append(tag)
+    return todo
+
+_pending = J.pending
+def pending():
+    jobs = _pending()
+    if J.E("EVENT", "") == "workflow_dispatch" and J.E("INPUT_JOB", "all") not in ("", "all"):
+        return jobs
+    preps = [j for j in jobs if j[0] == "prepare"]
+    preps += [("prepare", t) for t in unprepared_releases() if ("prepare", t) not in preps]
+    # prepares first: they are quicker than renders and unblock storyboarding of new videos
+    return preps + [j for j in jobs if j[0] != "prepare"]
+J.pending = pending
 
 if __name__ == "__main__":
     J.main()
