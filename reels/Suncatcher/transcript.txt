@@ -1,0 +1,27 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.24-   3.94] Imagine asking a question and getting the response from space.   | w0..w9
+[   4.60-   8.76] And before you think, I mean, God is finally replying to you. I'm talking   | w10..w23
+[   8.76-   9.62] about AI.   | w24..w25
+[  10.26-  16.30] Google is sending AI into space, and they already ran its first test. It's   | w26..w39
+[  16.30-  20.84] called gamma -4 model on a chip orbiting Earth, which answered back down.   | w40..w52
+[  22.13-  25.89] But why is Google sending AI all the way to space?   | w53..w63
+[  26.69-  31.67] Think about what happens when you ask AI a question. We already know it   | w64..w77
+[  31.67-  36.77] needs chips, memories, and all the software part of it. But let's get into   | w78..w91
+[  36.77-  37.53] the infra.   | w92..w93
+[  38.37-  43.21] Now, chips in a data center use electricity to generate your answers, and they   | w94..w107
+[  43.21-  47.85] need enormous amount of power. When they get heated up, they also need fresh   | w108..w121
+[  47.85-  48.97] water to cool them.   | w122..w125
+[  49.69-  51.01] Statistically speaking,   | w126..w127
+[  51.73-  57.37] one large AI data center can use enough electricity in one year to power   | w128..w141
+[  57.37-  60.41] about 100K homes, for the same year.   | w142..w148
+[  61.17-  66.05] That's why Google is looking up for some innovative solutions, which go beyond Earth.   | w149..w162
+[  66.75-  71.89] Elon Musk is also trying out the same. In the right orbit, a satellite's   | w163..w176
+[  71.89-  75.29] solar panels can get sunlight almost around the clock.   | w177..w185
+[  76.11-  82.75] Google's project, called Suncatcher, is testing whether that sunlight could power some of the   | w186..w199
+[  82.75-  87.91] computing we do here on Earth. The challenge, though, is that space has no   | w200..w213
+[  87.91-  92.27] air to carry the heat away when the chips get heated.   | w214..w224
+[  93.01-  97.65] So Google's next test is whether those chips can handle the heat and radiation,   | w225..w238
+[  98.03-  99.33] and keep answering.   | w239..w241
+[ 100.09- 104.85] I'll be closely tracking this down for any progress, because this also helps with   | w242..w255
+[ 104.85- 109.41] the natural resources issues that we have here on Earth with respect to building   | w256..w269
+[ 109.41- 110.77] data centers. Thanks for watching. you   | w270..w275
