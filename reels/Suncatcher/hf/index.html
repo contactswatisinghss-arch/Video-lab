@@ -55,7 +55,7 @@
     // tweened so the move reads as the insert "shoving" her down. Punch-ins land on the hook words and turns.
     const tl = gsap.timeline({ paused: true });
     const NORMAL = { y: 0, scale: 1.08 };
-    const DOWN = { y: 330, scale: 1.0 };
+    const DOWN = { y: 180, scale: 1.0 };
     const down = (t) => tl.to("#cam", { ...DOWN, duration: 0.38, ease: "expo.out" }, t);
     const up = (t) => tl.to("#cam", { ...NORMAL, duration: 0.3, ease: "power3.out" }, t);
     tl.set("#cam", NORMAL, 0)
@@ -66,7 +66,7 @@
     up({{at:w53-0.04}});
     tl.set("#cam", { scale: 1.18 }, {{at:w56}});
     down({{at:w95-0.04}});
-    tl.set("#cam", { y: 330, scale: 1.0 }, {{at:w128-0.04}});
+    tl.set("#cam", { y: 180, scale: 1.0 }, {{at:w128-0.04}});
     up({{at:w149-0.04}});
     tl.set("#cam", { scale: 1.16 }, {{at:w163}});
     down({{at:w171-0.04}});

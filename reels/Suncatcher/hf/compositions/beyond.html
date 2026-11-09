@@ -11,10 +11,10 @@
     #by-race { position: absolute; left: 60px; top: 300px; width: 960px; height: 150px; }
     .by-card { position: absolute; top: 0; width: 460px; height: 136px; border-radius: 28px; background: rgba(8,13,34,.86);
       box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); padding: 20px 28px; box-sizing: border-box; }
-    .by-k { font: 700 24px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #8D97AD; }
+    .by-k { font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #8D97AD; }
     .by-v { margin-top: 8px; font: 700 38px/1.1 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #F7F8FA; }
-    #by-vs { position: absolute; left: 456px; top: 44px; width: 48px; height: 48px; border-radius: 24px; background: #FFC94A; color: #0B0E14;
-      font: 700 22px 'JetBrains Mono'; display: flex; align-items: center; justify-content: center; }
+    #by-vs { position: absolute; left: 446px; top: 38px; width: 68px; height: 60px; border-radius: 30px; background: #FFC94A; color: #0B0E14;
+      font: 700 28px 'JetBrains Mono'; display: flex; align-items: center; justify-content: center; }
   </style>
   <div id="root" data-composition-id="beyond" data-width="1080" data-height="1920">
     <div id="by-scrim"></div>
@@ -40,7 +40,7 @@
       tl.fromTo("#by-arrow", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "expo.out" }, {{at:w161}} - S - 0.04);
       tl.fromTo("#by-g", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w161}} - S);
       tl.fromTo("#by-s", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w163}} - S - 0.04);
-      tl.fromTo("#by-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(3)" }, {{at:w166}} - S);
+      tl.fromTo("#by-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(3)" }, {{at:w163}} - S + 0.1);
       tl.to("#by-scrim, #by-ttl, #by-earth, #by-race", { opacity: 0, duration: 0.12, ease: "power2.in" }, {{at:w171}} - S - 0.14);
       window.__timelines["beyond"] = tl;
     })();

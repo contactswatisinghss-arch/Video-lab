@@ -3,7 +3,7 @@
        key words get a gold (sun/space) or red (heat/cost) or green (fix) underline instead of a heavy block. -->
   <style>
     #cp-stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
-    .cap-group { position: absolute; left: 0; width: 1080px; top: 1236px; text-align: center; overflow: visible; }
+    .cap-group { position: absolute; left: 0; width: 1080px; top: 1262px; text-align: center; overflow: visible; }
     .cap-line { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 800; color: #FFFFFF; line-height: 1.08;
       letter-spacing: -.005em; text-shadow: 0 3px 14px rgba(0,0,0,.8), 0 1px 3px rgba(0,0,0,.8); padding: 0 60px; }
     .cap-word { display: inline-block; position: relative; transform-origin: 50% 80%; }
@@ -31,7 +31,7 @@
         emphasis: { "em-y": ["space.", "space,", "space?", "space", "orbit,", "orbiting", "sunlight", "Suncatcher,", "Gemma", "clock.", "AI."],
                     "em-r": ["power.", "water", "electricity", "100,000", "heat", "heated.", "radiation,", "challenge,", "no"],
                     "em-g": ["answered", "answering.", "tracking", "progress,"] },
-        font: { family: "Inter", weight: 800, size: 66, min: 48, maxWidth: 960 },
+        font: { family: "Inter", weight: 800, size: 62, min: 46, maxWidth: 960 },
         word(tl, span, w, grp, i) {
           tl.fromTo(span, { opacity: 0, y: 10 },
             { opacity: 1, y: 0, duration: 0.12, ease: "power2.out" }, Math.max(grp.start, w.start - 0.04));
