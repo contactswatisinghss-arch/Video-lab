@@ -15,12 +15,12 @@
     #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #12100E; }
     #cam { position: absolute; inset: 0; transform-origin: 50% 40%; }
     #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover;
-      filter: saturate(1.06) contrast(1.04) sepia(.06); }
-    /* room look: warm night grade + soft vignette, never passes over her face */
+      filter: brightness(1.08) contrast(1.03) saturate(.97); }
+    /* light: neutral white balance (takes the yellow off the indoor bulbs) + a soft white key light on the face */
     #room-warm { position: absolute; inset: 0; pointer-events: none;
-      background: linear-gradient(180deg, rgba(255,170,90,.07) 0%, rgba(255,170,90,0) 45%, rgba(18,16,14,.18) 100%); mix-blend-mode: soft-light; }
+      background: rgba(170,200,255,.16); mix-blend-mode: soft-light; }
     #room-vig { position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(85% 60% at 50% 45%, rgba(0,0,0,0) 55%, rgba(12,10,8,.55) 100%); }
+      background: radial-gradient(42% 24% at 50% 40%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 100%); mix-blend-mode: soft-light; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 </head>

@@ -7,8 +7,8 @@
   "max_pause": 0.3,
   "pad": 0.08,
   "keep_head": 0.2,
-  "keep_tail": 0.6,
-  "remove": [[9.4, 12.86], [69.3, 76.2]]
+  "keep_tail": 2.0,
+  "remove": [[69.3, 76.2]]
  },
  "fixes": [
   ["Mistral model.", "Mixtral model."]
