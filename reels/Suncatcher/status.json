@@ -1,9 +1,9 @@
 {
   "slug": "Suncatcher",
-  "stage": "prepare",
-  "ok": true,
-  "time": "2026-11-09 00:16:27 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42537125192",
+  "stage": "preview",
+  "ok": false,
+  "time": "2026-11-09 00:31:05 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42540174737",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/Suncatcher",
   "prepare": {
     "stage": "prepare",
@@ -26,6 +26,19 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-09 00:16:27 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": false,
+      "time": "2026-11-09 00:31:05 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": false,
+    "time": "2026-11-09 00:31:05 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42540174737",
+    "hash": "3236557963ee98b7",
+    "error": "h file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\",\"elapsedMs\":27,\"stageTimings\":{},\"isTimeout\":false,\"workers\":\"auto\",\"protocolTimeout\":300000,\"observedFailedPhase\":\"compile\",\"observedLastPhase\":\"compile\",\"observedLastStatus\":\"error\",\"browserDiagnostics\":{\"total\":0,\"errors\":0,\"pageErrors\":0,\"requestFailed\":0,\"httpErrors\":0,\"navigationStarts\":0,\"navigationFailures\":0,\"consoleErrors\":0,\"consoleWarnings\":0},\"browserConsoleErrors\":[]}\n  \n  ✗  Render failed\n  \n     8 composition files referenced by data-composition-src cannot be rendered:\n       - compositions/dc.html: the file does not exist\n       - compositions/homes.html: the file does not exist\n       - compositions/beyond.html: the file does not exist\n       - compositions/orbit.html: the file does not exist\n       - compositions/project.html: the file does not exist\n       - compositions/heat.html: the file does not exist\n       - compositions/next.html: the file does not exist\n       - compositions/outro.html: the file does not exist\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
+  }
 }
