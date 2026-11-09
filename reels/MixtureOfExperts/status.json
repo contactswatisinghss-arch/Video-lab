@@ -2,8 +2,8 @@
   "slug": "MixtureOfExperts",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-09 09:04:42 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42584171885",
+  "time": "2026-11-09 10:39:53 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/MixtureOfExperts",
   "prepare": {
     "stage": "prepare",
@@ -35,13 +35,18 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-09 09:04:42 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-09 10:39:53 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-09 09:04:42 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42584171885",
+    "time": "2026-11-09 10:39:53 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845",
     "hash": "31ac9d451d1db458",
     "check": {
       "parsed": true,
@@ -110,7 +115,7 @@
     },
     "hf_version": "0.9.26",
     "snapshot_ok": true,
-    "render_seconds": 607,
+    "render_seconds": 587,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/MixtureOfExperts/preview.mp4"
   }
 }
