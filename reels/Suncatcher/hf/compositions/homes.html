@@ -5,11 +5,11 @@
     #root { position: absolute; inset: 0; pointer-events: none; }
     #hm-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
       background: linear-gradient(180deg, #0B1230 0%, #0A0F22 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
-    #hm-kick { position: absolute; left: 60px; top: 186px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
+    #hm-kick { position: absolute; left: 60px; top: 186px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
     #hm-eq { position: absolute; left: 58px; top: 226px; font: 700 54px/1.05 'Space Grotesk', sans-serif; letter-spacing: -.03em; color: #F7F8FA; }
     #hm-num { position: absolute; left: 54px; top: 300px; font: 700 148px/1 'Space Grotesk', sans-serif; letter-spacing: -.06em; color: #FFC94A; }
     #hm-unit { position: absolute; left: 60px; top: 470px; font: 700 50px 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #F7F8FA; }
-    #hm-src { position: absolute; left: 60px; top: 640px; font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .04em; color: #8D97AD; }
+    #hm-src { position: absolute; left: 60px; top: 640px; font: 600 28px 'JetBrains Mono', monospace; letter-spacing: .04em; color: #8D97AD; }
     #hm-grid { position: absolute; left: 700px; top: 200px; }
   </style>
   <div id="root" data-composition-id="homes" data-width="1080" data-height="1920">
@@ -26,6 +26,7 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       const S = {{at:w128-0.04}};
+      // build a 5x7 grid of house icons (deterministic)
       const g = document.getElementById("hm-grid");
       const NS = "http://www.w3.org/2000/svg";
       const houses = [];

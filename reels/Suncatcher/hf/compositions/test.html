@@ -8,15 +8,15 @@
       background: radial-gradient(120% 90% at 70% 0%, #17245A 0%, #0A1030 55%, #050816 100%);
       box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -2px 0 rgba(127,211,255,.35); }
     #ts-svg { position: absolute; left: 0; top: 0; }
-    #ts-kick { position: absolute; left: 60px; top: 186px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
+    #ts-kick { position: absolute; left: 60px; top: 186px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
     #ts-ttl { position: absolute; left: 58px; top: 222px; font: 700 64px/1.02 'Space Grotesk', sans-serif; letter-spacing: -.03em; color: #F7F8FA; }
     #ts-up, #ts-down { position: absolute; padding: 16px 24px; border-radius: 22px; font: 600 32px/1.2 'Space Grotesk', sans-serif; max-width: 430px; }
     #ts-up { left: 60px; top: 470px; background: #F7F8FA; color: #0B0E14; border-bottom-left-radius: 6px; }
     #ts-down { left: 560px; top: 470px; background: #FFC94A; color: #0B0E14; border-bottom-right-radius: 6px; }
-    .ts-lbl { font: 700 22px 'JetBrains Mono', monospace; letter-spacing: .12em; display: block; margin-bottom: 6px; opacity: .7; }
+    .ts-lbl { font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .12em; display: block; margin-bottom: 6px; opacity: .7; }
     #ts-gem { position: absolute; left: 664px; top: 238px; padding: 10px 22px; border-radius: 16px; font: 700 34px 'Space Grotesk';
       color: #0B0E14; background: #7FD3FF; }
-    #ts-tpu { position: absolute; left: 664px; top: 310px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #C9D3E6; }
+    #ts-tpu { position: absolute; left: 664px; top: 310px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #C9D3E6; }
   </style>
   <div id="root" data-composition-id="test" data-width="1080" data-height="1920">
     <div id="ts-panel">
@@ -25,9 +25,12 @@
           <circle cx="120" cy="120" r="2"/><circle cx="400" cy="150" r="1.4"/><circle cx="980" cy="200" r="1.8"/>
           <circle cx="520" cy="420" r="1.4"/><circle cx="860" cy="430" r="1.2"/><circle cx="300" cy="400" r="1.6"/>
         </g>
+        <!-- Earth limb -->
         <path d="M-40 720 Q 540 560 1120 720 Z" fill="#1B4F8F"/>
         <path d="M-40 720 Q 540 560 1120 720" fill="none" stroke="#7FD3FF" stroke-width="4" opacity=".8"/>
+        <!-- orbit -->
         <path id="ts-orb" d="M-20 470 Q 540 110 1100 470" fill="none" stroke="#7FD3FF" stroke-width="2" stroke-dasharray="6 10" opacity=".55"/>
+        <!-- satellite -->
         <g transform="translate(930 330)"><g id="ts-sat">
           <rect x="-70" y="-14" width="46" height="28" rx="3" fill="#1E3A8A" stroke="#7FD3FF" stroke-width="3"/>
           <rect x="24" y="-14" width="46" height="28" rx="3" fill="#1E3A8A" stroke="#7FD3FF" stroke-width="3"/>
@@ -36,11 +39,13 @@
           <g fill="#FFC94A"><rect x="-11" y="-16" width="9" height="9" rx="1"/><rect x="2" y="-16" width="9" height="9" rx="1"/>
           <rect x="-11" y="-3" width="9" height="9" rx="1"/><rect x="2" y="-3" width="9" height="9" rx="1"/></g>
         </g></g>
+        <!-- ground station -->
         <g transform="translate(520 640)">
           <path d="M-26 0 L0 -40 L26 0 Z" fill="#C9D3E6"/>
           <path d="M-34 -48 Q 0 -86 34 -48" fill="none" stroke="#C9D3E6" stroke-width="6" stroke-linecap="round"/>
         </g>
-        <text x="520" y="700" text-anchor="middle" font-family="JetBrains Mono" font-size="22" font-weight="700" fill="#C9D3E6" letter-spacing="3">GROUND STATION · SVALBARD</text>
+        <text x="520" y="700" text-anchor="middle" font-family="JetBrains Mono" font-size="28" font-weight="700" fill="#C9D3E6" letter-spacing="2">GROUND STATION · SVALBARD</text>
+        <!-- links -->
         <path id="ts-l1" d="M520 560 L 900 350" stroke="#F7F8FA" stroke-width="5" stroke-dasharray="14 12" fill="none"/>
         <path id="ts-l2" d="M900 350 L 540 560" stroke="#FFC94A" stroke-width="5" stroke-dasharray="14 12" fill="none"/>
       </svg>
@@ -60,10 +65,12 @@
       tl.fromTo("#ts-ttl", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 0.18);
       tl.fromTo("#ts-sat", { x: -120, y: 60 }, { x: 0, y: 0, duration: 1.2, ease: "power3.out" }, 0.1);
       tl.set("#ts-l1, #ts-l2, #ts-up, #ts-down, #ts-gem, #ts-tpu", { opacity: 0 }, 0);
+      // "they already ran its first test"
       tl.fromTo("#ts-up", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w34}} - S);
       tl.fromTo("#ts-l1", { opacity: 1, strokeDashoffset: 0 }, { opacity: 1, strokeDashoffset: -104, duration: 1.2, ease: "none" }, {{at:w35}} - S);
       tl.fromTo("#ts-gem", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.2)" }, {{at:w41}} - S - 0.04);
       tl.fromTo("#ts-tpu", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w46}} - S);
+      // "which answered back down"
       tl.to("#ts-l1", { opacity: 0, duration: 0.12 }, {{at:w49}} - S);
       tl.fromTo("#ts-l2", { opacity: 1, strokeDashoffset: 0 }, { opacity: 1, strokeDashoffset: -104, duration: 0.9, ease: "none" }, {{at:w49}} - S);
       tl.fromTo("#ts-down", { opacity: 0, y: -20, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "back.out(2)" }, {{at:w50}} - S);
