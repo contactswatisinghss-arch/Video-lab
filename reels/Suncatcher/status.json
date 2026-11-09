@@ -2,8 +2,8 @@
   "slug": "Suncatcher",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-09 01:28:23 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42544677638",
+  "time": "2026-11-09 01:40:05 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42544919162",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/Suncatcher",
   "prepare": {
     "stage": "prepare",
@@ -46,19 +46,24 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-09 01:28:23 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-09 01:40:05 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-09 01:28:23 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42544677638",
-    "hash": "4a23199c5bb305c3",
+    "time": "2026-11-09 01:40:05 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42544919162",
+    "hash": "7b0271b9a6745146",
     "check": {
       "parsed": true,
       "ok": true,
       "errors": 0,
-      "warnings": 8,
+      "warnings": 3,
       "top_errors": [],
       "top_warnings": [
         {
@@ -84,52 +89,12 @@
           "selector": "div > div:nth-of-type(14) > div > div > div:nth-of-type(49) > div > span:nth-of-type(2) > span",
           "time": 57.34,
           "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"FIRST TEST · DONE\" renders at 26 px for 8.48 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#hk-kick",
-          "time": 0,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"GROUND STATION · SVALBARD\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#ts-svg > text:nth-of-type(1)",
-          "time": 8.483,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"EVERY AI ANSWER\" renders at 26 px for 9.28 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#dc-kick",
-          "time": 21.737,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"ONE YEAR · ONE AI DATA CENTRE\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#hm-kick",
-          "time": 31.148,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "text_below_floor",
-          "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"NEXT TEST IN ORBIT\" renders at 26 px for 5.04 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-          "selector": "#nx-kick",
-          "time": 65.344,
-          "section": "findings"
         }
       ]
     },
     "hf_version": "0.9.26",
     "snapshot_ok": true,
-    "render_seconds": 365,
+    "render_seconds": 328,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/Suncatcher/preview.mp4"
   }
 }
