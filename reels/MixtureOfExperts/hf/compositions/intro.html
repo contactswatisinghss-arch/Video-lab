@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #in-badge { position: absolute; left: 50%; top: 210px; transform-origin: 50% 50%;
+      padding: 18px 34px 16px; border-radius: 22px; background: #FFB547; color: #12100E; white-space: nowrap;
+      font: 800 46px/1 'Bricolage Grotesque', 'Inter', sans-serif; letter-spacing: -.01em; }
+    #in-badge small { display: block; margin-bottom: 8px; font: 700 24px 'JetBrains Mono', monospace; letter-spacing: .22em; opacity: .75; }
+    #in-tag { position: absolute; left: 56px; top: 1000px; padding: 20px 30px 18px 26px; border-left: 8px solid #2EE59D;
+      border-radius: 0 20px 20px 0; background: rgba(18,16,14,.84); }
+    #in-name { font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.02em; }
+    #in-role { margin-top: 8px; font: 700 28px 'JetBrains Mono', monospace; color: #2EE59D; letter-spacing: .08em; }
+  </style>
+  <div id="root" data-composition-id="intro" data-width="1080" data-height="1920">
+    <div id="in-badge"><small>SERIES</small>AI explained like you're 5</div>
+    <div id="in-tag"><div id="in-name">Swati</div><div id="in-role">TECH LEAD · AWS</div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w24) - 0.05 }};
+      tl.fromTo("#in-badge", { opacity: 0, xPercent: -50, y: -30, rotation: -4 },
+        { opacity: 1, xPercent: -50, y: 0, rotation: -2, duration: 0.45, ease: "back.out(2)" }, 0.02);
+      tl.fromTo("#in-tag", { opacity: 0, x: -120 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, {{at:w26}} - S - 0.1);
+      tl.fromTo("#in-role", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w27}} - S);
+      tl.to(["#in-badge", "#in-tag"], { opacity: 0, y: -12, duration: 0.18, ease: "power2.in" }, {{at:w41}} - S - 0.2);
+      window.__timelines["intro"] = tl;
+    })();
+  </script>
+</template>

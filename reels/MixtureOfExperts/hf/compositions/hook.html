@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #hk-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
+      background: linear-gradient(180deg, rgba(18,16,14,.86) 0%, rgba(18,16,14,.55) 55%, rgba(18,16,14,0) 100%); }
+    #hk-title { position: absolute; left: 0; top: 240px; width: 1080px; text-align: center;
+      font: 800 132px/0.92 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.045em; }
+    #hk-title .hk-l { display: block; }
+    #hk-title b { color: #FFB547; font-weight: 800; }
+    #hk-sub { position: absolute; left: 0; top: 182px; width: 1080px; text-align: center;
+      font: 700 34px 'JetBrains Mono', monospace; color: #2EE59D; letter-spacing: .14em; }
+    .hk-st { position: absolute; padding: 14px 26px; border-radius: 999px; border: 4px solid #FFB547;
+      background: rgba(18,16,14,.78); font: 700 38px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; white-space: nowrap; }
+    .hk-st.g { border-color: #2EE59D; }
+    #hk-s1 { left: 36px;  top: 640px; } #hk-s2 { left: 60px;  top: 780px; } #hk-s3 { left: 30px;  top: 920px; }
+    #hk-s4 { left: 772px; top: 650px; } #hk-s5 { left: 790px; top: 800px; } #hk-s6 { left: 760px; top: 940px; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hk-scrim"></div>
+    <div id="hk-title"><span class="hk-l"><b>8</b> chefs.</span><span class="hk-l"><b>1</b> sandwich?</span></div>
+    <div id="hk-sub">AI DOES THIS ON PURPOSE</div>
+    <div class="hk-st" id="hk-s1">Experts</div>
+    <div class="hk-st g" id="hk-s2">Router</div>
+    <div class="hk-st" id="hk-s3">Tokens</div>
+    <div class="hk-st g" id="hk-s4">MoE</div>
+    <div class="hk-st" id="hk-s5">47B</div>
+    <div class="hk-st g" id="hk-s6">13B</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = 0;
+      // frame 0 is the thumbnail: the title is already there
+      tl.set(["#hk-scrim", "#hk-title"], { opacity: 1 }, 0);
+      const st = ["#hk-s1", "#hk-s4", "#hk-s2", "#hk-s5", "#hk-s3", "#hk-s6"];
+      const rot = [-7, 6, 4, -5, -3, 8];
+      st.forEach(function (id, i) {
+        tl.fromTo(id, { opacity: 0, scale: 0.4, rotation: 0 },
+          { opacity: 1, scale: 1, rotation: rot[i], duration: 0.38, ease: "back.out(2.4)" }, 0.12 + i * 0.09);
+      });
+      // "Some AI models use a similar trick": the stickers clear, the promise line lands
+      tl.to(st, { opacity: 0, scale: 0.7, duration: 0.2, ease: "power2.in", stagger: 0.03 }, {{at:w14}} - S - 0.1);
+      tl.fromTo("#hk-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w15}} - S);
+      tl.to(["#hk-title", "#hk-sub", "#hk-scrim"], { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w24}} - S - 0.2);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

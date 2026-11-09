@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"
+  data-composition-variables='[
+    {"id":"color-ground","type":"color","label":"Ground","default":"#12100E"},
+    {"id":"color-ink","type":"color","label":"Ink","default":"#FFF6E9"},
+    {"id":"color-saffron","type":"color","label":"Saffron","default":"#FFB547"},
+    {"id":"color-active","type":"color","label":"Active expert","default":"#2EE59D"},
+    {"id":"color-idle","type":"color","label":"Idle expert","default":"#5B6577"}
+  ]'>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #12100E; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 40%; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover;
+      filter: saturate(1.06) contrast(1.04) sepia(.06); }
+    /* room look: warm night grade + soft vignette, never passes over her face */
+    #room-warm { position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,170,90,.07) 0%, rgba(255,170,90,0) 45%, rgba(18,16,14,.18) 100%); mix-blend-mode: soft-light; }
+    #room-vig { position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(85% 60% at 50% 45%, rgba(0,0,0,0) 55%, rgba(12,10,8,.55) 100%); }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Mixture of Experts: kitchen-brigade look. Saffron = the head chef / router, green = an expert that is cooking. -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="cam" style="z-index:1">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+    <div id="room-warm" style="z-index:2"></div>
+    <div id="room-vig" style="z-index:2"></div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w24) - 0.05 }}"
+         data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html"
+         data-start="{{= at(w24) - 0.05 }}" data-duration="{{= at(w41) - at(w24) - 0.05 }}"
+         data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="problem" data-composition-id="problem" data-composition-src="compositions/problem.html"
+         data-start="{{= at(w41) - 0.1 }}" data-duration="{{= at(w64) - at(w41) }}"
+         data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="name" data-composition-id="name" data-composition-src="compositions/name.html"
+         data-start="{{= at(w64) - 0.1 }}" data-duration="{{= at(w71) - at(w64) }}"
+         data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="kitchen" data-composition-id="kitchen" data-composition-src="compositions/kitchen.html"
+         data-start="{{= at(w71) - 0.1 }}" data-duration="{{= at(w87) - at(w71) }}"
+         data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="inside" data-composition-id="inside" data-composition-src="compositions/inside.html"
+         data-start="{{= at(w87) - 0.1 }}" data-duration="{{= at(w113) - at(w87) }}"
+         data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="tokens" data-composition-id="tokens" data-composition-src="compositions/tokens.html"
+         data-start="{{= at(w113) - 0.1 }}" data-duration="{{= at(w132) - at(w113) }}"
+         data-track-index="7" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="router" data-composition-id="router" data-composition-src="compositions/router.html"
+         data-start="{{= at(w132) - 0.1 }}" data-duration="{{= at(w209) - at(w132) }}"
+         data-track-index="8" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="example" data-composition-id="example" data-composition-src="compositions/example.html"
+         data-start="{{= at(w209) - 0.1 }}" data-duration="{{= at(w230) - at(w209) }}"
+         data-track-index="9" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="tradeoff" data-composition-id="tradeoff" data-composition-src="compositions/tradeoff.html"
+         data-start="{{= at(w230) - 0.1 }}" data-duration="{{= at(w269) - at(w230) }}"
+         data-track-index="10" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+         data-start="{{= at(w269) - 0.1 }}" data-duration="{{= dur - at(w269) + 0.1 }}"
+         data-track-index="11" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="12" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // Camera: punch-in on the hook, release on the explanation, punch on "eight", "only those two", "47", the payoff.
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cam", { scale: 1.12 }, 0)
+      .set("#cam", { scale: 1.0 }, {{at:w14}})
+      .set("#cam", { scale: 1.06 }, {{at:w49}})
+      .set("#cam", { scale: 1.0 }, {{at:w64}})
+      .set("#cam", { scale: 1.1 }, {{at:w75}})
+      .set("#cam", { scale: 1.0 }, {{at:w87}})
+      .set("#cam", { scale: 1.08 }, {{at:w154}})
+      .set("#cam", { scale: 1.0 }, {{at:w162}})
+      .set("#cam", { scale: 1.1 }, {{at:w218}})
+      .set("#cam", { scale: 1.0 }, {{at:w230}})
+      .set("#cam", { scale: 1.08 }, {{at:w269}});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>

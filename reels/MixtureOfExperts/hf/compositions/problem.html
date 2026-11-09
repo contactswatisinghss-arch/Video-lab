@@ -1,0 +1,58 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #pb-card { position: absolute; left: 70px; top: 190px; width: 940px; height: 470px; border-radius: 40px;
+      background: rgba(18,16,14,.88); border: 3px solid rgba(255,246,233,.12); overflow: hidden; }
+    #pb-head { position: absolute; left: 50px; top: 38px; font: 800 58px/1 'Bricolage Grotesque', 'Inter', sans-serif;
+      color: #FFF6E9; letter-spacing: -.03em; }
+    #pb-head2 { position: absolute; left: 50px; top: 38px; font: 800 58px/1 'Bricolage Grotesque', 'Inter', sans-serif;
+      color: #FFF6E9; letter-spacing: -.03em; opacity: 0; }
+    #pb-head2 b { color: #FFB547; }
+    #pb-grid { position: absolute; left: 50px; top: 140px; width: 560px; height: 280px; }
+    .pb-n { position: absolute; width: 52px; height: 52px; border-radius: 14px; background: #2A2623; }
+    #pb-meter { position: absolute; left: 660px; top: 140px; width: 230px; height: 280px; }
+    #pb-mlabel { position: absolute; left: 0; top: 0; width: 230px; text-align: center; font: 700 26px 'JetBrains Mono', monospace;
+      color: rgba(255,246,233,.7); letter-spacing: .14em; }
+    #pb-tube { position: absolute; left: 75px; top: 46px; width: 80px; height: 200px; border-radius: 20px; background: #2A2623; overflow: hidden; }
+    #pb-fill { position: absolute; left: 0; bottom: 0; width: 80px; height: 200px; background: linear-gradient(0deg, #FFB547, #FF3B4E);
+      transform-origin: 50% 100%; }
+    #pb-mval { position: absolute; left: 0; top: 252px; width: 230px; text-align: center; font: 800 30px 'JetBrains Mono', monospace; color: #FF3B4E; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="pb-card">
+      <div id="pb-head">Bigger model = more work</div>
+      <div id="pb-head2">Grow it, but <b>wake fewer?</b></div>
+      <div id="pb-grid"></div>
+      <div id="pb-meter"><div id="pb-mlabel">COMPUTE</div><div id="pb-tube"><div id="pb-fill"></div></div><div id="pb-mval">MAX</div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w41) - 0.1 }};
+      // 8 x 4 grid of "parts of the model": deterministic layout, built once
+      const grid = document.querySelector("#pb-grid");
+      const cells = [];
+      for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) {
+        const d = document.createElement("div");
+        d.className = "pb-n"; d.id = "pb-n" + (r * 8 + c);
+        d.style.left = (c * 70) + "px"; d.style.top = (r * 70) + "px";
+        grid.appendChild(d); cells.push(d);
+      }
+      tl.fromTo("#pb-card", { opacity: 0, y: -40, rotationX: 12 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.5, ease: "expo.out" }, 0);
+      tl.fromTo(cells, { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)", stagger: 0.012 }, 0.15);
+      // "enormous computing power": every part lights, the meter slams up
+      tl.to(cells, { backgroundColor: "#FF3B4E", duration: 0.12, stagger: { each: 0.018, from: "start" } }, {{at:w46}} - S);
+      tl.fromTo("#pb-fill", { scaleY: 0.05 }, { scaleY: 1, duration: 0.7, ease: "power4.out" }, {{at:w46}} - S);
+      tl.fromTo("#pb-mval", { opacity: 0 }, { opacity: 1, duration: 0.15 }, {{at:w47}} - S);
+      // "So how do we grow a model ...": question replaces the headline
+      tl.to("#pb-head", { opacity: 0, y: -20, duration: 0.18, ease: "power2.in" }, {{at:w49}} - S);
+      tl.fromTo("#pb-head2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w49}} - S + 0.12);
+      // "every part work on every calculation": a sweep re-lights the whole grid twice
+      tl.fromTo(cells, { backgroundColor: "#2A2623" }, { backgroundColor: "#FF3B4E", duration: 0.1, stagger: { each: 0.012, from: "start" } }, {{at:w58}} - S);
+      tl.fromTo(cells, { backgroundColor: "#2A2623" }, { backgroundColor: "#FF3B4E", duration: 0.1, stagger: { each: 0.012, from: "end" } }, {{at:w62}} - S);
+      tl.to("#pb-card", { opacity: 0, scale: 0.94, duration: 0.18, ease: "power2.in" }, {{at:w64}} - S - 0.25);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>

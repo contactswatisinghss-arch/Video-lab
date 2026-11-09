@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #ou-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 800px;
+      background: linear-gradient(180deg, rgba(18,16,14,.9) 0%, rgba(18,16,14,.65) 70%, rgba(18,16,14,0) 100%); }
+    #ou-kicker { position: absolute; left: 0; top: 200px; width: 1080px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
+      color: #FFB547; letter-spacing: .26em; }
+    #ou-line { position: absolute; left: 0; top: 258px; width: 1080px; text-align: center;
+      font: 800 108px/0.95 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.045em; }
+    #ou-line .ou-l { display: block; }
+    #ou-line b { color: #FFB547; font-weight: 800; } #ou-line i { color: #2EE59D; font-style: normal; }
+    #ou-cta { position: absolute; left: 50%; top: 520px; padding: 20px 36px 18px; border-radius: 999px; background: #FFB547; color: #12100E; white-space: nowrap;
+      font: 800 46px/1 'Bricolage Grotesque', 'Inter', sans-serif; letter-spacing: -.01em; }
+    #ou-series { position: absolute; left: 0; top: 610px; width: 1080px; text-align: center; font: 700 26px 'JetBrains Mono', monospace;
+      color: rgba(255,246,233,.7); letter-spacing: .2em; }
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1080" data-height="1920">
+    <div id="ou-scrim"></div>
+    <div id="ou-kicker">MIXTURE OF EXPERTS</div>
+    <div id="ou-line"><span class="ou-l"><b>8</b> chefs ready.</span><span class="ou-l"><i>2</i> cook.</span></div>
+    <div id="ou-cta">Follow for the next episode</div>
+    <div id="ou-series">AI EXPLAINED LIKE YOU'RE 5</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w269) - 0.1 }};
+      tl.fromTo("#ou-scrim", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+      tl.fromTo("#ou-kicker", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.05);
+      tl.fromTo("#ou-line .ou-l", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power4.out", stagger: 0.12 }, 0.1);
+      // "Follow me for the next episode"
+      tl.fromTo("#ou-cta", { opacity: 0, xPercent: -50, scale: 0.6 }, { opacity: 1, xPercent: -50, scale: 1, duration: 0.4, ease: "back.out(2.2)" }, {{at:w276}} - S);
+      tl.fromTo("#ou-series", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w276}} - S + 0.2);
+      window.__timelines["outro"] = tl;
+    })();
+  </script>
+</template>

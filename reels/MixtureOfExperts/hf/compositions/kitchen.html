@@ -1,0 +1,54 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #kt-card { position: absolute; left: 60px; top: 190px; width: 960px; height: 500px; border-radius: 40px;
+      background: rgba(18,16,14,.88); border: 3px solid rgba(255,181,71,.35); }
+    #kt-head { position: absolute; left: 404px; top: 20px; width: 152px; height: 152px; color: #FFB547; }
+    #kt-headlbl { position: absolute; left: 0; top: 160px; width: 960px; text-align: center; font: 700 24px 'JetBrains Mono', monospace;
+      color: #FFB547; letter-spacing: .26em; }
+    .kt-hat { position: absolute; width: 120px; height: 120px; color: #FFF6E9; }
+    .kt-hat svg { width: 120px; height: 120px; display: block; }
+    #kt-count { position: absolute; left: 44px; top: 34px; font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.03em; }
+    #kt-count small { display: block; font: 700 22px 'JetBrains Mono', monospace; color: rgba(255,246,233,.6); letter-spacing: .18em; margin-top: 6px; }
+    #kt-pick { position: absolute; right: 44px; top: 34px; text-align: right; font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #2EE59D; letter-spacing: -.03em; }
+    #kt-pick small { display: block; font: 700 22px 'JetBrains Mono', monospace; color: rgba(46,229,157,.75); letter-spacing: .18em; margin-top: 6px; }
+  </style>
+  <div id="root" data-composition-id="kitchen" data-width="1080" data-height="1920">
+    <div id="kt-card">
+      <div id="kt-count">8<small>CHEFS</small></div>
+      <div id="kt-pick">2<small>COOK</small></div>
+      <svg id="kt-head" viewBox="0 0 100 100"><path d="M22 58 C8 56 6 34 22 30 C24 14 44 10 52 20 C60 8 82 12 80 30 C96 32 94 56 78 58 Z" fill="currentColor"/><rect x="26" y="61" width="48" height="20" rx="5" fill="currentColor"/><rect x="26" y="67" width="48" height="5" fill="#12100E" opacity=".35"/></svg>
+      <div id="kt-headlbl">HEAD CHEF</div>
+      <div id="kt-hats"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w71) - 0.1 }};
+      const HAT = '<svg viewBox="0 0 100 100"><path d="M22 58 C8 56 6 34 22 30 C24 14 44 10 52 20 C60 8 82 12 80 30 C96 32 94 56 78 58 Z" fill="currentColor"/><rect x="26" y="61" width="48" height="20" rx="5" fill="currentColor"/></svg>';
+      const box = document.querySelector("#kt-hats");
+      const hats = [];
+      for (let i = 0; i < 8; i++) {
+        const d = document.createElement("div");
+        d.className = "kt-hat"; d.id = "kt-h" + i; d.innerHTML = HAT;
+        d.style.left = (115 + (i % 4) * 200) + "px"; d.style.top = (i < 4 ? 216 : 352) + "px";
+        box.appendChild(d); hats.push(d);
+      }
+      tl.fromTo("#kt-card", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
+      // "a kitchen with eight chefs": the brigade pops in, counter lands on "eight"
+      tl.fromTo(hats, { opacity: 0, y: 30, scale: 0.5 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(2.2)", stagger: 0.06 }, {{at:w73}} - S);
+      tl.fromTo("#kt-count", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, {{at:w75}} - S);
+      // "a head chef chooses": the head chef drops in
+      tl.fromTo("#kt-head", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.8)" }, {{at:w82}} - S);
+      tl.fromTo("#kt-headlbl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w83}} - S);
+      // "just two": two chefs go green, the rest rest
+      const idle = hats.filter(function (h, i) { return i !== 1 && i !== 6; });
+      tl.to(idle, { opacity: 0.22, duration: 0.25 }, {{at:w86}} - S);
+      tl.to(["#kt-h1", "#kt-h6"], { color: "#2EE59D", scale: 1.18, duration: 0.3, ease: "back.out(2.4)" }, {{at:w86}} - S);
+      tl.fromTo("#kt-pick", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, {{at:w86}} - S);
+      tl.to("#kt-card", { opacity: 0, x: -60, duration: 0.2, ease: "power2.in" }, {{at:w87}} - S - 0.2);
+      window.__timelines["kitchen"] = tl;
+    })();
+  </script>
+</template>

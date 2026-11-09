@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #nm-glass { position: absolute; left: 60px; top: 200px; width: 960px; height: 420px; border-radius: 44px; overflow: hidden;
+      background: rgba(18,16,14,.62); backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2);
+      border: 2px solid rgba(255,246,233,.22); }
+    #nm-kicker { position: absolute; left: 0; top: 46px; width: 960px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
+      color: #FFB547; letter-spacing: .3em; }
+    #nm-t1, #nm-t2 { position: absolute; left: 0; width: 960px; text-align: center;
+      font: 800 132px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.045em; }
+    #nm-t1 { top: 100px; } #nm-t2 { top: 232px; }
+    #nm-t2 b { color: #2EE59D; font-weight: 800; }
+    #nm-sheen { position: absolute; top: -50px; left: 0; width: 220px; height: 520px;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.22), rgba(255,255,255,0)); }
+  </style>
+  <div id="root" data-composition-id="name" data-width="1080" data-height="1920">
+    <div id="nm-glass">
+      <div id="nm-kicker">ONE APPROACH IS CALLED</div>
+      <div id="nm-t1">Mixture</div>
+      <div id="nm-t2">of <b>Experts</b></div>
+      <div id="nm-sheen"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w64) - 0.1 }};
+      tl.fromTo("#nm-glass", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0);
+      tl.fromTo("#nm-kicker", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.1);
+      tl.fromTo("#nm-t1", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, {{at:w68}} - S);
+      tl.fromTo("#nm-t2", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, {{at:w70}} - S);
+      tl.fromTo("#nm-sheen", { x: -260, rotation: 18 }, { x: 1100, rotation: 18, duration: 0.7, ease: "power2.inOut" }, {{at:w70}} - S + 0.2);
+      tl.to("#nm-glass", { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, {{at:w71}} - S - 0.2);
+      window.__timelines["name"] = tl;
+    })();
+  </script>
+</template>

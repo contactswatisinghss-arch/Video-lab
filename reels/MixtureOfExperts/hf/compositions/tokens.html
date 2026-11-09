@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #tk-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 780px;
+      background: linear-gradient(180deg, rgba(18,16,14,.9) 0%, rgba(18,16,14,.7) 70%, rgba(18,16,14,0) 100%); }
+    #tk-kicker { position: absolute; left: 0; top: 210px; width: 1080px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
+      color: rgba(255,246,233,.7); letter-spacing: .26em; }
+    #tk-sentence { position: absolute; left: 0; top: 290px; width: 1080px; text-align: center;
+      font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.02em; }
+    #tk-row { position: absolute; left: 0; top: 420px; width: 1080px; height: 110px; text-align: center; font-size: 0; }
+    .tk-chip { display: inline-block; margin: 0 7px; padding: 16px 20px; border-radius: 18px; background: #2A2623;
+      border: 3px solid #FFB547; font: 800 50px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.01em; }
+    .tk-chip.part { border-color: #2EE59D; }
+    #tk-lbl { position: absolute; left: 0; top: 560px; width: 1080px; text-align: center;
+      font: 800 54px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFB547; letter-spacing: -.02em; }
+    #tk-lbl2 { position: absolute; left: 0; top: 630px; width: 1080px; text-align: center; font: 700 30px 'JetBrains Mono', monospace;
+      color: #2EE59D; letter-spacing: .08em; }
+  </style>
+  <div id="root" data-composition-id="tokens" data-width="1080" data-height="1920">
+    <div id="tk-scrim"></div>
+    <div id="tk-kicker">YOUR SENTENCE</div>
+    <div id="tk-sentence">"Explain mixture of experts"</div>
+    <div id="tk-row">
+      <span class="tk-chip part" id="tk-c0">Ex</span><span class="tk-chip part" id="tk-c1">plain</span><span class="tk-chip" id="tk-c2">mixture</span><span class="tk-chip" id="tk-c3">of</span><span class="tk-chip" id="tk-c4">experts</span>
+    </div>
+    <div id="tk-lbl">= tokens</div>
+    <div id="tk-lbl2">a word, or part of a word</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{= at(w113) - 0.1 }};
+      const chips = ["#tk-c0", "#tk-c1", "#tk-c2", "#tk-c3", "#tk-c4"];
+      tl.fromTo("#tk-scrim", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+      tl.fromTo("#tk-kicker", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.05);
+      tl.fromTo("#tk-sentence", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w114}} - S);
+      // "gets broken into tiny pieces": the sentence dims and the chips snap apart
+      tl.to("#tk-sentence", { opacity: 0.35, duration: 0.2 }, {{at:w116}} - S);
+      tl.fromTo(chips, { opacity: 0, y: -60, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "back.out(2.2)", stagger: 0.08 }, {{at:w116}} - S);
+      tl.fromTo("#tk-lbl", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w121}} - S);
+      // "a word or a part of a word": the two halves of "Explain" bounce
+      tl.fromTo("#tk-lbl2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w125}} - S);
+      tl.fromTo(["#tk-c0", "#tk-c1"], { y: 0 }, { y: -18, duration: 0.16, ease: "power2.out", yoyo: true, repeat: 1 }, {{at:w128}} - S);
+      tl.to(["#tk-scrim", "#tk-kicker", "#tk-sentence", "#tk-row", "#tk-lbl", "#tk-lbl2"], { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w132}} - S - 0.2);
+      window.__timelines["tokens"] = tl;
+    })();
+  </script>
+</template>
