@@ -1,0 +1,66 @@
+<template>
+  <!-- DATA CENTRE (top insert): racks light up as she says "electricity"; POWER meter fills red on "power";
+       heat shimmer on "heated"; a water drop + WATER meter on "water". -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #dc-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
+      background: linear-gradient(180deg, #0B1230 0%, #0A0F22 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+    #dc-kick { position: absolute; left: 60px; top: 186px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
+    #dc-ttl { position: absolute; left: 58px; top: 222px; font: 700 60px/1.04 'Space Grotesk', sans-serif; letter-spacing: -.03em; color: #F7F8FA; width: 520px; }
+    #dc-svg { position: absolute; left: 620px; top: 200px; }
+    .dc-m { position: absolute; left: 60px; width: 500px; }
+    .dc-mt { font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .1em; color: #C9D3E6; display: flex; justify-content: space-between; }
+    .dc-bar { margin-top: 10px; height: 26px; border-radius: 13px; background: rgba(255,255,255,.1); overflow: hidden; }
+    .dc-fill { height: 26px; width: 0; border-radius: 13px; }
+    #dc-pf { background: linear-gradient(90deg, #FFC94A, #FF5A45); }
+    #dc-wf { background: linear-gradient(90deg, #7FD3FF, #3B82F6); }
+  </style>
+  <div id="root" data-composition-id="dc" data-width="1080" data-height="1920">
+    <div id="dc-panel">
+      <div id="dc-kick">EVERY AI ANSWER</div>
+      <div id="dc-ttl">runs in a data centre</div>
+      <svg id="dc-svg" viewBox="0 0 400 480" width="400" height="480">
+        <g id="dc-heat" stroke="#FF8A73" stroke-width="6" fill="none" stroke-linecap="round" opacity="0">
+          <path d="M90 40 q 14 -16 0 -32 q -14 -16 0 -32"/><path d="M200 40 q 14 -16 0 -32 q -14 -16 0 -32"/><path d="M310 40 q 14 -16 0 -32 q -14 -16 0 -32"/>
+        </g>
+        <g id="dc-racks">
+          <rect x="40" y="60" width="100" height="380" rx="12" fill="#18213F" stroke="#3A4A7A" stroke-width="3"/>
+          <rect x="150" y="60" width="100" height="380" rx="12" fill="#18213F" stroke="#3A4A7A" stroke-width="3"/>
+          <rect x="260" y="60" width="100" height="380" rx="12" fill="#18213F" stroke="#3A4A7A" stroke-width="3"/>
+        </g>
+        <g id="dc-leds" fill="#35E39A" opacity="0">
+          <rect x="58" y="90" width="64" height="10" rx="5"/><rect x="58" y="140" width="64" height="10" rx="5"/><rect x="58" y="190" width="64" height="10" rx="5"/>
+          <rect x="58" y="240" width="64" height="10" rx="5"/><rect x="58" y="290" width="64" height="10" rx="5"/><rect x="58" y="340" width="64" height="10" rx="5"/>
+          <rect x="168" y="90" width="64" height="10" rx="5"/><rect x="168" y="140" width="64" height="10" rx="5"/><rect x="168" y="190" width="64" height="10" rx="5"/>
+          <rect x="168" y="240" width="64" height="10" rx="5"/><rect x="168" y="290" width="64" height="10" rx="5"/><rect x="168" y="340" width="64" height="10" rx="5"/>
+          <rect x="278" y="90" width="64" height="10" rx="5"/><rect x="278" y="140" width="64" height="10" rx="5"/><rect x="278" y="190" width="64" height="10" rx="5"/>
+          <rect x="278" y="240" width="64" height="10" rx="5"/><rect x="278" y="290" width="64" height="10" rx="5"/><rect x="278" y="340" width="64" height="10" rx="5"/>
+        </g>
+        <path id="dc-drop" d="M200 380 C 170 420 165 440 165 452 a 35 35 0 0 0 70 0 C 235 440 230 420 200 380 Z" fill="#7FD3FF" opacity="0"/>
+      </svg>
+      <div class="dc-m" style="top:420px"><div class="dc-mt"><span>POWER</span><span style="position:relative"><span id="dc-pv1" style="opacity:0">HIGH</span><span id="dc-pv2" style="opacity:0;position:absolute;right:0;top:0;color:#FF8A73">ENORMOUS</span></span></div><div class="dc-bar"><div class="dc-fill" id="dc-pf"></div></div></div>
+      <div class="dc-m" style="top:540px"><div class="dc-mt"><span>FRESH WATER</span><span id="dc-wv" style="opacity:0;color:#7FD3FF">TO COOL IT</span></div><div class="dc-bar"><div class="dc-fill" id="dc-wf"></div></div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w95-0.04}};
+      tl.fromTo("#dc-panel", { y: -720 }, { y: 0, duration: 0.42, ease: "expo.out" }, 0);
+      tl.fromTo("#dc-ttl", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 0.16);
+      tl.fromTo("#dc-leds", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, {{at:w101}} - S);
+      tl.to("#dc-pf", { width: 260, duration: 0.5, ease: "power3.out" }, {{at:w101}} - S);
+      tl.to("#dc-pv1", { opacity: 1, duration: 0.15 }, {{at:w101}} - S);
+      tl.to("#dc-pf", { width: 500, duration: 0.5, ease: "power3.out" }, {{at:w109}} - S);
+      tl.to("#dc-pv1", { opacity: 0, duration: 0.1 }, {{at:w109}} - S);
+      tl.to("#dc-pv2", { opacity: 1, duration: 0.15 }, {{at:w109}} - S);
+      tl.to("#dc-leds", { fill: "#FF8A73", duration: 0.3 }, {{at:w116}} - S);
+      tl.fromTo("#dc-heat", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w116}} - S);
+      tl.fromTo("#dc-drop", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "bounce.out" }, {{at:w122}} - S - 0.05);
+      tl.to("#dc-wf", { width: 420, duration: 0.5, ease: "power3.out" }, {{at:w122}} - S);
+      tl.to("#dc-wv", { opacity: 1, duration: 0.15 }, {{at:w122}} - S);
+      tl.to("#dc-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w128}} - S - 0.16);
+      window.__timelines["dc"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,48 @@
+<template>
+  <!-- BEYOND: "beyond Earth" arrow lifts off a small Earth; then the race: two team cards (Google / SpaceX).
+       SpaceX fact: it has filed with the FCC for up to 1M orbital data-centre satellites (Scripps News). -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #by-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 560px;
+      background: linear-gradient(180deg, rgba(5,9,26,.72) 0%, rgba(5,9,26,.4) 65%, rgba(5,9,26,0) 100%); }
+    #by-ttl { position: absolute; left: 60px; top: 190px; font: 700 80px/1 'Space Grotesk', sans-serif; letter-spacing: -.04em; color: #F7F8FA; }
+    #by-ttl .y { color: #FFC94A; }
+    #by-earth { position: absolute; right: 60px; top: 170px; }
+    #by-race { position: absolute; left: 60px; top: 300px; width: 960px; height: 150px; }
+    .by-card { position: absolute; top: 0; width: 460px; height: 136px; border-radius: 28px; background: rgba(8,13,34,.86);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); padding: 20px 28px; box-sizing: border-box; }
+    .by-k { font: 700 24px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #8D97AD; }
+    .by-v { margin-top: 8px; font: 700 38px/1.1 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #F7F8FA; }
+    #by-vs { position: absolute; left: 456px; top: 44px; width: 48px; height: 48px; border-radius: 24px; background: #FFC94A; color: #0B0E14;
+      font: 700 22px 'JetBrains Mono'; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <div id="root" data-composition-id="beyond" data-width="1080" data-height="1920">
+    <div id="by-scrim"></div>
+    <div id="by-ttl">Go <span class="y">beyond</span> Earth</div>
+    <svg id="by-earth" viewBox="0 0 160 160" width="160" height="160">
+      <circle cx="80" cy="110" r="44" fill="#1B4F8F" stroke="#7FD3FF" stroke-width="4"/>
+      <path d="M58 98 q 12 -10 24 0 t 22 6" stroke="#35E39A" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <g id="by-arrow"><path d="M80 60 L80 8" stroke="#FFC94A" stroke-width="8" stroke-linecap="round"/><path d="M64 24 L80 6 L96 24" stroke="#FFC94A" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </svg>
+    <div id="by-race">
+      <div class="by-card" id="by-g" style="left:0"><div class="by-k">GOOGLE</div><div class="by-v">Suncatcher<br>prototype in orbit</div></div>
+      <div class="by-card" id="by-s" style="left:500px"><div class="by-k">SPACEX</div><div class="by-v">Plans for orbital<br>AI data centres</div></div>
+      <div id="by-vs">VS</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w149-0.04}};
+      tl.fromTo("#by-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#by-ttl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w157}} - S - 0.06);
+      tl.fromTo("#by-earth", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w157}} - S);
+      tl.fromTo("#by-arrow", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "expo.out" }, {{at:w161}} - S - 0.04);
+      tl.fromTo("#by-g", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w161}} - S);
+      tl.fromTo("#by-s", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w163}} - S - 0.04);
+      tl.fromTo("#by-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(3)" }, {{at:w166}} - S);
+      tl.to("#by-scrim, #by-ttl, #by-earth, #by-race", { opacity: 0, duration: 0.12, ease: "power2.in" }, {{at:w171}} - S - 0.14);
+      window.__timelines["beyond"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,50 @@
+<template>
+  <!-- HOMES (top insert): one data-centre block on the left = a neighbourhood of houses lighting up on the right;
+       "100,000 homes" slams on her word. Source: IEA, Energy and AI (typical AI-focused data centre). -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #hm-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
+      background: linear-gradient(180deg, #0B1230 0%, #0A0F22 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+    #hm-kick { position: absolute; left: 60px; top: 186px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .18em; color: #7FD3FF; }
+    #hm-eq { position: absolute; left: 58px; top: 226px; font: 700 54px/1.05 'Space Grotesk', sans-serif; letter-spacing: -.03em; color: #F7F8FA; }
+    #hm-num { position: absolute; left: 54px; top: 300px; font: 700 148px/1 'Space Grotesk', sans-serif; letter-spacing: -.06em; color: #FFC94A; }
+    #hm-unit { position: absolute; left: 60px; top: 470px; font: 700 50px 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #F7F8FA; }
+    #hm-src { position: absolute; left: 60px; top: 640px; font: 600 26px 'JetBrains Mono', monospace; letter-spacing: .04em; color: #8D97AD; }
+    #hm-grid { position: absolute; left: 700px; top: 200px; }
+  </style>
+  <div id="root" data-composition-id="homes" data-width="1080" data-height="1920">
+    <div id="hm-panel">
+      <div id="hm-kick">ONE YEAR · ONE AI DATA CENTRE</div>
+      <div id="hm-eq">uses as much power as</div>
+      <div id="hm-num">100,000</div>
+      <div id="hm-unit">homes</div>
+      <div id="hm-src">Source: IEA (typical AI-focused data centre)</div>
+      <svg id="hm-grid" viewBox="0 0 320 420" width="320" height="420"></svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w128-0.04}};
+      const g = document.getElementById("hm-grid");
+      const NS = "http://www.w3.org/2000/svg";
+      const houses = [];
+      for (let r = 0; r < 7; r++) for (let c = 0; c < 5; c++) {
+        const p = document.createElementNS(NS, "path");
+        const x = c * 64 + 8, y = r * 60 + 8;
+        p.setAttribute("d", `M${x} ${y+22} L${x+24} ${y} L${x+48} ${y+22} L${x+48} ${y+46} L${x} ${y+46} Z`);
+        p.setAttribute("fill", "#2A3558");
+        p.setAttribute("id", `hm-h${r}${c}`);
+        g.appendChild(p); houses.push(p);
+      }
+      tl.fromTo("#hm-panel", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 0);
+      tl.set("#hm-num, #hm-unit", { opacity: 0 }, 0);
+      tl.fromTo("#hm-eq", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w133}} - S);
+      tl.to(houses, { fill: "#FFC94A", duration: 0.12, stagger: 0.05, ease: "none" }, {{at:w136}} - S);
+      tl.fromTo("#hm-num", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "power4.out" }, {{at:w143}} - S - 0.04);
+      tl.fromTo("#hm-unit", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25, ease: "expo.out" }, {{at:w144}} - S - 0.04);
+      tl.to("#hm-panel", { y: -720, duration: 0.26, ease: "power3.in" }, {{at:w149}} - S - 0.28);
+      window.__timelines["homes"] = tl;
+    })();
+  </script>
+</template>

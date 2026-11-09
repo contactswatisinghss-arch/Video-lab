@@ -1,0 +1,34 @@
+<template>
+  <!-- NEXT: a test checklist above her head; each row ticks in on its word with an open "?" (results not in yet). -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #nx-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 560px;
+      background: linear-gradient(180deg, rgba(5,9,26,.75) 0%, rgba(5,9,26,.42) 65%, rgba(5,9,26,0) 100%); }
+    #nx-kick { position: absolute; left: 60px; top: 184px; font: 700 26px 'JetBrains Mono', monospace; letter-spacing: .2em; color: #7FD3FF; }
+    .nx-row { position: absolute; left: 60px; height: 66px; padding: 0 26px 0 18px; border-radius: 33px; display: flex; align-items: center; gap: 16px;
+      background: rgba(8,13,34,.86); box-shadow: inset 0 0 0 2px rgba(255,255,255,.14); font: 700 38px 'Space Grotesk', sans-serif; color: #F7F8FA; }
+    .nx-q { width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center;
+      font: 700 28px 'JetBrains Mono'; color: #0B0E14; }
+  </style>
+  <div id="root" data-composition-id="next" data-width="1080" data-height="1920">
+    <div id="nx-scrim"></div>
+    <div id="nx-kick">NEXT TEST IN ORBIT</div>
+    <div class="nx-row" id="nx-r1" style="top:226px"><div class="nx-q" style="background:#FF8A73">?</div>Survive the heat</div>
+    <div class="nx-row" id="nx-r2" style="top:302px"><div class="nx-q" style="background:#C6A5FF">?</div>Survive the radiation</div>
+    <div class="nx-row" id="nx-r3" style="top:378px"><div class="nx-q" style="background:#35E39A">?</div>Keep answering</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w225-0.04}};
+      tl.fromTo("#nx-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#nx-kick", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w227}} - S - 0.06);
+      tl.set("#nx-r1, #nx-r2, #nx-r3", { opacity: 0 }, 0);
+      tl.fromTo("#nx-r1", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.28, ease: "expo.out" }, {{at:w236}} - S - 0.06);
+      tl.fromTo("#nx-r2", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.28, ease: "expo.out" }, {{at:w238}} - S - 0.06);
+      tl.fromTo("#nx-r3", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.28, ease: "expo.out" }, {{at:w240}} - S - 0.06);
+      tl.to("#nx-scrim, #nx-kick, #nx-r1, #nx-r2, #nx-r3", { opacity: 0, duration: 0.12, ease: "power2.in" }, {{at:w242}} - S - 0.14);
+      window.__timelines["next"] = tl;
+    })();
+  </script>
+</template>
