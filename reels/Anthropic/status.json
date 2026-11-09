@@ -2,29 +2,34 @@
   "slug": "Anthropic",
   "stage": "prepare",
   "ok": true,
-  "time": "2026-11-09 02:25:10 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42548305667",
+  "time": "2026-11-09 08:02:06 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42581275947",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/Anthropic",
   "prepare": {
     "stage": "prepare",
     "ok": true,
-    "time": "2026-11-09 02:25:10 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42548305667",
+    "time": "2026-11-09 08:02:06 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42581275947",
     "raw": "1C2996AB-6622-44EA-9238-0A087FD452AC.mp4",
     "words": 286,
     "duration": 112.366667,
     "warnings": [
-      "HDR (iPhone) source: converted to standard range.",
+      "HDR (iPhone) source: kept the original camera look (no tone mapping).",
       "Raw length 112s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
-      "11 low-confidence words (check names/jargon): bet(w8), Think(w86), ChatGPT,(w99), Claude,(w100), Jensen(w124), He(w135), layer(w140), Because(w205), race(w233), solved(w237), terms(w283)"
+      "10 low-confidence words (check names/jargon): bet(w8), ChatGPT,(w99), Claude,(w100), Jensen(w124), He(w135), layer(w140), Because(w205), race(w233), solved(w237), terms(w283)"
     ],
-    "token": "790f5abaaa97d859"
+    "token": "7067bdb1b56d03f9"
   },
   "history": [
     {
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-09 02:25:10 UTC"
+    },
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-09 08:02:06 UTC"
     }
   ]
 }
