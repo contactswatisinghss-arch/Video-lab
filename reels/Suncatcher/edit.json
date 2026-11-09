@@ -2,6 +2,7 @@
  "version": 2,
  "slug": "Suncatcher",
  "title": "Google is putting AI in space (Project Suncatcher)",
+ "hdr": "original",
  "speed": 1.1,
  "cuts": {
   "max_pause": 0.3,

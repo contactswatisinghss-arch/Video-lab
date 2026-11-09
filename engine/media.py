@@ -3,6 +3,8 @@ contact sheets. Used by `prepare` on GitHub (and by the self-test)."""
 import glob, json, os, re, shutil, subprocess, wave
 from .util import run, ReelError, font_path
 
+HDR_TRANSFERS = ("arib-std-b67", "smpte2084")
+
 def probe(path):
     j = json.loads(run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", path]))
     v = next((s for s in j["streams"] if s["codec_type"] == "video"), None)
@@ -77,23 +79,33 @@ def write_transcript(words, out, meta):
         f.write("id\tstart\tend\tprob\tword\n")
         for w in words: f.write(f"{w['id']}\t{w['s']:.3f}\t{w['e']:.3f}\t{w.get('p', 1):.2f}\t{w['w']}\n")
 
-def tonemap_chain(meta):
-    if meta["transfer"] in ("arib-std-b67", "smpte2084") and "zscale" in run(["ffmpeg", "-hide_banner", "-filters"]):
+def is_hdr(meta):
+    return meta.get("transfer") in HDR_TRANSFERS
+
+def tonemap_chain(meta, mode="tonemap"):
+    """HDR -> SDR. mode "tonemap" (default): hable tone mapping (can look darker/dusty on iPhone HLG).
+    mode "original": no tone mapping; the HLG picture is shown as-is on SDR (only the YUV matrix is
+    converted, in make_proxy), which matches how the clip looks in a plain player/contact sheet."""
+    if mode == "original" or not is_hdr(meta):
+        return ""
+    if "zscale" in run(["ffmpeg", "-hide_banner", "-filters"]):
         return ("zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,"
                 "zscale=t=bt709:m=bt709:r=tv,")
     return ""
 
-def make_proxy(video, meta, out, fps=30):
+def make_proxy(video, meta, out, fps=30, hdr_mode="tonemap"):
     """Edit-friendly copy: SDR, short side 1080, constant fps, a keyframe every second (HyperFrames
     seeks video frame by frame; sparse keyframes freeze on seek)."""
     vertical = meta["height"] >= meta["width"]
     scale = "scale=1080:-2" if vertical else "scale=-2:1080"
-    vf = f"{tonemap_chain(meta)}{scale}:flags=lanczos,fps={fps},format=yuv420p"
+    cm = ":in_color_matrix=bt2020:out_color_matrix=bt709" if (is_hdr(meta) and hdr_mode == "original") else ""
+    vf = f"{tonemap_chain(meta, hdr_mode)}{scale}:flags=lanczos{cm},fps={fps},format=yuv420p"
     cmd = ["ffmpeg", "-y", "-i", video, "-vf", vf]
     if meta["has_audio"]: cmd += ["-map", "0:v:0", "-map", "0:a:0", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
     else: cmd += ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-map", "0:v:0", "-map", "1:a", "-shortest", "-c:a", "aac"]
-    run(cmd + ["-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-g", str(fps), "-keyint_min", str(fps),
-               "-movflags", "+faststart", out])
+    tags = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"] if is_hdr(meta) else []
+    run(cmd + ["-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-g", str(fps), "-keyint_min", str(fps)]
+        + tags + ["-movflags", "+faststart", out])
 
 def contact_sheet(video, out, n=30, width=200, cols=6, label=True, start=0.0, end=None):
     """Grid of frames with timestamps."""
@@ -121,10 +133,18 @@ def contact_sheet(video, out, n=30, width=200, cols=6, label=True, start=0.0, en
     shutil.rmtree(tmp, ignore_errors=True)
     return times
 
+def hdr_mode_for(out):
+    """Per-reel choice from reels/<slug>/edit.json: "hdr": "original" keeps the camera look (no tone map)."""
+    try:
+        return json.load(open(os.path.join(out, "edit.json"), encoding="utf-8")).get("hdr") or "tonemap"
+    except Exception:
+        return "tonemap"
+
 def prepare(video, out, glossary=None, model=None, proxy=True):
     """Transcript + checks + frames (+ proxy). Writes into `out`."""
     os.makedirs(out, exist_ok=True)
     meta = probe(video)
+    hdr_mode = hdr_mode_for(out)
     wav = os.path.join(out, "_audio.wav")
     extract_wav(video, wav)
     mean, peak = volume_stats(wav)
@@ -134,16 +154,18 @@ def prepare(video, out, glossary=None, model=None, proxy=True):
     write_transcript(words, out, meta)
     warn = []
     if meta["width"] > meta["height"]: warn.append("Landscape source: design a vertical layout for it (zoom, split or framed).")
-    if meta["transfer"] in ("arib-std-b67", "smpte2084"): warn.append("HDR (iPhone) source: converted to standard range.")
+    if is_hdr(meta):
+        warn.append("HDR (iPhone) source: kept the original camera look (no tone mapping)." if hdr_mode == "original"
+                    else "HDR (iPhone) source: converted to standard range.")
     if mean < -32: warn.append(f"Audio is quiet (mean {mean} dB): loudness is normalised, but background noise rises too.")
     if peak > -0.2: warn.append(f"Audio peaks at {peak} dB: possible clipping/distortion.")
     if meta["duration"] > 100: warn.append(f"Raw length {meta['duration']:.0f}s: tighten, or split into a 2-part series (sweet spot 35-90 s).")
     low = [w for w in words if w.get("p", 1) < 0.5]
     if low: warn.append(f"{len(low)} low-confidence words (check names/jargon): " + ", ".join(f"{w['w']}({w['id']})" for w in low[:30]))
     if not words: warn.append("No speech detected.")
-    meta.update({"audio_mean_db": mean, "audio_peak_db": peak, "words": len(words), "warnings": warn})
+    meta.update({"audio_mean_db": mean, "audio_peak_db": peak, "words": len(words), "warnings": warn, "hdr_mode": hdr_mode})
     json.dump(meta, open(os.path.join(out, "meta.json"), "w"), indent=2)
     contact_sheet(video, os.path.join(out, "frames.jpg"), n=min(36, max(12, int(meta["duration"] / 4))))
     if proxy:
-        make_proxy(video, meta, os.path.join(out, "proxy.mp4"))
+        make_proxy(video, meta, os.path.join(out, "proxy.mp4"), hdr_mode=hdr_mode)
     return meta
