@@ -1,11 +1,10 @@
 {
-  "state": "idle",
-  "last": [
-    "final Suncatcher"
+  "state": "running",
+  "current": "preview MixtureOfExperts",
+  "pending": [
+    "preview MixtureOfExperts",
+    "preview Suncatcher"
   ],
-  "done": [
-    "final Suncatcher"
-  ],
-  "time": "2026-11-09 07:29:42 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42577288047"
+  "time": "2026-11-09 07:30:55 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42578380536"
 }
