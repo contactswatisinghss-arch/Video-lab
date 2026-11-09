@@ -6,13 +6,13 @@
     #dl-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
       background: linear-gradient(180deg, #151821 0%, #0D0F14 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -3px 0 rgba(255,176,32,.5); }
     #dl-kick { position: absolute; left: 60px; top: 190px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #FFB020; }
-    #dl-rep { position: absolute; left: 700px; top: 180px; padding: 6px 16px; border-radius: 14px; font: 700 26px 'JetBrains Mono', monospace;
+    #dl-rep { position: absolute; left: 700px; top: 180px; padding: 6px 16px; border-radius: 14px; font: 700 28px 'JetBrains Mono', monospace;
       letter-spacing: .12em; color: #0D0F14; background: #F5F1E8; }
     #dl-gens { position: absolute; left: 60px; top: 250px; }
     #dl-big { position: absolute; left: 52px; top: 380px; font: 800 190px/1 'Sora', sans-serif; letter-spacing: -.06em; color: #FFB020; transform-origin: 0% 60%; }
     #dl-big small { font-size: 96px; letter-spacing: -.03em; }
     #dl-sub { position: absolute; left: 62px; top: 590px; font: 700 40px 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; }
-    #dl-src { position: absolute; left: 62px; top: 650px; font: 600 24px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .06em; }
+    #dl-src { position: absolute; left: 62px; top: 650px; font: 600 28px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .06em; }
   </style>
   <div id="root" data-composition-id="deal" data-width="1080" data-height="1920">
     <div id="dl-panel">
@@ -44,8 +44,8 @@
         tl.to(id + " .dl-z", { fill: "#FFB020", duration: 0.15 }, {{at:w195}} - S + i * 0.12);
       });
       tl.fromTo("#dl-big", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.32, ease: "expo.out" }, {{at:w200}} - S - 0.04);
-      tl.fromTo("#dl-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w203}} - S - 0.04);
-      tl.fromTo("#dl-src", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w203}} - S + 0.1);
+      tl.fromTo("#dl-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w200}} - S + 0.25);
+      tl.fromTo("#dl-src", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w200}} - S + 0.4);
       tl.to("#dl-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w205}} - S - 0.16);
       window.__timelines["deal"] = tl;
     })();

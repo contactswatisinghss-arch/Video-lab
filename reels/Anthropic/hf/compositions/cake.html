@@ -13,9 +13,9 @@
     #ck-svg { position: absolute; left: 0; top: 0; }
     .ck-lb { position: absolute; left: 600px; height: 72px; display: flex; align-items: center; gap: 14px;
       font: 700 40px 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; white-space: nowrap; }
-    .ck-lb i { font-style: normal; font: 700 24px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .1em; }
+    .ck-lb i { font-style: normal; font: 700 28px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .1em; }
     #ck-l5 { color: #FFB020; }
-    #ck-all { position: absolute; left: 600px; top: 316px; padding: 6px 16px; border-radius: 14px; background: #2EE59D; color: #0D0F14;
+    #ck-all { position: absolute; left: 600px; top: 178px; padding: 6px 16px; border-radius: 14px; background: #2EE59D; color: #0D0F14;
       font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .08em; }
   </style>
   <div id="root" data-composition-id="cake" data-width="1080" data-height="1920">
@@ -71,7 +71,7 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       const S = {{at:w142-0.04}};
-      tl.fromTo("#ck-panel", { y: -830 }, { y: 0, duration: 0.42, ease: "expo.out" }, 0);
+      tl.fromTo("#ck-panel", { y: -140, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "expo.out" }, 0);
       tl.fromTo("#ck-ttl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0.1);
       const layer = (n, t) => {
         tl.fromTo("#ck-f" + n, { opacity: 0, scaleX: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "back.out(1.8)" }, t - S - 0.06);
@@ -93,7 +93,7 @@
       // every answer depends on all five
       tl.fromTo("#ck-bub", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, {{at:w176}} - S - 0.06);
       tl.to("#ck-wire", { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, {{at:w181}} - S);
-      tl.fromTo("#ck-all", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.4)" }, {{at:w185}} - S - 0.04);
+      tl.fromTo("#ck-all", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.4)" }, {{at:w183}} - S - 0.04);
       tl.to("#ck-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w187}} - S - 0.16);
       window.__timelines["cake"] = tl;
     })();

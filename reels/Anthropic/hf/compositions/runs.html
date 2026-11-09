@@ -5,16 +5,18 @@
     #root { position: absolute; inset: 0; pointer-events: none; }
     #rn-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 720px; border-radius: 0 0 46px 46px; overflow: hidden;
       background: linear-gradient(180deg, #151821 0%, #0D0F14 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -3px 0 rgba(255,176,32,.5); }
-    .rn-card { position: absolute; top: 200px; width: 290px; height: 300px; border-radius: 30px; text-align: center;
+    .rn-card { position: absolute; top: 224px; width: 290px; height: 300px; border-radius: 30px; text-align: center;
       background: rgba(245,241,232,.06); box-shadow: inset 0 0 0 3px #2EE59D; }
     .rn-card svg { margin-top: 40px; }
     .rn-t { margin-top: 18px; font: 700 36px/1.1 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; }
-    #rn-plugbox { position: absolute; left: 720px; top: 200px; width: 300px; height: 300px; }
+    #rn-plugbox { position: absolute; left: 720px; top: 224px; width: 300px; height: 300px; }
+    #rn-kick { position: absolute; left: 60px; top: 178px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #FFB020; }
     #rn-stamp { position: absolute; left: 150px; top: 540px; padding: 12px 34px; border-radius: 20px; box-shadow: inset 0 0 0 6px #FF4D3D;
       font: 800 76px/1 'Sora', sans-serif; letter-spacing: -.03em; color: #FF4D3D; background: rgba(13,15,20,.85); }
   </style>
   <div id="root" data-composition-id="runs" data-width="1080" data-height="1920">
     <div id="rn-panel">
+      <div id="rn-kick">WHAT EVERY AI NEEDS</div>
       <div class="rn-card" id="rn-c1" style="left:60px">
         <svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="60" r="48" fill="none" stroke="#2EE59D" stroke-width="7"/><path d="M36 66 q24 -40 48 0 M44 80 h32" stroke="#2EE59D" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
         <div class="rn-t">Smartest<br>model</div>
@@ -27,7 +29,7 @@
         <path id="rn-cable" d="M20 150 H120" stroke="#FFB020" stroke-width="12" stroke-linecap="round"/>
         <g id="rn-plug"><rect x="110" y="120" width="70" height="60" rx="10" fill="#FFB020"/><rect x="180" y="132" width="34" height="10" rx="3" fill="#FFB020"/><rect x="180" y="158" width="34" height="10" rx="3" fill="#FFB020"/></g>
         <g id="rn-socket"><rect x="230" y="100" width="56" height="100" rx="12" fill="#1C2130" stroke="#3A4256" stroke-width="4"/><rect x="246" y="134" width="24" height="8" fill="#0D0F14"/><rect x="246" y="160" width="24" height="8" fill="#0D0F14"/></g>
-        <text x="150" y="250" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8A93A6" letter-spacing="2">ELECTRICITY</text>
+        <text x="150" y="250" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#8A93A6" letter-spacing="2">ELECTRICITY</text>
       </svg>
       <div id="rn-stamp">NOTHING RUNS</div>
     </div>
@@ -37,7 +39,8 @@
       const tl = gsap.timeline({ paused: true });
       const S = {{at:w205-0.04}};
       tl.fromTo("#rn-panel", { y: -720 }, { y: 0, duration: 0.42, ease: "expo.out" }, 0);
-      tl.fromTo("#rn-c1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w210}} - S - 0.06);
+      tl.fromTo("#rn-kick", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 0.14);
+      tl.fromTo("#rn-c1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w208}} - S - 0.06);
       tl.fromTo("#rn-c2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w214}} - S - 0.06);
       tl.fromTo("#rn-plugbox", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w214}} - S + 0.2);
       tl.set("#rn-plug", { x: 30 }, 0);
