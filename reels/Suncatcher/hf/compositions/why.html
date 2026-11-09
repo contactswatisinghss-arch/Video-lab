@@ -1,0 +1,33 @@
+<template>
+  <!-- WHY: kinetic question above her head, words land on her words; "space?" lands gold with a slam. -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #wy-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 520px;
+      background: linear-gradient(180deg, rgba(5,9,26,.72) 0%, rgba(5,9,26,.38) 65%, rgba(5,9,26,0) 100%); }
+    #wy-line { position: absolute; left: 0; width: 1080px; top: 196px; text-align: center; font: 700 96px/1 'Space Grotesk', sans-serif;
+      letter-spacing: -.04em; color: #F7F8FA; }
+    #wy-line span { display: inline-block; margin: 0 10px; }
+    #wy-sp { color: #FFC94A; }
+    #wy-sub { position: absolute; left: 0; width: 1080px; top: 320px; text-align: center; font: 700 26px 'JetBrains Mono', monospace;
+      letter-spacing: .2em; color: #7FD3FF; }
+  </style>
+  <div id="root" data-composition-id="why" data-width="1080" data-height="1920">
+    <div id="wy-scrim"></div>
+    <div id="wy-line"><span id="wy-a">Why</span><span id="wy-b">AI</span><span id="wy-c">in</span><span id="wy-sp">space?</span></div>
+    <div id="wy-sub">FOLLOW THE ELECTRICITY</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w53-0.04}};
+      tl.fromTo("#wy-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#wy-a", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.24, ease: "expo.out" }, {{at:w54}} - S - 0.04);
+      tl.fromTo("#wy-b", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.24, ease: "expo.out" }, {{at:w58}} - S - 0.04);
+      tl.fromTo("#wy-c", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.24, ease: "expo.out" }, {{at:w61}} - S - 0.04);
+      tl.fromTo("#wy-sp", { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.out" }, {{at:w63}} - S - 0.04);
+      tl.fromTo("#wy-sub", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{end:w63}} - S);
+      tl.to("#wy-scrim, #wy-line, #wy-sub", { opacity: 0, duration: 0.12, ease: "power2.in" }, {{at:w95}} - S - 0.14);
+      window.__timelines["why"] = tl;
+    })();
+  </script>
+</template>

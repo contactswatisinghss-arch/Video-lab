@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070B1A; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 38%; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: saturate(1.05) contrast(1.04); }
+    #grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,16,40,.18) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(10,16,40,.35) 100%); pointer-events: none; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Suncatcher: AI in orbit. Her real (daytime) room, light cool grade. Style refs 01-04: a visual change every 2-3 s,
+       top-half inserts with her pushed down below them (style-04), keyword stickers on the hook, one metaphor (laptop in a sleeping bag). -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="cam" style="z-index:0">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+    <div id="grade" style="z-index:1"></div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w26) - 0.04 }}" data-track-index="1" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="test" data-composition-id="test" data-composition-src="compositions/test.html"
+         data-start="{{at:w26-0.04}}" data-duration="{{= at(w53) - at(w26) }}" data-track-index="2" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="why" data-composition-id="why" data-composition-src="compositions/why.html"
+         data-start="{{at:w53-0.04}}" data-duration="{{= at(w95) - at(w53) }}" data-track-index="3" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="dc" data-composition-id="dc" data-composition-src="compositions/dc.html"
+         data-start="{{at:w95-0.04}}" data-duration="{{= at(w128) - at(w95) }}" data-track-index="4" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="homes" data-composition-id="homes" data-composition-src="compositions/homes.html"
+         data-start="{{at:w128-0.04}}" data-duration="{{= at(w149) - at(w128) }}" data-track-index="5" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="beyond" data-composition-id="beyond" data-composition-src="compositions/beyond.html"
+         data-start="{{at:w149-0.04}}" data-duration="{{= at(w171) - at(w149) }}" data-track-index="6" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="orbit" data-composition-id="orbit" data-composition-src="compositions/orbit.html"
+         data-start="{{at:w171-0.04}}" data-duration="{{= at(w186) - at(w171) }}" data-track-index="7" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="project" data-composition-id="project" data-composition-src="compositions/project.html"
+         data-start="{{at:w186-0.04}}" data-duration="{{= at(w206) - at(w186) }}" data-track-index="8" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="heat" data-composition-id="heat" data-composition-src="compositions/heat.html"
+         data-start="{{at:w206-0.04}}" data-duration="{{= at(w225) - at(w206) }}" data-track-index="9" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="next" data-composition-id="next" data-composition-src="compositions/next.html"
+         data-start="{{at:w225-0.04}}" data-duration="{{= at(w242) - at(w225) }}" data-track-index="10" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+         data-start="{{at:w242-0.04}}" data-duration="{{= dur - at(w242) + 0.04 }}" data-track-index="11" data-track-kind="graphics" style="z-index:4"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="12" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // Camera. NORMAL = her full frame with a slight punch. DOWN = pushed below a top-half insert (style-04),
+    // tweened so the move reads as the insert "shoving" her down. Punch-ins land on the hook words and turns.
+    const tl = gsap.timeline({ paused: true });
+    const NORMAL = { y: 0, scale: 1.08 };
+    const DOWN = { y: 330, scale: 1.0 };
+    const down = (t) => tl.to("#cam", { ...DOWN, duration: 0.38, ease: "expo.out" }, t);
+    const up = (t) => tl.to("#cam", { ...NORMAL, duration: 0.3, ease: "power3.out" }, t);
+    tl.set("#cam", NORMAL, 0)
+      .set("#cam", { scale: 1.16 }, {{at:w7}})
+      .set("#cam", { scale: 1.08 }, {{at:w10}})
+      .set("#cam", { scale: 1.18 }, {{at:w22}});
+    down({{at:w26-0.04}});
+    up({{at:w53-0.04}});
+    tl.set("#cam", { scale: 1.18 }, {{at:w56}});
+    down({{at:w95-0.04}});
+    tl.set("#cam", { y: 330, scale: 1.0 }, {{at:w128-0.04}});
+    up({{at:w149-0.04}});
+    tl.set("#cam", { scale: 1.16 }, {{at:w163}});
+    down({{at:w171-0.04}});
+    up({{at:w186-0.04}});
+    tl.set("#cam", { scale: 1.16 }, {{at:w189}});
+    down({{at:w206-0.04}});
+    up({{at:w225-0.04}});
+    tl.set("#cam", { scale: 1.15 }, {{at:w251}});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>
