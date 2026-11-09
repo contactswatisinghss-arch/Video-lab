@@ -1,11 +1,11 @@
 {
   "state": "running",
-  "current": "preview Anthropic",
+  "current": "preview MixtureOfExperts",
   "pending": [
     "preview Anthropic",
     "preview MixtureOfExperts",
     "final Suncatcher"
   ],
-  "time": "2026-11-09 09:48:06 UTC",
+  "time": "2026-11-09 10:24:07 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845"
 }
