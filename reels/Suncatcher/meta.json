@@ -11,11 +11,12 @@
   "language": "en",
   "audio_mean_db": -32.3,
   "audio_peak_db": -8.7,
-  "words": 276,
+  "words": 281,
   "warnings": [
-    "HDR (iPhone) source: converted to standard range.",
+    "HDR (iPhone) source: kept the original camera look (no tone mapping).",
     "Audio is quiet (mean -32.3 dB): loudness is normalised, but background noise rises too.",
     "Raw length 112s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
-    "5 low-confidence words (check names/jargon): gamma(w41), But(w53), for(w145), Thanks(w272), you(w275)"
-  ]
+    "20 low-confidence words (check names/jargon): gamma(w41), for(w145), around(w217), Earth.(w218), So(w219), I'll(w266), be(w267), testing(w268), whether(w269), those(w270), chips(w271), can(w272), handle(w273), the(w274), heat(w275), and(w276), radiation,(w277), and(w278), keep(w279), answering.(w280)"
+  ],
+  "hdr_mode": "original"
 }
