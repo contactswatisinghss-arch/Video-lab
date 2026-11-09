@@ -2,8 +2,8 @@
   "slug": "Suncatcher",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-09 07:29:40 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42577288047",
+  "time": "2026-11-09 07:54:01 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42578380536",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/Suncatcher",
   "prepare": {
     "stage": "prepare",
@@ -22,11 +22,6 @@
     "token": ""
   },
   "history": [
-    {
-      "stage": "prepare",
-      "ok": true,
-      "time": "2026-11-09 00:16:27 UTC"
-    },
     {
       "stage": "preview",
       "ok": false,
@@ -81,15 +76,48 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-09 07:29:40 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-09 07:54:01 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-09 07:29:40 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42577288047",
-    "hash": "8b682c4937b027aa",
-    "note": "covered by final render"
+    "time": "2026-11-09 07:54:01 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42578380536",
+    "hash": "d60716186bb54e56",
+    "check": {
+      "parsed": true,
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "top_errors": [],
+      "top_warnings": [
+        {
+          "severity": "warning",
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 2.93:1; WCAG AA requires 3:1.",
+          "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(19) > div > span:nth-of-type(2) > span",
+          "time": 22.054,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 2.34:1; WCAG AA requires 3:1.",
+          "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(49) > div > span:nth-of-type(2) > span",
+          "time": 57.34,
+          "section": "findings"
+        }
+      ]
+    },
+    "hf_version": "0.9.26",
+    "snapshot_ok": true,
+    "render_seconds": 356,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/Suncatcher/preview.mp4"
   },
   "final": {
     "stage": "final",

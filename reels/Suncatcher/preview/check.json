@@ -276,21 +276,21 @@
   "contrast": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 3,
+    "warningCount": 2,
     "infoCount": 0,
     "findings": [
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.86:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.93:1; WCAG AA requires 3:1.",
         "text": "in",
         "fg": "rgb(255,255,255)",
-        "bg": "rgb(192,141,124)",
-        "ratio": 2.86,
+        "bg": "rgb(187,140,124)",
+        "ratio": 2.93,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(76,76,76)",
+        "suggestedColor": "rgb(74,74,74)",
         "large": true,
-        "selector": "div > div:nth-of-type(14) > div > div > div:nth-of-type(19) > div > span:nth-of-type(2) > span",
+        "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(19) > div > span:nth-of-type(2) > span",
         "dataAttributes": {},
         "sourceFile": "compositions/captions.html",
         "bbox": {
@@ -307,40 +307,15 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.99:1; WCAG AA requires 3:1.",
-        "text": "→",
-        "fg": "rgb(233,238,247)",
-        "bg": "rgb(141,138,117)",
-        "ratio": 2.99,
-        "requiredRatio": 3,
-        "suggestedColor": "rgb(62,63,66)",
-        "large": true,
-        "selector": "#pj-a2",
-        "dataAttributes": {},
-        "sourceFile": "compositions/project.html",
-        "bbox": {
-          "x": 728,
-          "y": 360,
-          "width": 27.203125,
-          "height": 43
-        },
-        "time": 57.34,
-        "times": [
-          57.34
-        ]
-      },
-      {
-        "code": "contrast_aa_failure",
-        "severity": "warning",
-        "message": "Contrast is 2.26:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.34:1; WCAG AA requires 3:1.",
         "text": "on",
         "fg": "rgb(255,255,255)",
-        "bg": "rgb(203,165,137)",
-        "ratio": 2.26,
+        "bg": "rgb(197,163,136)",
+        "ratio": 2.34,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(91,91,91)",
+        "suggestedColor": "rgb(88,88,88)",
         "large": true,
-        "selector": "div > div:nth-of-type(14) > div > div > div:nth-of-type(49) > div > span:nth-of-type(2) > span",
+        "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(49) > div > span:nth-of-type(2) > span",
         "dataAttributes": {},
         "sourceFile": "compositions/captions.html",
         "bbox": {
@@ -364,7 +339,7 @@
       74.983
     ],
     "checked": 29,
-    "passed": 26
+    "passed": 27
   },
   "craft": {
     "ok": true,
@@ -394,9 +369,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "45afaebd-014a-45a7-8035-98a92bff3112",
+    "id": "8f5a15d8-4b6b-4007-8e50-9e4b88e9acb7",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/Suncatcher/.hyperframes/artifacts/checks/45afaebd-014a-45a7-8035-98a92bff3112.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Suncatcher/.hyperframes/artifacts/checks/8f5a15d8-4b6b-4007-8e50-9e4b88e9acb7.json",
     "attribution": "unversioned"
   },
   "_meta": {
