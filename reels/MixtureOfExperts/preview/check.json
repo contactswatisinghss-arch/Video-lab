@@ -1,0 +1,1369 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_repeated_fromto_without_baseline",
+        "severity": "warning",
+        "message": "2 tl.fromTo() calls target \"proxy (unresolved DOM association)\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
+        "selector": "proxy (unresolved DOM association)",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/MixtureOfExperts/compositions/example.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 2.646000000000001s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
+      }
+    ],
+    "filesScanned": 13
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 8,
+    "findings": [
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e0 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 163.59,
+          "top": 545,
+          "right": 192.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e0",
+        "text": "E1",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 129,
+          "top": 347,
+          "right": 227,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 163.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e1 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 269.59,
+          "top": 545,
+          "right": 298.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e1",
+        "text": "E2",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 235,
+          "top": 347,
+          "right": 333,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 269.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e2 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 375.59,
+          "top": 545,
+          "right": 404.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e2",
+        "text": "E3",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 341,
+          "top": 347,
+          "right": 439,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 375.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e3 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 481.59,
+          "top": 545,
+          "right": 510.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e3",
+        "text": "E4",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 447,
+          "top": 347,
+          "right": 545,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 481.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e4 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 587.59,
+          "top": 545,
+          "right": 616.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e4",
+        "text": "E5",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 553,
+          "top": 347,
+          "right": 651,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 587.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e5 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 693.59,
+          "top": 545,
+          "right": 722.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e5",
+        "text": "E6",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 659,
+          "top": 347,
+          "right": 757,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 693.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e6 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 799.59,
+          "top": 545,
+          "right": 828.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e6",
+        "text": "E7",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 765,
+          "top": 347,
+          "right": 863,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 799.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 30.333,
+        "selector": "#is-e7 > em:nth-of-type(1)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 905.59,
+          "top": 545,
+          "right": 934.41,
+          "bottom": 576,
+          "width": 28.82,
+          "height": 31
+        },
+        "containerSelector": "#is-e7",
+        "text": "E8",
+        "fixHint": "Text is 29px x 31px inside 98px x 186px and overflows by up to 43px; increase the container height to at least ~229px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 871,
+          "top": 347,
+          "right": 969,
+          "bottom": 533,
+          "width": 98,
+          "height": 186
+        },
+        "overflow": {
+          "bottom": 43
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 905.59,
+          "y": 545,
+          "width": 28.82,
+          "height": 31
+        },
+        "firstSeen": 30.333,
+        "lastSeen": 30.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.333
+        ]
+      }
+    ],
+    "duration": 78,
+    "samples": [
+      4.333,
+      13,
+      21.667,
+      30.333,
+      39,
+      47.667,
+      56.333,
+      65,
+      73.667
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 8,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      4.333,
+      21.667,
+      39,
+      56.333,
+      73.667
+    ],
+    "checked": 34,
+    "passed": 34
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 15,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"SERIES\" renders at 24 px for 1.82 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "SERIES",
+        "selector": "#in-badge > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": 276.42,
+          "y": 234.14,
+          "width": 119.06,
+          "height": 34.92
+        },
+        "time": 6.25,
+        "times": [
+          6.25
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 1.823,
+        "elements": [
+          {
+            "selector": "#in-badge > small:nth-of-type(1)",
+            "text": "SERIES",
+            "fontPx": 24,
+            "time": 6.25,
+            "seconds": 1.823
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"TECH LEAD · AWS\" (3 words) is on screen 0.97 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "TECH LEAD · AWS",
+        "selector": "#in-role",
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": 90,
+          "y": 1092,
+          "width": 285.61,
+          "height": 37
+        },
+        "time": 7.073,
+        "words": 3,
+        "seconds": 0.968,
+        "floorSeconds": 1.05,
+        "measured": [
+          {
+            "time": 6.771,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.902,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.032,
+            "opacity": 0.12,
+            "heightPx": 37
+          },
+          {
+            "time": 7.162,
+            "opacity": 0.93,
+            "heightPx": 37
+          },
+          {
+            "time": 7.292,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 7.422,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 7.553,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 7.683,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 7.813,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 7.943,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.073,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 8.204,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 8.334,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"COMPUTE\" renders at 26 px for 7.68 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "COMPUTE",
+        "selector": "#pb-mlabel",
+        "dataAttributes": {},
+        "sourceFile": "compositions/problem.html",
+        "bbox": {
+          "x": 780.66,
+          "y": 329.56,
+          "width": 134.68,
+          "height": 34.99
+        },
+        "time": 8.204,
+        "times": [
+          8.204
+        ],
+        "fontPx": 25.99,
+        "floorPx": 28,
+        "seconds": 7.682,
+        "elements": [
+          {
+            "selector": "#pb-mlabel",
+            "text": "COMPUTE",
+            "fontPx": 25.99,
+            "time": 8.204,
+            "seconds": 7.682
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"CHEFS\" (1 word) is on screen 0.14 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "CHEFS",
+        "selector": "#kt-count > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/kitchen.html",
+        "bbox": {
+          "x": 105.19,
+          "y": 297.87,
+          "width": 89.44,
+          "height": 30.220000000000027
+        },
+        "time": 19.5,
+        "words": 1,
+        "seconds": 0.138,
+        "floorSeconds": 0.4,
+        "measured": [
+          {
+            "time": 19.142,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.272,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.402,
+            "opacity": 0.2,
+            "heightPx": 20
+          },
+          {
+            "time": 19.533,
+            "opacity": 1,
+            "heightPx": 30
+          },
+          {
+            "time": 19.663,
+            "opacity": 1,
+            "heightPx": 30
+          },
+          {
+            "time": 19.793,
+            "opacity": 1,
+            "heightPx": 29
+          },
+          {
+            "time": 19.923,
+            "opacity": 1,
+            "heightPx": 29
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"COOK\" at 19 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "COOK",
+        "selector": "#kt-pick > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/kitchen.html",
+        "bbox": {
+          "x": 914.68,
+          "y": 294.42,
+          "width": 60,
+          "height": 25.35
+        },
+        "time": 23.699,
+        "times": [
+          19.533,
+          22.658,
+          23.699
+        ],
+        "fontPx": 19.23,
+        "floorPx": 28,
+        "seconds": 0.521,
+        "elements": [
+          {
+            "selector": "#kt-pick > small:nth-of-type(1)",
+            "text": "COOK",
+            "fontPx": 19.23,
+            "time": 23.699,
+            "seconds": 0.521
+          },
+          {
+            "selector": "#kt-count > small:nth-of-type(1)",
+            "text": "CHEFS",
+            "fontPx": 22,
+            "time": 19.533,
+            "seconds": 4.687
+          },
+          {
+            "selector": "#kt-headlbl",
+            "text": "HEAD CHEF",
+            "fontPx": 24,
+            "time": 22.658,
+            "seconds": 1.562
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"COOK\" (1 word) is on screen 0.13 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "COOK",
+        "selector": "#kt-pick > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/kitchen.html",
+        "bbox": {
+          "x": 908.1,
+          "y": 298.35,
+          "width": 73.15999999999997,
+          "height": 30.910000000000025
+        },
+        "time": 23.74,
+        "words": 1,
+        "seconds": 0.131,
+        "floorSeconds": 0.4,
+        "measured": [
+          {
+            "time": 23.439,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23.569,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23.699,
+            "opacity": 0.69,
+            "heightPx": 25
+          },
+          {
+            "time": 23.83,
+            "opacity": 1,
+            "heightPx": 31
+          },
+          {
+            "time": 23.96,
+            "opacity": 1,
+            "heightPx": 29
+          },
+          {
+            "time": 24.09,
+            "opacity": 1,
+            "heightPx": 29
+          },
+          {
+            "time": 24.22,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 10 text elements stay under it for 0.5 s or more, the smallest \"NEURAL NETWORK SECTION\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "NEURAL NETWORK SECTION",
+        "selector": "#is-layerlbl",
+        "dataAttributes": {},
+        "sourceFile": "compositions/inside.html",
+        "bbox": {
+          "x": 583.16,
+          "y": 271,
+          "width": 367.84,
+          "height": 29
+        },
+        "time": 25.653,
+        "times": [
+          24.351,
+          25.653,
+          28.127,
+          28.127,
+          28.257,
+          28.257,
+          28.387,
+          28.387,
+          28.518,
+          28.518
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 7.552,
+        "elements": [
+          {
+            "selector": "#is-layerlbl",
+            "text": "NEURAL NETWORK SECTION",
+            "fontPx": 22,
+            "time": 25.653,
+            "seconds": 7.552
+          },
+          {
+            "selector": "#is-e0 > em:nth-of-type(1)",
+            "text": "E1",
+            "fontPx": 24,
+            "time": 28.127,
+            "seconds": 5.078
+          },
+          {
+            "selector": "#is-e1 > em:nth-of-type(1)",
+            "text": "E2",
+            "fontPx": 24,
+            "time": 28.127,
+            "seconds": 5.078
+          },
+          {
+            "selector": "#is-e2 > em:nth-of-type(1)",
+            "text": "E3",
+            "fontPx": 24,
+            "time": 28.257,
+            "seconds": 4.948
+          },
+          {
+            "selector": "#is-e3 > em:nth-of-type(1)",
+            "text": "E4",
+            "fontPx": 24,
+            "time": 28.257,
+            "seconds": 4.948
+          },
+          {
+            "selector": "#is-e4 > em:nth-of-type(1)",
+            "text": "E5",
+            "fontPx": 24,
+            "time": 28.387,
+            "seconds": 4.818
+          },
+          {
+            "selector": "#is-e5 > em:nth-of-type(1)",
+            "text": "E6",
+            "fontPx": 24,
+            "time": 28.387,
+            "seconds": 4.818
+          },
+          {
+            "selector": "#is-e6 > em:nth-of-type(1)",
+            "text": "E7",
+            "fontPx": 24,
+            "time": 28.518,
+            "seconds": 4.687
+          },
+          {
+            "selector": "#is-e7 > em:nth-of-type(1)",
+            "text": "E8",
+            "fontPx": 24,
+            "time": 28.518,
+            "seconds": 4.687
+          },
+          {
+            "selector": "#is-label",
+            "text": "INSIDE ONE AI MODEL",
+            "fontPx": 25.78,
+            "time": 24.351,
+            "seconds": 8.854
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"\"Explain mixture of experts\"\" (4 words) is on screen 0.73 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "\"Explain mixture of experts\"",
+        "selector": "#tk-sentence",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tokens.html",
+        "bbox": {
+          "x": 143.63,
+          "y": 284.36,
+          "width": 792.73,
+          "height": 77
+        },
+        "time": 33.474,
+        "words": 4,
+        "seconds": 0.732,
+        "floorSeconds": 1.275,
+        "measured": [
+          {
+            "time": 33.205,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.336,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.466,
+            "opacity": 0.12,
+            "heightPx": 77
+          },
+          {
+            "time": 33.596,
+            "opacity": 0.94,
+            "heightPx": 77
+          },
+          {
+            "time": 33.726,
+            "opacity": 1,
+            "heightPx": 77
+          },
+          {
+            "time": 33.856,
+            "opacity": 1,
+            "heightPx": 77
+          },
+          {
+            "time": 33.987,
+            "opacity": 1,
+            "heightPx": 77
+          },
+          {
+            "time": 34.117,
+            "opacity": 0.89,
+            "heightPx": 77
+          },
+          {
+            "time": 34.247,
+            "opacity": 0.39,
+            "heightPx": 77
+          },
+          {
+            "time": 34.377,
+            "opacity": 0.35,
+            "heightPx": 77
+          },
+          {
+            "time": 34.508,
+            "opacity": 0.35,
+            "heightPx": 77
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"a word, or part of a word\" (7 words) is on screen 1.30 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "a word, or part of a word",
+        "selector": "#tk-lbl2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tokens.html",
+        "bbox": {
+          "x": 285,
+          "y": 630,
+          "width": 510,
+          "height": 40
+        },
+        "time": 36.835,
+        "words": 7,
+        "seconds": 1.303,
+        "floorSeconds": 1.95,
+        "measured": [
+          {
+            "time": 36.461,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 36.591,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 36.721,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 36.851,
+            "opacity": 0.51,
+            "heightPx": 40
+          },
+          {
+            "time": 36.982,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 37.112,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 37.242,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 37.633,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 37.763,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 37.893,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 38.023,
+            "opacity": 1,
+            "heightPx": 40
+          },
+          {
+            "time": 38.154,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 38.284,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 38.414,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"= HEAD CHEF\" at 20 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "= HEAD CHEF",
+        "selector": "#rt-nodelbl > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/router.html",
+        "bbox": {
+          "x": 653,
+          "y": 311,
+          "width": 171.61,
+          "height": 26
+        },
+        "time": 41.149,
+        "times": [
+          41.149,
+          43.753,
+          46.357
+        ],
+        "fontPx": 20,
+        "floorPx": 28,
+        "seconds": 13.802,
+        "elements": [
+          {
+            "selector": "#rt-nodelbl > small:nth-of-type(1)",
+            "text": "= HEAD CHEF",
+            "fontPx": 20,
+            "time": 41.149,
+            "seconds": 13.802
+          },
+          {
+            "selector": "#rt-toklbl",
+            "text": "TOKEN",
+            "fontPx": 20,
+            "time": 43.753,
+            "seconds": 11.198
+          },
+          {
+            "selector": "#rt-pair",
+            "text": "2 OF 8 ACTIVE",
+            "fontPx": 26,
+            "time": 46.357,
+            "seconds": 8.594
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"REAL EXAMPLE\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "REAL EXAMPLE",
+        "selector": "#ex-kicker",
+        "dataAttributes": {},
+        "sourceFile": "compositions/example.html",
+        "bbox": {
+          "x": 119.02,
+          "y": 233,
+          "width": 255.85,
+          "height": 35
+        },
+        "time": 55.082,
+        "times": [
+          55.082,
+          57.035,
+          57.165
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 7.943,
+        "elements": [
+          {
+            "selector": "#ex-kicker",
+            "text": "REAL EXAMPLE",
+            "fontPx": 26,
+            "time": 55.082,
+            "seconds": 7.943
+          },
+          {
+            "selector": "#ex-r1 > div:nth-of-type(1)",
+            "text": "TOTAL PARAMETERS",
+            "fontPx": 26,
+            "time": 57.035,
+            "seconds": 5.99
+          },
+          {
+            "selector": "#ex-r2 > div:nth-of-type(1)",
+            "text": "USED PER TOKEN",
+            "fontPx": 26,
+            "time": 57.165,
+            "seconds": 5.86
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"THE WHOLE TEAM LEARNS\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "THE WHOLE TEAM LEARNS",
+        "selector": "#to-r1 > div:nth-of-type(2) > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tradeoff.html",
+        "bbox": {
+          "x": 208.29,
+          "y": 395,
+          "width": 342.73,
+          "height": 31
+        },
+        "time": 63.416,
+        "times": [
+          63.416,
+          65.499,
+          69.796
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 11.459,
+        "elements": [
+          {
+            "selector": "#to-r1 > div:nth-of-type(2) > small:nth-of-type(1)",
+            "text": "THE WHOLE TEAM LEARNS",
+            "fontPx": 24,
+            "time": 63.416,
+            "seconds": 11.459
+          },
+          {
+            "selector": "#to-r2 > div:nth-of-type(2) > small:nth-of-type(1)",
+            "text": "ONLY 2 EXPERTS PER TOKEN",
+            "fontPx": 24,
+            "time": 65.499,
+            "seconds": 9.376
+          },
+          {
+            "selector": "#to-r3 > div:nth-of-type(2) > small:nth-of-type(1)",
+            "text": "THE CATCH",
+            "fontPx": 24,
+            "time": 69.796,
+            "seconds": 5.079
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Follow for the next episode\" (5 words) is on screen 1.14 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Follow for the next episode",
+        "selector": "#ou-cta",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 256.66,
+          "y": 535.57,
+          "width": 566.6799999999998,
+          "height": 53.84000000000003
+        },
+        "time": 76.869,
+        "words": 5,
+        "seconds": 1.135,
+        "floorSeconds": 2,
+        "measured": [
+          {
+            "time": 76.568,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 76.698,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 76.828,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 76.958,
+            "opacity": 0.95,
+            "heightPx": 54
+          },
+          {
+            "time": 77.088,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 77.219,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 77.349,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 77.479,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 77.609,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 77.74,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 77.87,
+            "opacity": 1,
+            "heightPx": 55
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"AI EXPLAINED LIKE YOU'RE 5\" (5 words) is on screen 0.90 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "AI EXPLAINED LIKE YOU'RE 5",
+        "selector": "#ou-series",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 269.59,
+          "y": 610,
+          "width": 540.8200000000002,
+          "height": 35
+        },
+        "time": 77.104,
+        "words": 5,
+        "seconds": 0.9,
+        "floorSeconds": 2,
+        "measured": [
+          {
+            "time": 76.828,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 76.958,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 77.088,
+            "opacity": 0.33,
+            "heightPx": 35
+          },
+          {
+            "time": 77.219,
+            "opacity": 0.92,
+            "heightPx": 35
+          },
+          {
+            "time": 77.349,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 77.479,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 77.609,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 77.74,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 77.87,
+            "opacity": 1,
+            "heightPx": 35
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"AI EXPLAINED LIKE YOU'RE 5\" renders at 26 px for 0.78 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "AI EXPLAINED LIKE YOU'RE 5",
+        "selector": "#ou-series",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 269.59,
+          "y": 610,
+          "width": 540.82,
+          "height": 35
+        },
+        "time": 77.219,
+        "times": [
+          77.219
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 0.781,
+        "elements": [
+          {
+            "selector": "#ou-series",
+            "text": "AI EXPLAINED LIKE YOU'RE 5",
+            "fontPx": 26,
+            "time": 77.219,
+            "seconds": 0.781
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.13000000000000256,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "989c32cf-af0e-483d-8a90-8a855533e619",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/MixtureOfExperts/.hyperframes/artifacts/checks/989c32cf-af0e-483d-8a90-8a855533e619.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.26",
+    "updateAvailable": false
+  }
+}
