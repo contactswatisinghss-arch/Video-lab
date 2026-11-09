@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0D0F14; }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 38%; }
+    /* Original camera look (Swati, 9 Nov): no colour filter; edit.json "hdr": "original". */
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Anthropic's $3.4B bet on power. "Power grid" look: near-black panels, electric amber = power/energy,
+       red = crash/risk, green = what works. Her real daytime room, original camera look, no decor (a neon sign
+       would read fake in daylight). Style refs 01-04: visual change every 2-3 s, top-half inserts that push her
+       down, keyword stickers on the hook, one metaphor (the 5-layer cake). No mention of NVIDIA's founder (Swati). -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="cam" style="z-index:0">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w60) - 0.04 }}" data-track-index="1" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="spend" data-composition-id="spend" data-composition-src="compositions/spend.html"
+         data-start="{{at:w60-0.04}}" data-duration="{{= at(w77) - at(w60) }}" data-track-index="2" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="why" data-composition-id="why" data-composition-src="compositions/why.html"
+         data-start="{{at:w77-0.04}}" data-duration="{{= at(w89) - at(w77) }}" data-track-index="3" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="race" data-composition-id="race" data-composition-src="compositions/race.html"
+         data-start="{{at:w89-0.04}}" data-duration="{{= at(w142) - at(w89) }}" data-track-index="4" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="cake" data-composition-id="cake" data-composition-src="compositions/cake.html"
+         data-start="{{at:w142-0.04}}" data-duration="{{= at(w187) - at(w142) }}" data-track-index="5" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="deal" data-composition-id="deal" data-composition-src="compositions/deal.html"
+         data-start="{{at:w187-0.04}}" data-duration="{{= at(w205) - at(w187) }}" data-track-index="6" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="runs" data-composition-id="runs" data-composition-src="compositions/runs.html"
+         data-start="{{at:w205-0.04}}" data-duration="{{= at(w225) - at(w205) }}" data-track-index="7" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="phases" data-composition-id="phases" data-composition-src="compositions/phases.html"
+         data-start="{{at:w225-0.04}}" data-duration="{{= at(w256) - at(w225) }}" data-track-index="8" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="battle" data-composition-id="battle" data-composition-src="compositions/battle.html"
+         data-start="{{at:w256-0.04}}" data-duration="{{= at(w268) - at(w256) }}" data-track-index="9" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+         data-start="{{at:w268-0.04}}" data-duration="{{= dur - at(w268) + 0.04 }}" data-track-index="10" data-track-kind="graphics" style="z-index:4"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="11" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // Camera. NORMAL = full frame, slight punch. DOWN = pushed below a top-half insert (style-04). DEEP = below
+    // the taller cake panel. Hard punch-ins land on the hook number, "bloodbath", the question and "battle".
+    const tl = gsap.timeline({ paused: true });
+    const NORMAL = { y: 0, scale: 1.08 };
+    const DOWN = { y: 180, scale: 1.0 };
+    const DEEP = { y: 230, scale: 1.0 };
+    const down = (t, to) => tl.to("#cam", { ...(to || DOWN), duration: 0.38, ease: "expo.out" }, t);
+    const up = (t) => tl.to("#cam", { ...NORMAL, duration: 0.3, ease: "power3.out" }, t);
+    tl.set("#cam", NORMAL, 0)
+      .set("#cam", { scale: 1.16 }, {{at:w5}})
+      .set("#cam", { scale: 1.08 }, {{at:w9}})
+      .set("#cam", { scale: 1.2 }, {{at:w14}})
+      .set("#cam", { scale: 1.1 }, {{at:w19}});
+    down({{at:w60-0.04}});
+    up({{at:w77-0.04}});
+    tl.set("#cam", { scale: 1.18 }, {{at:w84}});
+    down({{at:w89-0.04}});
+    down({{at:w142-0.04}}, DEEP);
+    down({{at:w187-0.04}});
+    tl.set("#cam", { y: 180, scale: 1.0 }, {{at:w225-0.04}});
+    up({{at:w256-0.04}});
+    tl.set("#cam", { scale: 1.2 }, {{at:w263}});
+    tl.set("#cam", { scale: 1.08 }, {{at:w268}});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>

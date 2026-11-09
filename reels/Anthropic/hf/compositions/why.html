@@ -1,0 +1,28 @@
+<template>
+  <!-- WHY (kinetic question, her full frame + punch-in on "need"): "Why would Claude's maker / need generators?" -->
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #wy-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 560px;
+      background: linear-gradient(180deg, rgba(10,11,15,.78) 0%, rgba(10,11,15,.42) 64%, rgba(10,11,15,0) 100%); }
+    #wy-l1 { position: absolute; left: 60px; top: 196px; font: 700 54px 'Sora', sans-serif; letter-spacing: -.03em; color: #F5F1E8; }
+    #wy-l2 { position: absolute; left: 56px; top: 270px; font: 800 94px/1 'Sora', sans-serif; letter-spacing: -.05em; color: #FFB020; }
+    #wy-q { color: #F5F1E8; }
+  </style>
+  <div id="root" data-composition-id="why" data-width="1080" data-height="1920">
+    <div id="wy-scrim"></div>
+    <div id="wy-l1">Why would Claude's maker</div>
+    <div id="wy-l2">need generators<span id="wy-q">?</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = {{at:w77-0.04}};
+      tl.fromTo("#wy-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      tl.fromTo("#wy-l1", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w78}} - S - 0.06);
+      tl.fromTo("#wy-l2", { opacity: 0, y: 40, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "expo.out" }, {{at:w84}} - S - 0.04);
+      tl.fromTo("#wy-q", { opacity: 0 }, { opacity: 1, duration: 0.1 }, {{at:w85}} - S);
+      tl.to("#wy-l1, #wy-l2, #wy-scrim", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w89}} - S - 0.16);
+      window.__timelines["why"] = tl;
+    })();
+  </script>
+</template>

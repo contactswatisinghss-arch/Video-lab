@@ -1,0 +1,25 @@
+{
+ "version": 2,
+ "slug": "Anthropic",
+ "title": "Anthropic's $3.4B bet on power: AI is a 5-layer cake",
+ "hdr": "original",
+ "speed": 1.1,
+ "cuts": {
+  "max_pause": 0.3,
+  "pad": 0.08,
+  "keep_head": 0.2,
+  "keep_tail": 0.6,
+  "remove": [[8.15, 20.78], [30.0, 32.05], [44.5, 54.25]]
+ },
+ "fixes": [
+  ["$3 .4", "$3.4"],
+  ["1 .7", "1.7"]
+ ],
+ "fonts": ["Sora"],
+ "cover_at": 0.4,
+ "audio": {"loudnorm": true},
+ "post": {
+  "caption": "Anthropic just made a $3.4B bet, and it's not on a new AI model.\nIt's on power: about 1.7 GW of generators, reportedly.\nAI is a 5-layer cake, and the bottom layer is energy. Without it, none of it runs.\nFollow for AI and tech, made simple.",
+  "hashtags": ["#ai", "#anthropic", "#claude", "#technews", "#energy"]
+ }
+}
