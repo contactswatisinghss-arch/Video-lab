@@ -1,11 +1,13 @@
 {
-  "state": "idle",
-  "last": [
-    "final Suncatcher"
+  "state": "running",
+  "current": "prepare Anthropic",
+  "pending": [
+    "prepare Anthropic",
+    "prepare MixtureOfExperts",
+    "final Suncatcher",
+    "references moe-yt",
+    "references moe-simple-yt"
   ],
-  "done": [
-    "final Suncatcher"
-  ],
-  "time": "2026-11-09 02:00:02 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42546647570"
+  "time": "2026-11-09 02:01:05 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42548305667"
 }
