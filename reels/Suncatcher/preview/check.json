@@ -14,8 +14,33 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 0,
-    "findings": []
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "media_proxy_fallback",
+        "severity": "info",
+        "message": "[hyperframes] runtime_media_proxy_fallback: \"http://127.0.0.1:45309/assets/base.mp4\" uses a codec (h264) this browser can't decode; auto-swapped to an authoring proxy for this preview only. Render output is unaffected.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "79.394",
+          "data-width": "1080",
+          "data-height": "1920",
+          "data-fps": "30"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:45309/",
+        "line": 356
+      }
+    ]
   },
   "layout": {
     "ok": true,
@@ -282,13 +307,13 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.93:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.45:1; WCAG AA requires 3:1.",
         "text": "in",
         "fg": "rgb(255,255,255)",
-        "bg": "rgb(187,140,124)",
-        "ratio": 2.93,
+        "bg": "rgb(180,162,156)",
+        "ratio": 2.45,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(74,74,74)",
+        "suggestedColor": "rgb(86,86,86)",
         "large": true,
         "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(19) > div > span:nth-of-type(2) > span",
         "dataAttributes": {},
@@ -307,13 +332,13 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.34:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.04:1; WCAG AA requires 3:1.",
         "text": "on",
         "fg": "rgb(255,255,255)",
-        "bg": "rgb(197,163,136)",
-        "ratio": 2.34,
+        "bg": "rgb(189,181,164)",
+        "ratio": 2.04,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(88,88,88)",
+        "suggestedColor": "rgb(97,97,97)",
         "large": true,
         "selector": "div > div:nth-of-type(13) > div > div > div:nth-of-type(49) > div > span:nth-of-type(2) > span",
         "dataAttributes": {},
@@ -349,7 +374,7 @@
     "findings": [],
     "enabled": true,
     "step": 0.13299999999999557,
-    "samples": 599
+    "samples": 546
   },
   "audio": {
     "ok": true,
@@ -359,7 +384,13 @@
     "findings": []
   },
   "hdr": {
-    "autoPromotion": null,
+    "autoPromotion": {
+      "triggeringAsset": "assets/base.mp4",
+      "output": {
+        "colorSpace": "BT.2020",
+        "codec": "HEVC Main10"
+      }
+    },
     "inspection": "available"
   },
   "snapshots": {
@@ -369,9 +400,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "8f5a15d8-4b6b-4007-8e50-9e4b88e9acb7",
+    "id": "7abf0b69-3b5c-4d8a-aaa4-b9ba490cad37",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/Suncatcher/.hyperframes/artifacts/checks/8f5a15d8-4b6b-4007-8e50-9e4b88e9acb7.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Suncatcher/.hyperframes/artifacts/checks/7abf0b69-3b5c-4d8a-aaa4-b9ba490cad37.json",
     "attribution": "unversioned"
   },
   "_meta": {
