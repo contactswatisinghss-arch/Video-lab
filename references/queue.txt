@@ -15,3 +15,11 @@ style-04 https://www.instagram.com/reel/DdCvFdHsnj1/
 search suncatcher-yt google data center in space satellite ai
 search moe-yt mixture of experts explained ai
 search moe-simple-yt how chatgpt uses experts mixture of experts
+# Anthropic (power) — topic virals
+search power-ai-yt ai data centers electricity power plants explained
+search power-grid-yt ai is running out of electricity gigawatts
+# 1M+ tech explainer pages — editing study (see references/pages.md)
+search page-cleo-yt cleo abram huge if true shorts
+search page-dhruv-yt dhruv rathee ai shorts explained
+search page-johnny-yt johnny harris shorts explained
+search page-mrwho-yt mrwhosetheboss shorts
