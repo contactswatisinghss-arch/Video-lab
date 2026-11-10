@@ -1,100 +1,84 @@
 <template>
-  <!-- CAKE (taller top insert; the Reel's one metaphor). Title "AI is a 5-layer cake" lands the moment the race
-       stage-3 "?" cuts away (replaces the spoken attribution Swati asked to drop). A drawn cake: each layer fills and
-       labels itself on her word, top to bottom: apps, models, infrastructure, chips, ENERGY (amber, glowing).
-       "Every answer…" -> a chat bubble on top sends a line down through all five layers into the energy layer. -->
+  <!-- CAKE (the Reel's one metaphor, FULL SCREEN, she is a picture-in-picture bottom-right, index).
+       "AI is a 5-layer cake": each layer whips in from alternating sides on her word (apps, AI models, infrastructure,
+       chips), then ENERGY slams up from below with a glow and a flash. On "Every single answer" the camera PULLS BACK:
+       the backdrop drops away, she returns full-frame and the cake shrinks into a mini cake at top-left; a chat bubble
+       on top sends a line down through all five layers; "Every answer needs all 5". -->
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #ck-panel { position: absolute; left: 0; top: 0; width: 1080px; height: 830px; border-radius: 0 0 46px 46px; overflow: hidden;
-      background: linear-gradient(180deg, #171A24 0%, #0D0F14 100%); box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 -3px 0 rgba(255,176,32,.55); }
-    #ck-kick { position: absolute; left: 60px; top: 184px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #FFB020; }
-    #ck-ttl { position: absolute; left: 58px; top: 220px; font: 800 70px/1 'Sora', sans-serif; letter-spacing: -.045em; color: #F5F1E8; }
-    #ck-ttl .a { color: #FFB020; }
-    #ck-svg { position: absolute; left: 0; top: 0; }
-    .ck-lb { position: absolute; left: 600px; height: 72px; display: flex; align-items: center; gap: 14px;
-      font: 700 40px 'Sora', sans-serif; letter-spacing: -.02em; color: #F5F1E8; white-space: nowrap; }
-    .ck-lb i { font-style: normal; font: 700 28px 'JetBrains Mono', monospace; color: #8A93A6; letter-spacing: .1em; }
-    #ck-l5 { color: #FFB020; }
-    #ck-all { position: absolute; left: 600px; top: 178px; padding: 6px 16px; border-radius: 14px; background: #2EE59D; color: #0D0F14;
-      font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .08em; }
+    #ck-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 45%, #2A2238 0%, #121018 70%); }
+    #ck-k { position: absolute; left: 64px; top: 190px; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #FFB020; }
+    #ck-t { position: absolute; left: 58px; top: 232px; font: 800 112px/0.95 'Sora', sans-serif; letter-spacing: -.06em; color: #FFFFFF; }
+    #ck-t b { color: #FFB020; }
+    #ck-stack { position: absolute; left: 120px; top: 470px; width: 600px; height: 760px; transform-origin: 0% 0%; }
+    .ck-l { position: absolute; height: 116px; border-radius: 26px; display: flex; align-items: center; justify-content: center;
+      font: 800 46px 'Sora', sans-serif; letter-spacing: -.03em; color: #0D0F14; box-shadow: 0 10px 0 rgba(0,0,0,.25); }
+    #ck-l1 { left: 150px; width: 300px; top: 80px;  background: #8EC5FF; }
+    #ck-l2 { left: 120px; width: 360px; top: 210px; background: #C3B1FF; }
+    #ck-l3 { left: 90px;  width: 420px; top: 340px; background: #7FE3D2; }
+    #ck-l4 { left: 60px;  width: 480px; top: 470px; background: #B9C1D1; }
+    #ck-l5 { left: 30px;  width: 540px; top: 600px; background: #FFB020; font-size: 56px; }
+    #ck-glow { position: absolute; left: -10px; top: 560px; width: 620px; height: 200px; border-radius: 100px;
+      background: radial-gradient(ellipse, rgba(255,176,32,.85) 0%, rgba(255,176,32,0) 70%); opacity: 0; }
+    #ck-drip { position: absolute; left: 150px; top: 76px; }
+    #ck-bub { position: absolute; left: 240px; top: -6px; width: 120px; height: 70px; }
+    #ck-wire { position: absolute; left: 294px; top: 64px; width: 12px; height: 0; border-radius: 6px; background: #FFFFFF; }
+    #ck-flash { position: absolute; inset: 0; background: #FFD27A; opacity: 0; }
+    #ck-pill { position: absolute; left: 400px; top: 300px; padding: 14px 26px; border-radius: 22px; background: #2EE59D; color: #0D0F14;
+      font: 800 48px/1.05 'Sora', sans-serif; letter-spacing: -.03em; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
   </style>
   <div id="root" data-composition-id="cake" data-width="1080" data-height="1920">
-    <div id="ck-panel">
-      <div id="ck-kick">THE AI STACK</div>
-      <div id="ck-ttl">AI is a <span class="a">5-layer cake</span></div>
-      <svg id="ck-svg" viewBox="0 0 1080 830" width="1080" height="830">
-        <defs>
-          <filter id="ck-blur" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
-        </defs>
-        <!-- plate -->
-        <ellipse cx="310" cy="790" rx="270" ry="22" fill="#1C2130"/>
-        <!-- energy glow (behind the bottom layer) -->
-        <rect id="ck-glow" x="70" y="690" width="480" height="96" rx="20" fill="#FFB020" filter="url(#ck-blur)" opacity="0"/>
-        <!-- layers: outlines first (always on), fills appear on her words. Bottom is widest. -->
-        <g fill="none" stroke="#3A4256" stroke-width="3" stroke-dasharray="10 8">
-          <rect x="190" y="350" width="240" height="78" rx="16"/>
-          <rect x="160" y="436" width="300" height="78" rx="16"/>
-          <rect x="130" y="522" width="360" height="78" rx="16"/>
-          <rect x="100" y="608" width="420" height="78" rx="16"/>
-          <rect x="70"  y="694" width="480" height="84" rx="18"/>
-        </g>
-        <rect id="ck-f1" x="190" y="350" width="240" height="78" rx="16" fill="#7FB8FF"/>
-        <rect id="ck-f2" x="160" y="436" width="300" height="78" rx="16" fill="#B49CFF"/>
-        <rect id="ck-f3" x="130" y="522" width="360" height="78" rx="16" fill="#6FD6C8"/>
-        <rect id="ck-f4" x="100" y="608" width="420" height="78" rx="16" fill="#9AA3B5"/>
-        <rect id="ck-f5" x="70"  y="694" width="480" height="84" rx="18" fill="#FFB020"/>
-        <!-- frosting drips on the top layer -->
-        <path id="ck-drip" d="M190 366 q20 22 40 0 q20 26 40 0 q20 18 40 0 q20 28 40 0 q20 20 40 0 q20 24 40 0" fill="none" stroke="#F5F1E8" stroke-width="6" stroke-linecap="round" opacity="0"/>
-        <!-- icons inside layers -->
-        <g id="ck-i1" opacity="0"><rect x="286" y="368" width="48" height="42" rx="8" fill="none" stroke="#0D0F14" stroke-width="4"/><circle cx="300" cy="389" r="4" fill="#0D0F14"/><circle cx="320" cy="389" r="4" fill="#0D0F14"/></g>
-        <g id="ck-i2" opacity="0"><circle cx="310" cy="475" r="22" fill="none" stroke="#0D0F14" stroke-width="4"/><path d="M298 478 q12 -16 24 0" stroke="#0D0F14" stroke-width="4" fill="none"/></g>
-        <g id="ck-i3" opacity="0" fill="#0D0F14"><rect x="274" y="540" width="20" height="42" rx="3"/><rect x="300" y="540" width="20" height="42" rx="3"/><rect x="326" y="540" width="20" height="42" rx="3"/></g>
-        <g id="ck-i4" opacity="0"><rect x="288" y="624" width="44" height="44" rx="6" fill="none" stroke="#0D0F14" stroke-width="4"/><rect x="300" y="636" width="20" height="20" fill="#0D0F14"/></g>
-        <path id="ck-i5" d="M318 704 L292 742 H310 L302 770 L332 728 H314 Z" fill="#0D0F14" opacity="0"/>
-        <!-- candle = "every answer you get": a chat bubble on top, then a line down through every layer -->
-        <g id="ck-bub" opacity="0">
-          <rect x="262" y="290" width="96" height="50" rx="16" fill="#F5F1E8"/>
-          <path d="M292 338 l-8 14 l22 -14 z" fill="#F5F1E8"/>
-          <circle cx="290" cy="315" r="6" fill="#0D0F14"/><circle cx="310" cy="315" r="6" fill="#0D0F14"/><circle cx="330" cy="315" r="6" fill="#0D0F14"/>
-        </g>
-        <line id="ck-wire" x1="310" y1="340" x2="310" y2="736" stroke="#F5F1E8" stroke-width="6" stroke-linecap="round" stroke-dasharray="396" stroke-dashoffset="396"/>
+    <div id="ck-bg"></div>
+    <div id="ck-k">THE AI STACK</div>
+    <div id="ck-t">AI is a<br><b>5-layer cake</b></div>
+    <div id="ck-stack">
+      <div id="ck-glow"></div>
+      <div class="ck-l" id="ck-l1">Apps you use</div>
+      <div class="ck-l" id="ck-l2">AI models</div>
+      <div class="ck-l" id="ck-l3">Infrastructure</div>
+      <div class="ck-l" id="ck-l4">Chips</div>
+      <div class="ck-l" id="ck-l5">ENERGY</div>
+      <svg id="ck-drip" viewBox="0 0 300 50" width="300" height="50" opacity="0">
+        <path d="M0 4 q25 34 50 0 q25 40 50 0 q25 28 50 0 q25 42 50 0 q25 30 50 0 q25 36 50 0" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
       </svg>
-      <div class="ck-lb" id="ck-l1" style="top:353px"><i>5</i>Apps you use</div>
-      <div class="ck-lb" id="ck-l2" style="top:439px"><i>4</i>AI models</div>
-      <div class="ck-lb" id="ck-l3" style="top:525px"><i>3</i>Infrastructure</div>
-      <div class="ck-lb" id="ck-l4" style="top:611px"><i>2</i>Chips</div>
-      <div class="ck-lb" id="ck-l5" style="top:700px"><i>1</i>Energy</div>
-      <div id="ck-all">EVERY ANSWER: ALL 5</div>
+      <div id="ck-wire"></div>
+      <svg id="ck-bub" viewBox="0 0 120 70" opacity="0">
+        <rect x="0" y="0" width="120" height="56" rx="20" fill="#FFFFFF"/><path d="M48 54 l-6 16 l22 -16 z" fill="#FFFFFF"/>
+        <circle cx="34" cy="28" r="7" fill="#0D0F14"/><circle cx="60" cy="28" r="7" fill="#0D0F14"/><circle cx="86" cy="28" r="7" fill="#0D0F14"/>
+      </svg>
     </div>
+    <div id="ck-pill">Every answer<br>needs all 5</div>
+    <div id="ck-flash"></div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
       const S = {{at:w142-0.04}};
-      tl.fromTo("#ck-panel", { y: -140, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "expo.out" }, 0);
-      tl.fromTo("#ck-ttl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.36, ease: "expo.out" }, 0.1);
-      const layer = (n, t) => {
-        tl.fromTo("#ck-f" + n, { opacity: 0, scaleX: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "back.out(1.8)" }, t - S - 0.06);
-        tl.fromTo("#ck-i" + n, { opacity: 0 }, { opacity: 1, duration: 0.2 }, t - S + 0.08);
-        tl.fromTo("#ck-l" + n, { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.28, ease: "expo.out" }, t - S - 0.02);
-      };
-      layer(1, {{at:w147}});
-      tl.fromTo("#ck-drip", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w147}} - S + 0.12);
-      layer(2, {{at:w154}});
-      layer(3, {{at:w157}});
-      layer(4, {{at:w168}});
-      // the bottom layer: a beat of stillness ("At the very bottom,") then ENERGY lands heavier
-      tl.fromTo("#ck-f5", { opacity: 0, scaleX: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scaleX: 1, duration: 0.36, ease: "back.out(2.2)" }, {{at:w173}} - S - 0.06);
-      tl.fromTo("#ck-i5", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w173}} - S + 0.08);
-      tl.fromTo("#ck-l5", { opacity: 0, x: 30, scale: 1.2 }, { opacity: 1, x: 0, scale: 1, duration: 0.34, ease: "expo.out" }, {{at:w173}} - S - 0.02);
-      tl.fromTo("#ck-glow", { opacity: 0 }, { opacity: 0.85, duration: 0.5, ease: "power2.out" }, {{at:w173}} - S);
-      tl.to("#ck-svg", { y: -8, duration: 0.08, ease: "power2.out" }, {{at:w173}} - S);
-      tl.to("#ck-svg", { y: 0, duration: 0.3, ease: "bounce.out" }, {{at:w173}} - S + 0.08);
-      // every answer depends on all five
-      tl.fromTo("#ck-bub", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, {{at:w176}} - S - 0.06);
-      tl.to("#ck-wire", { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, {{at:w181}} - S);
-      tl.fromTo("#ck-all", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.26, ease: "back.out(2.4)" }, {{at:w183}} - S - 0.04);
-      tl.to("#ck-panel", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w187}} - S - 0.16);
+      tl.set("#ck-l1, #ck-l2, #ck-l3, #ck-l4, #ck-l5, #ck-pill", { opacity: 0 }, 0);
+      tl.fromTo("#ck-bg", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 0);
+      tl.fromTo("#ck-t", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.34, ease: "expo.out" }, 0.04);
+      tl.fromTo("#ck-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.1);
+      const whip = (n, t, side) => tl.fromTo("#ck-l" + n, { opacity: 1, x: side * 900, rotation: side * 6 },
+        { opacity: 1, x: 0, rotation: 0, duration: 0.34, ease: "back.out(1.4)", immediateRender: false }, t - S - 0.08);
+      whip(1, {{at:w147}}, -1);
+      tl.to("#ck-drip", { opacity: 1, duration: 0.15 }, {{at:w147}} - S + 0.22);
+      whip(2, {{at:w154}}, 1);
+      whip(3, {{at:w157}}, -1);
+      whip(4, {{at:w168}}, 1);
+      // ENERGY slams up from below, heavier, with a glow and a warm flash
+      tl.fromTo("#ck-l5", { opacity: 1, y: 700, scale: 1.1 }, { opacity: 1, y: 0, scale: 1, duration: 0.38, ease: "back.out(1.6)", immediateRender: false }, {{at:w173}} - S - 0.1);
+      tl.fromTo("#ck-glow", { opacity: 0 }, { opacity: 1, duration: 0.4 }, {{at:w173}} - S + 0.15);
+      tl.fromTo("#ck-flash", { opacity: 0 }, { opacity: 0.45, duration: 0.05 }, {{at:w173}} - S + 0.2);
+      tl.to("#ck-flash", { opacity: 0, duration: 0.3 }, {{at:w173}} - S + 0.25);
+      // PULL BACK on "Every": backdrop drops, labels go, cake shrinks to a mini cake top-left, she is full frame again
+      const P = {{at:w174}} - S - 0.1;
+      tl.to("#ck-bg, #ck-t, #ck-k", { opacity: 0, duration: 0.3, ease: "power2.in" }, P);
+      tl.to("#ck-l1, #ck-l2, #ck-l3, #ck-l4, #ck-l5", { color: "rgba(13,15,20,0)", duration: 0.15 }, P);
+      tl.to("#ck-stack", { scale: 0.46, x: -60, y: -270, duration: 0.42, ease: "expo.inOut" }, P);
+      tl.fromTo("#ck-bub", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.26, ease: "back.out(2.4)" }, {{at:w176}} - S - 0.05);
+      tl.to("#ck-wire", { height: 600, duration: 0.6, ease: "power2.inOut" }, {{at:w181}} - S);
+      tl.fromTo("#ck-pill", { opacity: 0, x: -30, scale: 0.8 }, { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, {{at:w181}} - S + 0.1);
+      tl.to("#ck-stack, #ck-pill", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w187}} - S - 0.16);
       window.__timelines["cake"] = tl;
     })();
   </script>
