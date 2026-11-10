@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "preview MixtureOfExperts",
-  "pending": [
+  "state": "idle",
+  "last": [
     "preview MixtureOfExperts"
   ],
-  "time": "2026-11-10 06:58:06 UTC",
+  "done": [
+    "preview MixtureOfExperts"
+  ],
+  "time": "2026-11-10 07:09:48 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42771860060"
 }
