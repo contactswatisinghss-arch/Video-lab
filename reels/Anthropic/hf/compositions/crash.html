@@ -13,9 +13,7 @@
     #cr-head { position: absolute; left: 70px; top: 960px; width: 940px; padding: 26px 32px 30px; border-radius: 10px; background: #FBF8F2;
       box-shadow: 0 24px 50px rgba(0,0,0,.45); transform-origin: 50% 0%; box-sizing: border-box; }
     #cr-head small { display: block; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .14em; color: #B0120A; margin-bottom: 10px; }
-    #cr-head div { font: 700 46px/1.12 'Source Serif 4', Georgia, serif; letter-spacing: -.01em; color: #111111; }
-    #cr-sub { position: absolute; left: 64px; top: 480px; font: 700 44px 'Sora', sans-serif; letter-spacing: -.02em; color: #FFFFFF;
-      text-shadow: 0 4px 18px rgba(0,0,0,.7); }
+    #cr-head div { font: 800 58px/1.08 'Sora', sans-serif; letter-spacing: -.03em; color: #111111; }
   </style>
   <div id="root" data-composition-id="crash" data-width="1080" data-height="1920">
     <div id="cr-tint"></div>
@@ -25,10 +23,9 @@
             stroke="#FF3B2F" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"
             stroke-dasharray="1700" stroke-dashoffset="1700" opacity=".9"/>
     </svg>
-    <div id="cr-lbl">AI STOCKS · THIS WEEK</div>
+    <div id="cr-lbl">S&amp;P 500 · ONE DAY</div>
     <div id="cr-num">−4.4%</div>
-    <div id="cr-sub">S&amp;P 500 in a single day</div>
-    <div id="cr-head"><small>ASSOCIATED PRESS</small><div>A brutal sell-off for AI stocks sends Wall Street reeling, and the S&amp;P 500 tumbles 4.4%</div></div>
+    <div id="cr-head"><small>ASSOCIATED PRESS</small><div>“A brutal sell-off for AI stocks”</div></div>
   </div>
   <script>
     (function () {
@@ -39,11 +36,10 @@
       tl.to("#cr-path", { strokeDashoffset: 0, duration: 0.7, ease: "power2.in" }, 0.02);
       tl.fromTo("#cr-num", { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.24, ease: "expo.out" }, 0.04);
       tl.fromTo("#cr-lbl", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.24, ease: "expo.out" }, 0.1);
-      tl.fromTo("#cr-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.26, ease: "expo.out" }, {{at:w17}} - S - 0.04);
-      tl.fromTo("#cr-head", { opacity: 0, y: 120, rotation: 5, scale: 1.08 }, { opacity: 1, y: 0, rotation: -2, scale: 1, duration: 0.26, ease: "back.out(1.6)" }, {{at:w18}} - S - 0.04);
+      tl.fromTo("#cr-head", { opacity: 0, y: 120, rotation: 5, scale: 1.08 }, { opacity: 1, y: 0, rotation: -2, scale: 1, duration: 0.26, ease: "back.out(1.6)" }, 0.3);
       // ease the red off a touch while she finishes the sentence, then clear
       tl.to("#cr-tint", { opacity: 0.3, duration: 0.4 }, {{at:w19}} - S);
-      tl.to("#cr-tint, #cr-vig, #cr-line, #cr-lbl, #cr-num, #cr-sub, #cr-head", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w60}} - S - 0.16);
+      tl.to("#cr-tint, #cr-vig, #cr-line, #cr-lbl, #cr-num, #cr-head", { opacity: 0, duration: 0.14, ease: "power2.in" }, {{at:w60}} - S - 0.16);
       window.__timelines["crash"] = tl;
     })();
   </script>

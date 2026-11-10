@@ -26,6 +26,7 @@
     #ck-flash { position: absolute; inset: 0; background: #FFD27A; opacity: 0; }
     #ck-pill { position: absolute; left: 400px; top: 300px; padding: 14px 26px; border-radius: 22px; background: #2EE59D; color: #0D0F14;
       font: 800 48px/1.05 'Sora', sans-serif; letter-spacing: -.03em; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    .ck-l, #ck-pill { opacity: 0; }
   </style>
   <div id="root" data-composition-id="cake" data-width="1080" data-height="1920">
     <div id="ck-bg"></div>
@@ -33,11 +34,11 @@
     <div id="ck-t">AI is a<br><b>5-layer cake</b></div>
     <div id="ck-stack">
       <div id="ck-glow"></div>
-      <div class="ck-l" id="ck-l1">Apps you use</div>
-      <div class="ck-l" id="ck-l2">AI models</div>
-      <div class="ck-l" id="ck-l3">Infrastructure</div>
-      <div class="ck-l" id="ck-l4">Chips</div>
-      <div class="ck-l" id="ck-l5">ENERGY</div>
+      <div class="ck-l" id="ck-l1"><span class="ck-tx">Apps you use</span></div>
+      <div class="ck-l" id="ck-l2"><span class="ck-tx">AI models</span></div>
+      <div class="ck-l" id="ck-l3"><span class="ck-tx">Infrastructure</span></div>
+      <div class="ck-l" id="ck-l4"><span class="ck-tx">Chips</span></div>
+      <div class="ck-l" id="ck-l5"><span class="ck-tx">ENERGY</span></div>
       <svg id="ck-drip" viewBox="0 0 300 50" width="300" height="50" opacity="0">
         <path d="M0 4 q25 34 50 0 q25 40 50 0 q25 28 50 0 q25 42 50 0 q25 30 50 0 q25 36 50 0" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
       </svg>
@@ -54,7 +55,6 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       const S = {{at:w142-0.04}};
-      tl.set("#ck-l1, #ck-l2, #ck-l3, #ck-l4, #ck-l5, #ck-pill", { opacity: 0 }, 0);
       tl.fromTo("#ck-bg", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 0);
       tl.fromTo("#ck-t", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.34, ease: "expo.out" }, 0.04);
       tl.fromTo("#ck-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.1);
@@ -73,7 +73,7 @@
       // PULL BACK on "Every": backdrop drops, labels go, cake shrinks to a mini cake top-left, she is full frame again
       const P = {{at:w174}} - S - 0.1;
       tl.to("#ck-bg, #ck-t, #ck-k", { opacity: 0, duration: 0.3, ease: "power2.in" }, P);
-      tl.to("#ck-l1, #ck-l2, #ck-l3, #ck-l4, #ck-l5", { color: "rgba(13,15,20,0)", duration: 0.15 }, P);
+      tl.to("#ck-stack .ck-tx", { opacity: 0, duration: 0.15 }, P);
       tl.to("#ck-stack", { scale: 0.46, x: -60, y: -270, duration: 0.42, ease: "expo.inOut" }, P);
       tl.fromTo("#ck-bub", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.26, ease: "back.out(2.4)" }, {{at:w176}} - S - 0.05);
       tl.to("#ck-wire", { height: 600, duration: 0.6, ease: "power2.inOut" }, {{at:w181}} - S);
