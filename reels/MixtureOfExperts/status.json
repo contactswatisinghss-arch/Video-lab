@@ -2,8 +2,8 @@
   "slug": "MixtureOfExperts",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-09 10:39:53 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845",
+  "time": "2026-11-10 07:09:46 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42771860060",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/MixtureOfExperts",
   "prepare": {
     "stage": "prepare",
@@ -40,19 +40,24 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-09 10:39:53 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-10 07:09:46 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-09 10:39:53 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845",
-    "hash": "31ac9d451d1db458",
+    "time": "2026-11-10 07:09:46 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42771860060",
+    "hash": "1bee49c065ae9f4b",
     "check": {
       "parsed": true,
       "ok": true,
       "errors": 0,
-      "warnings": 7,
+      "warnings": 36,
       "top_errors": [],
       "top_warnings": [
         {
@@ -65,57 +70,201 @@
         },
         {
           "severity": "warning",
-          "code": "contrast_aa_failure",
-          "message": "Contrast is 2.97:1; WCAG AA requires 3:1.",
-          "selector": "#tk-lbl2",
-          "time": 40.409,
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#ex-v1, #ex-v2, #ex-name, #ex-by\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#ex-v1, #ex-v2, #ex-name, #ex-by",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#hk-u",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#hk-bulb",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#in-s3",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#kt-w0, #kt-w1, #kt-w2, #kt-w3, #kt-w4, #kt-w5, #kt-w6, #kt-w7\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#kt-w0, #kt-w1, #kt-w2, #kt-w3, #kt-w4, #kt-w5, #kt-w6, #kt-w7",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#kt-p1, #kt-p2\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#kt-p1, #kt-p2",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#nm-u",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#nm-u2",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#ou-p1, #ou-p2\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#ou-p1, #ou-p2",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#pb-cost\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#pb-cost",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#pb-q\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#pb-q",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#pb-box",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#pb-bolt",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#pb-qm",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#rt-p1, #rt-p2\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#rt-p1, #rt-p2",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#tk-arr",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#tk-arrh",
+          "time": 0,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "gsap_timeline_set_initial_hide",
+          "message": "Initial hidden state for \"#to-head, #to-r1, #to-r2, #to-r3\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+          "selector": "#to-head, #to-r1, #to-r2, #to-r3",
+          "time": 0,
           "section": "findings"
         },
         {
           "severity": "warning",
           "code": "contrast_aa_failure",
-          "message": "Contrast is 2.79:1; WCAG AA requires 3:1.",
-          "selector": "div > div:nth-of-type(15) > div > div > div:nth-of-type(51) > div > span:nth-of-type(2) > span",
-          "time": 40.409,
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
           "section": "findings"
         },
         {
           "severity": "warning",
-          "code": "line_unread",
-          "message": "\"\"Explain mixture of experts\"\" (4 words) is on screen 0.73 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tk-sentence",
-          "time": 36.302,
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
           "section": "findings"
         },
         {
           "severity": "warning",
-          "code": "line_unread",
-          "message": "\"a word, or part of a word\" (7 words) is on screen 1.31 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#tk-lbl2",
-          "time": 39.667,
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
           "section": "findings"
         },
         {
           "severity": "warning",
-          "code": "line_unread",
-          "message": "The film's last line \"Follow for the next episode\" (5 words) is on screen 1.12 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-          "selector": "#ou-cta",
-          "time": 79.705,
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
           "section": "findings"
         },
         {
           "severity": "warning",
-          "code": "line_unread",
-          "message": "The film's last line \"AI EXPLAINED LIKE YOU'RE 5\" (5 words) is on screen 0.88 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-          "selector": "#ou-series",
-          "time": 79.941,
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
+          "section": "findings"
+        },
+        {
+          "severity": "warning",
+          "code": "contrast_aa_failure",
+          "message": "Contrast is 3.12:1; WCAG AA requires 4.5:1.",
+          "selector": "div > div:nth-of-type(8) > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(6) > div:nth-of-type(1) > svg > text:nth-of-type(2)",
+          "time": 22.449,
           "section": "findings"
         }
       ]
     },
-    "hf_version": "0.9.26",
+    "hf_version": "0.9.28",
     "snapshot_ok": true,
-    "render_seconds": 587,
+    "render_seconds": 426,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/MixtureOfExperts/preview.mp4"
   }
 }
