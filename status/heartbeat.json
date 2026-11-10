@@ -1,10 +1,13 @@
 {
-  "state": "running",
-  "current": "final MixtureOfExperts",
-  "pending": [
+  "state": "idle",
+  "last": [
     "final Anthropic",
     "final MixtureOfExperts"
   ],
-  "time": "2026-11-10 09:01:31 UTC",
+  "done": [
+    "final Anthropic",
+    "final MixtureOfExperts"
+  ],
+  "time": "2026-11-10 09:24:39 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42779691333"
 }
