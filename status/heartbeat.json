@@ -1,15 +1,14 @@
 {
-  "state": "idle",
-  "last": [
-    "preview Anthropic",
-    "preview MixtureOfExperts",
-    "final Suncatcher"
+  "state": "running",
+  "current": "references power-ai-yt",
+  "pending": [
+    "references power-ai-yt",
+    "references power-grid-yt",
+    "references page-cleo-yt",
+    "references page-dhruv-yt",
+    "references page-johnny-yt",
+    "references page-mrwho-yt"
   ],
-  "done": [
-    "preview Anthropic",
-    "preview MixtureOfExperts",
-    "final Suncatcher"
-  ],
-  "time": "2026-11-09 11:23:24 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42589691845"
+  "time": "2026-11-10 06:44:33 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42769166093"
 }
