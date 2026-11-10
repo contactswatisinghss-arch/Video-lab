@@ -22,6 +22,20 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - Real graphics that carry information: news-style headline cards (recreated, never screenshots/logos), a severity meter, a globe with pins, a cracked "stack" diagram, a timeline turning red at the turning point, a shield + fixed versions, a Part 2 end card.
 - She disliked: plain text cards, basic fonts, no visuals.
 
+## MixtureOfExperts (Nov 2026): what she rejected and what she approved
+- **Rejected (v2):** "seems repeat of all previous videos and looks monotonous with black screen and popped out words
+  without visual aesthetic elements." So: no more dark/black top panels as the default, no word-by-word pop-in
+  captions, and don't reuse the same card system Reel after Reel.
+- **Approved (v3, "Mix A + C"), picked from 3 sample frames:**
+  - A, storybook: bright illustrated sticker cards (cream card, white border, soft shadow, tiled kitchen wall) with
+    original cute cartoon characters (8 chefs: sleeping vs glowing "cooking" states) for the analogy beats; Fredoka.
+  - C, scrapbook: white/yellow marker doodles drawn on her real wall (draw-on strokes), handwritten notes (Caveat,
+    clip-path write-on), torn yellow paper strips with tape, taped lined/graph paper for facts.
+  - Captions: Fredoka 600, the whole line eases in together; spoken word tints yellow; key words get a highlighter swipe.
+- Lighting she liked: neutral white balance + soft white key light on the face (brightness 1.08), no warm yellow cast.
+- Keep "Welcome to my series, AI explained like you're 5" in every episode of the series.
+- Next time: vary again (don't make storybook the new default); offer 2–3 sample frames of different looks before building.
+
 ## Swati's picked style references (8 Nov 2026: "the edit is becoming a bit boring")
 She chose these herself, so they outweigh topic research for LOOK and PACE. references/style-01..04.
 Instagram gave likes/comments but no views, so engagement below is likes + comments only.
@@ -83,3 +97,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 ## Results log
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |
 |---|---|---|---|---|---|---|---|---|---|
+| MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles; white face light |
