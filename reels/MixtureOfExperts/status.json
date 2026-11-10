@@ -2,8 +2,8 @@
   "slug": "MixtureOfExperts",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-10 08:05:34 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42772652409",
+  "time": "2026-11-10 09:24:38 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42779691333",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/MixtureOfExperts",
   "prepare": {
     "stage": "prepare",
@@ -50,14 +50,32 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-10 08:05:34 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-10 09:24:38 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-10 09:24:38 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-10 08:05:34 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42772652409",
+    "time": "2026-11-10 09:24:38 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42779691333",
     "hash": "1bee49c065ae9f4b",
+    "note": "covered by final render"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-10 09:24:38 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42779691333",
+    "hash": "252b6ff058eb6ceb",
     "check": {
       "parsed": true,
       "ok": true,
@@ -269,7 +287,9 @@
     },
     "hf_version": "0.9.28",
     "snapshot_ok": true,
-    "render_seconds": 460,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/MixtureOfExperts/preview.mp4"
+    "render_seconds": 1004,
+    "seconds": 80.9,
+    "size_mb": 213.5,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/MixtureOfExperts/final_reel.mp4"
   }
 }
