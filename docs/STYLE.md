@@ -3,6 +3,13 @@
 What we know works for this channel. Claude updates this file as reference Reels are studied and as posted
 Reels report their numbers. These are guardrails and learnings, not a template: each Reel still gets its own look.
 
+## HARD RULES from Swati (Nov 2026), these override anything below
+- **Never change her footage's look**: no brightness, contrast, saturation, hue, white balance, colour overlays,
+  face light, vignette or "grade" of any kind. `#base` gets no CSS filter and no blend layers over it. (The HDR to
+  standard-range conversion in prepare is technical and stays.)
+- **The cover must say what the Reel is about**: the topic name big and readable (e.g. "MIXTURE OF EXPERTS"), plus
+  the hook. No mid-sentence caption on the cover frame. Show her a cover draft with the preview, before the final.
+
 ## Channel
 - @swatitalkstech: tech explainers and news for a broad audience ("even if tech isn't your thing"); some demos.
 - Tone: credible briefing, calm authority, no hype; one bold hook per video is fine.
@@ -32,7 +39,7 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   - C, scrapbook: white/yellow marker doodles drawn on her real wall (draw-on strokes), handwritten notes (Caveat,
     clip-path write-on), torn yellow paper strips with tape, taped lined/graph paper for facts.
   - Captions: Fredoka 600, the whole line eases in together; spoken word tints yellow; key words get a highlighter swipe.
-- Lighting she liked: neutral white balance + soft white key light on the face (brightness 1.08), no warm yellow cast.
+- Cover rejected: "doesn't even tell what the topic is" (hook card only, plus a mid-sentence caption). See HARD RULES.
 - Keep "Welcome to my series, AI explained like you're 5" in every episode of the series.
 - Next time: vary again (don't make storybook the new default); offer 2–3 sample frames of different looks before building.
 
@@ -72,21 +79,22 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 - Footage is mostly shot at home at night on a plain wall: vary the look per Reel (see "Backgrounds").
 
 ## Backgrounds (to keep Reels from looking the same)
-- Option per Reel, picked in the storyboard: (a) keep the real room, regraded/relit per topic; (b) replace the wall
+- **No regrading or relighting of her footage at all (see HARD RULES).** Variety comes from graphics and decor only.
+- Option per Reel, picked in the storyboard: (a) keep the real room as shot; (b) replace the wall
   behind her with a topic-specific scene via `hyperframes remove-background` (cutout layered over a designed
   background; ~2 fps on CPU, check hair edges in the preview); (c) "split" looks: footage in a frame/phone/screen
   over a designed set. Default: alternate, and never two replaced backgrounds back to back.
 - **Swati's preference (30 Oct 2026): keep her real room, add set dressing** (plants, wooden slat wall, shelf, soft
   lamp glow) rather than swapping the background. Digital version: decor layered on the empty wall areas and
   frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
-  Must match the room's warm night lighting, sit low-contrast, and never compete with the top-band graphics.
+  Must sit low-contrast and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
 - **Background replacement: DON'T (Swati, Nov 2026).** Tried on china-ai-bubble (cutout over a designed walnut-panelled set):
-  she found it "very unnatural". Keep her real room; at most a warm grade + vignette, and only subtle decor on empty wall
+  she found it "very unnatural". Keep her real room; only subtle decor on empty wall
   areas that never passes behind her. The `bg_remove` option in edit.json (ci/bgjobs.py) stays available but is off by default.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
-  plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, warm lamp glow, LED strip. Neon colour can
+  plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, LED strip. Neon colour can
   echo the Reel's palette. Track which set was used per Reel in the results log so repeats are spaced out.
 
 ## Learned from references
@@ -97,4 +105,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 ## Results log
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |
 |---|---|---|---|---|---|---|---|---|---|
-| MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles; white face light |
+| MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles |
