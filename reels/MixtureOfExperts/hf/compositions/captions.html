@@ -2,16 +2,13 @@
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
     #cap-stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
-    .cap-group { position: absolute; left: 0; width: 1080px; top: 1200px; text-align: center; overflow: visible; }
-    .cap-line { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 800; color: #FFF6E9; line-height: 1.05;
-      letter-spacing: -.01em; text-shadow: 0 4px 16px rgba(18,16,14,.8), 0 2px 4px rgba(18,16,14,.7); padding: 0 40px; }
-    .cap-word { display: inline-block; position: relative; transform-origin: 50% 70%; }
+    .cap-group { position: absolute; left: 0; width: 1080px; top: 1210px; text-align: center; overflow: visible; }
+    .cap-line { display: inline-block; font-family: 'Fredoka', sans-serif; font-weight: 600; color: #fff; line-height: 1.1;
+      text-shadow: 0 3px 12px rgba(20,14,10,.55), 0 1px 3px rgba(20,14,10,.6); padding: 0 40px; }
+    .cap-word { display: inline-block; position: relative; }
     .cap-word .cap-txt { position: relative; z-index: 1; }
-    .cap-word.em-chef::before, .cap-word.em-go::before { content: ""; position: absolute; left: -10px; right: -10px; top: 8%; bottom: 4%;
-      border-radius: 12px; z-index: 0; }
-    .cap-word.em-chef::before { background: #FFB547; }
-    .cap-word.em-go::before { background: #2EE59D; }
-    .cap-word.em-chef .cap-txt, .cap-word.em-go .cap-txt { color: #12100E; text-shadow: none; }
+    /* key words get a yellow highlighter swipe behind them */
+    .cap-word.em-key::before { content: ""; position: absolute; left: -6px; right: -6px; top: 52%; bottom: 4%; background: #FFC93C; border-radius: 6px; z-index: 0; opacity: .95; }
   </style>
   <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
     <div id="cap-stage"></div>
@@ -19,18 +16,21 @@
   <script>
     {{lib:captions}}
     (function () {
-      const tl = gsap.timeline({ paused: true });
+      var tl = gsap.timeline({ paused: true });
       HFCaps.build({
-        tl, container: "#cap-stage", words: {{words}},
-        maxWords: 3, maxChars: 18, pauseBreak: 0.28, hold: 0.35,
-        emphasis: { "em-chef": ["chefs", "head chef", "router", "mixture of experts"], "em-go": ["two", "13 billion", "pair", "smaller"] },
-        font: { family: "Inter", weight: 800, size: 76, min: 52, maxWidth: 940 },
-        word(tl, span, w, grp, i) {
-          const big = span.classList.contains("em-chef") || span.classList.contains("em-go");
-          tl.fromTo(span, { opacity: 0, y: 14 },
-            { opacity: 1, y: 0, scale: big ? 1.06 : 1, duration: 0.16, ease: "power3.out" }, Math.max(grp.start, w.start - 0.04));
+        tl: tl, container: "#cap-stage", words: {{words}},
+        maxWords: 4, maxChars: 24, pauseBreak: 0.28, hold: 0.35,
+        emphasis: { "em-key": ["chefs", "sandwich", "head chef", "router", "mixture of experts", "experts", "two", "tokens", "13 billion", "47 billion", "memory"] },
+        font: { family: "Fredoka", weight: 600, size: 68, min: 50, maxWidth: 960 },
+        // the whole line eases up together (no word popping)
+        enter: function (tl, g, spans, grp) { tl.fromTo(g, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out" }, grp.start); },
+        // the word being spoken turns warm yellow, then settles back to white
+        word: function (tl, span, w, grp, i) {
+          if (span.classList.contains("em-key")) return;
+          tl.fromTo(span, { color: "#FFFFFF" }, { color: "#FFE15A", duration: 0.06 }, Math.max(grp.start, w.start - 0.02));
+          tl.to(span, { color: "#FFFFFF", duration: 0.12 }, Math.max(grp.start + 0.07, w.end));
         },
-        exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); },
+        exit: function (tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.1, ease: "power2.in" }, grp.end - 0.1); }
       });
       window.__timelines["captions"] = tl;
     })();

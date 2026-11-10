@@ -1,58 +1,62 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #is-model { position: absolute; left: 60px; top: 190px; width: 960px; height: 500px; border-radius: 40px;
-      background: rgba(18,16,14,.9); border: 4px solid rgba(255,246,233,.28); }
-    #is-label { position: absolute; left: 40px; top: 30px; font: 700 28px 'JetBrains Mono', monospace; color: rgba(255,246,233,.7); letter-spacing: .22em; }
-    #is-layer { position: absolute; left: 40px; top: 90px; width: 880px; height: 300px; border-radius: 28px;
-      border: 3px dashed rgba(255,181,71,.6); }
-    #is-layerlbl { position: absolute; right: 24px; top: -18px; padding: 2px 12px; background: #12100E;
-      font: 700 28px 'JetBrains Mono', monospace; color: #FFB547; letter-spacing: .12em; }
-    .is-ex { position: absolute; top: 60px; width: 92px; height: 180px; border-radius: 18px; background: #2A2623; border: 3px solid #5B6577; }
-    .is-ex i { position: absolute; left: 36px; width: 14px; height: 14px; border-radius: 50%; background: #5B6577; }
-    .is-ex em { position: absolute; left: 0; bottom: -46px; width: 92px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
-      color: rgba(255,246,233,.75); font-style: normal; }
-    .is-cap { position: absolute; left: 14px; top: -58px; width: 64px; height: 64px; color: #FFF6E9; }
-    #is-exlbl { position: absolute; left: 0; top: 420px; width: 960px; text-align: center;
-      font: 800 54px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.02em; }
-    #is-exlbl b { color: #2EE59D; }
+    #is-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 4px 8px rgba(0,0,0,.35)); }
+    .is-t { font-family: 'Caveat', cursive; font-weight: 700; fill: #fff; }
+    .is-d { stroke-dasharray: 1; stroke-dashoffset: 1; fill: none; stroke-linecap: round; stroke-linejoin: round; }
   </style>
   <div id="root" data-composition-id="inside" data-width="1080" data-height="1920">
-    <div id="is-model">
-      <div id="is-label">INSIDE ONE AI MODEL</div>
-      <div id="is-layer"><div id="is-layerlbl">NEURAL NETWORK SECTION</div></div>
-      <div id="is-exlbl"><b>Experts</b> = smaller networks</div>
-    </div>
+    <svg id="is-svg" viewBox="0 0 1080 1920">
+      <path id="is-box" class="is-d" pathLength="1" d="M96 196 C380 186 700 190 984 200 C992 340 990 480 982 600 C700 610 380 608 100 598 C90 470 90 330 96 196 Z" stroke="#fff" stroke-width="8"/>
+      <text id="is-lbl" class="is-t" x="128" y="262" font-size="72">AI model</text>
+      <path id="is-sec" class="is-d" pathLength="1" d="M136 290 C400 284 680 286 944 292 L942 470 C680 476 400 474 138 470 Z" stroke="#FFE15A" stroke-width="6"/>
+      <text id="is-seclbl" class="is-t" x="944" y="260" font-size="56" text-anchor="end" style="fill:#FFE15A">neural network section</text>
+      <g id="is-ex"></g>
+      <text id="is-eq" class="is-t" x="540" y="560" font-size="76" text-anchor="middle" style="fill:#FFE15A">smaller networks = "experts"</text>
+      <text id="is-ch" class="is-t" x="540" y="560" font-size="80" text-anchor="middle">= our 8 chefs!</text>
+    </svg>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w87) - 0.1 }};
-      const HAT = '<svg viewBox="0 0 100 100" width="64" height="64"><path d="M22 58 C8 56 6 34 22 30 C24 14 44 10 52 20 C60 8 82 12 80 30 C96 32 94 56 78 58 Z" fill="currentColor"/><rect x="26" y="61" width="48" height="20" rx="5" fill="currentColor"/></svg>';
-      const layer = document.querySelector("#is-layer");
-      const ex = [], caps = [];
-      for (let i = 0; i < 8; i++) {
-        const d = document.createElement("div");
-        d.className = "is-ex"; d.id = "is-e" + i;
-        d.style.left = (22 + i * 106) + "px";
-        d.innerHTML = '<i style="top:30px"></i><i style="top:72px"></i><i style="top:114px"></i><em>E' + (i + 1) + '</em>';
-        const c = document.createElement("div");
-        c.className = "is-cap"; c.id = "is-c" + i; c.innerHTML = HAT;
-        d.appendChild(c);
-        layer.appendChild(d); ex.push(d); caps.push(c);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w87) - 0.1 }};
+      var NS = "http://www.w3.org/2000/svg", g = document.querySelector("#is-ex"), boxes = [], hats = [], labels = [];
+      for (var i = 0; i < 8; i++) {
+        var x = 166 + i * 98;
+        var p = document.createElementNS(NS, "path");
+        p.setAttribute("id", "is-b" + i); p.setAttribute("class", "is-d"); p.setAttribute("pathLength", "1");
+        p.setAttribute("d", "M" + x + " 362 l66 -2 l2 92 l-68 2 z"); p.setAttribute("stroke", "#fff"); p.setAttribute("stroke-width", "6");
+        g.appendChild(p); boxes.push(p);
+        var t = document.createElementNS(NS, "text");
+        t.setAttribute("id", "is-l" + i); t.setAttribute("class", "is-t"); t.setAttribute("x", x + 34); t.setAttribute("y", 422);
+        t.setAttribute("text-anchor", "middle"); t.setAttribute("font-size", "50"); t.textContent = "E" + (i + 1);
+        g.appendChild(t); labels.push(t);
+        var h = document.createElementNS(NS, "path");
+        h.setAttribute("id", "is-h" + i); h.setAttribute("class", "is-d"); h.setAttribute("pathLength", "1");
+        var cx = x + 34;
+        h.setAttribute("d", "M" + (cx - 26) + " 350 C" + (cx - 40) + " 348 " + (cx - 40) + " 326 " + (cx - 24) + " 324 C" + (cx - 22) + " 308 " + (cx - 4) + " 304 " + (cx + 2) + " 316 C" + (cx + 10) + " 304 " + (cx + 28) + " 308 " + (cx + 26) + " 324 C" + (cx + 42) + " 326 " + (cx + 40) + " 348 " + (cx + 26) + " 350 Z");
+        h.setAttribute("stroke", "#FFE15A"); h.setAttribute("stroke-width", "5"); h.setAttribute("fill", "rgba(255,225,90,0)");
+        g.appendChild(h); hats.push(h);
       }
-      tl.fromTo("#is-model", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, 0);
-      // "certain sections of the neural network"
-      tl.fromTo("#is-layer", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w91}} - S);
-      // "contain smaller neural networks": eight blocks build left to right
-      tl.fromTo(ex, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)", stagger: 0.07 }, {{at:w98}} - S);
+      tl.set(["#is-lbl", "#is-seclbl", "#is-eq", "#is-ch"].concat(labels), { opacity: 0 }, 0);
+      tl.to("#is-box", { strokeDashoffset: 0, duration: 0.6, ease: "power1.inOut" }, 0.05);
+      tl.fromTo("#is-lbl", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "none" }, {{at:w88}} - S);
+      // "certain sections of the neural network": a dashed section is marked
+      tl.to("#is-sec", { strokeDashoffset: 0, duration: 0.6, ease: "none" }, {{at:w92}} - S);
+      tl.fromTo("#is-seclbl", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w95}} - S);
+      // "contain smaller neural networks": eight little boxes are drawn, left to right
+      tl.to(boxes, { strokeDashoffset: 0, duration: 0.25, stagger: 0.08, ease: "power1.out" }, {{at:w98}} - S);
+      tl.to(labels, { opacity: 1, duration: 0.15, stagger: 0.08 }, {{at:w98}} - S + 0.15);
       // "they're called experts"
-      tl.fromTo("#is-exlbl", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w103}} - S);
-      // "Those are our chefs": a hat lands on every expert
-      tl.fromTo(caps, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2.2)", stagger: 0.05 }, {{at:w107}} - S);
-      // "all inside one model": the outer frame flashes saffron once
-      tl.fromTo("#is-model", { borderColor: "rgba(255,246,233,.28)" }, { borderColor: "#FFB547", duration: 0.25 }, {{at:w109}} - S);
-      tl.to("#is-model", { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, {{at:w113}} - S - 0.2);
+      tl.fromTo("#is-eq", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.7, ease: "none" }, {{at:w102}} - S);
+      // "Those are our chefs": a chef hat is doodled on every expert
+      tl.to(hats, { strokeDashoffset: 0, duration: 0.22, stagger: 0.06 }, {{at:w105}} - S);
+      tl.to(hats, { fill: "rgba(255,225,90,.9)", duration: 0.2, stagger: 0.04 }, {{at:w108}} - S);
+      tl.to("#is-eq", { opacity: 0, duration: 0.15 }, {{at:w106}} - S);
+      tl.fromTo("#is-ch", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "none" }, {{at:w107}} - S);
+      // "all inside one model": the outline turns yellow
+      tl.to("#is-box", { attr: { stroke: "#FFE15A" }, duration: 0.25 }, {{at:w110}} - S);
+      tl.to("#is-svg", { opacity: 0, duration: 0.2, ease: "power2.in" }, {{at:w113}} - S - 0.25);
       window.__timelines["inside"] = tl;
     })();
   </script>

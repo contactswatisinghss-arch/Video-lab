@@ -1,53 +1,63 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #kt-card { position: absolute; left: 60px; top: 190px; width: 960px; height: 500px; border-radius: 40px;
-      background: rgba(18,16,14,.88); border: 3px solid rgba(255,181,71,.35); }
-    #kt-head { position: absolute; left: 404px; top: 20px; width: 152px; height: 152px; color: #FFB547; }
-    #kt-headlbl { position: absolute; left: 0; top: 160px; width: 960px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
-      color: #FFB547; letter-spacing: .26em; }
-    .kt-hat { position: absolute; width: 120px; height: 120px; color: #FFF6E9; }
-    .kt-hat svg { width: 120px; height: 120px; display: block; }
-    #kt-count { position: absolute; left: 44px; top: 34px; font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.03em; }
-    #kt-count small { display: block; font: 700 28px 'JetBrains Mono', monospace; color: rgba(255,246,233,.6); letter-spacing: .18em; margin-top: 6px; }
-    #kt-pick { position: absolute; right: 44px; top: 34px; text-align: right; font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #2EE59D; letter-spacing: -.03em; }
-    #kt-pick small { display: block; font: 700 28px 'JetBrains Mono', monospace; color: rgba(46,229,157,.75); letter-spacing: .18em; margin-top: 6px; }
+    #kt-card { position: absolute; left: 62px; top: 176px; width: 956px; height: 420px; border-radius: 52px; background: #FFF5E6;
+      border: 12px solid #fff; box-shadow: 0 26px 50px rgba(60,40,20,.3); overflow: hidden; }
+    #kt-wall { position: absolute; left: 0; top: 0; width: 956px; height: 420px; background:
+      repeating-linear-gradient(0deg, transparent 0 58px, rgba(120,190,190,.28) 58px 61px),
+      repeating-linear-gradient(90deg, transparent 0 58px, rgba(120,190,190,.28) 58px 61px), #E8F6F3; }
+    #kt-counter { position: absolute; left: 0; width: 956px; top: 334px; height: 86px; background: #E9A15C; border-top: 10px solid #C98142; box-sizing: border-box; }
+    .kt-c { position: absolute; width: 116px; height: 140px; }
+    .kt-c > div { position: absolute; inset: 0; }
+    #kt-boss { position: absolute; left: 30px; top: 8px; width: 120px; height: 146px; }
+    #kt-bub { position: absolute; left: 160px; top: 30px; padding: 10px 24px 12px; border-radius: 26px; background: #fff; border: 4px solid #3B2F2A;
+      font: 700 42px 'Fredoka', sans-serif; color: #3B2F2A; white-space: nowrap; }
+    #kt-bubtail { position: absolute; left: 140px; top: 60px; width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-right: 22px solid #3B2F2A; }
+    #kt-note { position: absolute; left: 600px; top: 20px; font: 700 60px 'Caveat', cursive; color: #2F6FDB; white-space: nowrap; }
+    #kt-pill { position: absolute; left: 0; width: 1080px; top: 568px; text-align: center; height: 110px; }
+    .kt-ptx { position: absolute; left: 50%; top: 0; white-space: nowrap; padding: 14px 36px 16px; border-radius: 999px; background: #FFC93C; border: 6px solid #fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,.2); font: 700 64px 'Fredoka', sans-serif; color: #3B2F2A; }
+    .kt-ptx b { color: #E2544B; font-weight: 700; }
   </style>
   <div id="root" data-composition-id="kitchen" data-width="1080" data-height="1920">
-    <div id="kt-card">
-      <div id="kt-count">8<small>CHEFS</small></div>
-      <div id="kt-pick">2<small>COOK</small></div>
-      <svg id="kt-head" viewBox="0 0 100 100"><path d="M22 58 C8 56 6 34 22 30 C24 14 44 10 52 20 C60 8 82 12 80 30 C96 32 94 56 78 58 Z" fill="currentColor"/><rect x="26" y="61" width="48" height="20" rx="5" fill="currentColor"/><rect x="26" y="67" width="48" height="5" fill="#12100E" opacity=".35"/></svg>
-      <div id="kt-headlbl">HEAD CHEF</div>
-      <div id="kt-hats"></div>
+    <div id="kt-card"><div id="kt-wall"></div><div id="kt-counter"></div><div id="kt-row"></div>
+      <div id="kt-boss"></div><div id="kt-bubtail"></div><div id="kt-bub">you two, cook!</div>
+      <div id="kt-note">head chef</div>
     </div>
+    <div id="kt-pill"><span class="kt-ptx" id="kt-p1"><b>8</b> chefs in the kitchen</span><span class="kt-ptx" id="kt-p2">Only <b>2 of 8</b> chefs cook</span></div>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w71) - 0.1 }};
-      const HAT = '<svg viewBox="0 0 100 100"><path d="M22 58 C8 56 6 34 22 30 C24 14 44 10 52 20 C60 8 82 12 80 30 C96 32 94 56 78 58 Z" fill="currentColor"/><rect x="26" y="61" width="48" height="20" rx="5" fill="currentColor"/></svg>';
-      const box = document.querySelector("#kt-hats");
-      const hats = [];
-      for (let i = 0; i < 8; i++) {
-        const d = document.createElement("div");
-        d.className = "kt-hat"; d.id = "kt-h" + i; d.innerHTML = HAT;
-        d.style.left = (115 + (i % 4) * 200) + "px"; d.style.top = (i < 4 ? 216 : 352) + "px";
-        box.appendChild(d); hats.push(d);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w71) - 0.1 }};
+      var row = document.querySelector("#kt-row"), chefs = [], wakes = [], sleeps = [];
+      for (var i = 0; i < 8; i++) {
+        var d = document.createElement("div"); d.className = "kt-c"; d.id = "kt-c" + i;
+        d.style.left = (16 + i * 115) + "px"; d.style.top = "176px";
+        d.innerHTML = '<div id="kt-s' + i + '">' + chef("kts" + i, SKINS[i], "sleep") + '</div><div id="kt-w' + i + '">' + chef("ktw" + i, SKINS[i], "cook") + '</div>';
+        row.appendChild(d); chefs.push(d);
       }
-      tl.fromTo("#kt-card", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
-      // "a kitchen with eight chefs": the brigade pops in, counter lands on "eight"
-      tl.fromTo(hats, { opacity: 0, y: 30, scale: 0.5 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(2.2)", stagger: 0.06 }, {{at:w73}} - S);
-      tl.fromTo("#kt-count", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, {{at:w75}} - S);
-      // "a head chef chooses": the head chef drops in
-      tl.fromTo("#kt-head", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.8)" }, {{at:w82}} - S);
-      tl.fromTo("#kt-headlbl", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w83}} - S);
-      // "just two": two chefs go green, the rest rest
-      const idle = hats.filter(function (h, i) { return i !== 1 && i !== 6; });
-      tl.to(idle, { opacity: 0.22, duration: 0.25 }, {{at:w86}} - S);
-      tl.to(["#kt-h1", "#kt-h6"], { color: "#2EE59D", scale: 1.18, duration: 0.3, ease: "back.out(2.4)" }, {{at:w86}} - S);
-      tl.fromTo("#kt-pick", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, {{at:w86}} - S);
-      tl.to("#kt-card", { opacity: 0, x: -60, duration: 0.2, ease: "power2.in" }, {{at:w87}} - S - 0.2);
+      document.querySelector("#kt-boss").innerHTML = chef("ktb", "#D9A07A", "boss", "#2F6FDB");
+      tl.set(["#kt-w0","#kt-w1","#kt-w2","#kt-w3","#kt-w4","#kt-w5","#kt-w6","#kt-w7"], { opacity: 0 }, 0);
+      tl.set(["#kt-p1", "#kt-p2"], { xPercent: -50, rotation: 1.5, opacity: 0 }, 0);
+      // "Imagine a kitchen": the storybook card swings in
+      tl.fromTo("#kt-card", { opacity: 0, y: -80, rotation: -8 }, { opacity: 1, y: 0, rotation: -1.6, duration: 0.55, ease: "back.out(1.4)" }, 0.02);
+      // "eight chefs": the brigade hops in, one by one
+      tl.fromTo(chefs, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)", stagger: 0.07 }, {{at:w74}} - S);
+      tl.fromTo("#kt-p1", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w75}} - S);
+      // "a head chef chooses": the boss and the speech bubble
+      tl.fromTo("#kt-boss", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.8)" }, {{at:w82}} - S - 0.1);
+      tl.fromTo("#kt-note", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "none" }, {{at:w82}} - S + 0.1);
+      tl.fromTo(["#kt-bub", "#kt-bubtail"], { opacity: 0, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, {{at:w84}} - S);
+      // "just two": two chefs wake up and glow, the rest keep snoozing
+      [2, 5].forEach(function (k) {
+        tl.to("#kt-s" + k, { opacity: 0, duration: 0.12 }, {{at:w86}} - S);
+        tl.to("#kt-w" + k, { opacity: 1, duration: 0.12 }, {{at:w86}} - S);
+        tl.fromTo("#kt-c" + k, { scale: 1, transformOrigin: "50% 100%" }, { scale: 1.2, duration: 0.3, ease: "back.out(2.5)" }, {{at:w86}} - S);
+      });
+      tl.to("#kt-p1", { opacity: 0, duration: 0.12 }, {{at:w85}} - S);
+      tl.fromTo("#kt-p2", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w85}} - S + 0.05);
+      tl.to(["#kt-card", "#kt-pill"], { opacity: 0, x: -120, rotation: -6, duration: 0.28, ease: "power3.in" }, {{at:w87}} - S - 0.25);
       window.__timelines["kitchen"] = tl;
     })();
   </script>

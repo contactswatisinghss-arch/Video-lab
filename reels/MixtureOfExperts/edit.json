@@ -1,7 +1,7 @@
 {
  "version": 2,
  "slug": "MixtureOfExperts",
- "title": "Mixture of Experts: why AI wakes only 2 of 8 chefs",
+ "title": "Mixture of Experts: 8 chefs, 2 cook (storybook + scrapbook)",
  "speed": 1.1,
  "cuts": {
   "max_pause": 0.3,
@@ -13,7 +13,7 @@
  "fixes": [
   ["Mistral model.", "Mixtral model."]
  ],
- "fonts": ["Bricolage Grotesque", "JetBrains Mono"],
+ "fonts": ["Fredoka", "Caveat"],
  "cover_at": 1.0,
  "audio": {"loudnorm": true},
  "post": {

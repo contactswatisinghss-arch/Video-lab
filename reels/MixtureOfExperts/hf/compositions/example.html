@@ -1,49 +1,56 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #ex-card { position: absolute; left: 60px; top: 190px; width: 960px; height: 500px; border-radius: 40px;
-      background: rgba(18,16,14,.9); border: 3px solid rgba(255,246,233,.12); }
-    #ex-kicker { position: absolute; left: 50px; top: 40px; font: 700 28px 'JetBrains Mono', monospace; color: rgba(255,246,233,.65); letter-spacing: .22em; }
-    #ex-name { position: absolute; left: 50px; top: 80px; font: 800 84px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.035em; }
-    #ex-name small { font: 700 28px 'JetBrains Mono', monospace; color: #FFB547; letter-spacing: .06em; margin-left: 18px; }
-    .ex-row { position: absolute; left: 50px; width: 860px; }
-    #ex-r1 { top: 210px; } #ex-r2 { top: 340px; }
-    .ex-lbl { font: 700 28px 'JetBrains Mono', monospace; color: rgba(255,246,233,.75); letter-spacing: .12em; }
-    .ex-track { position: relative; margin-top: 12px; width: 860px; height: 70px; border-radius: 16px; background: #2A2623; overflow: hidden; }
-    .ex-bar { position: absolute; left: 0; top: 0; height: 70px; border-radius: 16px; transform-origin: 0 50%; }
-    #ex-b1 { width: 860px; background: #5B6577; }
-    #ex-b2 { width: 238px; background: #2EE59D; }
-    .ex-val { position: absolute; right: 24px; top: 8px; font: 800 52px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; }
-    #ex-v2 { left: 262px; right: auto; color: #2EE59D; }
+    #ex-paper { position: absolute; left: 80px; top: 196px; width: 920px; height: 410px; background: #FFFDF7; box-shadow: 0 16px 30px rgba(0,0,0,.28);
+      background-image: radial-gradient(rgba(47,111,219,.16) 2px, transparent 2px); background-size: 34px 34px; }
+    .ex-tape { position: absolute; width: 130px; height: 42px; background: rgba(255,255,255,.72); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    #ex-kick { position: absolute; left: 46px; top: 26px; font: 700 48px 'Caveat', cursive; color: #2F6FDB; }
+    #ex-name { position: absolute; left: 46px; top: 76px; font: 700 84px/1 'Fredoka', sans-serif; color: #2B2B2B; }
+    #ex-by { position: absolute; left: 560px; top: 104px; font: 700 46px 'Caveat', cursive; color: #9A8F86; }
+    #ex-svg { position: absolute; left: 0; top: 0; width: 920px; height: 410px; overflow: visible; }
+    #ex-hl { position: absolute; left: 50px; top: 206px; width: 820px; height: 76px; }
+    #ex-hlfill { position: absolute; left: 0; top: 0; width: 226px; height: 76px; background: rgba(46,211,168,.75); transform-origin: 0 50%; border-radius: 6px; }
+    .ex-v { position: absolute; font: 700 56px 'Caveat', cursive; color: #2B2B2B; white-space: nowrap; }
+    #ex-v1 { left: 600px; top: 286px; }
+    #ex-v2 { left: 50px; top: 286px; color: #149C7B; }
   </style>
   <div id="root" data-composition-id="example" data-width="1080" data-height="1920">
-    <div id="ex-card">
-      <div id="ex-kicker">REAL EXAMPLE</div>
-      <div id="ex-name">Mixtral 8x7B<small>by Mistral AI</small></div>
-      <div class="ex-row" id="ex-r1"><div class="ex-lbl">TOTAL PARAMETERS</div>
-        <div class="ex-track"><div class="ex-bar" id="ex-b1"></div><div class="ex-val" id="ex-v1">~47B</div></div></div>
-      <div class="ex-row" id="ex-r2"><div class="ex-lbl">USED PER TOKEN</div>
-        <div class="ex-track"><div class="ex-bar" id="ex-b2"></div><div class="ex-val" id="ex-v2">~13B</div></div></div>
+    <div id="ex-paper">
+      <div id="ex-kick">real example</div>
+      <div id="ex-name">Mixtral 8x7B</div>
+      <div id="ex-by">by Mistral AI</div>
+      <div id="ex-hl"><div id="ex-hlfill"></div></div>
+      <svg id="ex-svg" viewBox="0 0 920 410">
+        <path id="ex-bar" pathLength="1" d="M50 208 C300 202 600 206 870 204 C874 230 872 260 868 282 C600 286 300 284 52 282 C48 258 48 230 50 208 Z"
+          stroke="#2B2B2B" stroke-width="6" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      </svg>
+      <div class="ex-v" id="ex-v1">~<span id="ex-n1">47</span>B total</div>
+      <div class="ex-v" id="ex-v2">~<span id="ex-n2">13</span>B used per word</div>
     </div>
+    <div class="ex-tape" id="ex-t1" style="left:56px;top:182px"></div>
+    <div class="ex-tape" id="ex-t2" style="left:900px;top:182px"></div>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w209) - 0.1 }};
-      const n1 = { v: 0 }, n2 = { v: 0 };
-      const v1 = document.querySelector("#ex-v1"), v2 = document.querySelector("#ex-v2");
-      tl.fromTo("#ex-card", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0);
-      tl.fromTo("#ex-name", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w213}} - S);
-      tl.fromTo(["#ex-r1", "#ex-r2"], { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.1 }, {{at:w215}} - S);
-      // "47 billion parameters": the full bar fills while the number counts
-      tl.fromTo("#ex-b1", { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power4.out" }, {{at:w218}} - S);
-      tl.fromTo(n1, { v: 0 }, { v: 47, duration: 0.8, ease: "power4.out",
-        onUpdate: function () { v1.textContent = "~" + Math.round(n1.v) + "B"; } }, {{at:w218}} - S);
-      // "only about 13 billion": the active slice, in green
-      tl.fromTo("#ex-b2", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power4.out" }, {{at:w225}} - S);
-      tl.fromTo(n2, { v: 0 }, { v: 13, duration: 0.6, ease: "power4.out",
-        onUpdate: function () { v2.textContent = "~" + Math.round(n2.v) + "B"; } }, {{at:w225}} - S);
-      tl.to("#ex-card", { opacity: 0, y: -30, duration: 0.2, ease: "power2.in" }, {{at:w230}} - S - 0.22);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w209) - 0.1 }};
+      var n1 = { v: 0 }, n2 = { v: 0 }, e1 = document.querySelector("#ex-n1"), e2 = document.querySelector("#ex-n2");
+      tl.set("#ex-t1", { rotation: -26 }, 0); tl.set("#ex-t2", { rotation: 24 }, 0);
+      tl.set(["#ex-v1", "#ex-v2", "#ex-name", "#ex-by"], { opacity: 0 }, 0);
+      tl.fromTo("#ex-paper", { opacity: 0, y: -40, rotation: 4 }, { opacity: 1, y: 0, rotation: -1.2, duration: 0.45, ease: "back.out(1.5)" }, 0.02);
+      tl.fromTo(["#ex-t1", "#ex-t2"], { opacity: 0 }, { opacity: 1, duration: 0.12, stagger: 0.08 }, 0.35);
+      // "Mixtral model"
+      tl.fromTo("#ex-name", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, {{at:w213}} - S);
+      tl.fromTo("#ex-by", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "none" }, {{at:w213}} - S + 0.3);
+      // "47 billion parameters": the full bar is drawn while the number counts up
+      tl.to("#ex-bar", { attr: { "stroke-dashoffset": 0 }, duration: 0.7, ease: "power1.inOut" }, {{at:w218}} - S);
+      tl.fromTo("#ex-v1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w218}} - S);
+      tl.fromTo(n1, { v: 0 }, { v: 47, duration: 0.7, ease: "power3.out", onUpdate: function () { e1.textContent = Math.round(n1.v); } }, {{at:w218}} - S);
+      // "only about 13 billion": a highlighter swipe covers just the used part
+      tl.fromTo("#ex-hlfill", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, {{at:w225}} - S);
+      tl.fromTo("#ex-v2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w225}} - S);
+      tl.fromTo(n2, { v: 0 }, { v: 13, duration: 0.5, ease: "power3.out", onUpdate: function () { e2.textContent = Math.round(n2.v); } }, {{at:w225}} - S);
+      tl.to(["#ex-paper", "#ex-t1", "#ex-t2"], { opacity: 0, x: 120, duration: 0.25, ease: "power3.in" }, {{at:w230}} - S - 0.25);
       window.__timelines["example"] = tl;
     })();
   </script>

@@ -1,36 +1,38 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #nm-glass { position: absolute; left: 60px; top: 200px; width: 960px; height: 420px; border-radius: 44px; overflow: hidden;
-      background: rgba(18,16,14,.62); backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2);
-      border: 2px solid rgba(255,246,233,.22); }
-    #nm-kicker { position: absolute; left: 0; top: 46px; width: 960px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
-      color: #FFB547; letter-spacing: .3em; }
-    #nm-t1, #nm-t2 { position: absolute; left: 0; width: 960px; text-align: center;
-      font: 800 132px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.045em; }
-    #nm-t1 { top: 100px; } #nm-t2 { top: 232px; }
-    #nm-t2 b { color: #2EE59D; font-weight: 800; }
-    #nm-sheen { position: absolute; top: -50px; left: 0; width: 220px; height: 520px;
-      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.22), rgba(255,255,255,0)); }
+    #nm-kick { position: absolute; left: 0; width: 1080px; top: 190px; text-align: center; font: 700 84px 'Caveat', cursive; color: #fff;
+      text-shadow: 0 2px 0 rgba(0,0,0,.35), 0 3px 12px rgba(0,0,0,.6); }
+    #nm-strip { position: absolute; left: 0; width: 1080px; top: 300px; text-align: center; }
+    #nm-striptx { display: inline-block; padding: 26px 50px 20px; background: #FFE15A; box-shadow: 0 14px 28px rgba(0,0,0,.25);
+      font: 700 80px/1 'Fredoka', sans-serif; color: #1F1A17; letter-spacing: .01em;
+      clip-path: polygon(0 6%, 3% 0, 20% 5%, 40% 0, 62% 6%, 80% 1%, 100% 5%, 98% 94%, 80% 100%, 58% 95%, 36% 100%, 18% 94%, 2% 100%); }
+    .nm-tape { position: absolute; width: 130px; height: 42px; background: rgba(255,255,255,.72); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    #nm-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 4px 8px rgba(0,0,0,.35)); }
   </style>
   <div id="root" data-composition-id="name" data-width="1080" data-height="1920">
-    <div id="nm-glass">
-      <div id="nm-kicker">ONE APPROACH IS CALLED</div>
-      <div id="nm-t1">Mixture</div>
-      <div id="nm-t2">of <b>Experts</b></div>
-      <div id="nm-sheen"></div>
-    </div>
+    <div id="nm-kick">one approach is called...</div>
+    <div id="nm-strip"><span id="nm-striptx">MIXTURE OF EXPERTS</span></div>
+    <div class="nm-tape" id="nm-t1" style="left:40px;top:296px"></div>
+    <div class="nm-tape" id="nm-t2" style="left:908px;top:286px"></div>
+    <svg id="nm-svg" viewBox="0 0 1080 1920">
+      <path id="nm-u" pathLength="1" d="M150 470 C400 452 690 460 930 448" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="nm-u2" pathLength="1" d="M200 494 C430 482 650 488 880 478" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="nm-sp1" pathLength="1" d="M80 560 l10 -26 l10 26 l26 10 l-26 10 l-10 26 l-10 -26 l-26 -10 z" stroke="#FFE15A" stroke-width="6" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="nm-sp2" pathLength="1" d="M990 570 l8 -20 l8 20 l20 8 l-20 8 l-8 20 l-8 -20 l-20 -8 z" stroke="#FFE15A" stroke-width="6" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+    </svg>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w64) - 0.1 }};
-      tl.fromTo("#nm-glass", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0);
-      tl.fromTo("#nm-kicker", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.1);
-      tl.fromTo("#nm-t1", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, {{at:w68}} - S);
-      tl.fromTo("#nm-t2", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power4.out" }, {{at:w70}} - S);
-      tl.fromTo("#nm-sheen", { x: -260, rotation: 18 }, { x: 1100, rotation: 18, duration: 0.7, ease: "power2.inOut" }, {{at:w70}} - S + 0.2);
-      tl.to("#nm-glass", { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, {{at:w71}} - S - 0.2);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w64) - 0.1 }};
+      tl.fromTo("#nm-kick", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "none" }, 0.05);
+      tl.fromTo("#nm-striptx", { opacity: 0, scale: 1.3, rotation: 5 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.32, ease: "power4.out" }, {{at:w68}} - S - 0.08);
+      tl.fromTo("#nm-t1", { opacity: 0, rotation: -40 }, { opacity: 1, rotation: -28, duration: 0.12 }, {{at:w68}} - S + 0.2);
+      tl.fromTo("#nm-t2", { opacity: 0, rotation: 40 }, { opacity: 1, rotation: 26, duration: 0.12 }, {{at:w68}} - S + 0.3);
+      tl.to(["#nm-u", "#nm-u2"], { attr: { "stroke-dashoffset": 0 }, duration: 0.35, stagger: 0.12, ease: "power1.inOut" }, {{at:w70}} - S);
+      tl.to(["#nm-sp1", "#nm-sp2"], { attr: { "stroke-dashoffset": 0 }, duration: 0.3, stagger: 0.1 }, {{at:w70}} - S + 0.2);
+      tl.to(["#nm-kick", "#nm-strip", "#nm-t1", "#nm-t2", "#nm-svg"], { opacity: 0, y: -24, duration: 0.2, ease: "power2.in" }, {{at:w71}} - S - 0.22);
       window.__timelines["name"] = tl;
     })();
   </script>

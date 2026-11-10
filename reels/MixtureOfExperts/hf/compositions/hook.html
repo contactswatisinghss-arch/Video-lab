@@ -1,47 +1,67 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #hk-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 760px;
-      background: linear-gradient(180deg, rgba(18,16,14,.86) 0%, rgba(18,16,14,.55) 55%, rgba(18,16,14,0) 100%); }
-    #hk-title { position: absolute; left: 0; top: 240px; width: 1080px; text-align: center;
-      font: 800 132px/0.92 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.045em; }
-    #hk-title .hk-l { display: block; }
-    #hk-title b { color: #FFB547; font-weight: 800; }
-    #hk-sub { position: absolute; left: 0; top: 182px; width: 1080px; text-align: center;
-      font: 700 34px 'JetBrains Mono', monospace; color: #2EE59D; letter-spacing: .14em; }
-    .hk-st { position: absolute; padding: 14px 26px; border-radius: 999px; border: 4px solid #FFB547;
-      background: rgba(18,16,14,.78); font: 700 38px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; white-space: nowrap; }
-    .hk-st.g { border-color: #2EE59D; }
-    #hk-s1 { left: 36px;  top: 640px; } #hk-s2 { left: 60px;  top: 780px; } #hk-s3 { left: 30px;  top: 920px; }
-    #hk-s4 { left: 772px; top: 650px; } #hk-s5 { left: 790px; top: 800px; } #hk-s6 { left: 760px; top: 940px; }
+    #hk-card { position: absolute; left: 62px; top: 176px; width: 956px; height: 420px; border-radius: 52px; background: #FFF5E6;
+      border: 12px solid #fff; box-shadow: 0 26px 50px rgba(60,40,20,.3); overflow: hidden; }
+    #hk-wall { position: absolute; left: 0; top: 0; width: 956px; height: 420px; background:
+      repeating-linear-gradient(0deg, transparent 0 58px, rgba(120,190,190,.28) 58px 61px),
+      repeating-linear-gradient(90deg, transparent 0 58px, rgba(120,190,190,.28) 58px 61px), #E8F6F3; }
+    #hk-counter { position: absolute; left: 0; width: 956px; top: 334px; height: 86px; background: #E9A15C; border-top: 10px solid #C98142; box-sizing: border-box; }
+    #hk-pill { position: absolute; left: 0; width: 1080px; top: 568px; text-align: center; }
+    #hk-pilltx { display: inline-block; padding: 14px 36px 16px; border-radius: 999px; background: #FFC93C; border: 6px solid #fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,.2); font: 700 64px 'Fredoka', sans-serif; color: #3B2F2A; }
+    #hk-pilltx b { color: #E2544B; font-weight: 700; }
+    #hk-sand { position: absolute; left: 412px; top: 262px; width: 132px; height: 88px; z-index: 3; }
+    .hk-c { position: absolute; top: 160px; width: 116px; height: 140px; }
+    #hk-doodle { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 4px 8px rgba(0,0,0,.35)); }
+    #hk-note { position: absolute; left: 0; width: 1080px; top: 236px; text-align: center; font: 700 96px/1.05 'Caveat', cursive; color: #fff;
+      text-shadow: 0 2px 0 rgba(0,0,0,.35), 0 3px 12px rgba(0,0,0,.6); }
+    #hk-note span { color: #FFE15A; }
   </style>
   <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
-    <div id="hk-scrim"></div>
-    <div id="hk-title"><span class="hk-l"><b>8</b> chefs.</span><span class="hk-l"><b>1</b> sandwich?</span></div>
-    <div id="hk-sub">AI DOES THIS ON PURPOSE</div>
-    <div class="hk-st" id="hk-s1">Experts</div>
-    <div class="hk-st g" id="hk-s2">Router</div>
-    <div class="hk-st" id="hk-s3">Tokens</div>
-    <div class="hk-st g" id="hk-s4">MoE</div>
-    <div class="hk-st" id="hk-s5">47B</div>
-    <div class="hk-st g" id="hk-s6">13B</div>
+    <div id="hk-card"><div id="hk-wall"></div><div id="hk-counter"></div><div id="hk-row"></div>
+      <svg id="hk-sand" viewBox="0 0 150 100">
+        <ellipse cx="75" cy="86" rx="70" ry="12" fill="#fff" stroke="#3B2F2A" stroke-width="3"/>
+        <path d="M18 70 Q75 50 132 70 L128 80 Q75 64 22 80 Z" fill="#F4C27A" stroke="#3B2F2A" stroke-width="3"/>
+        <path d="M14 62 q12 -8 24 0 q12 -8 24 0 q12 -8 24 0 q12 -8 24 0 q12 -8 24 0" fill="none" stroke="#5DBB63" stroke-width="7" stroke-linecap="round"/>
+        <rect x="20" y="52" width="110" height="10" rx="4" fill="#E2544B" stroke="#3B2F2A" stroke-width="2"/>
+        <path d="M16 50 Q75 14 134 50 Z" fill="#F4C27A" stroke="#3B2F2A" stroke-width="3"/>
+        <circle cx="55" cy="36" r="2.5" fill="#fff"/><circle cx="80" cy="30" r="2.5" fill="#fff"/><circle cx="98" cy="38" r="2.5" fill="#fff"/>
+      </svg>
+    </div>
+    <div id="hk-pill"><span id="hk-pilltx">Wake <b>8</b> chefs for <b>1</b> sandwich?</span></div>
+    <div id="hk-note">AI models do <span>the same trick</span></div>
+    <svg id="hk-doodle" viewBox="0 0 1080 1920">
+      <path id="hk-u" pathLength="1" d="M330 372 C470 360 640 366 760 356" stroke="#FFE15A" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="hk-bulb" pathLength="1" d="M150 330 C110 290 120 220 175 210 C232 200 260 262 222 300 C210 312 206 326 206 340 L170 340 C170 326 166 340 150 330 Z M172 356 L206 356 M176 372 L202 372 M120 196 L104 180 M190 186 L190 160 M258 200 L276 182" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+    </svg>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = 0;
-      // frame 0 is the thumbnail: the title is already there
-      tl.set(["#hk-scrim", "#hk-title"], { opacity: 1 }, 0);
-      const st = ["#hk-s1", "#hk-s4", "#hk-s2", "#hk-s5", "#hk-s3", "#hk-s6"];
-      const rot = [-7, 6, 4, -5, -3, 8];
-      st.forEach(function (id, i) {
-        tl.fromTo(id, { opacity: 0, scale: 0.4, rotation: 0 },
-          { opacity: 1, scale: 1, rotation: rot[i], duration: 0.38, ease: "back.out(2.4)" }, 0.12 + i * 0.09);
-      });
-      // "Some AI models use a similar trick": the stickers clear, the promise line lands
-      tl.to(st, { opacity: 0, scale: 0.7, duration: 0.2, ease: "power2.in", stagger: 0.03 }, {{at:w14}} - S - 0.1);
-      tl.fromTo("#hk-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w15}} - S);
-      tl.to(["#hk-title", "#hk-sub", "#hk-scrim"], { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w24}} - S - 0.2);
+      var tl = gsap.timeline({ paused: true });
+      var S = 0;
+      var row = document.querySelector("#hk-row"), chefs = [];
+      for (var i = 0; i < 8; i++) {
+        var d = document.createElement("div"); d.className = "hk-c"; d.id = "hk-c" + i;
+        d.style.left = (16 + i * 115) + "px";
+        d.innerHTML = chef("hk" + i, SKINS[i], "sleep");
+        row.appendChild(d); chefs.push(d);
+      }
+      // frame 0 is the thumbnail: card + question are already on screen
+      tl.set(["#hk-card", "#hk-pill"], { opacity: 1 }, 0);
+      tl.fromTo("#hk-card", { rotation: -1.6, y: 0 }, { rotation: -1.6, y: 0, duration: 0.01 }, 0);
+      tl.fromTo("#hk-pilltx", { rotation: 1.5 }, { rotation: 1.5, duration: 0.01 }, 0);
+      // "an entire team of chefs": the sleepy brigade wobbles
+      tl.fromTo(chefs, { y: 0 }, { y: -14, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, stagger: 0.05 }, {{at:w5}} - S);
+      // "one sandwich": the sandwich bounces
+      tl.fromTo("#hk-sand", { scale: 1, transformOrigin: "50% 100%" }, { scale: 1.25, duration: 0.16, ease: "power2.out", yoyo: true, repeat: 1 }, {{at:w13}} - S);
+      // "Some AI models use a similar trick": card flips away, the wall gets a handwritten note
+      tl.to(["#hk-card", "#hk-pill"], { y: -60, opacity: 0, rotation: -6, duration: 0.3, ease: "power3.in" }, {{at:w14}} - S - 0.25);
+      tl.fromTo("#hk-note", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.8, ease: "none" }, {{at:w15}} - S);
+      tl.to("#hk-u", { attr: { "stroke-dashoffset": 0 }, duration: 0.4, ease: "power1.inOut" }, {{at:w19}} - S);
+      tl.to("#hk-bulb", { attr: { "stroke-dashoffset": 0 }, duration: 0.7, ease: "power1.inOut" }, {{at:w19}} - S);
+      tl.to(["#hk-note", "#hk-doodle"], { opacity: 0, duration: 0.2, ease: "power2.in" }, {{at:w24}} - S - 0.25);
       window.__timelines["hook"] = tl;
     })();
   </script>

@@ -23,9 +23,40 @@
       background: radial-gradient(42% 24% at 50% 40%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 100%); mix-blend-mode: soft-light; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      // Original cartoon chef in SVG. state: sleep | cook | boss. uid keeps gradient ids unique.
+      window.chef = function chef(uid, skin, state, coat) {
+        var ink = "#3B2F2A";
+        var hat = '<path d="M22 42 C8 40 6 18 24 16 C26 2 46 -2 54 10 C62 -2 84 2 82 18 C98 20 96 42 80 42 Z" fill="#fff" stroke="' + ink + '" stroke-width="3"/>' +
+          '<rect x="25" y="38" width="52" height="14" rx="4" fill="#fff" stroke="' + ink + '" stroke-width="3"/>';
+        var face = '<circle cx="51" cy="74" r="27" fill="' + skin + '" stroke="' + ink + '" stroke-width="3"/>' +
+          '<circle cx="36" cy="82" r="5" fill="#FF8FA3" opacity=".55"/><circle cx="66" cy="82" r="5" fill="#FF8FA3" opacity=".55"/>';
+        var eyes, mouth, deco = "", glow = "", board = "";
+        if (state === "sleep") {
+          eyes = '<path d="M37 72 q5 5 10 0 M55 72 q5 5 10 0" stroke="' + ink + '" stroke-width="3" fill="none" stroke-linecap="round"/>';
+          mouth = '<circle cx="51" cy="86" r="3" fill="' + ink + '"/>';
+          deco = '<text x="80" y="40" font-family="Fredoka" font-weight="700" font-size="20" fill="#7C8BA1">z</text><text x="90" y="26" font-family="Fredoka" font-weight="700" font-size="14" fill="#7C8BA1">z</text>';
+        } else {
+          eyes = '<circle cx="42" cy="71" r="4" fill="' + ink + '"/><circle cx="60" cy="71" r="4" fill="' + ink + '"/><circle cx="43.5" cy="69.5" r="1.4" fill="#fff"/><circle cx="61.5" cy="69.5" r="1.4" fill="#fff"/>';
+          mouth = '<path d="M41 83 q10 10 20 0" stroke="' + ink + '" stroke-width="3" fill="#C2414B" stroke-linecap="round"/>';
+        }
+        if (state === "cook") glow = '<circle cx="51" cy="74" r="50" fill="url(#' + uid + '-g)"/>' +
+          '<path d="M10 30 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 z" fill="#FFC93C"/>' +
+          '<path d="M88 60 l3 -7 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 z" fill="#FFC93C"/>';
+        if (state === "boss") board = '<rect x="72" y="96" width="26" height="32" rx="3" fill="#C98A4B" stroke="' + ink + '" stroke-width="3"/><rect x="77" y="102" width="16" height="3" fill="#fff"/><rect x="77" y="109" width="16" height="3" fill="#fff"/><rect x="77" y="116" width="10" height="3" fill="#fff"/>';
+        var body = '<path d="M24 128 C24 108 34 100 51 100 C68 100 78 108 78 128 Z" fill="' + (coat || "#fff") + '" stroke="' + ink + '" stroke-width="3"/>' +
+          '<circle cx="51" cy="112" r="2.6" fill="' + ink + '"/><circle cx="51" cy="121" r="2.6" fill="' + ink + '"/>';
+        return '<svg viewBox="-10 -10 120 145" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">' +
+          '<defs><radialGradient id="' + uid + '-g"><stop offset="0" stop-color="#FFE27A" stop-opacity=".95"/><stop offset="1" stop-color="#FFE27A" stop-opacity="0"/></radialGradient></defs>' +
+          glow + body + face + eyes + mouth + hat + deco + board + '</svg>';
+      }
+      window.SKINS = ["#F2C29B", "#C68863", "#8D5A3B", "#F5D3B3", "#B87A55", "#E8B48C", "#9B6545", "#F0C8A4"];
+    })();
+  </script>
 </head>
 <body>
-  <!-- Mixture of Experts: kitchen-brigade look. Saffron = the head chef / router, green = an expert that is cooking. -->
+  <!-- Mixture of Experts v3: storybook kitchen cards for the analogy + marker doodles and scrapbook paper on the wall for the explanation. -->
   <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
        data-width="1080" data-height="1920" data-fps="30">
 

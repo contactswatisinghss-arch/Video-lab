@@ -1,57 +1,54 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #pb-card { position: absolute; left: 70px; top: 190px; width: 940px; height: 470px; border-radius: 40px;
-      background: rgba(18,16,14,.88); border: 3px solid rgba(255,246,233,.12); overflow: hidden; }
-    #pb-head { position: absolute; left: 50px; top: 38px; font: 800 58px/1 'Bricolage Grotesque', 'Inter', sans-serif;
-      color: #FFF6E9; letter-spacing: -.03em; }
-    #pb-head2 { position: absolute; left: 50px; top: 38px; font: 800 58px/1 'Bricolage Grotesque', 'Inter', sans-serif;
-      color: #FFF6E9; letter-spacing: -.03em; opacity: 0; }
-    #pb-head2 b { color: #FFB547; }
-    #pb-grid { position: absolute; left: 50px; top: 140px; width: 560px; height: 280px; }
-    .pb-n { position: absolute; width: 52px; height: 52px; border-radius: 14px; background: #2A2623; }
-    #pb-meter { position: absolute; left: 660px; top: 140px; width: 230px; height: 280px; }
-    #pb-mlabel { position: absolute; left: 0; top: 0; width: 230px; text-align: center; font: 700 28px 'JetBrains Mono', monospace;
-      color: rgba(255,246,233,.7); letter-spacing: .14em; }
-    #pb-tube { position: absolute; left: 75px; top: 46px; width: 80px; height: 200px; border-radius: 20px; background: #2A2623; overflow: hidden; }
-    #pb-fill { position: absolute; left: 0; bottom: 0; width: 80px; height: 200px; background: linear-gradient(0deg, #FFB547, #FF3B4E);
-      transform-origin: 50% 100%; }
-    #pb-mval { position: absolute; left: 0; top: 252px; width: 230px; text-align: center; font: 800 30px 'JetBrains Mono', monospace; color: #FF3B4E; }
+    #pb-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 4px 8px rgba(0,0,0,.35)); }
+    .pb-t { font-family: 'Caveat', cursive; font-weight: 700; fill: #fff; }
   </style>
   <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
-    <div id="pb-card">
-      <div id="pb-head">Bigger model = more work</div>
-      <div id="pb-head2">Grow it, but <b>wake fewer?</b></div>
-      <div id="pb-grid"></div>
-      <div id="pb-meter"><div id="pb-mlabel">COMPUTE</div><div id="pb-tube"><div id="pb-fill"></div></div><div id="pb-mval">MAX</div></div>
-    </div>
+    <svg id="pb-svg" viewBox="0 0 1080 1920">
+      <!-- hand-drawn model outline -->
+      <path id="pb-box" pathLength="1" d="M118 214 C380 196 700 204 962 212 C972 330 968 460 958 572 C700 584 380 580 122 570 C110 450 112 330 118 214 Z"
+        stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <text id="pb-lbl" class="pb-t" x="150" y="284" font-size="74">big AI model</text>
+      <g id="pb-dots"></g>
+      <!-- bolt + compute note -->
+      <path id="pb-bolt" pathLength="1" d="M846 250 L800 340 L846 340 L806 440" stroke="#FFE15A" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <text id="pb-cost" class="pb-t" x="560" y="548" font-size="78" fill="#FFE15A" style="fill:#FFE15A">= tons of compute</text>
+      <text id="pb-q" class="pb-t" x="500" y="284" font-size="72" text-anchor="middle">grow it... but wake fewer?</text>
+      <path id="pb-qm" pathLength="1" d="M900 260 C900 220 960 220 960 262 C960 296 928 296 928 330 M928 360 L928 364" stroke="#FF6B6B" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+    </svg>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w41) - 0.1 }};
-      // 8 x 4 grid of "parts of the model": deterministic layout, built once
-      const grid = document.querySelector("#pb-grid");
-      const cells = [];
-      for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) {
-        const d = document.createElement("div");
-        d.className = "pb-n"; d.id = "pb-n" + (r * 8 + c);
-        d.style.left = (c * 70) + "px"; d.style.top = (r * 70) + "px";
-        grid.appendChild(d); cells.push(d);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w41) - 0.1 }};
+      var NS = "http://www.w3.org/2000/svg", g = document.querySelector("#pb-dots"), dots = [];
+      for (var r = 0; r < 3; r++) for (var c = 0; c < 8; c++) {
+        var e = document.createElementNS(NS, "circle");
+        e.setAttribute("id", "pb-d" + (r * 8 + c));
+        e.setAttribute("cx", 196 + c * 88); e.setAttribute("cy", 334 + r * 72); e.setAttribute("r", 22);
+        e.setAttribute("stroke", "#fff"); e.setAttribute("stroke-width", "6"); e.setAttribute("fill", "rgba(255,255,255,0)");
+        g.appendChild(e); dots.push(e);
       }
-      tl.fromTo("#pb-card", { opacity: 0, y: -40, rotationX: 12 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.5, ease: "expo.out" }, 0);
-      tl.fromTo(cells, { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)", stagger: 0.012 }, 0.15);
-      // "enormous computing power": every part lights, the meter slams up
-      tl.to(cells, { backgroundColor: "#FF3B4E", duration: 0.12, stagger: { each: 0.018, from: "start" } }, {{at:w46}} - S);
-      tl.fromTo("#pb-fill", { scaleY: 0.05 }, { scaleY: 1, duration: 0.7, ease: "power4.out" }, {{at:w46}} - S);
-      tl.fromTo("#pb-mval", { opacity: 0 }, { opacity: 1, duration: 0.15 }, {{at:w47}} - S);
-      // "So how do we grow a model ...": question replaces the headline
-      tl.to("#pb-head", { opacity: 0, y: -20, duration: 0.18, ease: "power2.in" }, {{at:w49}} - S);
-      tl.fromTo("#pb-head2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w49}} - S + 0.12);
-      // "every part work on every calculation": a sweep re-lights the whole grid twice
-      tl.fromTo(cells, { backgroundColor: "#2A2623" }, { backgroundColor: "#FF3B4E", duration: 0.1, stagger: { each: 0.012, from: "start" } }, {{at:w58}} - S);
-      tl.fromTo(cells, { backgroundColor: "#2A2623" }, { backgroundColor: "#FF3B4E", duration: 0.1, stagger: { each: 0.012, from: "end" } }, {{at:w62}} - S);
-      tl.to("#pb-card", { opacity: 0, scale: 0.94, duration: 0.18, ease: "power2.in" }, {{at:w64}} - S - 0.25);
+      tl.set("#pb-cost", { opacity: 0 }, 0); tl.set("#pb-q", { opacity: 0 }, 0);
+      // "Bigger AI models": the model is sketched on the wall
+      tl.to("#pb-box", { attr: { "stroke-dashoffset": 0 }, duration: 0.6, ease: "power1.inOut" }, 0.05);
+      tl.fromTo("#pb-lbl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.3);
+      tl.fromTo(dots, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)", stagger: 0.015 }, 0.4);
+      // "enormous computing power": every part lights up, a bolt, the cost
+      tl.to(dots, { attr: { fill: "#FF6B6B" }, duration: 0.1, stagger: 0.02 }, {{at:w46}} - S);
+      tl.to("#pb-bolt", { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, {{at:w46}} - S);
+      tl.fromTo("#pb-cost", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "none" }, {{at:w47}} - S);
+      // "So how do we grow a model": everything calms down, the question is written in
+      tl.to(dots, { attr: { fill: "rgba(255,255,255,0)" }, duration: 0.2 }, {{at:w49}} - S);
+      tl.to(["#pb-lbl", "#pb-cost", "#pb-bolt"], { opacity: 0, duration: 0.2 }, {{at:w49}} - S);
+      tl.fromTo("#pb-q", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.9, ease: "none" }, {{at:w50}} - S);
+      // "every part work on every calculation": two sweeps of red
+      tl.to(dots, { attr: { fill: "#FF6B6B" }, duration: 0.08, stagger: 0.012 }, {{at:w58}} - S);
+      tl.to(dots, { attr: { fill: "rgba(255,255,255,0)" }, duration: 0.08, stagger: 0.012 }, {{at:w60}} - S);
+      tl.to(dots, { attr: { fill: "#FF6B6B" }, duration: 0.08, stagger: { each: 0.012, from: "end" } }, {{at:w62}} - S);
+      tl.to("#pb-qm", { attr: { "stroke-dashoffset": 0 }, duration: 0.4, ease: "power1.inOut" }, {{at:w63}} - S);
+      tl.to("#pb-svg", { opacity: 0, duration: 0.2, ease: "power2.in" }, {{at:w64}} - S - 0.25);
       window.__timelines["problem"] = tl;
     })();
   </script>

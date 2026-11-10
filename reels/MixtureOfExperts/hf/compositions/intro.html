@@ -1,28 +1,50 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    #in-badge { position: absolute; left: 50%; top: 210px; transform-origin: 50% 50%;
-      padding: 18px 34px 16px; border-radius: 22px; background: #FFB547; color: #12100E; white-space: nowrap;
-      font: 800 46px/1 'Bricolage Grotesque', 'Inter', sans-serif; letter-spacing: -.01em; }
-    #in-badge small { display: block; margin-bottom: 8px; font: 700 28px 'JetBrains Mono', monospace; letter-spacing: .22em; opacity: .75; }
-    #in-tag { position: absolute; left: 56px; top: 1000px; padding: 20px 30px 18px 26px; border-left: 8px solid #2EE59D;
-      border-radius: 0 20px 20px 0; background: rgba(18,16,14,.84); }
-    #in-name { font: 800 64px/1 'Bricolage Grotesque', 'Inter', sans-serif; color: #FFF6E9; letter-spacing: -.02em; }
-    #in-role { margin-top: 8px; font: 700 28px 'JetBrains Mono', monospace; color: #2EE59D; letter-spacing: .08em; }
+    #in-paper { position: absolute; left: 40px; top: 940px; width: 400px; white-space: nowrap; padding: 22px 26px 20px; box-sizing: border-box; background: #FFFDF7;
+      box-shadow: 0 12px 26px rgba(0,0,0,.28);
+      clip-path: polygon(0 4%, 6% 0, 30% 3%, 55% 0, 80% 4%, 100% 1%, 98% 96%, 74% 100%, 50% 97%, 24% 100%, 2% 97%); }
+    #in-name { font: 700 64px/1 'Fredoka', sans-serif; color: #2B2B2B; }
+    #in-role { margin-top: 6px; font: 700 54px/1 'Caveat', cursive; color: #2F6FDB; }
+    #in-tape1 { position: absolute; left: 150px; top: 920px; width: 120px; height: 38px; background: rgba(255,255,255,.7); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    #in-strip { position: absolute; left: 0; width: 1080px; top: 214px; text-align: center; }
+    #in-striptx { display: inline-block; padding: 20px 44px 16px; background: #FFE15A; box-shadow: 0 12px 24px rgba(0,0,0,.22);
+      font: 700 64px/1 'Fredoka', sans-serif; color: #1F1A17;
+      clip-path: polygon(0 6%, 3% 0, 20% 5%, 40% 0, 62% 6%, 80% 1%, 100% 5%, 98% 94%, 80% 100%, 58% 95%, 36% 100%, 18% 94%, 2% 100%); }
+    #in-kick { position: absolute; left: 0; width: 1080px; top: 326px; text-align: center; font: 700 84px 'Caveat', cursive; color: #fff;
+      text-shadow: 0 2px 0 rgba(0,0,0,.35), 0 3px 12px rgba(0,0,0,.6); }
+    #in-tape2 { position: absolute; left: 80px; top: 200px; width: 120px; height: 38px; background: rgba(255,255,255,.7); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    #in-tape3 { position: absolute; left: 880px; top: 196px; width: 120px; height: 38px; background: rgba(255,255,255,.7); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    #in-doodle { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 4px 8px rgba(0,0,0,.35)); }
   </style>
   <div id="root" data-composition-id="intro" data-width="1080" data-height="1920">
-    <div id="in-badge"><small>SERIES</small>AI explained like you're 5</div>
-    <div id="in-tag"><div id="in-name">Swati</div><div id="in-role">TECH LEAD · AWS</div></div>
+    <div id="in-paper"><div id="in-name">Swati</div><div id="in-role">tech lead @ AWS</div></div>
+    <div id="in-tape1"></div>
+    <div id="in-kick">welcome to my series</div>
+    <div id="in-strip"><span id="in-striptx">AI explained like you're 5</span></div>
+    <div id="in-tape2"></div><div id="in-tape3"></div>
+    <svg id="in-doodle" viewBox="0 0 1080 1920">
+      <path id="in-s1" pathLength="1" d="M90 440 l10 -28 l10 28 l28 10 l-28 10 l-10 28 l-10 -28 l-28 -10 z" stroke="#FFE15A" stroke-width="6" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="in-s2" pathLength="1" d="M960 430 l8 -22 l8 22 l22 8 l-22 8 l-8 22 l-8 -22 l-22 -8 z" stroke="#fff" stroke-width="6" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="in-s3" pathLength="1" d="M960 520 C990 540 1000 580 980 610" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+    </svg>
   </div>
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
-      const S = {{= at(w24) - 0.05 }};
-      tl.fromTo("#in-badge", { opacity: 0, xPercent: -50, y: -30, rotation: -4 },
-        { opacity: 1, xPercent: -50, y: 0, rotation: -2, duration: 0.45, ease: "back.out(2)" }, {{at:w33}} - S);
-      tl.fromTo("#in-tag", { opacity: 0, x: -120 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, {{at:w26}} - S - 0.1);
-      tl.fromTo("#in-role", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w27}} - S);
-      tl.to(["#in-badge", "#in-tag"], { opacity: 0, y: -12, duration: 0.18, ease: "power2.in" }, {{at:w41}} - S - 0.2);
+      var tl = gsap.timeline({ paused: true });
+      var S = {{= at(w24) - 0.05 }};
+      // "Hi, I'm Swati": a torn paper name label gets taped on
+      tl.fromTo("#in-paper", { opacity: 0, x: -80, rotation: -10 }, { opacity: 1, x: 0, rotation: -3, duration: 0.45, ease: "back.out(1.6)" }, {{at:w25}} - S - 0.15);
+      tl.fromTo("#in-tape1", { opacity: 0, scale: 1.4, rotation: -20 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.18, ease: "power2.out" }, {{at:w25}} - S + 0.25);
+      tl.fromTo("#in-role", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "none" }, {{at:w27}} - S);
+      // "Welcome to my series": handwritten kicker, then the yellow strip slaps on with tape
+      tl.fromTo("#in-kick", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "none" }, {{at:w31}} - S);
+      tl.fromTo("#in-striptx", { opacity: 0, scale: 1.25, rotation: 4 }, { opacity: 1, scale: 1, rotation: -2.5, duration: 0.3, ease: "power4.out" }, {{at:w36}} - S - 0.1);
+      tl.fromTo(["#in-tape2", "#in-tape3"], { opacity: 0 }, { opacity: 1, duration: 0.12, stagger: 0.08 }, {{at:w36}} - S + 0.15);
+      tl.set("#in-tape2", { rotation: -24 }, 0); tl.set("#in-tape3", { rotation: 22 }, 0);
+      tl.to(["#in-s1", "#in-s2", "#in-s3"], { attr: { "stroke-dashoffset": 0 }, duration: 0.35, stagger: 0.12, ease: "power1.inOut" }, {{at:w38}} - S);
+      tl.to(["#in-paper", "#in-tape1"], { opacity: 0, x: -40, duration: 0.2, ease: "power2.in" }, {{at:w31}} - S - 0.2);
+      tl.to(["#in-strip", "#in-kick", "#in-tape2", "#in-tape3", "#in-doodle"], { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, {{at:w41}} - S - 0.25);
       window.__timelines["intro"] = tl;
     })();
   </script>
