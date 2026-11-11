@@ -1,12 +1,12 @@
 {
   "state": "running",
-  "current": "references fusion-sun-yt",
+  "current": "references fusion-tokamak-yt",
   "pending": [
     "prepare NuclearFusion",
     "references fusion-yt",
     "references fusion-sun-yt",
     "references fusion-tokamak-yt"
   ],
-  "time": "2026-11-11 08:26:41 UTC",
+  "time": "2026-11-11 08:26:56 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42979249902"
 }
