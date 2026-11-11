@@ -2,8 +2,8 @@
   "slug": "NuclearFusion",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-11 09:28:22 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42990322843",
+  "time": "2026-11-11 09:46:41 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42994015554",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NuclearFusion",
   "prepare": {
     "stage": "prepare",
@@ -50,29 +50,26 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-11 09:28:22 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-11 09:46:41 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-11 09:28:22 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42990322843",
-    "hash": "0f59977679d05b6f",
+    "time": "2026-11-11 09:46:41 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42994015554",
+    "hash": "3f8ec715330f4877",
     "check": {
       "parsed": true,
       "ok": true,
       "errors": 0,
-      "warnings": 18,
+      "warnings": 16,
       "top_errors": [],
       "top_warnings": [
-        {
-          "severity": "warning",
-          "code": "gsap_timeline_set_initial_hide",
-          "message": "Initial hidden state for \"#hk-mini, #hk-orbit, #hk-orbitline\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
-          "selector": "#hk-mini, #hk-orbit, #hk-orbitline",
-          "time": 0,
-          "section": "findings"
-        },
         {
           "severity": "warning",
           "code": "escaped_container",
@@ -155,14 +152,6 @@
         },
         {
           "severity": "warning",
-          "code": "line_unread",
-          "message": "\"≈ 7× hotter\" (2 words) is on screen 0.30 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
-          "selector": "#ht-x",
-          "time": 44.807,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
           "code": "text_below_floor",
           "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"PRINCETON PLASMA PHYSICS LAB · PRINCETON UNIV...\" renders at 26 px for 4.86 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
           "selector": "#pc-src",
@@ -180,9 +169,9 @@
         {
           "severity": "warning",
           "code": "line_unread",
-          "message": "\"per control cycle · faster than a blink\" (7 words) is on screen 0.93 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+          "message": "\"per control cycle · faster than a blink\" (7 words) is on screen 1.56 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
           "selector": "#lp-msl",
-          "time": 77.637,
+          "time": 77.008,
           "section": "findings"
         },
         {
@@ -213,7 +202,7 @@
     },
     "hf_version": "0.9.33",
     "snapshot_ok": true,
-    "render_seconds": 834,
+    "render_seconds": 648,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview.mp4"
   }
 }
