@@ -1,13 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "final Anthropic",
-    "final MixtureOfExperts"
+  "state": "running",
+  "current": "references style-05-aiwithunnati",
+  "pending": [
+    "references style-05-aiwithunnati"
   ],
-  "done": [
-    "final Anthropic",
-    "final MixtureOfExperts"
-  ],
-  "time": "2026-11-10 09:24:39 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42779691333"
+  "time": "2026-11-11 04:49:13 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42961566765"
 }
