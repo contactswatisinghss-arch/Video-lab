@@ -27,7 +27,7 @@
   #sn-eq { position: absolute; left: 0; right: 0; top: 940px; text-align: center; font: 800 54px 'Unbounded'; color: #FFF3E2; opacity: 0; }
   #sn-eq b { color: #FFC24A; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="sun" data-width="1080" data-height="1920"><div id="sn-all" style="position:absolute;inset:0">
   <div id="sn-bg"></div><div id="sn-corona"></div>
   <div id="sn-disc"><div id="sn-gran"></div></div>
   <div id="sn-q">How does the<br>Sun make energy?</div>
@@ -38,12 +38,13 @@
     <div id="sn-flash"></div><div id="sn-he">He</div>
     <div id="sn-eq">H + H → He + <b>ENERGY</b></div>
   </div>
-</div>
+</div></div>
 <script>
+(function () {
   const S = {{at:w84}} - 0.05;
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#root", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power1.out" }, 0)
+  tl.fromTo("#sn-all", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power1.out" }, 0)
     .fromTo("#sn-q", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.05)
     .fromTo(["#sn-disc", "#sn-corona"], { scale: 0.35 }, { scale: 1, duration: 0.9, ease: "expo.out" }, t({{at:w88}}) - 0.1)
     .fromTo("#sn-gran", { rotation: 0 }, { rotation: 14, duration: t({{at:w92}}) + 0.2, ease: "none" }, 0)
@@ -63,7 +64,8 @@
     .fromTo("#sn-r2", { opacity: 1, scale: 0.6 }, { opacity: 0, scale: 4.2, duration: 1.0, ease: "power2.out" }, t({{at:w100}}))
     .fromTo("#sn-r3", { opacity: 1, scale: 0.6 }, { opacity: 0, scale: 4.2, duration: 1.0, ease: "power2.out" }, t({{at:w101}}))
     .fromTo("#sn-eq", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t({{at:w99}}))
-    .to("#root", { opacity: 0, duration: 0.2, ease: "power2.in" }, t({{at:w104}}) - 0.2);
+    .to("#sn-all", { opacity: 0, duration: 0.2, ease: "power2.in" }, t({{at:w104}}) - 0.2);
   window.__timelines["sun"] = tl;
+})();
 </script>
 </template>

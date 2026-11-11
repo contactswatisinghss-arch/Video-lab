@@ -15,7 +15,7 @@
   #rp-l { left: 90px; } #rp-r { right: 90px; }
   #rp-foot { position: absolute; left: 0; right: 0; bottom: 34px; text-align: center; font: 600 36px 'Space Grotesk'; color: #FFC24A; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="repel" data-width="1080" data-height="1920">
   <div id="rp-card">
     <div id="rp-chip">THE CHALLENGE</div>
     <div id="rp-h">+ repels +</div>
@@ -25,6 +25,7 @@
   </div>
 </div>
 <script>
+(function () {
   const S = {{at:w141}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -45,5 +46,6 @@
     .fromTo("#rp-foot", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.25 }, t({{at:w157}}))
     .to("#rp-card", { opacity: 0, scale: 1.08, filter: "blur(10px)", duration: 0.22, ease: "power3.in" }, t({{at:w161}}) - 0.24);
   window.__timelines["repel"] = tl;
+})();
 </script>
 </template>

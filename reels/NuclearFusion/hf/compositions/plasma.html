@@ -9,7 +9,7 @@
   #pl-hot { left: 150px; color: #1B0830; background: #FFC24A; box-shadow: 0 0 22px rgba(255,190,70,.8); }
   #pl-conf { right: 150px; color: #1B0830; background: #E9D2FF; box-shadow: 0 0 22px rgba(190,120,255,.8); }
 </style>
-<div id="root">
+<div id="root" data-composition-id="plasma" data-width="1080" data-height="1920">
   <div id="pl-pill"><span id="pl-name">PLASMA</span></div>
   <div id="pl-sub">the 4th state of matter</div>
   <svg id="pl-svg" width="1080" height="1200" viewBox="0 0 1080 1200" fill="none" stroke-linecap="round">
@@ -22,6 +22,7 @@
   <div class="pl-tag" id="pl-conf">KEEP IT IN</div>
 </div>
 <script>
+(function () {
   const S = {{at:w178}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -34,5 +35,6 @@
     .to(["#pl-pill", "#pl-sub", "#pl-hot", "#pl-conf"], { opacity: 0, y: -30, filter: "blur(8px)", duration: 0.2, stagger: 0.03, ease: "power3.in" }, t({{at:w205}}) - 0.3)
     .to(paths, { opacity: 0, duration: 0.2 }, t({{at:w205}}) - 0.3);
   window.__timelines["plasma"] = tl;
+})();
 </script>
 </template>

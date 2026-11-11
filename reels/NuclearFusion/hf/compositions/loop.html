@@ -13,7 +13,7 @@
   #lp-dot { position: absolute; left: 0; top: 0; width: 26px; height: 26px; margin: -13px; border-radius: 50%; background: #FFC24A;
     box-shadow: 0 0 20px #FFC24A; opacity: 0; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="loop" data-width="1080" data-height="1920">
   <div id="lp-card">
     <svg id="lp-svg" width="960" height="520" viewBox="0 0 960 520" fill="none">
       <ellipse id="lp-ring" cx="480" cy="270" rx="300" ry="190" stroke="#5A3F80" stroke-width="5" stroke-dasharray="12 12"/>
@@ -27,6 +27,7 @@
   </div>
 </div>
 <script>
+(function () {
   const S = {{at:w265}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -43,5 +44,6 @@
     .fromTo(["#lp-ms", "#lp-msl"], { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.1, ease: "back.out(1.8)" }, t({{at:w277}}) - 0.1)
     .to("#lp-card", { opacity: 0, y: -40, filter: "blur(10px)", duration: 0.2, ease: "power3.in" }, t({{at:w297}}) - 0.22);
   window.__timelines["loop"] = tl;
+})();
 </script>
 </template>
