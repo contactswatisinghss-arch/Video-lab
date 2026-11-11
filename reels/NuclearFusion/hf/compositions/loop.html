@@ -41,7 +41,7 @@
     .fromTo("#lp-dot", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.3)
     .fromTo(d, { a: -1.5708 }, { a: -1.5708 + 6.2832 * 2, duration: t({{at:w297}}) - 0.6, ease: "none",
        onUpdate: () => gsap.set("#lp-dot", { x: 480 + Math.cos(d.a) * 300, y: 270 + Math.sin(d.a) * 190 }) }, 0.3)
-    .fromTo(["#lp-ms", "#lp-msl"], { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.1, ease: "back.out(1.8)" }, t({{at:w277}}) - 0.1)
+    .fromTo(["#lp-ms", "#lp-msl"], { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.1, ease: "back.out(1.8)" }, t({{at:w274}}) + 0.1)
     .to("#lp-card", { opacity: 0, y: -40, filter: "blur(10px)", duration: 0.2, ease: "power3.in" }, t({{at:w297}}) - 0.22);
   window.__timelines["loop"] = tl;
 })();
