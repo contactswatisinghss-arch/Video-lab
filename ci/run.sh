@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Entry point for the Reels workflow. Installs tools, then ci/bgjobs.py (jobs.py + background removal) works out what is pending and does it.
+# Then ci/sfx.py adds the sound-effects variant (preview_sfx.mp4 / final_reel_sfx.mp4) for reels that have a sfx.json.
 set -uo pipefail
 set -a; source ci/config.env; set +a
 mkdir -p _out
@@ -12,4 +13,5 @@ echo "::endgroup::"
 python ci/bgjobs.py
 status=$?
 echo "bgjobs.py exit $status"
+python ci/sfx.py || echo "sfx.py failed (clean videos are unaffected)"
 exit $status

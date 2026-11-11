@@ -1,0 +1,23 @@
+{"cues": [
+  ["shimmer", 0.05, -4],
+  ["hit", {{at:w1}}, -3], ["hit", {{= at(w1) + 0.35 }}, -3], ["hit", {{= at(w1) + 0.7 }}, -3],
+  ["whoosh", {{at:w9}}],
+  ["shimmer", {{= at(w11) + 0.25 }}],
+  ["pop", {{at:w13}}],
+  ["whoosh", {{at:w52}}, -3], ["pop", {{at:w63}}],
+  ["whoosh", {{= at(w79) + 0.05 }}], ["hit", {{at:w82}}],
+  ["riser", {{= at(w92) - 1.0 }}, {{= at(w92) - 0.05 }}], ["drone", {{at:w92}}, {{at:w104}}],
+  ["hit", {{= at(w97) + 0.12 }}], ["shimmer", {{= at(w97) + 0.2 }}],
+  ["whoosh", {{at:w104}}, -3], ["tick", {{at:w119}}], ["pop", {{at:w122}}],
+  ["hit", {{at:w129}}, -2], ["hit", {{at:w130}}, -2], ["hit", {{at:w131}}, -2],
+  ["whoosh", {{at:w141}}, -3], ["pop", {{at:w150}}],
+  ["riser", {{= at(w166) - 0.1 }}, {{= at(w169) + 0.1 }}], ["hit", {{= at(w169) + 0.12 }}],
+  ["whoosh", {{at:w178}}], ["shimmer", {{at:w183}}], ["drone", {{at:w178}}, {{at:w205}}],
+  ["whoosh", {{at:w205}}, -3], ["glitch", {{at:w230}}], ["glitch", {{at:w234}}], ["tick", {{at:w240}}],
+  ["hit", {{at:w246}}], ["whoosh", {{at:w253}}, -3], ["pop", {{at:w261}}],
+  ["whoosh", {{at:w265}}, -3], ["pop", {{at:w268}}], ["pop", {{at:w274}}],
+  ["tick", {{= at(w300) - 0.2 }}], ["tick", {{= at(w300) + 0.25 }}], ["tick", {{= at(w300) + 0.7 }}],
+  ["hit", {{at:w311}}], ["whoosh", {{at:w313}}, -3], ["pop", {{= at(w317) + 0.6 }}],
+  ["whoosh", {{at:w350}}, -3], ["tick", {{at:w357}}], ["pop", {{at:w363}}],
+  ["whoosh", {{at:w369}}], ["shimmer", {{at:w373}}]
+]}
