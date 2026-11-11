@@ -2,8 +2,8 @@
   "slug": "NuclearFusion",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-11 10:05:10 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998601304",
+  "time": "2026-11-11 10:28:08 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998697929",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NuclearFusion",
   "prepare": {
     "stage": "prepare",
@@ -60,13 +60,18 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-11 10:05:10 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-11 10:28:08 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-11 10:05:10 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998601304",
+    "time": "2026-11-11 10:28:08 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998697929",
     "hash": "13986f7479534f8b",
     "check": {
       "parsed": true,
@@ -232,7 +237,7 @@
     },
     "hf_version": "0.9.33",
     "snapshot_ok": true,
-    "render_seconds": 489,
+    "render_seconds": 843,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview.mp4"
   }
 }
