@@ -11,7 +11,7 @@ search aibubble-yt china ai bubble burst dot com
 style-01 https://www.instagram.com/reel/DfcUSdnyTtt/
 style-02 https://www.instagram.com/reel/De1orNXAg8N/
 style-03 https://www.instagram.com/reel/Dd6ue5FRZU2/
-style-04 https://www.instagram.com/reel/DdCvFdHsnj1/
+style-04 https://www.instagram.com/reel/Dd6ue5FRZU2/
 search suncatcher-yt google data center in space satellite ai
 search moe-yt mixture of experts explained ai
 search moe-simple-yt how chatgpt uses experts mixture of experts
@@ -24,3 +24,7 @@ search page-dhruv-yt dhruv rathee ai shorts explained
 search page-johnny-yt johnny harris shorts explained
 search page-mrwho-yt mrwhosetheboss shorts
 style-05-aiwithunnati https://www.instagram.com/reel/DfZpFl3xgio/
+# NuclearFusion — topic virals
+search fusion-yt nuclear fusion breakthrough explained
+search fusion-sun-yt artificial sun fusion reactor record
+search fusion-tokamak-yt how a tokamak fusion reactor works
