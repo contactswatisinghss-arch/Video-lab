@@ -1,5 +1,5 @@
 {
- "duration": 100.333,
+ "duration": 98.576,
  "raw_duration": 152.283333,
  "keeps": [
   [
@@ -31,19 +31,23 @@
    51.6667
   ],
   [
-   51.9667,
-   52.7333
+   52.0,
+   52.7
   ],
   [
    52.9,
-   53.7333
+   53.7
   ],
   [
-   53.9333,
+   53.9,
    54.7
   ],
   [
    58.6,
+   62.6
+  ],
+  [
+   64.4,
    65.2
   ],
   [
@@ -59,11 +63,15 @@
    83.6
   ],
   [
-   84.1,
+   84.0667,
+   91.7
+  ],
+  [
+   92.0,
    97.3667
   ],
   [
-   97.7,
+   97.7333,
    100.5
   ],
   [
@@ -71,7 +79,7 @@
    102.8333
   ],
   [
-   104.7333,
+   104.5,
    109.1
   ],
   [
@@ -96,7 +104,7 @@
   ]
  ],
  "speed": 1.1,
- "removed_seconds": 51.95,
+ "removed_seconds": 53.71,
  "words": [
   {
    "id": "w0",
@@ -282,18 +290,18 @@
    "id": "w62",
    "text": "of",
    "start": 9.242,
-   "end": 9.461
+   "end": 9.442
   },
   {
    "id": "w63",
    "text": "2026",
-   "start": 9.461,
-   "end": 10.279
+   "start": 9.442,
+   "end": 10.297
   },
   {
    "id": "w64",
    "text": "that",
-   "start": 10.279,
+   "start": 10.297,
    "end": 10.842
   },
   {
@@ -354,12 +362,12 @@
    "id": "w82",
    "text": "nuclear",
    "start": 13.361,
-   "end": 13.688
+   "end": 13.67
   },
   {
    "id": "w83",
    "text": "fusion.",
-   "start": 13.688,
+   "start": 13.67,
    "end": 14.124
   },
   {
@@ -552,12 +560,12 @@
    "id": "w115",
    "text": "we",
    "start": 24.033,
-   "end": 24.488
+   "end": 24.47
   },
   {
    "id": "w116",
    "text": "could",
-   "start": 24.488,
+   "start": 24.47,
    "end": 24.67
   },
   {
@@ -570,12 +578,12 @@
    "id": "w118",
    "text": "clean",
    "start": 25.033,
-   "end": 25.415
+   "end": 25.433
   },
   {
    "id": "w119",
    "text": "electricity",
-   "start": 25.415,
+   "start": 25.433,
    "end": 25.979
   },
   {
@@ -628,1197 +636,1197 @@
   },
   {
    "id": "w128",
-   "text": "everything,",
+   "text": "everything.",
    "start": 29.506,
    "end": 30.215
   },
   {
    "id": "w129",
-   "text": "industries,",
-   "start": 30.397,
-   "end": 30.906
+   "text": "Industries,",
+   "start": 30.403,
+   "end": 30.858
   },
   {
    "id": "w130",
    "text": "transportation,",
-   "start": 31.082,
-   "end": 31.664
+   "start": 31.021,
+   "end": 31.585
   },
   {
    "id": "w131",
    "text": "geopolitics,",
-   "start": 31.845,
-   "end": 32.445
+   "start": 31.748,
+   "end": 32.385
   },
   {
    "id": "w141",
    "text": "But",
-   "start": 32.536,
-   "end": 32.664
+   "start": 32.476,
+   "end": 32.603
   },
   {
    "id": "w142",
    "text": "here",
-   "start": 32.664,
-   "end": 32.882
+   "start": 32.603,
+   "end": 32.821
   },
   {
    "id": "w143",
    "text": "is",
-   "start": 32.882,
-   "end": 33.045
+   "start": 32.821,
+   "end": 32.985
   },
   {
    "id": "w144",
    "text": "the",
-   "start": 33.045,
-   "end": 33.191
+   "start": 32.985,
+   "end": 33.13
   },
   {
    "id": "w145",
    "text": "challenge.",
-   "start": 33.191,
-   "end": 33.554
+   "start": 33.13,
+   "end": 33.494
   },
   {
    "id": "w146",
    "text": "These",
-   "start": 33.809,
-   "end": 34.045
+   "start": 33.748,
+   "end": 33.985
   },
   {
    "id": "w147",
    "text": "atomic",
-   "start": 34.045,
-   "end": 34.445
+   "start": 33.985,
+   "end": 34.385
   },
   {
    "id": "w148",
    "text": "nuclei",
-   "start": 34.445,
-   "end": 35.009
+   "start": 34.385,
+   "end": 34.948
   },
   {
    "id": "w149",
    "text": "naturally",
-   "start": 35.009,
-   "end": 35.554
+   "start": 34.948,
+   "end": 35.494
   },
   {
    "id": "w150",
    "text": "repel",
-   "start": 35.554,
-   "end": 36.045
+   "start": 35.494,
+   "end": 35.985
   },
   {
    "id": "w151",
    "text": "each",
-   "start": 36.109,
-   "end": 38.018
+   "start": 36.03,
+   "end": 36.321
   },
   {
    "id": "w152",
    "text": "other.",
-   "start": 38.018,
-   "end": 38.382
+   "start": 36.321,
+   "end": 36.685
   },
   {
    "id": "w153",
    "text": "So",
-   "start": 38.527,
-   "end": 38.654
+   "start": 36.848,
+   "end": 36.958
   },
   {
    "id": "w154",
    "text": "to",
-   "start": 38.654,
-   "end": 38.854
+   "start": 36.958,
+   "end": 37.158
   },
   {
    "id": "w155",
    "text": "get",
-   "start": 38.854,
-   "end": 39.073
+   "start": 37.158,
+   "end": 37.376
   },
   {
    "id": "w156",
    "text": "them",
-   "start": 39.073,
-   "end": 39.309
+   "start": 37.376,
+   "end": 37.612
   },
   {
    "id": "w157",
    "text": "close",
-   "start": 39.309,
-   "end": 39.654
+   "start": 37.612,
+   "end": 37.958
   },
   {
    "id": "w158",
    "text": "enough",
-   "start": 39.654,
-   "end": 40.054
+   "start": 37.958,
+   "end": 38.358
   },
   {
    "id": "w159",
    "text": "to",
-   "start": 40.054,
-   "end": 40.309
+   "start": 38.358,
+   "end": 38.612
   },
   {
    "id": "w160",
    "text": "fuse,",
-   "start": 40.309,
-   "end": 40.618
+   "start": 38.612,
+   "end": 38.921
   },
   {
    "id": "w161",
    "text": "we",
-   "start": 40.909,
-   "end": 40.945
+   "start": 39.212,
+   "end": 39.248
   },
   {
    "id": "w162",
    "text": "need",
-   "start": 40.945,
-   "end": 41.182
+   "start": 39.248,
+   "end": 39.485
   },
   {
    "id": "w163",
    "text": "to",
-   "start": 41.182,
-   "end": 41.345
+   "start": 39.485,
+   "end": 39.648
   },
   {
    "id": "w164",
    "text": "heat",
-   "start": 41.345,
-   "end": 41.6
+   "start": 39.648,
+   "end": 39.903
   },
   {
    "id": "w165",
    "text": "over",
-   "start": 41.6,
-   "end": 41.891
+   "start": 39.903,
+   "end": 40.194
   },
   {
    "id": "w166",
    "text": "100",
-   "start": 41.891,
-   "end": 42.436
+   "start": 40.194,
+   "end": 40.721
   },
   {
    "id": "w167",
    "text": "million",
-   "start": 42.436,
-   "end": 42.8
+   "start": 40.721,
+   "end": 41.103
   },
   {
    "id": "w168",
    "text": "degrees",
-   "start": 42.8,
-   "end": 43.254
+   "start": 41.103,
+   "end": 41.558
   },
   {
    "id": "w169",
    "text": "Celsius.",
-   "start": 43.254,
-   "end": 43.454
+   "start": 41.558,
+   "end": 41.739
   },
   {
    "id": "w170",
    "text": "That's",
-   "start": 43.454,
-   "end": 43.727
+   "start": 41.758,
+   "end": 42.03
   },
   {
    "id": "w171",
    "text": "hotter",
-   "start": 43.727,
-   "end": 43.945
+   "start": 42.03,
+   "end": 42.248
   },
   {
    "id": "w172",
    "text": "than",
-   "start": 43.945,
-   "end": 44.145
+   "start": 42.248,
+   "end": 42.448
   },
   {
    "id": "w173",
    "text": "the",
-   "start": 44.145,
-   "end": 44.327
+   "start": 42.448,
+   "end": 42.63
   },
   {
    "id": "w174",
    "text": "center",
-   "start": 44.327,
-   "end": 44.509
+   "start": 42.63,
+   "end": 42.812
   },
   {
    "id": "w175",
    "text": "of",
-   "start": 44.509,
-   "end": 44.709
+   "start": 42.812,
+   "end": 43.012
   },
   {
    "id": "w176",
    "text": "the",
-   "start": 44.709,
-   "end": 44.854
+   "start": 43.012,
+   "end": 43.158
   },
   {
    "id": "w177",
    "text": "sun.",
-   "start": 44.854,
-   "end": 44.982
+   "start": 43.158,
+   "end": 43.285
   },
   {
    "id": "w178",
    "text": "At",
-   "start": 45.139,
-   "end": 45.412
+   "start": 43.442,
+   "end": 43.715
   },
   {
    "id": "w179",
    "text": "these",
-   "start": 45.412,
-   "end": 45.63
+   "start": 43.715,
+   "end": 43.933
   },
   {
    "id": "w180",
    "text": "temperatures,",
-   "start": 45.63,
-   "end": 46.067
+   "start": 43.933,
+   "end": 44.37
   },
   {
    "id": "w181",
    "text": "we",
-   "start": 46.067,
-   "end": 46.339
+   "start": 44.37,
+   "end": 44.642
   },
   {
    "id": "w182",
    "text": "get",
-   "start": 46.339,
-   "end": 46.539
+   "start": 44.642,
+   "end": 44.842
   },
   {
    "id": "w183",
    "text": "plasma.",
-   "start": 46.539,
-   "end": 46.958
+   "start": 44.842,
+   "end": 45.261
   },
   {
    "id": "w191",
    "text": "Plasma",
-   "start": 47.091,
-   "end": 47.891
+   "start": 45.376,
+   "end": 46.194
   },
   {
    "id": "w192",
    "text": "need",
-   "start": 47.891,
-   "end": 48.164
+   "start": 46.194,
+   "end": 46.467
   },
   {
    "id": "w193",
    "text": "to",
-   "start": 48.164,
-   "end": 48.327
+   "start": 46.467,
+   "end": 46.63
   },
   {
    "id": "w194",
    "text": "be",
-   "start": 48.327,
-   "end": 48.564
+   "start": 46.63,
+   "end": 46.867
   },
   {
    "id": "w195",
    "text": "kept",
-   "start": 48.564,
-   "end": 48.764
+   "start": 46.867,
+   "end": 47.067
   },
   {
    "id": "w196",
    "text": "hot",
-   "start": 48.764,
-   "end": 49.127
+   "start": 47.067,
+   "end": 47.43
   },
   {
    "id": "w197",
    "text": "and",
-   "start": 49.127,
-   "end": 49.418
+   "start": 47.43,
+   "end": 47.739
   },
   {
    "id": "w198",
    "text": "confined",
-   "start": 49.418,
-   "end": 49.927
+   "start": 47.739,
+   "end": 48.23
   },
   {
    "id": "w199",
    "text": "long",
-   "start": 49.927,
-   "end": 50.418
+   "start": 48.23,
+   "end": 48.703
   },
   {
    "id": "w200",
    "text": "enough",
-   "start": 50.418,
-   "end": 50.764
+   "start": 48.703,
+   "end": 49.067
   },
   {
    "id": "w201",
    "text": "for",
-   "start": 50.764,
-   "end": 51.073
+   "start": 49.067,
+   "end": 49.376
   },
   {
    "id": "w202",
    "text": "fusion",
-   "start": 51.073,
-   "end": 51.436
+   "start": 49.376,
+   "end": 49.739
   },
   {
    "id": "w203",
    "text": "to",
-   "start": 51.436,
-   "end": 51.691
+   "start": 49.739,
+   "end": 49.994
   },
   {
    "id": "w204",
    "text": "happen.",
-   "start": 51.691,
-   "end": 52.0
+   "start": 49.994,
+   "end": 50.303
   },
   {
    "id": "w205",
    "text": "We",
-   "start": 52.164,
-   "end": 52.236
+   "start": 50.479,
+   "end": 50.57
   },
   {
    "id": "w206",
    "text": "use",
-   "start": 52.236,
-   "end": 52.455
+   "start": 50.57,
+   "end": 50.788
   },
   {
    "id": "w207",
    "text": "a",
-   "start": 52.455,
-   "end": 52.564
+   "start": 50.788,
+   "end": 50.897
   },
   {
    "id": "w208",
    "text": "machine",
-   "start": 52.564,
-   "end": 52.891
+   "start": 50.897,
+   "end": 51.224
   },
   {
    "id": "w209",
    "text": "called",
-   "start": 52.891,
-   "end": 53.345
+   "start": 51.224,
+   "end": 51.679
   },
   {
    "id": "w210",
-   "text": "tokamak,",
-   "start": 53.345,
-   "end": 54.109
+   "text": "tokamak",
+   "start": 51.679,
+   "end": 52.424
   },
   {
    "id": "w211",
    "text": "which",
-   "start": 54.364,
-   "end": 54.636
+   "start": 52.424,
+   "end": 52.952
   },
   {
    "id": "w212",
    "text": "uses",
-   "start": 54.636,
-   "end": 54.945
+   "start": 52.952,
+   "end": 53.279
   },
   {
    "id": "w213",
    "text": "powerful",
-   "start": 54.945,
-   "end": 55.527
+   "start": 53.279,
+   "end": 53.861
   },
   {
    "id": "w214",
    "text": "magnetic",
-   "start": 55.527,
-   "end": 55.945
+   "start": 53.861,
+   "end": 54.261
   },
   {
    "id": "w215",
    "text": "fields",
-   "start": 55.945,
-   "end": 56.327
+   "start": 54.261,
+   "end": 54.679
   },
   {
    "id": "w216",
    "text": "to",
-   "start": 56.327,
-   "end": 56.564
+   "start": 54.679,
+   "end": 54.897
   },
   {
    "id": "w217",
    "text": "hold",
-   "start": 56.564,
-   "end": 56.945
+   "start": 54.897,
+   "end": 55.261
   },
   {
    "id": "w218",
    "text": "the",
-   "start": 56.945,
-   "end": 57.127
+   "start": 55.261,
+   "end": 55.461
   },
   {
    "id": "w219",
    "text": "plasma",
-   "start": 57.127,
-   "end": 57.418
+   "start": 55.461,
+   "end": 55.752
   },
   {
    "id": "w220",
    "text": "ensuring",
-   "start": 57.418,
-   "end": 57.873
+   "start": 55.752,
+   "end": 56.206
   },
   {
    "id": "w221",
    "text": "it",
-   "start": 57.873,
-   "end": 58.091
+   "start": 56.206,
+   "end": 56.424
   },
   {
    "id": "w222",
    "text": "doesn't",
-   "start": 58.091,
-   "end": 58.345
+   "start": 56.424,
+   "end": 56.661
   },
   {
    "id": "w223",
    "text": "lose",
-   "start": 58.345,
-   "end": 58.545
+   "start": 56.661,
+   "end": 56.879
   },
   {
    "id": "w224",
    "text": "heat.",
-   "start": 58.545,
-   "end": 58.927
+   "start": 56.879,
+   "end": 57.261
   },
   {
    "id": "w225",
    "text": "But",
-   "start": 59.091,
-   "end": 59.545
+   "start": 57.406,
+   "end": 57.606
   },
   {
    "id": "w226",
    "text": "it",
-   "start": 59.545,
-   "end": 59.8
+   "start": 57.606,
+   "end": 57.861
   },
   {
    "id": "w227",
    "text": "can",
-   "start": 59.8,
-   "end": 59.982
+   "start": 57.861,
+   "end": 58.042
   },
   {
    "id": "w228",
    "text": "easily",
-   "start": 59.982,
-   "end": 60.345
+   "start": 58.042,
+   "end": 58.406
   },
   {
    "id": "w229",
    "text": "become",
-   "start": 60.345,
-   "end": 60.727
+   "start": 58.406,
+   "end": 58.77
   },
   {
    "id": "w230",
    "text": "unstable,",
-   "start": 60.727,
-   "end": 61.345
+   "start": 58.77,
+   "end": 59.406
   },
   {
    "id": "w231",
    "text": "lose",
-   "start": 61.6,
-   "end": 61.745
+   "start": 59.661,
+   "end": 59.806
   },
   {
    "id": "w232",
    "text": "heat,",
-   "start": 61.745,
-   "end": 62.055
+   "start": 59.806,
+   "end": 60.115
   },
   {
    "id": "w233",
    "text": "and",
-   "start": 62.218,
-   "end": 62.364
+   "start": 60.297,
+   "end": 60.424
   },
   {
    "id": "w234",
    "text": "disrupt",
-   "start": 62.364,
-   "end": 62.764
+   "start": 60.424,
+   "end": 60.824
   },
   {
    "id": "w235",
    "text": "the",
-   "start": 62.764,
-   "end": 63.091
+   "start": 60.824,
+   "end": 61.152
   },
   {
    "id": "w236",
    "text": "entire",
-   "start": 63.091,
-   "end": 63.527
+   "start": 61.152,
+   "end": 61.588
   },
   {
    "id": "w237",
    "text": "reaction.",
-   "start": 63.527,
-   "end": 64.073
+   "start": 61.588,
+   "end": 62.133
   },
   {
    "id": "w238",
    "text": "And",
-   "start": 64.242,
-   "end": 64.461
+   "start": 62.291,
+   "end": 62.491
   },
   {
    "id": "w239",
    "text": "these",
-   "start": 64.461,
-   "end": 64.642
+   "start": 62.491,
+   "end": 62.673
   },
   {
    "id": "w240",
    "text": "instabilities",
-   "start": 64.642,
-   "end": 65.279
+   "start": 62.673,
+   "end": 63.309
   },
   {
    "id": "w241",
    "text": "develop",
-   "start": 65.279,
-   "end": 65.788
+   "start": 63.309,
+   "end": 63.818
   },
   {
    "id": "w242",
    "text": "in",
-   "start": 65.788,
-   "end": 66.17
+   "start": 63.818,
+   "end": 64.2
   },
   {
    "id": "w243",
    "text": "milliseconds.",
-   "start": 66.17,
-   "end": 66.624
+   "start": 64.2,
+   "end": 64.655
   },
   {
    "id": "w244",
    "text": "That's",
-   "start": 66.782,
-   "end": 67.127
+   "start": 64.812,
+   "end": 65.158
   },
   {
    "id": "w245",
    "text": "where",
-   "start": 67.127,
-   "end": 67.345
+   "start": 65.158,
+   "end": 65.394
   },
   {
    "id": "w246",
    "text": "AI",
-   "start": 67.345,
-   "end": 67.691
+   "start": 65.394,
+   "end": 65.721
   },
   {
    "id": "w247",
    "text": "comes",
-   "start": 67.691,
-   "end": 67.964
+   "start": 65.721,
+   "end": 65.976
   },
   {
    "id": "w248",
    "text": "in.",
-   "start": 67.964,
-   "end": 68.382
+   "start": 65.976,
+   "end": 66.412
   },
   {
    "id": "w253",
    "text": "researchers",
-   "start": 68.455,
-   "end": 68.527
+   "start": 66.442,
+   "end": 66.77
   },
   {
    "id": "w254",
    "text": "at",
-   "start": 68.527,
-   "end": 69.164
+   "start": 66.77,
+   "end": 67.406
   },
   {
    "id": "w255",
    "text": "Princeton",
-   "start": 69.164,
-   "end": 69.727
+   "start": 67.406,
+   "end": 67.97
   },
   {
    "id": "w256",
    "text": "introduced",
-   "start": 69.727,
-   "end": 70.4
+   "start": 67.97,
+   "end": 68.661
   },
   {
    "id": "w257",
    "text": "an",
-   "start": 70.4,
-   "end": 70.655
+   "start": 68.661,
+   "end": 68.897
   },
   {
    "id": "w258",
    "text": "AI",
-   "start": 70.655,
-   "end": 71.0
+   "start": 68.897,
+   "end": 69.242
   },
   {
    "id": "w259",
    "text": "framework",
-   "start": 71.0,
-   "end": 71.382
+   "start": 69.242,
+   "end": 69.624
   },
   {
    "id": "w260",
    "text": "called",
-   "start": 71.382,
-   "end": 71.764
+   "start": 69.624,
+   "end": 70.006
   },
   {
    "id": "w261",
    "text": "Pac-Man.",
-   "start": 71.764,
-   "end": 72.291
+   "start": 70.006,
+   "end": 70.533
   },
   {
    "id": "w263",
    "text": "It",
-   "start": 72.461,
-   "end": 72.679
+   "start": 70.685,
+   "end": 70.921
   },
   {
    "id": "w264",
    "text": "continuously",
-   "start": 72.679,
-   "end": 73.279
+   "start": 70.921,
+   "end": 71.521
   },
   {
    "id": "w265",
    "text": "monitors",
-   "start": 73.279,
-   "end": 73.77
+   "start": 71.521,
+   "end": 72.012
   },
   {
    "id": "w266",
    "text": "the",
-   "start": 73.77,
-   "end": 74.042
+   "start": 72.012,
+   "end": 72.285
   },
   {
    "id": "w267",
    "text": "plasma,",
-   "start": 74.042,
-   "end": 74.388
+   "start": 72.285,
+   "end": 72.63
   },
   {
    "id": "w268",
    "text": "predicts",
-   "start": 74.57,
-   "end": 75.042
+   "start": 72.812,
+   "end": 73.285
   },
   {
    "id": "w269",
    "text": "what",
-   "start": 75.042,
-   "end": 75.424
+   "start": 73.285,
+   "end": 73.667
   },
   {
    "id": "w270",
    "text": "happens",
-   "start": 75.424,
-   "end": 75.842
+   "start": 73.667,
+   "end": 74.085
   },
   {
    "id": "w271",
    "text": "next,",
-   "start": 75.842,
-   "end": 76.242
+   "start": 74.085,
+   "end": 74.485
   },
   {
    "id": "w272",
    "text": "and",
-   "start": 76.333,
-   "end": 76.497
+   "start": 74.594,
+   "end": 74.739
   },
   {
    "id": "w273",
    "text": "helps",
-   "start": 76.497,
-   "end": 76.733
+   "start": 74.739,
+   "end": 74.976
   },
   {
    "id": "w274",
    "text": "adjust",
-   "start": 76.733,
-   "end": 77.097
+   "start": 74.976,
+   "end": 75.339
   },
   {
    "id": "w275",
    "text": "the",
-   "start": 77.097,
-   "end": 77.279
+   "start": 75.339,
+   "end": 75.521
   },
   {
    "id": "w276",
    "text": "machine",
-   "start": 77.279,
-   "end": 77.57
+   "start": 75.521,
+   "end": 75.812
   },
   {
    "id": "w277",
    "text": "in",
-   "start": 77.57,
-   "end": 77.879
+   "start": 75.812,
+   "end": 76.121
   },
   {
    "id": "w278",
    "text": "real",
-   "start": 77.879,
-   "end": 78.115
+   "start": 76.121,
+   "end": 76.358
   },
   {
    "id": "w279",
    "text": "time.",
-   "start": 78.115,
-   "end": 78.442
+   "start": 76.358,
+   "end": 76.685
   },
   {
    "id": "w297",
    "text": "And",
-   "start": 78.606,
-   "end": 78.806
+   "start": 76.83,
+   "end": 77.049
   },
   {
    "id": "w298",
    "text": "this",
-   "start": 78.806,
-   "end": 78.988
+   "start": 77.049,
+   "end": 77.23
   },
   {
    "id": "w299",
    "text": "framework",
-   "start": 78.988,
-   "end": 79.424
+   "start": 77.23,
+   "end": 77.667
   },
   {
    "id": "w300",
    "text": "has",
-   "start": 79.424,
-   "end": 79.752
+   "start": 77.667,
+   "end": 77.994
   },
   {
    "id": "w301",
    "text": "been",
-   "start": 79.752,
-   "end": 79.988
+   "start": 77.994,
+   "end": 78.23
   },
   {
    "id": "w302",
    "text": "successfully",
-   "start": 79.988,
-   "end": 80.588
+   "start": 78.23,
+   "end": 78.83
   },
   {
    "id": "w303",
    "text": "tested.",
-   "start": 80.588,
-   "end": 81.061
+   "start": 78.83,
+   "end": 79.321
   },
   {
    "id": "w304",
    "text": "Now",
-   "start": 81.061,
-   "end": 81.733
+   "start": 79.321,
+   "end": 79.994
   },
   {
    "id": "w305",
    "text": "this",
-   "start": 81.733,
-   "end": 82.024
+   "start": 79.994,
+   "end": 80.267
   },
   {
    "id": "w306",
    "text": "doesn't",
-   "start": 82.024,
-   "end": 82.333
+   "start": 80.267,
+   "end": 80.576
   },
   {
    "id": "w307",
    "text": "mean",
-   "start": 82.333,
-   "end": 82.515
+   "start": 80.576,
+   "end": 80.758
   },
   {
    "id": "w308",
    "text": "that",
-   "start": 82.515,
-   "end": 82.679
+   "start": 80.758,
+   "end": 80.921
   },
   {
    "id": "w309",
    "text": "we",
-   "start": 82.679,
-   "end": 82.788
+   "start": 80.921,
+   "end": 81.03
   },
   {
    "id": "w310",
    "text": "have",
-   "start": 82.788,
-   "end": 82.97
+   "start": 81.03,
+   "end": 81.212
   },
   {
    "id": "w311",
    "text": "solved",
-   "start": 82.97,
-   "end": 83.352
+   "start": 81.212,
+   "end": 81.594
   },
   {
    "id": "w312",
    "text": "fusion.",
-   "start": 83.352,
-   "end": 83.752
+   "start": 81.594,
+   "end": 81.994
   },
   {
    "id": "w313",
    "text": "But",
-   "start": 84.061,
-   "end": 84.133
+   "start": 82.285,
+   "end": 82.376
   },
   {
    "id": "w314",
    "text": "it",
-   "start": 84.133,
-   "end": 84.279
+   "start": 82.376,
+   "end": 82.521
   },
   {
    "id": "w315",
    "text": "brings",
-   "start": 84.279,
-   "end": 84.57
+   "start": 82.521,
+   "end": 82.812
   },
   {
    "id": "w316",
    "text": "us",
-   "start": 84.57,
-   "end": 84.77
+   "start": 82.812,
+   "end": 83.012
   },
   {
    "id": "w317",
    "text": "one",
-   "start": 84.77,
-   "end": 85.152
+   "start": 83.012,
+   "end": 83.394
   },
   {
    "id": "w318",
    "text": "step",
-   "start": 85.152,
-   "end": 85.406
+   "start": 83.394,
+   "end": 83.649
   },
   {
    "id": "w319",
    "text": "closer",
-   "start": 85.406,
-   "end": 85.77
+   "start": 83.649,
+   "end": 84.012
   },
   {
    "id": "w320",
    "text": "to",
-   "start": 85.77,
-   "end": 85.988
+   "start": 84.012,
+   "end": 84.23
   },
   {
    "id": "w321",
    "text": "overcoming",
-   "start": 85.988,
-   "end": 86.533
+   "start": 84.23,
+   "end": 84.776
   },
   {
    "id": "w322",
    "text": "one",
-   "start": 86.533,
-   "end": 86.806
+   "start": 84.776,
+   "end": 85.049
   },
   {
    "id": "w323",
    "text": "of",
-   "start": 86.806,
-   "end": 86.933
+   "start": 85.049,
+   "end": 85.176
   },
   {
    "id": "w324",
    "text": "the",
-   "start": 86.933,
-   "end": 87.17
+   "start": 85.176,
+   "end": 85.412
   },
   {
    "id": "w325",
    "text": "biggest",
-   "start": 87.17,
-   "end": 87.442
+   "start": 85.412,
+   "end": 85.685
   },
   {
    "id": "w326",
    "text": "challenges",
-   "start": 87.442,
-   "end": 87.97
+   "start": 85.685,
+   "end": 86.212
   },
   {
    "id": "w327",
    "text": "in",
-   "start": 87.97,
-   "end": 88.297
+   "start": 86.212,
+   "end": 86.539
   },
   {
    "id": "w328",
    "text": "making",
-   "start": 88.297,
-   "end": 88.624
+   "start": 86.539,
+   "end": 86.867
   },
   {
    "id": "w329",
    "text": "the",
-   "start": 88.624,
-   "end": 88.806
+   "start": 86.867,
+   "end": 87.049
   },
   {
    "id": "w330",
    "text": "fusion",
-   "start": 88.806,
-   "end": 89.261
+   "start": 87.049,
+   "end": 87.503
   },
   {
    "id": "w331",
    "text": "energy",
-   "start": 89.261,
-   "end": 89.824
+   "start": 87.503,
+   "end": 88.049
   },
   {
    "id": "w332",
    "text": "practical.",
-   "start": 89.824,
-   "end": 90.515
+   "start": 88.049,
+   "end": 88.758
   },
   {
    "id": "w343",
    "text": "So",
-   "start": 90.685,
-   "end": 90.776
+   "start": 88.927,
+   "end": 89.018
   },
   {
    "id": "w344",
    "text": "here",
-   "start": 90.776,
-   "end": 90.976
+   "start": 89.018,
+   "end": 89.218
   },
   {
    "id": "w345",
    "text": "is",
-   "start": 90.976,
-   "end": 91.23
+   "start": 89.218,
+   "end": 89.473
   },
   {
    "id": "w346",
    "text": "your",
-   "start": 91.23,
-   "end": 91.558
+   "start": 89.473,
+   "end": 89.8
   },
   {
    "id": "w347",
    "text": "first",
-   "start": 91.558,
-   "end": 91.83
+   "start": 89.8,
+   "end": 90.073
   },
   {
    "id": "w348",
    "text": "sign",
-   "start": 91.83,
-   "end": 92.176
+   "start": 90.073,
+   "end": 90.418
   },
   {
    "id": "w349",
    "text": "to",
-   "start": 92.176,
-   "end": 92.449
+   "start": 90.418,
+   "end": 90.691
   },
   {
    "id": "w350",
    "text": "stop",
-   "start": 92.449,
-   "end": 92.83
+   "start": 90.691,
+   "end": 91.073
   },
   {
    "id": "w351",
    "text": "being",
-   "start": 92.83,
-   "end": 93.121
+   "start": 91.073,
+   "end": 91.364
   },
   {
    "id": "w352",
    "text": "scared",
-   "start": 93.121,
-   "end": 93.449
+   "start": 91.364,
+   "end": 91.691
   },
   {
    "id": "w353",
    "text": "of",
-   "start": 93.449,
-   "end": 93.649
+   "start": 91.691,
+   "end": 91.891
   },
   {
    "id": "w354",
    "text": "AI",
-   "start": 93.649,
-   "end": 93.921
+   "start": 91.891,
+   "end": 92.164
   },
   {
    "id": "w355",
    "text": "and",
-   "start": 93.921,
-   "end": 94.249
+   "start": 92.164,
+   "end": 92.491
   },
   {
    "id": "w356",
    "text": "start",
-   "start": 94.249,
-   "end": 94.558
+   "start": 92.491,
+   "end": 92.8
   },
   {
    "id": "w357",
    "text": "learning",
-   "start": 94.558,
-   "end": 95.03
+   "start": 92.8,
+   "end": 93.273
   },
   {
    "id": "w358",
    "text": "how",
-   "start": 95.03,
-   "end": 95.267
+   "start": 93.273,
+   "end": 93.509
   },
   {
    "id": "w359",
    "text": "to",
-   "start": 95.267,
-   "end": 95.43
+   "start": 93.509,
+   "end": 93.691
   },
   {
    "id": "w360",
    "text": "use",
-   "start": 95.43,
-   "end": 95.612
+   "start": 93.691,
+   "end": 93.855
   },
   {
    "id": "w361",
    "text": "it,",
-   "start": 95.612,
-   "end": 95.958
+   "start": 93.855,
+   "end": 94.2
   },
   {
    "id": "w362",
    "text": "no",
-   "start": 96.103,
-   "end": 96.285
+   "start": 94.327,
+   "end": 94.527
   },
   {
    "id": "w363",
    "text": "matter",
-   "start": 96.285,
-   "end": 96.594
+   "start": 94.527,
+   "end": 94.836
   },
   {
    "id": "w364",
    "text": "which",
-   "start": 96.594,
-   "end": 96.939
+   "start": 94.836,
+   "end": 95.2
   },
   {
    "id": "w365",
    "text": "field",
-   "start": 96.939,
-   "end": 97.267
+   "start": 95.2,
+   "end": 95.509
   },
   {
    "id": "w366",
    "text": "you",
-   "start": 97.267,
-   "end": 97.449
+   "start": 95.509,
+   "end": 95.691
   },
   {
    "id": "w367",
    "text": "are",
-   "start": 97.449,
-   "end": 97.576
+   "start": 95.691,
+   "end": 95.818
   },
   {
    "id": "w368",
    "text": "in.",
-   "start": 97.576,
-   "end": 97.867
+   "start": 95.818,
+   "end": 96.109
   },
   {
    "id": "w369",
    "text": "Follow",
-   "start": 98.012,
-   "end": 98.194
+   "start": 96.273,
+   "end": 96.436
   },
   {
    "id": "w370",
    "text": "along",
-   "start": 98.194,
-   "end": 98.485
+   "start": 96.436,
+   "end": 96.727
   },
   {
    "id": "w371",
    "text": "for",
-   "start": 98.485,
-   "end": 98.739
+   "start": 96.727,
+   "end": 96.982
   },
   {
    "id": "w372",
    "text": "the",
-   "start": 98.739,
-   "end": 98.903
+   "start": 96.982,
+   "end": 97.146
   },
   {
    "id": "w373",
    "text": "next",
-   "start": 98.903,
-   "end": 99.103
+   "start": 97.146,
+   "end": 97.346
   },
   {
    "id": "w374",
    "text": "breakthrough.",
-   "start": 99.103,
-   "end": 99.521
+   "start": 97.346,
+   "end": 97.764
   }
  ]
 }
