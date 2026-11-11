@@ -6,7 +6,7 @@
     {{fontfaces}}
     html, body { margin: 0; background: #000; }
     #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #05030C; }
-    /* space layer: only visible where the footage is cropped into the portal (cover, plasma, end) */
+    /* space layer: only visible where the footage is cropped into the portal (plasma, end) */
     #space { position: absolute; inset: 0;
       background: radial-gradient(120% 70% at 50% 100%, #3A0F05 0%, #12040A 45%, #05030C 75%); }
     #stars { position: absolute; inset: 0;
@@ -17,17 +17,17 @@
     #bigsun { position: absolute; left: 540px; top: 2050px; width: 2200px; height: 2200px; margin-left: -1100px; margin-top: -1100px;
       border-radius: 50%; background: radial-gradient(circle, #FFF2B8 0%, #FFC23D 25%, #FF7A12 48%, #C2300A 62%, rgba(150,20,5,0) 70%); }
     #torus-back, #torus { position: absolute; left: 40px; top: 1500px; width: 1000px; height: 260px; border-radius: 50%;
-      box-sizing: border-box; opacity: 1; }
+      box-sizing: border-box; opacity: 0; }
     #torus-back { border: 16px solid rgba(217,166,255,.35); clip-path: inset(0 0 55% 0); }
     #torus { border: 16px solid #D9A6FF; box-shadow: 0 0 40px 8px #A04DFF, inset 0 0 40px 8px #A04DFF; clip-path: inset(45% 0 0 0); }
-    #cam { position: absolute; inset: 0; transform-origin: 50% 42%; clip-path: inset(640px 150px 260px 150px round 390px); }
+    #cam { position: absolute; inset: 0; transform-origin: 50% 42%; clip-path: inset(0px 0px 0px 0px round 0px); }
     /* the footage is never graded, filtered, tinted or blended (Swati's hard rule) */
     #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 </head>
 <body>
-  <!-- NuclearFusion: look A+C. C = space takeovers + portal with a tokamak ring; A = solar-glass cards over her real room. -->
+  <!-- NuclearFusion: look A+C. Opening = glowing title + headline flash, full frame. C = space takeovers + portal (plasma, end); A = glass cards. -->
   <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
        data-width="1080" data-height="1920" data-fps="30">
 
@@ -78,16 +78,11 @@
 
   <script>
     // Camera + portal. Framing only: scale and crop, never colour.
-    const P = "inset(640px 150px 260px 150px round 390px)";   // portal window (cover, plasma, end)
+    const P = "inset(640px 150px 260px 150px round 390px)";   // portal window (plasma, end)
     const FULL = "inset(0px 0px 0px 0px round 0px)";
     const tl = gsap.timeline({ paused: true });
-    // cover: she sits in the portal inside the tokamak ring, the sun rising behind
-    tl.set("#cam", { clipPath: P, scale: 1.0 }, 0)
-      .set(["#torus", "#torus-back"], { opacity: 1 }, 0)
-      .fromTo("#bigsun", { y: 0 }, { y: -60, duration: 2.2, ease: "power2.out" }, 0)
-      // "right here on earth": the portal opens to full frame
-      .to("#cam", { clipPath: FULL, duration: 0.55, ease: "power3.inOut" }, {{at:w8}} - 0.1)
-      .to(["#torus", "#torus-back"], { opacity: 0, duration: 0.3, ease: "power2.in" }, {{at:w8}} - 0.1)
+    // opening: full frame (no portal), glowing title + headline flash live in the hook scene
+    tl.set("#cam", { clipPath: FULL, scale: 1.0 }, 0)
       // punch-ins on the hook and turns
       .set("#cam", { scale: 1.1 }, {{at:w13}})
       .set("#cam", { scale: 1.0 }, {{at:w52}})
