@@ -9,6 +9,13 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   standard-range conversion in prepare is technical and stays.)
 - **The cover must say what the Reel is about**: the topic name big and readable (e.g. "MIXTURE OF EXPERTS"), plus
   the hook. No mid-sentence caption on the cover frame. Show her a cover draft with the preview, before the final.
+- **Never make her wait on a second round for an either/or (11 Nov 2026).** Whenever there's a choice (sound effects
+  on/off, two openings, two looks), render BOTH versions at the same time so she only picks. Never build one, wait
+  for her reaction, then build the other.
+- **Sound: always deliver two versions (11 Nov 2026).** Clean (voice only, she adds a trending Instagram track at
+  ~10–15 % when posting) and SFX (Claude's synthesised whooshes/hits/risers, ~20 dB under her voice and ducked while
+  she speaks). Mechanism: `reels/<slug>/sfx.json` cue sheet (time tokens) → `ci/sfx.py` makes `preview_sfx.mp4` and
+  `final_reel_sfx.mp4` next to the clean files. No downloaded music.
 
 ## Channel
 - @swatitalkstech: tech explainers and news for a broad audience ("even if tech isn't your thing"); some demos.
@@ -19,6 +26,18 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - Captions: heavy sans (Inter 900 has worked), 2–4 words, word-by-word on the real timings, one key phrase per line highlighted.
 - Meaning colours: red = threat/risk, green = fix/action. Other colours are free per Reel.
 - Optional small handle tag; branding is not required on every frame.
+
+## NuclearFusion (11 Nov 2026): what she rejected and what she approved
+- Picked look "A + C" from 3 sample covers: C = full-screen takeovers (sun dive, 100,000,000 °C counter, episode
+  slam, plasma) she liked; A = plum solar-glass cards over her real room.
+- **Rejected:** her face cropped into an oval/portal at the START ("looking odd"). The oval is fine later (plasma
+  part, end card) but never on the opening. Also rejected the A glass title card as the opening.
+- **Approved opening:** big glowing title (NUCLEAR FUSION) + keyword stickers on frame 0, full frame, then a
+  headline flash (3 recreated news cards slap down, fly off), then a mini sun drops into her hand.
+- She listens closely to the audio: flagged a doubled phrase ("they repel, they repel") and a clipped word
+  ("researchers" heard as "archers"). Whisper mis-times stretched words; check joins around every cut and fix word
+  times in transcript.json when a cut clips a word.
+- Voice notes: she reviews on her phone and often replies by voice; offer frames she can see rather than descriptions.
 
 ## Gemini 4 Carbon (30 Oct 2026, auto-approved test run)
 - Look: carbon-black frosted panels over her light wall; amber = locked/access. Techniques: glass type, orbit,
@@ -106,3 +125,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 | Reel | Posted | Length | 24 h views | Avg watch | % to end | Shares | Saves | Follows | Note |
 |---|---|---|---|---|---|---|---|---|---|
 | MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles |
+| NuclearFusion | | 98.6 s | | | | | | | glowing title + headline flash opening; A glass cards + C takeovers; real room, no decor; clean + SFX versions |
