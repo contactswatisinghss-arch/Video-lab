@@ -1,9 +1,9 @@
 {
   "slug": "NuclearFusion",
-  "stage": "prepare",
-  "ok": true,
-  "time": "2026-11-11 08:26:25 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42979249902",
+  "stage": "preview",
+  "ok": false,
+  "time": "2026-11-11 08:32:36 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42986553769",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NuclearFusion",
   "prepare": {
     "stage": "prepare",
@@ -30,6 +30,19 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-11 08:26:25 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": false,
+      "time": "2026-11-11 08:32:36 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": false,
+    "time": "2026-11-11 08:32:36 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42986553769",
+    "hash": "ade30d5c4f4f1a79",
+    "error": " no element with a data-composition-id attribute\n       - compositions/heat.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/plasma.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/toka.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/pac.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/loop.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/tested.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/road.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/close.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/endcard.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/captions.html: the file's resolved content has no element with a data-composition-id attribute\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
+  }
 }
