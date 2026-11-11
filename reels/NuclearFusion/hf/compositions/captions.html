@@ -12,8 +12,9 @@
   .cap-word.em-green .cap-txt { color: #4BE39A; }
   .cap-word.em-violet .cap-txt { color: #D2A8FF; }
 </style>
-<div id="root"><div id="cap-stage"></div></div>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="cap-stage"></div></div>
 <script>
+(function () {
   {{lib:captions}}
   const tl = gsap.timeline({ paused: true });
   const words = {{words}};
@@ -34,5 +35,6 @@
     exit(tl, g, grp) { tl.to(g, { opacity: 0, filter: "blur(4px)", duration: 0.1, ease: "power2.in" }, grp.end - 0.1); }
   });
   window.__timelines["captions"] = tl;
+})();
 </script>
 </template>

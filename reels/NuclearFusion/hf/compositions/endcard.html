@@ -14,13 +14,14 @@
   #ec-follow span { display: inline-block; font: 800 44px 'Space Grotesk'; color: #1B0830; background: #FFC24A; padding: 16px 40px; border-radius: 999px;
     box-shadow: 0 0 30px rgba(255,180,70,.8); }
 </style>
-<div id="root">
+<div id="root" data-composition-id="endcard" data-width="1080" data-height="1920">
   <div id="ec-chip">AI BREAKTHROUGHS · SERIES</div>
   <div class="ec-tile" id="ec-1"><div class="n">EP 01 ✓</div><div class="l">NUCLEAR<br>FUSION</div></div>
   <div class="ec-tile" id="ec-2"><div class="n">EP 02 · NEXT</div><div class="q">?</div></div>
   <div id="ec-follow"><span>Follow @swatitalkstech</span></div>
 </div>
 <script>
+(function () {
   const S = {{at:w369}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -29,5 +30,6 @@
     .fromTo("#ec-2", { scale: 1 }, { scale: 1.07, duration: 0.3, ease: "back.out(2.5)" }, t({{at:w373}}))
     .fromTo("#ec-follow span", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, t({{at:w369}}) + 0.3);
   window.__timelines["endcard"] = tl;
+})();
 </script>
 </template>

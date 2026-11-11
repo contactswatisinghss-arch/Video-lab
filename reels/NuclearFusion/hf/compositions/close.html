@@ -10,7 +10,7 @@
   .cl-f { position: absolute; font: 700 30px 'Space Grotesk'; color: #1B0830; padding: 12px 24px; border-radius: 999px;
     background: #E9D2FF; box-shadow: 0 0 20px rgba(190,120,255,.8); opacity: 0; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="close" data-width="1080" data-height="1920">
   <div id="cl-box">
     <div id="cl-a">stop being</div>
     <div id="cl-win"><div class="cl-w" id="cl-w1">SCARED</div><div class="cl-w" id="cl-w2">LEARNING</div></div>
@@ -22,6 +22,7 @@
   <div class="cl-f" id="cl-f5" style="left:60px;top:830px">ENERGY</div>
 </div>
 <script>
+(function () {
   const S = {{at:w343}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -37,5 +38,6 @@
     .fromTo(["#cl-f1", "#cl-f2", "#cl-f5", "#cl-f3", "#cl-f4"], { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.12, ease: "back.out(2)" }, t({{at:w363}}))
     .to(["#cl-box", ".cl-f"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, t({{at:w369}}) - 0.22);
   window.__timelines["close"] = tl;
+})();
 </script>
 </template>

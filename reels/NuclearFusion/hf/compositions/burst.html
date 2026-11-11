@@ -8,7 +8,7 @@
   .bs-card .w { position: absolute; left: 380px; top: 150px; font: 800 66px/1 'Unbounded'; color: #FFF3E2; }
   .bs-card .s { position: absolute; left: 384px; top: 240px; font: 500 34px 'Space Grotesk'; color: #E9DDF5; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="burst" data-width="1080" data-height="1920">
   <div class="bs-card" id="bs-1"><svg width="280" height="300" viewBox="0 0 280 300" fill="#FFC24A">
     <path d="M20 280V140l70 50v-50l70 50v-50l70 50V40h40v240z"/></svg><div class="w">INDUSTRY</div><div class="s">cheap, endless power</div></div>
   <div class="bs-card" id="bs-2"><svg width="280" height="300" viewBox="0 0 280 300" fill="none" stroke="#FFC24A" stroke-width="16" stroke-linejoin="round">
@@ -19,6 +19,7 @@
     <div class="w">GEOPOLITICS</div><div class="s">who controls energy</div></div>
 </div>
 <script>
+(function () {
   const S = {{at:w129}} - 0.05;
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -29,5 +30,6 @@
     tl.to(id, { opacity: 0, scale: 0.92, duration: 0.12, ease: "power2.in" }, out);
   });
   window.__timelines["burst"] = tl;
+})();
 </script>
 </template>

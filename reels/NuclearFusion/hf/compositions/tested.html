@@ -10,7 +10,7 @@
     background: #4BE39A; color: #06261A; font: 900 40px/54px 'Space Grotesk'; text-align: center; font-style: normal; }
   #ts-1 { top: 150px; } #ts-2 { top: 250px; } #ts-3 { top: 350px; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="tested" data-width="1080" data-height="1920">
   <div id="ts-card">
     <div id="ts-h">TESTED FOR REAL</div>
     <div class="ts-row" id="ts-1"><i>✓</i>On a real tokamak (DIII-D, San Diego)</div>
@@ -19,6 +19,7 @@
   </div>
 </div>
 <script>
+(function () {
   const S = {{at:w297}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -26,5 +27,6 @@
     .fromTo(["#ts-1", "#ts-2", "#ts-3"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.25, stagger: 0.45, ease: "power4.out" }, t({{at:w300}}) - 0.2)
     .to("#ts-card", { opacity: 0, y: -40, filter: "blur(10px)", duration: 0.2, ease: "power3.in" }, t({{at:w304}}) - 0.22);
   window.__timelines["tested"] = tl;
+})();
 </script>
 </template>

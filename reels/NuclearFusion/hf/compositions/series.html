@@ -18,7 +18,7 @@
     background: radial-gradient(circle, #FFF6D0 0%, #FFC94A 30%, #FF7A1A 60%, rgba(255,90,20,0) 72%); }
   #sr-e2 { left: 346px; } #sr-e3 { left: 642px; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="series" data-width="1080" data-height="1920">
   <div id="sr-card">
     <div id="sr-chip">NEW SERIES</div>
     <div id="sr-t1">AI BREAKTHROUGHS</div>
@@ -29,6 +29,7 @@
   </div>
 </div>
 <script>
+(function () {
   const S = {{at:w52}};
   const tl = gsap.timeline({ paused: true });
   tl.fromTo("#sr-card", { y: -60, opacity: 0, filter: "blur(12px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 0)
@@ -39,5 +40,6 @@
     .fromTo("#sr-e1", { scale: 1 }, { scale: 1.06, duration: 0.3, ease: "back.out(2)" }, {{at:w70}} - S)
     .to("#sr-card", { y: -50, opacity: 0, filter: "blur(10px)", duration: 0.22, ease: "power3.in" }, {{at:w79}} - S - 0.27);
   window.__timelines["series"] = tl;
+})();
 </script>
 </template>

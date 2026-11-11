@@ -13,7 +13,7 @@
   #pc-exp { position: absolute; left: 0; right: 0; top: 420px; text-align: center; font: 600 32px 'Space Grotesk'; color: #3A2A55; }
   #pc-exp b { color: #8A3CF0; font-weight: 800; }
 </style>
-<div id="root">
+<div id="root" data-composition-id="pac" data-width="1080" data-height="1920">
   <div id="pc-ai"><span>AI</span></div>
   <div id="pc-card">
     <div id="pc-src">PRINCETON PLASMA PHYSICS LAB · PRINCETON UNIVERSITY</div>
@@ -24,6 +24,7 @@
   </div>
 </div>
 <script>
+(function () {
   const S = {{at:w244}};
   const t = (x) => x - S;
   const tl = gsap.timeline({ paused: true });
@@ -36,5 +37,6 @@
     .fromTo("#pc-exp", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.25 }, t({{at:w261}}) + 0.3)
     .to("#pc-card", { opacity: 0, scale: 0.9, filter: "blur(10px)", duration: 0.2, ease: "power3.in" }, t({{at:w265}}) - 0.22);
   window.__timelines["pac"] = tl;
+})();
 </script>
 </template>
