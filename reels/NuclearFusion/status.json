@@ -2,8 +2,8 @@
   "slug": "NuclearFusion",
   "stage": "preview",
   "ok": false,
-  "time": "2026-11-11 08:32:36 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42986553769",
+  "time": "2026-11-11 08:46:29 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42988780259",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NuclearFusion",
   "prepare": {
     "stage": "prepare",
@@ -35,14 +35,19 @@
       "stage": "preview",
       "ok": false,
       "time": "2026-11-11 08:32:36 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": false,
+      "time": "2026-11-11 08:46:29 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": false,
-    "time": "2026-11-11 08:32:36 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42986553769",
-    "hash": "ade30d5c4f4f1a79",
-    "error": " no element with a data-composition-id attribute\n       - compositions/heat.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/plasma.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/toka.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/pac.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/loop.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/tested.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/road.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/close.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/endcard.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/captions.html: the file's resolved content has no element with a data-composition-id attribute\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
+    "time": "2026-11-11 08:46:29 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42988780259",
+    "hash": "cbdbd32eb29ee9b2",
+    "error": "\"total\":0,\"errors\":0,\"pageErrors\":0,\"requestFailed\":0,\"httpErrors\":0,\"navigationStarts\":0,\"navigationFailures\":0,\"consoleErrors\":0,\"consoleWarnings\":0},\"browserConsoleErrors\":[]}\n  \n  ✗  Render failed\n  \n     8 composition files referenced by data-composition-src cannot be rendered:\n       - compositions/sun.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/grid.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/repel.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/heat.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/plasma.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/toka.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/loop.html: the file's resolved content has no element with a data-composition-id attribute\n       - compositions/road.html: the file's resolved content has no element with a data-composition-id attribute\n     \n     Check that each file referenced by data-composition-src contains valid HTML with a [data-composition-id] element in a <template>, <body>, or bare fragment. If a scene-authoring step is still running, wait for it to finish before referencing the file.\n     Try --docker for containerized rendering\n  "
   }
 }
