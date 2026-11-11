@@ -1,0 +1,33 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; }
+  #ec-chip { position: absolute; left: 0; right: 0; top: 190px; text-align: center; font: 700 30px 'Space Grotesk'; letter-spacing: .2em; color: #FFB547; }
+  .ec-tile { position: absolute; top: 250px; width: 300px; height: 300px; border-radius: 30px; box-sizing: border-box; }
+  .ec-tile .n { position: absolute; left: 24px; top: 20px; font: 700 28px 'Space Grotesk'; letter-spacing: .12em; }
+  .ec-tile .l { position: absolute; left: 24px; bottom: 24px; font: 800 36px/1.05 'Unbounded'; color: #FFF3E2; }
+  #ec-1 { left: 220px; border: 3px solid #4BE39A; background: rgba(10,40,30,.85); }
+  #ec-1 .n { color: #4BE39A; }
+  #ec-2 { left: 560px; border: 3px solid #C58BFF; background: rgba(30,12,50,.88); box-shadow: 0 0 40px rgba(170,90,255,.8); }
+  #ec-2 .n { color: #D2A8FF; }
+  #ec-2 .q { position: absolute; left: 0; right: 0; top: 80px; text-align: center; font: 900 96px 'Unbounded'; color: #EAD6FF; }
+  #ec-follow { position: absolute; left: 0; right: 0; top: 585px; text-align: center; }
+  #ec-follow span { display: inline-block; font: 800 44px 'Space Grotesk'; color: #1B0830; background: #FFC24A; padding: 16px 40px; border-radius: 999px;
+    box-shadow: 0 0 30px rgba(255,180,70,.8); }
+</style>
+<div id="root">
+  <div id="ec-chip">AI BREAKTHROUGHS · SERIES</div>
+  <div class="ec-tile" id="ec-1"><div class="n">EP 01 ✓</div><div class="l">NUCLEAR<br>FUSION</div></div>
+  <div class="ec-tile" id="ec-2"><div class="n">EP 02 · NEXT</div><div class="q">?</div></div>
+  <div id="ec-follow"><span>Follow @swatitalkstech</span></div>
+</div>
+<script>
+  const S = {{at:w369}};
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ec-chip", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.1)
+    .fromTo(["#ec-1", "#ec-2"], { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.1, ease: "expo.out" }, 0.15)
+    .fromTo("#ec-2", { scale: 1 }, { scale: 1.07, duration: 0.3, ease: "back.out(2.5)" }, t({{at:w373}}))
+    .fromTo("#ec-follow span", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, t({{at:w369}}) + 0.3);
+  window.__timelines["endcard"] = tl;
+</script>
+</template>

@@ -1,0 +1,63 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; }
+  #hk-card { position: absolute; left: 70px; top: 190px; width: 940px; height: 430px; border-radius: 44px; overflow: hidden;
+    background: linear-gradient(160deg, rgba(40,18,52,.82), rgba(14,8,24,.86)); backdrop-filter: blur(18px);
+    border: 2px solid rgba(255,190,90,.40); box-shadow: 0 30px 80px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.12); }
+  #hk-orb { position: absolute; right: -190px; top: -220px; width: 470px; height: 470px; border-radius: 50%;
+    background: radial-gradient(circle at 45% 45%, #FFF6D0 0%, #FFC94A 18%, #FF8A1F 38%, #E8451A 55%, rgba(200,40,40,0) 72%); }
+  #hk-ring { position: absolute; right: -110px; top: -40px; width: 380px; height: 130px; border-radius: 50%; border: 5px solid #C58BFF;
+    box-shadow: 0 0 30px #A35BFF, inset 0 0 20px #A35BFF; transform: rotate(-18deg); }
+  #hk-chip { position: absolute; left: 56px; top: 48px; font: 700 30px 'Space Grotesk'; letter-spacing: .14em; color: #FFC24A;
+    padding: 12px 22px; border: 2px solid rgba(255,194,74,.6); border-radius: 999px; }
+  #hk-title { position: absolute; left: 56px; top: 125px; margin: 0; font: 800 112px/0.98 'Unbounded'; color: #FFF3E2;
+    text-shadow: 0 0 40px rgba(255,150,60,.45); }
+  #hk-sub { position: absolute; left: 58px; top: 352px; font: 500 40px 'Space Grotesk'; color: #E9DDF5; }
+  #hk-sub b { color: #FFC24A; font-weight: 700; }
+  .hk-st { position: absolute; font: 700 32px 'Space Grotesk'; color: #1B0830; padding: 12px 24px; border-radius: 999px;
+    background: #E9D2FF; box-shadow: 0 0 22px rgba(190,120,255,.8); }
+  #hk-mini { position: absolute; left: 450px; top: 1340px; width: 180px; height: 180px; border-radius: 50%;
+    background: radial-gradient(circle at 45% 42%, #FFFBE6 0%, #FFD45C 22%, #FF8A1F 48%, #E8451A 66%, rgba(232,69,26,0) 72%);
+    box-shadow: 0 0 60px 20px rgba(255,150,40,.55); }
+  #hk-orbit { position: absolute; left: 540px; top: 1430px; width: 0; height: 0; }
+  #hk-ai { position: absolute; left: 150px; top: -32px; width: 96px; height: 64px; border-radius: 18px; background: #1B0830;
+    border: 3px solid #C58BFF; box-shadow: 0 0 20px rgba(170,100,255,.9); font: 800 34px/58px 'Unbounded'; color: #EAD6FF; text-align: center; }
+  #hk-orbitline { position: absolute; left: 380px; top: 1380px; width: 320px; height: 100px; border-radius: 50%;
+    border: 2px dashed rgba(200,150,255,.6); }
+</style>
+<div id="root">
+  <div id="hk-card"><div id="hk-orb"></div><div id="hk-ring"></div>
+    <div id="hk-chip">AI BREAKTHROUGHS · EP 01</div>
+    <h1 id="hk-title">NUCLEAR<br>FUSION</h1>
+    <div id="hk-sub">AI is helping tame a <b>mini sun</b></div>
+  </div>
+  <div class="hk-st" id="hk-s1" style="left:36px;top:690px">PLASMA</div>
+  <div class="hk-st" id="hk-s2" style="left:820px;top:750px">100M °C</div>
+  <div class="hk-st" id="hk-s3" style="left:30px;top:1100px">TOKAMAK</div>
+  <div class="hk-st" id="hk-s4" style="left:810px;top:1160px">PACMAN</div>
+  <div id="hk-orbitline"></div>
+  <div id="hk-mini"></div>
+  <div id="hk-orbit"><div id="hk-ai">AI</div></div>
+</div>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  const orb = { a: -0.6 };
+  const W8 = {{at:w8}}, W9 = {{at:w9}}, W13 = {{at:w13}}, W19 = {{at:w19}}, END = {{at:w52}};
+  // frame 0 is the cover: title + stickers already on screen
+  tl.set(["#hk-card", "#hk-s1", "#hk-s2", "#hk-s3", "#hk-s4"], { opacity: 1 }, 0)
+    .set(["#hk-mini", "#hk-orbit", "#hk-orbitline"], { opacity: 0 }, 0)
+    // stickers pop a little after the first word so the cover still reads, then everything leaves as the portal opens
+    .to(["#hk-s1", "#hk-s2", "#hk-s3", "#hk-s4"], { opacity: 0, scale: 0.6, duration: 0.18, stagger: 0.04, ease: "power3.in" }, W8 - 0.25)
+    .to("#hk-card", { y: -80, opacity: 0, filter: "blur(10px)", duration: 0.25, ease: "power3.in" }, W8 - 0.15)
+    // "right here on earth": a mini sun drops into her hand
+    .fromTo("#hk-mini", { opacity: 0, y: -520, scale: 0.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "expo.out" }, W9 - 0.15)
+    // "and AI": an AI chip locks into orbit
+    .fromTo("#hk-orbitline", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "power4.out" }, W13 - 0.1)
+    .fromTo("#hk-orbit", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W13 - 0.1)
+    .fromTo(orb, { a: -0.6 }, { a: 5.6, duration: W19 - W13 + 0.6, ease: "none",
+        onUpdate: () => gsap.set("#hk-ai", { x: Math.cos(orb.a) * 160 - 198, y: Math.sin(orb.a) * 50 }) }, W13 - 0.1)
+    // "one step closer": the sun shrinks away
+    .to(["#hk-mini", "#hk-orbit", "#hk-orbitline"], { opacity: 0, scale: 0.2, duration: 0.3, ease: "power3.in" }, Math.min(W19 + 0.35, END - 0.35));
+  window.__timelines["hook"] = tl;
+</script>
+</template>

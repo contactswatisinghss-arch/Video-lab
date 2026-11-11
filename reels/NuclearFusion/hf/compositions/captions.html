@@ -1,0 +1,38 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #cap-stage { position: absolute; left: 60px; right: 60px; top: 1190px; height: 140px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #FFF7EC;
+    line-height: 1.1; padding: 10px 26px 14px; border-radius: 22px; background: rgba(14,8,22,.55);
+    text-shadow: 0 2px 10px rgba(0,0,0,.55); letter-spacing: -.005em; }
+  .cap-word .cap-txt { color: inherit; }
+  .cap-word.em-amber .cap-txt { color: #FFC24A; }
+  .cap-word.em-red .cap-txt { color: #FF5A5F; }
+  .cap-word.em-green .cap-txt { color: #4BE39A; }
+  .cap-word.em-violet .cap-txt { color: #D2A8FF; }
+</style>
+<div id="root"><div id="cap-stage"></div></div>
+<script>
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  const words = {{words}};
+  HFCaps.build({
+    tl, container: "#cap-stage", words, idPrefix: "nfc",
+    maxWords: 4, maxChars: 24, pauseBreak: 0.28, hold: 0.35,
+    emphasis: {
+      "em-amber": ["mini sun", "sun", "energy", "energy.", "clean electricity", "100 million degrees Celsius", "hotter"],
+      "em-violet": ["AI", "plasma", "plasma.", "Plasma", "tokamak", "Pac-Man", "magnetic fields"],
+      "em-red": ["repel", "unstable", "disrupt", "milliseconds", "scared"],
+      "em-green": ["successfully tested", "one step closer", "learning"]
+    },
+    font: { family: "Space Grotesk", weight: 700, size: 64, min: 44, maxWidth: 900 },
+    enter(tl, g, spans, grp) {
+      tl.fromTo(g, { opacity: 0, y: 14, filter: "blur(6px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.16, ease: "power3.out" }, grp.start);
+    },
+    word(tl, span, w, grp, i) {},
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, filter: "blur(4px)", duration: 0.1, ease: "power2.in" }, grp.end - 0.1); }
+  });
+  window.__timelines["captions"] = tl;
+</script>
+</template>

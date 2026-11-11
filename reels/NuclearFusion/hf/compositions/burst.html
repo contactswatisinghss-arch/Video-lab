@@ -1,0 +1,33 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; }
+  .bs-card { position: absolute; left: 90px; top: 210px; width: 900px; height: 440px; border-radius: 44px; opacity: 0;
+    background: linear-gradient(160deg, rgba(40,18,52,.88), rgba(14,8,24,.9)); border: 3px solid #FFC24A;
+    box-shadow: 0 0 40px rgba(255,170,60,.45), 0 30px 80px rgba(0,0,0,.45); }
+  .bs-card svg { position: absolute; left: 60px; top: 70px; }
+  .bs-card .w { position: absolute; left: 380px; top: 150px; font: 800 66px/1 'Unbounded'; color: #FFF3E2; }
+  .bs-card .s { position: absolute; left: 384px; top: 240px; font: 500 34px 'Space Grotesk'; color: #E9DDF5; }
+</style>
+<div id="root">
+  <div class="bs-card" id="bs-1"><svg width="280" height="300" viewBox="0 0 280 300" fill="#FFC24A">
+    <path d="M20 280V140l70 50v-50l70 50v-50l70 50V40h40v240z"/></svg><div class="w">INDUSTRY</div><div class="s">cheap, endless power</div></div>
+  <div class="bs-card" id="bs-2"><svg width="280" height="300" viewBox="0 0 280 300" fill="none" stroke="#FFC24A" stroke-width="16" stroke-linejoin="round">
+    <rect x="40" y="40" width="200" height="180" rx="40"/><line x1="40" y1="150" x2="240" y2="150"/><circle cx="90" cy="190" r="8" fill="#FFC24A"/><circle cx="190" cy="190" r="8" fill="#FFC24A"/><path d="M80 220l-30 50M200 220l30 50"/></svg>
+    <div class="w">TRANSPORT</div><div class="s">trains, EVs, ships</div></div>
+  <div class="bs-card" id="bs-3"><svg width="280" height="300" viewBox="0 0 280 300" fill="none" stroke="#FFC24A" stroke-width="14">
+    <circle cx="140" cy="150" r="115"/><ellipse cx="140" cy="150" rx="50" ry="115"/><line x1="25" y1="150" x2="255" y2="150"/><path d="M45 90h190M45 210h190"/></svg>
+    <div class="w">GEOPOLITICS</div><div class="s">who controls energy</div></div>
+</div>
+<script>
+  const S = {{at:w129}} - 0.05;
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  const ids = ["#bs-1", "#bs-2", "#bs-3"], at = [t({{at:w129}}), t({{at:w130}}), t({{at:w131}})];
+  ids.forEach((id, i) => {
+    tl.fromTo(id, { opacity: 0, scale: 1.25, rotation: i % 2 ? 3 : -3 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.22, ease: "expo.out" }, at[i] - 0.05);
+    const out = i < 2 ? at[i + 1] - 0.06 : t({{at:w141}}) - 0.2;
+    tl.to(id, { opacity: 0, scale: 0.92, duration: 0.12, ease: "power2.in" }, out);
+  });
+  window.__timelines["burst"] = tl;
+</script>
+</template>
