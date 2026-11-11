@@ -8,25 +8,25 @@
 [  30.87-  34.95] Episode one is nuclear fusion. Do you know how the sun produces energy?   | w79..w91
 [  35.65-  41.71] Deep inside, tiny atomic nuclei fuse together releasing enormous amounts of energy. So if   | w92..w105
 [  41.71-  46.91] we could harness that same process here on earth, we could generate clean electricity   | w106..w119
-[  46.91-  55.65] without burning fossil fuels. And this could transform everything. Industries, transportation, geopolitics, and reduce   | w120..w133
-[  55.65-  58.05] our dependencies on the limited fossil fuel.   | w134..w140
+[  46.91-  55.65] without burning fossil fuels. And this could transform everything, industries, transportation, geopolitics, and reduce   | w120..w133
+[  55.65-  58.07] our dependencies on the limited fossil fuel.   | w134..w140
 [  58.69-  65.84] But here is the challenge. These atomic nuclei naturally repel each other. So to   | w141..w154
 [  65.84-  70.68] get them close enough to fuse, we need to heat over 100 million degrees   | w155..w168
 [  70.68-  74.56] Celsius. That's hotter than the center of the sun. At these temperatures, we get   | w169..w182
 [  74.56-  75.02] plasma.   | w183..w183
-[  75.62-  80.68] And now comes the really difficult part. Plasma need to be kept hot and   | w184..w197
-[  80.68-  83.50] confined long enough for fusion to happen.   | w198..w204
-[  84.16-  89.64] We use a machine called Tokamak which uses powerful magnetic fields to hold the   | w205..w218
+[  75.62-  80.66] And now comes the really difficult part. Plasma need to be kept hot and   | w184..w197
+[  80.66-  83.50] confined long enough for fusion to happen.   | w198..w204
+[  84.18-  89.64] We use a machine called Tokamak, which uses powerful magnetic fields to hold the   | w205..w218
 [  89.64-  95.06] plasma ensuring it doesn't lose heat. But it can easily become unstable, lose heat,   | w219..w232
-[  95.26- 100.42] and disrupt the entire reaction. And these instabilities develop in milliseconds.   | w233..w243
+[  95.24- 100.42] and disrupt the entire reaction. And these instabilities develop in milliseconds.   | w233..w243
 [ 101.06- 107.22] That's where AI comes in. In September this year, researchers at Princeton introduced an   | w244..w257
 [ 107.22- 109.02] AI framework called Pac -Man.   | w258..w262
-[ 109.62- 115.56] It continuously monitors the plasma, predicts what happens next, and helps adjust the machine   | w263..w276
+[ 109.64- 115.56] It continuously monitors the plasma, predicts what happens next, and helps adjust the machine   | w263..w276
 [ 115.56- 116.52] in real time.   | w277..w279
 [ 117.20- 122.26] The control cycle time is just 20 seconds. So it will ensure preventing instability   | w280..w293
 [ 122.26- 128.50] by timely prediction. And this framework has been successfully tested. Now this doesn't mean   | w294..w307
 [ 128.50- 132.92] that we have solved fusion. But it brings us one step closer to overcoming   | w308..w321
 [ 132.92- 137.30] one of the biggest challenges in making the fusion energy practical.   | w322..w332
-[ 138.02- 142.08] And this could transform the way we power the world. So here is your   | w333..w346
+[ 138.00- 142.08] And this could transform the way we power the world. So here is your   | w333..w346
 [ 142.08- 146.54] first sign to stop being scared of AI and start learning how to use   | w347..w360
 [ 146.54- 151.04] it, no matter which field you are in. Follow along for the next breakthrough.   | w361..w374
