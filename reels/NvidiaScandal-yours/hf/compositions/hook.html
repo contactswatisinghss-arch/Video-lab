@@ -1,0 +1,29 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #hk-band { position:absolute; left:0; right:0; top:0; height:430px; background:#111214; }
+  #hk-t1 { position:absolute; left:0; right:0; top:178px; text-align:center; font:900 130px/1 'Inter Tight', 'Inter', sans-serif; color:#fff; letter-spacing:2px; }
+  #hk-t2 { position:absolute; left:0; right:0; top:300px; text-align:center; font:900 112px/1 'Inter Tight', 'Inter', sans-serif; color:#E0393E; letter-spacing:2px; }
+  .hk-st { position:absolute; font:800 40px 'Inter Tight', 'Inter', sans-serif; background:#fff; border:5px solid; border-radius:16px; padding:6px 18px; }
+</style>
+<div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+  <div id="hk-band"></div>
+  <div id="hk-t1">NVIDIA</div>
+  <div id="hk-t2">SCANDAL</div>
+  <div class="hk-st" id="hk-s0" style="left:40px;top:560px;color:#E0393E;border-color:#E0393E;transform:rotate(-4deg)">ALLEGED SPY</div>
+  <div class="hk-st" id="hk-s1" style="left:700px;top:500px;color:#1C1C1A;border-color:#1C1C1A;transform:rotate(3deg)">2ND AFFAIR</div>
+  <div class="hk-st" id="hk-s2" style="left:50px;top:1000px;color:#E0393E;border-color:#E0393E;transform:rotate(3deg)">-$400B</div>
+  <div class="hk-st" id="hk-s3" style="left:680px;top:1040px;color:#1C1C1A;border-color:#1C1C1A;transform:rotate(-3deg)">AI BUBBLE?</div>
+</div>
+<script>
+(function () {
+  const S = 0;
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo(".hk-st", { scale: 1 }, { scale: 1.08, duration: 0.12, yoyo: true, repeat: 1, stagger: 0.1, ease: "power2.out" }, 0.15)
+    .to(".hk-st", { opacity: 0, scale: 0.7, duration: 0.18, stagger: 0.06, ease: "power2.in" }, t({{at:w4}}) + 0.2)
+    .to(["#hk-band", "#hk-t1", "#hk-t2"], { y: -460, duration: 0.35, ease: "power3.in" }, t({{at:w16}}) - 0.35);
+  window.__timelines["hook"] = tl;
+})();
+</script>
+</template>

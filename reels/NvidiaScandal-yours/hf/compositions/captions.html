@@ -1,0 +1,28 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #cap-stage { position: absolute; left: 60px; right: 60px; top: 1200px; height: 130px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; font-family: 'Inter Tight', sans-serif; font-weight: 700; color: #FFFFFF;
+    line-height: 1.1; padding: 10px 24px 13px; border-radius: 18px; background: rgba(17,18,20,.72); letter-spacing: -.005em; }
+  .cap-word.em-red .cap-txt { color: #FF6B6F; }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="cap-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  const words = {{words}};
+  HFCaps.build({
+    tl, container: "#cap-stage", words, idPrefix: "nsc",
+    maxWords: 4, maxChars: 24, pauseBreak: 0.28, hold: 0.35,
+    emphasis: { "em-red": ["insane.", "second affair", "8%.", "Chinese spy.", "spy.", "trillions", "wiped", "burst?", "bubble"] },
+    font: { family: "Inter Tight", weight: 700, size: 58, min: 42, maxWidth: 900 },
+    enter(tl, g, spans, grp) { tl.fromTo(g, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.14, ease: "power3.out" }, grp.start); },
+    word(tl, span, w, grp, i) {},
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,29 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  .cl-pill { position:absolute; left:90px; right:90px; height:96px; border-radius:48px; font:800 44px/96px 'Inter Tight', 'Inter', sans-serif; text-align:center; }
+  #cl-a { top:190px; background:#fff; color:#1C1C1A; box-shadow:0 10px 30px rgba(0,0,0,.18); }
+  #cl-or { position:absolute; left:0; right:0; top:296px; text-align:center; font:800 30px 'Inter Tight', 'Inter', sans-serif; color:#1C1C1A; }
+  #cl-b { top:336px; background:#E0393E; color:#fff; box-shadow:0 10px 30px rgba(0,0,0,.18); }
+  #cl-c { top:250px; background:#111214; color:#fff; }
+</style>
+<div id="root" data-composition-id="close" data-width="1080" data-height="1920">
+  <div class="cl-pill" id="cl-a">Temporary turbulence?</div>
+  <div id="cl-or">or</div>
+  <div class="cl-pill" id="cl-b">The AI bubble bursting?</div>
+  <div class="cl-pill" id="cl-c">Comment your take &#8595;</div>
+</div>
+<script>
+(function () {
+  const S = {{at:w169}};
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#cl-a", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.3, ease: "power4.out" }, t({{at:w183}}))
+    .fromTo("#cl-or", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, t({{at:w186}}))
+    .fromTo("#cl-b", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.3, ease: "power4.out" }, t({{at:w192}}))
+    .to(["#cl-a", "#cl-or", "#cl-b"], { opacity: 0, y: -30, duration: 0.2, ease: "power2.in" }, t({{at:w196}}) - 0.2)
+    .fromTo("#cl-c", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, t({{at:w196}}));
+  window.__timelines["close"] = tl;
+})();
+</script>
+</template>
