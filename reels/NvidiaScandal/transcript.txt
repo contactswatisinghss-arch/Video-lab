@@ -1,0 +1,19 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.27-   6.33] This is getting absolutely insane. I was literally stopping myself from making real about   | w0..w13
+[   6.33-   6.99] Zhenzheng Huang.   | w14..w15
+[   7.85-  12.95] But oh my god. Reports of a second affair have surfaced and Nvidia shares   | w16..w29
+[  12.95-  17.45] have plunged more than 8%. And this comes on top of all the losses   | w30..w43
+[  17.45-  22.85] we already saw this week following reports of him being allegedly honey -trapped by   | w44..w57
+[  22.85-  23.59] a Chinese spy.   | w58..w60
+[  24.19-  29.61] This is like the most expensive corporate scandals we have ever seen. And it's   | w61..w74
+[  29.61-  35.05] so much bigger than his personal life. Nvidia, it's like the heart of AI   | w75..w88
+[  35.05-  40.49] boom. So when Nvidia takes a hit, the shockwaves will spread across the entire   | w89..w102
+[  40.49-  41.21] AI market.   | w103..w104
+[  41.81-  46.91] And I must talk about the timing here. Like we already saw massive tech   | w105..w118
+[  46.91-  49.91] sell off after the Democrats midterm election victories.   | w119..w126
+[  50.55-  54.73] Next, oppositions of AI data centers is growing around the world. Like we are   | w127..w140
+[  54.73-  60.23] seeing revolts and demonstrations happening across Europe and around the state. And billions, actually   | w141..w154
+[  60.23-  65.31] trillions of dollars in market value have been wiped off amid all this uncertainty.   | w155..w168
+[  65.31-  70.11] And I genuinely don't know what we are experiencing anymore. Is this like the   | w169..w182
+[  70.11-  75.23] temporal market turbulence or are we finally watching the AI bubble to burst?   | w183..w195
+[  76.05-  78.37] Let me know your thoughts because I can't think.   | w196..w204

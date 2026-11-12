@@ -1,0 +1,29 @@
+{
+  "slug": "NvidiaScandal",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-11-12 07:42:13 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43174841611",
+  "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NvidiaScandal",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-11-12 07:42:13 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43174841611",
+    "raw": "D312E620-FA9A-47CE-97D6-2F56854A2291.mp4",
+    "words": 205,
+    "duration": 78.633333,
+    "warnings": [
+      "HDR (iPhone) source: converted to standard range.",
+      "10 low-confidence words (check names/jargon): This(w0), Zhenzheng(w14), Nvidia(w28), And(w73), Nvidia,(w82), Like(w113), we(w114), midterm(w124), And(w169), or(w186)"
+    ],
+    "token": ""
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-12 07:42:13 UTC"
+    }
+  ]
+}
