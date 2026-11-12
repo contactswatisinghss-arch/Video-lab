@@ -47,5 +47,6 @@
  },
  "title": "Nvidia scandal: Preview 1 (Swati's edit, news behind her)",
  "release": "NvidiaScandal",
- "bg_remove": true
+ "bg_remove": true,
+ "hdr": "original"
 }
