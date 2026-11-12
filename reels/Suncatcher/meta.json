@@ -1,0 +1,22 @@
+{
+  "width": 2160,
+  "height": 3840,
+  "fps": 60.0,
+  "codec": "hevc",
+  "transfer": "arib-std-b67",
+  "duration": 111.983333,
+  "has_audio": true,
+  "size_mb": 788.6,
+  "model": "medium.en",
+  "language": "en",
+  "audio_mean_db": -32.3,
+  "audio_peak_db": -8.7,
+  "words": 277,
+  "warnings": [
+    "HDR (iPhone) source: converted to standard range.",
+    "Audio is quiet (mean -32.3 dB): loudness is normalised, but background noise rises too.",
+    "Raw length 112s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
+    "4 low-confidence words (check names/jargon): gamma(w41), But(w53), for(w145), .(w272)"
+  ],
+  "hdr_mode": "tonemap"
+}
