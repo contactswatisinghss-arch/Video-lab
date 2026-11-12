@@ -1,0 +1,18 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.18-   1.82] Google's marketing,   | w0..w1
+[   2.48-   9.14] hands down, it's complete genius. So they've announced their strongest model, and also developers   | w2..w15
+[   9.14-  14.16] don't have access to it yet. Also, the performance benchmarking is not its P   | w16..w29
+[  14.16-  18.10] zero. So why are we even talking about this model? And what is so   | w30..w43
+[  18.10-  23.66] special about this model? It's called Gemini 4 Carbon, and it's specialized in cybersecurity   | w44..w57
+[  23.66-  29.18] tasks. They have really cracked the release timing of this model, considering all the   | w58..w71
+[  29.18-  33.32] issues that we have seen in the last two weeks. Access is restricted because   | w72..w85
+[  33.32-  37.60] the same AI models which can be used to solve the security flaw or   | w86..w99
+[  37.60-  40.40] identify it can also be used by offenders.   | w100..w107
+[  41.04-  44.54] So the question is not about how strong the model is, but also about   | w108..w121
+[  44.54-  48.80] who gets access to it. Google is also following the pre -release guidelines by   | w122..w135
+[  48.80-  53.44] the US government for this particular model. For the testing purpose, the model has   | w136..w149
+[  53.44-  59.12] shown really strong results against the standard benchmarks for these three security areas.   | w150..w162
+[  59.72-  63.64] One, in finding the vulnerability or security flaw in the software,   | w163..w173
+[  64.44-  68.94] two, in validating that security flaw on how it can be exploited, and three,   | w174..w187
+[  69.06-  72.68] patching the fix for it. That's what makes this release so interesting.   | w188..w199
+[  73.36-  75.66] Well, I'll wait to get access to it.   | w200..w207
