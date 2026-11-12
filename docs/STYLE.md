@@ -4,29 +4,31 @@ What we know works for this channel. Claude updates this file as reference Reels
 Reels report their numbers. These are guardrails and learnings, not a template: each Reel still gets its own look.
 
 ## HARD RULES from Swati (Nov 2026), these override anything below
+- **The final keeps her shot exactly (12 Nov 2026): 4K 60p, original HDR colours, no grading, no change to any
+  video-quality vital.** Only edit elements are added, laid over the original upload (docs/PIPELINE.md). "If I have to
+  add anything on the quality I will explicitly ask you to do it or use a filter." Reference for "original" = her raw
+  upload. Never use `"final": {"mode": "rerender"}` unless she asks.
 - **Never change her footage's look**: no brightness, contrast, saturation, hue, white balance, colour overlays,
   face light, vignette or "grade" of any kind. `#base` gets no CSS filter and no blend layers over it.
-- **ALWAYS keep the ORIGINAL camera look (12 Nov 2026, "keep it original always, I don't want to repeat this").**
-  Her iPhone films HDR; the old default tone-mapped it (hable) at prepare, which made her skin warmer/pinker and the
-  picture darker. Now every build uses `proxy-original.mp4` (HDR shown as-is, only the colour matrix converted),
-  made automatically by `ci/variants.py`. Only an explicit `"hdr": "tonemap"` in edit.json, asked for by Swati, changes this.
-  Before sending any preview, compare skin/wall colour of `preview/sheet.jpg` against `frames.jpg` (raw) and say so.
+- **Previews are drafts**: 1080p, tone-mapped (her "first colours"), for checking the edit only. Say so when sending one.
 - **Captions and text NEVER cover her eyes or face (12 Nov 2026).** Locate her face from `frames.jpg` before
   placing captions. Her usual framing fills the frame (hair top ~430, eyes ~880, chin ~1440 px), so in room shots
-  captions sit below the chin (~1480); when the shot is lowered for a news card, captions sit just under the card
+  captions sit below the chin (~1480); when a news card sits in the top band, captions sit just under the card
   (~770) above her hair. Graphics in the top band must not overlap her head either. Check every beat on the preview
   sheet for this before sending it.
 - **The cover must say what the Reel is about**: the topic name big and readable (e.g. "MIXTURE OF EXPERTS"), plus
   the hook. No mid-sentence caption on the cover frame. Show her a cover draft with the preview, before the final.
-- **Never make her wait on a second round for an either/or (11 Nov 2026).** Whenever there's a choice (sound effects
-  on/off, two openings, two looks), render BOTH versions at the same time so she only picks. Never build one, wait
-  for her reaction, then build the other. Second edits of the same upload: a variant folder with
-  `"release": "<slug>"` in edit.json (see `ci/variants.py`).
-- **Sound: always deliver two versions (11 Nov 2026).** Clean (voice only, she adds a trending Instagram track at
-  ~10–15 % when posting) and SFX (Claude's synthesised whooshes/hits/risers, ~20 dB under her voice and ducked while
-  she speaks). Mechanism: `reels/<slug>/sfx.json` cue sheet (time tokens) → `ci/sfx.py` makes `preview_sfx.mp4` and
-  `final_reel_sfx.mp4` next to the clean files. No downloaded music.
+- **Never make her wait on a second round for an either/or (11 Nov 2026).** Whenever there's a choice (two
+  openings, two looks), render BOTH versions at the same time so she only picks. Second edits of the same upload:
+  a variant folder with `"release": "<slug>"` in edit.json (see `ci/variants.py`); variants share transcript + cutout.
+- **No separate sound-effects version by default (12 Nov 2026).** Only the clean version (her voice). SFX is a
+  later topic (she may bring a sound-effects skill); `ci/sfx.py` runs only for reels that have `sfx.json`.
+- **Speed matters**: tell her the expected time at kick-off (~2 h raw upload to final + her review, see
+  docs/PIPELINE.md) and report the real time when the final is out. Don't make her repeat a preference: turn every
+  repeated request into a default here.
 - **When she says "don't cut my audio"**: `cuts` = `{"max_pause": 99, "keep_head": 1.0, "keep_tail": 2.0, "remove": []}`, no `speed`.
+- **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
+  force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
 ## Channel
 - @swatitalkstech: tech explainers and news for a broad audience ("even if tech isn't your thing"); some demos.
@@ -41,10 +43,10 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 ## NvidiaScandal (12 Nov 2026): news-reaction, "genuinely talking", minimum edit
 - She asked: no audio cuts, no grading, news backdrops (NYT story → stock drop → Democrats → Europe), real room otherwise.
 - Built two versions at once: Preview 1 (her idea: news fills the background behind a cutout) and Preview 2 (Claude:
-  real room, the shot slides down and recreated news cards sit in the top band; NVIDIA SCANDAL title + keyword
-  stickers on frame 0). She approved **Preview 2** for the final.
-- Her corrections: keep the original camera look (tone mapping changed her skin); captions were over her eyes when
-  the shot was lowered → both now HARD RULES above.
+  real room, the shot slides down and recreated news cards sit in the top band). She chose **Preview 1**.
+- It took ~9 h from upload to a usable final (colour rework, a broken HyperFrames update, duplicate runs), so she
+  posted her own unedited 4K60 video instead. Lessons → pipeline v3 (docs/PIPELINE.md): final laid over the original,
+  shared cutout, parallel jobs. The v3 final of Preview 1 (4K60 HDR, audio copied) was approved as quality-identical.
 
 ## NuclearFusion (11 Nov 2026): what she rejected and what she approved
 - Picked look "A + C" from 3 sample covers: C = full-screen takeovers (sun dive, 100,000,000 °C counter, episode
@@ -99,7 +101,7 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 
 ### What to change in Swati's edits
 1. **Pace**: a new visual every 2–3 s on average (was a beat every 3–6 s). Mix of: graphic card, top-half insert,
-   punch-in, prop/object shot, quick-cut burst on the payoff line.
+   prop/object shot, quick-cut burst on the payoff line. (Punch-ins = camera moves: avoid, see HARD RULES.)
 2. **Top-half inserts** as the default B-roll format (recreated UI, diagrams, photos she supplies or generated
    illustrations), sliding/tilting in, her face kept visible below. Never real logos or screenshots of news sites.
 3. **Keyword sticker cloud** on the hook frame (the topic's 4–8 key terms popping in around her) = a strong thumbnail.
@@ -120,17 +122,17 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 - **No regrading or relighting of her footage at all (see HARD RULES).** Variety comes from graphics and decor only.
 - Option per Reel, picked in the storyboard: (a) keep the real room as shot; (b) replace the wall
   behind her with a topic-specific scene via `hyperframes remove-background` (cutout layered over a designed
-  background; ~2 fps on CPU, check hair edges in the preview); (c) "split" looks: footage in a frame/phone/screen
-  over a designed set. Default: alternate, and never two replaced backgrounds back to back.
+  background; scenes behind her get `data-layer="under"`; check hair edges in the preview); (c) "split" looks:
+  footage in a frame/phone/screen over a designed set. Default: alternate, and never two replaced backgrounds back to back.
 - **Swati's preference (30 Oct 2026): keep her real room, add set dressing** (plants, wooden slat wall, shelf, soft
   lamp glow) rather than swapping the background. Digital version: decor layered on the empty wall areas and
   frame edges; anything that would pass behind her uses the `remove-background` cutout so she stays in front.
   Must sit low-contrast and never compete with the top-band graphics.
   Try it on the next Reel's preview and show a before/after frame first.
-- **Background replacement: DON'T (Swati, Nov 2026).** Tried on china-ai-bubble (cutout over a designed walnut-panelled set):
-  she found it "very unnatural". Keep her real room; only subtle decor on empty wall
-  areas that never passes behind her. The `bg_remove` option in edit.json (ci/bgjobs.py) stays available but is off by default.
-  (Exception: NvidiaScandal Preview 1, news backdrops behind her, built because she asked for it; she chose Preview 2.)
+- **Background replacement: DON'T by default (Swati, Nov 2026).** Tried on china-ai-bubble (cutout over a designed
+  walnut-panelled set): she found it "very unnatural". Keep her real room; only subtle decor on empty wall
+  areas that never passes behind her. `bg_remove` in edit.json stays available but is off by default; it's a
+  per-video choice (NvidiaScandal Preview 1 used news backdrops behind her because she asked, and she chose it).
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, LED strip. Neon colour can
@@ -146,4 +148,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 |---|---|---|---|---|---|---|---|---|---|
 | MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles |
 | NuclearFusion | | 98.6 s | | | | | | | glowing title + headline flash opening; A glass cards + C takeovers; real room, no decor; clean + SFX versions |
-| NvidiaScandal | | 78.6 s | | | | | | | news-reaction, audio uncut; recreated news cards over real room; NVIDIA SCANDAL title + stickers; original camera look |
+| NvidiaScandal | 12 Nov (her unedited 4K60 version) | 78.6 s | | | | | | | edit came too late (9 h); she posted the raw; v3 4K final of Preview 1 approved for quality afterwards |
