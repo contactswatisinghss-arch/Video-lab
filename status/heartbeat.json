@@ -1,11 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "preview NuclearFusion"
+  "state": "running",
+  "current": "final NuclearFusion",
+  "pending": [
+    "final NuclearFusion"
   ],
-  "done": [
-    "preview NuclearFusion"
-  ],
-  "time": "2026-11-11 10:28:10 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998697929"
+  "time": "2026-11-12 01:21:00 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43133692016"
 }
