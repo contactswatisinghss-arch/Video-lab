@@ -86,13 +86,16 @@
     "note": "covered by final render"
   },
   "sfx": {
-    "preview_hash": "13986f7479534f8b",
+    "preview_hash": "ac1a9b649bf455c0",
     "preview_ok": true,
     "preview_video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview_sfx.mp4",
     "cues_hash": "17e735f07db99c54",
     "cues": 49,
-    "time": "2026-11-11 10:29:34 UTC",
-    "error": null
+    "time": "2026-11-12 01:49:02 UTC",
+    "error": null,
+    "final_hash": "d0ba50facaa3163b",
+    "final_ok": true,
+    "final_video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/final_reel_sfx.mp4"
   },
   "final": {
     "stage": "final",
