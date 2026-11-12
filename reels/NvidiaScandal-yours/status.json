@@ -1,9 +1,9 @@
 {
   "slug": "NvidiaScandal-yours",
-  "stage": "preview",
+  "stage": "final",
   "ok": true,
-  "time": "2026-11-12 17:43:43 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43248572002",
+  "time": "2026-11-12 19:37:27 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43269743387",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NvidiaScandal-yours",
   "preview": {
     "stage": "preview",
@@ -48,6 +48,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-12 17:43:43 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-12 19:37:27 UTC"
     }
   ],
   "sfx": {
@@ -62,31 +67,34 @@
   "final": {
     "stage": "final",
     "ok": true,
-    "time": "2026-11-12 17:43:43 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43248572002",
-    "hash": "0918b5e23969beca",
+    "time": "2026-11-12 19:37:27 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43269743387",
+    "hash": "d2f43e3bda00cbbf",
     "check": {
-      "parsed": true,
-      "ok": true,
-      "errors": 0,
-      "warnings": 1,
-      "top_errors": [],
-      "top_warnings": [
-        {
-          "severity": "warning",
-          "code": "svg_round_cap_hidden_dash",
-          "message": "<polyline> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
-          "selector": "#sk-line",
-          "time": 0,
-          "section": "findings"
-        }
-      ]
+      "parsed": false,
+      "raw_tail": "    \"width\": 151.7,\n          \"height\": 34\n        },\n        \"firstSeen\": 56.79,\n        \"lastSeen\": 56.79,\n        \"occurrences\": 1,\n        \"heldMs\": 0,\n        \"times\": [\n          56.79\n        ]\n      },\n      {\n        \"code\": \"text_occluded\",\n        \"severity\": \"info\",\n        \"time\": 56.79,\n        \"selector\": \"#eu-box > div:nth-of-type(14)\",\n        \"message\": \"\\\"London\\\" is 100% behind a transparent video's matte.\",\n        \"rect\": {\n          \"left\": 364,\n          \"top\": 756,\n          \"right\": 461.38,\n          \"bottom\": 790,\n          \"width\": 97.38,\n          \"height\": 34\n        },\n        \"containerSelector\": \"#cut\",\n        \"text\": \"London\",\n        \"fixHint\": \"Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.\",\n        \"coveredFraction\": 1,\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/europe.html\",\n        \"bbox\": {\n          \"x\": 364,\n          \"y\": 756,\n          \"width\": 97.38,\n          \"height\": 34\n        },\n        \"firstSeen\": 56.79,\n        \"lastSeen\": 56.79,\n        \"occurrences\": 1,\n        \"heldMs\": 0,\n        \"times\": [\n          56.79\n        ]\n      }\n    ],\n    \"duration\": 78.633,\n    \"samples\": [\n      4.368,\n      13.106,\n      21.843,\n      30.58,\n      39.317,\n      48.054,\n      56.79,\n      65.528,\n      74.265\n    ],\n    \"transitionSamples\": [],\n    \"transitionSamplesDropped\": 0,\n    \"tolerance\": 2,\n    \"totalIssueCount\": 5,\n    \"truncated\": false\n  },\n  \"motion\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": [],\n    \"enabled\": false,\n    \"samples\": 0\n  },\n  \"contrast\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": [],\n    \"enabled\": true,\n    \"samples\": [\n      4.368,\n      21.843,\n      39.317,\n      56.79,\n      74.265\n    ],\n    \"checked\": 43,\n    \"passed\": 43\n  },\n  \"craft\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": [],\n    \"enabled\": true,\n    \"step\": 0.13100000000000023,\n    \"samples\": 599\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"0d5263ba-0d58-4986-bc08-d469fea3e09e\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal-yours/.hyperframes/artifacts/checks/0d5263ba-0d58-4986-bc08-d469fea3e09e.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal-yours/.hyperframes/artifacts/checks/0d5263ba-0d58-4986-bc08-d469fea3e09e.json\n"
     },
     "hf_version": "0.9.37",
-    "snapshot_ok": true,
-    "render_seconds": 821,
-    "seconds": 78.7,
-    "size_mb": 160.4,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal-yours/final_reel.mp4"
+    "mode": "overlay-on-original",
+    "graphics_seconds": 765,
+    "compose": {
+      "seconds": 2324,
+      "hdr": true,
+      "size": [
+        2160,
+        3840
+      ],
+      "fps": "60/1",
+      "audio": "copied"
+    },
+    "seconds": 78.65,
+    "size": [
+      2160,
+      3840
+    ],
+    "fps": "60/1",
+    "transfer": "arib-std-b67",
+    "size_mb": 397.9,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal/final_reel--NvidiaScandal-yours.mp4"
   }
 }
