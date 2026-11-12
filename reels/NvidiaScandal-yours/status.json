@@ -2,14 +2,14 @@
   "slug": "NvidiaScandal-yours",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-12 16:14:51 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43210063161",
+  "time": "2026-11-12 17:43:43 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43248572002",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NvidiaScandal-yours",
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-12 16:14:51 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43210063161",
+    "time": "2026-11-12 17:43:43 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43248572002",
     "hash": "e40b9f56684cf845",
     "note": "covered by final render"
   },
@@ -38,6 +38,16 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-12 16:14:51 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-12 17:43:43 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-12 17:43:43 UTC"
     }
   ],
   "sfx": {
@@ -52,8 +62,8 @@
   "final": {
     "stage": "final",
     "ok": true,
-    "time": "2026-11-12 16:14:51 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43210063161",
+    "time": "2026-11-12 17:43:43 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43248572002",
     "hash": "0918b5e23969beca",
     "check": {
       "parsed": true,
@@ -74,9 +84,9 @@
     },
     "hf_version": "0.9.37",
     "snapshot_ok": true,
-    "render_seconds": 603,
+    "render_seconds": 821,
     "seconds": 78.7,
-    "size_mb": 160.5,
+    "size_mb": 160.4,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal-yours/final_reel.mp4"
   }
 }
