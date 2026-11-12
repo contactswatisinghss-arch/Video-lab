@@ -7,6 +7,10 @@ reels/<variant>/edit.json with "release": "<slug>" (e.g. reels/NvidiaScandal-you
       final_reel.mp4 -> final_reel--<variant>.mp4, cover.jpg -> cover--<variant>.jpg, caption.txt -> caption--<variant>.txt
   - gets reels/<slug>/transcript.json copied in at run time when it has none (not committed)
 Applied by ci/bgjobs.py and ci/sfx.py; plain reels are untouched.
+
+Also: edit.json "hdr": "original" (any reel) -> the build uses proxy-original.mp4, made once from the raw iPhone HDR
+video WITHOUT tone mapping (keeps the camera look Swati sees on her phone; Swati, 12 Nov 2026: the tone-mapped
+proxy made her skin warmer/pinker and the picture darker). Cached on the release; no re-transcription needed.
 """
 import glob, json, os, shutil
 
@@ -55,4 +59,21 @@ def apply(J):
         return up(rel, *out)
 
     J.release_assets, J.download_asset, J.upload = release_assets, download_asset, upload
+
+    gp = J.get_proxy
+    def get_proxy(slug):
+        try: mode = (json.load(open(os.path.join("reels", slug, "edit.json"), encoding="utf-8")) or {}).get("hdr")
+        except Exception: mode = None
+        if mode != "original": return gp(slug)
+        rel = release_of(slug); name = "proxy-original.mp4"
+        work = os.path.join("_work", rel); os.makedirs(work, exist_ok=True)
+        p = os.path.join(work, name)
+        if os.path.exists(p): return p
+        if any(n == name for n, _ in ra(rel)): return da(rel, name, work)
+        from engine.media import probe, make_proxy
+        raw = da(rel, J.raw_asset(rel), os.path.join("in", rel))
+        make_proxy(raw, probe(raw), p, hdr_mode="original")
+        up(rel, p)
+        return p
+    J.get_proxy = get_proxy
     link_transcripts()
