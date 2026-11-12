@@ -2,58 +2,32 @@
   "slug": "NvidiaScandal-yours",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-12 08:56:40 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43179196227",
+  "time": "2026-11-12 11:29:37 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43191714334",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NvidiaScandal-yours",
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-12 08:56:40 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43179196227",
-    "hash": "5ae51aa6a516d56b",
-    "check": {
-      "parsed": true,
-      "ok": true,
-      "errors": 0,
-      "warnings": 3,
-      "top_errors": [],
-      "top_warnings": [
-        {
-          "severity": "warning",
-          "code": "svg_round_cap_hidden_dash",
-          "message": "<polyline> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
-          "selector": "#sk-line",
-          "time": 0,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "contrast_aa_failure",
-          "message": "Contrast is 1.04:1; WCAG AA requires 3:1.",
-          "selector": "#rp-l0",
-          "time": 39.317,
-          "section": "findings"
-        },
-        {
-          "severity": "warning",
-          "code": "contrast_aa_failure",
-          "message": "Contrast is 1.08:1; WCAG AA requires 3:1.",
-          "selector": "#rp-l2",
-          "time": 39.317,
-          "section": "findings"
-        }
-      ]
-    },
-    "hf_version": "0.9.37",
-    "snapshot_ok": true,
-    "render_seconds": 516,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal-yours/preview.mp4"
+    "time": "2026-11-12 11:29:37 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43191714334",
+    "hash": "624976008b5abd5e",
+    "note": "covered by final render"
   },
   "history": [
     {
       "stage": "preview",
       "ok": true,
       "time": "2026-11-12 08:56:40 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-12 11:29:37 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-12 11:29:37 UTC"
     }
   ],
   "sfx": {
@@ -64,5 +38,35 @@
     "cues": 29,
     "time": "2026-11-12 09:06:46 UTC",
     "error": null
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-12 11:29:37 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43191714334",
+    "hash": "f4fa0a178bf2bddf",
+    "check": {
+      "parsed": true,
+      "ok": true,
+      "errors": 0,
+      "warnings": 1,
+      "top_errors": [],
+      "top_warnings": [
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<polyline> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#sk-line",
+          "time": 0,
+          "section": "findings"
+        }
+      ]
+    },
+    "hf_version": "0.9.38",
+    "snapshot_ok": true,
+    "render_seconds": 2279,
+    "seconds": 78.7,
+    "size_mb": 99.6,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal-yours/final_reel.mp4"
   }
 }
