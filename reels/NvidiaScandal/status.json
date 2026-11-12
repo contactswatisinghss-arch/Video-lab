@@ -63,5 +63,14 @@
     "snapshot_ok": true,
     "render_seconds": 299,
     "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal/preview.mp4"
+  },
+  "sfx": {
+    "preview_hash": "c27ecd2085c3889c",
+    "preview_ok": true,
+    "preview_video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal/preview_sfx.mp4",
+    "cues_hash": "dd38230a765e53ed",
+    "cues": 29,
+    "time": "2026-11-12 09:06:52 UTC",
+    "error": null
   }
 }
