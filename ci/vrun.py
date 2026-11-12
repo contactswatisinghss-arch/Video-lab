@@ -14,6 +14,18 @@ if __name__ == "__main__":
         spec = importlib.util.spec_from_file_location("bgjobs", os.path.join(HERE, "bgjobs.py"))
         B = importlib.util.module_from_spec(spec); spec.loader.exec_module(B)
         variants.apply(B.J)
+        # previews/finals that need a background cutout are slow (~40 min): run every other job first
+        _pending = B.J.pending
+        def pending():
+            jobs = _pending()
+            def slow(j):
+                if j[0] not in ("preview", "final") or len(j) < 2: return False
+                try:
+                    import json as _j
+                    return bool((_j.load(open(os.path.join("reels", j[1], "edit.json"), encoding="utf-8")) or {}).get("bg_remove"))
+                except Exception: return False
+            return [j for j in jobs if not slow(j)] + [j for j in jobs if slow(j)]
+        B.J.pending = pending
         B.main()
     else:
         import jobs

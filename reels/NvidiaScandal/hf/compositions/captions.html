@@ -1,7 +1,7 @@
 <template>
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; }
-  #cap-stage { position: absolute; left: 60px; right: 60px; top: 1200px; height: 130px; }
+  #cap-stage { position: absolute; left: 60px; right: 60px; top: 1480px; height: 130px; }
   .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
   .cap-line { display: inline-block; font-family: 'Inter Tight', sans-serif; font-weight: 700; color: #FFFFFF;
     line-height: 1.1; padding: 10px 24px 13px; border-radius: 18px; background: rgba(17,18,20,.72); letter-spacing: -.005em; }
@@ -22,6 +22,10 @@
     word(tl, span, w, grp, i) {},
     exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); }
   });
+  // never over her face: below her chin in the room shots, just under the news card while the shot is lowered
+  tl.set("#cap-stage", { top: 1480 }, 0)
+    .set("#cap-stage", { top: 768 }, {{at:w16}} - 0.4)
+    .set("#cap-stage", { top: 1480 }, {{at:w169}} - 0.25);
   window.__timelines["captions"] = tl;
 })();
 </script>

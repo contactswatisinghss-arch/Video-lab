@@ -8,7 +8,7 @@ reels/<variant>/edit.json with "release": "<slug>" (e.g. reels/NvidiaScandal-you
   - gets reels/<slug>/transcript.json copied in at run time when it has none (not committed)
 Applied by ci/bgjobs.py and ci/sfx.py; plain reels are untouched.
 
-Also: edit.json "hdr": "original" (any reel) -> the build uses proxy-original.mp4, made once from the raw iPhone HDR
+Also (DEFAULT for every reel, Swati 12 Nov 2026; opt out only with edit.json "hdr": "tonemap"): the build uses proxy-original.mp4, made once from the raw iPhone HDR
 video WITHOUT tone mapping (keeps the camera look Swati sees on her phone; Swati, 12 Nov 2026: the tone-mapped
 proxy made her skin warmer/pinker and the picture darker). Cached on the release; no re-transcription needed.
 """
@@ -62,9 +62,12 @@ def apply(J):
 
     gp = J.get_proxy
     def get_proxy(slug):
-        try: mode = (json.load(open(os.path.join("reels", slug, "edit.json"), encoding="utf-8")) or {}).get("hdr")
-        except Exception: mode = None
-        if mode != "original": return gp(slug)
+        # Swati, 12 Nov 2026: ALWAYS keep the original camera look unless edit.json explicitly says "hdr": "tonemap".
+        try: mode = (json.load(open(os.path.join("reels", slug, "edit.json"), encoding="utf-8")) or {}).get("hdr") or "original"
+        except Exception: mode = "original"
+        try: prepared = (json.load(open(os.path.join("reels", release_of(slug), "meta.json"), encoding="utf-8")) or {}).get("hdr_mode")
+        except Exception: prepared = None
+        if mode == "tonemap" or prepared == "original": return gp(slug)
         rel = release_of(slug); name = "proxy-original.mp4"
         work = os.path.join("_work", rel); os.makedirs(work, exist_ok=True)
         p = os.path.join(work, name)
