@@ -1,0 +1,25 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.27-   5.91] Anthropic is reportedly making a $3 .4 billion bet when there has been a   | w0..w13
+[   5.91-   9.51] bloodbath at the Wall Street in the entire week. So let's see what they   | w14..w27
+[   9.51-  14.41] invested in, how it connects to what Jensen Huang explained earlier, and by the   | w28..w41
+[  14.41-  18.09] end of this reel, you'll get better at predicting what's next in AI era.   | w42..w55
+[  19.44-  23.10] Coming back to Anthropic, it did not spend on a new AI model or   | w56..w69
+[  23.10-  29.16] on the GPUs, but on electricity generators. But why would the company behind Claude   | w70..w83
+[  29.16-  34.64] need those? Think about it. For most of us, the AI race started with   | w84..w97
+[  34.64-  39.88] models. ChatGPT, Claude, Gemini. Who is the smarter and who is faster?   | w98..w109
+[  40.54-  44.40] Then came the race of NVIDIA's GPUs and massive data centers.   | w110..w120
+[  45.22-  51.26] But NVIDIA's founder, Jensen Huang, has a better way of explaining what's really happening.   | w121..w134
+[  51.26-  53.70] He calls AI a five layer cake.   | w135..w141
+[  54.32-  59.00] At the top are the applications we use, underneath are the AI models, then   | w142..w155
+[  59.00-  63.90] the infrastructure like data centers and networks, and below that we have chips.   | w156..w168
+[  64.54-  65.54] At the very bottom,   | w169..w172
+[  66.18-  66.50] energy.   | w173..w173
+[  67.38-  71.54] Every single answer you get from AI depends on all these five layers.   | w174..w186
+[  72.16-  78.50] And now, Anthropic has reportedly secured commitments for generators capable of producing around 1   | w187..w200
+[  78.50-  84.48] .7 gigawatts of power. Because you can build the smartest model and buy thousands   | w201..w214
+[  84.48-  88.96] of GPUs, but without enough electricity, none of it runs.   | w215..w224
+[  89.72-  95.48] So we are experiencing different phases of AI race where each bottleneck solved exposes   | w225..w238
+[  95.48-  99.96] the challenges from the next layer. It's also about who can power and scale   | w239..w252
+[  99.96- 105.08] the entire system. And that might be where the next big AI battle is   | w253..w266
+[ 105.08- 110.14] fought. Keep following me for more, where I'll keep breaking down AI and tech   | w267..w280
+[ 110.14- 111.30] in simpler terms for you.   | w281..w285
