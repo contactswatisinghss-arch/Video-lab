@@ -1,6 +1,6 @@
 {
   "state": "running",
-  "current": "prepare NuclearFusion",
+  "current": "prepare MixtureOfExperts",
   "pending": [
     "prepare NuclearFusion",
     "prepare MixtureOfExperts",
@@ -12,6 +12,6 @@
     "prepare ai-scam-calls",
     "final NvidiaScandal-yours"
   ],
-  "time": "2026-11-12 11:31:30 UTC",
+  "time": "2026-11-12 12:06:44 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43208666570"
 }
