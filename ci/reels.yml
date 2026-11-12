@@ -1,0 +1,186 @@
+# Parallel Reels pipeline (12 Nov 2026). Swati copies this file over .github/workflows/reels.yml once
+# (the GitHub connector can't write workflow files). All logic stays in ci/, so this file rarely changes.
+#
+#   plan   works out what is pending (state lives in the repo, as before)
+#   fast   every job that needs no person-cutout runs at the same time, each on its own machine
+#   matte  each distinct person-cutout is made ONCE (per upload + cut list) and shared by all versions
+#   slow   previews/finals that need a cutout start as soon as their cutout exists
+#   sfx    optional sound-effects copies (only reels with sfx.json)
+name: Reels
+on:
+  release:
+    types: [published]
+  push:
+    branches: [main]
+    paths: ["reels/**", "references/**", "selftest/**", "ci/**", "engine/**"]
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "prepare | preview | final | matte | references | selftest | all"
+        required: true
+        default: all
+      target:
+        description: "reel slug or reference name (optional)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+env:
+  GH_TOKEN: ${{ github.token }}
+  EVENT: ${{ github.event_name }}
+  RELEASE_TAG: ${{ github.event.release.tag_name }}
+  INPUT_JOB: ${{ inputs.job }}
+  INPUT_TARGET: ${{ inputs.target }}
+  BRANCH: ${{ github.event.repository.default_branch }}
+  RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+  YTDLP_COOKIES: ${{ secrets.YTDLP_COOKIES }}
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      fast: ${{ steps.p.outputs.fast }}
+      matte: ${{ steps.p.outputs.matte }}
+      slow: ${{ steps.p.outputs.slow }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - id: p
+        run: |
+          python -m pip install -q -r engine/requirements.txt
+          python ci/vrun.py plan > plan.json
+          cat plan.json
+          echo "fast=$(python -c 'import json;print(json.dumps(json.load(open("plan.json"))["fast"]))')" >> $GITHUB_OUTPUT
+          echo "matte=$(python -c 'import json;print(json.dumps(json.load(open("plan.json"))["matte"]))')" >> $GITHUB_OUTPUT
+          echo "slow=$(python -c 'import json;print(json.dumps(json.load(open("plan.json"))["slow"]))')" >> $GITHUB_OUTPUT
+
+  fast:
+    needs: plan
+    if: needs.plan.outputs.fast != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.plan.outputs.fast) }}
+    concurrency:
+      group: reels-${{ matrix.kind }}-${{ matrix.target }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/reel_engine
+            ~/.cache/hyperframes
+            ~/.cache/puppeteer
+            ~/.npm
+          key: reels-v3-${{ hashFiles('ci/config.env') }}-${{ github.run_id }}-${{ strategy.job-index }}
+          restore-keys: reels-v3-
+      - name: ${{ matrix.kind }} ${{ matrix.target }}
+        run: bash ci/setup.sh && python ci/vrun.py one "${{ matrix.kind }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: log-${{ matrix.kind }}-${{ matrix.target }}-${{ strategy.job-index }}
+          path: _out/log.txt
+          if-no-files-found: ignore
+          retention-days: 7
+
+  matte:
+    needs: plan
+    if: needs.plan.outputs.matte != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.plan.outputs.matte) }}
+    concurrency:
+      group: reels-matte-${{ matrix.target }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/reel_engine
+            ~/.cache/hyperframes
+            ~/.cache/puppeteer
+            ~/.npm
+          key: reels-v3-${{ hashFiles('ci/config.env') }}-${{ github.run_id }}-${{ strategy.job-index }}
+          restore-keys: reels-v3-
+      - name: ${{ matrix.kind }} ${{ matrix.target }}
+        run: bash ci/setup.sh && python ci/vrun.py one "${{ matrix.kind }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: log-${{ matrix.kind }}-${{ matrix.target }}-${{ strategy.job-index }}
+          path: _out/log.txt
+          if-no-files-found: ignore
+          retention-days: 7
+
+  slow:
+    needs: [plan, matte]
+    if: always() && needs.plan.outputs.slow != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.plan.outputs.slow) }}
+    concurrency:
+      group: reels-${{ matrix.kind }}-${{ matrix.target }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/reel_engine
+            ~/.cache/hyperframes
+            ~/.cache/puppeteer
+            ~/.npm
+          key: reels-v3-${{ hashFiles('ci/config.env') }}-${{ github.run_id }}-${{ strategy.job-index }}
+          restore-keys: reels-v3-
+      - name: ${{ matrix.kind }} ${{ matrix.target }}
+        run: bash ci/setup.sh && python ci/vrun.py one "${{ matrix.kind }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: log-${{ matrix.kind }}-${{ matrix.target }}-${{ strategy.job-index }}
+          path: _out/log.txt
+          if-no-files-found: ignore
+          retention-days: 7
+
+  sfx:
+    needs: [fast, slow]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: bash ci/setup.sh && (python ci/vrun.py sfx || echo "sfx skipped")

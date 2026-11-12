@@ -5,7 +5,8 @@
   <style>
     {{fontfaces}}
     html, body { margin: 0; background: #000; }
-    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+    #root { background: #000; }
     #cam, #cutcam { position: absolute; inset: 0; }
     #cut { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
     /* Swati's hard rule: the footage is never graded, filtered, tinted or blended */
@@ -25,17 +26,17 @@
     </div>
     <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
          data-start="0" data-duration="{{= at(w16) }}" data-track-index="2" data-track-kind="graphics" style="z-index:4"></div>
-    <div id="nyt" data-composition-id="nyt" data-composition-src="compositions/nyt.html"
+    <div id="nyt" data-layer="under" data-composition-id="nyt" data-composition-src="compositions/nyt.html"
          data-start="{{= at(w16) - 0.05 }}" data-duration="{{= at(w30) - at(w16) + 0.05 }}" data-track-index="3" data-track-kind="graphics" style="z-index:1"></div>
-    <div id="stock" data-composition-id="stock" data-composition-src="compositions/stock.html"
+    <div id="stock" data-layer="under" data-composition-id="stock" data-composition-src="compositions/stock.html"
          data-start="{{= at(w30) - 0.05 }}" data-duration="{{= at(w61) - at(w30) + 0.05 }}" data-track-index="4" data-track-kind="graphics" style="z-index:1"></div>
-    <div id="ripple" data-composition-id="ripple" data-composition-src="compositions/ripple.html"
+    <div id="ripple" data-layer="under" data-composition-id="ripple" data-composition-src="compositions/ripple.html"
          data-start="{{= at(w61) - 0.05 }}" data-duration="{{= at(w105) - at(w61) + 0.05 }}" data-track-index="5" data-track-kind="graphics" style="z-index:1"></div>
-    <div id="dems" data-composition-id="dems" data-composition-src="compositions/dems.html"
+    <div id="dems" data-layer="under" data-composition-id="dems" data-composition-src="compositions/dems.html"
          data-start="{{= at(w105) - 0.05 }}" data-duration="{{= at(w127) - at(w105) + 0.05 }}" data-track-index="6" data-track-kind="graphics" style="z-index:1"></div>
-    <div id="europe" data-composition-id="europe" data-composition-src="compositions/europe.html"
+    <div id="europe" data-layer="under" data-composition-id="europe" data-composition-src="compositions/europe.html"
          data-start="{{= at(w127) - 0.05 }}" data-duration="{{= at(w152) - at(w127) + 0.05 }}" data-track-index="7" data-track-kind="graphics" style="z-index:1"></div>
-    <div id="trill" data-composition-id="trill" data-composition-src="compositions/trill.html"
+    <div id="trill" data-layer="under" data-composition-id="trill" data-composition-src="compositions/trill.html"
          data-start="{{= at(w152) - 0.05 }}" data-duration="{{= at(w169) - at(w152) + 0.05 }}" data-track-index="8" data-track-kind="graphics" style="z-index:1"></div>
     <div id="close" data-composition-id="close" data-composition-src="compositions/close.html"
          data-start="{{at:w169}}" data-duration="{{= dur - at(w169) }}" data-track-index="10" data-track-kind="graphics" style="z-index:4"></div>
