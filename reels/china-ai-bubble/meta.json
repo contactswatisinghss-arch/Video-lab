@@ -1,0 +1,21 @@
+{
+  "width": 2160,
+  "height": 3840,
+  "fps": 60.0,
+  "codec": "hevc",
+  "transfer": "arib-std-b67",
+  "duration": 156.416667,
+  "has_audio": true,
+  "size_mb": 1099.4,
+  "model": "medium.en",
+  "language": "en",
+  "audio_mean_db": -29.9,
+  "audio_peak_db": -8.2,
+  "words": 358,
+  "warnings": [
+    "HDR (iPhone) source: converted to standard range.",
+    "Raw length 156s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
+    "15 low-confidence words (check names/jargon): We're(w0), and(w59), like(w95), unitries(w96), and(w123), Number(w139), Number(w160), two,(w161), And(w199), Number(w216), and(w230), Amazon(w261), and(w270), Giants(w327), and(w335)"
+  ],
+  "hdr_mode": "tonemap"
+}
