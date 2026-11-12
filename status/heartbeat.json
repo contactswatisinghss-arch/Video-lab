@@ -1,11 +1,17 @@
 {
-  "state": "idle",
-  "last": [
+  "state": "running",
+  "current": "prepare NuclearFusion",
+  "pending": [
+    "prepare NuclearFusion",
+    "prepare MixtureOfExperts",
+    "prepare Anthropic",
+    "prepare Suncatcher",
+    "prepare china-ai-bubble",
+    "prepare binance-heist-2",
+    "prepare binance-heist-1",
+    "prepare ai-scam-calls",
     "final NvidiaScandal-yours"
   ],
-  "done": [
-    "final NvidiaScandal-yours"
-  ],
-  "time": "2026-11-12 11:29:40 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43191714334"
+  "time": "2026-11-12 11:31:30 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43208666570"
 }
