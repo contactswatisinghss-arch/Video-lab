@@ -24,6 +24,10 @@ if __name__ == "__main__":
                     import json as _j
                     return bool((_j.load(open(os.path.join("reels", j[1], "edit.json"), encoding="utf-8")) or {}).get("bg_remove"))
                 except Exception: return False
+            # never re-prepare old releases whose reel folder Swati deleted (catch-up only for brand-new uploads)
+            ev_tag = os.environ.get("RELEASE_TAG", "") if os.environ.get("EVENT", "") == "release" else ""
+            jobs = [j for j in jobs if not (j[0] == "prepare" and len(j) > 1 and j[1] != ev_tag
+                                            and not os.path.isdir(os.path.join("reels", j[1])))]
             # reels/<slug>/PAUSE: skip that reel's preview/final until the file is removed (Swati can pause work)
             jobs = [j for j in jobs if not (j[0] in ("preview", "final") and len(j) > 1 and os.path.exists(os.path.join("reels", j[1], "PAUSE")))]
             return [j for j in jobs if not slow(j)] + [j for j in jobs if slow(j)]
