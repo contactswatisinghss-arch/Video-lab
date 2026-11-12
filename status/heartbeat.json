@@ -1,11 +1,13 @@
 {
-  "state": "idle",
-  "last": [
-    "prepare NvidiaScandal"
+  "state": "running",
+  "current": "prepare NvidiaScandal",
+  "pending": [
+    "prepare NvidiaScandal",
+    "references nvscandal-yt",
+    "references nvscandal-stock-yt",
+    "references style-06-newsbg",
+    "references style-07-newsbg"
   ],
-  "done": [
-    "prepare NvidiaScandal"
-  ],
-  "time": "2026-11-12 07:42:15 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43174841611"
+  "time": "2026-11-12 07:43:36 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43175942444"
 }
