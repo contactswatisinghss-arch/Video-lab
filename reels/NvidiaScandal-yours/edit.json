@@ -8,17 +8,43 @@
   "remove": []
  },
  "fixes": [
-  ["Zhenzheng Huang.", "Jensen Huang."],
-  ["making real", "making a reel"],
-  ["honey -trapped", "honey-trapped"],
-  ["temporal", "temporary"],
-  ["state.", "States."],
-  ["Democrats midterm", "Democrats' midterm"]
+  [
+   "Zhenzheng Huang.",
+   "Jensen Huang."
+  ],
+  [
+   "making real",
+   "making a reel"
+  ],
+  [
+   "honey -trapped",
+   "honey-trapped"
+  ],
+  [
+   "temporal",
+   "temporary"
+  ],
+  [
+   "state.",
+   "States."
+  ],
+  [
+   "Democrats midterm",
+   "Democrats' midterm"
+  ]
  ],
- "fonts": ["Inter Tight", "Newsreader"],
+ "fonts": [
+  "Inter Tight",
+  "Newsreader"
+ ],
  "cover_at": 0.0,
- "audio": {"loudnorm": true},
- "post": {"caption": "", "hashtags": []},
+ "audio": {
+  "loudnorm": true
+ },
+ "post": {
+  "caption": "",
+  "hashtags": []
+ },
  "title": "Nvidia scandal: Preview 1 (Swati's edit, news behind her)",
  "release": "NvidiaScandal",
  "bg_remove": true,

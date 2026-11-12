@@ -8,7 +8,7 @@ reels/<variant>/edit.json with "release": "<slug>" (e.g. reels/NvidiaScandal-you
   - gets reels/<slug>/transcript.json copied in at run time when it has none (not committed)
 Applied by ci/bgjobs.py and ci/sfx.py; plain reels are untouched.
 
-Also (DEFAULT for every reel, Swati 12 Nov 2026; opt out only with edit.json "hdr": "tonemap"): the build uses proxy-original.mp4, made once from the raw iPhone HDR
+Also (opt-in with edit.json "hdr": "original"; default is the tone-mapped proxy, which Swati preferred): the build can use proxy-original.mp4, made once from the raw iPhone HDR
 video WITHOUT tone mapping (keeps the camera look Swati sees on her phone; Swati, 12 Nov 2026: the tone-mapped
 proxy made her skin warmer/pinker and the picture darker). Cached on the release; no re-transcription needed.
 """
@@ -62,9 +62,10 @@ def apply(J):
 
     gp = J.get_proxy
     def get_proxy(slug):
-        # Swati, 12 Nov 2026: ALWAYS keep the original camera look unless edit.json explicitly says "hdr": "tonemap".
-        try: mode = (json.load(open(os.path.join("reels", slug, "edit.json"), encoding="utf-8")) or {}).get("hdr") or "original"
-        except Exception: mode = "original"
+        # Swati, 12 Nov 2026 (7:30 AM, final word): the first colours (tone-mapped) are closest to her phone; "original" looked flat/yellow.
+        # Default = tonemap; "hdr": "original" only if she asks.
+        try: mode = (json.load(open(os.path.join("reels", slug, "edit.json"), encoding="utf-8")) or {}).get("hdr") or "tonemap"
+        except Exception: mode = "tonemap"
         try: prepared = (json.load(open(os.path.join("reels", release_of(slug), "meta.json"), encoding="utf-8")) or {}).get("hdr_mode")
         except Exception: prepared = None
         if mode == "tonemap" or prepared == "original": return gp(slug)
