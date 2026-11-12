@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+    #root { background: #D9D9CF; }
+    /* the cam only moves (framing); its top edge is feathered into the wall colour when it slides down */
+    #cam { position: absolute; inset: 0; transform-origin: 50% 45%;
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0px, #000 110px); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0px, #000 110px); }
+    /* Swati's hard rule: the footage is never graded, filtered, tinted or blended */
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- NvidiaScandal. Preview 2 (Claude's edit): real room, the shot slides down so recreated news cards sit above her. Footage never graded. -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+    <div id="cam" style="z-index:0">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w16) }}" data-track-index="2" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="nyt" data-composition-id="nyt" data-composition-src="compositions/nyt.html"
+         data-start="{{= at(w16) - 0.05 }}" data-duration="{{= at(w30) - at(w16) + 0.05 }}" data-track-index="3" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="stock" data-composition-id="stock" data-composition-src="compositions/stock.html"
+         data-start="{{= at(w30) - 0.05 }}" data-duration="{{= at(w61) - at(w30) + 0.05 }}" data-track-index="4" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="ripple" data-composition-id="ripple" data-composition-src="compositions/ripple.html"
+         data-start="{{= at(w61) - 0.05 }}" data-duration="{{= at(w105) - at(w61) + 0.05 }}" data-track-index="5" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="dems" data-composition-id="dems" data-composition-src="compositions/dems.html"
+         data-start="{{= at(w105) - 0.05 }}" data-duration="{{= at(w127) - at(w105) + 0.05 }}" data-track-index="6" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="europe" data-composition-id="europe" data-composition-src="compositions/europe.html"
+         data-start="{{= at(w127) - 0.05 }}" data-duration="{{= at(w152) - at(w127) + 0.05 }}" data-track-index="7" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="trill" data-composition-id="trill" data-composition-src="compositions/trill.html"
+         data-start="{{= at(w152) - 0.05 }}" data-duration="{{= at(w169) - at(w152) + 0.05 }}" data-track-index="8" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="close" data-composition-id="close" data-composition-src="compositions/close.html"
+         data-start="{{at:w169}}" data-duration="{{= dur - at(w169) }}" data-track-index="10" data-track-kind="graphics" style="z-index:4"></div>
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="12" data-track-kind="captions" style="z-index:6"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cam", { y: 0, scale: 1 }, 0)
+      .set("#cam", { scale: 1.07 }, {{at:w3}})
+      .set("#cam", { scale: 1 }, {{at:w5}})
+      .fromTo("#cam", { y: 0 }, { y: 400, duration: 0.5, ease: "power3.inOut" }, {{at:w16}} - 0.4)
+      .to("#cam", { y: 0, duration: 0.5, ease: "power3.inOut" }, {{at:w169}} - 0.25)
+      .set("#cam", { scale: 1.06 }, {{at:w171}})
+      .set("#cam", { scale: 1 }, {{at:w179}});
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>

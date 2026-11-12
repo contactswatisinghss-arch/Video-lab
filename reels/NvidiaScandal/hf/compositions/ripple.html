@@ -1,0 +1,41 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #rp-box { position:absolute; left:60px; top:190px; width:960px; height:560px; border-radius:30px; background:#0E1A2B; box-shadow:0 24px 60px rgba(0,0,0,.3); overflow:hidden; }
+  #rp-k { position:absolute; left:48px; right:48px; top:34px; text-align:center; font:800 40px/1.15 'Inter Tight', 'Inter', sans-serif; color:#fff; }
+  #rp-k b { color:#FF6B6F; }
+  .rp-ring { position:absolute; left:480px; top:330px; width:200px; height:200px; margin:-100px 0 0 -100px; border-radius:50%; border:5px solid rgba(255,107,111,.85); opacity:0; }
+  #rp-core { position:absolute; left:480px; top:330px; width:220px; height:96px; margin:-48px 0 0 -110px; border-radius:48px; background:#FFFFFF; color:#0E1A2B;
+     font:900 40px/96px 'Inter Tight', 'Inter', sans-serif; text-align:center; letter-spacing:1px; }
+  .rp-lab { position:absolute; font:700 30px 'Inter Tight', 'Inter', sans-serif; color:#D7E3F4; background:rgba(255,255,255,.08); padding:8px 16px; border-radius:12px; }
+</style>
+<div id="root" data-composition-id="ripple" data-width="1080" data-height="1920">
+  <div id="rp-box">
+    <div id="rp-k">~<b>$400B</b> of Nvidia's value gone in 2 days</div>
+    <div class="rp-ring" id="rp-r1"></div><div class="rp-ring" id="rp-r2"></div><div class="rp-ring" id="rp-r3"></div>
+    <div id="rp-core">NVIDIA</div>
+    <div class="rp-lab" id="rp-l0" style="left:150px;top:158px">Chipmakers</div>
+    <div class="rp-lab" id="rp-l1" style="left:730px;top:158px">Cloud</div>
+    <div class="rp-lab" id="rp-l2" style="left:140px;top:458px">AI startups</div>
+    <div class="rp-lab" id="rp-l3" style="left:690px;top:458px">Data centres</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{at:w61}};
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#rp-box", { y: -620 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0.02)
+    .fromTo("#rp-k", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.3, ease: "power4.out" }, t({{at:w65}}))
+    .fromTo("#rp-core", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, t({{at:w82}}))
+    .fromTo(".rp-lab", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.12, ease: "power3.out" }, t({{at:w86}}))
+    .fromTo("#rp-r1", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 1.4, ease: "power2.out" }, t({{at:w97}}) + 0.00)
+    .fromTo("#rp-r2", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.8, duration: 1.4, ease: "power2.out" }, t({{at:w97}}) + 0.25)
+    .fromTo("#rp-r3", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 4.4, duration: 1.4, ease: "power2.out" }, t({{at:w97}}) + 0.50)
+    .to("#rp-core", { keyframes: { x: [0, -10, 9, -6, 4, 0] }, duration: 0.4, ease: "none" }, t({{at:w95}}))
+    .to(".rp-lab", { color: "#FF8A8D", duration: 0.2, stagger: 0.1, ease: "power1.out" }, t({{at:w99}}))
+    .to("#rp-box", { y: -640, duration: 0.3, ease: "power3.in" }, t({{at:w105}}) - 0.3);
+  window.__timelines["ripple"] = tl;
+})();
+</script>
+</template>

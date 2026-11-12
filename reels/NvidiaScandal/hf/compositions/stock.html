@@ -1,0 +1,38 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #sk-box { position:absolute; left:60px; top:190px; width:960px; height:560px; border-radius:30px; background:#111214; box-shadow:0 24px 60px rgba(0,0,0,.3); overflow:hidden; }
+  #sk-t { position:absolute; left:48px; top:40px; font:700 34px 'Inter Tight', 'Inter', sans-serif; color:#BDBDBD; letter-spacing:2px; }
+  #sk-big { position:absolute; right:48px; top:20px; font:900 150px/1 'Inter Tight', 'Inter', sans-serif; color:#E0393E; }
+  #sk-sub { position:absolute; right:52px; top:170px; font:700 32px 'Inter Tight', 'Inter', sans-serif; color:#EDEDED; }
+  #sk-svg { position:absolute; left:0; top:170px; width:960px; height:360px; }
+  #sk-row { position:absolute; left:48px; top:40px; margin-top:56px; font:700 30px 'Inter Tight', 'Inter', sans-serif; color:#EDEDED; }
+  #sk-row b { color:#E0393E; }
+  #sk-tag { position:absolute; left:48px; right:48px; bottom:36px; font:700 30px 'Inter Tight', 'Inter', sans-serif; color:#fff; background:rgba(224,57,62,.92); padding:14px 20px; border-radius:14px; }
+</style>
+<div id="root" data-composition-id="stock" data-width="1080" data-height="1920">
+  <div id="sk-box">
+    <svg id="sk-svg" viewBox="0 0 960 360"><polyline id="sk-line" points="30,69 52,80 75,83 98,81 120,88 142,98 165,98 188,98 210,108 232,115 255,113 278,116 300,127 322,131 345,129 368,135 390,145 412,146 435,145 458,155 480,162 502,161 525,163 548,174 570,179 592,176 615,182 638,193 660,194 682,204 705,223 728,243 750,252 772,265 795,286 818,302 840,311 862,326 885,342 908,342 930,342" fill="none" stroke="#E0393E" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+    <div id="sk-t">NVDA</div>
+    <div id="sk-row">Mon <b>-4.3%</b> &nbsp;·&nbsp; Tue <b>-5.5%</b></div>
+    <div id="sk-big">-9%</div>
+    <div id="sk-sub">after hours, on the new report</div>
+    <div id="sk-tag">ALLEGED spy link · Nvidia and China deny it</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{at:w30}};
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#sk-box", { y: -620 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0.02)
+    .fromTo("#sk-line", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 1.3, ease: "power2.inOut" }, 0.2)
+    .fromTo("#sk-big", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, t({{at:w31}}))
+    .fromTo("#sk-sub", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, t({{at:w34}}))
+    .fromTo("#sk-row", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power4.out" }, t({{at:w43}}))
+    .fromTo("#sk-tag", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power4.out" }, t({{at:w54}}))
+    .to("#sk-box", { y: -640, duration: 0.3, ease: "power3.in" }, t({{at:w61}}) - 0.3);
+  window.__timelines["stock"] = tl;
+})();
+</script>
+</template>

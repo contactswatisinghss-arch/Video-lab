@@ -1,0 +1,10 @@
+{"cues": [
+  ["hit", 0.05, -3], ["pop", 0.2], ["pop", 0.3], ["pop", 0.4], ["pop", 0.5],
+  ["whoosh", {{= at(w16) - 0.3 }}], ["hit", {{at:w20}}, -3],
+  ["whoosh", {{at:w30}}, -3], ["hit", {{at:w31}}], ["tick", {{at:w43}}], ["glitch", {{at:w54}}],
+  ["whoosh", {{at:w61}}, -3], ["pop", {{at:w82}}], ["riser", {{= at(w92) }}, {{= at(w97) }}], ["hit", {{at:w97}}],
+  ["whoosh", {{at:w105}}, -3], ["hit", {{at:w123}}, -3],
+  ["whoosh", {{at:w127}}, -3], ["pop", {{at:w142}}], ["pop", {{= at(w142) + 0.14 }}], ["pop", {{= at(w142) + 0.28 }}], ["tick", {{at:w147}}],
+  ["whoosh", {{at:w152}}, -3], ["glitch", {{at:w154}}], ["hit", {{at:w155}}],
+  ["whoosh", {{= at(w169) - 0.25 }}, -4], ["pop", {{at:w183}}], ["pop", {{at:w192}}], ["shimmer", {{at:w196}}]
+]}

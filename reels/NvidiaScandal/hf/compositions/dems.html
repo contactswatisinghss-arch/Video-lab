@@ -1,0 +1,34 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #dm-box { position:absolute; left:60px; top:190px; width:960px; height:560px; border-radius:30px; background:#F1EDE4; box-shadow:0 24px 60px rgba(0,0,0,.28); overflow:hidden; }
+  #dm-k { position:absolute; left:48px; right:48px; top:36px; text-align:center; font:700 30px 'Newsreader', 'EB Garamond', serif; letter-spacing:4px; color:#1C1C1A;
+     border-bottom:3px double #1C1C1A; padding-bottom:12px; }
+  #dm-h { position:absolute; left:48px; right:48px; top:104px; font:700 64px/1.08 'Newsreader', 'EB Garamond', serif; color:#1C1C1A; }
+  #dm-s { position:absolute; left:48px; right:48px; top:272px; font:400 34px/1.3 'Newsreader', 'EB Garamond', serif; color:#55524C; }
+  .dm-ln { position:absolute; height:12px; border-radius:3px; background:#C9C4B8; }
+  #dm-tag { position:absolute; right:48px; top:102px; font:800 26px 'Inter Tight', 'Inter', sans-serif; color:#fff; background:#E0393E; padding:6px 14px; border-radius:8px; }
+</style>
+<div id="root" data-composition-id="dems" data-width="1080" data-height="1920">
+  <div id="dm-box">
+    <div id="dm-k">AFTER THE MIDTERMS</div>
+    <div id="dm-h">Democrats' sweep sparks a $2.3 trillion tech rout</div>
+    <div id="dm-s">Nasdaq 100 -6.3% in a day · Nvidia -9.2%</div>
+
+
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{at:w105}};
+  const t = (x) => x - S;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#dm-box", { y: -620, rotation: -2 }, { y: 0, rotation: 0, duration: 0.55, ease: "expo.out" }, 0.05)
+    .fromTo("#dm-h", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power4.out" }, 0.35)
+    .fromTo("#dm-s", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0.6)
+
+    .to("#dm-box", { y: -640, duration: 0.3, ease: "power3.in" }, t({{at:w127}}) - 0.3);
+  window.__timelines["dems"] = tl;
+})();
+</script>
+</template>
