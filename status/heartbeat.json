@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "prepare NvidiaScandal",
-  "pending": [
+  "state": "idle",
+  "last": [
     "prepare NvidiaScandal"
   ],
-  "time": "2026-11-12 07:23:50 UTC",
+  "done": [
+    "prepare NvidiaScandal"
+  ],
+  "time": "2026-11-12 07:42:15 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43174841611"
 }
