@@ -31,3 +31,6 @@ search fusion-tokamak-yt how a tokamak fusion reactor works
 # NvidiaScandal — topic virals
 search nvscandal-yt jensen huang affair chinese spy nvidia
 search nvscandal-stock-yt nvidia stock crash jensen huang
+# NvidiaScandal — Swati's picked style refs (news-backdrop talking head)
+style-06-newsbg https://www.instagram.com/reel/DfncL5ZhnSR/
+style-07-newsbg https://www.instagram.com/reel/DfniVehP_cb/
