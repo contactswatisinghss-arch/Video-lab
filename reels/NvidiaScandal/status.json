@@ -1,9 +1,9 @@
 {
   "slug": "NvidiaScandal",
-  "stage": "prepare",
+  "stage": "preview",
   "ok": true,
-  "time": "2026-11-12 08:02:04 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43175942444",
+  "time": "2026-11-12 09:05:13 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43179196227",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NvidiaScandal",
   "prepare": {
     "stage": "prepare",
@@ -29,6 +29,39 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-12 08:02:04 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-12 09:05:13 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": true,
+    "time": "2026-11-12 09:05:13 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43179196227",
+    "hash": "c27ecd2085c3889c",
+    "check": {
+      "parsed": true,
+      "ok": true,
+      "errors": 0,
+      "warnings": 1,
+      "top_errors": [],
+      "top_warnings": [
+        {
+          "severity": "warning",
+          "code": "svg_round_cap_hidden_dash",
+          "message": "<polyline> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+          "selector": "#sk-line",
+          "time": 0,
+          "section": "findings"
+        }
+      ]
+    },
+    "hf_version": "0.9.37",
+    "snapshot_ok": true,
+    "render_seconds": 299,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NvidiaScandal/preview.mp4"
+  }
 }
