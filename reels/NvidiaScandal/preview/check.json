@@ -31,8 +31,33 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 0,
-    "findings": []
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "media_proxy_fallback",
+        "severity": "info",
+        "message": "[hyperframes] runtime_media_proxy_fallback: \"http://127.0.0.1:38083/assets/base.mp4\" uses a codec (h264) this browser can't decode; auto-swapped to an authoring proxy for this preview only. Render output is unaffected.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "78.633",
+          "data-width": "1080",
+          "data-height": "1920",
+          "data-fps": "30"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:38083/",
+        "line": 283
+      }
+    ]
   },
   "layout": {
     "ok": true,
@@ -127,7 +152,7 @@
     "findings": [],
     "enabled": true,
     "step": 0.13100000000000023,
-    "samples": 599
+    "samples": 579
   },
   "audio": {
     "ok": true,
@@ -137,7 +162,13 @@
     "findings": []
   },
   "hdr": {
-    "autoPromotion": null,
+    "autoPromotion": {
+      "triggeringAsset": "assets/base.mp4",
+      "output": {
+        "colorSpace": "BT.2020",
+        "codec": "HEVC Main10"
+      }
+    },
     "inspection": "available"
   },
   "snapshots": {
@@ -147,13 +178,13 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "f4ba1da7-2c92-45e6-92ee-dabb3a4c485f",
+    "id": "379e9a5f-54a1-4aae-b93a-1ef6600c5c29",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal/.hyperframes/artifacts/checks/f4ba1da7-2c92-45e6-92ee-dabb3a4c485f.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal/.hyperframes/artifacts/checks/379e9a5f-54a1-4aae-b93a-1ef6600c5c29.json",
     "attribution": "unversioned"
   },
   "_meta": {
-    "version": "0.9.37",
+    "version": "0.9.38",
     "updateAvailable": false
   }
 }
