@@ -1,0 +1,31 @@
+{
+  "url": "https://www.instagram.com/reel/DfniVehP_cb/",
+  "engagement": {
+    "title": "Video by ericnomics",
+    "uploader": "Eric Pan",
+    "upload_date": "20261111",
+    "likes": 19963,
+    "comments": 624,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/reel/DfniVehP_cb/"
+  },
+  "duration": 20.23,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "cuts": 1,
+  "cut_times": [
+    17.567
+  ],
+  "avg_shot_s": 10.12,
+  "shortest_shot_s": 2.67,
+  "cuts_in_first_3s": 0,
+  "words": 66,
+  "words_per_sec": 3.26,
+  "speech_ratio": 0.89,
+  "hook_words_first_3s": "Oh my god, this literally just came out, but Jensen Huang had",
+  "first_word_at": 0.0,
+  "loudness_lufs": -14.2
+}
