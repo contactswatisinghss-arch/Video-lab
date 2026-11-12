@@ -2,8 +2,8 @@
   "slug": "NuclearFusion",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-11 10:28:08 UTC",
-  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998697929",
+  "time": "2026-11-12 01:48:31 UTC",
+  "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43133692016",
   "release": "https://github.com/swatitalkstech-cell/Video-lab/releases/tag/NuclearFusion",
   "prepare": {
     "stage": "prepare",
@@ -65,14 +65,41 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-11 10:28:08 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-12 01:48:31 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-12 01:48:31 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-11 10:28:08 UTC",
-    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/42998697929",
-    "hash": "13986f7479534f8b",
+    "time": "2026-11-12 01:48:31 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43133692016",
+    "hash": "ac1a9b649bf455c0",
+    "note": "covered by final render"
+  },
+  "sfx": {
+    "preview_hash": "13986f7479534f8b",
+    "preview_ok": true,
+    "preview_video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview_sfx.mp4",
+    "cues_hash": "17e735f07db99c54",
+    "cues": 49,
+    "time": "2026-11-11 10:29:34 UTC",
+    "error": null
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-12 01:48:31 UTC",
+    "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43133692016",
+    "hash": "d0ba50facaa3163b",
     "check": {
       "parsed": true,
       "ok": false,
@@ -235,18 +262,11 @@
         }
       ]
     },
-    "hf_version": "0.9.33",
+    "hf_version": "0.9.36",
     "snapshot_ok": true,
-    "render_seconds": 843,
-    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview.mp4"
-  },
-  "sfx": {
-    "preview_hash": "13986f7479534f8b",
-    "preview_ok": true,
-    "preview_video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/preview_sfx.mp4",
-    "cues_hash": "17e735f07db99c54",
-    "cues": 49,
-    "time": "2026-11-11 10:29:34 UTC",
-    "error": null
+    "render_seconds": 1181,
+    "seconds": 98.7,
+    "size_mb": 224.4,
+    "video": "https://github.com/swatitalkstech-cell/Video-lab/releases/download/NuclearFusion/final_reel.mp4"
   }
 }
