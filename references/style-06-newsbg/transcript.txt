@@ -1,0 +1,17 @@
+[  0.00] The NVIDIA mode may be gone, and I'm not talking about the
+[  3.16] Chinese spy.
+[  4.08] I'm talking about this chart Anthropic recently just displayed on its roadshow.
+[  8.24] Most AI code is written for CUDA, NVIDIA's own software.
+[ 11.84] So switching chips means completely rewriting it.
+[ 14.50] This customer software lock -in is NVIDIA's mode, because it would usually
+[ 18.14] take a normal engineer 6 to 12 months to rewrite that code
+[ 22.10] and switch chips.
+[ 23.18] But Anthropic showed that you could do this with mythos in just
+[ 26.08] 3 days.
+[ 26.72] This will essentially allow customers and businesses to switch between chips much
+[ 31.18] easier.
+[ 31.72] And they will now have a fungible compute pool with access to
+[ 34.70] all different types of chips from AWS, Google, NVIDIA, and AMD.
+[ 39.50] So by democratizing the code that unlocks chips, Anthropic basically made the
+[ 43.80] chip market way more competitive.
+[ 45.72] So is NVIDIA's mode real or is AI about to kill it?
