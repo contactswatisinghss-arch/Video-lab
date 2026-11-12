@@ -1,0 +1,21 @@
+{
+  "width": 2160,
+  "height": 3840,
+  "fps": 60.0,
+  "codec": "hevc",
+  "transfer": "arib-std-b67",
+  "duration": 103.066667,
+  "has_audio": true,
+  "size_mb": 725.0,
+  "model": "medium.en",
+  "language": "en",
+  "audio_mean_db": -31.8,
+  "audio_peak_db": -10.7,
+  "words": 282,
+  "warnings": [
+    "HDR (iPhone) source: converted to standard range.",
+    "Raw length 103s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
+    "6 low-confidence words (check names/jargon): explained(w37), a(w81), experts.(w104), onwards(w168), model.(w214), mixture(w273)"
+  ],
+  "hdr_mode": "tonemap"
+}

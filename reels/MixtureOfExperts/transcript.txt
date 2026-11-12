@@ -1,0 +1,26 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.02-   3.52] Would you wake up an entire team of chefs just to make one sandwich?   | w0..w13
+[   4.08-   8.34] Some AI models use similar trick to save on work. Hi, I'm Swati, tech   | w14..w27
+[   8.34-  13.26] lead at AWS. Welcome to my series called AI explained like you're five. Bigger   | w28..w41
+[  13.26-  17.98] AI models can take enormous computing power. So how do we grow a model   | w42..w55
+[  17.98-  21.60] without making every part work on every calculation?   | w56..w63
+[  22.44-  25.12] One approach is called mixture of experts.   | w64..w70
+[  25.74-  31.20] Imagine a kitchen with eight chefs. For each little job, a head chef chooses   | w71..w84
+[  31.20-  32.24] just two.   | w85..w86
+[  32.85-  38.49] Inside an AI model, certain sections of the neural network contain smaller neural networks   | w87..w100
+[  38.49-  39.63] and they're called experts.   | w101..w104
+[  40.61-  46.03] Those are our chefs, all inside one model. Your sentence gets broken into tiny   | w105..w118
+[  46.03-  49.25] pieces called tokens, which is a word or a part of a word.   | w119..w131
+[  49.91-  51.93] Central to this architecture is a router.   | w132..w138
+[  52.59-  57.25] Think of it as the head chef who decides which expert should process each   | w139..w152
+[  57.25-  60.55] token. Only those two get activated for that token.   | w153..w161
+[  61.15-  65.45] Their results get combined and passed onwards through the model, helping it build the   | w162..w175
+[  65.45-  69.81] answer. For the next token, the router might choose a different pair. So the   | w176..w189
+[  69.81-  74.09] model has a whole team of experts available, but only calls on a few   | w190..w203
+[  74.09-  75.57] for each piece of work.   | w204..w208
+[  76.27-  81.77] One real example is Mistral model. It has around 47 billion parameters, but uses   | w209..w222
+[  81.77-  87.17] only about 13 billion for each token. So your whole model is trained for   | w223..w236
+[  87.17-  92.29] better. The compute it uses during inferencing is of a much smaller one.   | w237..w249
+[  92.91-  96.81] You still would need memory to hold the whole team, but you don't make   | w250..w263
+[  96.81- 102.11] everyone work on every job. That's the benefit of mixture of experts. Follow me   | w264..w277
+[ 102.11- 103.05] for the next episode.   | w278..w281
