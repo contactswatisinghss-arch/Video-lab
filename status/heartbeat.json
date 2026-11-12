@@ -1,6 +1,6 @@
 {
   "state": "running",
-  "current": "preview NvidiaScandal",
+  "current": "references nvscandal-yt",
   "pending": [
     "preview NvidiaScandal-yours",
     "preview NvidiaScandal",
@@ -9,6 +9,6 @@
     "references style-06-newsbg",
     "references style-07-newsbg"
   ],
-  "time": "2026-11-12 08:56:42 UTC",
+  "time": "2026-11-12 09:05:15 UTC",
   "run": "https://github.com/swatitalkstech-cell/Video-lab/actions/runs/43179196227"
 }
