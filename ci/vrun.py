@@ -24,6 +24,8 @@ if __name__ == "__main__":
                     import json as _j
                     return bool((_j.load(open(os.path.join("reels", j[1], "edit.json"), encoding="utf-8")) or {}).get("bg_remove"))
                 except Exception: return False
+            # reels/<slug>/PAUSE: skip that reel's preview/final until the file is removed (Swati can pause work)
+            jobs = [j for j in jobs if not (j[0] in ("preview", "final") and len(j) > 1 and os.path.exists(os.path.join("reels", j[1], "PAUSE")))]
             return [j for j in jobs if not slow(j)] + [j for j in jobs if slow(j)]
         B.J.pending = pending
         B.main()
