@@ -1,0 +1,448 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "svg_round_cap_hidden_dash",
+        "severity": "warning",
+        "message": "<polyline> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+        "selector": "#sk-line",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal-yours/compositions/stock.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
+      }
+    ],
+    "filesScanned": 10
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 8,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 21.843,
+        "selector": "#sk-tag",
+        "message": "\"ALLEGED\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 68,
+          "top": 1110,
+          "right": 660.36,
+          "bottom": 1146,
+          "width": 592.36,
+          "height": 36
+        },
+        "containerSelector": "#cut",
+        "text": "ALLEGED spy link · Nvidia and China deny it",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/stock.html",
+        "bbox": {
+          "x": 68,
+          "y": 1110,
+          "width": 592.36,
+          "height": 36
+        },
+        "firstSeen": 21.843,
+        "lastSeen": 21.843,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          21.843
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.317,
+        "selector": "#rp-core",
+        "message": "\"NVIDIA\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 467.27,
+          "top": 735,
+          "right": 612.72,
+          "bottom": 784,
+          "width": 145.45,
+          "height": 49
+        },
+        "containerSelector": "#cut",
+        "text": "NVIDIA",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/ripple.html",
+        "bbox": {
+          "x": 467.27,
+          "y": 735,
+          "width": 145.45,
+          "height": 49
+        },
+        "firstSeen": 39.317,
+        "lastSeen": 39.317,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.317
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.317,
+        "selector": "#rp-l0",
+        "message": "\"Chipmakers\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 226,
+          "top": 596,
+          "right": 393.31,
+          "bottom": 632,
+          "width": 167.31,
+          "height": 36
+        },
+        "containerSelector": "#cut",
+        "text": "Chipmakers",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/ripple.html",
+        "bbox": {
+          "x": 226,
+          "y": 596,
+          "width": 167.31,
+          "height": 36
+        },
+        "firstSeen": 39.317,
+        "lastSeen": 39.317,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.317
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.317,
+        "selector": "#rp-l2",
+        "message": "\"AI\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 216,
+          "top": 896,
+          "right": 368.11,
+          "bottom": 932,
+          "width": 152.11,
+          "height": 36
+        },
+        "containerSelector": "#cut",
+        "text": "AI startups",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/ripple.html",
+        "bbox": {
+          "x": 216,
+          "y": 896,
+          "width": 152.11,
+          "height": 36
+        },
+        "firstSeen": 39.317,
+        "lastSeen": 39.317,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.317
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 48.054,
+        "selector": "#dm-s",
+        "message": "\"·\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 48,
+          "top": 427,
+          "right": 636.41,
+          "bottom": 461,
+          "width": 588.41,
+          "height": 34
+        },
+        "containerSelector": "#cut",
+        "text": "Nasdaq 100 -6.3% in a day · Nvidia -9.2%",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/dems.html",
+        "bbox": {
+          "x": 48,
+          "y": 427,
+          "width": 588.41,
+          "height": 34
+        },
+        "firstSeen": 48.054,
+        "lastSeen": 48.054,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          48.054
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 56.79,
+        "selector": "#eu-box > div:nth-of-type(4)",
+        "message": "\"Dublin\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 252,
+          "top": 714,
+          "right": 334.67,
+          "bottom": 748,
+          "width": 82.67,
+          "height": 34
+        },
+        "containerSelector": "#cut",
+        "text": "Dublin",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/europe.html",
+        "bbox": {
+          "x": 252,
+          "y": 714,
+          "width": 82.67,
+          "height": 34
+        },
+        "firstSeen": 56.79,
+        "lastSeen": 56.79,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          56.79
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 56.79,
+        "selector": "#eu-box > div:nth-of-type(6)",
+        "message": "\"Amsterdam\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 546,
+          "top": 679,
+          "right": 697.7,
+          "bottom": 713,
+          "width": 151.7,
+          "height": 34
+        },
+        "containerSelector": "#cut",
+        "text": "Amsterdam",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/europe.html",
+        "bbox": {
+          "x": 546,
+          "y": 679,
+          "width": 151.7,
+          "height": 34
+        },
+        "firstSeen": 56.79,
+        "lastSeen": 56.79,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          56.79
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 56.79,
+        "selector": "#eu-box > div:nth-of-type(14)",
+        "message": "\"London\" is 100% behind a transparent video's matte.",
+        "rect": {
+          "left": 364,
+          "top": 756,
+          "right": 461.38,
+          "bottom": 790,
+          "width": 97.38,
+          "height": 34
+        },
+        "containerSelector": "#cut",
+        "text": "London",
+        "fixHint": "Move or resize the text so no word is 80% behind the matte and no two neighbouring words are each half behind it, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/europe.html",
+        "bbox": {
+          "x": 364,
+          "y": 756,
+          "width": 97.38,
+          "height": 34
+        },
+        "firstSeen": 56.79,
+        "lastSeen": 56.79,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          56.79
+        ]
+      }
+    ],
+    "duration": 78.633,
+    "samples": [
+      4.368,
+      13.106,
+      21.843,
+      30.58,
+      39.317,
+      48.054,
+      56.79,
+      65.528,
+      74.265
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 8,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.04:1; WCAG AA requires 3:1.",
+        "text": "Chipmakers",
+        "fg": "rgb(255,138,141)",
+        "bg": "rgb(227,150,116)",
+        "ratio": 1.04,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(131,71,72)",
+        "large": true,
+        "selector": "#rp-l0",
+        "dataAttributes": {},
+        "sourceFile": "compositions/ripple.html",
+        "bbox": {
+          "x": 210,
+          "y": 588,
+          "width": 199.3125,
+          "height": 52
+        },
+        "time": 39.317,
+        "times": [
+          39.317
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.08:1; WCAG AA requires 3:1.",
+        "text": "AI startups",
+        "fg": "rgb(255,139,142)",
+        "bg": "rgb(250,155,131)",
+        "ratio": 1.08,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(142,77,79)",
+        "large": true,
+        "selector": "#rp-l2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/ripple.html",
+        "bbox": {
+          "x": 200,
+          "y": 888,
+          "width": 184.109375,
+          "height": 52
+        },
+        "time": 39.317,
+        "times": [
+          39.317
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      4.368,
+      21.843,
+      39.317,
+      56.79,
+      74.265
+    ],
+    "checked": 43,
+    "passed": 41
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.13100000000000023,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "9ea04c43-fe03-419b-8409-bacf73c9d3aa",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/NvidiaScandal-yours/.hyperframes/artifacts/checks/9ea04c43-fe03-419b-8409-bacf73c9d3aa.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.37",
+    "updateAvailable": false
+  }
+}
