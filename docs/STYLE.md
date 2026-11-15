@@ -30,6 +30,21 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
   force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
+## Series: AI Basics Before 2026 Ends (10 Reels, Nov 2026)
+- Slugs `ai-basics-day-1` … `ai-basics-day-10`. Scripts live in Swati's doc; each opens with the topic in plain words
+  in line 1 (her rule, 14 Nov 2026: the first 3 s must say what the Reel is about), then the surprise, then the
+  "Day X of 10" badge. Continuity = the day number, not a character.
+- **Background (14 Nov 2026):** she wants one series background, ideally a library. Her priority: "smooth background
+  which doesn't look edited, more than having this exact background." Before deciding, show still-frame samples from
+  the real Day 1 footage, all built at once: A = library plate (built from her library photo, softly blurred like
+  Portrait mode) behind the cutout, with feathered hair edge + slight light wrap; B = her real room, gently defocused
+  behind the cutout, with plants/lamp glow added in depth; C = real room, decor only on empty wall, no cutout. The
+  china-ai-bubble cutout looked unnatural and the news Reel's cutout wasn't smooth: blur the plate and soften the
+  matte edge; never a sharp plate behind a cutout. Her pick becomes the default for all 10 days.
+- **Graphics matter a lot in this series (14 Nov 2026):** play with fonts, colours and highlights; strong graphics;
+  cards swirling/orbiting around her. Keep it consistent across the 10 days (series identity) while each day's
+  analogy gets its own visuals. Day badge + 10-dot progress bar in a fixed corner; board word recap card each day.
+
 ## Channel
 - @swatitalkstech: tech explainers and news for a broad audience ("even if tech isn't your thing"); some demos.
 - Tone: credible briefing, calm authority, no hype; one bold hook per video is fine.
@@ -47,6 +62,7 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
 - It took ~9 h from upload to a usable final (colour rework, a broken HyperFrames update, duplicate runs), so she
   posted her own unedited 4K60 video instead. Lessons → pipeline v3 (docs/PIPELINE.md): final laid over the original,
   shared cutout, parallel jobs. The v3 final of Preview 1 (4K60 HDR, audio copied) was approved as quality-identical.
+- Later feedback (14 Nov 2026): the cutout + background in that news Reel "wasn't smooth" (edges looked edited).
 
 ## NuclearFusion (11 Nov 2026): what she rejected and what she approved
 - Picked look "A + C" from 3 sample covers: C = full-screen takeovers (sun dive, 100,000,000 °C counter, episode
@@ -115,7 +131,8 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 - Every graphic carries information. Icons and diagrams only, never anything resembling real attack commands or tooling.
 - Facts on screen are verified (numbers, dates, versions, IDs, headlines). Sources go in the pinned comment.
 - **No specific dates** in on-screen graphics, captions or the pinned comment (Swati, 30 Oct 2026): say "just announced",
-  "this week" etc. so a Reel doesn't look stale later. (Gemini 4 Carbon Reel was left as is.)
+  "this week" etc. so a Reel doesn't look stale later. (Gemini 4 Carbon Reel was left as is.) Exception (14 Nov 2026):
+  the AI Basics series may say "Before 2026 Ends" / "2027" because she will post it before the year ends.
 - Footage is mostly shot at home at night on a plain wall: vary the look per Reel (see "Backgrounds").
 
 ## Backgrounds (to keep Reels from looking the same)
@@ -133,6 +150,7 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
   walnut-panelled set): she found it "very unnatural". Keep her real room; only subtle decor on empty wall
   areas that never passes behind her. `bg_remove` in edit.json stays available but is off by default; it's a
   per-video choice (NvidiaScandal Preview 1 used news backdrops behind her because she asked, and she chose it).
+  Exception: the AI Basics series is testing a blurred library plate (see the series section), by her request.
 - Keep it **dynamic**: a different combination every Reel from a growing set: neon sign on the wall (soft glow +
   realistic flicker-on at the start; text = channel name, a topic word, or a techie motif: `>_` prompt, `</>`, `{ }`, a branch-and-commits line, `git push`, `sudo`, circuit trace; Swati likes "git / techie" neon. Use original designs, never a company's actual logo),
   plants (corner, hanging, desk), wooden slat wall, shelf with gadgets, LED strip. Neon colour can
