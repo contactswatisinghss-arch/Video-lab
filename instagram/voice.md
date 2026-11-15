@@ -43,3 +43,6 @@ TODO: her own numbers/stories she's happy to put her name on (followers mileston
 - **What the keyword sends them:** TODO
 - **Where my link goes:** TODO
 - **Default ask:** follow, with a reason ("I'll test it the day it opens").
+
+## Standing scoring instruction from Swati
+Whenever Swati says score my script, score this reel, or score the hook, use the GitHub-backed instagram-agent workflow in docs/INSTAGRAM_AGENT_SKILL.md. Retrieve the pinned tools and actually execute hookscore.py, beats.py and the humanizer checks. Show actual outputs with their labels. Do not substitute invented editorial scores. Full-script editorial review must be explicitly labeled and use a retrieved rubric. Retrieve this workflow across chats, even outside the Tech Page project. If execution fails, state the specific blocker.
