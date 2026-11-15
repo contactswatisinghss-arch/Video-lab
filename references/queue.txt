@@ -34,3 +34,7 @@ search nvscandal-stock-yt nvidia stock crash jensen huang
 # NvidiaScandal — Swati's picked style refs (news-backdrop talking head)
 style-06-newsbg https://www.instagram.com/reel/DfncL5ZhnSR/
 style-07-newsbg https://www.instagram.com/reel/DfniVehP_cb/
+# AI Basics Day 1 (how ChatGPT writes: next-word prediction) — topic virals
+search llm-nextword-yt how chatgpt works next word prediction
+search llm-autocomplete-yt chatgpt is just autocomplete explained
+search llm-basics-yt how large language models work explained shorts
