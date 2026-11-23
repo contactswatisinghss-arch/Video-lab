@@ -1,0 +1,20 @@
+{
+  "width": 2160,
+  "height": 3840,
+  "fps": 60.0,
+  "codec": "hevc",
+  "transfer": "arib-std-b67",
+  "duration": 61.116667,
+  "has_audio": true,
+  "size_mb": 249.8,
+  "model": "medium.en",
+  "language": "en",
+  "audio_mean_db": -31.4,
+  "audio_peak_db": -11.1,
+  "words": 165,
+  "warnings": [
+    "HDR (iPhone) source: converted to standard range.",
+    "5 low-confidence words (check names/jargon): With(w0), the(w1), IPO(w2), ChatGPT.(w48), Claude(w83)"
+  ],
+  "hdr_mode": "tonemap"
+}

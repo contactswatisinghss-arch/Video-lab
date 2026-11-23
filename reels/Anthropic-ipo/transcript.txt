@@ -1,0 +1,13 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.00-   4.54] With the IPO in history, Anthropic just raised $81 billion. That's bigger than SpaceX.   | w0..w13
+[   4.90-   9.38] It's actually record -breaking. Most of its employees are now millionaires. So we need   | w14..w27
+[   9.38-  12.80] to know the why and what is Anthropic. It's a company which is behind   | w28..w41
+[  12.80-  17.76] Claude, the AI assistant, similar to ChatGPT. But in their business model, they followed   | w42..w55
+[  17.76-  22.70] a well -proven strategy. They targeted B2B. So while most of us use AI   | w56..w69
+[  22.70-  27.66] for everyday tasks, Anthropic has been making serious money from businesses. It brought Claude   | w70..w83
+[  27.66-  33.62] to Amazon, Google, and Microsoft's cloud platforms, where businesses already run their softwares.   | w84..w96
+[  34.26-  38.86] So now companies can build Claude into their own products, coding tools, and workflows.   | w97..w110
+[  39.26-  45.48] Around 250 customers each brought Anthropic at least $10 million in a year. And   | w111..w124
+[  45.48-  50.02] that is why investors are so excited, because they are betting on a shift   | w125..w138
+[  50.02-  55.32] in how businesses actually operate and work, where AI will become central to their   | w139..w152
+[  55.32-  60.18] execution, changing the whole dynamics and fundamentals of operating such big firms.   | w153..w164

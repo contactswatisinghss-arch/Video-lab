@@ -1,0 +1,29 @@
+{
+  "slug": "Anthropic-ipo",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-11-23 03:39:33 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45106726987",
+  "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Anthropic-ipo",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-11-23 03:39:33 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45106726987",
+    "raw": "F169F825-CDCD-4875-A77F-90A8812EFF01.mp4",
+    "words": 165,
+    "duration": 61.116667,
+    "warnings": [
+      "HDR (iPhone) source: converted to standard range.",
+      "5 low-confidence words (check names/jargon): With(w0), the(w1), IPO(w2), ChatGPT.(w48), Claude(w83)"
+    ],
+    "token": "79bf3031958b5258"
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-23 03:39:33 UTC"
+    }
+  ]
+}
