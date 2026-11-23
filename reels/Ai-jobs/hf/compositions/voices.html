@@ -1,0 +1,44 @@
+<template>
+<!-- TAKEOVER 2 · INTERVIEW FACE-OFF: two real, verified statements as interview cards with lower-thirds (no photos/logos).
+     Dario Amodei (Anthropic CEO) to Axios; Matt Garman (AWS CEO) on the Matthew Berman podcast. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #vc-bg { position: absolute; inset: 0; background: linear-gradient(#17123A 0 50%, #221A55 50%); }
+  #vc-h { position: absolute; left: 0; right: 0; top: 196px; text-align: center; font: 700 34px 'JetBrains Mono', monospace; color: #C6FF3D; letter-spacing: .08em; }
+  .vc-card { position: absolute; left: 60px; right: 60px; padding: 36px 40px 30px; border-radius: 30px; box-sizing: border-box; }
+  .vc-q { font: 700 54px/1.12 'Space Grotesk', sans-serif; letter-spacing: -.015em; }
+  .vc-q u { text-decoration-thickness: 6px; text-underline-offset: 6px; }
+  .vc-lt { margin-top: 24px; display: inline-flex; align-items: stretch; border-radius: 10px; overflow: hidden; }
+  .vc-lt b { padding: 10px 18px; font: 700 32px 'Space Grotesk', sans-serif; }
+  .vc-lt span { padding: 10px 18px; font: 600 28px 'Space Grotesk', sans-serif; background: #fff; color: #17123A; display: flex; align-items: center; }
+  #vc-1 { top: 270px; background: #FF5A5F; color: #17123A; }
+  #vc-1 .vc-lt b { background: #17123A; color: #fff; }
+  #vc-2 { top: 900px; background: #C6FF3D; color: #17123A; }
+  #vc-2 .vc-lt b { background: #17123A; color: #C6FF3D; }
+  #vc-vs { position: absolute; left: 470px; top: 790px; width: 140px; height: 140px; border-radius: 50%; background: #fff; color: #17123A;
+    display: flex; align-items: center; justify-content: center; font: 400 56px 'Archivo Black', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+</style>
+<div id="root" data-composition-id="voices" data-width="1080" data-height="1920">
+  <div id="vc-bg"></div>
+  <div id="vc-h">STARTING A TECH CAREER NOW?</div>
+  <div class="vc-card" id="vc-1"><div class="vc-q">Warned AI could wipe out <u>half of all entry-level</u> white-collar jobs</div>
+    <div class="vc-lt"><b>Dario Amodei</b><span>Anthropic CEO · as reported by Axios</span></div></div>
+  <div id="vc-vs">VS</div>
+  <div class="vc-card" id="vc-2"><div class="vc-q">Replacing junior staff with AI? “One of the dumbest things I’ve ever heard.”</div>
+    <div class="vc-lt"><b>Matt Garman</b><span>AWS CEO · podcast interview</span></div></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w19) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#vc-bg", { yPercent: 100 }, { yPercent: 0, duration: 0.35, ease: "power4.out" }, 0);
+  tl.fromTo("#vc-h", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.2);
+  tl.fromTo("#vc-1", { opacity: 0, x: -200, rotation: -3 }, { opacity: 1, x: 0, rotation: -1, duration: 0.4, ease: "expo.out" }, 0.25);
+  tl.fromTo("#vc-vs", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, {{at:w27}} - S);
+  tl.fromTo("#vc-2", { opacity: 0, x: 200, rotation: 3 }, { opacity: 1, x: 0, rotation: 1, duration: 0.4, ease: "expo.out" }, {{at:w29}} - S - 0.1);
+  tl.to(["#vc-1", "#vc-2", "#vc-vs", "#vc-h"], { opacity: 0, y: -40, duration: 0.2, ease: "power2.in", stagger: 0.03 }, {{at:w38}} - S - 0.35);
+  tl.to("#vc-bg", { yPercent: -100, duration: 0.25, ease: "power3.in" }, {{at:w38}} - S - 0.25);
+  window.__timelines["voices"] = tl;
+})();
+</script>
+</template>

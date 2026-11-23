@@ -1,0 +1,56 @@
+<template>
+<!-- TAKEOVER 4 · MOVE 03 review AI code: a full-screen editor. AI-written function → "find its mistakes" (red underline on
+     the bug) → "test edge cases" (a failing test for an empty cart) → "explain what you'd change" (a review comment). -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #m3-bg { position: absolute; inset: 0; background: #17123A; }
+  #m3-head { position: absolute; left: 60px; right: 60px; top: 196px; display: flex; align-items: center; gap: 20px; }
+  #m3-num { width: 140px; height: 140px; border-radius: 28px; background: #FF5A5F; display: flex; align-items: center; justify-content: center;
+    font: 400 84px 'Archivo Black', sans-serif; color: #17123A; flex: none; }
+  #m3-t { font: 400 66px/1 'Archivo Black', sans-serif; color: #fff; }
+  #m3-t span { color: #C6FF3D; }
+  #m3-ed { position: absolute; left: 50px; right: 50px; top: 390px; height: 420px; border-radius: 24px; background: #0E0B26; overflow: hidden; }
+  #m3-tab { height: 56px; background: #221A55; display: flex; align-items: center; padding-left: 22px; font: 700 28px 'JetBrains Mono', monospace; color: #B9B3E6; }
+  #m3-tab b { margin-left: auto; margin-right: 20px; color: #17123A; background: #8B7CFF; padding: 4px 12px; border-radius: 8px; font-size: 28px; }
+  .m3-ln { position: absolute; left: 0; right: 0; height: 64px; display: flex; align-items: center; font: 700 32px 'JetBrains Mono', monospace; color: #E8E6FF; white-space: nowrap; }
+  .m3-ln i { width: 64px; text-align: right; padding-right: 22px; color: #5C53A8; font-style: normal; }
+  .m3-ln em { font-style: normal; color: #8B7CFF; }
+  #m3-hl { position: absolute; left: 64px; right: 20px; top: 216px; height: 64px; background: rgba(255,90,95,.22); border-left: 8px solid #FF5A5F; transform-origin: 0 50%; }
+  #m3-sq { position: absolute; left: 360px; top: 266px; width: 380px; height: 12px; }
+  #m3-test { position: absolute; left: 50px; right: 50px; top: 840px; padding: 22px 28px; border-radius: 20px; background: #0E0B26;
+    font: 700 32px/1.4 'JetBrains Mono', monospace; color: #E8E6FF; }
+  #m3-test b { color: #FF5A5F; }
+  #m3-cm { position: absolute; left: 50px; right: 50px; top: 1040px; padding: 22px 28px; border-radius: 20px; background: #C6FF3D; color: #17123A; }
+  #m3-cm small { display: block; font: 700 28px 'JetBrains Mono', monospace; margin-bottom: 8px; }
+  #m3-cm div { font: 700 40px/1.2 'Space Grotesk', sans-serif; }
+</style>
+<div id="root" data-composition-id="move3" data-width="1080" data-height="1920">
+  <div id="m3-bg"></div>
+  <div id="m3-head"><div id="m3-num">03</div><div id="m3-t">REVIEW <span>AI CODE</span></div></div>
+  <div id="m3-ed"><div id="m3-tab">average.py<b>AI · generated</b></div>
+    <div id="m3-hl"></div>
+    <div class="m3-ln" style="top:72px"><i>1</i><em>def</em>&nbsp;average(scores):</div>
+    <div class="m3-ln" style="top:136px"><i>2</i>&nbsp;&nbsp;&nbsp;&nbsp;total = sum(scores)</div>
+    <div class="m3-ln" style="top:216px"><i>3</i>&nbsp;&nbsp;&nbsp;&nbsp;<em>return</em>&nbsp;total / len(scores)</div>
+    <svg id="m3-sq" viewBox="0 0 380 12"><path id="m3-sqp" d="M0 6 Q 10 0 20 6 T 40 6 T 60 6 T 80 6 T 100 6 T 120 6 T 140 6 T 160 6 T 180 6 T 200 6 T 220 6 T 240 6 T 260 6 T 280 6 T 300 6 T 320 6 T 340 6 T 360 6 T 380 6" stroke="#FF5A5F" stroke-width="4" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+  </div>
+  <div id="m3-test">test: average([])<br><b>✗ ZeroDivisionError</b> · empty list</div>
+  <div id="m3-cm"><small>REVIEW COMMENT · YOU</small><div>Handle an empty list first, return 0, and add this test.</div></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w151) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#m3-bg", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power4.out" }, 0);
+  tl.fromTo("#m3-num", { opacity: 0, scale: 0, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.2)" }, 0.2);
+  tl.fromTo("#m3-t", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w154}} - S);
+  tl.fromTo("#m3-ed", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w156}} - S - 0.1);
+  tl.fromTo("#m3-hl", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out" }, {{at:w162}} - S);
+  tl.fromTo("#m3-sqp", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.35, ease: "power2.out" }, {{at:w164}} - S - 0.1);
+  tl.fromTo("#m3-test", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w165}} - S - 0.1);
+  tl.fromTo("#m3-cm", { opacity: 0, y: 30, rotation: -2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, {{at:w169}} - S - 0.1);
+  tl.to("#root", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w174}} - S - 0.12);
+  window.__timelines["move3"] = tl;
+})();
+</script>
+</template>

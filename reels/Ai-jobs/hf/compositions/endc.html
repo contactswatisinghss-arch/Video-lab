@@ -1,0 +1,27 @@
+<template>
+<!-- END: save + send prompt with the 3-move recap, in the top band. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #ec-card { position: absolute; left: 60px; right: 60px; top: 176px; padding: 24px 30px 26px; border-radius: 28px; background: #17123A;
+    box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #ec-t { font: 400 60px/1 'Archivo Black', sans-serif; color: #fff; }
+  #ec-t span { color: #C6FF3D; }
+  #ec-l { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ec-m { padding: 8px 16px; border-radius: 12px; background: #221A55; color: #E8E6FF; font: 700 30px 'Space Grotesk', sans-serif; }
+  .ec-m b { color: #C6FF3D; }
+</style>
+<div id="root" data-composition-id="endc" data-width="1080" data-height="1920">
+  <div id="ec-card"><div id="ec-t"><span>SAVE</span> THIS · <span>SEND</span> IT</div>
+    <div id="ec-l"><div class="ec-m" id="ec-1"><b>01</b> Fundamentals</div><div class="ec-m" id="ec-2"><b>02</b> Ship &amp; maintain</div><div class="ec-m" id="ec-3"><b>03</b> Review AI code</div></div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w207) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ec-card", { opacity: 0, y: -30, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 0);
+  ["#ec-1", "#ec-2", "#ec-3"].forEach((m, i) => tl.fromTo(m, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, 0.5 + i * 0.25));
+  window.__timelines["endc"] = tl;
+})();
+</script>
+</template>

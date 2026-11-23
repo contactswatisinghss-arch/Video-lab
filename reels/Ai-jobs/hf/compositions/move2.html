@@ -1,0 +1,47 @@
+<template>
+<!-- MOVE 02 · ship & maintain: a pipeline lights up step by step on her words (deploy → tests → monitor), "runs locally"
+     gets struck through, and a red alert fires on "what breaks when real people use it". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #m2-head { position: absolute; left: 50px; right: 50px; top: 176px; height: 150px; display: flex; align-items: center; gap: 20px; }
+  #m2-num { width: 150px; height: 150px; border-radius: 30px; background: #8B7CFF; display: flex; align-items: center; justify-content: center;
+    font: 400 90px 'Archivo Black', sans-serif; color: #fff; box-shadow: 0 14px 30px rgba(0,0,0,.4); flex: none; }
+  #m2-t { padding: 16px 28px 20px; border-radius: 26px; background: #17123A; color: #fff; font: 400 58px/1 'Archivo Black', sans-serif;
+    box-shadow: 0 14px 30px rgba(0,0,0,.4); }
+  #m2-pipe { position: absolute; left: 40px; right: 40px; top: 352px; height: 110px; }
+  .m2-s { position: absolute; top: 0; width: 230px; height: 96px; border-radius: 18px; background: #fff; color: #17123A; display: flex;
+    align-items: center; justify-content: center; font: 700 36px 'Space Grotesk', sans-serif; box-shadow: 0 8px 18px rgba(0,0,0,.3); }
+  #m2-x { position: absolute; left: 16px; right: 16px; top: 46px; height: 6px; background: #FF5A5F; transform-origin: 0 50%; }
+  #m2-alert { position: absolute; left: 0; right: 0; top: 480px; text-align: center; }
+  #m2-alert span { display: inline-block; padding: 12px 22px; border-radius: 16px; background: #FF5A5F; color: #17123A; font: 700 40px 'Space Grotesk', sans-serif; }
+</style>
+<div id="root" data-composition-id="move2" data-width="1080" data-height="1920">
+  <div id="m2-head"><div id="m2-num">02</div><div id="m2-t">SHIP &amp; MAINTAIN</div></div>
+  <div id="m2-pipe">
+    <div class="m2-s" id="m2-s0" style="left:0">Runs locally<div id="m2-x"></div></div>
+    <div class="m2-s" id="m2-s1" style="left:250px">Deploy</div>
+    <div class="m2-s" id="m2-s2" style="left:500px">Tests</div>
+    <div class="m2-s" id="m2-s3" style="left:750px">Monitor</div>
+  </div>
+  <div id="m2-alert"><span>⚠ what breaks with real users</span></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w122) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#m2-num", { opacity: 0, scale: 0, rotation: 30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.2)" }, 0);
+  tl.fromTo("#m2-t", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w125}} - S - 0.1);
+  tl.fromTo("#m2-s0", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w133}} - S - 0.1);
+  tl.fromTo("#m2-x", { scaleX: 0 }, { scaleX: 1, duration: 0.25, ease: "power2.out" }, {{at:w135}} - S);
+  tl.to("#m2-s0", { opacity: 0.55, duration: 0.2 }, {{at:w135}} - S + 0.2);
+  [["#m2-s1", {{at:w136}}], ["#m2-s2", {{at:w139}}], ["#m2-s3", {{at:w140}}]].forEach(([s, at]) => {
+    tl.fromTo(s, { opacity: 0, y: 24, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(2)" }, at - S - 0.08);
+    tl.to(s, { backgroundColor: "#C6FF3D", duration: 0.15 }, at - S + 0.15);
+  });
+  tl.fromTo("#m2-alert", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.4)" }, {{at:w145}} - S - 0.05);
+  tl.fromTo("#m2-alert", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, {{at:w145}} - S + 0.2);
+  tl.to(["#m2-head", "#m2-pipe", "#m2-alert"], { opacity: 0, x: -60, duration: 0.18, ease: "power2.in" }, {{at:w151}} - S - 0.25);
+  window.__timelines["move2"] = tl;
+})();
+</script>
+</template>

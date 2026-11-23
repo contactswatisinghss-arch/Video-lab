@@ -1,0 +1,64 @@
+<template>
+<!-- TAKEOVER 3 · the study (Burning Glass Institute, "The Consequence Gap": 1M+ entry-level tech postings; code review
+     ~8% of postings in 2020 → ~16% in 2025). Counter takeover, then she returns and the 2x bars sit in the top band. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #sd-full { position: absolute; inset: 0; background: #8B7CFF; }
+  #sd-k { position: absolute; left: 70px; top: 230px; font: 700 34px 'JetBrains Mono', monospace; color: #17123A; letter-spacing: .08em; }
+  #sd-n { position: absolute; left: 60px; top: 300px; font: 400 200px/1 'Archivo Black', sans-serif; color: #fff; letter-spacing: -.03em; }
+  #sd-l { position: absolute; left: 70px; top: 540px; width: 940px; font: 700 60px/1.08 'Space Grotesk', sans-serif; color: #17123A; }
+  #sd-docs { position: absolute; left: 70px; top: 760px; width: 940px; height: 520px; }
+  .sd-doc { position: absolute; width: 150px; height: 190px; border-radius: 14px; background: #fff; box-shadow: 0 10px 24px rgba(23,18,58,.35); }
+  .sd-doc i { position: absolute; left: 18px; right: 18px; height: 10px; border-radius: 5px; background: #D9D4F7; }
+  #sd-src { position: absolute; left: 70px; top: 1320px; font: 600 30px 'Space Grotesk', sans-serif; color: #17123A; }
+  #sd-band { position: absolute; left: 50px; right: 50px; top: 176px; height: 360px; border-radius: 28px; background: #17123A; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #sd-bt { position: absolute; left: 34px; top: 26px; font: 700 40px 'Space Grotesk', sans-serif; color: #fff; }
+  .sd-row { position: absolute; left: 34px; right: 34px; height: 76px; }
+  .sd-yr { position: absolute; left: 0; top: 18px; font: 700 32px 'JetBrains Mono', monospace; color: #B9B3E6; }
+  .sd-bar { position: absolute; left: 110px; top: 0; height: 76px; border-radius: 14px; transform-origin: 0 50%; display: flex; align-items: center;
+    padding-left: 20px; box-sizing: border-box; font: 400 40px 'Archivo Black', sans-serif; color: #17123A; }
+  #sd-2x { position: absolute; right: 30px; top: 18px; font: 400 92px/1 'Archivo Black', sans-serif; color: #C6FF3D; }
+</style>
+<div id="root" data-composition-id="study" data-width="1080" data-height="1920">
+  <div id="sd-full">
+    <div id="sd-k">A RECENT STUDY ANALYSED</div>
+    <div id="sd-n"><span id="sd-v">0</span>+</div>
+    <div id="sd-l">entry-level tech job postings</div>
+    <div id="sd-docs"></div>
+    <div id="sd-src">Source: Burning Glass Institute</div>
+  </div>
+  <div id="sd-band">
+    <div id="sd-bt">Postings asking for <span style="color:#C6FF3D">code review</span></div>
+    <div class="sd-row" style="top:120px"><div class="sd-yr">2020</div><div class="sd-bar" id="sd-b1" style="width:290px;background:#B9B3E6">~8%</div></div>
+    <div class="sd-row" style="top:228px"><div class="sd-yr">2025</div><div class="sd-bar" id="sd-b2" style="width:580px;background:#C6FF3D">~16%</div></div>
+    <div id="sd-2x">2×</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w38) - 0.1 }};
+  const docs = document.getElementById("sd-docs");
+  for (let i = 0; i < 12; i++) {
+    const c = i % 6, r = Math.floor(i / 6);
+    docs.insertAdjacentHTML("beforeend", `<div class="sd-doc" id="sd-d${i}" style="left:${c * 158}px;top:${r * 230 + (c % 2) * 30}px"><i style="top:30px"></i><i style="top:56px;right:50px"></i><i style="top:82px"></i><i style="top:108px;right:70px"></i></div>`);
+  }
+  const tl = gsap.timeline({ paused: true });
+  const n = { v: 0 };
+  tl.fromTo("#sd-full", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.4, ease: "power4.out" }, 0);
+  tl.fromTo("#sd-k", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.25);
+  tl.fromTo(n, { v: 0 }, { v: 1000000, duration: 1.1, ease: "power2.out",
+    onUpdate: function () { document.getElementById("sd-v").textContent = Math.round(n.v).toLocaleString("en-US"); } }, {{at:w42}} - S - 0.2);
+  tl.fromTo("#sd-l", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w45}} - S - 0.1);
+  for (let i = 0; i < 12; i++) tl.fromTo("#sd-d" + i, { opacity: 0, y: 60, rotation: (i % 2 ? 8 : -8) }, { opacity: 1, y: 0, rotation: (i % 2 ? 3 : -3), duration: 0.3, ease: "back.out(1.6)" }, {{at:w45}} - S + i * 0.06);
+  tl.fromTo("#sd-src", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w47}} - S);
+  // she comes back on "Demand for code review": the full panel wipes up, the 2x bars take the top band
+  tl.to("#sd-full", { clipPath: "inset(0 0 100% 0)", duration: 0.35, ease: "power3.in" }, {{at:w56}} - S - 0.4);
+  tl.fromTo("#sd-band", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w56}} - S);
+  tl.fromTo("#sd-b1", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, {{at:w58}} - S);
+  tl.fromTo("#sd-b2", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, {{at:w62}} - S);
+  tl.fromTo("#sd-2x", { opacity: 0, scale: 2, rotation: -12 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.3, ease: "power4.out" }, {{at:w64}} - S);
+  tl.to("#sd-band", { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, {{at:w70}} - S - 0.25);
+  window.__timelines["study"] = tl;
+})();
+</script>
+</template>

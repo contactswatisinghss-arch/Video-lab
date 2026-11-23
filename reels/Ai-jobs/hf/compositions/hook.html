@@ -1,0 +1,32 @@
+<template>
+<!-- HOOK / COVER (frame 0): topic kicker + title in the top band (above her head ~560), a code chip types on "coding super easy". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #hj-wrap { position: absolute; left: 40px; right: 40px; top: 176px; text-align: center; }
+  #hj-kick { display: inline-block; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .1em; color: #17123A; background: #C6FF3D;
+    padding: 8px 18px; border-radius: 10px; }
+  #hj-t { margin: 12px auto 0; display: inline-block; background: #17123A; border-radius: 26px; padding: 18px 30px 22px;
+    font: 400 92px/0.98 'Archivo Black', sans-serif; color: #fff; letter-spacing: -.02em; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #hj-t b { font-weight: 400; color: #C6FF3D; }
+  #hj-code { position: absolute; left: 140px; right: 140px; top: 452px; padding: 14px 22px; border-radius: 16px; background: #17123A;
+    font: 700 32px 'JetBrains Mono', monospace; color: #C6FF3D; text-align: left; box-shadow: 0 12px 28px rgba(0,0,0,.4); white-space: nowrap; overflow: hidden; }
+  #hj-code span { color: #8B7CFF; }
+</style>
+<div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+  <div id="hj-wrap"><span id="hj-kick">AI · YOUR FIRST TECH JOB</span><br><div id="hj-t">AI CODES IN<br>SECONDS. <b>YOU?</b></div></div>
+  <div id="hj-code"><span>&gt;</span> <span id="hj-typed"></span></div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  const full = "ai.build(\"my_app\")  ✓ done";
+  const st = { n: 0 };
+  tl.fromTo("#hj-t", { scale: 1.05 }, { scale: 1, duration: 0.4, ease: "expo.out" }, 0);
+  tl.fromTo("#hj-code", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, {{at:w4}} - 0.1);
+  tl.fromTo(st, { n: 0 }, { n: full.length, duration: 0.9, ease: "none",
+    onUpdate: function () { document.getElementById("hj-typed").textContent = full.slice(0, Math.round(st.n)); } }, {{at:w4}});
+  tl.to(["#hj-wrap", "#hj-code"], { opacity: 0, y: -20, duration: 0.15, ease: "power2.in" }, {{at:w9}} - 0.25);
+  window.__timelines["hook"] = tl;
+})();
+</script>
+</template>

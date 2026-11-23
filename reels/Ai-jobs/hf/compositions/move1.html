@@ -1,0 +1,37 @@
+<template>
+<!-- MOVE 01 · fundamentals: giant number badge + title in the top band, skill chips pop on the words that name them. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #m1-head { position: absolute; left: 50px; right: 50px; top: 176px; height: 150px; display: flex; align-items: center; gap: 20px; }
+  #m1-num { width: 150px; height: 150px; border-radius: 30px; background: #C6FF3D; display: flex; align-items: center; justify-content: center;
+    font: 400 90px 'Archivo Black', sans-serif; color: #17123A; box-shadow: 0 14px 30px rgba(0,0,0,.4); flex: none; }
+  #m1-t { padding: 16px 28px 20px; border-radius: 26px; background: #17123A; color: #fff; font: 400 64px/1 'Archivo Black', sans-serif;
+    box-shadow: 0 14px 30px rgba(0,0,0,.4); }
+  #m1-chips { position: absolute; left: 50px; right: 50px; top: 350px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .m1-c { padding: 10px 20px; border-radius: 999px; background: #fff; color: #17123A; font: 700 36px 'Space Grotesk', sans-serif;
+    box-shadow: 0 8px 18px rgba(0,0,0,.3); }
+  .m1-c b { color: #8B7CFF; }
+  #m1-why { position: absolute; left: 0; right: 0; top: 350px; text-align: center; }
+  #m1-why span { display: inline-block; padding: 12px 22px; border-radius: 16px; background: #8B7CFF; color: #fff; font: 700 40px 'Space Grotesk', sans-serif; }
+</style>
+<div id="root" data-composition-id="move1" data-width="1080" data-height="1920">
+  <div id="m1-head"><div id="m1-num">01</div><div id="m1-t">FUNDAMENTALS</div></div>
+  <div id="m1-chips"><div class="m1-c" id="m1-c1"><b>{ }</b> Data structures</div><div class="m1-c" id="m1-c2"><b>⌕</b> Debugging</div>
+    <div class="m1-c" id="m1-c3"><b>▤</b> Databases</div><div class="m1-c" id="m1-c4"><b>⇄</b> How systems work</div></div>
+  <div id="m1-why"><span>so you understand what AI produces</span></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w99) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#m1-num", { opacity: 0, scale: 0, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.2)" }, 0);
+  tl.fromTo("#m1-t", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w102}} - S);
+  [["#m1-c1", {{at:w106}}], ["#m1-c2", {{at:w108}}], ["#m1-c3", {{at:w109}}], ["#m1-c4", {{at:w111}}]].forEach(([c, at]) =>
+    tl.fromTo(c, { opacity: 0, y: 30, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(2)" }, at - S - 0.05));
+  tl.to("#m1-chips", { opacity: 0, y: -16, duration: 0.18, ease: "power2.in" }, {{at:w114}} - S - 0.1);
+  tl.fromTo("#m1-why", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w117}} - S - 0.1);
+  tl.to(["#m1-head", "#m1-why"], { opacity: 0, x: -60, duration: 0.18, ease: "power2.in" }, {{at:w122}} - S - 0.25);
+  window.__timelines["move1"] = tl;
+})();
+</script>
+</template>

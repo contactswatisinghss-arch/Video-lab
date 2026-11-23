@@ -1,0 +1,46 @@
+<template>
+<!-- AI-CODE CHECK (top band, she stays on screen): code streams in "in seconds", then the three questions light up on
+     her words (correct · secure · works), then "3 MOVES" lands on "three things". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #ac-win { position: absolute; left: 50px; right: 50px; top: 176px; height: 260px; border-radius: 24px; background: #17123A; overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #ac-bar { height: 50px; background: #221A55; display: flex; align-items: center; gap: 10px; padding-left: 20px; }
+  #ac-bar i { width: 16px; height: 16px; border-radius: 50%; background: #5C53A8; }
+  #ac-bar span { margin-left: 14px; font: 700 28px 'JetBrains Mono', monospace; color: #B9B3E6; }
+  .ac-ln { position: absolute; left: 24px; font: 700 30px 'JetBrains Mono', monospace; color: #E8E6FF; white-space: nowrap; }
+  .ac-ln em { font-style: normal; color: #8B7CFF; }
+  .ac-ln b { color: #C6FF3D; font-weight: 700; }
+  #ac-qs { position: absolute; left: 50px; right: 50px; top: 456px; display: flex; gap: 14px; justify-content: center; }
+  .ac-q { padding: 12px 20px; border-radius: 14px; background: #fff; color: #17123A; font: 700 36px 'Space Grotesk', sans-serif; }
+  #ac-3 { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
+  #ac-3 span { display: inline-block; padding: 16px 34px 20px; border-radius: 26px; background: #C6FF3D; color: #17123A;
+    font: 400 110px/1 'Archivo Black', sans-serif; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+</style>
+<div id="root" data-composition-id="aicode" data-width="1080" data-height="1920">
+  <div id="ac-win"><div id="ac-bar"><i></i><i></i><i></i><span>ai_generated.py · 2s</span></div>
+    <div class="ac-ln" id="ac-l1" style="top:72px"><em>def</em> <b>checkout</b>(cart, user):</div>
+    <div class="ac-ln" id="ac-l2" style="top:120px">    total = sum(i.price <em>for</em> i <em>in</em> cart)</div>
+    <div class="ac-ln" id="ac-l3" style="top:168px">    <em>return</em> charge(user.card, total)</div>
+  </div>
+  <div id="ac-qs"><div class="ac-q" id="ac-q1">Correct?</div><div class="ac-q" id="ac-q2">Secure?</div><div class="ac-q" id="ac-q3">Works?</div></div>
+  <div id="ac-3"><span>3 MOVES</span></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w70) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ac-win", { opacity: 0, y: -30, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 0);
+  ["#ac-l1", "#ac-l2", "#ac-l3"].forEach((l, i) => tl.fromTo(l, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.25, ease: "none" }, {{at:w72}} - S + i * 0.22));
+  tl.fromTo("#ac-qs", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w86}} - S - 0.2);
+  [["#ac-q1", {{at:w86}}], ["#ac-q2", {{at:w87}}], ["#ac-q3", {{at:w90}}]].forEach(([q, at]) => {
+    tl.fromTo(q, { opacity: 0, y: 24, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(2)" }, at - S - 0.08);
+    tl.to(q, { backgroundColor: "#FF5A5F", duration: 0.12 }, at - S + 0.1);
+  });
+  tl.to(["#ac-win", "#ac-qs"], { opacity: 0, y: -24, duration: 0.18, ease: "power2.in" }, {{at:w97}} - S - 0.3);
+  tl.fromTo("#ac-3", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power4.out" }, {{at:w97}} - S - 0.08);
+  tl.to("#ac-3", { opacity: 0, duration: 0.15 }, {{at:w99}} - S - 0.2);
+  window.__timelines["aicode"] = tl;
+})();
+</script>
+</template>

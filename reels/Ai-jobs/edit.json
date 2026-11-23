@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "slug": "Ai-jobs",
+  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.2, "remove": [[0.0, 0.55]]},
+  "fixes": [["entry -level", "entry-level"], ["AI -generated", "AI-generated"]],
+  "fonts": ["Space Grotesk", "JetBrains Mono", "Archivo Black"],
+  "cover_at": 0.05,
+  "audio": {"loudnorm": true},
+  "post": {"caption": "", "hashtags": []}
+}

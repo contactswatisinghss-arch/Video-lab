@@ -1,0 +1,40 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  /* below her chin; the spoken word sits on a lime slab (new for this Reel), key words in coral */
+  #jc-stage { position: absolute; left: 50px; right: 50px; top: 1450px; height: 140px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #FFFFFF; line-height: 1.12;
+    letter-spacing: -.015em; text-shadow: 0 3px 14px rgba(10,8,30,.85), 0 1px 3px rgba(10,8,30,.7); }
+  .cap-word { display: inline-block; position: relative; padding: 0 6px; }
+  .cap-word .cap-txt { position: relative; z-index: 1; }
+  .cap-word .jc-slab { position: absolute; left: 0; right: 0; top: 6%; bottom: 2%; border-radius: 10px; background: #C6FF3D; z-index: 0; opacity: 0; }
+  .cap-word.em-coral .cap-txt { color: #FF8A8E; }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="jc-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  HFCaps.build({
+    tl, container: "#jc-stage", words: {{words}}, idPrefix: "jcap",
+    maxWords: 3, maxChars: 20, pauseBreak: 0.28, hold: 0.3,
+    emphasis: { "em-coral": ["different story.", "doubled", "correct,", "secure,", "works.", "mistakes,", "ownership"] },
+    font: { family: "Space Grotesk", weight: 700, size: 72, min: 46, maxWidth: 960 },
+    enter(tl, g, spans, grp) {
+      spans.forEach(s => { const slab = document.createElement("span"); slab.className = "jc-slab"; s.insertBefore(slab, s.firstChild); });
+      tl.fromTo(g, { opacity: 0, y: 16, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.16, ease: "power3.out" }, grp.start);
+    },
+    word(tl, span, w, grp, i) {
+      const slab = span.querySelector(".jc-slab"), txt = span.querySelector(".cap-txt");
+      tl.fromTo(slab, { opacity: 0, scaleX: 0.6 }, { opacity: 1, scaleX: 1, duration: 0.08, ease: "power2.out" }, Math.max(grp.start, w.start - 0.02));
+      tl.fromTo(txt, { color: "#FFFFFF", textShadow: "0 3px 14px rgba(10,8,30,.85)" }, { color: "#17123A", textShadow: "0 0 0 rgba(0,0,0,0)", duration: 0.06 }, Math.max(grp.start, w.start - 0.02));
+      tl.to(slab, { opacity: 0, duration: 0.08 }, w.end + 0.02);
+      tl.to(txt, { color: span.classList.contains("em-coral") ? "#FF8A8E" : "#FFFFFF", textShadow: "0 3px 14px rgba(10,8,30,.85)", duration: 0.08 }, w.end + 0.02);
+    },
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>
