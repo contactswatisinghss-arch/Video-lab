@@ -1,0 +1,29 @@
+{
+  "slug": "Ai-jobs",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-11-23 08:49:18 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45140435439",
+  "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Ai-jobs",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-11-23 08:49:18 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45140435439",
+    "raw": "42BE38AC-F4F6-476C-9A70-8A567A79FD34.mp4",
+    "words": 223,
+    "duration": 68.283333,
+    "warnings": [
+      "HDR (iPhone) source: converted to standard range.",
+      "4 low-confidence words (check names/jargon): First,(w99), Because(w174), write(w186), code.(w188)"
+    ],
+    "token": ""
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-23 08:49:18 UTC"
+    }
+  ]
+}

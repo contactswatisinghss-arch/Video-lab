@@ -1,0 +1,17 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.00-   4.78] You know, AI is making coding super easy. But getting your first software engineering   | w0..w13
+[   4.78-   8.44] job, that's a different story. And if I were to start my tech career   | w14..w27
+[   8.44-  12.96] in 2027, here is what I would do things differently. A recent study analyzed   | w28..w41
+[  12.96-  17.02] over a million entry -level job postings, and here is what caught my attention.   | w42..w55
+[  17.44-  21.76] Demand for code review skills has more than doubled since 2020. Think about that.   | w56..w69
+[  21.86-  25.18] AI can generate code in seconds. But someone still needs to know if the   | w70..w83
+[  25.18-  29.08] code is correct, secure, and actually works. So I would focus on these three   | w84..w97
+[  29.08-  34.44] things. First, get really good at the fundamentals. Data structures, debugging databases, and how   | w98..w111
+[  34.44-  39.46] systems work. You need to understand what AI is producing. Second, learn to ship   | w112..w125
+[  39.46-  44.30] and maintain software. Don't stop when your app runs locally. Deploy it, add tests,   | w126..w139
+[  44.52-  48.98] monitor failures, and learn what breaks when real people use it. And third is   | w140..w153
+[  48.98-  54.00] practice reviewing AI -generated code. Take a solution, find its mistakes, test edge cases,   | w154..w167
+[  54.02-  58.18] and explain what you would change. Because in 2027, I wouldn't just want to   | w168..w181
+[  58.18-  60.94] prove that I can write beautiful code. I would want to prove that I   | w182..w195
+[  60.94-  65.20] can take complete ownership and responsibility of what is being shipped. Save this and   | w196..w209
+[  65.20-  67.96] send it to your friends who are preparing for their first tech jobs.   | w210..w222
