@@ -1,13 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "references aijobs-replace-yt",
-    "references aijobs-layoffs-yt"
+  "state": "running",
+  "current": "preview Ai-jobs",
+  "pending": [
+    "preview Ai-jobs"
   ],
-  "done": [
-    "references aijobs-replace-yt",
-    "references aijobs-layoffs-yt"
-  ],
-  "time": "2026-11-23 08:52:34 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45140645973"
+  "time": "2026-11-23 09:10:15 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45144402945"
 }
