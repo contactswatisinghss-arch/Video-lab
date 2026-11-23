@@ -37,6 +37,10 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   developers, AI producing code". Default for explainer Reels: 2–4 short animated illustration takeovers (original flat
   characters drawn as SVG in the composition, matching the Reel's palette; keep props off faces), plus her own clips
   if she attaches them to the release. No stock/ripped footage unless she supplies it.
+- **Realistic screens over cartoons (23 Nov 2026, Newjob):** "less animated… shows actual written code in laptop screen,
+  shows tools". For tech topics prefer realistic UI takeovers: a laptop with a dark code editor (real code, syntax colours),
+  terminal output (pytest, deploy), browser, docs, PR-style review comments, monitoring dashboards. Generic UI, tool
+  names allowed, no logos or brand marks. Cartoon characters only when she asks.
 - **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
   force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
