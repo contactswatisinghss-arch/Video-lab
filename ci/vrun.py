@@ -49,7 +49,12 @@ def load():
     _pending = J.pending
     def pending():
         jobs = _pending()
-        ev_tag = os.environ.get("RELEASE_TAG", "") if os.environ.get("EVENT", "") == "release" else ""
+        ev = os.environ.get("EVENT", "")
+        ev_tag = os.environ.get("RELEASE_TAG", "") if ev == "release" else ""
+        # a manual "Run workflow" with job=prepare and a target asks for that reel explicitly (e.g. a release
+        # published before Actions was switched on), so it counts like the release event
+        if ev == "workflow_dispatch" and os.environ.get("INPUT_JOB", "") == "prepare":
+            ev_tag = os.environ.get("INPUT_TARGET", "")
         # never re-prepare old releases whose reel folder Swati deleted (catch-up only for brand-new uploads)
         jobs = [j for j in jobs if not (j[0] == "prepare" and len(j) > 1 and j[1] != ev_tag
                                         and not os.path.isdir(os.path.join("reels", j[1]))
