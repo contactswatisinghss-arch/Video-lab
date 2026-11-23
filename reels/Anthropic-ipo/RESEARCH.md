@@ -1,7 +1,8 @@
 # Anthropic-ipo · research (DRAFT, incomplete)
 
-Status: fact-check done; reference research (step 3 tracks A and B) NOT done yet. See "Blocked" below.
-No storyboard or composition is built until the reference minimum is met (house rule).
+Status: fact-check done. Reference research (step 3 tracks A and B) WAIVED for this Reel only by Swati on
+23 Nov (vidIQ out of credits, news moving fast). Storyboard evidence comes from STYLE.md / TECHNIQUES.md and
+her own past results instead; say so in BRIEF.md.
 
 ## Video
 61.1 s, 4K 60p HLG, one framing (bookshelf behind her, face mid-frame). Type: news explainer.
