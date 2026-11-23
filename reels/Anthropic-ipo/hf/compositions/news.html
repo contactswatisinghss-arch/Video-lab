@@ -1,0 +1,32 @@
+<template>
+<!-- HEADLINE FLASH (takeover): three recreated headline cards slap down on "record-breaking" / "employees" / "millionaires".
+     Real headlines from Marketplace, Forbes and Inc. (outlet names in small type, no logos, no screenshots, no dates). -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #nw-scrim { position: absolute; inset: 0; background: rgba(12,14,18,.62); }
+  .nw-card { position: absolute; left: 80px; width: 920px; padding: 34px 40px 38px; box-sizing: border-box; background: #F6F1E7;
+    box-shadow: 0 22px 50px rgba(0,0,0,.5); font: 600 54px/1.08 'Newsreader', 'EB Garamond', serif; color: #14161B; letter-spacing: -.01em; }
+  .nw-card small { display: block; font: 700 24px 'JetBrains Mono', monospace; color: #B23A2E; letter-spacing: .16em; margin-bottom: 14px; }
+  .nw-card mark { background: #FFC145; color: #14161B; padding: 0 6px; }
+</style>
+<div id="root" data-composition-id="news" data-width="1080" data-height="1920">
+  <div id="nw-scrim"></div>
+  <div class="nw-card" id="nw-c1" style="top:190px"><small>MARKETPLACE</small>Anthropic unseats SpaceX as <mark>biggest IPO ever</mark></div>
+  <div class="nw-card" id="nw-c2" style="top:540px"><small>FORBES</small>Anthropic’s <mark>$81 Billion IPO</mark>: 7 key facts about the AI giant</div>
+  <div class="nw-card" id="nw-c3" style="top:900px"><small>INC.</small>Anthropic’s IPO could create <mark>thousands of millionaires</mark>. But most can’t cash out yet</div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w14) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#nw-scrim", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+  tl.fromTo("#nw-c1", { opacity: 0, scale: 1.25, rotation: -4 }, { opacity: 1, scale: 1, rotation: -1.5, duration: 0.3, ease: "expo.out" }, {{at:w16}} - S - 0.15);
+  tl.fromTo("#nw-c2", { opacity: 0, scale: 1.25, rotation: 4 }, { opacity: 1, scale: 1, rotation: 1.2, duration: 0.3, ease: "expo.out" }, {{at:w16}} - S + 0.45);
+  tl.fromTo("#nw-c3", { opacity: 0, scale: 1.25, rotation: -3 }, { opacity: 1, scale: 1, rotation: -0.8, duration: 0.3, ease: "expo.out" }, {{at:w21}} - S - 0.1);
+  // fly off together as she turns to "So we need to know…"
+  tl.to(["#nw-c1", "#nw-c2", "#nw-c3"], { x: -1200, rotation: -8, duration: 0.3, ease: "power3.in", stagger: 0.05 }, {{at:w25}} - S - 0.42);
+  tl.to("#nw-scrim", { opacity: 0, duration: 0.2 }, {{at:w25}} - S - 0.2);
+  window.__timelines["news"] = tl;
+})();
+</script>
+</template>

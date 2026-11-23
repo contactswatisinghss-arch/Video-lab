@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+    #cam { position: absolute; inset: 0; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Anthropic IPO · "market paper" look: cream newsprint cards, ink type, green = gain, red = dip, amber = highlight.
+       Her real room (bookshelf) stays untouched; graphics live in the top band (above her hair, y 170-470),
+       the right column over the bookshelf (x 700-1040, y 480-1300) or take over the frame briefly (headlines, stock). -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}"
+       data-width="1080" data-height="1920" data-fps="30">
+
+    <div id="cam" style="z-index:1">
+      <video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video>
+    </div>
+
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+         data-start="0" data-duration="{{= at(w14) - 0.1 }}"
+         data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="news" data-composition-id="news" data-composition-src="compositions/news.html"
+         data-start="{{= at(w14) - 0.1 }}" data-duration="{{= at(w25) - at(w14) + 0.1 }}"
+         data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="what" data-composition-id="what" data-composition-src="compositions/what.html"
+         data-start="{{at:w25}}" data-duration="{{= at(w49) - at(w25) }}"
+         data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="b2b" data-composition-id="b2b" data-composition-src="compositions/b2b.html"
+         data-start="{{at:w49}}" data-duration="{{= at(w73) - at(w49) - 0.1 }}"
+         data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="path" data-composition-id="path" data-composition-src="compositions/path.html"
+         data-start="{{= at(w73) - 0.1 }}" data-duration="{{= at(w111) - at(w73) }}"
+         data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="tiers" data-composition-id="tiers" data-composition-src="compositions/tiers.html"
+         data-start="{{= at(w111) - 0.1 }}" data-duration="{{= at(w125) - at(w111) + 0.1 }}"
+         data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="stock" data-composition-id="stock" data-composition-src="compositions/stock.html"
+         data-start="{{at:w125}}" data-duration="{{= at(w137) - at(w125) }}"
+         data-track-index="7" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="adopt" data-composition-id="adopt" data-composition-src="compositions/adopt.html"
+         data-start="{{at:w137}}" data-duration="{{= at(w146) - at(w137) }}"
+         data-track-index="8" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="future" data-composition-id="future" data-composition-src="compositions/future.html"
+         data-start="{{at:w146}}" data-duration="{{= dur - at(w146) }}"
+         data-track-index="9" data-track-kind="graphics" style="z-index:3"></div>
+
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+         data-start="0" data-duration="{{dur}}" data-track-index="10" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+
+  <script>
+    // No camera moves (pipeline v3 lays the edit over her untouched 4K original).
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>

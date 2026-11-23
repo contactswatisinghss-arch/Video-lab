@@ -1,0 +1,53 @@
+<template>
+<!-- AI AT THE CENTRE (orbit): the parts of a big firm circle an "AI" core on the bookshelf side ("central to their
+     execution"), then a follow card in the top band. Angles come from one linear tween (deterministic). -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #fu-h { position: absolute; left: 0; right: 0; top: 200px; text-align: center; }
+  #fu-h span { display: inline-block; padding: 14px 30px 18px; font: 900 76px/0.98 'Inter Tight', 'Inter', sans-serif; letter-spacing: -.03em; background: #F6F1E7; color: #14161B; text-shadow: none; border-radius: 22px; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
+  #fu-h b { color: #16B87A; }
+  #fu-orb { position: absolute; left: 690px; top: 620px; width: 360px; height: 520px; }
+  #fu-core { position: absolute; left: 110px; top: 190px; width: 140px; height: 140px; border-radius: 50%; background: #16B87A;
+    display: flex; align-items: center; justify-content: center; font: 900 56px 'Inter Tight', 'Inter', sans-serif; color: #fff;
+    box-shadow: 0 0 0 10px rgba(22,184,122,.25), 0 16px 40px rgba(0,0,0,.4); }
+  .fu-it { position: absolute; left: 0; top: 0; padding: 10px 16px; border-radius: 14px; background: #F6F1E7; color: #14161B;
+    font: 800 28px 'Inter Tight', 'Inter', sans-serif; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+  #fu-end { position: absolute; left: 80px; right: 80px; top: 196px; text-align: center; }
+  #fu-end div { display: inline-block; background: #F6F1E7; border-radius: 26px; padding: 24px 34px; box-shadow: 0 20px 50px rgba(0,0,0,.45);
+    font: 900 58px/1.05 'Inter Tight', 'Inter', sans-serif; color: #14161B; letter-spacing: -.02em; }
+  #fu-end small { display: block; margin-top: 10px; font: 700 26px 'JetBrains Mono', monospace; color: #16B87A; letter-spacing: .1em; }
+</style>
+<div id="root" data-composition-id="future" data-width="1080" data-height="1920">
+  <div id="fu-h"><span>AI at the <b>centre</b><br>of how firms run</span></div>
+  <div id="fu-orb">
+    <div id="fu-core">AI</div>
+    <div class="fu-it" id="fu-i0">Sales</div><div class="fu-it" id="fu-i1">Support</div><div class="fu-it" id="fu-i2">Code</div>
+    <div class="fu-it" id="fu-i3">Finance</div><div class="fu-it" id="fu-i4">Ops</div>
+  </div>
+  <div id="fu-end"><div>Follow for the AI money story<small>WHO WINS NEXT?</small></div></div>
+</div>
+<script>
+(function () {
+  const S = {{at:w146}};
+  const tl = gsap.timeline({ paused: true });
+  const items = [0, 1, 2, 3, 4].map(i => document.getElementById("fu-i" + i));
+  const cx = 180, cy = 260, rx = 150, ry = 210;
+  const st = { a: 0 };
+  function place() {
+    items.forEach((el, i) => {
+      const t = st.a + i * (Math.PI * 2 / items.length);
+      const x = cx + Math.cos(t) * rx, y = cy + Math.sin(t) * ry, depth = (Math.sin(t) + 1) / 2;
+      gsap.set(el, { x: x - el.offsetWidth / 2, y: y - 24, scale: 0.8 + depth * 0.25, zIndex: Math.round(depth * 10) });
+    });
+  }
+  place();
+  tl.fromTo("#fu-h", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w147}} - S - 0.1);
+  tl.fromTo("#fu-core", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, {{at:w147}} - S);
+  tl.fromTo(items, { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.08 }, {{at:w149}} - S);
+  tl.fromTo(st, { a: 0 }, { a: Math.PI * 1.2, duration: {{= at(w162) - at(w147) }}, ease: "none", onUpdate: place }, {{at:w147}} - S);
+  tl.to("#fu-h", { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, {{at:w159}} - S - 0.2);
+  tl.fromTo("#fu-end", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, {{at:w159}} - S);
+  window.__timelines["future"] = tl;
+})();
+</script>
+</template>

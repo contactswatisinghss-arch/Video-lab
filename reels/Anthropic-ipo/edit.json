@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "slug": "Anthropic-ipo",
+  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.2, "remove": [[0.0, 1.0]]},
+  "fixes": [["record -breaking.", "record-breaking."], ["well -proven", "well-proven"], ["$81 billion.", "$81B."]],
+  "fonts": ["Inter Tight", "Newsreader", "JetBrains Mono"],
+  "cover_at": 0.05,
+  "audio": {"loudnorm": true},
+  "post": {"caption": "", "hashtags": []}
+}

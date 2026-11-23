@@ -1,0 +1,59 @@
+<template>
+<!-- HOOK (frame 0 = cover): topic title in the top band + keyword stickers on the bookshelf side.
+     "$81B" lands as a counter on its word, then the SpaceX comparison bars grow on "bigger than SpaceX". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #hk-title { position: absolute; left: 50px; right: 50px; top: 178px; text-align: center; }
+  #hk-kick { display: inline-block; font: 700 30px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #14161B;
+    background: #FFC145; padding: 8px 18px; border-radius: 10px; }
+  #hk-big { display: inline-block; margin-top: 12px; padding: 14px 30px 18px; font: 900 112px/0.92 'Inter Tight', 'Inter', sans-serif; letter-spacing: -.035em; background: #F6F1E7; color: #14161B; text-shadow: none; border-radius: 22px; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
+  #hk-big b { color: #16B87A; }
+  .hk-st { position: absolute; font: 800 36px 'Inter Tight', 'Inter', sans-serif; color: #14161B; background: #F6F1E7;
+    padding: 12px 20px; border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,.35); white-space: nowrap; }
+  .hk-st.g { background: #16B87A; color: #fff; }
+  #hk-card { position: absolute; left: 640px; top: 560px; width: 400px; height: 560px; border-radius: 30px; background: #F6F1E7;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+  #hk-num { position: absolute; left: 30px; top: 28px; font: 900 150px/1 'Inter Tight', 'Inter', sans-serif; color: #16B87A; letter-spacing: -.05em; }
+  #hk-lab { position: absolute; left: 34px; top: 186px; font: 700 26px 'JetBrains Mono', monospace; color: #14161B; letter-spacing: .1em; }
+  .hk-row { position: absolute; left: 34px; width: 330px; }
+  .hk-name { font: 800 30px 'Inter Tight', 'Inter', sans-serif; color: #14161B; }
+  .hk-bar { margin-top: 8px; height: 46px; border-radius: 10px; transform-origin: 0 50%; }
+  .hk-val { position: absolute; right: 0; top: 0; font: 800 30px 'Inter Tight', 'Inter', sans-serif; color: #14161B; }
+</style>
+<div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+  <div id="hk-title"><span id="hk-kick">ANTHROPIC · NASDAQ: ANT</span><br><div id="hk-big">BIGGEST <b>IPO</b><br>EVER</div></div>
+  <div class="hk-st g" id="hk-s1" style="left:700px;top:600px">$81B raised</div>
+  <div class="hk-st" id="hk-s2" style="left:760px;top:740px">Claude</div>
+  <div class="hk-st" id="hk-s3" style="left:690px;top:870px">B2B money</div>
+  <div class="hk-st" id="hk-s4" style="left:740px;top:1000px">beat SpaceX</div>
+  <div id="hk-card">
+    <div id="hk-num">$<span id="hk-v">0</span>B</div>
+    <div id="hk-lab">RAISED IN THE IPO</div>
+    <div class="hk-row" style="top:270px"><div class="hk-name">Anthropic</div><div class="hk-val">$81B</div>
+      <div class="hk-bar" id="hk-b1" style="width:330px;background:#16B87A"></div></div>
+    <div class="hk-row" style="top:400px"><div class="hk-name">SpaceX</div><div class="hk-val">$75B</div>
+      <div class="hk-bar" id="hk-b2" style="width:306px;background:#9AA0A8"></div></div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = 0;
+  gsap.set("#hk-s1", { rotation: -4 }); gsap.set("#hk-s2", { rotation: 3 }); gsap.set("#hk-s3", { rotation: -2 }); gsap.set("#hk-s4", { rotation: 4 });
+  const tl = gsap.timeline({ paused: true });
+  // frame 0 already shows title + stickers (cover); they settle, then make room for the number
+  tl.fromTo("#hk-big", { scale: 1.06 }, { scale: 1, duration: 0.5, ease: "expo.out" }, 0);
+  ["#hk-s1", "#hk-s2", "#hk-s3", "#hk-s4"].forEach((s, i) => {
+    tl.to(s, { opacity: 0, x: 120, duration: 0.2, ease: "power2.in" }, {{at:w7}} - S - 0.25 + i * 0.04);
+  });
+  const n = { v: 0 };
+  tl.fromTo("#hk-card", { opacity: 0, x: 80, rotation: 3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.4, ease: "expo.out" }, {{at:w8}} - S - 0.15);
+  tl.fromTo(n, { v: 0 }, { v: 81, duration: 0.6, ease: "power3.out",
+    onUpdate: function () { document.getElementById("hk-v").textContent = Math.round(n.v); } }, {{at:w8}} - S - 0.1);
+  tl.fromTo("#hk-lab", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w8}} - S + 0.3);
+  tl.fromTo("#hk-b1", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, {{at:w11}} - S - 0.1);
+  tl.fromTo("#hk-b2", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, {{at:w13}} - S - 0.05);
+  tl.to(["#hk-card", "#hk-title"], { opacity: 0, y: -20, duration: 0.18, ease: "power2.in" }, {{at:w14}} - S - 0.3);
+  window.__timelines["hook"] = tl;
+})();
+</script>
+</template>

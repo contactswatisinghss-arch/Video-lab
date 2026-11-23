@@ -1,0 +1,36 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  /* below her chin (~1280) on her dark top; whole line eases in, the spoken word tints amber */
+  #ac-stage { position: absolute; left: 60px; right: 60px; top: 1450px; height: 140px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 800; color: #FFFFFF;
+    line-height: 1.08; letter-spacing: -.01em; text-shadow: 0 3px 14px rgba(10,12,16,.85), 0 1px 3px rgba(10,12,16,.7); }
+  .cap-word { display: inline-block; position: relative; }
+  .cap-word .cap-txt { position: relative; z-index: 1; }
+  .cap-word.em-green::before { content: ""; position: absolute; left: -10px; right: -10px; top: 8%; bottom: 4%;
+    border-radius: 12px; background: #16B87A; z-index: 0; }
+  .cap-word.em-green .cap-txt { text-shadow: none; }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="ac-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  HFCaps.build({
+    tl, container: "#ac-stage", words: {{words}}, idPrefix: "acap",
+    maxWords: 4, maxChars: 22, pauseBreak: 0.28, hold: 0.35,
+    emphasis: { "em-green": ["$81B.", "record-breaking.", "B2B.", "serious money", "250", "$10 million"] },
+    font: { family: "Inter Tight", weight: 800, size: 70, min: 46, maxWidth: 940 },
+    enter(tl, g, spans, grp) { tl.fromTo(g, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.16, ease: "power3.out" }, grp.start); },
+    word(tl, span, w, grp, i) {
+      if (span.classList.contains("em-green")) return;
+      tl.fromTo(span, { color: "#FFFFFF" }, { color: "#FFC145", duration: 0.06 }, Math.max(grp.start, w.start - 0.02));
+      tl.to(span, { color: "#FFFFFF", duration: 0.1 }, w.end + 0.02);
+    },
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>
