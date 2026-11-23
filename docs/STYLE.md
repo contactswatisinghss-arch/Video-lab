@@ -27,6 +27,12 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   docs/PIPELINE.md) and report the real time when the final is out. Don't make her repeat a preference: turn every
   repeated request into a default here.
 - **When she says "don't cut my audio"**: `cuts` = `{"max_pause": 99, "keep_head": 1.0, "keep_tail": 2.0, "remove": []}`, no `speed`.
+- **More engaging, never monotonous (23 Nov 2026, Ai-jobs):** "The editing style needs to be more engaging… take over
+  screen and show interviews… with better graphics. Can't have it monotonous like other." So: several FULL-SCREEN
+  takeovers per Reel (not only top-band cards and side columns), interview/quote moments (real people's words as
+  recreated quote/interview cards with name + role, or clips she supplies; never ripped footage), bolder graphics and
+  a different look every Reel. The Anthropic-ipo layout (title strip + right-column card, repeated) is the pattern to
+  move away from.
 - **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
   force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
