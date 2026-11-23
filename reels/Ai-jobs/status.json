@@ -2,8 +2,8 @@
   "slug": "Ai-jobs",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-23 09:16:29 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45144402945",
+  "time": "2026-11-23 09:32:55 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45145099991",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Ai-jobs",
   "prepare": {
     "stage": "prepare",
@@ -29,21 +29,26 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-23 09:16:29 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-23 09:32:55 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-23 09:16:29 UTC",
-    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45144402945",
-    "hash": "a441e4f7e2d071b9",
+    "time": "2026-11-23 09:32:55 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45145099991",
+    "hash": "e394e3297d195fa7",
     "check": {
       "parsed": false,
-      "raw_tail": "), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.\",\n        \"text\": \"Handle an empty list first, return 0, and add this test.\",\n        \"selector\": \"#m3-cm > div:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/move3.html\",\n        \"bbox\": {\n          \"x\": 77.61,\n          \"y\": 1112.92,\n          \"width\": 843.73,\n          \"height\": 112.92000000000007\n        },\n        \"time\": 52.538,\n        \"words\": 11,\n        \"seconds\": 1.162,\n        \"floorSeconds\": 2.85,\n        \"measured\": [\n          {\n            \"time\": 52.172,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.297,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.421,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.546,\n            \"opacity\": 0.53,\n            \"heightPx\": 113\n          },\n          {\n            \"time\": 52.671,\n            \"opacity\": 1,\n            \"heightPx\": 100\n          },\n          {\n            \"time\": 52.796,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 52.921,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.295,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.42,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.545,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.669,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.794,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 53.919,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 54.044,\n            \"opacity\": null,\n            \"heightPx\": null\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 534\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a.json\n"
+      "raw_tail": "1 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.\",\n        \"text\": \"Handle an empty list first, return 0, and add this test.\",\n        \"selector\": \"#m3-cm > div:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/move3.html\",\n        \"bbox\": {\n          \"x\": 77.9,\n          \"y\": 1106.73,\n          \"width\": 843.18,\n          \"height\": 102.04999999999995\n        },\n        \"time\": 52.141,\n        \"words\": 11,\n        \"seconds\": 1.56,\n        \"floorSeconds\": 2.85,\n        \"measured\": [\n          {\n            \"time\": 51.797,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 51.922,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.047,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.172,\n            \"opacity\": 0.9,\n            \"heightPx\": 102\n          },\n          {\n            \"time\": 52.297,\n            \"opacity\": 1,\n            \"heightPx\": 100\n          },\n          {\n            \"time\": 52.421,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 52.546,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.295,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.42,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.545,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.669,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.794,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 53.919,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 54.044,\n            \"opacity\": null,\n            \"heightPx\": null\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 534\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"ecd374ea-1e67-416b-a517-c23bffce446e\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/ecd374ea-1e67-416b-a517-c23bffce446e.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/ecd374ea-1e67-416b-a517-c23bffce446e.json\n"
     },
     "hf_version": "0.9.37",
     "snapshot_ok": true,
-    "render_seconds": 198,
+    "render_seconds": 206,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Ai-jobs/preview.mp4"
   }
 }
