@@ -1,0 +1,3722 @@
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff.json when the check ends, unless a warning says it could not be saved
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[hyperframes] check: starting Chrome
+[hyperframes] check: loading the page
+[hyperframes] check: waiting for the page to be ready
+[hyperframes] check: checking samples
+[hyperframes] check: samples 1/9
+[hyperframes] check: samples 2/9
+[hyperframes] check: samples 3/9
+[hyperframes] check: samples 4/9
+[hyperframes] check: samples 5/9
+[hyperframes] check: samples 6/9
+[hyperframes] check: samples 7/9
+[hyperframes] check: samples 8/9
+[hyperframes] check: samples 9/9
+[hyperframes] check: running the overlap pass
+[hyperframes] check: craft 1/544
+[hyperframes] check: craft 2/544
+[hyperframes] check: craft 3/544
+[hyperframes] check: craft 4/544
+[hyperframes] check: craft 5/544
+[hyperframes] check: craft 6/544
+[hyperframes] check: craft 7/544
+[hyperframes] check: craft 8/544
+[hyperframes] check: craft 9/544
+[hyperframes] check: craft 10/544
+[hyperframes] check: craft 11/544
+[hyperframes] check: craft 12/544
+[hyperframes] check: craft 13/544
+[hyperframes] check: craft 14/544
+[hyperframes] check: craft 15/544
+[hyperframes] check: craft 16/544
+[hyperframes] check: craft 17/544
+[hyperframes] check: craft 18/544
+[hyperframes] check: craft 19/544
+[hyperframes] check: craft 20/544
+[hyperframes] check: craft 21/544
+[hyperframes] check: craft 22/544
+[hyperframes] check: craft 23/544
+[hyperframes] check: craft 24/544
+[hyperframes] check: craft 25/544
+[hyperframes] check: craft 26/544
+[hyperframes] check: craft 27/544
+[hyperframes] check: craft 28/544
+[hyperframes] check: craft 29/544
+[hyperframes] check: craft 30/544
+[hyperframes] check: craft 31/544
+[hyperframes] check: craft 32/544
+[hyperframes] check: craft 33/544
+[hyperframes] check: craft 34/544
+[hyperframes] check: craft 35/544
+[hyperframes] check: craft 36/544
+[hyperframes] check: craft 37/544
+[hyperframes] check: craft 38/544
+[hyperframes] check: craft 39/544
+[hyperframes] check: craft 40/544
+[hyperframes] check: craft 41/544
+[hyperframes] check: craft 42/544
+[hyperframes] check: craft 43/544
+[hyperframes] check: craft 44/544
+[hyperframes] check: craft 45/544
+[hyperframes] check: craft 46/544
+[hyperframes] check: craft 47/544
+[hyperframes] check: craft 48/544
+[hyperframes] check: craft 49/544
+[hyperframes] check: craft 50/544
+[hyperframes] check: craft 51/544
+[hyperframes] check: craft 52/544
+[hyperframes] check: craft 53/544
+[hyperframes] check: craft 54/544
+[hyperframes] check: craft 55/544
+[hyperframes] check: craft 56/544
+[hyperframes] check: craft 57/544
+[hyperframes] check: craft 58/544
+[hyperframes] check: craft 59/544
+[hyperframes] check: craft 60/544
+[hyperframes] check: craft 61/544
+[hyperframes] check: craft 62/544
+[hyperframes] check: craft 63/544
+[hyperframes] check: craft 64/544
+[hyperframes] check: craft 65/544
+[hyperframes] check: craft 66/544
+[hyperframes] check: craft 67/544
+[hyperframes] check: craft 68/544
+[hyperframes] check: craft 69/544
+[hyperframes] check: craft 70/544
+[hyperframes] check: craft 71/544
+[hyperframes] check: craft 72/544
+[hyperframes] check: craft 73/544
+[hyperframes] check: craft 74/544
+[hyperframes] check: craft 75/544
+[hyperframes] check: craft 76/544
+[hyperframes] check: craft 77/544
+[hyperframes] check: craft 78/544
+[hyperframes] check: craft 79/544
+[hyperframes] check: craft 80/544
+[hyperframes] check: craft 81/544
+[hyperframes] check: craft 82/544
+[hyperframes] check: craft 83/544
+[hyperframes] check: craft 84/544
+[hyperframes] check: craft 85/544
+[hyperframes] check: craft 86/544
+[hyperframes] check: craft 87/544
+[hyperframes] check: craft 88/544
+[hyperframes] check: craft 89/544
+[hyperframes] check: craft 90/544
+[hyperframes] check: craft 91/544
+[hyperframes] check: craft 92/544
+[hyperframes] check: craft 93/544
+[hyperframes] check: craft 94/544
+[hyperframes] check: craft 95/544
+[hyperframes] check: craft 96/544
+[hyperframes] check: craft 97/544
+[hyperframes] check: craft 98/544
+[hyperframes] check: craft 99/544
+[hyperframes] check: craft 100/544
+[hyperframes] check: craft 101/544
+[hyperframes] check: craft 102/544
+[hyperframes] check: craft 103/544
+[hyperframes] check: craft 104/544
+[hyperframes] check: craft 105/544
+[hyperframes] check: craft 106/544
+[hyperframes] check: craft 107/544
+[hyperframes] check: craft 108/544
+[hyperframes] check: craft 109/544
+[hyperframes] check: craft 110/544
+[hyperframes] check: craft 111/544
+[hyperframes] check: craft 112/544
+[hyperframes] check: craft 113/544
+[hyperframes] check: craft 114/544
+[hyperframes] check: craft 115/544
+[hyperframes] check: craft 116/544
+[hyperframes] check: craft 117/544
+[hyperframes] check: craft 118/544
+[hyperframes] check: craft 119/544
+[hyperframes] check: craft 120/544
+[hyperframes] check: craft 121/544
+[hyperframes] check: craft 122/544
+[hyperframes] check: craft 123/544
+[hyperframes] check: craft 124/544
+[hyperframes] check: craft 125/544
+[hyperframes] check: craft 126/544
+[hyperframes] check: craft 127/544
+[hyperframes] check: craft 128/544
+[hyperframes] check: craft 129/544
+[hyperframes] check: craft 130/544
+[hyperframes] check: craft 131/544
+[hyperframes] check: craft 132/544
+[hyperframes] check: craft 133/544
+[hyperframes] check: craft 134/544
+[hyperframes] check: craft 135/544
+[hyperframes] check: craft 136/544
+[hyperframes] check: craft 137/544
+[hyperframes] check: craft 138/544
+[hyperframes] check: craft 139/544
+[hyperframes] check: craft 140/544
+[hyperframes] check: craft 141/544
+[hyperframes] check: craft 142/544
+[hyperframes] check: craft 143/544
+[hyperframes] check: craft 144/544
+[hyperframes] check: craft 145/544
+[hyperframes] check: craft 146/544
+[hyperframes] check: craft 147/544
+[hyperframes] check: craft 148/544
+[hyperframes] check: craft 149/544
+[hyperframes] check: craft 150/544
+[hyperframes] check: craft 151/544
+[hyperframes] check: craft 152/544
+[hyperframes] check: craft 153/544
+[hyperframes] check: craft 154/544
+[hyperframes] check: craft 155/544
+[hyperframes] check: craft 156/544
+[hyperframes] check: craft 157/544
+[hyperframes] check: craft 158/544
+[hyperframes] check: craft 159/544
+[hyperframes] check: craft 160/544
+[hyperframes] check: craft 161/544
+[hyperframes] check: craft 162/544
+[hyperframes] check: craft 163/544
+[hyperframes] check: craft 164/544
+[hyperframes] check: craft 165/544
+[hyperframes] check: craft 166/544
+[hyperframes] check: craft 167/544
+[hyperframes] check: craft 168/544
+[hyperframes] check: craft 169/544
+[hyperframes] check: craft 170/544
+[hyperframes] check: craft 171/544
+[hyperframes] check: craft 172/544
+[hyperframes] check: craft 173/544
+[hyperframes] check: craft 174/544
+[hyperframes] check: craft 175/544
+[hyperframes] check: craft 176/544
+[hyperframes] check: craft 177/544
+[hyperframes] check: craft 178/544
+[hyperframes] check: craft 179/544
+[hyperframes] check: craft 180/544
+[hyperframes] check: craft 181/544
+[hyperframes] check: craft 182/544
+[hyperframes] check: craft 183/544
+[hyperframes] check: craft 184/544
+[hyperframes] check: craft 185/544
+[hyperframes] check: craft 186/544
+[hyperframes] check: craft 187/544
+[hyperframes] check: craft 188/544
+[hyperframes] check: craft 189/544
+[hyperframes] check: craft 190/544
+[hyperframes] check: craft 191/544
+[hyperframes] check: craft 192/544
+[hyperframes] check: craft 193/544
+[hyperframes] check: craft 194/544
+[hyperframes] check: craft 195/544
+[hyperframes] check: craft 196/544
+[hyperframes] check: craft 197/544
+[hyperframes] check: craft 198/544
+[hyperframes] check: craft 199/544
+[hyperframes] check: craft 200/544
+[hyperframes] check: craft 201/544
+[hyperframes] check: craft 202/544
+[hyperframes] check: craft 203/544
+[hyperframes] check: craft 204/544
+[hyperframes] check: craft 205/544
+[hyperframes] check: craft 206/544
+[hyperframes] check: craft 207/544
+[hyperframes] check: craft 208/544
+[hyperframes] check: craft 209/544
+[hyperframes] check: craft 210/544
+[hyperframes] check: craft 211/544
+[hyperframes] check: craft 212/544
+[hyperframes] check: craft 213/544
+[hyperframes] check: craft 214/544
+[hyperframes] check: craft 215/544
+[hyperframes] check: craft 216/544
+[hyperframes] check: craft 217/544
+[hyperframes] check: craft 218/544
+[hyperframes] check: craft 219/544
+[hyperframes] check: craft 220/544
+[hyperframes] check: craft 221/544
+[hyperframes] check: craft 222/544
+[hyperframes] check: craft 223/544
+[hyperframes] check: craft 224/544
+[hyperframes] check: craft 225/544
+[hyperframes] check: craft 226/544
+[hyperframes] check: craft 227/544
+[hyperframes] check: craft 228/544
+[hyperframes] check: craft 229/544
+[hyperframes] check: craft 230/544
+[hyperframes] check: craft 231/544
+[hyperframes] check: craft 232/544
+[hyperframes] check: craft 233/544
+[hyperframes] check: craft 234/544
+[hyperframes] check: craft 235/544
+[hyperframes] check: craft 236/544
+[hyperframes] check: craft 237/544
+[hyperframes] check: craft 238/544
+[hyperframes] check: craft 239/544
+[hyperframes] check: craft 240/544
+[hyperframes] check: craft 241/544
+[hyperframes] check: craft 242/544
+[hyperframes] check: craft 243/544
+[hyperframes] check: craft 244/544
+[hyperframes] check: craft 245/544
+[hyperframes] check: craft 246/544
+[hyperframes] check: craft 247/544
+[hyperframes] check: craft 248/544
+[hyperframes] check: craft 249/544
+[hyperframes] check: craft 250/544
+[hyperframes] check: craft 251/544
+[hyperframes] check: craft 252/544
+[hyperframes] check: craft 253/544
+[hyperframes] check: craft 254/544
+[hyperframes] check: craft 255/544
+[hyperframes] check: craft 256/544
+[hyperframes] check: craft 257/544
+[hyperframes] check: craft 258/544
+[hyperframes] check: craft 259/544
+[hyperframes] check: craft 260/544
+[hyperframes] check: craft 261/544
+[hyperframes] check: craft 262/544
+[hyperframes] check: craft 263/544
+[hyperframes] check: craft 264/544
+[hyperframes] check: craft 265/544
+[hyperframes] check: craft 266/544
+[hyperframes] check: craft 267/544
+[hyperframes] check: craft 268/544
+[hyperframes] check: craft 269/544
+[hyperframes] check: craft 270/544
+[hyperframes] check: craft 271/544
+[hyperframes] check: craft 272/544
+[hyperframes] check: craft 273/544
+[hyperframes] check: craft 274/544
+[hyperframes] check: craft 275/544
+[hyperframes] check: craft 276/544
+[hyperframes] check: craft 277/544
+[hyperframes] check: craft 278/544
+[hyperframes] check: craft 279/544
+[hyperframes] check: craft 280/544
+[hyperframes] check: craft 281/544
+[hyperframes] check: craft 282/544
+[hyperframes] check: craft 283/544
+[hyperframes] check: craft 284/544
+[hyperframes] check: craft 285/544
+[hyperframes] check: craft 286/544
+[hyperframes] check: craft 287/544
+[hyperframes] check: craft 288/544
+[hyperframes] check: craft 289/544
+[hyperframes] check: craft 290/544
+[hyperframes] check: craft 291/544
+[hyperframes] check: craft 292/544
+[hyperframes] check: craft 293/544
+[hyperframes] check: craft 294/544
+[hyperframes] check: craft 295/544
+[hyperframes] check: craft 296/544
+[hyperframes] check: craft 297/544
+[hyperframes] check: craft 298/544
+[hyperframes] check: craft 299/544
+[hyperframes] check: craft 300/544
+[hyperframes] check: craft 301/544
+[hyperframes] check: craft 302/544
+[hyperframes] check: craft 303/544
+[hyperframes] check: craft 304/544
+[hyperframes] check: craft 305/544
+[hyperframes] check: craft 306/544
+[hyperframes] check: craft 307/544
+[hyperframes] check: craft 308/544
+[hyperframes] check: craft 309/544
+[hyperframes] check: craft 310/544
+[hyperframes] check: craft 311/544
+[hyperframes] check: craft 312/544
+[hyperframes] check: craft 313/544
+[hyperframes] check: craft 314/544
+[hyperframes] check: craft 315/544
+[hyperframes] check: craft 316/544
+[hyperframes] check: craft 317/544
+[hyperframes] check: craft 318/544
+[hyperframes] check: craft 319/544
+[hyperframes] check: craft 320/544
+[hyperframes] check: craft 321/544
+[hyperframes] check: craft 322/544
+[hyperframes] check: craft 323/544
+[hyperframes] check: craft 324/544
+[hyperframes] check: craft 325/544
+[hyperframes] check: craft 326/544
+[hyperframes] check: craft 327/544
+[hyperframes] check: craft 328/544
+[hyperframes] check: craft 329/544
+[hyperframes] check: craft 330/544
+[hyperframes] check: craft 331/544
+[hyperframes] check: craft 332/544
+[hyperframes] check: craft 333/544
+[hyperframes] check: craft 334/544
+[hyperframes] check: craft 335/544
+[hyperframes] check: craft 336/544
+[hyperframes] check: craft 337/544
+[hyperframes] check: craft 338/544
+[hyperframes] check: craft 339/544
+[hyperframes] check: craft 340/544
+[hyperframes] check: craft 341/544
+[hyperframes] check: craft 342/544
+[hyperframes] check: craft 343/544
+[hyperframes] check: craft 344/544
+[hyperframes] check: craft 345/544
+[hyperframes] check: craft 346/544
+[hyperframes] check: craft 347/544
+[hyperframes] check: craft 348/544
+[hyperframes] check: craft 349/544
+[hyperframes] check: craft 350/544
+[hyperframes] check: craft 351/544
+[hyperframes] check: craft 352/544
+[hyperframes] check: craft 353/544
+[hyperframes] check: craft 354/544
+[hyperframes] check: craft 355/544
+[hyperframes] check: craft 356/544
+[hyperframes] check: craft 357/544
+[hyperframes] check: craft 358/544
+[hyperframes] check: craft 359/544
+[hyperframes] check: craft 360/544
+[hyperframes] check: craft 361/544
+[hyperframes] check: craft 362/544
+[hyperframes] check: craft 363/544
+[hyperframes] check: craft 364/544
+[hyperframes] check: craft 365/544
+[hyperframes] check: craft 366/544
+[hyperframes] check: craft 367/544
+[hyperframes] check: craft 368/544
+[hyperframes] check: craft 369/544
+[hyperframes] check: craft 370/544
+[hyperframes] check: craft 371/544
+[hyperframes] check: craft 372/544
+[hyperframes] check: craft 373/544
+[hyperframes] check: craft 374/544
+[hyperframes] check: craft 375/544
+[hyperframes] check: craft 376/544
+[hyperframes] check: craft 377/544
+[hyperframes] check: craft 378/544
+[hyperframes] check: craft 379/544
+[hyperframes] check: craft 380/544
+[hyperframes] check: craft 381/544
+[hyperframes] check: craft 382/544
+[hyperframes] check: craft 383/544
+[hyperframes] check: craft 384/544
+[hyperframes] check: craft 385/544
+[hyperframes] check: craft 386/544
+[hyperframes] check: craft 387/544
+[hyperframes] check: craft 388/544
+[hyperframes] check: craft 389/544
+[hyperframes] check: craft 390/544
+[hyperframes] check: craft 391/544
+[hyperframes] check: craft 392/544
+[hyperframes] check: craft 393/544
+[hyperframes] check: craft 394/544
+[hyperframes] check: craft 395/544
+[hyperframes] check: craft 396/544
+[hyperframes] check: craft 397/544
+[hyperframes] check: craft 398/544
+[hyperframes] check: craft 399/544
+[hyperframes] check: craft 400/544
+[hyperframes] check: craft 401/544
+[hyperframes] check: craft 402/544
+[hyperframes] check: craft 403/544
+[hyperframes] check: craft 404/544
+[hyperframes] check: craft 405/544
+[hyperframes] check: craft 406/544
+[hyperframes] check: craft 407/544
+[hyperframes] check: craft 408/544
+[hyperframes] check: craft 409/544
+[hyperframes] check: craft 410/544
+[hyperframes] check: craft 411/544
+[hyperframes] check: craft 412/544
+[hyperframes] check: craft 413/544
+[hyperframes] check: craft 414/544
+[hyperframes] check: craft 415/544
+[hyperframes] check: craft 416/544
+[hyperframes] check: craft 417/544
+[hyperframes] check: craft 418/544
+[hyperframes] check: craft 419/544
+[hyperframes] check: craft 420/544
+[hyperframes] check: craft 421/544
+[hyperframes] check: craft 422/544
+[hyperframes] check: craft 423/544
+[hyperframes] check: craft 424/544
+[hyperframes] check: craft 425/544
+[hyperframes] check: craft 426/544
+[hyperframes] check: craft 427/544
+[hyperframes] check: craft 428/544
+[hyperframes] check: craft 429/544
+[hyperframes] check: craft 430/544
+[hyperframes] check: craft 431/544
+[hyperframes] check: craft 432/544
+[hyperframes] check: craft 433/544
+[hyperframes] check: craft 434/544
+[hyperframes] check: craft 435/544
+[hyperframes] check: craft 436/544
+[hyperframes] check: craft 437/544
+[hyperframes] check: craft 438/544
+[hyperframes] check: craft 439/544
+[hyperframes] check: craft 440/544
+[hyperframes] check: craft 441/544
+[hyperframes] check: craft 442/544
+[hyperframes] check: craft 443/544
+[hyperframes] check: craft 444/544
+[hyperframes] check: craft 445/544
+[hyperframes] check: craft 446/544
+[hyperframes] check: craft 447/544
+[hyperframes] check: craft 448/544
+[hyperframes] check: craft 449/544
+[hyperframes] check: craft 450/544
+[hyperframes] check: craft 451/544
+[hyperframes] check: craft 452/544
+[hyperframes] check: craft 453/544
+[hyperframes] check: craft 454/544
+[hyperframes] check: craft 455/544
+[hyperframes] check: craft 456/544
+[hyperframes] check: craft 457/544
+[hyperframes] check: craft 458/544
+[hyperframes] check: craft 459/544
+[hyperframes] check: craft 460/544
+[hyperframes] check: craft 461/544
+[hyperframes] check: craft 462/544
+[hyperframes] check: craft 463/544
+[hyperframes] check: craft 464/544
+[hyperframes] check: craft 465/544
+[hyperframes] check: craft 466/544
+[hyperframes] check: craft 467/544
+[hyperframes] check: craft 468/544
+[hyperframes] check: craft 469/544
+[hyperframes] check: craft 470/544
+[hyperframes] check: craft 471/544
+[hyperframes] check: craft 472/544
+[hyperframes] check: craft 473/544
+[hyperframes] check: craft 474/544
+[hyperframes] check: craft 475/544
+[hyperframes] check: craft 476/544
+[hyperframes] check: craft 477/544
+[hyperframes] check: craft 478/544
+[hyperframes] check: craft 479/544
+[hyperframes] check: craft 480/544
+[hyperframes] check: craft 481/544
+[hyperframes] check: craft 482/544
+[hyperframes] check: craft 483/544
+[hyperframes] check: craft 484/544
+[hyperframes] check: craft 485/544
+[hyperframes] check: craft 486/544
+[hyperframes] check: craft 487/544
+[hyperframes] check: craft 488/544
+[hyperframes] check: craft 489/544
+[hyperframes] check: craft 490/544
+[hyperframes] check: craft 491/544
+[hyperframes] check: craft 492/544
+[hyperframes] check: craft 493/544
+[hyperframes] check: craft 494/544
+[hyperframes] check: craft 495/544
+[hyperframes] check: craft 496/544
+[hyperframes] check: craft 497/544
+[hyperframes] check: craft 498/544
+[hyperframes] check: craft 499/544
+[hyperframes] check: craft 500/544
+[hyperframes] check: craft 501/544
+[hyperframes] check: craft 502/544
+[hyperframes] check: craft 503/544
+[hyperframes] check: craft 504/544
+[hyperframes] check: craft 505/544
+[hyperframes] check: craft 506/544
+[hyperframes] check: craft 507/544
+[hyperframes] check: craft 508/544
+[hyperframes] check: craft 509/544
+[hyperframes] check: craft 510/544
+[hyperframes] check: craft 511/544
+[hyperframes] check: craft 512/544
+[hyperframes] check: craft 513/544
+[hyperframes] check: craft 514/544
+[hyperframes] check: craft 515/544
+[hyperframes] check: craft 516/544
+[hyperframes] check: craft 517/544
+[hyperframes] check: craft 518/544
+[hyperframes] check: craft 519/544
+[hyperframes] check: craft 520/544
+[hyperframes] check: craft 521/544
+[hyperframes] check: craft 522/544
+[hyperframes] check: craft 523/544
+[hyperframes] check: craft 524/544
+[hyperframes] check: craft 525/544
+[hyperframes] check: craft 526/544
+[hyperframes] check: craft 527/544
+[hyperframes] check: craft 528/544
+[hyperframes] check: craft 529/544
+[hyperframes] check: craft 530/544
+[hyperframes] check: craft 531/544
+[hyperframes] check: craft 532/544
+[hyperframes] check: craft 533/544
+[hyperframes] check: craft 534/544
+[hyperframes] check: craft 535/544
+[hyperframes] check: craft 536/544
+[hyperframes] check: craft 537/544
+[hyperframes] check: craft 538/544
+[hyperframes] check: craft 539/544
+[hyperframes] check: craft 540/544
+[hyperframes] check: craft 541/544
+[hyperframes] check: craft 542/544
+[hyperframes] check: craft 543/544
+[hyperframes] check: craft 544/544
+[hyperframes] check: overlap 1/23
+[hyperframes] check: overlap 2/23
+[hyperframes] check: overlap 3/23
+[hyperframes] check: overlap 4/23
+[hyperframes] check: overlap 5/23
+[hyperframes] check: overlap 6/23
+[hyperframes] check: overlap 7/23
+[hyperframes] check: overlap 8/23
+[hyperframes] check: overlap 9/23
+[hyperframes] check: overlap 10/23
+[hyperframes] check: overlap 11/23
+[hyperframes] check: overlap 12/23
+[hyperframes] check: overlap 13/23
+[hyperframes] check: overlap 14/23
+[hyperframes] check: overlap 15/23
+[hyperframes] check: overlap 16/23
+[hyperframes] check: overlap 17/23
+[hyperframes] check: overlap 18/23
+[hyperframes] check: overlap 19/23
+[hyperframes] check: overlap 20/23
+[hyperframes] check: overlap 21/23
+[hyperframes] check: overlap 22/23
+[hyperframes] check: overlap 23/23
+[hyperframes] check: checking samples
+[hyperframes] check: analyze 0/3
+[hyperframes] check: analyzing the samples
+[hyperframes] check: analyze 1/3
+[hyperframes] check: analyze 2/3
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_repeated_fromto_without_baseline",
+        "severity": "warning",
+        "message": "2 tl.fromTo() calls target \"#fl-bad\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
+        "selector": "#fl-bad",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Newjob/compositions/fail.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 5.380000000000004s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
+      },
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#rp-cov\" for opacity between 0.10s and 0.50s.",
+        "selector": "#rp-cov",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Newjob/compositions/report.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      }
+    ],
+    "filesScanned": 14
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 0,
+    "infoCount": 29,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 49.063,
+        "selector": "#fl-bad > div:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 76,
+          "top": 1199,
+          "right": 341.2,
+          "bottom": 1244,
+          "width": 265.2,
+          "height": 45
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "age: \"abc\" → 500 Internal Error",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1199,
+          "width": 265.2,
+          "height": 45
+        },
+        "firstSeen": 48.198,
+        "lastSeen": 49.063,
+        "occurrences": 4,
+        "heldMs": 865.000000000002,
+        "times": [
+          48.198,
+          48.578,
+          48.957,
+          49.063
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 49.063,
+        "selector": "#fl-bad > div:nth-of-type(1) > b:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 341.2,
+          "top": 1199,
+          "right": 708.41,
+          "bottom": 1244,
+          "width": 367.21,
+          "height": 45
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "500 Internal Error",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 341.2,
+          "y": 1199,
+          "width": 367.21,
+          "height": 45
+        },
+        "firstSeen": 48.198,
+        "lastSeen": 49.063,
+        "occurrences": 4,
+        "heldMs": 865.000000000002,
+        "times": [
+          48.198,
+          48.578,
+          48.957,
+          49.063
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 11.322,
+        "selector": "#ax-m0 > span:nth-of-type(1)",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 366,
+          "top": 692,
+          "right": 861.59,
+          "bottom": 726,
+          "width": 495.59,
+          "height": 34
+        },
+        "text": "Update on your application: not moving forward",
+        "fixHint": "Text is 496px x 34px inside 496px x 34px and overflows by up to 222px; widen the text box to at least ~718px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 222
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 366,
+          "y": 692,
+          "width": 495.59,
+          "height": 34
+        },
+        "firstSeen": 11.322,
+        "lastSeen": 11.322,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.322
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.322,
+        "selector": "#ax-m0 > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 366,
+          "top": 692,
+          "right": 1083.61,
+          "bottom": 726,
+          "width": 717.61,
+          "height": 34
+        },
+        "containerSelector": "#root",
+        "text": "Update on your application: not moving forward",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 3.61
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 366,
+          "y": 692,
+          "width": 717.61,
+          "height": 34
+        },
+        "firstSeen": 11.322,
+        "lastSeen": 11.322,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.322
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 11.322,
+        "selector": "#ax-m1 > span:nth-of-type(1)",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 366,
+          "top": 755,
+          "right": 845.98,
+          "bottom": 789,
+          "width": 479.98,
+          "height": 34
+        },
+        "text": "We've decided to pursue other candidates",
+        "fixHint": "Text is 480px x 34px inside 480px x 34px and overflows by up to 144px; widen the text box to at least ~624px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 144
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 366,
+          "y": 755,
+          "width": 479.98,
+          "height": 34
+        },
+        "firstSeen": 11.322,
+        "lastSeen": 11.322,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.322
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 11.322,
+        "selector": "#ax-m2 > span:nth-of-type(1)",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 366,
+          "top": 818,
+          "right": 861.59,
+          "bottom": 852,
+          "width": 495.59,
+          "height": 34
+        },
+        "text": "This role requires 3+ years of experience",
+        "fixHint": "Text is 496px x 34px inside 496px x 34px and overflows by up to 144px; widen the text box to at least ~640px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 144
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 366,
+          "y": 818,
+          "width": 495.59,
+          "height": 34
+        },
+        "firstSeen": 11.322,
+        "lastSeen": 11.322,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.322
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.87,
+        "selector": "#am-scroll > h3:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 214,
+          "top": 375.94,
+          "right": 829.52,
+          "bottom": 467.94,
+          "width": 615.52,
+          "height": 92
+        },
+        "containerSelector": "div.am-tab.on",
+        "text": "What employers now want from entry-level tech talent",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 214,
+          "y": 375.94,
+          "width": 615.52,
+          "height": 92
+        },
+        "firstSeen": 18.87,
+        "lastSeen": 18.87,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.87
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.87,
+        "selector": "#am-pdf",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 168,
+          "top": 428,
+          "right": 912,
+          "bottom": 1328,
+          "width": 744,
+          "height": 900
+        },
+        "containerSelector": "#am-lt > div:nth-of-type(1) > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 58,
+          "top": 348,
+          "right": 1022,
+          "bottom": 972,
+          "width": 964,
+          "height": 624
+        },
+        "overflow": {
+          "bottom": 356
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 168,
+          "y": 428,
+          "width": 744,
+          "height": 900
+        },
+        "firstSeen": 18.87,
+        "lastSeen": 18.87,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.87
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.87,
+        "selector": "#am-scroll",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 168,
+          "top": 337.94,
+          "right": 912,
+          "bottom": 1025.94,
+          "width": 744,
+          "height": 688
+        },
+        "containerSelector": "#am-pdf",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 168,
+          "top": 428,
+          "right": 912,
+          "bottom": 1328,
+          "width": 744,
+          "height": 900
+        },
+        "overflow": {
+          "top": 90.06
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 168,
+          "y": 337.94,
+          "width": 744,
+          "height": 688
+        },
+        "firstSeen": 18.87,
+        "lastSeen": 18.87,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.87
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 24.668,
+        "selector": "#rp-ch > div:nth-of-type(4)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 222,
+          "top": 1128,
+          "right": 318,
+          "bottom": 1180,
+          "width": 96,
+          "height": 52
+        },
+        "containerSelector": "#rp-cov > p:nth-of-type(1)",
+        "text": "2020",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 222,
+          "y": 1128,
+          "width": 96,
+          "height": 52
+        },
+        "firstSeen": 24.668,
+        "lastSeen": 24.668,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.668
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 24.668,
+        "selector": "#rp-ch > div:nth-of-type(6)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 662,
+          "top": 1128,
+          "right": 758,
+          "bottom": 1180,
+          "width": 96,
+          "height": 52
+        },
+        "containerSelector": "#rp-cov > p:nth-of-type(1)",
+        "text": "2025",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 662,
+          "y": 1128,
+          "width": 96,
+          "height": 52
+        },
+        "firstSeen": 24.668,
+        "lastSeen": 24.668,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.668
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 24.668,
+        "selector": "#rp-cov > small:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 211.48,
+          "top": 0,
+          "right": 1080,
+          "bottom": 470.36,
+          "width": 868.52,
+          "height": 470.36
+        },
+        "containerSelector": "#rp-cov > h2:nth-of-type(1) > span:nth-of-type(1)",
+        "text": "BURNING GLASS INSTITUTE × BREAK THROUGH TECH",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 211.48,
+          "y": 0,
+          "width": 868.52,
+          "height": 470.36
+        },
+        "firstSeen": 24.668,
+        "lastSeen": 24.668,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.668
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 24.668,
+        "selector": "#rp-cov > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 195.81,
+          "top": 868.92,
+          "right": 1080,
+          "bottom": 1581.47,
+          "width": 884.19,
+          "height": 712.55
+        },
+        "containerSelector": "#rp-cov > em:nth-of-type(1)",
+        "text": "What employers now want from entry-level tech talent",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 195.81,
+          "y": 868.92,
+          "width": 884.19,
+          "height": 712.55
+        },
+        "firstSeen": 24.668,
+        "lastSeen": 24.668,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.668
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 24.668,
+        "selector": "#rp-cov > em:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 185.06,
+          "top": 1286.87,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 894.94,
+          "height": 633.13
+        },
+        "containerSelector": "#ncap-w85 > span:nth-of-type(1)",
+        "text": "1,000,000+ job postings analysed",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 185.06,
+          "y": 1286.87,
+          "width": 894.94,
+          "height": 633.13
+        },
+        "firstSeen": 24.668,
+        "lastSeen": 24.668,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.668
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-k",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 60,
+          "top": 260,
+          "right": 820.33,
+          "bottom": 302,
+          "width": 760.33,
+          "height": 42
+        },
+        "containerSelector": "#rp-cov",
+        "text": "ENTRY-LEVEL TECH POSTINGS ASKING FOR",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 60,
+          "y": 260,
+          "width": 760.33,
+          "height": 42
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-t",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 60,
+          "top": 309,
+          "right": 468.86,
+          "bottom": 395,
+          "width": 408.86,
+          "height": 86
+        },
+        "containerSelector": "#rp-cov",
+        "text": "Code review",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 60,
+          "y": 309,
+          "width": 408.86,
+          "height": 86
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov > small:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -57.9,
+          "top": 11.35,
+          "right": 129.93,
+          "bottom": 385.08,
+          "width": 187.83,
+          "height": 373.73
+        },
+        "containerSelector": "#root",
+        "text": "BURNING GLASS INSTITUTE × BREAK THROUGH TECH",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 57.9
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -57.9,
+          "y": 11.35,
+          "width": 187.83,
+          "height": 373.73
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov > h2:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -89.5,
+          "top": 329.84,
+          "right": 129.93,
+          "bottom": 643.79,
+          "width": 219.43,
+          "height": 313.95
+        },
+        "containerSelector": "#root",
+        "text": "“Consequence”",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 89.5
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -89.5,
+          "y": 329.84,
+          "width": 219.43,
+          "height": 313.95
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -84.95,
+          "top": 772.83,
+          "right": 129.93,
+          "bottom": 929.15,
+          "width": 214.88,
+          "height": 156.32
+        },
+        "containerSelector": "#root",
+        "text": "What employers now want from entry-level tech talent",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 84.95
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -84.95,
+          "y": 772.83,
+          "width": 214.88,
+          "height": 156.32
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov > em:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -39.62,
+          "top": 1179.46,
+          "right": 129.93,
+          "bottom": 1486.68,
+          "width": 169.55,
+          "height": 307.22
+        },
+        "containerSelector": "#root",
+        "text": "1,000,000+ job postings analysed",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 39.62
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -39.62,
+          "y": 1179.46,
+          "width": 169.55,
+          "height": 307.22
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov > em:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -39.62,
+          "top": 1179.46,
+          "right": 129.93,
+          "bottom": 1486.68,
+          "width": 169.54,
+          "height": 307.22
+        },
+        "containerSelector": "#rp-bg",
+        "text": "1,000,000+ job postings analysed",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -39.62,
+          "y": 1179.46,
+          "width": 169.54,
+          "height": 307.22
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -133.68,
+          "top": -225.04,
+          "right": 140,
+          "bottom": 1745.04,
+          "width": 273.68,
+          "height": 1970.07
+        },
+        "containerSelector": "#report > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 133.68,
+          "top": 225.04
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -133.68,
+          "y": -225.04,
+          "width": 273.68,
+          "height": 1970.07
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 26.418,
+        "selector": "#rp-cov",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -133.68,
+          "top": -225.04,
+          "right": 140,
+          "bottom": 1745.04,
+          "width": 273.68,
+          "height": 1970.07
+        },
+        "containerSelector": "#root",
+        "text": "BURNING GLASS INSTITUTE × BREAK THROUGH TECH The",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 133.68,
+          "top": 225.04
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": -133.68,
+          "y": -225.04,
+          "width": 273.68,
+          "height": 1970.07
+        },
+        "firstSeen": 26.418,
+        "lastSeen": 26.418,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.418
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 48.198,
+        "selector": "#fl-bad > small:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 76,
+          "top": 1152,
+          "right": 242.33,
+          "bottom": 1189,
+          "width": 166.33,
+          "height": 37
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "BAD INPUT",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1152,
+          "width": 166.33,
+          "height": 37
+        },
+        "firstSeen": 48.198,
+        "lastSeen": 48.198,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          48.198
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-l6",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 76,
+          "top": 692,
+          "right": 424.02,
+          "bottom": 730,
+          "width": 348.02,
+          "height": 38
+        },
+        "containerSelector": "#fl-lat",
+        "text": "GET /health 200 12ms",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 692,
+          "width": 348.02,
+          "height": 38
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-l7",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 76,
+          "top": 735.5,
+          "right": 511.02,
+          "bottom": 773.5,
+          "width": 435.02,
+          "height": 38
+        },
+        "containerSelector": "#fl-lat",
+        "text": "GET /api/feed timeout",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 735.5,
+          "width": 435.02,
+          "height": 38
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-l7 > b:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 319.61,
+          "top": 735.5,
+          "right": 371.81,
+          "bottom": 773.5,
+          "width": 52.2,
+          "height": 38
+        },
+        "containerSelector": "#fl-lat",
+        "text": "504",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 319.61,
+          "y": 735.5,
+          "width": 52.2,
+          "height": 38
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-bad > small:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 76,
+          "top": 1152,
+          "right": 242.33,
+          "bottom": 1189,
+          "width": 166.33,
+          "height": 37
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "BAD INPUT",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1152,
+          "width": 166.33,
+          "height": 37
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-bad > div:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 76,
+          "top": 1199,
+          "right": 341.2,
+          "bottom": 1244,
+          "width": 265.2,
+          "height": 45
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "age: \"abc\" →",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1199,
+          "width": 265.2,
+          "height": 45
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-bad > div:nth-of-type(1) > b:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 341.2,
+          "top": 1199,
+          "right": 708.41,
+          "bottom": 1244,
+          "width": 367.2,
+          "height": 45
+        },
+        "containerSelector": "#fl-real > span:nth-of-type(1)",
+        "text": "500 Internal Error",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 341.2,
+          "y": 1199,
+          "width": 367.2,
+          "height": 45
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 49.063,
+        "selector": "#fl-lw",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 76,
+          "top": 429,
+          "right": 1004,
+          "bottom": 777,
+          "width": 928,
+          "height": 348
+        },
+        "containerSelector": "#fl-logs",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 50,
+          "top": 360,
+          "right": 1030,
+          "bottom": 690,
+          "width": 980,
+          "height": 330
+        },
+        "overflow": {
+          "bottom": 87
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 429,
+          "width": 928,
+          "height": 348
+        },
+        "firstSeen": 49.063,
+        "lastSeen": 49.063,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          49.063
+        ]
+      }
+    ],
+    "duration": 67.933,
+    "samples": [
+      3.774,
+      11.322,
+      18.87,
+      26.418,
+      33.967,
+      41.515,
+      49.063,
+      56.611,
+      64.159
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 31,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.31:1; WCAG AA requires 3:1.",
+        "text": "BAD INPUT",
+        "fg": "rgb(139,148,158)",
+        "bg": "rgb(255,138,61)",
+        "ratio": 1.31,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(84,89,95)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(5) > small",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1152,
+          "width": 928,
+          "height": 37
+        },
+        "time": 49.063,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.52:1; WCAG AA requires 3:1.",
+        "text": "age: \"abc\" → 500 Internal Error",
+        "fg": "rgb(201,209,217)",
+        "bg": "rgb(255,138,61)",
+        "ratio": 1.52,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(86,89,93)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(5) > div",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 76,
+          "y": 1199,
+          "width": 928,
+          "height": 45
+        },
+        "time": 49.063,
+        "times": [
+          49.063
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.28:1; WCAG AA requires 3:1.",
+        "text": "500 Internal Error",
+        "fg": "rgb(255,93,93)",
+        "bg": "rgb(255,138,61)",
+        "ratio": 1.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(153,56,56)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(5) > div > b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/fail.html",
+        "bbox": {
+          "x": 341.203125,
+          "y": 1199,
+          "width": 367.203125,
+          "height": 45
+        },
+        "time": 49.063,
+        "times": [
+          49.063
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      3.774,
+      18.87,
+      33.967,
+      49.063,
+      64.159
+    ],
+    "checked": 53,
+    "passed": 50
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 20,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 10 text elements stay under it for 0.5 s or more, the smallest \"New tab\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "New tab",
+        "selector": "#ax-lt > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 168.01,
+          "y": 380.36,
+          "width": 107.47,
+          "height": 33.46
+        },
+        "time": 6.743,
+        "times": [
+          6.743,
+          9.616,
+          9.616,
+          9.616,
+          9.99,
+          9.99,
+          9.99,
+          10.615,
+          10.615,
+          10.615
+        ],
+        "fontPx": 25.59,
+        "floorPx": 28,
+        "seconds": 4.871,
+        "elements": [
+          {
+            "selector": "#ax-lt > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "New tab",
+            "fontPx": 25.59,
+            "time": 6.743,
+            "seconds": 4.871
+          },
+          {
+            "selector": "#ax-m0 > b:nth-of-type(1)",
+            "text": "Careers Team",
+            "fontPx": 26,
+            "time": 9.616,
+            "seconds": 1.998
+          },
+          {
+            "selector": "#ax-m0 > span:nth-of-type(1)",
+            "text": "Update on your application: not moving forward",
+            "fontPx": 26,
+            "time": 9.616,
+            "seconds": 1.998
+          },
+          {
+            "selector": "#ax-m0 > em:nth-of-type(1)",
+            "text": "9:02",
+            "fontPx": 26,
+            "time": 9.616,
+            "seconds": 1.998
+          },
+          {
+            "selector": "#ax-m1 > b:nth-of-type(1)",
+            "text": "Recruiting",
+            "fontPx": 26,
+            "time": 9.99,
+            "seconds": 1.624
+          },
+          {
+            "selector": "#ax-m1 > span:nth-of-type(1)",
+            "text": "We've decided to pursue other candidates",
+            "fontPx": 26,
+            "time": 9.99,
+            "seconds": 1.624
+          },
+          {
+            "selector": "#ax-m1 > em:nth-of-type(1)",
+            "text": "11:47",
+            "fontPx": 26,
+            "time": 9.99,
+            "seconds": 1.624
+          },
+          {
+            "selector": "#ax-m2 > b:nth-of-type(1)",
+            "text": "Talent",
+            "fontPx": 26,
+            "time": 10.615,
+            "seconds": 0.999
+          },
+          {
+            "selector": "#ax-m2 > span:nth-of-type(1)",
+            "text": "This role requires 3+ years of experience",
+            "fontPx": 26,
+            "time": 10.615,
+            "seconds": 0.999
+          },
+          {
+            "selector": "#ax-m2 > em:nth-of-type(1)",
+            "text": "4:15",
+            "fontPx": 26,
+            "time": 10.615,
+            "seconds": 0.999
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"will ai replace junior developers 2027\" (6 words) is on screen 1.47 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "will ai replace junior developers 2027",
+        "selector": "#ax-s0",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 146,
+          "y": 541.85,
+          "width": 638.4100000000001,
+          "height": 37
+        },
+        "time": 7.805,
+        "words": 6,
+        "seconds": 1.468,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 7.493,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.617,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.742,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.867,
+            "opacity": 0.98,
+            "heightPx": 37
+          },
+          {
+            "time": 7.992,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.117,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.242,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.866,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.991,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.116,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.241,
+            "opacity": 0.68,
+            "heightPx": 37
+          },
+          {
+            "time": 9.366,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.491,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.616,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"is coding still worth learning\" (5 words) is on screen 1.33 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "is coding still worth learning",
+        "selector": "#ax-s1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 146,
+          "y": 598.42,
+          "width": 504.03,
+          "height": 37
+        },
+        "time": 7.937,
+        "words": 5,
+        "seconds": 1.335,
+        "floorSeconds": 1.5,
+        "measured": [
+          {
+            "time": 7.617,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.742,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.867,
+            "opacity": 0.12,
+            "heightPx": 37
+          },
+          {
+            "time": 7.992,
+            "opacity": 0.93,
+            "heightPx": 37
+          },
+          {
+            "time": 8.117,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.242,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.367,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.866,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.991,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.116,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.241,
+            "opacity": 0.68,
+            "heightPx": 37
+          },
+          {
+            "time": 9.366,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.491,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.616,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"entry level dev jobs no experience\" (6 words) is on screen 1.23 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "entry level dev jobs no experience",
+        "selector": "#ax-s2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 146,
+          "y": 655.74,
+          "width": 571.22,
+          "height": 37
+        },
+        "time": 8.039,
+        "words": 6,
+        "seconds": 1.233,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 7.742,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.867,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.992,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 8.117,
+            "opacity": 0.97,
+            "heightPx": 37
+          },
+          {
+            "time": 8.242,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.367,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.492,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.866,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 8.991,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.116,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 9.241,
+            "opacity": 0.68,
+            "heightPx": 37
+          },
+          {
+            "time": 9.366,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.491,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.616,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"We've decided to pursue other candidates\" (6 words) is on screen 1.67 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "We've decided to pursue other candidates",
+        "selector": "#ax-m1 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 353.76,
+          "y": 755,
+          "width": 608.24,
+          "height": 34
+        },
+        "time": 9.935,
+        "words": 6,
+        "seconds": 1.671,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 9.616,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.74,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.865,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 9.99,
+            "opacity": 0.69,
+            "heightPx": 34
+          },
+          {
+            "time": 10.115,
+            "opacity": 0.98,
+            "heightPx": 34
+          },
+          {
+            "time": 10.24,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 10.365,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.114,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.239,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.364,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.489,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.614,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.738,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.863,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"This role requires 3+ years of experience\" (7 words) is on screen 1.10 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "This role requires 3+ years of experience",
+        "selector": "#ax-m2 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/anx.html",
+        "bbox": {
+          "x": 363.93,
+          "y": 818,
+          "width": 598.0699999999999,
+          "height": 34
+        },
+        "time": 10.506,
+        "words": 7,
+        "seconds": 1.101,
+        "floorSeconds": 1.95,
+        "measured": [
+          {
+            "time": 10.24,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 10.365,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 10.49,
+            "opacity": 0.46,
+            "heightPx": 34
+          },
+          {
+            "time": 10.615,
+            "opacity": 0.95,
+            "heightPx": 34
+          },
+          {
+            "time": 10.739,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 10.864,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 10.989,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.114,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.239,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.364,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.489,
+            "opacity": 1,
+            "heightPx": 34
+          },
+          {
+            "time": 11.614,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.738,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.863,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"The Consequence Gap.pdf\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "The Consequence Gap.pdf",
+        "selector": "div.am-tab.on",
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 88,
+          "y": 384.06,
+          "width": 331.2,
+          "height": 31
+        },
+        "time": 16.234,
+        "times": [
+          16.234,
+          16.234,
+          16.234
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.87,
+        "elements": [
+          {
+            "selector": "div.am-tab.on",
+            "text": "The Consequence Gap.pdf",
+            "fontPx": 24,
+            "time": 16.234,
+            "seconds": 4.87
+          },
+          {
+            "selector": "#am-tabs > div:nth-of-type(2)",
+            "text": "Hiring data",
+            "fontPx": 24,
+            "time": 16.234,
+            "seconds": 4.87
+          },
+          {
+            "selector": "#am-tabs > div:nth-of-type(3)",
+            "text": "Stanford study",
+            "fontPx": 24,
+            "time": 16.234,
+            "seconds": 4.87
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Can I still get hired? → check the postings data\" (9 words) is on screen 1.76 s (±0.01 s), under its 2.40 s floor: hold it about 0.5 s + 0.3 s a word (3.20 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Can I still get hired? → check the postings data",
+        "selector": "#am-note",
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 725.53,
+          "y": 742.79,
+          "width": 203.64,
+          "height": 141.78999999999996
+        },
+        "time": 19.239,
+        "words": 9,
+        "seconds": 1.764,
+        "floorSeconds": 2.4,
+        "measured": [
+          {
+            "time": 18.981,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.106,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.231,
+            "opacity": 0.47,
+            "heightPx": 164
+          },
+          {
+            "time": 19.356,
+            "opacity": 1,
+            "heightPx": 142
+          },
+          {
+            "time": 19.481,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 19.606,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 19.731,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 20.605,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 20.73,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 20.854,
+            "opacity": 1,
+            "heightPx": 146
+          },
+          {
+            "time": 20.979,
+            "opacity": 0.99,
+            "heightPx": 146
+          },
+          {
+            "time": 21.104,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.229,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.354,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Can you still get hired?\" (5 words) is on screen 0.93 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Can you still get hired?",
+        "selector": "#am-q",
+        "dataAttributes": {},
+        "sourceFile": "compositions/act.html",
+        "bbox": {
+          "x": 275.99,
+          "y": 1071.85,
+          "width": 528,
+          "height": 59.299999999999955
+        },
+        "time": 20.074,
+        "words": 5,
+        "seconds": 0.929,
+        "floorSeconds": 1.5,
+        "measured": [
+          {
+            "time": 19.731,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.855,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 19.98,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 20.105,
+            "opacity": 0.84,
+            "heightPx": 59
+          },
+          {
+            "time": 20.23,
+            "opacity": 0.99,
+            "heightPx": 55
+          },
+          {
+            "time": 20.355,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 20.48,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 20.605,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 20.73,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 20.854,
+            "opacity": 1,
+            "heightPx": 55
+          },
+          {
+            "time": 20.979,
+            "opacity": 0.99,
+            "heightPx": 55
+          },
+          {
+            "time": 21.104,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.229,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.354,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"BURNING GLASS INSTITUTE × BREAK THROU...\" at 13 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "BURNING GLASS INSTITUTE × BREAK THROUGH TECH",
+        "selector": "#rp-cov > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/report.html",
+        "bbox": {
+          "x": 161.43,
+          "y": 0,
+          "width": 542.02,
+          "height": 380.44
+        },
+        "time": 24.975,
+        "times": [
+          24.975,
+          24.975,
+          24.975
+        ],
+        "fontPx": 12.5,
+        "floorPx": 28,
+        "seconds": 6.619,
+        "elements": [
+          {
+            "selector": "#rp-cov > small:nth-of-type(1)",
+            "text": "BURNING GLASS INSTITUTE × BREAK THROUGH TECH",
+            "fontPx": 12.5,
+            "time": 24.975,
+            "seconds": 6.619
+          },
+          {
+            "selector": "#rp-cov > em:nth-of-type(1)",
+            "text": "1,000,000+ job postings analysed",
+            "fontPx": 12.5,
+            "time": 24.975,
+            "seconds": 6.619
+          },
+          {
+            "selector": "#rp-cov > p:nth-of-type(1)",
+            "text": "What employers now want from entry-level tech talent",
+            "fontPx": 18.34,
+            "time": 24.975,
+            "seconds": 6.619
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 36 text elements stay under it for 0.5 s or more, the smallest \"TERMINAL\" at 20 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "TERMINAL",
+        "selector": "#bk-term > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/brk.html",
+        "bbox": {
+          "x": 80.36,
+          "y": 762.54,
+          "width": 95.51,
+          "height": 25.87
+        },
+        "time": 34.591,
+        "times": [
+          34.591,
+          34.591,
+          34.591,
+          34.591,
+          34.591,
+          34.591,
+          34.591,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          35.84,
+          36.714,
+          37.588,
+          38.712,
+          38.712,
+          38.837,
+          38.837,
+          39.336,
+          39.336,
+          39.336,
+          40.085,
+          40.085,
+          40.085,
+          40.085,
+          40.085,
+          40.085,
+          40.335
+        ],
+        "fontPx": 19.9,
+        "floorPx": 28,
+        "seconds": 6.868,
+        "elements": [
+          {
+            "selector": "#bk-term > small:nth-of-type(1)",
+            "text": "TERMINAL",
+            "fontPx": 19.9,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-sug",
+            "text": "AI suggestion · Tab to accept",
+            "fontPx": 21.89,
+            "time": 34.591,
+            "seconds": 1.374
+          },
+          {
+            "selector": "#bk-ed > div:nth-of-type(1) > i:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 23.88,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-g1 > i:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 24,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g2 > i:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g3 > i:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 24,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-f1 > i:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 24,
+            "time": 40.085,
+            "seconds": 1.374
+          },
+          {
+            "selector": "#bk-lt > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "cart.py — my-small-app",
+            "fontPx": 25.87,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-cm > small:nth-of-type(1)",
+            "text": "💬 Review comment · you",
+            "fontPx": 26,
+            "time": 40.335,
+            "seconds": 1.124
+          },
+          {
+            "selector": "#bk-ed > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "(items):",
+            "fontPx": 26.86,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-ed > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "def",
+            "fontPx": 26.86,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-ed > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "cart_total",
+            "fontPx": 26.86,
+            "time": 34.591,
+            "seconds": 6.868
+          },
+          {
+            "selector": "#bk-g1 > span:nth-of-type(1)",
+            "text": "subtotal = (i.price * i.qty i items)",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g1 > span:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "sum",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g1 > span:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "for",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g1 > span:nth-of-type(1) > span:nth-of-type(3)",
+            "text": "in",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g2 > span:nth-of-type(1)",
+            "text": "avg = subtotal / (items)",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g2 > span:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "len",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g3 > span:nth-of-type(1)",
+            "text": "(subtotal - discount(avg), )",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g3 > span:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "return",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g3 > span:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "round",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-g3 > span:nth-of-type(1) > span:nth-of-type(3)",
+            "text": "2",
+            "fontPx": 27,
+            "time": 35.84,
+            "seconds": 5.619
+          },
+          {
+            "selector": "#bk-o0",
+            "text": "$ pytest -q",
+            "fontPx": 27,
+            "time": 36.714,
+            "seconds": 4.745
+          },
+          {
+            "selector": "#bk-o1 > span:nth-of-type(2)",
+            "text": "F",
+            "fontPx": 27,
+            "time": 37.588,
+            "seconds": 3.871
+          },
+          {
+            "selector": "#bk-o2",
+            "text": "test_cart.py::test_empty_cart",
+            "fontPx": 27,
+            "time": 38.712,
+            "seconds": 2.747
+          },
+          {
+            "selector": "#bk-o2 > span:nth-of-type(1)",
+            "text": "FAILED",
+            "fontPx": 27,
+            "time": 38.712,
+            "seconds": 2.747
+          },
+          {
+            "selector": "#bk-o3",
+            "text": ": division by zero",
+            "fontPx": 27,
+            "time": 38.837,
+            "seconds": 2.622
+          },
+          {
+            "selector": "#bk-o3 > span:nth-of-type(1)",
+            "text": "ZeroDivisionError",
+            "fontPx": 27,
+            "time": 38.837,
+            "seconds": 2.622
+          },
+          {
+            "selector": "#bk-o4",
+            "text": ", in 0.14s",
+            "fontPx": 27,
+            "time": 39.336,
+            "seconds": 2.123
+          },
+          {
+            "selector": "#bk-o4 > span:nth-of-type(1)",
+            "text": "1 failed",
+            "fontPx": 27,
+            "time": 39.336,
+            "seconds": 2.123
+          },
+          {
+            "selector": "#bk-o4 > span:nth-of-type(2)",
+            "text": "2 passed",
+            "fontPx": 27,
+            "time": 39.336,
+            "seconds": 2.123
+          },
+          {
+            "selector": "#bk-f1 > span:nth-of-type(1)",
+            "text": "items:",
+            "fontPx": 27,
+            "time": 40.085,
+            "seconds": 1.374
+          },
+          {
+            "selector": "#bk-f1 > span:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "if not",
+            "fontPx": 27,
+            "time": 40.085,
+            "seconds": 1.374
+          },
+          {
+            "selector": "#bk-f1 > span:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "return",
+            "fontPx": 27,
+            "time": 40.085,
+            "seconds": 1.374
+          },
+          {
+            "selector": "#bk-f1 > span:nth-of-type(1) > span:nth-of-type(3)",
+            "text": "0.0",
+            "fontPx": 27,
+            "time": 40.085,
+            "seconds": 1.374
+          },
+          {
+            "selector": "span.cm",
+            "text": "# guard",
+            "fontPx": 27,
+            "time": 40.085,
+            "seconds": 1.374
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"if not items: return 0.0 # guard\" (7 words) is on screen 1.37 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "if not items: return 0.0 # guard",
+        "selector": "#bk-f1 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/brk.html",
+        "bbox": {
+          "x": 132,
+          "y": 514.25,
+          "width": 599.4499999999999,
+          "height": 35
+        },
+        "time": 40.039,
+        "words": 7,
+        "seconds": 1.366,
+        "floorSeconds": 1.95,
+        "measured": [
+          {
+            "time": 39.711,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 39.836,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 39.961,
+            "opacity": 0.19,
+            "heightPx": 8
+          },
+          {
+            "time": 40.085,
+            "opacity": 0.88,
+            "heightPx": 35
+          },
+          {
+            "time": 40.21,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 40.335,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 40.46,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 40.96,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 41.084,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 41.209,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 41.334,
+            "opacity": 1,
+            "heightPx": 35
+          },
+          {
+            "time": 41.459,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 41.584,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 41.709,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Empty cart crashed checkout. Added a guard and a test for...\" (12 words) is on screen 1.13 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Empty cart crashed checkout. Added a guard and a test for it.",
+        "selector": "#bk-cm > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/brk.html",
+        "bbox": {
+          "x": 86,
+          "y": 1146.67,
+          "width": 886.72,
+          "height": 85.19000000000005
+        },
+        "time": 40.273,
+        "words": 12,
+        "seconds": 1.132,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 39.961,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 40.085,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 40.21,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 40.335,
+            "opacity": 0.94,
+            "heightPx": 85
+          },
+          {
+            "time": 40.46,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 40.585,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 40.71,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 40.96,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 41.084,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 41.209,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 41.334,
+            "opacity": 1,
+            "heightPx": 85
+          },
+          {
+            "time": 41.459,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 41.584,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 41.709,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"DESIGN_DECISIONS.md\" renders at 26 px for 6.74 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "DESIGN_DECISIONS.md",
+        "selector": "#wy-lt > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/why.html",
+        "bbox": {
+          "x": 166.35,
+          "y": 392.98,
+          "width": 292.99,
+          "height": 33.61
+        },
+        "time": 49.576,
+        "times": [
+          49.576
+        ],
+        "fontPx": 25.7,
+        "floorPx": 28,
+        "seconds": 6.744,
+        "elements": [
+          {
+            "selector": "#wy-lt > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "DESIGN_DECISIONS.md",
+            "fontPx": 25.7,
+            "time": 49.576,
+            "seconds": 6.744
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"the test\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "the test",
+        "selector": "#pf-1 > em:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/port.html",
+        "bbox": {
+          "x": 881.19,
+          "y": 261.5,
+          "width": 124.81,
+          "height": 34
+        },
+        "time": 59.441,
+        "times": [
+          59.441,
+          59.941
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 1.749,
+        "elements": [
+          {
+            "selector": "#pf-1 > em:nth-of-type(1)",
+            "text": "the test",
+            "fontPx": 26,
+            "time": 59.441,
+            "seconds": 1.749
+          },
+          {
+            "selector": "#pf-2 > em:nth-of-type(1)",
+            "text": "the failure",
+            "fontPx": 26,
+            "time": 59.941,
+            "seconds": 1.249
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"🔥 incidents/signup-outage.md the failure\" (6 words) is on screen 1.13 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "🔥 incidents/signup-outage.md the failure",
+        "selector": "#pf-2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/port.html",
+        "bbox": {
+          "x": 74,
+          "y": 323,
+          "width": 523.44,
+          "height": 39
+        },
+        "time": 59.941,
+        "words": 6,
+        "seconds": 1.132,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 59.566,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 59.691,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 59.816,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 59.941,
+            "opacity": 0.56,
+            "heightPx": 39
+          },
+          {
+            "time": 60.066,
+            "opacity": 0.98,
+            "heightPx": 39
+          },
+          {
+            "time": 60.191,
+            "opacity": 1,
+            "heightPx": 39
+          },
+          {
+            "time": 60.316,
+            "opacity": 1,
+            "heightPx": 39
+          },
+          {
+            "time": 60.69,
+            "opacity": 1,
+            "heightPx": 39
+          },
+          {
+            "time": 60.815,
+            "opacity": 1,
+            "heightPx": 39
+          },
+          {
+            "time": 60.94,
+            "opacity": 1,
+            "heightPx": 39
+          },
+          {
+            "time": 61.065,
+            "opacity": 0.92,
+            "heightPx": 39
+          },
+          {
+            "time": 61.19,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.315,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.439,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"🧭 docs/DESIGN_DECISIONS.md the decision\" (6 words) is on screen 0.17 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "🧭 docs/DESIGN_DECISIONS.md the decision",
+        "selector": "#pf-3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/port.html",
+        "bbox": {
+          "x": 74,
+          "y": 387,
+          "width": 487.44000000000005,
+          "height": 39
+        },
+        "time": 60.901,
+        "words": 6,
+        "seconds": 0.172,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 60.565,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 60.69,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 60.815,
+            "opacity": 0.35,
+            "heightPx": 39
+          },
+          {
+            "time": 60.94,
+            "opacity": 0.8,
+            "heightPx": 39
+          },
+          {
+            "time": 61.065,
+            "opacity": 0.92,
+            "heightPx": 39
+          },
+          {
+            "time": 61.19,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.315,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.439,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"the decision\" (2 words) is on screen 0.17 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "the decision",
+        "selector": "#pf-3 > em:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/port.html",
+        "bbox": {
+          "x": 818.8,
+          "y": 389.5,
+          "width": 187.20000000000005,
+          "height": 34
+        },
+        "time": 60.901,
+        "words": 2,
+        "seconds": 0.172,
+        "floorSeconds": 0.4,
+        "measured": [
+          {
+            "time": 60.565,
+            "opacity": 0.35,
+            "heightPx": 34
+          },
+          {
+            "time": 60.69,
+            "opacity": 0.35,
+            "heightPx": 34
+          },
+          {
+            "time": 60.815,
+            "opacity": 0.35,
+            "heightPx": 34
+          },
+          {
+            "time": 60.94,
+            "opacity": 0.8,
+            "heightPx": 34
+          },
+          {
+            "time": 61.065,
+            "opacity": 0.92,
+            "heightPx": 34
+          },
+          {
+            "time": 61.19,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.315,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.439,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"🔖 SAVE THIS\" (2 words) is on screen 1.96 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "🔖 SAVE THIS",
+        "selector": "#en > div:nth-of-type(1) > b:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/endc.html",
+        "bbox": {
+          "x": 272.65,
+          "y": 184.98,
+          "width": 533.23,
+          "height": 125.31999999999996
+        },
+        "time": 65.974,
+        "words": 2,
+        "seconds": 1.963,
+        "floorSeconds": 2,
+        "measured": [
+          {
+            "time": 65.685,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 65.81,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 65.935,
+            "opacity": 0.29,
+            "heightPx": 174
+          },
+          {
+            "time": 66.06,
+            "opacity": 0.89,
+            "heightPx": 125
+          },
+          {
+            "time": 66.185,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 66.31,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 66.434,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 67.433,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 67.558,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 67.683,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 67.808,
+            "opacity": 1,
+            "heightPx": 117
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"before your next tech interview\" (5 words) is on screen 1.96 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "before your next tech interview",
+        "selector": "#en > div:nth-of-type(1) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/endc.html",
+        "bbox": {
+          "x": 229.22,
+          "y": 295.75,
+          "width": 623.86,
+          "height": 64.75999999999999
+        },
+        "time": 65.974,
+        "words": 5,
+        "seconds": 1.963,
+        "floorSeconds": 2,
+        "measured": [
+          {
+            "time": 65.685,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 65.81,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 65.935,
+            "opacity": 0.29,
+            "heightPx": 103
+          },
+          {
+            "time": 66.06,
+            "opacity": 0.89,
+            "heightPx": 65
+          },
+          {
+            "time": 66.185,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 66.31,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 66.434,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 67.433,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 67.558,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 67.683,
+            "opacity": 1,
+            "heightPx": 58
+          },
+          {
+            "time": 67.808,
+            "opacity": 1,
+            "heightPx": 58
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 544
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.37",
+    "updateAvailable": false
+  }
+}
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff.json
