@@ -11,13 +11,14 @@ import importlib.util, json, os, subprocess, sys, time, traceback
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
-import variants, overlay
+import variants, overlay, broll
 
 def load():
     spec = importlib.util.spec_from_file_location("bgjobs", os.path.join(HERE, "bgjobs.py"))
     B = importlib.util.module_from_spec(spec); spec.loader.exec_module(B)
     J = B.J
     variants.apply(J)
+    broll.apply(J, B)   # automatic stock b-roll from reels/<slug>/broll.txt (Pixabay video / Wikimedia photos)
 
     # live output for long commands (renders, cutouts, FFmpeg) so progress is visible on GitHub
     def sh(cmd, cwd=None, check=True, timeout=None):
