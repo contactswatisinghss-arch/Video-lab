@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "prepare Ai-jobs",
-  "pending": [
+  "state": "idle",
+  "last": [
     "prepare Ai-jobs"
   ],
-  "time": "2026-11-23 08:40:50 UTC",
+  "done": [
+    "prepare Ai-jobs"
+  ],
+  "time": "2026-11-23 08:49:20 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45140435439"
 }
