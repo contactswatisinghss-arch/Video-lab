@@ -1,0 +1,1439 @@
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a.json when the check ends, unless a warning says it could not be saved
+[INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
+[INFO] [Compiler] Fetched 1 font face(s) for "Archivo Black" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/archivo-black)
+[INFO] [Compiler] Injected deterministic @font-face rules for 2 requested font families
+[hyperframes] check: starting Chrome
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[hyperframes] check: loading the page
+[hyperframes] check: waiting for the page to be ready
+[hyperframes] check: checking samples
+[hyperframes] check: samples 1/9
+[hyperframes] check: samples 2/9
+[hyperframes] check: samples 3/9
+[hyperframes] check: samples 4/9
+[hyperframes] check: samples 5/9
+[hyperframes] check: samples 6/9
+[hyperframes] check: samples 7/9
+[hyperframes] check: samples 8/9
+[hyperframes] check: samples 9/9
+[hyperframes] check: running the overlap pass
+[hyperframes] check: craft 1/534
+[hyperframes] check: craft 2/534
+[hyperframes] check: craft 3/534
+[hyperframes] check: craft 4/534
+[hyperframes] check: craft 5/534
+[hyperframes] check: craft 6/534
+[hyperframes] check: craft 7/534
+[hyperframes] check: craft 8/534
+[hyperframes] check: craft 9/534
+[hyperframes] check: craft 10/534
+[hyperframes] check: craft 11/534
+[hyperframes] check: craft 12/534
+[hyperframes] check: craft 13/534
+[hyperframes] check: craft 14/534
+[hyperframes] check: craft 15/534
+[hyperframes] check: craft 16/534
+[hyperframes] check: craft 17/534
+[hyperframes] check: craft 18/534
+[hyperframes] check: craft 19/534
+[hyperframes] check: craft 20/534
+[hyperframes] check: craft 21/534
+[hyperframes] check: craft 22/534
+[hyperframes] check: craft 23/534
+[hyperframes] check: craft 24/534
+[hyperframes] check: craft 25/534
+[hyperframes] check: craft 26/534
+[hyperframes] check: craft 27/534
+[hyperframes] check: craft 28/534
+[hyperframes] check: craft 29/534
+[hyperframes] check: craft 30/534
+[hyperframes] check: craft 31/534
+[hyperframes] check: craft 32/534
+[hyperframes] check: craft 33/534
+[hyperframes] check: craft 34/534
+[hyperframes] check: craft 35/534
+[hyperframes] check: craft 36/534
+[hyperframes] check: craft 37/534
+[hyperframes] check: craft 38/534
+[hyperframes] check: craft 39/534
+[hyperframes] check: craft 40/534
+[hyperframes] check: craft 41/534
+[hyperframes] check: craft 42/534
+[hyperframes] check: craft 43/534
+[hyperframes] check: craft 44/534
+[hyperframes] check: craft 45/534
+[hyperframes] check: craft 46/534
+[hyperframes] check: craft 47/534
+[hyperframes] check: craft 48/534
+[hyperframes] check: craft 49/534
+[hyperframes] check: craft 50/534
+[hyperframes] check: craft 51/534
+[hyperframes] check: craft 52/534
+[hyperframes] check: craft 53/534
+[hyperframes] check: craft 54/534
+[hyperframes] check: craft 55/534
+[hyperframes] check: craft 56/534
+[hyperframes] check: craft 57/534
+[hyperframes] check: craft 58/534
+[hyperframes] check: craft 59/534
+[hyperframes] check: craft 60/534
+[hyperframes] check: craft 61/534
+[hyperframes] check: craft 62/534
+[hyperframes] check: craft 63/534
+[hyperframes] check: craft 64/534
+[hyperframes] check: craft 65/534
+[hyperframes] check: craft 66/534
+[hyperframes] check: craft 67/534
+[hyperframes] check: craft 68/534
+[hyperframes] check: craft 69/534
+[hyperframes] check: craft 70/534
+[hyperframes] check: craft 71/534
+[hyperframes] check: craft 72/534
+[hyperframes] check: craft 73/534
+[hyperframes] check: craft 74/534
+[hyperframes] check: craft 75/534
+[hyperframes] check: craft 76/534
+[hyperframes] check: craft 77/534
+[hyperframes] check: craft 78/534
+[hyperframes] check: craft 79/534
+[hyperframes] check: craft 80/534
+[hyperframes] check: craft 81/534
+[hyperframes] check: craft 82/534
+[hyperframes] check: craft 83/534
+[hyperframes] check: craft 84/534
+[hyperframes] check: craft 85/534
+[hyperframes] check: craft 86/534
+[hyperframes] check: craft 87/534
+[hyperframes] check: craft 88/534
+[hyperframes] check: craft 89/534
+[hyperframes] check: craft 90/534
+[hyperframes] check: craft 91/534
+[hyperframes] check: craft 92/534
+[hyperframes] check: craft 93/534
+[hyperframes] check: craft 94/534
+[hyperframes] check: craft 95/534
+[hyperframes] check: craft 96/534
+[hyperframes] check: craft 97/534
+[hyperframes] check: craft 98/534
+[hyperframes] check: craft 99/534
+[hyperframes] check: craft 100/534
+[hyperframes] check: craft 101/534
+[hyperframes] check: craft 102/534
+[hyperframes] check: craft 103/534
+[hyperframes] check: craft 104/534
+[hyperframes] check: craft 105/534
+[hyperframes] check: craft 106/534
+[hyperframes] check: craft 107/534
+[hyperframes] check: craft 108/534
+[hyperframes] check: craft 109/534
+[hyperframes] check: craft 110/534
+[hyperframes] check: craft 111/534
+[hyperframes] check: craft 112/534
+[hyperframes] check: craft 113/534
+[hyperframes] check: craft 114/534
+[hyperframes] check: craft 115/534
+[hyperframes] check: craft 116/534
+[hyperframes] check: craft 117/534
+[hyperframes] check: craft 118/534
+[hyperframes] check: craft 119/534
+[hyperframes] check: craft 120/534
+[hyperframes] check: craft 121/534
+[hyperframes] check: craft 122/534
+[hyperframes] check: craft 123/534
+[hyperframes] check: craft 124/534
+[hyperframes] check: craft 125/534
+[hyperframes] check: craft 126/534
+[hyperframes] check: craft 127/534
+[hyperframes] check: craft 128/534
+[hyperframes] check: craft 129/534
+[hyperframes] check: craft 130/534
+[hyperframes] check: craft 131/534
+[hyperframes] check: craft 132/534
+[hyperframes] check: craft 133/534
+[hyperframes] check: craft 134/534
+[hyperframes] check: craft 135/534
+[hyperframes] check: craft 136/534
+[hyperframes] check: craft 137/534
+[hyperframes] check: craft 138/534
+[hyperframes] check: craft 139/534
+[hyperframes] check: craft 140/534
+[hyperframes] check: craft 141/534
+[hyperframes] check: craft 142/534
+[hyperframes] check: craft 143/534
+[hyperframes] check: craft 144/534
+[hyperframes] check: craft 145/534
+[hyperframes] check: craft 146/534
+[hyperframes] check: craft 147/534
+[hyperframes] check: craft 148/534
+[hyperframes] check: craft 149/534
+[hyperframes] check: craft 150/534
+[hyperframes] check: craft 151/534
+[hyperframes] check: craft 152/534
+[hyperframes] check: craft 153/534
+[hyperframes] check: craft 154/534
+[hyperframes] check: craft 155/534
+[hyperframes] check: craft 156/534
+[hyperframes] check: craft 157/534
+[hyperframes] check: craft 158/534
+[hyperframes] check: craft 159/534
+[hyperframes] check: craft 160/534
+[hyperframes] check: craft 161/534
+[hyperframes] check: craft 162/534
+[hyperframes] check: craft 163/534
+[hyperframes] check: craft 164/534
+[hyperframes] check: craft 165/534
+[hyperframes] check: craft 166/534
+[hyperframes] check: craft 167/534
+[hyperframes] check: craft 168/534
+[hyperframes] check: craft 169/534
+[hyperframes] check: craft 170/534
+[hyperframes] check: craft 171/534
+[hyperframes] check: craft 172/534
+[hyperframes] check: craft 173/534
+[hyperframes] check: craft 174/534
+[hyperframes] check: craft 175/534
+[hyperframes] check: craft 176/534
+[hyperframes] check: craft 177/534
+[hyperframes] check: craft 178/534
+[hyperframes] check: craft 179/534
+[hyperframes] check: craft 180/534
+[hyperframes] check: craft 181/534
+[hyperframes] check: craft 182/534
+[hyperframes] check: craft 183/534
+[hyperframes] check: craft 184/534
+[hyperframes] check: craft 185/534
+[hyperframes] check: craft 186/534
+[hyperframes] check: craft 187/534
+[hyperframes] check: craft 188/534
+[hyperframes] check: craft 189/534
+[hyperframes] check: craft 190/534
+[hyperframes] check: craft 191/534
+[hyperframes] check: craft 192/534
+[hyperframes] check: craft 193/534
+[hyperframes] check: craft 194/534
+[hyperframes] check: craft 195/534
+[hyperframes] check: craft 196/534
+[hyperframes] check: craft 197/534
+[hyperframes] check: craft 198/534
+[hyperframes] check: craft 199/534
+[hyperframes] check: craft 200/534
+[hyperframes] check: craft 201/534
+[hyperframes] check: craft 202/534
+[hyperframes] check: craft 203/534
+[hyperframes] check: craft 204/534
+[hyperframes] check: craft 205/534
+[hyperframes] check: craft 206/534
+[hyperframes] check: craft 207/534
+[hyperframes] check: craft 208/534
+[hyperframes] check: craft 209/534
+[hyperframes] check: craft 210/534
+[hyperframes] check: craft 211/534
+[hyperframes] check: craft 212/534
+[hyperframes] check: craft 213/534
+[hyperframes] check: craft 214/534
+[hyperframes] check: craft 215/534
+[hyperframes] check: craft 216/534
+[hyperframes] check: craft 217/534
+[hyperframes] check: craft 218/534
+[hyperframes] check: craft 219/534
+[hyperframes] check: craft 220/534
+[hyperframes] check: craft 221/534
+[hyperframes] check: craft 222/534
+[hyperframes] check: craft 223/534
+[hyperframes] check: craft 224/534
+[hyperframes] check: craft 225/534
+[hyperframes] check: craft 226/534
+[hyperframes] check: craft 227/534
+[hyperframes] check: craft 228/534
+[hyperframes] check: craft 229/534
+[hyperframes] check: craft 230/534
+[hyperframes] check: craft 231/534
+[hyperframes] check: craft 232/534
+[hyperframes] check: craft 233/534
+[hyperframes] check: craft 234/534
+[hyperframes] check: craft 235/534
+[hyperframes] check: craft 236/534
+[hyperframes] check: craft 237/534
+[hyperframes] check: craft 238/534
+[hyperframes] check: craft 239/534
+[hyperframes] check: craft 240/534
+[hyperframes] check: craft 241/534
+[hyperframes] check: craft 242/534
+[hyperframes] check: craft 243/534
+[hyperframes] check: craft 244/534
+[hyperframes] check: craft 245/534
+[hyperframes] check: craft 246/534
+[hyperframes] check: craft 247/534
+[hyperframes] check: craft 248/534
+[hyperframes] check: craft 249/534
+[hyperframes] check: craft 250/534
+[hyperframes] check: craft 251/534
+[hyperframes] check: craft 252/534
+[hyperframes] check: craft 253/534
+[hyperframes] check: craft 254/534
+[hyperframes] check: craft 255/534
+[hyperframes] check: craft 256/534
+[hyperframes] check: craft 257/534
+[hyperframes] check: craft 258/534
+[hyperframes] check: craft 259/534
+[hyperframes] check: craft 260/534
+[hyperframes] check: craft 261/534
+[hyperframes] check: craft 262/534
+[hyperframes] check: craft 263/534
+[hyperframes] check: craft 264/534
+[hyperframes] check: craft 265/534
+[hyperframes] check: craft 266/534
+[hyperframes] check: craft 267/534
+[hyperframes] check: craft 268/534
+[hyperframes] check: craft 269/534
+[hyperframes] check: craft 270/534
+[hyperframes] check: craft 271/534
+[hyperframes] check: craft 272/534
+[hyperframes] check: craft 273/534
+[hyperframes] check: craft 274/534
+[hyperframes] check: craft 275/534
+[hyperframes] check: craft 276/534
+[hyperframes] check: craft 277/534
+[hyperframes] check: craft 278/534
+[hyperframes] check: craft 279/534
+[hyperframes] check: craft 280/534
+[hyperframes] check: craft 281/534
+[hyperframes] check: craft 282/534
+[hyperframes] check: craft 283/534
+[hyperframes] check: craft 284/534
+[hyperframes] check: craft 285/534
+[hyperframes] check: craft 286/534
+[hyperframes] check: craft 287/534
+[hyperframes] check: craft 288/534
+[hyperframes] check: craft 289/534
+[hyperframes] check: craft 290/534
+[hyperframes] check: craft 291/534
+[hyperframes] check: craft 292/534
+[hyperframes] check: craft 293/534
+[hyperframes] check: craft 294/534
+[hyperframes] check: craft 295/534
+[hyperframes] check: craft 296/534
+[hyperframes] check: craft 297/534
+[hyperframes] check: craft 298/534
+[hyperframes] check: craft 299/534
+[hyperframes] check: craft 300/534
+[hyperframes] check: craft 301/534
+[hyperframes] check: craft 302/534
+[hyperframes] check: craft 303/534
+[hyperframes] check: craft 304/534
+[hyperframes] check: craft 305/534
+[hyperframes] check: craft 306/534
+[hyperframes] check: craft 307/534
+[hyperframes] check: craft 308/534
+[hyperframes] check: craft 309/534
+[hyperframes] check: craft 310/534
+[hyperframes] check: craft 311/534
+[hyperframes] check: craft 312/534
+[hyperframes] check: craft 313/534
+[hyperframes] check: craft 314/534
+[hyperframes] check: craft 315/534
+[hyperframes] check: craft 316/534
+[hyperframes] check: craft 317/534
+[hyperframes] check: craft 318/534
+[hyperframes] check: craft 319/534
+[hyperframes] check: craft 320/534
+[hyperframes] check: craft 321/534
+[hyperframes] check: craft 322/534
+[hyperframes] check: craft 323/534
+[hyperframes] check: craft 324/534
+[hyperframes] check: craft 325/534
+[hyperframes] check: craft 326/534
+[hyperframes] check: craft 327/534
+[hyperframes] check: craft 328/534
+[hyperframes] check: craft 329/534
+[hyperframes] check: craft 330/534
+[hyperframes] check: craft 331/534
+[hyperframes] check: craft 332/534
+[hyperframes] check: craft 333/534
+[hyperframes] check: craft 334/534
+[hyperframes] check: craft 335/534
+[hyperframes] check: craft 336/534
+[hyperframes] check: craft 337/534
+[hyperframes] check: craft 338/534
+[hyperframes] check: craft 339/534
+[hyperframes] check: craft 340/534
+[hyperframes] check: craft 341/534
+[hyperframes] check: craft 342/534
+[hyperframes] check: craft 343/534
+[hyperframes] check: craft 344/534
+[hyperframes] check: craft 345/534
+[hyperframes] check: craft 346/534
+[hyperframes] check: craft 347/534
+[hyperframes] check: craft 348/534
+[hyperframes] check: craft 349/534
+[hyperframes] check: craft 350/534
+[hyperframes] check: craft 351/534
+[hyperframes] check: craft 352/534
+[hyperframes] check: craft 353/534
+[hyperframes] check: craft 354/534
+[hyperframes] check: craft 355/534
+[hyperframes] check: craft 356/534
+[hyperframes] check: craft 357/534
+[hyperframes] check: craft 358/534
+[hyperframes] check: craft 359/534
+[hyperframes] check: craft 360/534
+[hyperframes] check: craft 361/534
+[hyperframes] check: craft 362/534
+[hyperframes] check: craft 363/534
+[hyperframes] check: craft 364/534
+[hyperframes] check: craft 365/534
+[hyperframes] check: craft 366/534
+[hyperframes] check: craft 367/534
+[hyperframes] check: craft 368/534
+[hyperframes] check: craft 369/534
+[hyperframes] check: craft 370/534
+[hyperframes] check: craft 371/534
+[hyperframes] check: craft 372/534
+[hyperframes] check: craft 373/534
+[hyperframes] check: craft 374/534
+[hyperframes] check: craft 375/534
+[hyperframes] check: craft 376/534
+[hyperframes] check: craft 377/534
+[hyperframes] check: craft 378/534
+[hyperframes] check: craft 379/534
+[hyperframes] check: craft 380/534
+[hyperframes] check: craft 381/534
+[hyperframes] check: craft 382/534
+[hyperframes] check: craft 383/534
+[hyperframes] check: craft 384/534
+[hyperframes] check: craft 385/534
+[hyperframes] check: craft 386/534
+[hyperframes] check: craft 387/534
+[hyperframes] check: craft 388/534
+[hyperframes] check: craft 389/534
+[hyperframes] check: craft 390/534
+[hyperframes] check: craft 391/534
+[hyperframes] check: craft 392/534
+[hyperframes] check: craft 393/534
+[hyperframes] check: craft 394/534
+[hyperframes] check: craft 395/534
+[hyperframes] check: craft 396/534
+[hyperframes] check: craft 397/534
+[hyperframes] check: craft 398/534
+[hyperframes] check: craft 399/534
+[hyperframes] check: craft 400/534
+[hyperframes] check: craft 401/534
+[hyperframes] check: craft 402/534
+[hyperframes] check: craft 403/534
+[hyperframes] check: craft 404/534
+[hyperframes] check: craft 405/534
+[hyperframes] check: craft 406/534
+[hyperframes] check: craft 407/534
+[hyperframes] check: craft 408/534
+[hyperframes] check: craft 409/534
+[hyperframes] check: craft 410/534
+[hyperframes] check: craft 411/534
+[hyperframes] check: craft 412/534
+[hyperframes] check: craft 413/534
+[hyperframes] check: craft 414/534
+[hyperframes] check: craft 415/534
+[hyperframes] check: craft 416/534
+[hyperframes] check: craft 417/534
+[hyperframes] check: craft 418/534
+[hyperframes] check: craft 419/534
+[hyperframes] check: craft 420/534
+[hyperframes] check: craft 421/534
+[hyperframes] check: craft 422/534
+[hyperframes] check: craft 423/534
+[hyperframes] check: craft 424/534
+[hyperframes] check: craft 425/534
+[hyperframes] check: craft 426/534
+[hyperframes] check: craft 427/534
+[hyperframes] check: craft 428/534
+[hyperframes] check: craft 429/534
+[hyperframes] check: craft 430/534
+[hyperframes] check: craft 431/534
+[hyperframes] check: craft 432/534
+[hyperframes] check: craft 433/534
+[hyperframes] check: craft 434/534
+[hyperframes] check: craft 435/534
+[hyperframes] check: craft 436/534
+[hyperframes] check: craft 437/534
+[hyperframes] check: craft 438/534
+[hyperframes] check: craft 439/534
+[hyperframes] check: craft 440/534
+[hyperframes] check: craft 441/534
+[hyperframes] check: craft 442/534
+[hyperframes] check: craft 443/534
+[hyperframes] check: craft 444/534
+[hyperframes] check: craft 445/534
+[hyperframes] check: craft 446/534
+[hyperframes] check: craft 447/534
+[hyperframes] check: craft 448/534
+[hyperframes] check: craft 449/534
+[hyperframes] check: craft 450/534
+[hyperframes] check: craft 451/534
+[hyperframes] check: craft 452/534
+[hyperframes] check: craft 453/534
+[hyperframes] check: craft 454/534
+[hyperframes] check: craft 455/534
+[hyperframes] check: craft 456/534
+[hyperframes] check: craft 457/534
+[hyperframes] check: craft 458/534
+[hyperframes] check: craft 459/534
+[hyperframes] check: craft 460/534
+[hyperframes] check: craft 461/534
+[hyperframes] check: craft 462/534
+[hyperframes] check: craft 463/534
+[hyperframes] check: craft 464/534
+[hyperframes] check: craft 465/534
+[hyperframes] check: craft 466/534
+[hyperframes] check: craft 467/534
+[hyperframes] check: craft 468/534
+[hyperframes] check: craft 469/534
+[hyperframes] check: craft 470/534
+[hyperframes] check: craft 471/534
+[hyperframes] check: craft 472/534
+[hyperframes] check: craft 473/534
+[hyperframes] check: craft 474/534
+[hyperframes] check: craft 475/534
+[hyperframes] check: craft 476/534
+[hyperframes] check: craft 477/534
+[hyperframes] check: craft 478/534
+[hyperframes] check: craft 479/534
+[hyperframes] check: craft 480/534
+[hyperframes] check: craft 481/534
+[hyperframes] check: craft 482/534
+[hyperframes] check: craft 483/534
+[hyperframes] check: craft 484/534
+[hyperframes] check: craft 485/534
+[hyperframes] check: craft 486/534
+[hyperframes] check: craft 487/534
+[hyperframes] check: craft 488/534
+[hyperframes] check: craft 489/534
+[hyperframes] check: craft 490/534
+[hyperframes] check: craft 491/534
+[hyperframes] check: craft 492/534
+[hyperframes] check: craft 493/534
+[hyperframes] check: craft 494/534
+[hyperframes] check: craft 495/534
+[hyperframes] check: craft 496/534
+[hyperframes] check: craft 497/534
+[hyperframes] check: craft 498/534
+[hyperframes] check: craft 499/534
+[hyperframes] check: craft 500/534
+[hyperframes] check: craft 501/534
+[hyperframes] check: craft 502/534
+[hyperframes] check: craft 503/534
+[hyperframes] check: craft 504/534
+[hyperframes] check: craft 505/534
+[hyperframes] check: craft 506/534
+[hyperframes] check: craft 507/534
+[hyperframes] check: craft 508/534
+[hyperframes] check: craft 509/534
+[hyperframes] check: craft 510/534
+[hyperframes] check: craft 511/534
+[hyperframes] check: craft 512/534
+[hyperframes] check: craft 513/534
+[hyperframes] check: craft 514/534
+[hyperframes] check: craft 515/534
+[hyperframes] check: craft 516/534
+[hyperframes] check: craft 517/534
+[hyperframes] check: craft 518/534
+[hyperframes] check: craft 519/534
+[hyperframes] check: craft 520/534
+[hyperframes] check: craft 521/534
+[hyperframes] check: craft 522/534
+[hyperframes] check: craft 523/534
+[hyperframes] check: craft 524/534
+[hyperframes] check: craft 525/534
+[hyperframes] check: craft 526/534
+[hyperframes] check: craft 527/534
+[hyperframes] check: craft 528/534
+[hyperframes] check: craft 529/534
+[hyperframes] check: craft 530/534
+[hyperframes] check: craft 531/534
+[hyperframes] check: craft 532/534
+[hyperframes] check: craft 533/534
+[hyperframes] check: craft 534/534
+[hyperframes] check: overlap 1/23
+[hyperframes] check: overlap 2/23
+[hyperframes] check: overlap 3/23
+[hyperframes] check: overlap 4/23
+[hyperframes] check: overlap 5/23
+[hyperframes] check: overlap 6/23
+[hyperframes] check: overlap 7/23
+[hyperframes] check: overlap 8/23
+[hyperframes] check: overlap 9/23
+[hyperframes] check: overlap 10/23
+[hyperframes] check: overlap 11/23
+[hyperframes] check: overlap 12/23
+[hyperframes] check: overlap 13/23
+[hyperframes] check: overlap 14/23
+[hyperframes] check: overlap 15/23
+[hyperframes] check: overlap 16/23
+[hyperframes] check: overlap 17/23
+[hyperframes] check: overlap 18/23
+[hyperframes] check: overlap 19/23
+[hyperframes] check: overlap 20/23
+[hyperframes] check: overlap 21/23
+[hyperframes] check: overlap 22/23
+[hyperframes] check: overlap 23/23
+[hyperframes] check: checking samples
+[hyperframes] check: analyze 0/3
+[hyperframes] check: analyzing the samples
+[hyperframes] check: analyze 1/3
+[hyperframes] check: analyze 2/3
+[hyperframes] check: still analyzing the samples (0 s in this step)
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#dp-sweat\" for opacity between 1.85s and 1.90s.",
+        "selector": "#dp-sweat",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/compositions/drop.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      }
+    ],
+    "filesScanned": 12
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 3.703,
+        "selector": "#dp-scene > g:nth-of-type(3)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 120,
+          "top": 698.4,
+          "right": 580,
+          "bottom": 996,
+          "width": 460,
+          "height": 297.6
+        },
+        "containerSelector": "#dp-scene",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 170,
+          "right": 1080,
+          "bottom": 990,
+          "width": 1080,
+          "height": 820
+        },
+        "overflow": {
+          "bottom": 6
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/drop.html",
+        "bbox": {
+          "x": 120,
+          "y": 698.4,
+          "width": 460,
+          "height": 297.6
+        },
+        "firstSeen": 3.703,
+        "lastSeen": 3.703,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.703
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 25.919,
+        "selector": "#ai-hum",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 697.16,
+          "top": 627.16,
+          "right": 1007.5,
+          "bottom": 1032.5,
+          "width": 310.34,
+          "height": 405.34
+        },
+        "containerSelector": "#ai-scene",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 170,
+          "right": 1080,
+          "bottom": 1030,
+          "width": 1080,
+          "height": 860
+        },
+        "overflow": {
+          "bottom": 2.5
+        },
+        "dataAttributes": {
+          "data-svg-origin": "697.162841796875 457.162841796875"
+        },
+        "sourceFile": "compositions/aicode.html",
+        "bbox": {
+          "x": 697.16,
+          "y": 627.16,
+          "width": 310.34,
+          "height": 405.34
+        },
+        "firstSeen": 25.919,
+        "lastSeen": 25.919,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25.919
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 62.947,
+        "selector": "#ow-b",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -2.22,
+          "top": 280.46,
+          "right": 1082.22,
+          "bottom": 464.07,
+          "width": 1084.44,
+          "height": 183.6
+        },
+        "containerSelector": "#own > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 2.22,
+          "right": 2.22
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/own.html",
+        "bbox": {
+          "x": -2.22,
+          "y": 280.46,
+          "width": 1084.44,
+          "height": 183.6
+        },
+        "firstSeen": 62.947,
+        "lastSeen": 62.947,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          62.947
+        ]
+      }
+    ],
+    "duration": 66.65,
+    "samples": [
+      3.703,
+      11.108,
+      18.514,
+      25.919,
+      33.325,
+      40.731,
+      48.136,
+      55.542,
+      62.947
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.43:1; WCAG AA requires 3:1.",
+        "text": "than",
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(223,149,107)",
+        "ratio": 2.43,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(86,86,86)",
+        "large": true,
+        "selector": "div > div:nth-of-type(12) > div > div > div:nth-of-type(23) > div > span:nth-of-type(2) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 405.890625,
+          "y": 1444,
+          "width": 158.84375,
+          "height": 92
+        },
+        "time": 18.514,
+        "times": [
+          18.514
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.4:1; WCAG AA requires 3:1.",
+        "text": "and",
+        "fg": "rgb(175,173,187)",
+        "bg": "rgb(168,144,86)",
+        "ratio": 1.4,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(71,70,76)",
+        "large": true,
+        "selector": "div > div:nth-of-type(12) > div > div > div:nth-of-type(42) > div > span:nth-of-type(1) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 233.78125,
+          "y": 1444,
+          "width": 128.671875,
+          "height": 92
+        },
+        "time": 33.325,
+        "times": [
+          33.325
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.95:1; WCAG AA requires 3:1.",
+        "text": "1",
+        "fg": "rgb(92,83,168)",
+        "bg": "rgb(16,11,43)",
+        "ratio": 2.95,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(94,85,169)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(3) > i",
+        "dataAttributes": {},
+        "sourceFile": "compositions/move3.html",
+        "bbox": {
+          "x": 50,
+          "y": 483.3638000488281,
+          "width": 86,
+          "height": 42.999969482421875
+        },
+        "time": 48.136,
+        "times": [
+          48.136
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.95:1; WCAG AA requires 3:1.",
+        "text": "2",
+        "fg": "rgb(92,83,168)",
+        "bg": "rgb(16,11,43)",
+        "ratio": 2.95,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(94,85,169)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(4) > i",
+        "dataAttributes": {},
+        "sourceFile": "compositions/move3.html",
+        "bbox": {
+          "x": 50,
+          "y": 547.36376953125,
+          "width": 86,
+          "height": 43
+        },
+        "time": 48.136,
+        "times": [
+          48.136
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.95:1; WCAG AA requires 3:1.",
+        "text": "3",
+        "fg": "rgb(92,83,168)",
+        "bg": "rgb(16,11,43)",
+        "ratio": 2.95,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(94,85,169)",
+        "large": true,
+        "selector": "div > div:nth-of-type(9) > div > div:nth-of-type(3) > div:nth-of-type(5) > i",
+        "dataAttributes": {},
+        "sourceFile": "compositions/move3.html",
+        "bbox": {
+          "x": 50,
+          "y": 627.36376953125,
+          "width": 86,
+          "height": 43
+        },
+        "time": 48.136,
+        "times": [
+          48.136
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      3.703,
+      18.514,
+      33.325,
+      48.136,
+      62.947
+    ],
+    "checked": 51,
+    "passed": 46
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"AI · YOUR FIRST TECH JOB AI CODES IN SECONDS. YOU?\" (10 words) is on screen 2.50 s (±0.01 s), under its 2.63 s floor: hold it about 0.5 s + 0.3 s a word (3.50 s here) before it leaves or changes; see references/motion.md.",
+        "text": "AI · YOUR FIRST TECH JOB AI CODES IN SECONDS. YOU?",
+        "selector": "#hj-wrap",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 115.47,
+          "y": 184,
+          "width": 849.04,
+          "height": 267.81
+        },
+        "time": 0,
+        "words": 10,
+        "seconds": 2.5,
+        "floorSeconds": 2.625,
+        "measured": [
+          {
+            "time": 0,
+            "opacity": 1,
+            "heightPx": 268
+          },
+          {
+            "time": 0.125,
+            "opacity": 1,
+            "heightPx": 264
+          },
+          {
+            "time": 0.25,
+            "opacity": 1,
+            "heightPx": 263
+          },
+          {
+            "time": 0.374,
+            "opacity": 1,
+            "heightPx": 263
+          },
+          {
+            "time": 2.122,
+            "opacity": 1,
+            "heightPx": 263
+          },
+          {
+            "time": 2.247,
+            "opacity": 1,
+            "heightPx": 263
+          },
+          {
+            "time": 2.371,
+            "opacity": 1,
+            "heightPx": 263
+          },
+          {
+            "time": 2.496,
+            "opacity": 0.61,
+            "heightPx": 263
+          },
+          {
+            "time": 2.621,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 2.746,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 2.871,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"careers@ · 9:02\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "careers@ · 9:02",
+        "selector": "#dp-m0 > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/drop.html",
+        "bbox": {
+          "x": 615.22,
+          "y": 247.13,
+          "width": 235.18,
+          "height": 43.85
+        },
+        "time": 3.12,
+        "times": [
+          3.12,
+          3.62,
+          4.244
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 2.871,
+        "elements": [
+          {
+            "selector": "#dp-m0 > small:nth-of-type(1)",
+            "text": "careers@ · 9:02",
+            "fontPx": 26,
+            "time": 3.12,
+            "seconds": 2.871
+          },
+          {
+            "selector": "#dp-m1 > small:nth-of-type(1)",
+            "text": "jobs@ · 11:47",
+            "fontPx": 26,
+            "time": 3.62,
+            "seconds": 2.371
+          },
+          {
+            "selector": "#dp-m2 > small:nth-of-type(1)",
+            "text": "hr@ · 4:15",
+            "fontPx": 26,
+            "time": 4.244,
+            "seconds": 1.747
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"jobs held by developers aged 22–25, since late 2022\" (10 words) is on screen 1.97 s (±0.01 s), under its 2.63 s floor: hold it about 0.5 s + 0.3 s a word (3.50 s here) before it leaves or changes; see references/motion.md.",
+        "text": "jobs held by developers aged 22–25, since late 2022",
+        "selector": "#dp-l",
+        "dataAttributes": {},
+        "sourceFile": "compositions/drop.html",
+        "bbox": {
+          "x": 64,
+          "y": 1224.07,
+          "width": 565.73,
+          "height": 95.79999999999995
+        },
+        "time": 3.971,
+        "words": 10,
+        "seconds": 1.966,
+        "floorSeconds": 2.625,
+        "measured": [
+          {
+            "time": 3.62,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 3.744,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 3.869,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 3.994,
+            "opacity": 0.71,
+            "heightPx": 96
+          },
+          {
+            "time": 4.119,
+            "opacity": 0.99,
+            "heightPx": 96
+          },
+          {
+            "time": 4.244,
+            "opacity": 1,
+            "heightPx": 96
+          },
+          {
+            "time": 4.368,
+            "opacity": 1,
+            "heightPx": 96
+          },
+          {
+            "time": 5.492,
+            "opacity": 1,
+            "heightPx": 96
+          },
+          {
+            "time": 5.617,
+            "opacity": 1,
+            "heightPx": 96
+          },
+          {
+            "time": 5.741,
+            "opacity": 1,
+            "heightPx": 96
+          },
+          {
+            "time": 5.866,
+            "opacity": 0.99,
+            "heightPx": 96
+          },
+          {
+            "time": 5.991,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.116,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.241,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"A DIFFERENT STORY\" (3 words) is on screen 0.60 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "A DIFFERENT STORY",
+        "selector": "#dp-stamp",
+        "dataAttributes": {},
+        "sourceFile": "compositions/drop.html",
+        "bbox": {
+          "x": 614.95,
+          "y": 1056.65,
+          "width": 406.37,
+          "height": 142.3800000000001
+        },
+        "time": 5.336,
+        "words": 3,
+        "seconds": 0.601,
+        "floorSeconds": 1.05,
+        "measured": [
+          {
+            "time": 4.993,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 5.117,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 5.242,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 5.367,
+            "opacity": 0.83,
+            "heightPx": 142
+          },
+          {
+            "time": 5.492,
+            "opacity": 0.99,
+            "heightPx": 122
+          },
+          {
+            "time": 5.617,
+            "opacity": 1,
+            "heightPx": 121
+          },
+          {
+            "time": 5.741,
+            "opacity": 1,
+            "heightPx": 121
+          },
+          {
+            "time": 5.866,
+            "opacity": 0.99,
+            "heightPx": 121
+          },
+          {
+            "time": 5.991,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.116,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.241,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Replacing junior staff with AI? “One of the dumbest thing...\" (13 words) is on screen 3.17 s (±0.01 s), under its 3.30 s floor: hold it about 0.5 s + 0.3 s a word (4.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Replacing junior staff with AI? “One of the dumbest things I’ve ever heard.”",
+        "selector": "#vc-2 > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/voices.html",
+        "bbox": {
+          "x": 179.03,
+          "y": 917.2,
+          "width": 810.81,
+          "height": 199.62000000000012
+        },
+        "time": 8.105,
+        "words": 13,
+        "seconds": 3.167,
+        "floorSeconds": 3.3,
+        "measured": [
+          {
+            "time": 7.738,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.863,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.988,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 8.113,
+            "opacity": 0.6,
+            "heightPx": 200
+          },
+          {
+            "time": 8.238,
+            "opacity": 0.97,
+            "heightPx": 196
+          },
+          {
+            "time": 8.362,
+            "opacity": 1,
+            "heightPx": 195
+          },
+          {
+            "time": 8.487,
+            "opacity": 1,
+            "heightPx": 195
+          },
+          {
+            "time": 10.859,
+            "opacity": 1,
+            "heightPx": 195
+          },
+          {
+            "time": 10.984,
+            "opacity": 1,
+            "heightPx": 195
+          },
+          {
+            "time": 11.108,
+            "opacity": 1,
+            "heightPx": 195
+          },
+          {
+            "time": 11.233,
+            "opacity": 0.9,
+            "heightPx": 195
+          },
+          {
+            "time": 11.358,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.483,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.608,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Handle an empty list first, return 0, and add this test.\" (11 words) is on screen 1.16 s (±0.01 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Handle an empty list first, return 0, and add this test.",
+        "selector": "#m3-cm > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/move3.html",
+        "bbox": {
+          "x": 77.61,
+          "y": 1112.92,
+          "width": 843.73,
+          "height": 112.92000000000007
+        },
+        "time": 52.538,
+        "words": 11,
+        "seconds": 1.162,
+        "floorSeconds": 2.85,
+        "measured": [
+          {
+            "time": 52.172,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 52.297,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 52.421,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 52.546,
+            "opacity": 0.53,
+            "heightPx": 113
+          },
+          {
+            "time": 52.671,
+            "opacity": 1,
+            "heightPx": 100
+          },
+          {
+            "time": 52.796,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 52.921,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 53.295,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 53.42,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 53.545,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 53.669,
+            "opacity": 1,
+            "heightPx": 99
+          },
+          {
+            "time": 53.794,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 53.919,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 54.044,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 534
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.37",
+    "updateAvailable": false
+  }
+}
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/cf8784d4-617b-41ab-9a6b-9ff3a4dfd11a.json
