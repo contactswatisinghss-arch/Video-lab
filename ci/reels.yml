@@ -35,6 +35,7 @@ env:
   RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   REPO_URL: ${{ github.server_url }}/${{ github.repository }}
   YTDLP_COOKIES: ${{ secrets.YTDLP_COOKIES }}
+  PIXABAY_KEY: ${{ secrets.PIXABAY_KEY }}
 jobs:
   plan:
     runs-on: ubuntu-latest

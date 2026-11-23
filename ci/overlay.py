@@ -274,6 +274,7 @@ def job_final_overlay(J, slug):
         sys.path.insert(0, os.getcwd())
         J.sh([sys.executable, "-m", "engine", "build", "--reel", d, "--out", b] + (["--proxy", proxy] if proxy else []), timeout=3600)
         J.hf_add(b, edit.get("hf_add"))
+        import broll; broll.fetch_used(J, slug, b)   # stock b-roll files the composition references (ci/broll.py)
         if camera_moves(b) and fin.get("mode") != "overlay-force":
             J.log("composition moves the footage (#cam): overlay final can't reproduce camera moves yet -> full re-render")
             return J._job_final_rerender(slug)
