@@ -2,6 +2,13 @@
 <!-- HOOK / COVER: topic kicker + the question as a big tangerine card above her head; "beautiful code" sparkle chip. -->
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; }
+  #hk-city { position: absolute; inset: 0; overflow: hidden; background: #06211F; }
+  .hk-ph { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  #hk-city::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(6,33,31,.35), rgba(6,33,31,0) 40%, rgba(6,33,31,.55)); }
+  .hk-ph, .hk-lb { opacity: 0; }
+  #hk-p1, #hk-l1 { opacity: 1; }
+  .hk-lb { position: absolute; left: 0; right: 0; top: 1270px; text-align: center; font: 500 40px 'DM Mono', monospace; color: #FFF4E6; letter-spacing: .2em; z-index: 2;
+    text-shadow: 0 3px 12px rgba(0,0,0,.8); }
   #hk-w { position: absolute; left: 40px; right: 40px; top: 176px; text-align: center; }
   #hk-k { display: inline-block; padding: 8px 18px; border-radius: 10px; background: #0B3D3A; color: #5EEAD4; font: 500 30px 'DM Mono', monospace; letter-spacing: .08em; }
   #hk-t { margin-top: 12px; display: inline-block; padding: 16px 30px 22px; border-radius: 28px; background: #FF8A3D; color: #10201F;
@@ -10,12 +17,25 @@
   #hk-c span { display: inline-block; padding: 10px 20px; border-radius: 14px; background: #FFF4E6; color: #10201F; font: 500 34px 'DM Mono', monospace; }
 </style>
 <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+  <div id="hk-city">
+    <div class="hk-ph" id="hk-p1" style="background-image:url(assets/broll-sf-1.jpg)"></div>
+    <div class="hk-ph" id="hk-p2" style="background-image:url(assets/broll-nyc-2.jpg)"></div>
+    <div class="hk-ph" id="hk-p3" style="background-image:url(assets/broll-sea-3.jpg)"></div>
+    <div class="hk-lb" id="hk-l1">SAN FRANCISCO</div><div class="hk-lb" id="hk-l2">NEW YORK</div><div class="hk-lb" id="hk-l3">SEATTLE</div>
+  </div>
   <div id="hk-w"><span id="hk-k">AI · YOUR NEXT DEV JOB</span><br><div id="hk-t">STILL GET HIRED<br>AS A DEV?</div></div>
   <div id="hk-c"><span>✨ AI: writes beautiful code</span></div>
 </div>
 <script>
 (function () {
   const tl = gsap.timeline({ paused: true });
+  // tech-hub montage: hard cuts on her words, each photo drifts a little; the city label sits low
+  [["#hk-p1", "#hk-l1", 0, {{at:w3}}], ["#hk-p2", "#hk-l2", {{at:w3}}, {{at:w5}}], ["#hk-p3", "#hk-l3", {{at:w5}}, {{at:w7}} - 0.05]].forEach(([p, l, a, b], i) => {
+    if (i > 0) tl.fromTo([p, l], { opacity: 0 }, { opacity: 1, duration: 0.01 }, a);
+    if (i < 2) tl.to([p, l], { opacity: 0, duration: 0.01 }, b);
+    tl.fromTo(p, { scale: 1.12, xPercent: i % 2 ? 2 : -2 }, { scale: 1.04, xPercent: 0, duration: b - a, ease: "none" }, a);
+  });
+  tl.to("#hk-city", { opacity: 0, duration: 0.12 }, {{at:w7}} - 0.08);
   tl.fromTo("#hk-t", { scale: 1.06, rotation: -1 }, { scale: 1, rotation: 0, duration: 0.45, ease: "expo.out" }, 0);
   tl.fromTo("#hk-c", { opacity: 0, y: -12, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w13}});
   tl.to(["#hk-w", "#hk-c"], { opacity: 0, y: -20, duration: 0.16, ease: "power2.in" }, {{at:w19}} - 0.3);

@@ -26,3 +26,9 @@ Kept as spoken (a 1-point gain isn't worth an audio splice).
 - https://www.govtech.com/education/higher-ed/ai-is-changing-what-employers-want-from-entry-level-tech-workers
 - https://www.brianheger.com/the-consequence-gap-what-employers-want-from-entry-level-tech-talent-the-burning-glass-institute/
 - https://www.thestack.technology/replacing-junior-workers-with-ai-is-dumbest-thing-says-aws-chief/
+
+## B-roll credits (Wikimedia Commons via ci/broll.py; credit in the pinned comment)
+- San Francisco from Twin Peaks — King of Hearts, CC BY-SA 3.0 (broll-sf-1)
+- Lower Manhattan from Jersey City — King of Hearts, CC BY-SA 4.0 (broll-nyc-2)
+- Space Needle and Seattle skyline from Kerry Park — Guywelch2000, CC BY 4.0 (broll-sea-3)
+- Business man and woman handshake in work office — perzon seo, CC BY 2.0 (broll-handshake-1)
