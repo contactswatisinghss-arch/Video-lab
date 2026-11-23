@@ -24,8 +24,8 @@ word tints amber, key numbers on a green slab (not the word-by-word pop-in she r
 | Time | Her words | Technique | What appears | Why |
 |---|---|---|---|---|
 | 0.0–3.8 | "Anthropic just raised $81B. That's bigger than SpaceX." | keyword stickers → counter + compare bars | Cover: ANTHROPIC · NASDAQ: ANT / BIGGEST IPO EVER + 4 stickers; $81B counts up; Anthropic $81B vs SpaceX $75B bars | Cover rule (topic + hook on frame 0); sticker cloud = style-04 thumbnail pattern |
-| 3.8–7.5 | "record-breaking… employees… millionaires" | headline flash (takeover) | 3 recreated headlines: Marketplace, Forbes, Inc. | Approved NuclearFusion opening device |
-| 7.5–14.1 | "what is Anthropic… behind Claude… similar to ChatGPT" | phone mock-up | WHAT IS ANTHROPIC? strip; generic chat phone tilts in; "AI assistant, like ChatGPT" tag | style-04 top-half/side inserts |
+| 3.8–8.5 | "record-breaking… millionaires… we need to know the why" | headline flash (takeover) | 3 recreated headlines: Marketplace, Forbes, Inc. | Approved NuclearFusion opening device |
+| 8.5–14.1 | "what is Anthropic… behind Claude… similar to ChatGPT" | phone mock-up | WHAT IS ANTHROPIC? strip; generic chat phone tilts in; "AI assistant, like ChatGPT" tag | style-04 top-half/side inserts |
 | 14.1–22.1 | "business model… well-proven strategy… targeted B2B… everyday tasks" | kinetic stamp + split | THE BUSINESS MODEL; B2B stamp slams; B2C "everyday tasks" vs B2B "where the money is" | her ask: B2B path |
 | 22.1–37.0 | "serious money from businesses… Amazon, Google, Microsoft's cloud… products, coding tools, workflows" | path diagram + checklist | THE B2B PATH: Claude → Bedrock / Vertex AI / Foundry → ticks on products, coding tools, workflows | her ask: B2B path; checklist ticks on words |
 | 37.0–43.3 | "250 customers… at least $10 million in a year" | number chart | ~250 counter strip; tier bars 11,900+ / 1,900+ / ~250 (IPO filing) | her ask: adoption scale |

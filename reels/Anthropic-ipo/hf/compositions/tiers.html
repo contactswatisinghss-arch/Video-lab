@@ -4,26 +4,26 @@
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; }
   #tr-card { position: absolute; left: 150px; width: 780px; top: 186px; text-align: center; padding: 8px 0 22px; background: #F6F1E7; color: #14161B; text-shadow: none; border-radius: 22px; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
-  #tr-big { font: 900 150px/1 'Inter Tight', 'Inter', sans-serif; color: #16B87A; letter-spacing: -.05em; }
+  #tr-big { font: 900 150px/1 'Inter Tight', 'Inter', sans-serif; color: #0A7F52; letter-spacing: -.05em; }
   #tr-sub { margin-top: -4px; font: 800 42px 'Inter Tight', 'Inter', sans-serif; color: #14161B; }
   #tr-panel { position: absolute; left: 680px; top: 560px; width: 370px; height: 640px; border-radius: 30px; background: #F6F1E7;
     box-shadow: 0 24px 60px rgba(0,0,0,.45); }
-  #tr-k { position: absolute; left: 28px; top: 26px; font: 700 20px 'JetBrains Mono', monospace; color: #6B7079; letter-spacing: .1em; }
+  #tr-k { position: absolute; left: 28px; top: 22px; font: 700 28px 'JetBrains Mono', monospace; color: #6B7079; letter-spacing: .1em; }
   .tr-row { position: absolute; left: 28px; width: 314px; }
   .tr-bar { height: 70px; border-radius: 12px; transform-origin: 0 50%; display: flex; align-items: center; padding-left: 16px;
     box-sizing: border-box; font: 900 38px 'Inter Tight', 'Inter', sans-serif; }
-  .tr-cap { margin-top: 6px; font: 700 24px 'JetBrains Mono', monospace; color: #14161B; }
-  #tr-src { position: absolute; left: 28px; bottom: 22px; font: 600 18px 'JetBrains Mono', monospace; color: #8A8F98; }
+  .tr-cap { white-space: nowrap; margin-top: 6px; font: 700 28px 'JetBrains Mono', monospace; color: #14161B; }
+  #tr-src { position: absolute; left: 28px; bottom: 20px; font: 600 28px 'Inter Tight', 'Inter', sans-serif; color: #8A8F98; }
 </style>
 <div id="root" data-composition-id="tiers" data-width="1080" data-height="1920">
   <div id="tr-card"><div id="tr-big">~<span id="tr-v">0</span></div>
-  <div id="tr-sub">customers paying <b style="color:#16B87A">$10M+</b> a year</div></div>
+  <div id="tr-sub">customers paying <b style="color:#0A7F52">$10M+</b> a year</div></div>
   <div id="tr-panel">
-    <div id="tr-k">BIG-SPENDING CUSTOMERS</div>
+    <div id="tr-k">CUSTOMERS</div>
     <div class="tr-row" style="top:80px"><div class="tr-bar" id="tr-b1" style="width:314px;background:#D9D2C3;color:#14161B">11,900+</div><div class="tr-cap">pay $100K+ a year</div></div>
     <div class="tr-row" style="top:240px"><div class="tr-bar" id="tr-b2" style="width:220px;background:#BFB6A4;color:#14161B">1,900+</div><div class="tr-cap">pay $1M+ a year</div></div>
-    <div class="tr-row" style="top:400px"><div class="tr-bar" id="tr-b3" style="width:150px;background:#16B87A;color:#fff">~250</div><div class="tr-cap">pay $10M+ a year</div></div>
-    <div id="tr-src">Source: Anthropic IPO filing</div>
+    <div class="tr-row" style="top:400px"><div class="tr-bar" id="tr-b3" style="width:150px;background:#0A7F52;color:#fff">~250</div><div class="tr-cap">pay $10M+ a year</div></div>
+    <div id="tr-src">Source: IPO filing</div>
   </div>
 </div>
 <script>

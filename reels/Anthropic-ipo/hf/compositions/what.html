@@ -5,16 +5,16 @@
   #root { position: absolute; inset: 0; pointer-events: none; }
   #wt-q { position: absolute; left: 0; right: 0; top: 200px; text-align: center; }
   #wt-q span { display: inline-block; padding: 14px 30px 18px; font: 900 88px/0.95 'Inter Tight', 'Inter', sans-serif; letter-spacing: -.03em; background: #F6F1E7; color: #14161B; text-shadow: none; border-radius: 22px; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
-  #wt-q b { color: #16B87A; }
+  #wt-q b { color: #0A7F52; }
   #wt-phone { position: absolute; left: 700px; top: 560px; width: 330px; height: 640px; border-radius: 46px; background: #14161B;
     box-shadow: 0 26px 60px rgba(0,0,0,.5); padding: 16px; box-sizing: border-box; }
   #wt-persp { position: absolute; inset: 0; perspective: 1200px; }
   #wt-scr { position: absolute; inset: 16px; border-radius: 34px; background: #F6F1E7; overflow: hidden; }
   #wt-hd { position: absolute; left: 0; right: 0; top: 0; height: 84px; display: flex; align-items: center; justify-content: center;
     font: 800 32px 'Inter Tight', 'Inter', sans-serif; color: #14161B; border-bottom: 2px solid #E3DCCD; }
-  .wt-b { position: absolute; padding: 14px 18px; border-radius: 20px; font: 600 24px/1.25 'Inter Tight', 'Inter', sans-serif; }
-  #wt-u { right: 16px; top: 112px; width: 210px; background: #14161B; color: #fff; }
-  #wt-a { left: 16px; top: 250px; width: 236px; background: #fff; color: #14161B; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+  .wt-b { position: absolute; padding: 14px 18px; border-radius: 20px; font: 600 28px/1.2 'Inter Tight', 'Inter', sans-serif; }
+  #wt-u { right: 14px; top: 104px; width: 240px; background: #14161B; color: #fff; }
+  #wt-a { left: 14px; top: 270px; width: 250px; background: #fff; color: #14161B; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
   #wt-tag { position: absolute; left: 720px; top: 1220px; font: 800 34px 'Inter Tight', 'Inter', sans-serif; color: #14161B;
     background: #FFC145; padding: 10px 18px; border-radius: 14px; }
 </style>
@@ -23,19 +23,19 @@
   <div id="wt-persp"><div id="wt-phone"><div id="wt-scr">
     <div id="wt-hd">Claude</div>
     <div class="wt-b" id="wt-u">Summarise this contract for me</div>
-    <div class="wt-b" id="wt-a">Here are the 3 clauses that matter most…</div>
+    <div class="wt-b" id="wt-a">Here are the 3 key clauses…</div>
   </div></div></div>
   <div id="wt-tag">AI assistant, like ChatGPT</div>
 </div>
 <script>
 (function () {
-  const S = {{at:w25}};
+  const S = {{at:w31}};
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#wt-q", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w31}} - S - 0.1);
+  tl.fromTo("#wt-q", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, 0);
   tl.fromTo("#wt-phone", { opacity: 0, x: 200, rotationY: -40 }, { opacity: 1, x: 0, rotationY: -14, duration: 0.5, ease: "expo.out" }, {{at:w38}} - S - 0.1);
   tl.fromTo("#wt-u", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w42}} - S);
-  tl.fromTo("#wt-a", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w44}} - S);
-  tl.fromTo("#wt-tag", { opacity: 0, scale: 0.7, rotation: -6 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.3, ease: "back.out(2)" }, {{at:w46}} - S);
+  tl.fromTo("#wt-a", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w42}} - S + 0.25);
+  tl.fromTo("#wt-tag", { opacity: 0, scale: 0.7, rotation: -6 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.3, ease: "back.out(2)" }, {{at:w45}} - S);
   tl.to(["#wt-q", "#wt-phone", "#wt-tag"], { opacity: 0, x: 60, duration: 0.18, ease: "power2.in" }, {{at:w49}} - S - 0.2);
   window.__timelines["what"] = tl;
 })();

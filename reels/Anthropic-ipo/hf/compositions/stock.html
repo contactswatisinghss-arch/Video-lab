@@ -6,12 +6,12 @@
   #sk-box { position: absolute; inset: 0; background: linear-gradient(#F6F1E7 0 1390px, #14161B 1390px); }
   #sk-t { position: absolute; left: 60px; top: 200px; font: 700 34px 'JetBrains Mono', monospace; color: #14161B; letter-spacing: .12em; }
   #sk-h { position: absolute; left: 60px; top: 252px; font: 900 96px/0.95 'Inter Tight', 'Inter', sans-serif; color: #14161B; letter-spacing: -.035em; }
-  #sk-h b { color: #16B87A; }
+  #sk-h b { color: #0A7F52; }
   #sk-svg { position: absolute; left: 40px; top: 520px; width: 1000px; height: 640px; overflow: visible; }
   .sk-lab { font: 800 30px 'Inter Tight', 'Inter', sans-serif; fill: #14161B; }
   .sk-sm { font: 700 22px 'JetBrains Mono', monospace; fill: #6B7079; letter-spacing: .04em; }
   #sk-foot { position: absolute; left: 60px; right: 60px; top: 1230px; font: 700 34px/1.2 'Inter Tight', 'Inter', sans-serif; color: #14161B; }
-  #sk-foot b { background: #16B87A; color: #fff; padding: 2px 10px; border-radius: 8px; }
+  #sk-foot b { background: #0A7F52; color: #fff; padding: 2px 10px; border-radius: 8px; }
 </style>
 <div id="root" data-composition-id="stock" data-width="1080" data-height="1920">
   <div id="sk-box">
@@ -21,9 +21,9 @@
     <svg id="sk-svg" viewBox="0 0 1000 640">
       <line x1="40" y1="552" x2="960" y2="552" stroke="#14161B" stroke-width="3" stroke-dasharray="10 10" opacity=".5"/>
       <text class="sk-sm" x="40" y="590">IPO PRICE $83</text>
-      <path id="sk-up" d="M60 552 L330 96" stroke="#16B87A" stroke-width="12" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
-      <path id="sk-dn" d="M330 96 L620 325 L900 457" stroke="#E5484D" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
-      <g id="sk-p1"><circle cx="330" cy="96" r="14" fill="#16B87A"/><text class="sk-lab" x="300" y="64">$111.50</text><text class="sk-sm" x="300" y="28">FIRST TRADE</text></g>
+      <path id="sk-up" d="M60 552 L330 96" stroke="#0A7F52" stroke-width="12" fill="none" stroke-linecap="butt" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="sk-dn" d="M330 96 L620 325 L900 457" stroke="#E5484D" stroke-width="12" fill="none" stroke-linecap="butt" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <g id="sk-p1"><circle cx="330" cy="96" r="14" fill="#0A7F52"/><text class="sk-lab" x="300" y="64">$111.50</text><text class="sk-sm" x="300" y="28">FIRST TRADE</text></g>
       <g id="sk-p2"><circle cx="620" cy="325" r="14" fill="#14161B"/><text class="sk-lab" x="645" y="312">$97.17</text><text class="sk-sm" x="645" y="280">DAY-1 CLOSE</text></g>
       <g id="sk-p3"><circle cx="900" cy="457" r="14" fill="#E5484D"/><text class="sk-lab" x="800" y="512">$88.91</text><text class="sk-sm" x="640" y="546">FRIDAY · TECH SELL-OFF</text></g>
     </svg>
@@ -41,8 +41,8 @@
   tl.fromTo("#sk-dn", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 1.0, ease: "power1.inOut" }, {{at:w131}} - S);
   tl.fromTo("#sk-p2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w131}} - S + 0.45);
   tl.fromTo("#sk-p3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w131}} - S + 0.95);
-  tl.fromTo("#sk-foot", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w133}} - S);
-  tl.to("#sk-box", { opacity: 0, y: -40, duration: 0.2, ease: "power2.in" }, {{at:w137}} - S - 0.2);
+  tl.fromTo("#sk-foot", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w131}} - S + 1.0);
+  tl.to("#sk-box", { opacity: 0, y: -40, duration: 0.2, ease: "power2.in" }, {{at:w137}} - S - 0.12);
   window.__timelines["stock"] = tl;
 })();
 </script>

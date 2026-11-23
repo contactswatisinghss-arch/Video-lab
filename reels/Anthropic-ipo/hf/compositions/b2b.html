@@ -7,13 +7,13 @@
   #bb-lab span { display: inline-block; font: 700 32px 'JetBrains Mono', monospace; letter-spacing: .16em; color: #14161B;
     background: #F6F1E7; padding: 10px 20px; border-radius: 12px; }
   #bb-stamp { position: absolute; left: 330px; width: 420px; top: 272px; text-align: center; font: 900 180px/1 'Inter Tight', 'Inter', sans-serif;
-    color: #fff; background: #16B87A; border-radius: 26px; padding: 6px 0 14px; letter-spacing: -.05em; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
+    color: #fff; background: #0A7F52; border-radius: 26px; padding: 6px 0 14px; letter-spacing: -.05em; box-shadow: 0 14px 36px rgba(0,0,0,.4); }
   .bb-col { position: absolute; left: 690px; width: 350px; border-radius: 26px; padding: 24px 26px; box-sizing: border-box;
     box-shadow: 0 18px 40px rgba(0,0,0,.4); }
   .bb-col small { display: block; font: 700 22px 'JetBrains Mono', monospace; letter-spacing: .12em; margin-bottom: 8px; }
   .bb-col div { font: 800 40px/1.05 'Inter Tight', 'Inter', sans-serif; }
   #bb-c { top: 620px; background: rgba(246,241,231,.75); color: #5A5F68; }
-  #bb-b { top: 860px; background: #16B87A; color: #fff; }
+  #bb-b { top: 860px; background: #0A7F52; color: #fff; }
 </style>
 <div id="root" data-composition-id="b2b" data-width="1080" data-height="1920">
   <div id="bb-lab"><span>THE BUSINESS MODEL</span></div>
@@ -28,8 +28,8 @@
   tl.fromTo("#bb-lab", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w52}} - S - 0.1);
   tl.fromTo("#bb-stamp", { opacity: 0, scale: 2.4, rotation: -8 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.28, ease: "power4.out" }, {{at:w62}} - S - 0.08);
   tl.fromTo("#bb-c", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w65}} - S);
-  tl.fromTo("#bb-b", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w71}} - S);
-  tl.to(["#bb-lab", "#bb-stamp", "#bb-c", "#bb-b"], { opacity: 0, y: -20, duration: 0.18, ease: "power2.in" }, {{at:w73}} - S - 0.3);
+  tl.fromTo("#bb-b", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w68}} - S);
+  tl.to(["#bb-lab", "#bb-stamp", "#bb-c", "#bb-b"], { opacity: 0, y: -20, duration: 0.18, ease: "power2.in" }, {{at:w73}} - S - 0.2);
   window.__timelines["b2b"] = tl;
 })();
 </script>
