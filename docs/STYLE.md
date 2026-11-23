@@ -167,3 +167,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 | MixtureOfExperts | | 80.9 s | | | | | | | storybook kitchen + scrapbook doodles |
 | NuclearFusion | | 98.6 s | | | | | | | glowing title + headline flash opening; A glass cards + C takeovers; real room, no decor; clean + SFX versions |
 | NvidiaScandal | 12 Nov (her unedited 4K60 version) | 78.6 s | | | | | | | edit came too late (9 h); she posted the raw; v3 4K final of Preview 1 approved for quality afterwards |
+| Anthropic-ipo | | 58.9 s | | | | | | | market-paper cards, headline flash, B2B path diagram, honest stock line; research waived; upload→final 2 h 05 m |
