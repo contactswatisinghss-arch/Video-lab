@@ -13,7 +13,7 @@
   #m3-tab { height: 56px; background: #221A55; display: flex; align-items: center; padding-left: 22px; font: 700 28px 'JetBrains Mono', monospace; color: #B9B3E6; }
   #m3-tab b { margin-left: auto; margin-right: 20px; color: #17123A; background: #8B7CFF; padding: 4px 12px; border-radius: 8px; font-size: 28px; }
   .m3-ln { position: absolute; left: 0; right: 0; height: 64px; display: flex; align-items: center; font: 700 32px 'JetBrains Mono', monospace; color: #E8E6FF; white-space: nowrap; }
-  .m3-ln i { width: 64px; text-align: right; padding-right: 22px; color: #5C53A8; font-style: normal; }
+  .m3-ln i { width: 64px; text-align: right; padding-right: 22px; color: #9A93D6; font-style: normal; }
   .m3-ln em { font-style: normal; color: #8B7CFF; }
   #m3-hl { position: absolute; left: 64px; right: 20px; top: 216px; height: 64px; background: rgba(255,90,95,.22); border-left: 8px solid #FF5A5F; transform-origin: 0 50%; }
   #m3-sq { position: absolute; left: 360px; top: 266px; width: 380px; height: 12px; }
@@ -47,9 +47,9 @@
   tl.fromTo("#m3-ed", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w156}} - S - 0.1);
   tl.fromTo("#m3-hl", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out" }, {{at:w162}} - S);
   tl.fromTo("#m3-sqp", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.35, ease: "power2.out" }, {{at:w164}} - S - 0.1);
-  tl.fromTo("#m3-test", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w165}} - S - 0.1);
-  tl.fromTo("#m3-cm", { opacity: 0, y: 30, rotation: -2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, {{at:w169}} - S - 0.1);
-  tl.to("#root", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w174}} - S - 0.12);
+  tl.fromTo("#m3-test", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w164}} - S);
+  tl.fromTo("#m3-cm", { opacity: 0, y: 30, rotation: -2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, {{at:w167}} - S);
+  tl.to("#root", { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w174}} - S - 0.02);
   window.__timelines["move3"] = tl;
 })();
 </script>

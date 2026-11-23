@@ -8,7 +8,7 @@
     background-size: 90px 90px; }
   #dp-scene { position: absolute; left: 0; top: 170px; width: 1080px; height: 820px; }
   .dp-mail { position: absolute; left: 600px; width: 420px; padding: 18px 22px; border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
-  .dp-mail small { display: block; font: 700 26px 'JetBrains Mono', monospace; color: #6B6596; }
+  .dp-mail small { display: block; font: 700 28px 'JetBrains Mono', monospace; color: #6B6596; }
   .dp-mail div { margin-top: 4px; font: 700 32px/1.15 'Space Grotesk', sans-serif; color: #17123A; }
   .dp-mail b { color: #FF5A5F; }
   #dp-stat { position: absolute; left: 60px; right: 60px; top: 1010px; height: 380px; }
@@ -75,13 +75,13 @@ window.AJP = {
   tl.fromTo("#dp-hand", { rotation: 0, svgOrigin: "0 0" }, { rotation: 720, svgOrigin: "0 0", duration: 3.4, ease: "none" }, 0.1);
   ["#dp-m0", "#dp-m1", "#dp-m2"].forEach((m, i) => tl.fromTo(m, { opacity: 0, x: 220, rotation: 6 }, { opacity: 1, x: 0, rotation: i % 2 ? 2 : -2, duration: 0.35, ease: "back.out(1.6)" }, 0.45 + i * 0.55));
   tl.fromTo("#dp-sweat", { opacity: 0, y: 0 }, { opacity: 1, y: 70, duration: 0.9, ease: "power2.in" }, 1.0);
-  tl.to("#dp-sweat", { opacity: 0, duration: 0.2 }, 1.85);
+  tl.to("#dp-sweat", { opacity: 0, duration: 0.2 }, 1.95);
   tl.fromTo("#dp-dev-eyes", { scaleY: 1, transformOrigin: "50% 50%" }, { scaleY: 0.1, duration: 0.07, yoyo: true, repeat: 1 }, 1.6);
-  tl.fromTo("#dp-n", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, {{at:w12}} - S);
+  tl.fromTo("#dp-n", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, {{at:w11}} - S - 0.1);
   tl.fromTo(n, { v: 0 }, { v: 20, duration: 0.9, ease: "power3.out",
-    onUpdate: function () { document.getElementById("dp-v").textContent = Math.round(n.v); } }, {{at:w12}} - S);
-  tl.fromTo(["#dp-l", "#dp-src"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, {{at:w13}} - S);
-  tl.fromTo("#dp-stamp", { opacity: 0, scale: 1.8, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.3, ease: "power4.out" }, {{at:w17}} - S - 0.05);
+    onUpdate: function () { document.getElementById("dp-v").textContent = Math.round(n.v); } }, {{at:w11}} - S - 0.1);
+  tl.fromTo(["#dp-l", "#dp-src"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, {{at:w11}} - S + 0.2);
+  tl.fromTo("#dp-stamp", { opacity: 0, scale: 1.8, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.3, ease: "power4.out" }, {{at:w15}} - S - 0.1);
   tl.to("#root", { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w19}} - S - 0.2);
   window.__timelines["drop"] = tl;
 })();
