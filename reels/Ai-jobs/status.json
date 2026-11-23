@@ -1,9 +1,9 @@
 {
   "slug": "Ai-jobs",
-  "stage": "preview",
+  "stage": "final",
   "ok": true,
-  "time": "2026-11-23 09:44:13 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45146176381",
+  "time": "2026-11-23 17:23:03 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45224934424",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Ai-jobs",
   "prepare": {
     "stage": "prepare",
@@ -39,6 +39,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-23 09:44:13 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-23 17:23:03 UTC"
     }
   ],
   "preview": {
@@ -55,5 +60,38 @@
     "snapshot_ok": true,
     "render_seconds": 147,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Ai-jobs/preview.mp4"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-23 17:23:03 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45224934424",
+    "hash": "9deaea84d2eb8a19",
+    "check": {
+      "parsed": false,
+      "raw_tail": "1 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.\",\n        \"text\": \"Handle an empty list first, return 0, and add this test.\",\n        \"selector\": \"#m3-cm > div:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/move3.html\",\n        \"bbox\": {\n          \"x\": 77.9,\n          \"y\": 1106.73,\n          \"width\": 843.18,\n          \"height\": 102.04999999999995\n        },\n        \"time\": 52.141,\n        \"words\": 11,\n        \"seconds\": 1.56,\n        \"floorSeconds\": 2.85,\n        \"measured\": [\n          {\n            \"time\": 51.797,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 51.922,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.047,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 52.172,\n            \"opacity\": 0.9,\n            \"heightPx\": 102\n          },\n          {\n            \"time\": 52.297,\n            \"opacity\": 1,\n            \"heightPx\": 100\n          },\n          {\n            \"time\": 52.421,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 52.546,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.295,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.42,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.545,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.669,\n            \"opacity\": 1,\n            \"heightPx\": 99\n          },\n          {\n            \"time\": 53.794,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 53.919,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 54.044,\n            \"opacity\": null,\n            \"heightPx\": null\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 534\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"a4519321-4375-40f2-9442-9fc757ed81ac\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/a4519321-4375-40f2-9442-9fc757ed81ac.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Ai-jobs/.hyperframes/artifacts/checks/a4519321-4375-40f2-9442-9fc757ed81ac.json\n"
+    },
+    "hf_version": "0.9.37",
+    "mode": "overlay-on-original",
+    "graphics_seconds": 213,
+    "compose": {
+      "seconds": 369,
+      "hdr": true,
+      "size": [
+        2160,
+        3840
+      ],
+      "fps": "60/1",
+      "audio": "re-encoded (cut)"
+    },
+    "seconds": 66.65,
+    "size": [
+      2160,
+      3840
+    ],
+    "fps": "60/1",
+    "transfer": "arib-std-b67",
+    "size_mb": 137.3,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Ai-jobs/final_reel.mp4"
   }
 }
