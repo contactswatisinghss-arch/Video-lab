@@ -1,0 +1,28 @@
+<template>
+<!-- INTERVIEW CARD (top band, she's on camera asking the question): AWS CEO Matt Garman, as reported by The Stack. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #hr-c { position: absolute; left: 50px; right: 50px; top: 176px; padding: 28px 34px 26px; border-radius: 28px; background: #FFF4E6; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #hr-q { font: 800 50px/1.08 'Bricolage Grotesque', sans-serif; color: #10201F; letter-spacing: -.015em; }
+  #hr-q b { color: #C25A14; }
+  #hr-lt { margin-top: 18px; display: inline-flex; border-radius: 10px; overflow: hidden; }
+  #hr-lt b { padding: 8px 16px; background: #0B3D3A; color: #5EEAD4; font: 800 32px 'Bricolage Grotesque', sans-serif; }
+  #hr-lt span { padding: 8px 16px; background: #FF8A3D; color: #10201F; font: 700 28px 'Bricolage Grotesque', sans-serif; }
+  #hr-mic { position: absolute; right: 30px; top: -26px; width: 72px; height: 72px; border-radius: 50%; background: #FF8A3D; display: flex; align-items: center; justify-content: center; }
+</style>
+<div id="root" data-composition-id="hire" data-width="1080" data-height="1920">
+  <div id="hr-c"><div id="hr-mic"><svg width="36" height="44" viewBox="0 0 36 44"><rect x="10" y="2" width="16" height="26" rx="8" fill="#10201F"/><path d="M4 20c0 8 6 13 14 13s14-5 14-13M18 33v9" stroke="#10201F" stroke-width="4" fill="none"/></svg></div>
+    <div id="hr-q">“We’re going to need <b>more software developers, not fewer</b>.”</div>
+    <div id="hr-lt"><b>Matt Garman</b><span>AWS CEO · via The Stack</span></div></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w73) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#hr-c", { opacity: 0, y: -40, rotation: -2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.4, ease: "back.out(1.6)" }, 0.05);
+  tl.fromTo("#hr-lt", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out" }, 0.4);
+  tl.to("#hr-c", { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, {{at:w85}} - S - 0.25);
+  window.__timelines["hire"] = tl;
+})();
+</script>
+</template>

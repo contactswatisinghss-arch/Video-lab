@@ -1,0 +1,66 @@
+<template>
+<!-- WAY 02: on camera, "DEPLOY ONE SMALL APP" with a rocket chip in the top band; then a TAKEOVER live dashboard: status flips
+     to DOWN on "fails", logs scroll, latency spikes, a bad input errors, "REAL ENGINEERING" stamps on her line. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #fl-top { position: absolute; left: 50px; right: 50px; top: 176px; display: flex; align-items: center; gap: 18px; }
+  #fl-n { width: 130px; height: 130px; border-radius: 28px; background: #FF8A3D; display: flex; align-items: center; justify-content: center;
+    font: 800 80px 'Bricolage Grotesque', sans-serif; color: #10201F; flex: none; box-shadow: 0 14px 30px rgba(0,0,0,.4); }
+  #fl-tt { padding: 14px 26px 18px; border-radius: 24px; background: #10201F; color: #FFF4E6; font: 800 56px/1 'Bricolage Grotesque', sans-serif; box-shadow: 0 14px 30px rgba(0,0,0,.4); }
+  #fl-tt b { color: #5EEAD4; }
+  #fl-bg { position: absolute; inset: 0; background: #10201F; }
+  #fl-dash { position: absolute; left: 50px; right: 50px; top: 190px; height: 1170px; }
+  #fl-st { display: flex; align-items: center; gap: 16px; font: 800 52px 'Bricolage Grotesque', sans-serif; color: #FFF4E6; }
+  #fl-dot { width: 34px; height: 34px; border-radius: 50%; background: #5EEAD4; }
+  #fl-stt { margin-left: auto; padding: 8px 18px; border-radius: 12px; background: #5EEAD4; color: #10201F; font: 500 34px 'DM Mono', monospace; }
+  .fl-p { position: absolute; left: 0; right: 0; border-radius: 22px; background: #0B3D3A; padding: 20px 24px; box-sizing: border-box; }
+  .fl-p small { display: block; font: 500 28px 'DM Mono', monospace; color: #5EEAD4; letter-spacing: .06em; margin-bottom: 10px; }
+  #fl-logs { top: 110px; height: 330px; overflow: hidden; }
+  .fl-l { font: 500 29px/1.5 'DM Mono', monospace; color: #FFF4E6; white-space: nowrap; }
+  .fl-l b { font-weight: 500; color: #FF5D5D; }
+  #fl-lat { top: 470px; height: 380px; }
+  #fl-bad { top: 880px; height: 160px; }
+  #fl-bad div { font: 500 34px 'DM Mono', monospace; color: #FFF4E6; }
+  #fl-bad b { color: #FF5D5D; font-weight: 500; }
+  #fl-real { position: absolute; left: 0; right: 0; top: 1070px; text-align: center; }
+  #fl-real span { display: inline-block; padding: 14px 30px 18px; border-radius: 24px; background: #FF8A3D; color: #10201F; font: 800 72px/1 'Bricolage Grotesque', sans-serif; }
+</style>
+<div id="root" data-composition-id="fail" data-width="1080" data-height="1920">
+  <div id="fl-top"><div id="fl-n">02</div><div id="fl-tt">Deploy <b>one small app</b> 🚀</div></div>
+  <div id="fl-bg"></div>
+  <div id="fl-dash">
+    <div id="fl-st"><i id="fl-dot"></i>my-small-app<span id="fl-stt"><i id="fl-live" style="font-style:normal;display:inline-block;overflow:hidden;vertical-align:top">LIVE</i><i id="fl-down" style="font-style:normal;display:inline-block;width:0;overflow:hidden;vertical-align:top">DOWN</i></span></div>
+    <div class="fl-p" id="fl-logs"><small>LOGS</small><div id="fl-lw"></div></div>
+    <div class="fl-p" id="fl-lat"><small>LATENCY</small><svg width="920" height="300" viewBox="0 0 920 300"><path d="M0 280 H920" stroke="#3A5653" stroke-width="3"/>
+      <path id="fl-line" d="M0 240 L120 236 L240 244 L360 230 L420 238 L480 60 L540 40 L600 120 L700 200 L820 226 L920 232" stroke="#FF8A3D" stroke-width="8" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <text x="500" y="30" font-family="DM Mono" font-size="28" fill="#FF5D5D">2,400 ms</text></svg></div>
+    <div class="fl-p" id="fl-bad"><small>BAD INPUT</small><div>age: "abc" → <b>500 Internal Error</b></div></div>
+  </div>
+  <div id="fl-real"><span>REAL ENGINEERING</span></div>
+</div>
+<script>
+(function () {
+  const lines = ['GET /api/users 200 41ms', 'POST /api/signup 200 88ms', 'GET /api/users 200 39ms', 'POST /api/signup <b>500</b> TypeError', 'GET /api/feed <b>504</b> timeout', 'POST /api/signup <b>500</b> TypeError', 'GET /health 200 12ms', 'GET /api/feed <b>504</b> timeout'];
+  document.getElementById("fl-lw").innerHTML = lines.map((l, i) => `<div class="fl-l" id="fl-l${i}">${l}</div>`).join("");
+  const S = {{= at(w133) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#fl-n", { opacity: 0, scale: 0, rotation: 30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.2)" }, 0);
+  tl.fromTo("#fl-tt", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, {{at:w136}} - S - 0.1);
+  tl.to("#fl-top", { opacity: 0, duration: 0.15 }, {{at:w140}} - S - 0.25);
+  tl.fromTo("#fl-bg", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power4.out" }, {{at:w140}} - S - 0.2);
+  tl.fromTo("#fl-dash", { opacity: 0 }, { opacity: 1, duration: 0.25 }, {{at:w140}} - S);
+  tl.to("#fl-dot", { backgroundColor: "#FF5D5D", duration: 0.1 }, {{at:w146}} - S);
+  tl.to("#fl-stt", { backgroundColor: "#FF5D5D", duration: 0.1 }, {{at:w146}} - S);
+  tl.to("#fl-live", { width: 0, opacity: 0, duration: 0.01 }, {{at:w146}} - S);
+  tl.to("#fl-down", { width: "auto", duration: 0.01 }, {{at:w146}} - S);
+  tl.fromTo("#fl-stt", { scale: 1 }, { scale: 1.15, duration: 0.1, yoyo: true, repeat: 1 }, {{at:w146}} - S);
+  for (let i = 0; i < lines.length; i++) tl.fromTo("#fl-l" + i, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.12 }, {{at:w147}} - S - 0.3 + i * 0.12);
+  tl.fromTo("#fl-line", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.7, ease: "power1.inOut" }, {{at:w149}} - S - 0.1);
+  tl.fromTo("#fl-bad", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.25, ease: "expo.out" }, {{at:w150}} - S - 0.1);
+  tl.fromTo("#fl-bad", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, {{at:w150}} - S + 0.2);
+  tl.fromTo("#fl-real", { opacity: 0, scale: 1.8, rotation: -8 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.3, ease: "power4.out" }, {{at:w153}} - S - 0.1);
+  tl.to(["#fl-bg", "#fl-dash", "#fl-real"], { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w155}} - S - 0.15);
+  window.__timelines["fail"] = tl;
+})();
+</script>
+</template>

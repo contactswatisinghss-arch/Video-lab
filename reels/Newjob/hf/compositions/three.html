@@ -1,0 +1,18 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #th { position: absolute; left: 0; right: 0; top: 220px; text-align: center; }
+  #th span { display: inline-block; padding: 16px 36px 22px; border-radius: 30px; background: #FF8A3D; color: #10201F; font: 800 120px/1 'Bricolage Grotesque', sans-serif;
+    letter-spacing: -.03em; box-shadow: 0 18px 40px rgba(0,0,0,.4); }
+</style>
+<div id="root" data-composition-id="three" data-width="1080" data-height="1920"><div id="th"><span>3 WAYS</span></div></div>
+<script>
+(function () {
+  const S = {{= at(w102) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#th", { opacity: 0, scale: 2, rotation: -8 }, { opacity: 1, scale: 1, rotation: -2, duration: 0.3, ease: "power4.out" }, {{at:w105}} - S - 0.05);
+  tl.to("#th", { opacity: 0, y: -20, duration: 0.15 }, {{at:w110}} - S - 0.2);
+  window.__timelines["three"] = tl;
+})();
+</script>
+</template>

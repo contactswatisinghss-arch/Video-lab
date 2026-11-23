@@ -1,0 +1,50 @@
+<template>
+<!-- TAKEOVER · the study as a report that opens: cover (Burning Glass Institute × Break Through Tech, 1M+ entry-level
+     tech postings) flips to the chart: code review in entry-level postings, ~8% (2020) → ~16% (2025), 2×. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #rp-bg { position: absolute; inset: 0; background: #0B3D3A; }
+  #rp-cov { position: absolute; left: 140px; top: 260px; width: 800px; height: 1000px; border-radius: 18px; background: #FFF4E6; padding: 60px 56px;
+    box-sizing: border-box; box-shadow: 0 30px 60px rgba(0,0,0,.45); transform-origin: 0% 50%; }
+  #rp-cov small { display: block; font: 500 30px 'DM Mono', monospace; color: #0B3D3A; letter-spacing: .06em; }
+  #rp-cov h2 { margin: 40px 0 0; font: 800 104px/0.95 'Bricolage Grotesque', sans-serif; color: #10201F; letter-spacing: -.03em; }
+  #rp-cov h2 span { color: #FF8A3D; }
+  #rp-cov p { margin: 40px 0 0; font: 700 44px/1.15 'Bricolage Grotesque', sans-serif; color: #10201F; }
+  #rp-cov em { position: absolute; left: 56px; bottom: 56px; font: 500 30px 'DM Mono', monospace; color: #0B3D3A; font-style: normal; }
+  #rp-ch { position: absolute; left: 60px; right: 60px; top: 260px; height: 1000px; }
+  #rp-k { font: 500 32px 'DM Mono', monospace; color: #5EEAD4; letter-spacing: .06em; }
+  #rp-t { margin-top: 14px; font: 800 72px/1 'Bricolage Grotesque', sans-serif; color: #FFF4E6; }
+  .rp-col { position: absolute; bottom: 140px; width: 300px; border-radius: 20px 20px 0 0; transform-origin: 50% 100%; display: flex; align-items: flex-start;
+    justify-content: center; padding-top: 24px; box-sizing: border-box; font: 800 76px 'Bricolage Grotesque', sans-serif; color: #10201F; }
+  .rp-yr { position: absolute; bottom: 80px; width: 300px; text-align: center; font: 500 40px 'DM Mono', monospace; color: #FFF4E6; }
+  #rp-2x { position: absolute; right: 20px; top: 260px; font: 800 170px/1 'Bricolage Grotesque', sans-serif; color: #FF8A3D; }
+</style>
+<div id="root" data-composition-id="report" data-width="1080" data-height="1920">
+  <div id="rp-bg"></div>
+  <div id="rp-ch">
+    <div id="rp-k">ENTRY-LEVEL TECH POSTINGS ASKING FOR</div>
+    <div id="rp-t">Code review</div>
+    <div class="rp-col" id="rp-c1" style="left:60px;height:240px;background:#5EEAD4">~8%</div><div class="rp-yr" style="left:60px">2020</div>
+    <div class="rp-col" id="rp-c2" style="left:500px;height:480px;background:#FF8A3D">~16%</div><div class="rp-yr" style="left:500px">2025</div>
+    <div id="rp-2x">2×</div>
+  </div>
+  <div id="rp-cov"><small>BURNING GLASS INSTITUTE × BREAK THROUGH TECH</small><h2>The <span>“Consequence”</span> Gap</h2>
+    <p>What employers now want from entry-level tech talent</p><em>1,000,000+ job postings analysed</em></div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w85) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#rp-bg", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.4, ease: "power4.out" }, 0);
+  tl.fromTo("#rp-cov", { opacity: 0, y: 200, rotation: 4 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: "expo.out" }, 0.1);
+  tl.fromTo("#rp-ch", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w87}} - S - 0.4);
+  tl.to("#rp-cov", { rotationY: -100, opacity: 0, duration: 0.45, ease: "power3.in", transformPerspective: 1600 }, {{at:w87}} - S - 0.45);
+  tl.fromTo(["#rp-k", "#rp-t"], { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.08 }, {{at:w87}} - S - 0.1);
+  tl.fromTo("#rp-c1", { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, {{at:w87}} - S);
+  tl.fromTo("#rp-c2", { scaleY: 0 }, { scaleY: 1, duration: 0.7, ease: "power3.out" }, {{at:w97}} - S - 0.2);
+  tl.fromTo("#rp-2x", { opacity: 0, scale: 2, rotation: -12 }, { opacity: 1, scale: 1, rotation: -5, duration: 0.3, ease: "power4.out" }, {{at:w97}} - S + 0.4);
+  tl.to("#root", { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w102}} - S - 0.15);
+  window.__timelines["report"] = tl;
+})();
+</script>
+</template>

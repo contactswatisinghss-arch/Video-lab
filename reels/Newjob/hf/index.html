@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+    #cam { position: absolute; inset: 0; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Newjob · "teal & tangerine": deep teal #0B3D3A, tangerine #FF8A3D, cream #FFF4E6, mint #5EEAD4, ink #10201F, red #FF5D5D.
+       Bricolage Grotesque (display), DM Mono (code). Six takeovers (anxiety clip, research clip, report, break-the-code clip,
+       failure dashboard, whiteboard clip) alternate with top-band beats over her (head ~y 500, chin ~1200). No camera moves. -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}" data-width="1080" data-height="1920" data-fps="30">
+    <div id="cam" style="z-index:1"><video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video></div>
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="0" data-duration="{{= at(w19) - 0.1 }}" data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="anx" data-composition-id="anx" data-composition-src="compositions/anx.html" data-start="{{= at(w19) - 0.1 }}" data-duration="{{= at(w39) - at(w19) }}" data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="act" data-composition-id="act" data-composition-src="compositions/act.html" data-start="{{= at(w39) - 0.1 }}" data-duration="{{= at(w73) - at(w39) }}" data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="hire" data-composition-id="hire" data-composition-src="compositions/hire.html" data-start="{{= at(w73) - 0.1 }}" data-duration="{{= at(w85) - at(w73) }}" data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="report" data-composition-id="report" data-composition-src="compositions/report.html" data-start="{{= at(w85) - 0.1 }}" data-duration="{{= at(w102) - at(w85) }}" data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="three" data-composition-id="three" data-composition-src="compositions/three.html" data-start="{{= at(w102) - 0.1 }}" data-duration="{{= at(w110) - at(w102) }}" data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="brk" data-composition-id="brk" data-composition-src="compositions/brk.html" data-start="{{= at(w110) - 0.1 }}" data-duration="{{= at(w133) - at(w110) }}" data-track-index="7" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="fail" data-composition-id="fail" data-composition-src="compositions/fail.html" data-start="{{= at(w133) - 0.1 }}" data-duration="{{= at(w155) - at(w133) }}" data-track-index="8" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="why" data-composition-id="why" data-composition-src="compositions/why.html" data-start="{{= at(w155) - 0.1 }}" data-duration="{{= at(w178) - at(w155) }}" data-track-index="9" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="port" data-composition-id="port" data-composition-src="compositions/port.html" data-start="{{= at(w178) - 0.1 }}" data-duration="{{= at(w195) - at(w178) }}" data-track-index="10" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="ship" data-composition-id="ship" data-composition-src="compositions/ship.html" data-start="{{= at(w195) - 0.1 }}" data-duration="{{= at(w213) - at(w195) }}" data-track-index="11" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="endc" data-composition-id="endc" data-composition-src="compositions/endc.html" data-start="{{= at(w213) - 0.1 }}" data-duration="{{= dur - at(w213) + 0.1 }}" data-track-index="12" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="{{dur}}" data-track-index="13" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+  <script>const tl = gsap.timeline({ paused: true }); window.__timelines["main"] = tl;</script>
+</body>
+</html>
