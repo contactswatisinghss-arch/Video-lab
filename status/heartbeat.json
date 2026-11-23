@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "preview Anthropic-ipo",
-  "pending": [
+  "state": "idle",
+  "last": [
     "preview Anthropic-ipo"
   ],
-  "time": "2026-11-23 04:27:13 UTC",
+  "done": [
+    "preview Anthropic-ipo"
+  ],
+  "time": "2026-11-23 04:32:04 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45111852622"
 }
