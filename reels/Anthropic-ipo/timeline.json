@@ -1,0 +1,972 @@
+{
+ "duration": 58.917,
+ "raw_duration": 61.116667,
+ "keeps": [
+  [
+   1.0333,
+   8.4667
+  ],
+  [
+   8.7333,
+   15.2667
+  ],
+  [
+   15.5,
+   19.1
+  ],
+  [
+   19.3667,
+   33.7333
+  ],
+  [
+   34.1333,
+   61.1167
+  ]
+ ],
+ "speed": 1.0,
+ "removed_seconds": 2.2,
+ "words": [
+  {
+   "id": "w5",
+   "text": "Anthropic",
+   "start": 0.107,
+   "end": 0.527
+  },
+  {
+   "id": "w6",
+   "text": "just",
+   "start": 0.527,
+   "end": 0.747
+  },
+  {
+   "id": "w7",
+   "text": "raised",
+   "start": 0.747,
+   "end": 1.047
+  },
+  {
+   "id": "w8",
+   "text": "$81B.",
+   "start": 1.047,
+   "end": 1.927
+  },
+  {
+   "id": "w10",
+   "text": "That's",
+   "start": 2.307,
+   "end": 2.687
+  },
+  {
+   "id": "w11",
+   "text": "bigger",
+   "start": 2.687,
+   "end": 2.847
+  },
+  {
+   "id": "w12",
+   "text": "than",
+   "start": 2.847,
+   "end": 3.107
+  },
+  {
+   "id": "w13",
+   "text": "SpaceX.",
+   "start": 3.107,
+   "end": 3.507
+  },
+  {
+   "id": "w14",
+   "text": "It's",
+   "start": 3.867,
+   "end": 4.147
+  },
+  {
+   "id": "w15",
+   "text": "actually",
+   "start": 4.147,
+   "end": 4.487
+  },
+  {
+   "id": "w16",
+   "text": "record-breaking.",
+   "start": 4.487,
+   "end": 5.247
+  },
+  {
+   "id": "w18",
+   "text": "Most",
+   "start": 5.567,
+   "end": 5.807
+  },
+  {
+   "id": "w19",
+   "text": "of",
+   "start": 5.807,
+   "end": 5.967
+  },
+  {
+   "id": "w20",
+   "text": "its",
+   "start": 5.967,
+   "end": 6.127
+  },
+  {
+   "id": "w21",
+   "text": "employees",
+   "start": 6.127,
+   "end": 6.447
+  },
+  {
+   "id": "w22",
+   "text": "are",
+   "start": 6.447,
+   "end": 6.767
+  },
+  {
+   "id": "w23",
+   "text": "now",
+   "start": 6.767,
+   "end": 6.967
+  },
+  {
+   "id": "w24",
+   "text": "millionaires.",
+   "start": 6.967,
+   "end": 7.307
+  },
+  {
+   "id": "w25",
+   "text": "So",
+   "start": 7.54,
+   "end": 7.7
+  },
+  {
+   "id": "w26",
+   "text": "we",
+   "start": 7.7,
+   "end": 7.88
+  },
+  {
+   "id": "w27",
+   "text": "need",
+   "start": 7.88,
+   "end": 8.08
+  },
+  {
+   "id": "w28",
+   "text": "to",
+   "start": 8.08,
+   "end": 8.22
+  },
+  {
+   "id": "w29",
+   "text": "know",
+   "start": 8.22,
+   "end": 8.36
+  },
+  {
+   "id": "w30",
+   "text": "the",
+   "start": 8.36,
+   "end": 8.54
+  },
+  {
+   "id": "w31",
+   "text": "why",
+   "start": 8.54,
+   "end": 8.74
+  },
+  {
+   "id": "w32",
+   "text": "and",
+   "start": 8.74,
+   "end": 9.02
+  },
+  {
+   "id": "w33",
+   "text": "what",
+   "start": 9.02,
+   "end": 9.32
+  },
+  {
+   "id": "w34",
+   "text": "is",
+   "start": 9.32,
+   "end": 9.56
+  },
+  {
+   "id": "w35",
+   "text": "Anthropic.",
+   "start": 9.56,
+   "end": 10.04
+  },
+  {
+   "id": "w36",
+   "text": "It's",
+   "start": 10.3,
+   "end": 10.52
+  },
+  {
+   "id": "w37",
+   "text": "a",
+   "start": 10.52,
+   "end": 10.6
+  },
+  {
+   "id": "w38",
+   "text": "company",
+   "start": 10.6,
+   "end": 10.86
+  },
+  {
+   "id": "w39",
+   "text": "which",
+   "start": 10.86,
+   "end": 11.04
+  },
+  {
+   "id": "w40",
+   "text": "is",
+   "start": 11.04,
+   "end": 11.2
+  },
+  {
+   "id": "w41",
+   "text": "behind",
+   "start": 11.2,
+   "end": 11.5
+  },
+  {
+   "id": "w42",
+   "text": "Claude,",
+   "start": 11.5,
+   "end": 11.76
+  },
+  {
+   "id": "w43",
+   "text": "the",
+   "start": 11.96,
+   "end": 12.08
+  },
+  {
+   "id": "w44",
+   "text": "AI",
+   "start": 12.08,
+   "end": 12.34
+  },
+  {
+   "id": "w45",
+   "text": "assistant,",
+   "start": 12.34,
+   "end": 12.76
+  },
+  {
+   "id": "w46",
+   "text": "similar",
+   "start": 12.76,
+   "end": 13.1
+  },
+  {
+   "id": "w47",
+   "text": "to",
+   "start": 13.1,
+   "end": 13.38
+  },
+  {
+   "id": "w48",
+   "text": "ChatGPT.",
+   "start": 13.38,
+   "end": 13.86
+  },
+  {
+   "id": "w49",
+   "text": "But",
+   "start": 14.087,
+   "end": 14.327
+  },
+  {
+   "id": "w50",
+   "text": "in",
+   "start": 14.327,
+   "end": 14.587
+  },
+  {
+   "id": "w51",
+   "text": "their",
+   "start": 14.587,
+   "end": 14.847
+  },
+  {
+   "id": "w52",
+   "text": "business",
+   "start": 14.847,
+   "end": 15.207
+  },
+  {
+   "id": "w53",
+   "text": "model,",
+   "start": 15.207,
+   "end": 15.547
+  },
+  {
+   "id": "w54",
+   "text": "they",
+   "start": 15.667,
+   "end": 15.907
+  },
+  {
+   "id": "w55",
+   "text": "followed",
+   "start": 15.907,
+   "end": 16.227
+  },
+  {
+   "id": "w56",
+   "text": "a",
+   "start": 16.227,
+   "end": 16.467
+  },
+  {
+   "id": "w57",
+   "text": "well-proven",
+   "start": 16.467,
+   "end": 16.907
+  },
+  {
+   "id": "w59",
+   "text": "strategy.",
+   "start": 16.907,
+   "end": 17.467
+  },
+  {
+   "id": "w60",
+   "text": "They",
+   "start": 17.68,
+   "end": 17.94
+  },
+  {
+   "id": "w61",
+   "text": "targeted",
+   "start": 17.94,
+   "end": 18.36
+  },
+  {
+   "id": "w62",
+   "text": "B2B.",
+   "start": 18.36,
+   "end": 19.12
+  },
+  {
+   "id": "w63",
+   "text": "So",
+   "start": 19.44,
+   "end": 19.58
+  },
+  {
+   "id": "w64",
+   "text": "while",
+   "start": 19.58,
+   "end": 19.74
+  },
+  {
+   "id": "w65",
+   "text": "most",
+   "start": 19.74,
+   "end": 20.06
+  },
+  {
+   "id": "w66",
+   "text": "of",
+   "start": 20.06,
+   "end": 20.22
+  },
+  {
+   "id": "w67",
+   "text": "us",
+   "start": 20.22,
+   "end": 20.4
+  },
+  {
+   "id": "w68",
+   "text": "use",
+   "start": 20.4,
+   "end": 20.64
+  },
+  {
+   "id": "w69",
+   "text": "AI",
+   "start": 20.64,
+   "end": 20.9
+  },
+  {
+   "id": "w70",
+   "text": "for",
+   "start": 20.9,
+   "end": 21.14
+  },
+  {
+   "id": "w71",
+   "text": "everyday",
+   "start": 21.14,
+   "end": 21.44
+  },
+  {
+   "id": "w72",
+   "text": "tasks,",
+   "start": 21.44,
+   "end": 21.92
+  },
+  {
+   "id": "w73",
+   "text": "Anthropic",
+   "start": 22.18,
+   "end": 22.62
+  },
+  {
+   "id": "w74",
+   "text": "has",
+   "start": 22.62,
+   "end": 22.78
+  },
+  {
+   "id": "w75",
+   "text": "been",
+   "start": 22.78,
+   "end": 22.96
+  },
+  {
+   "id": "w76",
+   "text": "making",
+   "start": 22.96,
+   "end": 23.22
+  },
+  {
+   "id": "w77",
+   "text": "serious",
+   "start": 23.22,
+   "end": 23.7
+  },
+  {
+   "id": "w78",
+   "text": "money",
+   "start": 23.7,
+   "end": 23.98
+  },
+  {
+   "id": "w79",
+   "text": "from",
+   "start": 23.98,
+   "end": 24.3
+  },
+  {
+   "id": "w80",
+   "text": "businesses.",
+   "start": 24.3,
+   "end": 24.72
+  },
+  {
+   "id": "w81",
+   "text": "It",
+   "start": 24.72,
+   "end": 25.2
+  },
+  {
+   "id": "w82",
+   "text": "brought",
+   "start": 25.2,
+   "end": 25.54
+  },
+  {
+   "id": "w83",
+   "text": "Claude",
+   "start": 25.54,
+   "end": 25.86
+  },
+  {
+   "id": "w84",
+   "text": "to",
+   "start": 25.86,
+   "end": 26.16
+  },
+  {
+   "id": "w85",
+   "text": "Amazon,",
+   "start": 26.16,
+   "end": 26.66
+  },
+  {
+   "id": "w86",
+   "text": "Google,",
+   "start": 26.88,
+   "end": 27.08
+  },
+  {
+   "id": "w87",
+   "text": "and",
+   "start": 27.08,
+   "end": 27.38
+  },
+  {
+   "id": "w88",
+   "text": "Microsoft's",
+   "start": 27.38,
+   "end": 28.22
+  },
+  {
+   "id": "w89",
+   "text": "cloud",
+   "start": 28.22,
+   "end": 28.42
+  },
+  {
+   "id": "w90",
+   "text": "platforms,",
+   "start": 28.42,
+   "end": 29.14
+  },
+  {
+   "id": "w91",
+   "text": "where",
+   "start": 29.16,
+   "end": 29.48
+  },
+  {
+   "id": "w92",
+   "text": "businesses",
+   "start": 29.48,
+   "end": 29.92
+  },
+  {
+   "id": "w93",
+   "text": "already",
+   "start": 29.92,
+   "end": 30.62
+  },
+  {
+   "id": "w94",
+   "text": "run",
+   "start": 30.62,
+   "end": 30.9
+  },
+  {
+   "id": "w95",
+   "text": "their",
+   "start": 30.9,
+   "end": 31.26
+  },
+  {
+   "id": "w96",
+   "text": "softwares.",
+   "start": 31.26,
+   "end": 31.82
+  },
+  {
+   "id": "w97",
+   "text": "So",
+   "start": 32.06,
+   "end": 32.14
+  },
+  {
+   "id": "w98",
+   "text": "now",
+   "start": 32.14,
+   "end": 32.32
+  },
+  {
+   "id": "w99",
+   "text": "companies",
+   "start": 32.32,
+   "end": 32.7
+  },
+  {
+   "id": "w100",
+   "text": "can",
+   "start": 32.7,
+   "end": 33.0
+  },
+  {
+   "id": "w101",
+   "text": "build",
+   "start": 33.0,
+   "end": 33.26
+  },
+  {
+   "id": "w102",
+   "text": "Claude",
+   "start": 33.26,
+   "end": 33.62
+  },
+  {
+   "id": "w103",
+   "text": "into",
+   "start": 33.62,
+   "end": 33.9
+  },
+  {
+   "id": "w104",
+   "text": "their",
+   "start": 33.9,
+   "end": 34.14
+  },
+  {
+   "id": "w105",
+   "text": "own",
+   "start": 34.14,
+   "end": 34.46
+  },
+  {
+   "id": "w106",
+   "text": "products,",
+   "start": 34.46,
+   "end": 35.02
+  },
+  {
+   "id": "w107",
+   "text": "coding",
+   "start": 35.22,
+   "end": 35.46
+  },
+  {
+   "id": "w108",
+   "text": "tools,",
+   "start": 35.46,
+   "end": 35.9
+  },
+  {
+   "id": "w109",
+   "text": "and",
+   "start": 35.9,
+   "end": 36.16
+  },
+  {
+   "id": "w110",
+   "text": "workflows.",
+   "start": 36.16,
+   "end": 36.66
+  },
+  {
+   "id": "w111",
+   "text": "Around",
+   "start": 37.06,
+   "end": 37.36
+  },
+  {
+   "id": "w112",
+   "text": "250",
+   "start": 37.36,
+   "end": 38.2
+  },
+  {
+   "id": "w113",
+   "text": "customers",
+   "start": 38.2,
+   "end": 38.9
+  },
+  {
+   "id": "w114",
+   "text": "each",
+   "start": 38.9,
+   "end": 39.42
+  },
+  {
+   "id": "w115",
+   "text": "brought",
+   "start": 39.42,
+   "end": 39.82
+  },
+  {
+   "id": "w116",
+   "text": "Anthropic",
+   "start": 39.82,
+   "end": 40.4
+  },
+  {
+   "id": "w117",
+   "text": "at",
+   "start": 40.4,
+   "end": 40.64
+  },
+  {
+   "id": "w118",
+   "text": "least",
+   "start": 40.64,
+   "end": 40.9
+  },
+  {
+   "id": "w119",
+   "text": "$10",
+   "start": 40.9,
+   "end": 41.32
+  },
+  {
+   "id": "w120",
+   "text": "million",
+   "start": 41.32,
+   "end": 41.6
+  },
+  {
+   "id": "w121",
+   "text": "in",
+   "start": 41.6,
+   "end": 42.26
+  },
+  {
+   "id": "w122",
+   "text": "a",
+   "start": 42.26,
+   "end": 42.48
+  },
+  {
+   "id": "w123",
+   "text": "year.",
+   "start": 42.48,
+   "end": 42.74
+  },
+  {
+   "id": "w124",
+   "text": "And",
+   "start": 42.78,
+   "end": 43.28
+  },
+  {
+   "id": "w125",
+   "text": "that",
+   "start": 43.28,
+   "end": 43.44
+  },
+  {
+   "id": "w126",
+   "text": "is",
+   "start": 43.44,
+   "end": 43.64
+  },
+  {
+   "id": "w127",
+   "text": "why",
+   "start": 43.64,
+   "end": 43.9
+  },
+  {
+   "id": "w128",
+   "text": "investors",
+   "start": 43.9,
+   "end": 44.36
+  },
+  {
+   "id": "w129",
+   "text": "are",
+   "start": 44.36,
+   "end": 44.86
+  },
+  {
+   "id": "w130",
+   "text": "so",
+   "start": 44.86,
+   "end": 45.08
+  },
+  {
+   "id": "w131",
+   "text": "excited,",
+   "start": 45.08,
+   "end": 45.66
+  },
+  {
+   "id": "w132",
+   "text": "because",
+   "start": 45.66,
+   "end": 46.28
+  },
+  {
+   "id": "w133",
+   "text": "they",
+   "start": 46.28,
+   "end": 46.54
+  },
+  {
+   "id": "w134",
+   "text": "are",
+   "start": 46.54,
+   "end": 46.76
+  },
+  {
+   "id": "w135",
+   "text": "betting",
+   "start": 46.76,
+   "end": 47.08
+  },
+  {
+   "id": "w136",
+   "text": "on",
+   "start": 47.08,
+   "end": 47.38
+  },
+  {
+   "id": "w137",
+   "text": "a",
+   "start": 47.38,
+   "end": 47.62
+  },
+  {
+   "id": "w138",
+   "text": "shift",
+   "start": 47.62,
+   "end": 47.82
+  },
+  {
+   "id": "w139",
+   "text": "in",
+   "start": 47.82,
+   "end": 48.06
+  },
+  {
+   "id": "w140",
+   "text": "how",
+   "start": 48.06,
+   "end": 48.32
+  },
+  {
+   "id": "w141",
+   "text": "businesses",
+   "start": 48.32,
+   "end": 48.76
+  },
+  {
+   "id": "w142",
+   "text": "actually",
+   "start": 48.76,
+   "end": 49.28
+  },
+  {
+   "id": "w143",
+   "text": "operate",
+   "start": 49.28,
+   "end": 49.72
+  },
+  {
+   "id": "w144",
+   "text": "and",
+   "start": 49.72,
+   "end": 50.04
+  },
+  {
+   "id": "w145",
+   "text": "work,",
+   "start": 50.04,
+   "end": 50.38
+  },
+  {
+   "id": "w146",
+   "text": "where",
+   "start": 50.38,
+   "end": 51.1
+  },
+  {
+   "id": "w147",
+   "text": "AI",
+   "start": 51.1,
+   "end": 51.6
+  },
+  {
+   "id": "w148",
+   "text": "will",
+   "start": 51.6,
+   "end": 51.86
+  },
+  {
+   "id": "w149",
+   "text": "become",
+   "start": 51.86,
+   "end": 52.14
+  },
+  {
+   "id": "w150",
+   "text": "central",
+   "start": 52.14,
+   "end": 52.68
+  },
+  {
+   "id": "w151",
+   "text": "to",
+   "start": 52.68,
+   "end": 52.96
+  },
+  {
+   "id": "w152",
+   "text": "their",
+   "start": 52.96,
+   "end": 53.12
+  },
+  {
+   "id": "w153",
+   "text": "execution,",
+   "start": 53.12,
+   "end": 53.78
+  },
+  {
+   "id": "w154",
+   "text": "changing",
+   "start": 54.0,
+   "end": 54.5
+  },
+  {
+   "id": "w155",
+   "text": "the",
+   "start": 54.5,
+   "end": 54.76
+  },
+  {
+   "id": "w156",
+   "text": "whole",
+   "start": 54.76,
+   "end": 55.02
+  },
+  {
+   "id": "w157",
+   "text": "dynamics",
+   "start": 55.02,
+   "end": 55.46
+  },
+  {
+   "id": "w158",
+   "text": "and",
+   "start": 55.46,
+   "end": 55.74
+  },
+  {
+   "id": "w159",
+   "text": "fundamentals",
+   "start": 55.74,
+   "end": 56.32
+  },
+  {
+   "id": "w160",
+   "text": "of",
+   "start": 56.32,
+   "end": 56.7
+  },
+  {
+   "id": "w161",
+   "text": "operating",
+   "start": 56.7,
+   "end": 57.16
+  },
+  {
+   "id": "w162",
+   "text": "such",
+   "start": 57.16,
+   "end": 57.5
+  },
+  {
+   "id": "w163",
+   "text": "big",
+   "start": 57.5,
+   "end": 57.7
+  },
+  {
+   "id": "w164",
+   "text": "firms.",
+   "start": 57.7,
+   "end": 57.98
+  }
+ ]
+}
