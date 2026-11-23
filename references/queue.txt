@@ -38,3 +38,6 @@ style-07-newsbg https://www.instagram.com/reel/DfniVehP_cb/
 search llm-nextword-yt how chatgpt works next word prediction
 search llm-autocomplete-yt chatgpt is just autocomplete explained
 search llm-basics-yt how large language models work explained shorts
+# Ai-jobs — topic virals (YouTube Shorts)
+search aijobs-replace-yt will ai take my job shorts
+search aijobs-layoffs-yt ai layoffs jobs replaced by ai 2026
