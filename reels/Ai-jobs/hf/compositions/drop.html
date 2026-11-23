@@ -1,47 +1,87 @@
 <template>
-<!-- TAKEOVER 1 · the first-job squeeze: Stanford study (Brynjolfsson et al.): employment of software developers aged 22-25
-     fell nearly 20% from its late-2022 peak. Line chart falls while the number counts down. -->
+<!-- TAKEOVER 1 · animated clip: the anxious developer (original flat illustration). Rejection emails pile up, the clock
+     ticks, a sweat drop falls; below, the Stanford stat: employment of developers aged 22-25 down ~20% since late 2022. -->
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
   #dp-bg { position: absolute; inset: 0; background: #17123A;
     background-image: linear-gradient(rgba(139,124,255,.12) 2px, transparent 2px), linear-gradient(90deg, rgba(139,124,255,.12) 2px, transparent 2px);
     background-size: 90px 90px; }
-  #dp-k { position: absolute; left: 70px; top: 220px; font: 700 34px 'JetBrains Mono', monospace; color: #C6FF3D; letter-spacing: .08em; }
-  #dp-n { position: absolute; left: 60px; top: 280px; font: 400 300px/1 'Archivo Black', sans-serif; color: #FF5A5F; letter-spacing: -.04em; }
-  #dp-l { position: absolute; left: 70px; top: 600px; width: 940px; font: 700 52px/1.1 'Space Grotesk', sans-serif; color: #fff; }
-  #dp-svg { position: absolute; left: 60px; top: 800px; width: 960px; height: 460px; overflow: visible; }
-  #dp-src { position: absolute; left: 70px; top: 1300px; font: 600 30px 'Space Grotesk', sans-serif; color: #B9B3E6; }
-  #dp-stamp { position: absolute; right: 60px; top: 1110px; font: 400 54px 'Archivo Black', sans-serif; color: #17123A; background: #C6FF3D;
-    padding: 10px 22px; border-radius: 14px; }
+  #dp-scene { position: absolute; left: 0; top: 170px; width: 1080px; height: 820px; }
+  .dp-mail { position: absolute; left: 600px; width: 420px; padding: 18px 22px; border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+  .dp-mail small { display: block; font: 700 26px 'JetBrains Mono', monospace; color: #6B6596; }
+  .dp-mail div { margin-top: 4px; font: 700 32px/1.15 'Space Grotesk', sans-serif; color: #17123A; }
+  .dp-mail b { color: #FF5A5F; }
+  #dp-stat { position: absolute; left: 60px; right: 60px; top: 1010px; height: 380px; }
+  #dp-n { position: absolute; left: 0; top: 0; font: 400 200px/1 'Archivo Black', sans-serif; color: #FF5A5F; letter-spacing: -.04em; }
+  #dp-l { position: absolute; left: 4px; top: 214px; width: 640px; font: 700 40px/1.12 'Space Grotesk', sans-serif; color: #fff; }
+  #dp-src { position: absolute; left: 4px; top: 320px; font: 600 28px 'Space Grotesk', sans-serif; color: #B9B3E6; }
+  #dp-stamp { position: absolute; right: 0; top: 60px; font: 400 48px/1.05 'Archivo Black', sans-serif; color: #17123A; background: #C6FF3D;
+    padding: 12px 22px; border-radius: 14px; text-align: center; }
 </style>
 <div id="root" data-composition-id="drop" data-width="1080" data-height="1920">
   <div id="dp-bg"></div>
-  <div id="dp-k">FIRST SOFTWARE JOBS</div>
-  <div id="dp-n">−<span id="dp-v">0</span>%</div>
-  <div id="dp-l">jobs held by developers aged 22–25, since late 2022</div>
-  <svg id="dp-svg" viewBox="0 0 960 460">
-    <path d="M20 400 H940" stroke="#5C53A8" stroke-width="3"/>
-    <path id="dp-line" d="M20 60 C 180 50, 260 70, 340 120 S 560 250, 700 300 S 880 330, 940 340" stroke="#FF5A5F" stroke-width="12" fill="none"
-      stroke-linecap="butt" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
-    <text x="20" y="440" fill="#B9B3E6" font-family="JetBrains Mono" font-size="28" font-weight="700">LATE 2022 PEAK</text>
-  </svg>
-  <div id="dp-stamp">A DIFFERENT STORY</div>
-  <div id="dp-src">Source: Stanford Digital Economy Lab study</div>
+  <svg id="dp-scene" viewBox="0 0 1080 820"></svg>
+  <div class="dp-mail" id="dp-m0" style="top:230px"><small>careers@ · 9:02</small><div>Your application: <b>not moving forward</b></div></div>
+  <div class="dp-mail" id="dp-m1" style="top:390px"><small>jobs@ · 11:47</small><div>Thanks, but we chose <b>another candidate</b></div></div>
+  <div class="dp-mail" id="dp-m2" style="top:550px"><small>hr@ · 4:15</small><div>Role requires <b>3+ years</b> experience</div></div>
+  <div id="dp-stat">
+    <div id="dp-n">−<span id="dp-v">0</span>%</div>
+    <div id="dp-l">jobs held by developers aged 22–25, since late 2022</div>
+    <div id="dp-src">Source: Stanford Digital Economy Lab study</div>
+    <div id="dp-stamp">A DIFFERENT<br>STORY</div>
+  </div>
 </div>
 <script>
 (function () {
+  /* Flat-illustration people for the Ai-jobs Reel (original artwork, drawn as SVG strings; deterministic).
+   person({id, x, y, s, skin, hair, top, mood, longHair, flip}) -> <g> string. Parts get ids: <id>-eyes, <id>-mouth, <id>-arm */
+window.AJP = {
+  person(o) {
+    const id = o.id, sk = o.skin || "#E3A584", hr = o.hair || "#1E1638", tp = o.top || "#8B7CFF";
+    const moods = {
+      anxious: { brows: "M-30 -14 L-10 -20 M30 -14 L10 -20", mouth: "M-14 26 Q-7 20 0 26 T14 26" },
+      happy:   { brows: "M-30 -18 L-10 -20 M30 -18 L10 -20", mouth: "M-16 20 Q0 36 16 20" },
+      neutral: { brows: "M-30 -18 L-10 -18 M30 -18 L10 -18", mouth: "M-12 24 L12 24" },
+      focus:   { brows: "M-30 -20 L-10 -15 M30 -20 L10 -15", mouth: "M-10 24 Q0 28 10 24" },
+    };
+    const m = moods[o.mood || "neutral"];
+    const long = o.longHair ? `<path d="M-58 -10 C-62 40 -60 90 -44 120 L-30 60 Z M58 -10 C62 40 60 90 44 120 L30 60 Z" fill="${hr}"/>` : "";
+    return `<g transform="translate(${o.x},${o.y}) scale(${(o.flip ? -1 : 1) * (o.s || 1)},${o.s || 1})"><g id="${id}">
+      <path d="M-86 210 C-86 120 -60 78 0 78 C60 78 86 120 86 210 Z" fill="${tp}"/>
+      <rect x="-14" y="44" width="28" height="40" rx="10" fill="${sk}"/>
+      ${long}
+      <circle cx="0" cy="0" r="56" fill="${sk}"/>
+      <path d="M-58 -2 C-62 -66 62 -70 58 -2 C46 -34 -20 -44 -58 -2 Z" fill="${hr}"/>
+      <g id="${id}-eyes"><circle cx="-20" cy="4" r="6.5" fill="#17123A"/><circle cx="20" cy="4" r="6.5" fill="#17123A"/></g>
+      <path d="${m.brows}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path id="${id}-mouth" d="${m.mouth}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g></g>`;
+  },
+  desk(x, y, w) { return `<rect x="${x}" y="${y}" width="${w}" height="26" rx="8" fill="#5C53A8"/><rect x="${x + 30}" y="${y + 26}" width="18" height="160" fill="#3A3278"/><rect x="${x + w - 48}" y="${y + 26}" width="18" height="160" fill="#3A3278"/>`; },
+  laptopBack(x, y, w) { const h = w * 0.62; return `<rect x="${x}" y="${y - h}" width="${w}" height="${h}" rx="14" fill="#D9D4F7"/><circle cx="${x + w / 2}" cy="${y - h / 2}" r="${w * 0.06}" fill="#B9B3E6"/><rect x="${x - 20}" y="${y - 6}" width="${w + 40}" height="14" rx="6" fill="#B9B3E6"/>`; },
+};
+  const sc = document.getElementById("dp-scene");
+  sc.innerHTML = `
+    <g id="dp-clock" transform="translate(150,150)"><circle r="70" fill="#fff"/><circle r="70" fill="none" stroke="#8B7CFF" stroke-width="10"/>
+      <line id="dp-hand" x1="0" y1="0" x2="0" y2="-48" stroke="#17123A" stroke-width="8" stroke-linecap="round"/><circle r="8" fill="#17123A"/></g>
+    ${AJP.person({ id: "dp-dev", x: 330, y: 432, s: 1.5, top: "#8B7CFF", mood: "anxious", longHair: true, skin: "#D9996F" })}
+    <g transform="translate(0,0)">${AJP.desk(120, 640, 460)}${AJP.laptopBack(240, 640, 180)}</g>
+    <path id="dp-sweat" d="M0 0 C-10 16 -12 26 0 32 C12 26 10 16 0 0 Z" fill="#7FE7FF" transform="translate(420,390)"/>`;
   const S = {{= at(w9) - 0.1 }};
   const tl = gsap.timeline({ paused: true });
   const n = { v: 0 };
-  tl.fromTo("#dp-bg", { clipPath: "circle(0% at 50% 40%)" }, { clipPath: "circle(120% at 50% 40%)", duration: 0.45, ease: "power3.out" }, 0);
-  tl.fromTo("#dp-k", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out" }, 0.2);
-  tl.fromTo("#dp-n", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, {{at:w11}} - S - 0.2);
+  tl.fromTo("#dp-bg", { clipPath: "circle(0% at 50% 30%)" }, { clipPath: "circle(120% at 50% 30%)", duration: 0.45, ease: "power3.out" }, 0);
+  tl.fromTo("#dp-dev", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.1);
+  tl.fromTo("#dp-hand", { rotation: 0, svgOrigin: "0 0" }, { rotation: 720, svgOrigin: "0 0", duration: 3.4, ease: "none" }, 0.1);
+  ["#dp-m0", "#dp-m1", "#dp-m2"].forEach((m, i) => tl.fromTo(m, { opacity: 0, x: 220, rotation: 6 }, { opacity: 1, x: 0, rotation: i % 2 ? 2 : -2, duration: 0.35, ease: "back.out(1.6)" }, 0.45 + i * 0.55));
+  tl.fromTo("#dp-sweat", { opacity: 0, y: 0 }, { opacity: 1, y: 70, duration: 0.9, ease: "power2.in" }, 1.0);
+  tl.to("#dp-sweat", { opacity: 0, duration: 0.2 }, 1.85);
+  tl.fromTo("#dp-dev-eyes", { scaleY: 1, transformOrigin: "50% 50%" }, { scaleY: 0.1, duration: 0.07, yoyo: true, repeat: 1 }, 1.6);
+  tl.fromTo("#dp-n", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, {{at:w12}} - S);
   tl.fromTo(n, { v: 0 }, { v: 20, duration: 0.9, ease: "power3.out",
-    onUpdate: function () { document.getElementById("dp-v").textContent = Math.round(n.v); } }, {{at:w11}} - S - 0.2);
-  tl.fromTo("#dp-l", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w12}} - S);
-  tl.fromTo("#dp-line", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 1.2, ease: "power2.inOut" }, {{at:w12}} - S);
+    onUpdate: function () { document.getElementById("dp-v").textContent = Math.round(n.v); } }, {{at:w12}} - S);
+  tl.fromTo(["#dp-l", "#dp-src"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, {{at:w13}} - S);
   tl.fromTo("#dp-stamp", { opacity: 0, scale: 1.8, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.3, ease: "power4.out" }, {{at:w17}} - S - 0.05);
-  tl.fromTo("#dp-src", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.9);
   tl.to("#root", { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w19}} - S - 0.2);
   window.__timelines["drop"] = tl;
 })();

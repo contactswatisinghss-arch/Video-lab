@@ -1,26 +1,69 @@
 <template>
-<!-- END: save + send prompt with the 3-move recap, in the top band. -->
+<!-- END · animated clip: a friend preparing for interviews (notes, "Interview tomorrow" sticky, laptop) + SAVE THIS · SEND IT
+     with the 3-move recap. -->
 <style>
-  #root { position: absolute; inset: 0; pointer-events: none; }
-  #ec-card { position: absolute; left: 60px; right: 60px; top: 176px; padding: 24px 30px 26px; border-radius: 28px; background: #17123A;
-    box-shadow: 0 18px 40px rgba(0,0,0,.45); }
-  #ec-t { font: 400 60px/1 'Archivo Black', sans-serif; color: #fff; }
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #ec-bg { position: absolute; inset: 0; background: #17123A; }
+  #ec-scene { position: absolute; left: 0; top: 520px; width: 1080px; height: 820px; }
+  #ec-card { position: absolute; left: 60px; right: 60px; top: 190px; text-align: center; }
+  #ec-t { font: 400 84px/1 'Archivo Black', sans-serif; color: #fff; }
   #ec-t span { color: #C6FF3D; }
-  #ec-l { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .ec-m { padding: 8px 16px; border-radius: 12px; background: #221A55; color: #E8E6FF; font: 700 30px 'Space Grotesk', sans-serif; }
+  #ec-l { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .ec-m { padding: 8px 16px; border-radius: 12px; background: #221A55; color: #E8E6FF; font: 700 32px 'Space Grotesk', sans-serif; }
   .ec-m b { color: #C6FF3D; }
+  #ec-note { position: absolute; left: 650px; top: 600px; width: 300px; padding: 20px; background: #FFE066; color: #17123A;
+    font: 700 36px/1.15 'Space Grotesk', sans-serif; box-shadow: 0 10px 20px rgba(0,0,0,.35); }
 </style>
 <div id="root" data-composition-id="endc" data-width="1080" data-height="1920">
-  <div id="ec-card"><div id="ec-t"><span>SAVE</span> THIS · <span>SEND</span> IT</div>
+  <div id="ec-bg"></div>
+  <svg id="ec-scene" viewBox="0 0 1080 820"></svg>
+  <div id="ec-note">Interview tomorrow ✓ review my PR</div>
+  <div id="ec-card"><div id="ec-t"><span>SAVE</span> THIS<br><span>SEND</span> IT</div>
     <div id="ec-l"><div class="ec-m" id="ec-1"><b>01</b> Fundamentals</div><div class="ec-m" id="ec-2"><b>02</b> Ship &amp; maintain</div><div class="ec-m" id="ec-3"><b>03</b> Review AI code</div></div>
   </div>
 </div>
 <script>
 (function () {
-  const S = {{= at(w207) - 0.1 }};
+  /* Flat-illustration people for the Ai-jobs Reel (original artwork, drawn as SVG strings; deterministic).
+   person({id, x, y, s, skin, hair, top, mood, longHair, flip}) -> <g> string. Parts get ids: <id>-eyes, <id>-mouth, <id>-arm */
+window.AJP = {
+  person(o) {
+    const id = o.id, sk = o.skin || "#E3A584", hr = o.hair || "#1E1638", tp = o.top || "#8B7CFF";
+    const moods = {
+      anxious: { brows: "M-30 -14 L-10 -20 M30 -14 L10 -20", mouth: "M-14 26 Q-7 20 0 26 T14 26" },
+      happy:   { brows: "M-30 -18 L-10 -20 M30 -18 L10 -20", mouth: "M-16 20 Q0 36 16 20" },
+      neutral: { brows: "M-30 -18 L-10 -18 M30 -18 L10 -18", mouth: "M-12 24 L12 24" },
+      focus:   { brows: "M-30 -20 L-10 -15 M30 -20 L10 -15", mouth: "M-10 24 Q0 28 10 24" },
+    };
+    const m = moods[o.mood || "neutral"];
+    const long = o.longHair ? `<path d="M-58 -10 C-62 40 -60 90 -44 120 L-30 60 Z M58 -10 C62 40 60 90 44 120 L30 60 Z" fill="${hr}"/>` : "";
+    return `<g transform="translate(${o.x},${o.y}) scale(${(o.flip ? -1 : 1) * (o.s || 1)},${o.s || 1})"><g id="${id}">
+      <path d="M-86 210 C-86 120 -60 78 0 78 C60 78 86 120 86 210 Z" fill="${tp}"/>
+      <rect x="-14" y="44" width="28" height="40" rx="10" fill="${sk}"/>
+      ${long}
+      <circle cx="0" cy="0" r="56" fill="${sk}"/>
+      <path d="M-58 -2 C-62 -66 62 -70 58 -2 C46 -34 -20 -44 -58 -2 Z" fill="${hr}"/>
+      <g id="${id}-eyes"><circle cx="-20" cy="4" r="6.5" fill="#17123A"/><circle cx="20" cy="4" r="6.5" fill="#17123A"/></g>
+      <path d="${m.brows}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path id="${id}-mouth" d="${m.mouth}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g></g>`;
+  },
+  desk(x, y, w) { return `<rect x="${x}" y="${y}" width="${w}" height="26" rx="8" fill="#5C53A8"/><rect x="${x + 30}" y="${y + 26}" width="18" height="160" fill="#3A3278"/><rect x="${x + w - 48}" y="${y + 26}" width="18" height="160" fill="#3A3278"/>`; },
+  laptopBack(x, y, w) { const h = w * 0.62; return `<rect x="${x}" y="${y - h}" width="${w}" height="${h}" rx="14" fill="#D9D4F7"/><circle cx="${x + w / 2}" cy="${y - h / 2}" r="${w * 0.06}" fill="#B9B3E6"/><rect x="${x - 20}" y="${y - 6}" width="${w + 40}" height="14" rx="6" fill="#B9B3E6"/>`; },
+};
+  document.getElementById("ec-scene").innerHTML = `
+    ${AJP.person({ id: "ec-p", x: 340, y: 272, s: 1.4, top: "#7FE7FF", mood: "focus", skin: "#B97A52", hair: "#17123A" })}
+    ${AJP.desk(80, 480, 600)}${AJP.laptopBack(270, 480, 160)}
+    <g id="ec-cards"><rect x="110" y="430" width="120" height="50" rx="8" fill="#fff" transform="rotate(-8 170 455)"/>
+      <rect x="120" y="415" width="120" height="50" rx="8" fill="#E8E6FF" transform="rotate(4 180 440)"/></g>
+    <g id="ec-pen"><rect x="560" y="420" width="16" height="70" rx="8" fill="#FF5A5F" transform="rotate(30 568 455)"/></g>`;
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#ec-card", { opacity: 0, y: -30, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 0);
-  ["#ec-1", "#ec-2", "#ec-3"].forEach((m, i) => tl.fromTo(m, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, 0.5 + i * 0.25));
+  tl.fromTo("#ec-bg", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+  tl.fromTo("#ec-scene", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0.1);
+  tl.fromTo("#ec-note", { opacity: 0, rotation: 10, scale: 1.3 }, { opacity: 1, rotation: 4, scale: 1, duration: 0.35, ease: "back.out(2)" }, 0.6);
+  tl.fromTo("#ec-pen", { y: 0 }, { y: -12, duration: 0.15, yoyo: true, repeat: 9, ease: "sine.inOut" }, 0.5);
+  tl.fromTo("#ec-t", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, 0.05);
+  ["#ec-1", "#ec-2", "#ec-3"].forEach((m, i) => tl.fromTo(m, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, 0.8 + i * 0.25));
   window.__timelines["endc"] = tl;
 })();
 </script>

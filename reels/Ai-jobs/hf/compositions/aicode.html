@@ -1,45 +1,97 @@
 <template>
-<!-- AI-CODE CHECK (top band, she stays on screen): code streams in "in seconds", then the three questions light up on
-     her words (correct · secure · works), then "3 MOVES" lands on "three things". -->
+<!-- TAKEOVER · animated clip: AI producing code. A friendly AI bot fills three monitors with code against a 2-second timer;
+     on "someone still needs to know" a human reviewer leans in with a magnifier; the three questions light up on her words;
+     "3 MOVES" lands on "three things". -->
 <style>
-  #root { position: absolute; inset: 0; pointer-events: none; }
-  #ac-win { position: absolute; left: 50px; right: 50px; top: 176px; height: 260px; border-radius: 24px; background: #17123A; overflow: hidden;
-    box-shadow: 0 18px 40px rgba(0,0,0,.45); }
-  #ac-bar { height: 50px; background: #221A55; display: flex; align-items: center; gap: 10px; padding-left: 20px; }
-  #ac-bar i { width: 16px; height: 16px; border-radius: 50%; background: #5C53A8; }
-  #ac-bar span { margin-left: 14px; font: 700 28px 'JetBrains Mono', monospace; color: #B9B3E6; }
-  .ac-ln { position: absolute; left: 24px; font: 700 30px 'JetBrains Mono', monospace; color: #E8E6FF; white-space: nowrap; }
-  .ac-ln em { font-style: normal; color: #8B7CFF; }
-  .ac-ln b { color: #C6FF3D; font-weight: 700; }
-  #ac-qs { position: absolute; left: 50px; right: 50px; top: 456px; display: flex; gap: 14px; justify-content: center; }
-  .ac-q { padding: 12px 20px; border-radius: 14px; background: #fff; color: #17123A; font: 700 36px 'Space Grotesk', sans-serif; }
-  #ac-3 { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
-  #ac-3 span { display: inline-block; padding: 16px 34px 20px; border-radius: 26px; background: #C6FF3D; color: #17123A;
-    font: 400 110px/1 'Archivo Black', sans-serif; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #ai-bg { position: absolute; inset: 0; background: #0E0B26;
+    background-image: radial-gradient(circle at 50% 35%, rgba(198,255,61,.14), transparent 55%); }
+  #ai-scene { position: absolute; left: 0; top: 170px; width: 1080px; height: 860px; }
+  #ai-timer { position: absolute; right: 60px; top: 190px; padding: 10px 20px; border-radius: 14px; background: #C6FF3D; color: #17123A;
+    font: 700 40px 'JetBrains Mono', monospace; }
+  #ai-qs { position: absolute; left: 50px; right: 50px; top: 1060px; display: flex; gap: 16px; justify-content: center; }
+  .ai-q { padding: 14px 24px; border-radius: 16px; background: #fff; color: #17123A; font: 700 44px 'Space Grotesk', sans-serif; }
+  #ai-3 { position: absolute; left: 0; right: 0; top: 1200px; text-align: center; }
+  #ai-3 span { display: inline-block; padding: 16px 34px 20px; border-radius: 26px; background: #C6FF3D; color: #17123A;
+    font: 400 110px/1 'Archivo Black', sans-serif; }
 </style>
 <div id="root" data-composition-id="aicode" data-width="1080" data-height="1920">
-  <div id="ac-win"><div id="ac-bar"><i></i><i></i><i></i><span>ai_generated.py · 2s</span></div>
-    <div class="ac-ln" id="ac-l1" style="top:72px"><em>def</em> <b>checkout</b>(cart, user):</div>
-    <div class="ac-ln" id="ac-l2" style="top:120px">    total = sum(i.price <em>for</em> i <em>in</em> cart)</div>
-    <div class="ac-ln" id="ac-l3" style="top:168px">    <em>return</em> charge(user.card, total)</div>
-  </div>
-  <div id="ac-qs"><div class="ac-q" id="ac-q1">Correct?</div><div class="ac-q" id="ac-q2">Secure?</div><div class="ac-q" id="ac-q3">Works?</div></div>
-  <div id="ac-3"><span>3 MOVES</span></div>
+  <div id="ai-bg"></div>
+  <svg id="ai-scene" viewBox="0 0 1080 860"></svg>
+  <div id="ai-timer">⏱ <span id="ai-t">0.0</span>s</div>
+  <div id="ai-qs"><div class="ai-q" id="ai-q1">Correct?</div><div class="ai-q" id="ai-q2">Secure?</div><div class="ai-q" id="ai-q3">Works?</div></div>
+  <div id="ai-3"><span>3 MOVES</span></div>
 </div>
 <script>
 (function () {
+  /* Flat-illustration people for the Ai-jobs Reel (original artwork, drawn as SVG strings; deterministic).
+   person({id, x, y, s, skin, hair, top, mood, longHair, flip}) -> <g> string. Parts get ids: <id>-eyes, <id>-mouth, <id>-arm */
+window.AJP = {
+  person(o) {
+    const id = o.id, sk = o.skin || "#E3A584", hr = o.hair || "#1E1638", tp = o.top || "#8B7CFF";
+    const moods = {
+      anxious: { brows: "M-30 -14 L-10 -20 M30 -14 L10 -20", mouth: "M-14 26 Q-7 20 0 26 T14 26" },
+      happy:   { brows: "M-30 -18 L-10 -20 M30 -18 L10 -20", mouth: "M-16 20 Q0 36 16 20" },
+      neutral: { brows: "M-30 -18 L-10 -18 M30 -18 L10 -18", mouth: "M-12 24 L12 24" },
+      focus:   { brows: "M-30 -20 L-10 -15 M30 -20 L10 -15", mouth: "M-10 24 Q0 28 10 24" },
+    };
+    const m = moods[o.mood || "neutral"];
+    const long = o.longHair ? `<path d="M-58 -10 C-62 40 -60 90 -44 120 L-30 60 Z M58 -10 C62 40 60 90 44 120 L30 60 Z" fill="${hr}"/>` : "";
+    return `<g transform="translate(${o.x},${o.y}) scale(${(o.flip ? -1 : 1) * (o.s || 1)},${o.s || 1})"><g id="${id}">
+      <path d="M-86 210 C-86 120 -60 78 0 78 C60 78 86 120 86 210 Z" fill="${tp}"/>
+      <rect x="-14" y="44" width="28" height="40" rx="10" fill="${sk}"/>
+      ${long}
+      <circle cx="0" cy="0" r="56" fill="${sk}"/>
+      <path d="M-58 -2 C-62 -66 62 -70 58 -2 C46 -34 -20 -44 -58 -2 Z" fill="${hr}"/>
+      <g id="${id}-eyes"><circle cx="-20" cy="4" r="6.5" fill="#17123A"/><circle cx="20" cy="4" r="6.5" fill="#17123A"/></g>
+      <path d="${m.brows}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path id="${id}-mouth" d="${m.mouth}" stroke="#17123A" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g></g>`;
+  },
+  desk(x, y, w) { return `<rect x="${x}" y="${y}" width="${w}" height="26" rx="8" fill="#5C53A8"/><rect x="${x + 30}" y="${y + 26}" width="18" height="160" fill="#3A3278"/><rect x="${x + w - 48}" y="${y + 26}" width="18" height="160" fill="#3A3278"/>`; },
+  laptopBack(x, y, w) { const h = w * 0.62; return `<rect x="${x}" y="${y - h}" width="${w}" height="${h}" rx="14" fill="#D9D4F7"/><circle cx="${x + w / 2}" cy="${y - h / 2}" r="${w * 0.06}" fill="#B9B3E6"/><rect x="${x - 20}" y="${y - 6}" width="${w + 40}" height="14" rx="6" fill="#B9B3E6"/>`; },
+};
+  const sc = document.getElementById("ai-scene");
+  const cols = ["#C6FF3D", "#8B7CFF", "#7FE7FF", "#FF8A8E", "#E8E6FF"];
+  let mons = "";
+  [[60, 90], [380, 40], [700, 90]].forEach(([x, y], m) => {
+    mons += `<g transform="translate(${x},${y})"><rect width="300" height="220" rx="18" fill="#221A55" stroke="#5C53A8" stroke-width="6"/>
+      <rect x="135" y="220" width="30" height="40" fill="#3A3278"/>`;
+    for (let i = 0; i < 8; i++) {
+      const w = 60 + ((i * 47 + m * 31) % 170), c = cols[(i + m) % cols.length], ind = (i % 3) * 18;
+      mons += `<rect id="ai-c${m}-${i}" x="${20 + ind}" y="${20 + i * 24}" width="${w}" height="12" rx="6" fill="${c}"/>`;
+    }
+    mons += `</g>`;
+  });
+  sc.innerHTML = mons + `
+    <g id="ai-bot" transform="translate(540,560)">
+      <rect x="-120" y="-110" width="240" height="190" rx="50" fill="#E8E6FF"/>
+      <rect x="-90" y="-70" width="180" height="90" rx="40" fill="#17123A"/>
+      <g id="ai-eyes"><rect x="-56" y="-42" width="30" height="34" rx="12" fill="#C6FF3D"/><rect x="26" y="-42" width="30" height="34" rx="12" fill="#C6FF3D"/></g>
+      <line x1="0" y1="-110" x2="0" y2="-150" stroke="#E8E6FF" stroke-width="10"/><circle cx="0" cy="-158" r="14" fill="#C6FF3D"/>
+      <path d="M-150 220 C-150 120 -100 92 0 92 C100 92 150 120 150 220 Z" fill="#8B7CFF"/>
+      <g id="ai-arms"><rect x="-200" y="130" width="120" height="34" rx="17" fill="#E8E6FF"/><rect x="80" y="130" width="120" height="34" rx="17" fill="#E8E6FF"/></g>
+    </g>
+    <g id="ai-hum">${AJP.person({ id: "ai-rev", x: 900, y: 600, s: 1.25, top: "#FF5A5F", mood: "focus", skin: "#C98A62", hair: "#2A1A12" })}
+      <g transform="translate(760,520) rotate(-30)"><circle r="46" fill="rgba(127,231,255,.25)" stroke="#fff" stroke-width="10"/><rect x="-8" y="46" width="16" height="70" rx="8" fill="#fff"/></g></g>`;
   const S = {{= at(w70) - 0.1 }};
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#ac-win", { opacity: 0, y: -30, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 0);
-  ["#ac-l1", "#ac-l2", "#ac-l3"].forEach((l, i) => tl.fromTo(l, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.25, ease: "none" }, {{at:w72}} - S + i * 0.22));
-  tl.fromTo("#ac-qs", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w86}} - S - 0.2);
-  [["#ac-q1", {{at:w86}}], ["#ac-q2", {{at:w87}}], ["#ac-q3", {{at:w90}}]].forEach(([q, at]) => {
+  const t = { v: 0 };
+  tl.fromTo("#ai-bg", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0);
+  tl.fromTo("#ai-scene", { opacity: 0, scale: 0.94, transformOrigin: "50% 60%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0);
+  for (let m = 0; m < 3; m++) for (let i = 0; i < 8; i++)
+    tl.fromTo(`#ai-c${m}-${i}`, { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.12, ease: "none" }, {{at:w72}} - S + (i * 3 + m) * 0.07);
+  tl.fromTo("#ai-timer", { opacity: 0 }, { opacity: 1, duration: 0.15 }, {{at:w72}} - S - 0.1);
+  tl.fromTo(t, { v: 0 }, { v: 2, duration: 1.7, ease: "none", onUpdate: function () { document.getElementById("ai-t").textContent = t.v.toFixed(1); } }, {{at:w72}} - S);
+  tl.fromTo("#ai-arms", { y: 0 }, { y: -10, duration: 0.12, yoyo: true, repeat: 13, ease: "sine.inOut" }, {{at:w72}} - S);
+  tl.fromTo("#ai-eyes", { scaleY: 1, transformOrigin: "50% 50%" }, { scaleY: 0.15, duration: 0.07, yoyo: true, repeat: 1 }, {{at:w75}} - S);
+  tl.fromTo("#ai-hum", { x: 320, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, {{at:w77}} - S - 0.1);
+  [["#ai-q1", {{at:w86}}], ["#ai-q2", {{at:w87}}], ["#ai-q3", {{at:w90}}]].forEach(([q, at]) => {
     tl.fromTo(q, { opacity: 0, y: 24, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "back.out(2)" }, at - S - 0.08);
     tl.to(q, { backgroundColor: "#FF5A5F", duration: 0.12 }, at - S + 0.1);
   });
-  tl.to(["#ac-win", "#ac-qs"], { opacity: 0, y: -24, duration: 0.18, ease: "power2.in" }, {{at:w97}} - S - 0.3);
-  tl.fromTo("#ac-3", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power4.out" }, {{at:w97}} - S - 0.08);
-  tl.to("#ac-3", { opacity: 0, duration: 0.15 }, {{at:w99}} - S - 0.2);
+  tl.fromTo("#ai-3", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power4.out" }, {{at:w97}} - S - 0.08);
+  tl.to("#root", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w99}} - S - 0.22);
   window.__timelines["aicode"] = tl;
 })();
 </script>
