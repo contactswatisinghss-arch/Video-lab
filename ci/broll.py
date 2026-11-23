@@ -48,7 +48,7 @@ def pixabay(query, key):
 
 def wikimedia(query):
     url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({"action": "query", "generator": "search", "gsrnamespace": 6,
-        "gsrsearch": query + " filetype:bitmap", "gsrlimit": 12, "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 2200, "format": "json"})
+        "gsrsearch": query + " filetype:bitmap", "gsrlimit": 12, "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 3840, "format": "json"})
     pages = (json.loads(_get(url)).get("query") or {}).get("pages", {})
     out = []
     for p in sorted(pages.values(), key=lambda p: p.get("index", 99)):
@@ -115,8 +115,11 @@ def job_broll(J, slug):
                 try:
                     open(raw, "wb").write(_get(c["url"], timeout=180))
                     convert(J, raw, out, c["kind"])
-                    th = out + ".thumb.jpg"
-                    J.sh(["ffmpeg", "-y", "-v", "error", "-ss", "1" if ext == "mp4" else "0", "-i", out, "-frames:v", "1", "-vf", "scale=270:480", th], check=False)
+                    th = out[:-4] + "-thumb.jpg"
+                    if ext == "mp4": J.sh(["ffmpeg", "-y", "-v", "error", "-ss", "1", "-i", out, "-frames:v", "1", "-vf", "scale=270:480", th], check=False)
+                    else:
+                        from PIL import Image
+                        Image.open(out).convert("RGB").resize((270, 480)).save(th, quality=85)
                     k += 1
                     files.append(out); thumbs.append((name[6:], th))
                     index.append({"shot": s["name"], "query": s["query"], "file": name, **{x: c.get(x) for x in ("kind", "page", "author", "license", "title", "tags")}})
