@@ -1,9 +1,9 @@
 {
   "slug": "Anthropic-ipo",
-  "stage": "preview",
+  "stage": "final",
   "ok": true,
-  "time": "2026-11-23 04:32:02 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45111852622",
+  "time": "2026-11-23 05:27:01 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45116034983",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Anthropic-ipo",
   "prepare": {
     "stage": "prepare",
@@ -34,6 +34,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-23 04:32:02 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-23 05:27:01 UTC"
     }
   ],
   "preview": {
@@ -50,5 +55,38 @@
     "snapshot_ok": true,
     "render_seconds": 167,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Anthropic-ipo/preview.mp4"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-23 05:27:01 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45116034983",
+    "hash": "fd444acdf8b4460a",
+    "check": {
+      "parsed": false,
+      "raw_tail": "under its 3.30 s floor: hold it about 0.5 s + 0.3 s a word (4.40 s here) before it leaves or changes; see references/motion.md.\",\n        \"text\": \"Still above the $83 IPO price: investors are betting on the long run.\",\n        \"selector\": \"#sk-foot\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/stock.html\",\n        \"bbox\": {\n          \"x\": 60,\n          \"y\": 1234.11,\n          \"width\": 904.19,\n          \"height\": 81.79999999999995\n        },\n        \"time\": 46.138,\n        \"words\": 13,\n        \"seconds\": 1.264,\n        \"floorSeconds\": 3.3,\n        \"measured\": [\n          {\n            \"time\": 45.81,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 45.935,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 46.06,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 46.185,\n            \"opacity\": 0.74,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 46.31,\n            \"opacity\": 0.99,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 46.435,\n            \"opacity\": 1,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 46.559,\n            \"opacity\": 1,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 46.934,\n            \"opacity\": 1,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 47.059,\n            \"opacity\": 1,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 47.184,\n            \"opacity\": 1,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 47.308,\n            \"opacity\": 0.99,\n            \"heightPx\": 82\n          },\n          {\n            \"time\": 47.433,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 47.558,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 47.683,\n            \"opacity\": null,\n            \"heightPx\": null\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 472\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"bdf30ad4-e157-4058-a635-2c8d71ad2d28\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/bdf30ad4-e157-4058-a635-2c8d71ad2d28.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/bdf30ad4-e157-4058-a635-2c8d71ad2d28.json\n"
+    },
+    "hf_version": "0.9.37",
+    "mode": "overlay-on-original",
+    "graphics_seconds": 224,
+    "compose": {
+      "seconds": 689,
+      "hdr": true,
+      "size": [
+        2160,
+        3840
+      ],
+      "fps": "60/1",
+      "audio": "re-encoded (cut)"
+    },
+    "seconds": 58.92,
+    "size": [
+      2160,
+      3840
+    ],
+    "fps": "60/1",
+    "transfer": "arib-std-b67",
+    "size_mb": 240.3,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Anthropic-ipo/final_reel.mp4"
   }
 }
