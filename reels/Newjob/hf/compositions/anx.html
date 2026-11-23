@@ -3,12 +3,12 @@
      autocomplete, then an inbox panel fills with rejection emails. Generic UI, no brand marks. -->
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-  #ax-bg { position: absolute; inset: 0; background: #0B3D3A; }
+  #ax-bg { position: absolute; inset: 0; background: radial-gradient(rgba(255,255,255,.055) 2px, transparent 2.5px) 0 0/36px 36px, radial-gradient(ellipse 85% 55% at 50% 42%, #17635C 0%, #0B3D3A 55%, #06211F 100%); }
   #ax-h { position: absolute; left: 0; right: 0; top: 196px; text-align: center; font: 800 64px 'Bricolage Grotesque', sans-serif; color: #FFF4E6; }
   #ax-h b { color: #FF8A3D; }
   /* realistic laptop + window chrome (generic: no brand marks) */
   .lt { position: absolute; left: 40px; width: 1000px; }
-  .lt-scr { position: relative; height: 660px; background: #0b0b0d; border-radius: 30px 30px 8px 8px; box-shadow: 0 30px 70px rgba(0,0,0,.55), inset 0 0 0 2px #2a2a2e; }
+  .lt-scr { position: relative; height: 720px; background: #0b0b0d; border-radius: 30px 30px 8px 8px; box-shadow: 0 30px 70px rgba(0,0,0,.55), inset 0 0 0 2px #2a2a2e; }
   .lt-in { position: absolute; left: 18px; right: 18px; top: 18px; bottom: 18px; border-radius: 10px; overflow: hidden; background: #1e1e1e; }
   .lt-in::after { content: ""; position: absolute; inset: 0; background: linear-gradient(125deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 38%); pointer-events: none; }
   .lt-base { position: relative; height: 30px; margin: 0 -40px; background: linear-gradient(#d4d7dd, #8f959e); border-radius: 0 0 28px 28px; }
@@ -16,17 +16,17 @@
   .wc { height: 46px; background: #2b2b2e; display: flex; align-items: center; padding: 0 16px; gap: 10px; font: 500 26px 'DM Mono', monospace; color: #b8bcc4; }
   .wc i { width: 14px; height: 14px; border-radius: 50%; background: #55585f; display: inline-block; }
   .wc span { margin-left: 16px; }
-  .cd { font: 500 28px/1.5 'DM Mono', monospace; color: #d4d4d4; white-space: pre; }
+  .cd { font: 500 31px/1.5 'DM Mono', monospace; color: #d4d4d4; white-space: pre; }
   .kw { color: #569cd6; } .fn { color: #dcdcaa; } .st { color: #ce9178; } .cm { color: #6a9955; } .nm { color: #b5cea8; } .ok { color: #3fb950; } .er { color: #f85149; }
   .lt-in { background: #f4f5f7; }
-  #ax-search { position: absolute; left: 60px; right: 60px; top: 96px; height: 76px; border-radius: 38px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.15);
-    display: flex; align-items: center; padding: 0 28px; font: 500 32px 'DM Mono', monospace; color: #202124; }
+  #ax-search { position: absolute; left: 60px; right: 60px; top: 150px; height: 76px; border-radius: 38px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    display: flex; align-items: center; padding: 0 28px; font: 500 34px 'DM Mono', monospace; color: #202124; }
   #ax-caret { display: inline-block; width: 3px; height: 38px; background: #202124; margin-left: 2px; }
-  #ax-sug { position: absolute; left: 60px; right: 60px; top: 176px; border-radius: 0 0 24px 24px; background: #fff; box-shadow: 0 6px 14px rgba(0,0,0,.12); padding: 8px 0; }
-  .ax-s { padding: 10px 28px; font: 500 28px 'DM Mono', monospace; color: #3c4043; }
+  #ax-sug { position: absolute; left: 60px; right: 60px; top: 230px; border-radius: 0 0 24px 24px; background: #fff; box-shadow: 0 6px 14px rgba(0,0,0,.12); padding: 8px 0; }
+  .ax-s { padding: 14px 28px; font: 500 30px 'DM Mono', monospace; color: #3c4043; }
   .ax-s b { font-weight: 500; color: #202124; }
-  #ax-inbox { position: absolute; left: 60px; right: 60px; top: 330px; border-radius: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.12); overflow: hidden; }
-  .ax-m { display: flex; gap: 16px; align-items: center; padding: 14px 22px; border-bottom: 1px solid #e3e5e8; font: 500 26px 'DM Mono', monospace; color: #202124; }
+  #ax-inbox { position: absolute; left: 80px; right: 80px; top: 1130px; }
+  .ax-m { display: flex; gap: 16px; align-items: center; padding: 16px 22px; margin-bottom: 12px; border-radius: 18px; background: #fff; box-shadow: 0 14px 30px rgba(0,0,0,.4); font: 500 27px 'DM Mono', monospace; color: #202124; }
   .ax-m b { width: 210px; flex: none; font-weight: 700; }
   .ax-m span { color: #5f6368; white-space: nowrap; overflow: hidden; }
   .ax-m em { margin-left: auto; font-style: normal; color: #5f6368; }
@@ -34,16 +34,16 @@
 <div id="root" data-composition-id="anx" data-width="1080" data-height="1920">
   <div id="ax-bg"></div>
   <div id="ax-h">The same questions, <b>more anxiety</b></div>
-  <div class="lt" id="ax-lt" style="top:330px"><div class="lt-scr"><div class="lt-in">
+  <div class="lt" id="ax-lt" style="top:360px"><div class="lt-scr"><div class="lt-in">
     <div class="wc"><i></i><i></i><i></i><span>New tab</span></div>
     <div id="ax-search">🔍&nbsp;<span id="ax-q"></span><i id="ax-caret"></i></div>
     <div id="ax-sug"><div class="ax-s" id="ax-s0">will ai replace junior developers <b>2027</b></div><div class="ax-s" id="ax-s1">is coding <b>still worth learning</b></div><div class="ax-s" id="ax-s2">entry level dev jobs <b>no experience</b></div></div>
-    <div id="ax-inbox">
+  </div></div><div class="lt-base"></div></div>
+  <div id="ax-inbox">
       <div class="ax-m" id="ax-m0"><b>Careers Team</b><span>Update on your application: not moving forward</span><em>9:02</em></div>
       <div class="ax-m" id="ax-m1"><b>Recruiting</b><span>We've decided to pursue other candidates</span><em>11:47</em></div>
       <div class="ax-m" id="ax-m2"><b>Talent</b><span>This role requires 3+ years of experience</span><em>4:15</em></div>
     </div>
-  </div></div><div class="lt-base"></div></div>
 </div>
 <script>
 (function () {
@@ -52,14 +52,13 @@
   const q = "will AI replace junior developers", st = { n: 0 };
   tl.fromTo("#ax-bg", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(120% at 50% 50%)", duration: 0.45, ease: "power3.out" }, 0);
   tl.fromTo("#ax-h", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 0.25);
-  tl.fromTo("#ax-lt", { opacity: 0, y: 80, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" }, 0.15);
+  tl.fromTo("#ax-lt", { opacity: 0, y: 140, scale: 0.9, rotationX: 24, transformPerspective: 1600 }, { opacity: 1, y: 0, scale: 1, rotationX: 0, transformPerspective: 1600, duration: 0.6, ease: "expo.out" }, 0.15);
   tl.fromTo(st, { n: 0 }, { n: q.length, duration: 1.4, ease: "none", onUpdate: function () { document.getElementById("ax-q").textContent = q.slice(0, Math.round(st.n)); } }, 0.6);
   tl.fromTo("#ax-sug", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 1.2);
   ["#ax-s0", "#ax-s1", "#ax-s2"].forEach((s, i) => tl.fromTo(s, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.15 }, 1.25 + i * 0.12));
-  tl.to("#ax-sug", { opacity: 0, duration: 0.15 }, {{at:w33}} - S - 0.4);
   tl.fromTo("#ax-inbox", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, {{at:w33}} - S - 0.3);
   [["#ax-m0", {{at:w33}}], ["#ax-m1", {{at:w35}}], ["#ax-m2", {{at:w37}}]].forEach(([m, at]) =>
-    tl.fromTo(m, { opacity: 0, x: -40, backgroundColor: "#fff4e6" }, { opacity: 1, x: 0, backgroundColor: "#ffffff", duration: 0.35, ease: "power3.out" }, at - S - 0.15));
+    tl.fromTo(m, { opacity: 0, y: 40, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, at - S - 0.15));
   tl.to("#root", { opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w39}} - S - 0.15);
   window.__timelines["anx"] = tl;
 })();
