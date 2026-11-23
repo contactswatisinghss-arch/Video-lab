@@ -2,21 +2,21 @@
   "slug": "Newjob",
   "stage": "prepare",
   "ok": true,
-  "time": "2026-11-23 09:26:36 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45145099991",
+  "time": "2026-11-23 09:39:44 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45146176381",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Newjob",
   "prepare": {
     "stage": "prepare",
     "ok": true,
-    "time": "2026-11-23 09:26:36 UTC",
-    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45145099991",
+    "time": "2026-11-23 09:39:44 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45146176381",
     "raw": "CB7F21FB-53ED-4FF7-91BD-0D8FFDF4F94F.mp4",
-    "words": 220,
+    "words": 219,
     "duration": 68.933333,
     "warnings": [
       "HDR (iPhone) source: converted to standard range.",
       "Audio is quiet (mean -32.5 dB): loudness is normalised, but background noise rises too.",
-      "4 low-confidence words (check names/jargon): code?(w18), code(w83), versus(w96), code,(w200)"
+      "5 low-confidence words (check names/jargon): Can(w0), beautiful(w16), code(w82), versus(w95), code,(w199)"
     ],
     "token": "a9a47dbb5f32e6e9"
   },
@@ -25,6 +25,11 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-23 09:26:36 UTC"
+    },
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-23 09:39:44 UTC"
     }
   ]
 }
