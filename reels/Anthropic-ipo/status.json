@@ -1,9 +1,9 @@
 {
   "slug": "Anthropic-ipo",
-  "stage": "prepare",
+  "stage": "preview",
   "ok": true,
-  "time": "2026-11-23 03:39:33 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45106726987",
+  "time": "2026-11-23 04:09:34 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45109523485",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Anthropic-ipo",
   "prepare": {
     "stage": "prepare",
@@ -24,6 +24,26 @@
       "stage": "prepare",
       "ok": true,
       "time": "2026-11-23 03:39:33 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-23 04:09:34 UTC"
     }
-  ]
+  ],
+  "preview": {
+    "stage": "preview",
+    "ok": true,
+    "time": "2026-11-23 04:09:34 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45109523485",
+    "hash": "aea1ad425a0bbe32",
+    "check": {
+      "parsed": false,
+      "raw_tail": "      \"fontPx\": 26,\n            \"time\": 47.558,\n            \"seconds\": 2.746\n          }\n        ]\n      },\n      {\n        \"code\": \"text_below_floor\",\n        \"severity\": \"warning\",\n        \"message\": \"Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 6 text elements stay under it for 0.5 s or more, the smallest \\\"Code\\\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.\",\n        \"text\": \"Code\",\n        \"selector\": \"#fu-i2\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/future.html\",\n        \"bbox\": {\n          \"x\": 687.88,\n          \"y\": 859.95,\n          \"width\": 64.63,\n          \"height\": 31.3\n        },\n        \"time\": 52.176,\n        \"times\": [\n          52.176,\n          52.301,\n          52.301,\n          53.425,\n          55.422,\n          55.921\n        ],\n        \"fontPx\": 22.4,\n        \"floorPx\": 28,\n        \"seconds\": 6.741,\n        \"elements\": [\n          {\n            \"selector\": \"#fu-i2\",\n            \"text\": \"Code\",\n            \"fontPx\": 22.4,\n            \"time\": 52.176,\n            \"seconds\": 6.741\n          },\n          {\n            \"selector\": \"#fu-i3\",\n            \"text\": \"Finance\",\n            \"fontPx\": 22.4,\n            \"time\": 52.301,\n            \"seconds\": 3.745\n          },\n          {\n            \"selector\": \"#fu-i1\",\n            \"text\": \"Support\",\n            \"fontPx\": 22.4,\n            \"time\": 53.425,\n            \"seconds\": 5.492\n          },\n          {\n            \"selector\": \"#fu-i0\",\n            \"text\": \"Sales\",\n            \"fontPx\": 23.84,\n            \"time\": 55.422,\n            \"seconds\": 3.495\n          },\n          {\n            \"selector\": \"#fu-i4\",\n            \"text\": \"Ops\",\n            \"fontPx\": 24.19,\n            \"time\": 52.301,\n            \"seconds\": 1.623\n          },\n          {\n            \"selector\": \"#fu-end > div:nth-of-type(1) > small:nth-of-type(1)\",\n            \"text\": \"WHO WINS NEXT?\",\n            \"fontPx\": 25.85,\n            \"time\": 55.921,\n            \"seconds\": 2.996\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 472\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"6873b8f9-ba51-447d-af84-b1a72d06fa2f\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/6873b8f9-ba51-447d-af84-b1a72d06fa2f.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/6873b8f9-ba51-447d-af84-b1a72d06fa2f.json\n"
+    },
+    "hf_version": "0.9.37",
+    "snapshot_ok": true,
+    "render_seconds": 168,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Anthropic-ipo/preview.mp4"
+  }
 }

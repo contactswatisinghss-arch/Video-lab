@@ -1,0 +1,1994 @@
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/6873b8f9-ba51-447d-af84-b1a72d06fa2f.json when the check ends, unless a warning says it could not be saved
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/inter)
+[INFO] [Compiler] Fetched 7 font face(s) for "EB Garamond" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/eb-garamond)
+[INFO] [Compiler] Injected deterministic @font-face rules for 3 requested font families
+[hyperframes] check: starting Chrome
+[hyperframes] check: loading the page
+[hyperframes] check: waiting for the page to be ready
+[hyperframes] check: checking samples
+[hyperframes] check: samples 1/9
+[hyperframes] check: samples 2/9
+[hyperframes] check: samples 3/9
+[hyperframes] check: samples 4/9
+[hyperframes] check: samples 5/9
+[hyperframes] check: samples 6/9
+[hyperframes] check: samples 7/9
+[hyperframes] check: samples 8/9
+[hyperframes] check: samples 9/9
+[hyperframes] check: running the overlap pass
+[hyperframes] check: craft 1/472
+[hyperframes] check: craft 2/472
+[hyperframes] check: craft 3/472
+[hyperframes] check: craft 4/472
+[hyperframes] check: craft 5/472
+[hyperframes] check: craft 6/472
+[hyperframes] check: craft 7/472
+[hyperframes] check: craft 8/472
+[hyperframes] check: craft 9/472
+[hyperframes] check: craft 10/472
+[hyperframes] check: craft 11/472
+[hyperframes] check: craft 12/472
+[hyperframes] check: craft 13/472
+[hyperframes] check: craft 14/472
+[hyperframes] check: craft 15/472
+[hyperframes] check: craft 16/472
+[hyperframes] check: craft 17/472
+[hyperframes] check: craft 18/472
+[hyperframes] check: craft 19/472
+[hyperframes] check: craft 20/472
+[hyperframes] check: craft 21/472
+[hyperframes] check: craft 22/472
+[hyperframes] check: craft 23/472
+[hyperframes] check: craft 24/472
+[hyperframes] check: craft 25/472
+[hyperframes] check: craft 26/472
+[hyperframes] check: craft 27/472
+[hyperframes] check: craft 28/472
+[hyperframes] check: craft 29/472
+[hyperframes] check: craft 30/472
+[hyperframes] check: craft 31/472
+[hyperframes] check: craft 32/472
+[hyperframes] check: craft 33/472
+[hyperframes] check: craft 34/472
+[hyperframes] check: craft 35/472
+[hyperframes] check: craft 36/472
+[hyperframes] check: craft 37/472
+[hyperframes] check: craft 38/472
+[hyperframes] check: craft 39/472
+[hyperframes] check: craft 40/472
+[hyperframes] check: craft 41/472
+[hyperframes] check: craft 42/472
+[hyperframes] check: craft 43/472
+[hyperframes] check: craft 44/472
+[hyperframes] check: craft 45/472
+[hyperframes] check: craft 46/472
+[hyperframes] check: craft 47/472
+[hyperframes] check: craft 48/472
+[hyperframes] check: craft 49/472
+[hyperframes] check: craft 50/472
+[hyperframes] check: craft 51/472
+[hyperframes] check: craft 52/472
+[hyperframes] check: craft 53/472
+[hyperframes] check: craft 54/472
+[hyperframes] check: craft 55/472
+[hyperframes] check: craft 56/472
+[hyperframes] check: craft 57/472
+[hyperframes] check: craft 58/472
+[hyperframes] check: craft 59/472
+[hyperframes] check: craft 60/472
+[hyperframes] check: craft 61/472
+[hyperframes] check: craft 62/472
+[hyperframes] check: craft 63/472
+[hyperframes] check: craft 64/472
+[hyperframes] check: craft 65/472
+[hyperframes] check: craft 66/472
+[hyperframes] check: craft 67/472
+[hyperframes] check: craft 68/472
+[hyperframes] check: craft 69/472
+[hyperframes] check: craft 70/472
+[hyperframes] check: craft 71/472
+[hyperframes] check: craft 72/472
+[hyperframes] check: craft 73/472
+[hyperframes] check: craft 74/472
+[hyperframes] check: craft 75/472
+[hyperframes] check: craft 76/472
+[hyperframes] check: craft 77/472
+[hyperframes] check: craft 78/472
+[hyperframes] check: craft 79/472
+[hyperframes] check: craft 80/472
+[hyperframes] check: craft 81/472
+[hyperframes] check: craft 82/472
+[hyperframes] check: craft 83/472
+[hyperframes] check: craft 84/472
+[hyperframes] check: craft 85/472
+[hyperframes] check: craft 86/472
+[hyperframes] check: craft 87/472
+[hyperframes] check: craft 88/472
+[hyperframes] check: craft 89/472
+[hyperframes] check: craft 90/472
+[hyperframes] check: craft 91/472
+[hyperframes] check: craft 92/472
+[hyperframes] check: craft 93/472
+[hyperframes] check: craft 94/472
+[hyperframes] check: craft 95/472
+[hyperframes] check: craft 96/472
+[hyperframes] check: craft 97/472
+[hyperframes] check: craft 98/472
+[hyperframes] check: craft 99/472
+[hyperframes] check: craft 100/472
+[hyperframes] check: craft 101/472
+[hyperframes] check: craft 102/472
+[hyperframes] check: craft 103/472
+[hyperframes] check: craft 104/472
+[hyperframes] check: craft 105/472
+[hyperframes] check: craft 106/472
+[hyperframes] check: craft 107/472
+[hyperframes] check: craft 108/472
+[hyperframes] check: craft 109/472
+[hyperframes] check: craft 110/472
+[hyperframes] check: craft 111/472
+[hyperframes] check: craft 112/472
+[hyperframes] check: craft 113/472
+[hyperframes] check: craft 114/472
+[hyperframes] check: craft 115/472
+[hyperframes] check: craft 116/472
+[hyperframes] check: craft 117/472
+[hyperframes] check: craft 118/472
+[hyperframes] check: craft 119/472
+[hyperframes] check: craft 120/472
+[hyperframes] check: craft 121/472
+[hyperframes] check: craft 122/472
+[hyperframes] check: craft 123/472
+[hyperframes] check: craft 124/472
+[hyperframes] check: craft 125/472
+[hyperframes] check: craft 126/472
+[hyperframes] check: craft 127/472
+[hyperframes] check: craft 128/472
+[hyperframes] check: craft 129/472
+[hyperframes] check: craft 130/472
+[hyperframes] check: craft 131/472
+[hyperframes] check: craft 132/472
+[hyperframes] check: craft 133/472
+[hyperframes] check: craft 134/472
+[hyperframes] check: craft 135/472
+[hyperframes] check: craft 136/472
+[hyperframes] check: craft 137/472
+[hyperframes] check: craft 138/472
+[hyperframes] check: craft 139/472
+[hyperframes] check: craft 140/472
+[hyperframes] check: craft 141/472
+[hyperframes] check: craft 142/472
+[hyperframes] check: craft 143/472
+[hyperframes] check: craft 144/472
+[hyperframes] check: craft 145/472
+[hyperframes] check: craft 146/472
+[hyperframes] check: craft 147/472
+[hyperframes] check: craft 148/472
+[hyperframes] check: craft 149/472
+[hyperframes] check: craft 150/472
+[hyperframes] check: craft 151/472
+[hyperframes] check: craft 152/472
+[hyperframes] check: craft 153/472
+[hyperframes] check: craft 154/472
+[hyperframes] check: craft 155/472
+[hyperframes] check: craft 156/472
+[hyperframes] check: craft 157/472
+[hyperframes] check: craft 158/472
+[hyperframes] check: craft 159/472
+[hyperframes] check: craft 160/472
+[hyperframes] check: craft 161/472
+[hyperframes] check: craft 162/472
+[hyperframes] check: craft 163/472
+[hyperframes] check: craft 164/472
+[hyperframes] check: craft 165/472
+[hyperframes] check: craft 166/472
+[hyperframes] check: craft 167/472
+[hyperframes] check: craft 168/472
+[hyperframes] check: craft 169/472
+[hyperframes] check: craft 170/472
+[hyperframes] check: craft 171/472
+[hyperframes] check: craft 172/472
+[hyperframes] check: craft 173/472
+[hyperframes] check: craft 174/472
+[hyperframes] check: craft 175/472
+[hyperframes] check: craft 176/472
+[hyperframes] check: craft 177/472
+[hyperframes] check: craft 178/472
+[hyperframes] check: craft 179/472
+[hyperframes] check: craft 180/472
+[hyperframes] check: craft 181/472
+[hyperframes] check: craft 182/472
+[hyperframes] check: craft 183/472
+[hyperframes] check: craft 184/472
+[hyperframes] check: craft 185/472
+[hyperframes] check: craft 186/472
+[hyperframes] check: craft 187/472
+[hyperframes] check: craft 188/472
+[hyperframes] check: craft 189/472
+[hyperframes] check: craft 190/472
+[hyperframes] check: craft 191/472
+[hyperframes] check: craft 192/472
+[hyperframes] check: craft 193/472
+[hyperframes] check: craft 194/472
+[hyperframes] check: craft 195/472
+[hyperframes] check: craft 196/472
+[hyperframes] check: craft 197/472
+[hyperframes] check: craft 198/472
+[hyperframes] check: craft 199/472
+[hyperframes] check: craft 200/472
+[hyperframes] check: craft 201/472
+[hyperframes] check: craft 202/472
+[hyperframes] check: craft 203/472
+[hyperframes] check: craft 204/472
+[hyperframes] check: craft 205/472
+[hyperframes] check: craft 206/472
+[hyperframes] check: craft 207/472
+[hyperframes] check: craft 208/472
+[hyperframes] check: craft 209/472
+[hyperframes] check: craft 210/472
+[hyperframes] check: craft 211/472
+[hyperframes] check: craft 212/472
+[hyperframes] check: craft 213/472
+[hyperframes] check: craft 214/472
+[hyperframes] check: craft 215/472
+[hyperframes] check: craft 216/472
+[hyperframes] check: craft 217/472
+[hyperframes] check: craft 218/472
+[hyperframes] check: craft 219/472
+[hyperframes] check: craft 220/472
+[hyperframes] check: craft 221/472
+[hyperframes] check: craft 222/472
+[hyperframes] check: craft 223/472
+[hyperframes] check: craft 224/472
+[hyperframes] check: craft 225/472
+[hyperframes] check: craft 226/472
+[hyperframes] check: craft 227/472
+[hyperframes] check: craft 228/472
+[hyperframes] check: craft 229/472
+[hyperframes] check: craft 230/472
+[hyperframes] check: craft 231/472
+[hyperframes] check: craft 232/472
+[hyperframes] check: craft 233/472
+[hyperframes] check: craft 234/472
+[hyperframes] check: craft 235/472
+[hyperframes] check: craft 236/472
+[hyperframes] check: craft 237/472
+[hyperframes] check: craft 238/472
+[hyperframes] check: craft 239/472
+[hyperframes] check: craft 240/472
+[hyperframes] check: craft 241/472
+[hyperframes] check: craft 242/472
+[hyperframes] check: craft 243/472
+[hyperframes] check: craft 244/472
+[hyperframes] check: craft 245/472
+[hyperframes] check: craft 246/472
+[hyperframes] check: craft 247/472
+[hyperframes] check: craft 248/472
+[hyperframes] check: craft 249/472
+[hyperframes] check: craft 250/472
+[hyperframes] check: craft 251/472
+[hyperframes] check: craft 252/472
+[hyperframes] check: craft 253/472
+[hyperframes] check: craft 254/472
+[hyperframes] check: craft 255/472
+[hyperframes] check: craft 256/472
+[hyperframes] check: craft 257/472
+[hyperframes] check: craft 258/472
+[hyperframes] check: craft 259/472
+[hyperframes] check: craft 260/472
+[hyperframes] check: craft 261/472
+[hyperframes] check: craft 262/472
+[hyperframes] check: craft 263/472
+[hyperframes] check: craft 264/472
+[hyperframes] check: craft 265/472
+[hyperframes] check: craft 266/472
+[hyperframes] check: craft 267/472
+[hyperframes] check: craft 268/472
+[hyperframes] check: craft 269/472
+[hyperframes] check: craft 270/472
+[hyperframes] check: craft 271/472
+[hyperframes] check: craft 272/472
+[hyperframes] check: craft 273/472
+[hyperframes] check: craft 274/472
+[hyperframes] check: craft 275/472
+[hyperframes] check: craft 276/472
+[hyperframes] check: craft 277/472
+[hyperframes] check: craft 278/472
+[hyperframes] check: craft 279/472
+[hyperframes] check: craft 280/472
+[hyperframes] check: craft 281/472
+[hyperframes] check: craft 282/472
+[hyperframes] check: craft 283/472
+[hyperframes] check: craft 284/472
+[hyperframes] check: craft 285/472
+[hyperframes] check: craft 286/472
+[hyperframes] check: craft 287/472
+[hyperframes] check: craft 288/472
+[hyperframes] check: craft 289/472
+[hyperframes] check: craft 290/472
+[hyperframes] check: craft 291/472
+[hyperframes] check: craft 292/472
+[hyperframes] check: craft 293/472
+[hyperframes] check: craft 294/472
+[hyperframes] check: craft 295/472
+[hyperframes] check: craft 296/472
+[hyperframes] check: craft 297/472
+[hyperframes] check: craft 298/472
+[hyperframes] check: craft 299/472
+[hyperframes] check: craft 300/472
+[hyperframes] check: craft 301/472
+[hyperframes] check: craft 302/472
+[hyperframes] check: craft 303/472
+[hyperframes] check: craft 304/472
+[hyperframes] check: craft 305/472
+[hyperframes] check: craft 306/472
+[hyperframes] check: craft 307/472
+[hyperframes] check: craft 308/472
+[hyperframes] check: craft 309/472
+[hyperframes] check: craft 310/472
+[hyperframes] check: craft 311/472
+[hyperframes] check: craft 312/472
+[hyperframes] check: craft 313/472
+[hyperframes] check: craft 314/472
+[hyperframes] check: craft 315/472
+[hyperframes] check: craft 316/472
+[hyperframes] check: craft 317/472
+[hyperframes] check: craft 318/472
+[hyperframes] check: craft 319/472
+[hyperframes] check: craft 320/472
+[hyperframes] check: craft 321/472
+[hyperframes] check: craft 322/472
+[hyperframes] check: craft 323/472
+[hyperframes] check: craft 324/472
+[hyperframes] check: craft 325/472
+[hyperframes] check: craft 326/472
+[hyperframes] check: craft 327/472
+[hyperframes] check: craft 328/472
+[hyperframes] check: craft 329/472
+[hyperframes] check: craft 330/472
+[hyperframes] check: craft 331/472
+[hyperframes] check: craft 332/472
+[hyperframes] check: craft 333/472
+[hyperframes] check: craft 334/472
+[hyperframes] check: craft 335/472
+[hyperframes] check: craft 336/472
+[hyperframes] check: craft 337/472
+[hyperframes] check: craft 338/472
+[hyperframes] check: craft 339/472
+[hyperframes] check: craft 340/472
+[hyperframes] check: craft 341/472
+[hyperframes] check: craft 342/472
+[hyperframes] check: craft 343/472
+[hyperframes] check: craft 344/472
+[hyperframes] check: craft 345/472
+[hyperframes] check: craft 346/472
+[hyperframes] check: craft 347/472
+[hyperframes] check: craft 348/472
+[hyperframes] check: craft 349/472
+[hyperframes] check: craft 350/472
+[hyperframes] check: craft 351/472
+[hyperframes] check: craft 352/472
+[hyperframes] check: craft 353/472
+[hyperframes] check: craft 354/472
+[hyperframes] check: craft 355/472
+[hyperframes] check: craft 356/472
+[hyperframes] check: craft 357/472
+[hyperframes] check: craft 358/472
+[hyperframes] check: craft 359/472
+[hyperframes] check: craft 360/472
+[hyperframes] check: craft 361/472
+[hyperframes] check: craft 362/472
+[hyperframes] check: craft 363/472
+[hyperframes] check: craft 364/472
+[hyperframes] check: craft 365/472
+[hyperframes] check: craft 366/472
+[hyperframes] check: craft 367/472
+[hyperframes] check: craft 368/472
+[hyperframes] check: craft 369/472
+[hyperframes] check: craft 370/472
+[hyperframes] check: craft 371/472
+[hyperframes] check: craft 372/472
+[hyperframes] check: craft 373/472
+[hyperframes] check: craft 374/472
+[hyperframes] check: craft 375/472
+[hyperframes] check: craft 376/472
+[hyperframes] check: craft 377/472
+[hyperframes] check: craft 378/472
+[hyperframes] check: craft 379/472
+[hyperframes] check: craft 380/472
+[hyperframes] check: craft 381/472
+[hyperframes] check: craft 382/472
+[hyperframes] check: craft 383/472
+[hyperframes] check: craft 384/472
+[hyperframes] check: craft 385/472
+[hyperframes] check: craft 386/472
+[hyperframes] check: craft 387/472
+[hyperframes] check: craft 388/472
+[hyperframes] check: craft 389/472
+[hyperframes] check: craft 390/472
+[hyperframes] check: craft 391/472
+[hyperframes] check: craft 392/472
+[hyperframes] check: craft 393/472
+[hyperframes] check: craft 394/472
+[hyperframes] check: craft 395/472
+[hyperframes] check: craft 396/472
+[hyperframes] check: craft 397/472
+[hyperframes] check: craft 398/472
+[hyperframes] check: craft 399/472
+[hyperframes] check: craft 400/472
+[hyperframes] check: craft 401/472
+[hyperframes] check: craft 402/472
+[hyperframes] check: craft 403/472
+[hyperframes] check: craft 404/472
+[hyperframes] check: craft 405/472
+[hyperframes] check: craft 406/472
+[hyperframes] check: craft 407/472
+[hyperframes] check: craft 408/472
+[hyperframes] check: craft 409/472
+[hyperframes] check: craft 410/472
+[hyperframes] check: craft 411/472
+[hyperframes] check: craft 412/472
+[hyperframes] check: craft 413/472
+[hyperframes] check: craft 414/472
+[hyperframes] check: craft 415/472
+[hyperframes] check: craft 416/472
+[hyperframes] check: craft 417/472
+[hyperframes] check: craft 418/472
+[hyperframes] check: craft 419/472
+[hyperframes] check: craft 420/472
+[hyperframes] check: craft 421/472
+[hyperframes] check: craft 422/472
+[hyperframes] check: craft 423/472
+[hyperframes] check: craft 424/472
+[hyperframes] check: craft 425/472
+[hyperframes] check: craft 426/472
+[hyperframes] check: craft 427/472
+[hyperframes] check: craft 428/472
+[hyperframes] check: craft 429/472
+[hyperframes] check: craft 430/472
+[hyperframes] check: craft 431/472
+[hyperframes] check: craft 432/472
+[hyperframes] check: craft 433/472
+[hyperframes] check: craft 434/472
+[hyperframes] check: craft 435/472
+[hyperframes] check: craft 436/472
+[hyperframes] check: craft 437/472
+[hyperframes] check: craft 438/472
+[hyperframes] check: craft 439/472
+[hyperframes] check: craft 440/472
+[hyperframes] check: craft 441/472
+[hyperframes] check: craft 442/472
+[hyperframes] check: craft 443/472
+[hyperframes] check: craft 444/472
+[hyperframes] check: craft 445/472
+[hyperframes] check: craft 446/472
+[hyperframes] check: craft 447/472
+[hyperframes] check: craft 448/472
+[hyperframes] check: craft 449/472
+[hyperframes] check: craft 450/472
+[hyperframes] check: craft 451/472
+[hyperframes] check: craft 452/472
+[hyperframes] check: craft 453/472
+[hyperframes] check: craft 454/472
+[hyperframes] check: craft 455/472
+[hyperframes] check: craft 456/472
+[hyperframes] check: craft 457/472
+[hyperframes] check: craft 458/472
+[hyperframes] check: craft 459/472
+[hyperframes] check: craft 460/472
+[hyperframes] check: craft 461/472
+[hyperframes] check: craft 462/472
+[hyperframes] check: craft 463/472
+[hyperframes] check: craft 464/472
+[hyperframes] check: craft 465/472
+[hyperframes] check: craft 466/472
+[hyperframes] check: craft 467/472
+[hyperframes] check: craft 468/472
+[hyperframes] check: craft 469/472
+[hyperframes] check: craft 470/472
+[hyperframes] check: craft 471/472
+[hyperframes] check: craft 472/472
+[hyperframes] check: overlap 1/23
+[hyperframes] check: overlap 2/23
+[hyperframes] check: overlap 3/23
+[hyperframes] check: overlap 4/23
+[hyperframes] check: overlap 5/23
+[hyperframes] check: overlap 6/23
+[hyperframes] check: overlap 7/23
+[hyperframes] check: overlap 8/23
+[hyperframes] check: overlap 9/23
+[hyperframes] check: overlap 10/23
+[hyperframes] check: overlap 11/23
+[hyperframes] check: overlap 12/23
+[hyperframes] check: overlap 13/23
+[hyperframes] check: overlap 14/23
+[hyperframes] check: overlap 15/23
+[hyperframes] check: overlap 16/23
+[hyperframes] check: overlap 17/23
+[hyperframes] check: overlap 18/23
+[hyperframes] check: overlap 19/23
+[hyperframes] check: overlap 20/23
+[hyperframes] check: overlap 21/23
+[hyperframes] check: overlap 22/23
+[hyperframes] check: overlap 23/23
+[hyperframes] check: checking samples
+[hyperframes] check: analyze 0/3
+[hyperframes] check: analyzing the samples
+[hyperframes] check: analyze 1/3
+[hyperframes] check: analyze 2/3
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_callback_dom_measurement",
+        "severity": "warning",
+        "message": "Timeline callback reaches DOM measurement (getBoundingClientRect/getTotalLength/getComputedStyle/...). The renderer seeks with suppressEvents=false, so callbacks re-fire on every seek, and a cold render worker runs them against whatever DOM state its own non-linear seek order produced. Measured geometry is seek-order-dependent, and values measured at build time (before the callback ran) are stale or zero.",
+        "selector": "onUpdate: place",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/compositions/future.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Do all measurement and DOM setup synchronously at build time, before registering the timeline, or derive geometry from fixed composition coordinates instead of measuring."
+      },
+      {
+        "code": "svg_round_cap_hidden_dash",
+        "severity": "warning",
+        "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+        "selector": "#sk-up",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/compositions/stock.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
+      },
+      {
+        "code": "svg_round_cap_hidden_dash",
+        "severity": "warning",
+        "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+        "selector": "#sk-dn",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/compositions/stock.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
+      }
+    ],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 2,
+    "findings": [
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 55.644,
+        "selector": "#fu-i3",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1030.94,
+          "top": 930.07,
+          "right": 1131.56,
+          "bottom": 962.81,
+          "width": 100.62,
+          "height": 32.74
+        },
+        "containerSelector": "#root",
+        "text": "Finance",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 51.56
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/future.html",
+        "bbox": {
+          "x": 1030.94,
+          "y": 930.07,
+          "width": 100.62,
+          "height": 32.74
+        },
+        "firstSeen": 55.644,
+        "lastSeen": 55.644,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          55.644
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 55.644,
+        "selector": "#fu-i3",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1015.53,
+          "top": 920.45,
+          "right": 1146.97,
+          "bottom": 972.44,
+          "width": 131.44,
+          "height": 51.99
+        },
+        "containerSelector": "#fu-orb",
+        "text": "Finance",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 690,
+          "top": 620,
+          "right": 1050,
+          "bottom": 1140,
+          "width": 360,
+          "height": 520
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/future.html",
+        "bbox": {
+          "x": 1015.53,
+          "y": 920.45,
+          "width": 131.44,
+          "height": 51.99
+        },
+        "firstSeen": 55.644,
+        "lastSeen": 55.644,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          55.644
+        ]
+      }
+    ],
+    "duration": 58.917,
+    "samples": [
+      3.273,
+      9.82,
+      16.366,
+      22.912,
+      29.459,
+      36.005,
+      42.551,
+      49.098,
+      55.644
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 2,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 9,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "IPO",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(19,159,106)",
+        "large": true,
+        "selector": "div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 688.015625,
+          "y": 243,
+          "width": 175.5,
+          "height": 136
+        },
+        "time": 3.273,
+        "times": [
+          3.273
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "$81B",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(19,159,106)",
+        "large": true,
+        "selector": "#hk-num",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 670,
+          "y": 588,
+          "width": 328.609375,
+          "height": 150
+        },
+        "time": 3.273,
+        "times": [
+          3.273
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "B2B",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(19,159,106)",
+        "large": true,
+        "selector": "div > div:nth-of-type(6) > div > div:nth-of-type(1) > span > b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/path.html",
+        "bbox": {
+          "x": 433.75,
+          "y": 212,
+          "width": 160.359375,
+          "height": 106
+        },
+        "time": 29.459,
+        "times": [
+          29.459
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "~250",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(19,159,106)",
+        "large": true,
+        "selector": "#tr-big",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tiers.html",
+        "bbox": {
+          "x": 150,
+          "y": 194,
+          "width": 780,
+          "height": 150
+        },
+        "time": 42.551,
+        "times": [
+          42.551
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "$10M+",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(19,159,106)",
+        "large": true,
+        "selector": "div > div:nth-of-type(7) > div > div:nth-of-type(1) > div:nth-of-type(2) > b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tiers.html",
+        "bbox": {
+          "x": 588.0625,
+          "y": 340,
+          "width": 140.984375,
+          "height": 51
+        },
+        "time": 42.551,
+        "times": [
+          42.551
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.57:1; WCAG AA requires 3:1.",
+        "text": "~250",
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(22,184,122)",
+        "ratio": 2.57,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(82,82,82)",
+        "large": true,
+        "selector": "#tr-b3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tiers.html",
+        "bbox": {
+          "x": 708,
+          "y": 960,
+          "width": 150,
+          "height": 70
+        },
+        "time": 42.551,
+        "times": [
+          42.551
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.89:1; WCAG AA requires 4.5:1.",
+        "text": "Source: Anthropic IPO filing",
+        "fg": "rgb(138,143,152)",
+        "bg": "rgb(246,241,231)",
+        "ratio": 2.89,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(107,110,117)",
+        "large": false,
+        "selector": "#tr-src",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tiers.html",
+        "bbox": {
+          "x": 708,
+          "y": 1155,
+          "width": 302.40625,
+          "height": 23
+        },
+        "time": 42.551,
+        "times": [
+          42.551
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.08:1; WCAG AA requires 3:1.",
+        "text": "centre",
+        "fg": "rgb(22,184,122)",
+        "bg": "rgb(240,230,218)",
+        "ratio": 2.08,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(18,151,100)",
+        "large": true,
+        "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(1) > span > b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/future.html",
+        "bbox": {
+          "x": 573.03125,
+          "y": 202.9674072265625,
+          "width": 224.5,
+          "height": 92
+        },
+        "time": 55.644,
+        "times": [
+          55.644
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.57:1; WCAG AA requires 3:1.",
+        "text": "AI",
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(22,184,122)",
+        "ratio": 2.57,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(82,82,82)",
+        "large": true,
+        "selector": "#fu-core",
+        "dataAttributes": {},
+        "sourceFile": "compositions/future.html",
+        "bbox": {
+          "x": 800,
+          "y": 810,
+          "width": 140,
+          "height": 140
+        },
+        "time": 55.644,
+        "times": [
+          55.644
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      3.273,
+      16.366,
+      29.459,
+      42.551,
+      55.644
+    ],
+    "checked": 50,
+    "passed": 41
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 15,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"RAISED IN THE IPO\" renders at 26 px for 2.25 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "RAISED IN THE IPO",
+        "selector": "#hk-lab",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 674,
+          "y": 746,
+          "width": 309.41,
+          "height": 35
+        },
+        "time": 1.498,
+        "times": [
+          1.498
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 2.247,
+        "elements": [
+          {
+            "selector": "#hk-lab",
+            "text": "RAISED IN THE IPO",
+            "fontPx": 26,
+            "time": 1.498,
+            "seconds": 2.247
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"MARKETPLACE\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "MARKETPLACE",
+        "selector": "#nw-c1 > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/news.html",
+        "bbox": {
+          "x": 113.33,
+          "y": 229.37,
+          "width": 203.58,
+          "height": 37
+        },
+        "time": 4.494,
+        "times": [
+          4.494,
+          5.118,
+          6.116
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 2.996,
+        "elements": [
+          {
+            "selector": "#nw-c1 > small:nth-of-type(1)",
+            "text": "MARKETPLACE",
+            "fontPx": 24,
+            "time": 4.494,
+            "seconds": 2.996
+          },
+          {
+            "selector": "#nw-c2 > small:nth-of-type(1)",
+            "text": "FORBES",
+            "fontPx": 24,
+            "time": 5.118,
+            "seconds": 2.372
+          },
+          {
+            "selector": "#nw-c3 > small:nth-of-type(1)",
+            "text": "INC.",
+            "fontPx": 24,
+            "time": 6.116,
+            "seconds": 1.374
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"FORBES Anthropic’s $81 Billion IPO: 7 key facts about the...\" (12 words) is on screen 2.47 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "FORBES Anthropic’s $81 Billion IPO: 7 key facts about the AI giant",
+        "selector": "#nw-c2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/news.html",
+        "bbox": {
+          "x": 116.79,
+          "y": 611.72,
+          "width": 751.81,
+          "height": 127.02999999999997
+        },
+        "time": 5.001,
+        "words": 12,
+        "seconds": 2.473,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 4.743,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 4.868,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 4.993,
+            "opacity": 0.49,
+            "heightPx": 160
+          },
+          {
+            "time": 5.118,
+            "opacity": 0.98,
+            "heightPx": 127
+          },
+          {
+            "time": 5.243,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 5.367,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 5.492,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 6.99,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 7.115,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 7.24,
+            "opacity": 1,
+            "heightPx": 126
+          },
+          {
+            "time": 7.365,
+            "opacity": 1,
+            "heightPx": 117
+          },
+          {
+            "time": 7.489,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.614,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.739,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"INC. Anthropic’s IPO could create thousands of millionair...\" (14 words) is on screen 1.44 s (±0.01 s), under its 3.53 s floor: hold it about 0.5 s + 0.3 s a word (4.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "INC. Anthropic’s IPO could create thousands of millionaires. But most can’t cash out yet",
+        "selector": "#nw-c3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/news.html",
+        "bbox": {
+          "x": 99.18,
+          "y": 971.91,
+          "width": 770.0999999999999,
+          "height": 193.86
+        },
+        "time": 6.07,
+        "words": 14,
+        "seconds": 1.435,
+        "floorSeconds": 3.525,
+        "measured": [
+          {
+            "time": 5.742,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 5.867,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 5.992,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 6.116,
+            "opacity": 0.81,
+            "heightPx": 194
+          },
+          {
+            "time": 6.241,
+            "opacity": 1,
+            "heightPx": 181
+          },
+          {
+            "time": 6.366,
+            "opacity": 1,
+            "heightPx": 180
+          },
+          {
+            "time": 6.491,
+            "opacity": 1,
+            "heightPx": 180
+          },
+          {
+            "time": 7.115,
+            "opacity": 1,
+            "heightPx": 180
+          },
+          {
+            "time": 7.24,
+            "opacity": 1,
+            "heightPx": 180
+          },
+          {
+            "time": 7.365,
+            "opacity": 1,
+            "heightPx": 182
+          },
+          {
+            "time": 7.489,
+            "opacity": 1,
+            "heightPx": 220
+          },
+          {
+            "time": 7.614,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.739,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 7.864,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"Summarise this contract for me\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Summarise this contract for me",
+        "selector": "#wt-u",
+        "dataAttributes": {},
+        "sourceFile": "compositions/what.html",
+        "bbox": {
+          "x": 768.45,
+          "y": 700.29,
+          "width": 172.51,
+          "height": 66.48
+        },
+        "time": 11.609,
+        "times": [
+          11.609,
+          12.233
+        ],
+        "fontPx": 23.64,
+        "floorPx": 28,
+        "seconds": 2.496,
+        "elements": [
+          {
+            "selector": "#wt-u",
+            "text": "Summarise this contract for me",
+            "fontPx": 23.64,
+            "time": 11.609,
+            "seconds": 2.496
+          },
+          {
+            "selector": "#wt-a",
+            "text": "Here are the 3 clauses that matter most…",
+            "fontPx": 23.64,
+            "time": 12.233,
+            "seconds": 1.872
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Here are the 3 clauses that matter most…\" (8 words) is on screen 1.90 s (±0.01 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Here are the 3 clauses that matter most…",
+        "selector": "#wt-a",
+        "dataAttributes": {},
+        "sourceFile": "compositions/what.html",
+        "bbox": {
+          "x": 748.58,
+          "y": 840.29,
+          "width": 214.98000000000002,
+          "height": 90.55999999999995
+        },
+        "time": 12.139,
+        "words": 8,
+        "seconds": 1.895,
+        "floorSeconds": 2.175,
+        "measured": [
+          {
+            "time": 11.858,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 11.983,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 12.108,
+            "opacity": 0.28,
+            "heightPx": 90
+          },
+          {
+            "time": 12.233,
+            "opacity": 0.93,
+            "heightPx": 91
+          },
+          {
+            "time": 12.358,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 12.482,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 12.607,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.606,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.731,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.855,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.98,
+            "opacity": 0.91,
+            "heightPx": 91
+          },
+          {
+            "time": 14.105,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 14.23,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 14.355,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"AI assistant, like ChatGPT\" (4 words) is on screen 1.23 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "AI assistant, like ChatGPT",
+        "selector": "#wt-tag",
+        "dataAttributes": {},
+        "sourceFile": "compositions/what.html",
+        "bbox": {
+          "x": 743.78,
+          "y": 1227.63,
+          "width": 250.33000000000004,
+          "height": 89.49000000000001
+        },
+        "time": 12.802,
+        "words": 4,
+        "seconds": 1.232,
+        "floorSeconds": 1.275,
+        "measured": [
+          {
+            "time": 12.482,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 12.607,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 12.732,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 12.857,
+            "opacity": 0.85,
+            "heightPx": 89
+          },
+          {
+            "time": 12.982,
+            "opacity": 1,
+            "heightPx": 92
+          },
+          {
+            "time": 13.107,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.231,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.606,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.731,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.855,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 13.98,
+            "opacity": 0.91,
+            "heightPx": 91
+          },
+          {
+            "time": 14.105,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 14.23,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 14.355,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"B2C · YOU & ME\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "B2C · YOU & ME",
+        "selector": "#bb-c > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/b2b.html",
+        "bbox": {
+          "x": 734.84,
+          "y": 644,
+          "width": 221.76,
+          "height": 29
+        },
+        "time": 19.847,
+        "times": [
+          19.847,
+          21.22
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 2.247,
+        "elements": [
+          {
+            "selector": "#bb-c > small:nth-of-type(1)",
+            "text": "B2C · YOU & ME",
+            "fontPx": 22,
+            "time": 19.847,
+            "seconds": 2.247
+          },
+          {
+            "selector": "#bb-b > small:nth-of-type(1)",
+            "text": "B2B · BUSINESSES",
+            "fontPx": 22,
+            "time": 21.22,
+            "seconds": 0.874
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"where the money is\" (4 words) is on screen 0.83 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "where the money is",
+        "selector": "#bb-b > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/b2b.html",
+        "bbox": {
+          "x": 752.96,
+          "y": 917,
+          "width": 188.25,
+          "height": 91
+        },
+        "time": 21.204,
+        "words": 4,
+        "seconds": 0.835,
+        "floorSeconds": 1.275,
+        "measured": [
+          {
+            "time": 20.846,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 20.97,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.095,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 21.22,
+            "opacity": 0.69,
+            "heightPx": 91
+          },
+          {
+            "time": 21.345,
+            "opacity": 0.99,
+            "heightPx": 91
+          },
+          {
+            "time": 21.47,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 21.595,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 21.719,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 21.844,
+            "opacity": 1,
+            "heightPx": 91
+          },
+          {
+            "time": 21.969,
+            "opacity": 0.89,
+            "heightPx": 91
+          },
+          {
+            "time": 22.094,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 22.219,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 22.344,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 4 text elements stay under it for 0.5 s or more, the smallest \"AMAZON\" at 18 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "AMAZON",
+        "selector": "#pt-aws > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/path.html",
+        "bbox": {
+          "x": 729.37,
+          "y": 660,
+          "width": 73.45,
+          "height": 23
+        },
+        "time": 26.213,
+        "times": [
+          26.213,
+          26.962,
+          27.461,
+          29.583
+        ],
+        "fontPx": 18,
+        "floorPx": 28,
+        "seconds": 10.735,
+        "elements": [
+          {
+            "selector": "#pt-aws > small:nth-of-type(1)",
+            "text": "AMAZON",
+            "fontPx": 18,
+            "time": 26.213,
+            "seconds": 10.735
+          },
+          {
+            "selector": "#pt-gcp > small:nth-of-type(1)",
+            "text": "GOOGLE CLOUD",
+            "fontPx": 18,
+            "time": 26.962,
+            "seconds": 9.986
+          },
+          {
+            "selector": "#pt-az > small:nth-of-type(1)",
+            "text": "MICROSOFT",
+            "fontPx": 18,
+            "time": 27.461,
+            "seconds": 9.487
+          },
+          {
+            "selector": "#pt-run",
+            "text": "where businesses already run",
+            "fontPx": 22,
+            "time": 29.583,
+            "seconds": 7.365
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"Source: Anthropic IPO filing\" at 18 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Source: Anthropic IPO filing",
+        "selector": "#tr-src",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tiers.html",
+        "bbox": {
+          "x": 732.79,
+          "y": 1155,
+          "width": 302.41,
+          "height": 23
+        },
+        "time": 38.82,
+        "times": [
+          38.82,
+          38.82,
+          38.82,
+          38.82,
+          38.82
+        ],
+        "fontPx": 18,
+        "floorPx": 28,
+        "seconds": 4.494,
+        "elements": [
+          {
+            "selector": "#tr-src",
+            "text": "Source: Anthropic IPO filing",
+            "fontPx": 18,
+            "time": 38.82,
+            "seconds": 4.494
+          },
+          {
+            "selector": "#tr-k",
+            "text": "BIG-SPENDING CUSTOMERS",
+            "fontPx": 20,
+            "time": 38.82,
+            "seconds": 4.494
+          },
+          {
+            "selector": "#tr-panel > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "pay $100K+ a year",
+            "fontPx": 24,
+            "time": 38.82,
+            "seconds": 4.494
+          },
+          {
+            "selector": "#tr-panel > div:nth-of-type(3) > div:nth-of-type(2)",
+            "text": "pay $1M+ a year",
+            "fontPx": 24,
+            "time": 38.82,
+            "seconds": 4.494
+          },
+          {
+            "selector": "#tr-panel > div:nth-of-type(4) > div:nth-of-type(2)",
+            "text": "pay $10M+ a year",
+            "fontPx": 24,
+            "time": 38.82,
+            "seconds": 4.494
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 4 text elements stay under it for 0.5 s or more, the smallest \"IPO PRICE $83\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "IPO PRICE $83",
+        "selector": "#sk-svg > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stock.html",
+        "bbox": {
+          "x": 80,
+          "y": 1089.27,
+          "width": 183.05,
+          "height": 29
+        },
+        "time": 43.439,
+        "times": [
+          43.439,
+          44.437,
+          45.686,
+          46.185
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 3.994,
+        "elements": [
+          {
+            "selector": "#sk-svg > text:nth-of-type(1)",
+            "text": "IPO PRICE $83",
+            "fontPx": 22,
+            "time": 43.439,
+            "seconds": 3.994
+          },
+          {
+            "selector": "#sk-p1 > text:nth-of-type(2)",
+            "text": "FIRST TRADE",
+            "fontPx": 22,
+            "time": 44.437,
+            "seconds": 2.996
+          },
+          {
+            "selector": "#sk-p2 > text:nth-of-type(2)",
+            "text": "DAY-1 CLOSE",
+            "fontPx": 22,
+            "time": 45.686,
+            "seconds": 1.747
+          },
+          {
+            "selector": "#sk-p3 > text:nth-of-type(2)",
+            "text": "FRIDAY · TECH SELL-OFF",
+            "fontPx": 22,
+            "time": 46.185,
+            "seconds": 1.248
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Still above the $83 IPO price: investors are betting on t...\" (13 words) is on screen 1.04 s (±0.01 s), under its 3.30 s floor: hold it about 0.5 s + 0.3 s a word (4.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Still above the $83 IPO price: investors are betting on the long run.",
+        "selector": "#sk-foot",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stock.html",
+        "bbox": {
+          "x": 60,
+          "y": 1230.14,
+          "width": 904.19,
+          "height": 81.79999999999995
+        },
+        "time": 46.333,
+        "words": 13,
+        "seconds": 1.037,
+        "floorSeconds": 3.3,
+        "measured": [
+          {
+            "time": 46.06,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 46.185,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 46.31,
+            "opacity": 0.24,
+            "heightPx": 82
+          },
+          {
+            "time": 46.435,
+            "opacity": 0.94,
+            "heightPx": 82
+          },
+          {
+            "time": 46.559,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 46.684,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 46.809,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 46.934,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 47.059,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 47.184,
+            "opacity": 1,
+            "heightPx": 82
+          },
+          {
+            "time": 47.308,
+            "opacity": 0.78,
+            "heightPx": 82
+          },
+          {
+            "time": 47.433,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 47.558,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 47.683,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"Claude-trained teams\" at 20 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Claude-trained teams",
+        "selector": "#ad-1 > small:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/adopt.html",
+        "bbox": {
+          "x": 753.78,
+          "y": 622.89,
+          "width": 264.98,
+          "height": 39.26
+        },
+        "time": 47.808,
+        "times": [
+          47.558,
+          47.808,
+          48.307,
+          48.681,
+          49.181
+        ],
+        "fontPx": 20,
+        "floorPx": 28,
+        "seconds": 2.496,
+        "elements": [
+          {
+            "selector": "#ad-1 > small:nth-of-type(1)",
+            "text": "Claude-trained teams",
+            "fontPx": 20,
+            "time": 47.808,
+            "seconds": 2.496
+          },
+          {
+            "selector": "#ad-2 > small:nth-of-type(1)",
+            "text": "Claude partner",
+            "fontPx": 20,
+            "time": 48.307,
+            "seconds": 1.997
+          },
+          {
+            "selector": "#ad-3 > small:nth-of-type(1)",
+            "text": "expanded partnership",
+            "fontPx": 20,
+            "time": 48.681,
+            "seconds": 1.748
+          },
+          {
+            "selector": "#ad-4 > small:nth-of-type(1)",
+            "text": "enterprise customer",
+            "fontPx": 20,
+            "time": 49.181,
+            "seconds": 1.248
+          },
+          {
+            "selector": "#ad-s",
+            "text": "IS A $100K+ CUSTOMER · IPO FILING",
+            "fontPx": 26,
+            "time": 47.558,
+            "seconds": 2.746
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 6 text elements stay under it for 0.5 s or more, the smallest \"Code\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Code",
+        "selector": "#fu-i2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/future.html",
+        "bbox": {
+          "x": 687.88,
+          "y": 859.95,
+          "width": 64.63,
+          "height": 31.3
+        },
+        "time": 52.176,
+        "times": [
+          52.176,
+          52.301,
+          52.301,
+          53.425,
+          55.422,
+          55.921
+        ],
+        "fontPx": 22.4,
+        "floorPx": 28,
+        "seconds": 6.741,
+        "elements": [
+          {
+            "selector": "#fu-i2",
+            "text": "Code",
+            "fontPx": 22.4,
+            "time": 52.176,
+            "seconds": 6.741
+          },
+          {
+            "selector": "#fu-i3",
+            "text": "Finance",
+            "fontPx": 22.4,
+            "time": 52.301,
+            "seconds": 3.745
+          },
+          {
+            "selector": "#fu-i1",
+            "text": "Support",
+            "fontPx": 22.4,
+            "time": 53.425,
+            "seconds": 5.492
+          },
+          {
+            "selector": "#fu-i0",
+            "text": "Sales",
+            "fontPx": 23.84,
+            "time": 55.422,
+            "seconds": 3.495
+          },
+          {
+            "selector": "#fu-i4",
+            "text": "Ops",
+            "fontPx": 24.19,
+            "time": 52.301,
+            "seconds": 1.623
+          },
+          {
+            "selector": "#fu-end > div:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "WHO WINS NEXT?",
+            "fontPx": 25.85,
+            "time": 55.921,
+            "seconds": 2.996
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 472
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "6873b8f9-ba51-447d-af84-b1a72d06fa2f",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/6873b8f9-ba51-447d-af84-b1a72d06fa2f.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.37",
+    "updateAvailable": false
+  }
+}
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Anthropic-ipo/.hyperframes/artifacts/checks/6873b8f9-ba51-447d-af84-b1a72d06fa2f.json
