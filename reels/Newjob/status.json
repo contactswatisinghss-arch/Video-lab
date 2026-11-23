@@ -1,9 +1,9 @@
 {
   "slug": "Newjob",
-  "stage": "preview",
+  "stage": "broll",
   "ok": true,
-  "time": "2026-11-23 17:27:28 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45224934424",
+  "time": "2026-11-23 23:18:55 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45285452333",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Newjob",
   "prepare": {
     "stage": "prepare",
@@ -35,6 +35,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-23 17:27:28 UTC"
+    },
+    {
+      "stage": "broll",
+      "ok": true,
+      "time": "2026-11-23 23:18:55 UTC"
     }
   ],
   "preview": {
@@ -51,5 +56,23 @@
     "snapshot_ok": true,
     "render_seconds": 143,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Newjob/preview.mp4"
+  },
+  "broll": {
+    "stage": "broll",
+    "ok": true,
+    "time": "2026-11-23 23:18:55 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45285452333",
+    "hash": "fabbd6176413a6cd",
+    "count": 15,
+    "pixabay": false,
+    "notes": [
+      "laptop: no usable result for 'programmer laptop code screen'",
+      "broll-sf-3.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)",
+      "broll-interview-2.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)",
+      "broll-interview-2.jpg: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)",
+      "broll-handshake-3.jpg: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)",
+      "broll-whiteboard-1.jpg: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)",
+      "whiteboard: no usable result for 'whiteboard meeting office'"
+    ]
   }
 }
