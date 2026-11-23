@@ -1,18 +1,17 @@
 # [start-end] text   |   word ids (use {{at:wN}} tokens)
 [   0.08-   4.72] Can you still get hired as SD? What will our job do if AI   | w0..w13
-[   4.72-   8.46] can write a beautiful code? I think we all have the same set of   | w14..w27
-[   8.46-  12.46] questions in our head, which are just giving us more anxiety. So I did   | w28..w41
-[  12.46-  15.70] what I do when I get anxiety. I went straight into the action mode   | w42..w55
-[  15.70-  19.90] and read through various researches and studies about the topic just to get answer   | w56..w69
-[  19.90-  24.06] to one question. Can you still get hired as SD? In the study, code   | w70..w83
-[  24.06-  29.42] review appeared roughly 8 % of entry -level job postings in 2020 versus 19   | w84..w97
-[  29.42-  34.78] % by mid -2026. So here are three ways to prepare differently. First, I   | w98..w111
-[  34.78-  38.68] would take AI -generated code and try to break it, write its test cases,   | w112..w125
-[  38.88-  43.58] find edge cases, and explain the fix. Second, I would deploy one small application,   | w126..w139
-[  43.86-  48.60] then show what happens when it fails. It's logs, latency, bad inputs. That's real   | w140..w153
-[  48.60-  49.04] engineering.   | w154..w154
-[  49.64-  53.90] Third, I would practice explaining my decisions, not listing the tools, but why this   | w155..w168
-[  53.90-  57.90] database, why this design, and what would I change. And I would put those   | w169..w182
-[  57.90-  62.30] three things in my portfolio, the test, the failure, and the decision. Because AI   | w183..w196
-[  62.30-  66.00] can give you code, your value is knowing whether that code deserves to ship   | w197..w210
-[  66.00-  68.44] or not. Save this before your next tech interview.   | w211..w219
+[   4.72-   8.74] can write beautiful code? I think we all have the same set of questions   | w14..w27
+[   8.74-  12.72] in our head, which are just giving us more anxiety. So I did what   | w28..w41
+[  12.72-  16.16] I do when I get anxiety. I went straight into the action mode and   | w42..w55
+[  16.16-  20.08] read through various researches and studies about the topic, just to get answer to   | w56..w69
+[  20.08-  24.32] one question. Can you still get hired as SD? In the study, code review   | w70..w83
+[  24.32-  29.90] appeared roughly 8 % of entry -level job postings in 2020, versus 19 %   | w84..w97
+[  29.90-  34.96] by mid -2026. So here are three ways to prepare differently. First, I would   | w98..w111
+[  34.96-  39.08] take AI -generated code and try to break it, write its test cases, find   | w112..w125
+[  39.08-  44.12] edge cases, and explain the fix. Second, I would deploy one small application, then   | w126..w139
+[  44.12-  49.04] show what happens when it fails. It's logs, latency, bad inputs. That's real engineering.   | w140..w153
+[  49.64-  53.88] Third, I would practice explaining my decisions, not listing the tools, but why this   | w154..w167
+[  53.88-  57.90] database, why this design, and what would I change? And I would put those   | w168..w181
+[  57.90-  62.30] three things in my portfolio, the test, the failure, and the decision. Because AI   | w182..w195
+[  62.30-  66.00] can give you code, your value is knowing whether that code deserves to ship   | w196..w209
+[  66.00-  68.44] or not. Save this before your next tech interview.   | w210..w218

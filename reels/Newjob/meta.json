@@ -11,11 +11,11 @@
   "language": "en",
   "audio_mean_db": -32.5,
   "audio_peak_db": -8.7,
-  "words": 220,
+  "words": 219,
   "warnings": [
     "HDR (iPhone) source: converted to standard range.",
     "Audio is quiet (mean -32.5 dB): loudness is normalised, but background noise rises too.",
-    "4 low-confidence words (check names/jargon): code?(w18), code(w83), versus(w96), code,(w200)"
+    "5 low-confidence words (check names/jargon): Can(w0), beautiful(w16), code(w82), versus(w95), code,(w199)"
   ],
   "hdr_mode": "tonemap"
 }
