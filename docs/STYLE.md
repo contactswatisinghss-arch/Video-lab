@@ -33,6 +33,10 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   recreated quote/interview cards with name + role, or clips she supplies; never ripped footage), bolder graphics and
   a different look every Reel. The Anthropic-ipo layout (title strip + right-column card, repeated) is the pattern to
   move away from.
+- **Animated clips (23 Nov 2026, Ai-jobs):** she asked for "animated clips of people preparing for the interview, anxious
+  developers, AI producing code". Default for explainer Reels: 2–4 short animated illustration takeovers (original flat
+  characters drawn as SVG in the composition, matching the Reel's palette; keep props off faces), plus her own clips
+  if she attaches them to the release. No stock/ripped footage unless she supplies it.
 - **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
   force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
