@@ -1,8 +1,8 @@
-[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/32b2ae9b-a191-4b19-86d2-42a4b4272e98.json when the check ends, unless a warning says it could not be saved
-[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json when the check ends, unless a warning says it could not be saved
 [INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
 [INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
 [hyperframes] check: starting Chrome
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
 [hyperframes] check: loading the page
 [hyperframes] check: waiting for the page to be ready
 [hyperframes] check: checking samples
@@ -470,9 +470,9 @@
         "message": "Two text blocks overlap and may render unreadable.",
         "rect": {
           "left": 810.39,
-          "top": 1013,
+          "top": 1023,
           "right": 964,
-          "bottom": 1056,
+          "bottom": 1066,
           "width": 153.61,
           "height": 43
         },
@@ -483,7 +483,7 @@
         "sourceFile": "compositions/ev1.html",
         "bbox": {
           "x": 810.39,
-          "y": 1013,
+          "y": 1023,
           "width": 153.61,
           "height": 43
         },
@@ -677,21 +677,21 @@
         "message": "Text is hidden beneath an opaque element.",
         "rect": {
           "left": 810.39,
-          "top": 1013,
+          "top": 1023,
           "right": 964,
-          "bottom": 1056,
+          "bottom": 1066,
           "width": 153.61,
           "height": 43
         },
         "containerSelector": "#e1-q2",
         "text": "missing?",
         "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
-        "coveredFraction": 0.41,
+        "coveredFraction": 0.44,
         "dataAttributes": {},
         "sourceFile": "compositions/ev1.html",
         "bbox": {
           "x": 810.39,
-          "y": 1013,
+          "y": 1023,
           "width": 153.61,
           "height": 43
         },
@@ -711,11 +711,11 @@
         "message": "Two text blocks overlap and may render unreadable.",
         "rect": {
           "left": 125.8,
-          "top": 1324.24,
-          "right": 441.99,
-          "bottom": 1397.3,
-          "width": 316.19,
-          "height": 73.06
+          "top": 1316.9,
+          "right": 495.24,
+          "bottom": 1402.96,
+          "width": 369.44,
+          "height": 86.06
         },
         "containerSelector": "#acap-w134 > span:nth-of-type(2)",
         "text": "KNOW THEM BEFORE 2027",
@@ -724,9 +724,9 @@
         "sourceFile": "compositions/cta.html",
         "bbox": {
           "x": 125.8,
-          "y": 1324.24,
-          "width": 316.19,
-          "height": 73.06
+          "y": 1316.9,
+          "width": 369.44,
+          "height": 86.06
         },
         "firstSeen": 40.281,
         "lastSeen": 40.281,
@@ -773,11 +773,11 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 1.6:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 1.02:1; WCAG AA requires 3:1.",
         "text": "sales · all regions",
-        "fg": "rgb(136,136,136)",
+        "fg": "rgb(102,102,102)",
         "bg": "rgb(103,103,103)",
-        "ratio": 1.6,
+        "ratio": 1.02,
         "requiredRatio": 3,
         "suggestedColor": "rgb(189,189,189)",
         "large": true,
@@ -788,7 +788,7 @@
           "x": 106,
           "y": 308,
           "width": 868,
-          "height": 35
+          "height": 37
         },
         "time": 35.425,
         "times": [
@@ -798,22 +798,22 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 1.38:1; WCAG AA requires 4.5:1.",
+        "message": "Contrast is 1.21:1; WCAG AA requires 3:1.",
         "text": "REVENUE",
-        "fg": "rgb(119,119,119)",
+        "fg": "rgb(85,85,85)",
         "bg": "rgb(99,97,92)",
-        "ratio": 1.38,
-        "requiredRatio": 4.5,
-        "suggestedColor": "rgb(220,220,220)",
-        "large": false,
+        "ratio": 1.21,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(181,181,181)",
+        "large": true,
         "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p",
         "dataAttributes": {},
         "sourceFile": "compositions/ev1.html",
         "bbox": {
           "x": 124,
-          "y": 397,
+          "y": 399,
           "width": 242.65625,
-          "height": 29
+          "height": 37
         },
         "time": 35.425,
         "times": [
@@ -823,22 +823,22 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 1.38:1; WCAG AA requires 4.5:1.",
+        "message": "Contrast is 1.21:1; WCAG AA requires 3:1.",
         "text": "ORDERS",
-        "fg": "rgb(119,119,119)",
+        "fg": "rgb(85,85,85)",
         "bg": "rgb(99,97,92)",
-        "ratio": 1.38,
-        "requiredRatio": 4.5,
-        "suggestedColor": "rgb(220,220,220)",
-        "large": false,
+        "ratio": 1.21,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(181,181,181)",
+        "large": true,
         "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > p",
         "dataAttributes": {},
         "sourceFile": "compositions/ev1.html",
         "bbox": {
           "x": 418.65625,
-          "y": 397,
+          "y": 399,
           "width": 242.671875,
-          "height": 29
+          "height": 37
         },
         "time": 35.425,
         "times": [
@@ -848,22 +848,22 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 1.38:1; WCAG AA requires 4.5:1.",
+        "message": "Contrast is 1.21:1; WCAG AA requires 3:1.",
         "text": "GROWTH",
-        "fg": "rgb(119,119,119)",
+        "fg": "rgb(85,85,85)",
         "bg": "rgb(99,97,92)",
-        "ratio": 1.38,
-        "requiredRatio": 4.5,
-        "suggestedColor": "rgb(220,220,220)",
-        "large": false,
+        "ratio": 1.21,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(181,181,181)",
+        "large": true,
         "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > p",
         "dataAttributes": {},
         "sourceFile": "compositions/ev1.html",
         "bbox": {
           "x": 713.328125,
-          "y": 397,
+          "y": 399,
           "width": 242.65625,
-          "height": 29
+          "height": 37
         },
         "time": 35.425,
         "times": [
@@ -885,7 +885,7 @@
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 19,
+    "warningCount": 10,
     "infoCount": 0,
     "findings": [
       {
@@ -899,8 +899,8 @@
         "bbox": {
           "x": 409.66,
           "y": 630.24,
-          "width": 195.01000000000005,
-          "height": 34
+          "width": 218.40000000000003,
+          "height": 37
         },
         "time": 10.102,
         "words": 3,
@@ -925,52 +925,52 @@
           {
             "time": 10.11,
             "opacity": 0.69,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.234,
             "opacity": 0.99,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.359,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.484,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.609,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.734,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.858,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.983,
             "opacity": 0.49,
-            "heightPx": 33
+            "heightPx": 35
           },
           {
             "time": 11.108,
             "opacity": 0.31,
-            "heightPx": 32
+            "heightPx": 35
           },
           {
             "time": 11.233,
             "opacity": 0.3,
-            "heightPx": 32
+            "heightPx": 35
           }
         ]
       },
@@ -985,8 +985,8 @@
         "bbox": {
           "x": 93,
           "y": 836.08,
-          "width": 225.01999999999998,
-          "height": 34
+          "width": 252.01999999999998,
+          "height": 37
         },
         "time": 10.203,
         "words": 3,
@@ -1011,47 +1011,47 @@
           {
             "time": 10.234,
             "opacity": 0.76,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.359,
             "opacity": 0.98,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.484,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.609,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.734,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.858,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.983,
             "opacity": 0.49,
-            "heightPx": 33
+            "heightPx": 35
           },
           {
             "time": 11.108,
             "opacity": 0.31,
-            "heightPx": 32
+            "heightPx": 35
           },
           {
             "time": 11.233,
             "opacity": 0.3,
-            "heightPx": 32
+            "heightPx": 35
           }
         ]
       },
@@ -1066,8 +1066,8 @@
         "bbox": {
           "x": 409.66,
           "y": 832.08,
-          "width": 210.01000000000005,
-          "height": 34
+          "width": 235.2,
+          "height": 37
         },
         "time": 10.273,
         "words": 3,
@@ -1087,166 +1087,94 @@
           {
             "time": 10.234,
             "opacity": 0.23,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.359,
             "opacity": 0.9,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.484,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.609,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.734,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.858,
             "opacity": 1,
-            "heightPx": 34
+            "heightPx": 37
           },
           {
             "time": 10.983,
             "opacity": 0.49,
-            "heightPx": 33
+            "heightPx": 35
           },
           {
             "time": 11.108,
             "opacity": 0.31,
-            "heightPx": 32
+            "heightPx": 35
           },
           {
             "time": 11.233,
             "opacity": 0.3,
-            "heightPx": 32
+            "heightPx": 35
           }
         ]
       },
       {
         "code": "text_below_floor",
         "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 12 text elements stay under it for 0.5 s or more, the smallest \"FORMAT\" at 21 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"FORMAT\" at 27 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
         "text": "FORMAT",
         "selector": "#cx-f3 > em:nth-of-type(1)",
         "dataAttributes": {},
         "sourceFile": "compositions/ctx.html",
         "bbox": {
-          "x": 903.32,
+          "x": 881.98,
           "y": 748.04,
-          "width": 81.92,
-          "height": 26.89
+          "width": 103.26,
+          "height": 36.2
         },
         "time": 12.98,
         "times": [
-          6.865,
-          6.865,
-          6.865,
-          10.11,
-          10.11,
-          10.234,
-          10.234,
-          10.359,
-          10.359,
           10.734,
           11.732,
           12.98
         ],
-        "fontPx": 20.68,
+        "fontPx": 26.89,
         "floorPx": 28,
         "seconds": 1.498,
         "elements": [
           {
             "selector": "#cx-f3 > em:nth-of-type(1)",
             "text": "FORMAT",
-            "fontPx": 20.68,
+            "fontPx": 26.89,
             "time": 12.98,
             "seconds": 1.498
           },
           {
             "selector": "#cx-f2 > em:nth-of-type(1)",
             "text": "PRIORITY",
-            "fontPx": 20.77,
+            "fontPx": 27,
             "time": 11.732,
             "seconds": 2.746
           },
           {
             "selector": "#cx-f1 > em:nth-of-type(1)",
             "text": "DATA",
-            "fontPx": 20.78,
+            "fontPx": 27.02,
             "time": 10.734,
             "seconds": 3.744
-          },
-          {
-            "selector": "#cx-lab > span:nth-of-type(1)",
-            "text": "which data",
-            "fontPx": 23.53,
-            "time": 6.865,
-            "seconds": 7.613
-          },
-          {
-            "selector": "#cx-lab > span:nth-of-type(2)",
-            "text": "what matters",
-            "fontPx": 23.53,
-            "time": 6.865,
-            "seconds": 7.613
-          },
-          {
-            "selector": "#cx-lab > span:nth-of-type(3)",
-            "text": "what it looks like",
-            "fontPx": 23.53,
-            "time": 6.865,
-            "seconds": 7.613
-          },
-          {
-            "selector": "#cx-f1 > p:nth-of-type(1)",
-            "text": "sales_week.csv",
-            "fontPx": 25,
-            "time": 10.11,
-            "seconds": 4.368
-          },
-          {
-            "selector": "#cx-x1 > p:nth-of-type(1)",
-            "text": "old_notes.txt",
-            "fontPx": 25,
-            "time": 10.11,
-            "seconds": 0.873
-          },
-          {
-            "selector": "#cx-f2 > p:nth-of-type(1)",
-            "text": "goals.md",
-            "fontPx": 25,
-            "time": 10.234,
-            "seconds": 4.244
-          },
-          {
-            "selector": "#cx-x2 > p:nth-of-type(1)",
-            "text": "budget_2019.xls",
-            "fontPx": 25,
-            "time": 10.234,
-            "seconds": 0.749
-          },
-          {
-            "selector": "#cx-x3 > p:nth-of-type(1)",
-            "text": "lunch_menu.pdf",
-            "fontPx": 25,
-            "time": 10.359,
-            "seconds": 0.624
-          },
-          {
-            "selector": "#cx-f3 > p:nth-of-type(1)",
-            "text": "report_template",
-            "fontPx": 25,
-            "time": 10.359,
-            "seconds": 4.119
           }
         ]
       },
@@ -1344,7 +1272,7 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "\"/ˈhɑː·nɪs ˌen·dʒɪˈnɪə·rɪŋ/ noun\" (6 words) is on screen 0.37 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "message": "\"/ˈhɑː·nɪs ˌen·dʒɪˈnɪə·rɪŋ/ noun\" (6 words) is on screen 1.23 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
         "text": "/ˈhɑː·nɪs ˌen·dʒɪˈnɪə·rɪŋ/ noun",
         "selector": "#d2-pr",
         "dataAttributes": {},
@@ -1357,7 +1285,7 @@
         },
         "time": 19.47,
         "words": 6,
-        "seconds": 0.367,
+        "seconds": 1.233,
         "floorSeconds": 1.725,
         "measured": [
           {
@@ -1392,49 +1320,43 @@
           },
           {
             "time": 19.845,
+            "opacity": 1,
+            "heightPx": 45
+          },
+          {
+            "time": 20.219,
+            "opacity": 1,
+            "heightPx": 45
+          },
+          {
+            "time": 20.344,
+            "opacity": 1,
+            "heightPx": 45
+          },
+          {
+            "time": 20.469,
+            "opacity": 1,
+            "heightPx": 45
+          },
+          {
+            "time": 20.594,
+            "opacity": 0.99,
+            "heightPx": 45
+          },
+          {
+            "time": 20.718,
+            "opacity": 0.13,
+            "heightPx": 48
+          },
+          {
+            "time": 20.843,
             "opacity": null,
             "heightPx": null
           },
           {
-            "time": 19.969,
+            "time": 20.968,
             "opacity": null,
             "heightPx": null
-          },
-          {
-            "time": 20.094,
-            "opacity": null,
-            "heightPx": null
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"THE BRAIN\" renders at 24 px for 3.87 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "THE BRAIN",
-        "selector": "#h2-m > i:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/hrn2.html",
-        "bbox": {
-          "x": 465.64,
-          "y": 768.99,
-          "width": 148.72,
-          "height": 31.77
-        },
-        "time": 26.085,
-        "times": [
-          26.085
-        ],
-        "fontPx": 23.61,
-        "floorPx": 28,
-        "seconds": 3.869,
-        "elements": [
-          {
-            "selector": "#h2-m > i:nth-of-type(1)",
-            "text": "THE BRAIN",
-            "fontPx": 23.61,
-            "time": 26.085,
-            "seconds": 3.869
           }
         ]
       },
@@ -1624,329 +1546,6 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "\"AI-GENERATED\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
-        "text": "AI-GENERATED",
-        "selector": "#e1-tag",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev1.html",
-        "bbox": {
-          "x": 799.92,
-          "y": 619.22,
-          "width": 180.30000000000007,
-          "height": 34.22000000000003
-        },
-        "time": 31.335,
-        "words": 2,
-        "seconds": 0.266,
-        "floorSeconds": 0.4,
-        "measured": [
-          {
-            "time": 31.077,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.202,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.327,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.452,
-            "opacity": 1,
-            "heightPx": 34
-          },
-          {
-            "time": 31.577,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 31.702,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 31.826,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 31.951,
-            "opacity": 1,
-            "heightPx": 29
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"REVENUE\" (1 word) is on screen 0.20 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-        "text": "REVENUE",
-        "selector": "#e1-k > div:nth-of-type(1) > p:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev1.html",
-        "bbox": {
-          "x": 133.04,
-          "y": 760.84,
-          "width": 102.44,
-          "height": 31.950000000000045
-        },
-        "time": 31.335,
-        "words": 1,
-        "seconds": 0.203,
-        "floorSeconds": 0.4,
-        "measured": [
-          {
-            "time": 31.077,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.202,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.327,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.452,
-            "opacity": 1,
-            "heightPx": 32
-          },
-          {
-            "time": 31.577,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 31.702,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 31.826,
-            "opacity": 1,
-            "heightPx": 29
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"ORDERS\" (1 word) is on screen 0.20 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-        "text": "ORDERS",
-        "selector": "#e1-k > div:nth-of-type(2) > p:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev1.html",
-        "bbox": {
-          "x": 427.57,
-          "y": 769.43,
-          "width": 87.93,
-          "height": 31.519999999999982
-        },
-        "time": 31.335,
-        "words": 1,
-        "seconds": 0.203,
-        "floorSeconds": 0.4,
-        "measured": [
-          {
-            "time": 31.077,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.202,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.327,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.452,
-            "opacity": 1,
-            "heightPx": 32
-          },
-          {
-            "time": 31.577,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 31.702,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 31.826,
-            "opacity": 1,
-            "heightPx": 29
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"GROWTH\" (1 word) is on screen 0.20 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
-        "text": "GROWTH",
-        "selector": "#e1-k > div:nth-of-type(3) > p:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev1.html",
-        "bbox": {
-          "x": 722.12,
-          "y": 778.02,
-          "width": 87.92999999999995,
-          "height": 31.519999999999982
-        },
-        "time": 31.335,
-        "words": 1,
-        "seconds": 0.203,
-        "floorSeconds": 0.4,
-        "measured": [
-          {
-            "time": 31.077,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.202,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.327,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 31.452,
-            "opacity": 1,
-            "heightPx": 32
-          },
-          {
-            "time": 31.577,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 31.702,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 31.826,
-            "opacity": 1,
-            "heightPx": 29
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"AI-GENERATED\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "AI-GENERATED",
-        "selector": "#e1-tag",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev1.html",
-        "bbox": {
-          "x": 799.92,
-          "y": 619.22,
-          "width": 180.3,
-          "height": 34.22
-        },
-        "time": 31.452,
-        "times": [
-          31.452,
-          31.452,
-          31.452,
-          31.452,
-          31.452
-        ],
-        "fontPx": 22,
-        "floorPx": 28,
-        "seconds": 4.493,
-        "elements": [
-          {
-            "selector": "#e1-tag",
-            "text": "AI-GENERATED",
-            "fontPx": 22,
-            "time": 31.452,
-            "seconds": 4.493
-          },
-          {
-            "selector": "#e1-k > div:nth-of-type(1) > p:nth-of-type(1)",
-            "text": "REVENUE",
-            "fontPx": 22,
-            "time": 31.452,
-            "seconds": 4.493
-          },
-          {
-            "selector": "#e1-k > div:nth-of-type(2) > p:nth-of-type(1)",
-            "text": "ORDERS",
-            "fontPx": 22,
-            "time": 31.452,
-            "seconds": 4.493
-          },
-          {
-            "selector": "#e1-k > div:nth-of-type(3) > p:nth-of-type(1)",
-            "text": "GROWTH",
-            "fontPx": 22,
-            "time": 31.452,
-            "seconds": 4.493
-          },
-          {
-            "selector": "#e1-doc > h4:nth-of-type(1)",
-            "text": "sales · all regions",
-            "fontPx": 26,
-            "time": 31.452,
-            "seconds": 4.493
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"evals · weekly_report\" renders at 22 px for 3.99 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "evals · weekly_report",
-        "selector": "#e2-bar > span:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/ev2.html",
-        "bbox": {
-          "x": 143.71,
-          "y": 190.95,
-          "width": 276.71,
-          "height": 28.95
-        },
-        "time": 36.07,
-        "times": [
-          36.07
-        ],
-        "fontPx": 21.96,
-        "floorPx": 28,
-        "seconds": 3.994,
-        "elements": [
-          {
-            "selector": "#e2-bar > span:nth-of-type(1)",
-            "text": "evals · weekly_report",
-            "fontPx": 21.96,
-            "time": 36.07,
-            "seconds": 3.994
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
         "message": "\"✗ FAIL region \"West\" missing\" (4 words) is on screen 0.97 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
         "text": "✗ FAIL region \"West\" missing",
         "selector": "#e2-l3",
@@ -2029,113 +1628,6 @@
             "heightPx": null
           }
         ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"KNOW THEM BEFORE 2027\" renders at 22 px for 5.49 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "KNOW THEM BEFORE 2027",
-        "selector": "#ct-p > h4:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/cta.html",
-        "bbox": {
-          "x": 125.8,
-          "y": 1324.24,
-          "width": 316.19,
-          "height": 73.06
-        },
-        "time": 40.189,
-        "times": [
-          40.189
-        ],
-        "fontPx": 22.33,
-        "floorPx": 28,
-        "seconds": 5.491,
-        "elements": [
-          {
-            "selector": "#ct-p > h4:nth-of-type(1)",
-            "text": "KNOW THEM BEFORE 2027",
-            "fontPx": 22.33,
-            "time": 40.189,
-            "seconds": 5.491
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "The film's last line \"and I'll send you the cheat sheet\" (7 words) is on screen 1.55 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "and I'll send you the cheat sheet",
-        "selector": "#en-s",
-        "dataAttributes": {},
-        "sourceFile": "compositions/endc.html",
-        "bbox": {
-          "x": 223.94,
-          "y": 463.9,
-          "width": 632.1199999999999,
-          "height": 43
-        },
-        "time": 47.505,
-        "words": 7,
-        "seconds": 1.549,
-        "floorSeconds": 2,
-        "measured": [
-          {
-            "time": 47.178,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 47.303,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 47.427,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 47.552,
-            "opacity": 0.82,
-            "heightPx": 43
-          },
-          {
-            "time": 47.677,
-            "opacity": 0.99,
-            "heightPx": 43
-          },
-          {
-            "time": 47.802,
-            "opacity": 1,
-            "heightPx": 43
-          },
-          {
-            "time": 47.927,
-            "opacity": 1,
-            "heightPx": 43
-          },
-          {
-            "time": 48.551,
-            "opacity": 1,
-            "heightPx": 43
-          },
-          {
-            "time": 48.676,
-            "opacity": 1,
-            "heightPx": 43
-          },
-          {
-            "time": 48.8,
-            "opacity": 1,
-            "heightPx": 43
-          },
-          {
-            "time": 48.925,
-            "opacity": 1,
-            "heightPx": 43
-          }
-        ]
       }
     ],
     "enabled": true,
@@ -2160,9 +1652,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "32b2ae9b-a191-4b19-86d2-42a4b4272e98",
+    "id": "45d9c462-e49d-4a11-8a12-e2848cab7119",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/32b2ae9b-a191-4b19-86d2-42a4b4272e98.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json",
     "attribution": "unversioned"
   },
   "_meta": {
@@ -2170,4 +1662,4 @@
     "updateAvailable": false
   }
 }
-[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/32b2ae9b-a191-4b19-86d2-42a4b4272e98.json
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json
