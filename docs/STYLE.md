@@ -41,6 +41,8 @@ Reels report their numbers. These are guardrails and learnings, not a template: 
   shows tools". For tech topics prefer realistic UI takeovers: a laptop with a dark code editor (real code, syntax colours),
   terminal output (pytest, deploy), browser, docs, PR-style review comments, monitoring dashboards. Generic UI, tool
   names allowed, no logos or brand marks. Cartoon characters only when she asks.
+- **No flat blue (or other plain colour) takeover backgrounds (24 Nov 2026, AITerms):** "I don't like blue background, can we make it aesthetic": takeovers sit in a real-looking place instead (her pick: a high-rise study with a New York City view through the window; real photos via ci/broll.py).
+- **Zoom on her key line (24 Nov 2026, AITerms):** she asked for a punch-in on the hook's stake line. Offer it as a variant (camera moves force the 1080p30 re-render) until overlay mode supports #cam.
 - **No camera moves (`#cam` punch-ins/slides) by default**: they can't be laid over the 4K original yet and would
   force the old 1080p30 re-render. Put cards in the top band or behind her (`data-layer="under"`) instead.
 
@@ -184,4 +186,5 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 | Anthropic-ipo | | 58.9 s | | | | | | | market-paper cards, headline flash, B2B path diagram, honest stock line; research waived; upload→final 2 h 05 m |
 | Ai-jobs | | 66.7 s | | | | | | | indigo/lime code review, 7 takeovers, animated clips, interview face-off; upload→final 8 h 44 m incl. her review breaks (final render 12 min) |
 | Newjob | | 67.9 s | | | | | | | realistic screens + real city photo montage (auto b-roll); 4 design rounds on her notes (less cartoon, real laptop/code, tech hubs, interview glimpses) |
+| AITerms | | 49.1 s | | | | | | | "AI dictionary" look; takeovers in a high-rise NYC study (her ask: no blue backgrounds); zoom + no-zoom finals; upload→finals 2 h 02 m (final render 12–27 min) |
 | Promotion | | 58.6 s | | | | | | | library & gold; realistic UI takeovers (ticket board, design doc, AI editor), OWN THE DECISION slam, recap checklist; real library room, no decor; research waived; rendered in the Claude session (GitHub queue busy): upload→final 1 h 19 m |
