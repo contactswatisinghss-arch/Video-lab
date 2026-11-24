@@ -1,0 +1,30 @@
+{
+  "slug": "AITerms-zoom",
+  "stage": "preview",
+  "ok": true,
+  "time": "2026-11-24 04:58:12 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
+  "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/AITerms-zoom",
+  "preview": {
+    "stage": "preview",
+    "ok": true,
+    "time": "2026-11-24 04:58:12 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
+    "hash": "e4c1e796c41611f9",
+    "check": {
+      "parsed": false,
+      "raw_tail": "     {\n        \"code\": \"line_unread\",\n        \"severity\": \"warning\",\n        \"message\": \"\\\"✗ FAIL region \\\"West\\\" missing\\\" (4 words) is on screen 0.97 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.\",\n        \"text\": \"✗ FAIL region \\\"West\\\" missing\",\n        \"selector\": \"#e2-l3\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/ev2.html\",\n        \"bbox\": {\n          \"x\": 69.96,\n          \"y\": 402,\n          \"width\": 599.7099999999999,\n          \"height\": 45\n        },\n        \"time\": 39.073,\n        \"words\": 4,\n        \"seconds\": 0.968,\n        \"floorSeconds\": 1.275,\n        \"measured\": [\n          {\n            \"time\": 38.816,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 38.94,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 39.065,\n            \"opacity\": 0.13,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.19,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.315,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.44,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.565,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.689,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.814,\n            \"opacity\": 1,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 39.939,\n            \"opacity\": 0.98,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 40.064,\n            \"opacity\": 0.24,\n            \"heightPx\": 45\n          },\n          {\n            \"time\": 40.189,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 40.313,\n            \"opacity\": null,\n            \"heightPx\": null\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 393\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"3f3b8529-d95f-4a26-a1a1-cb259d6a27a0\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/AITerms-zoom/.hyperframes/artifacts/checks/3f3b8529-d95f-4a26-a1a1-cb259d6a27a0.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms-zoom/.hyperframes/artifacts/checks/3f3b8529-d95f-4a26-a1a1-cb259d6a27a0.json\n"
+    },
+    "hf_version": "0.9.37",
+    "snapshot_ok": true,
+    "render_seconds": 111,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/AITerms-zoom/preview.mp4"
+  },
+  "history": [
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-24 04:58:12 UTC"
+    }
+  ]
+}
