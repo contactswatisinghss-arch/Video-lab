@@ -1,11 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "final Newjob"
+  "state": "running",
+  "current": "preview Newjob",
+  "pending": [
+    "preview Newjob"
   ],
-  "done": [
-    "final Newjob"
-  ],
-  "time": "2026-11-24 02:40:00 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45311411030"
+  "time": "2026-11-24 02:42:22 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45314141248"
 }
