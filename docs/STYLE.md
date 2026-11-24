@@ -184,3 +184,4 @@ Instagram gave likes/comments but no views, so engagement below is likes + comme
 | Anthropic-ipo | | 58.9 s | | | | | | | market-paper cards, headline flash, B2B path diagram, honest stock line; research waived; upload→final 2 h 05 m |
 | Ai-jobs | | 66.7 s | | | | | | | indigo/lime code review, 7 takeovers, animated clips, interview face-off; upload→final 8 h 44 m incl. her review breaks (final render 12 min) |
 | Newjob | | 67.9 s | | | | | | | realistic screens + real city photo montage (auto b-roll); 4 design rounds on her notes (less cartoon, real laptop/code, tech hubs, interview glimpses) |
+| Promotion | | 58.6 s | | | | | | | library & gold; realistic UI takeovers (ticket board, design doc, AI editor), OWN THE DECISION slam, recap checklist; real library room, no decor; research waived; rendered in the Claude session (GitHub queue busy): upload→final 1 h 19 m |
