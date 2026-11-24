@@ -1,8 +1,8 @@
-[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json when the check ends, unless a warning says it could not be saved
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json when the check ends, unless a warning says it could not be saved
 [INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
 [INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
-[hyperframes] check: starting Chrome
 [hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[hyperframes] check: starting Chrome
 [hyperframes] check: loading the page
 [hyperframes] check: waiting for the page to be ready
 [hyperframes] check: checking samples
@@ -459,9 +459,100 @@
   "layout": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 1,
-    "infoCount": 6,
+    "warningCount": 3,
+    "infoCount": 13,
     "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 8.175,
+        "selector": "#cx-st > div:nth-of-type(7)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#cx-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/ctx.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 8.175,
+        "lastSeen": 13.625,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          8.175,
+          13.625
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 8.175,
+        "selector": "#cx-st > div:nth-of-type(7)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/ctx.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 8.175,
+        "lastSeen": 13.625,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          8.175,
+          13.625
+        ]
+      },
       {
         "code": "content_overlap",
         "severity": "warning",
@@ -494,6 +585,188 @@
         "times": [
           35.425,
           35.623
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 8.175,
+        "selector": "#cx-ph",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -66.88,
+          "top": -94.05,
+          "right": 1146.88,
+          "bottom": 2014.05,
+          "width": 1213.76,
+          "height": 2108.11
+        },
+        "containerSelector": "#cx-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 66.88,
+          "right": 66.88,
+          "top": 94.05,
+          "bottom": 94.05
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/ctx.html",
+        "bbox": {
+          "x": -66.88,
+          "y": -94.05,
+          "width": 1213.76,
+          "height": 2108.11
+        },
+        "firstSeen": 8.175,
+        "lastSeen": 13.625,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          8.175,
+          13.625
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 19.075,
+        "selector": "#d2-ph",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -78.22,
+          "top": -113.75,
+          "right": 1158.22,
+          "bottom": 2033.75,
+          "width": 1236.44,
+          "height": 2147.51
+        },
+        "containerSelector": "#d2-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 78.22,
+          "right": 78.22,
+          "top": 113.75,
+          "bottom": 113.75
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/d2.html",
+        "bbox": {
+          "x": -78.22,
+          "y": -113.75,
+          "width": 1236.44,
+          "height": 2147.51
+        },
+        "firstSeen": 19.075,
+        "lastSeen": 19.075,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.075
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 19.075,
+        "selector": "#d2-st > div:nth-of-type(7)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#d2-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/d2.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 19.075,
+        "lastSeen": 19.075,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.075
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 19.075,
+        "selector": "#d2-st > div:nth-of-type(7)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/d2.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 19.075,
+        "lastSeen": 19.075,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.075
         ]
       },
       {
@@ -735,6 +1008,141 @@
         "times": [
           40.281
         ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 40.875,
+        "selector": "#cs-ph",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -30,
+          "top": -30,
+          "right": 1110,
+          "bottom": 1950,
+          "width": 1140,
+          "height": 1980
+        },
+        "containerSelector": "#cs-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 30,
+          "right": 30,
+          "top": 30,
+          "bottom": 30
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/cta.html",
+        "bbox": {
+          "x": -30,
+          "y": -30,
+          "width": 1140,
+          "height": 1980
+        },
+        "firstSeen": 40.875,
+        "lastSeen": 40.875,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          40.875
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 40.875,
+        "selector": "#cs-st > div:nth-of-type(7)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#cs-st",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/cta.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 40.875,
+        "lastSeen": 40.875,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          40.875
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 40.875,
+        "selector": "#cs-st > div:nth-of-type(7)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -40,
+          "top": 1590,
+          "right": 1120,
+          "bottom": 1920,
+          "width": 1160,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/cta.html",
+        "bbox": {
+          "x": -40,
+          "y": 1590,
+          "width": 1160,
+          "height": 330
+        },
+        "firstSeen": 40.875,
+        "lastSeen": 40.875,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          40.875
+        ]
       }
     ],
     "duration": 49.05,
@@ -752,7 +1160,7 @@
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
     "tolerance": 2,
-    "totalIssueCount": 7,
+    "totalIssueCount": 16,
     "truncated": false
   },
   "motion": {
@@ -1652,9 +2060,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "45d9c462-e49d-4a11-8a12-e2848cab7119",
+    "id": "656311f7-e805-4587-b7c2-6dd7c9e2451c",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json",
     "attribution": "unversioned"
   },
   "_meta": {
@@ -1662,4 +2070,4 @@
     "updateAvailable": false
   }
 }
-[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/45d9c462-e49d-4a11-8a12-e2848cab7119.json
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json
