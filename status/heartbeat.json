@@ -1,10 +1,13 @@
 {
-  "state": "running",
-  "current": "final Promotion",
-  "pending": [
+  "state": "idle",
+  "last": [
     "preview AITerms",
     "final Promotion"
   ],
-  "time": "2026-11-24 06:17:42 UTC",
+  "done": [
+    "preview AITerms",
+    "final Promotion"
+  ],
+  "time": "2026-11-24 06:33:44 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45338599481"
 }
