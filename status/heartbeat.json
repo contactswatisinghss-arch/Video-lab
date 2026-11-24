@@ -1,10 +1,13 @@
 {
-  "state": "running",
-  "current": "final AITerms",
-  "pending": [
+  "state": "idle",
+  "last": [
     "final AITerms-zoom",
     "final AITerms"
   ],
-  "time": "2026-11-24 05:28:19 UTC",
+  "done": [
+    "final AITerms-zoom",
+    "final AITerms"
+  ],
+  "time": "2026-11-24 05:42:50 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45332118636"
 }
