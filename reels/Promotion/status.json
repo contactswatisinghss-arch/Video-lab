@@ -1,9 +1,9 @@
 {
   "slug": "Promotion",
-  "stage": "preview",
+  "stage": "final",
   "ok": true,
-  "time": "2026-11-24 05:20:25 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45329757835",
+  "time": "2026-11-24 06:33:42 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45338599481",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Promotion",
   "prepare": {
     "stage": "prepare",
@@ -39,6 +39,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-24 05:20:25 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-24 06:33:42 UTC"
     }
   ],
   "preview": {
@@ -55,5 +60,38 @@
     "snapshot_ok": true,
     "render_seconds": 180,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Promotion/preview.mp4"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-24 06:33:42 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45338599481",
+    "hash": "dea5d5035a9809f1",
+    "check": {
+      "parsed": false,
+      "raw_tail": " \"x\": 502.17,\n          \"y\": 269.84,\n          \"width\": 98.47,\n          \"height\": 44.57\n        },\n        \"firstSeen\": 55.408,\n        \"lastSeen\": 55.408,\n        \"occurrences\": 1,\n        \"heldMs\": 0,\n        \"times\": [\n          55.408\n        ]\n      }\n    ],\n    \"duration\": 58.667,\n    \"samples\": [\n      3.259,\n      9.778,\n      16.296,\n      22.815,\n      29.334,\n      35.852,\n      42.371,\n      48.889,\n      55.408\n    ],\n    \"transitionSamples\": [],\n    \"transitionSamplesDropped\": 0,\n    \"tolerance\": 2,\n    \"totalIssueCount\": 1,\n    \"truncated\": false\n  },\n  \"motion\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": [],\n    \"enabled\": false,\n    \"samples\": 0\n  },\n  \"contrast\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": [],\n    \"enabled\": true,\n    \"samples\": [\n      3.259,\n      16.296,\n      29.334,\n      42.371,\n      55.408\n    ],\n    \"checked\": 14,\n    \"passed\": 14\n  },\n  \"craft\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 1,\n    \"infoCount\": 0,\n    \"findings\": [\n      {\n        \"code\": \"text_below_floor\",\n        \"severity\": \"warning\",\n        \"message\": \"Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \\\"NOT ABOUT\\\" renders at 26 px for 2.62 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.\",\n        \"text\": \"NOT ABOUT\",\n        \"selector\": \"#df-a > small:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/diff.html\",\n        \"bbox\": {\n          \"x\": 96.26,\n          \"y\": 247.77,\n          \"width\": 187.42,\n          \"height\": 32.45\n        },\n        \"time\": 53.175,\n        \"times\": [\n          53.175\n        ],\n        \"fontPx\": 26.32,\n        \"floorPx\": 28,\n        \"seconds\": 2.621,\n        \"elements\": [\n          {\n            \"selector\": \"#df-a > small:nth-of-type(1)\",\n            \"text\": \"NOT ABOUT\",\n            \"fontPx\": 26.32,\n            \"time\": 53.175,\n            \"seconds\": 2.621\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 470\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"ab97719d-a752-4739-b3fe-044999bcd9e5\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ab97719d-a752-4739-b3fe-044999bcd9e5.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ab97719d-a752-4739-b3fe-044999bcd9e5.json\n"
+    },
+    "hf_version": "0.9.37",
+    "mode": "overlay-on-original",
+    "graphics_seconds": 346,
+    "compose": {
+      "seconds": 557,
+      "hdr": true,
+      "size": [
+        2160,
+        3840
+      ],
+      "fps": "60/1",
+      "audio": "re-encoded (cut)"
+    },
+    "seconds": 58.67,
+    "size": [
+      2160,
+      3840
+    ],
+    "fps": "60/1",
+    "transfer": "arib-std-b67",
+    "size_mb": 154.6,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Promotion/final_reel.mp4"
   }
 }
