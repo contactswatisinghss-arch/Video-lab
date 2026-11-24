@@ -3,8 +3,17 @@
      "with real examples" stamp on her words. -->
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-  #ct-bg { position: absolute; inset: 0; background: radial-gradient(rgba(255,255,255,.09) 2px, transparent 2.5px) 0 0/34px 34px, linear-gradient(200deg, #3D69FF, #1F3FC4); }
-  #ct-p { position: absolute; left: 80px; right: 80px; top: 200px; height: 1070px; background: #F4EFE3; border-radius: 10px; box-shadow: 0 30px 70px rgba(0,0,0,.45); padding: 40px 44px; box-sizing: border-box; }
+
+  /* high-rise study at night: a real NYC photo through the window (Wikimedia, credited), steel mullions, desk edge, warm lamp glow */
+  #cs-st { position: absolute; inset: 0; overflow: hidden; background: #0c0b0a; }
+  #cs-ph { position: absolute; inset: -30px; background: url(assets/broll-nycdusk-2.jpg) center/cover no-repeat; filter: blur(9px) saturate(1.05); }
+  #cs-st .st-glass { position: absolute; inset: 0; background: linear-gradient(118deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.07) 42%, rgba(255,255,255,0) 52%), linear-gradient(rgba(8,7,6,.55), rgba(8,7,6,.1) 30%, rgba(8,7,6,.25) 70%, rgba(8,7,6,.7)); }
+  #cs-st .st-mv { position: absolute; top: 0; bottom: 0; width: 26px; background: linear-gradient(90deg, #070606, #24211d 45%, #0a0908); box-shadow: 0 0 30px rgba(0,0,0,.6); }
+  #cs-st .st-mh { position: absolute; left: 0; right: 0; height: 22px; background: linear-gradient(#070606, #24211d 45%, #0a0908); box-shadow: 0 0 30px rgba(0,0,0,.6); }
+  #cs-st .st-ceil { position: absolute; left: 0; right: 0; top: 0; height: 90px; background: linear-gradient(#050404, rgba(5,4,4,0)); }
+  #cs-st .st-desk { position: absolute; left: -40px; right: -40px; bottom: 0; height: 330px; background: linear-gradient(#6b4a30 0, #4a311f 6px, #2c1c11 40%, #160e08); box-shadow: 0 -10px 40px rgba(0,0,0,.6); }
+  #cs-st .st-lamp { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 30% at 6% 88%, rgba(255,184,110,.42), rgba(255,184,110,0) 70%); mix-blend-mode: screen; }
+  #ct-p { position: absolute; left: 80px; right: 80px; top: 200px; height: 1070px; background: #F4EFE3; border-radius: 10px; box-shadow: 0 30px 80px rgba(0,0,0,.7); padding: 40px 44px; box-sizing: border-box; }
   #ct-p h3 { margin: 0; font: 900 76px/0.95 'Fraunces', serif; color: #121212; letter-spacing: -.03em; }
   #ct-p h3 em { color: #2D5BFF; }
   #ct-p h4 { margin: 12px 0 22px; font: 600 28px 'JetBrains Mono', monospace; color: #555; letter-spacing: .1em; }
@@ -19,7 +28,9 @@
   #ct-st { position: absolute; right: 50px; top: 960px; padding: 10px 20px; border: 6px solid #22A447; border-radius: 12px; color: #22A447; font: 900 40px 'Archivo', sans-serif; transform: rotate(-10deg); letter-spacing: .04em; opacity: 0; }
 </style>
 <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
-  <div id="ct-bg"></div>
+  <div id="cs-st"><div id="cs-ph"></div><div class="st-glass"></div>
+    <div class="st-mv" style="left:347px"></div><div class="st-mv" style="left:707px"></div><div class="st-mh" style="top:430px"></div>
+    <div class="st-ceil"></div><div class="st-desk"></div><div class="st-lamp"></div></div>
   <div id="ct-p">
     <h3>AI terms <em>cheat sheet</em></h3><h4>KNOW THEM BEFORE 2027</h4>
     <div class="ct-r" id="ct-r1"><b>1</b><p><strong>Context engineering</strong>right info, right time</p></div>
@@ -35,13 +46,13 @@
 (function () {
   const S = {{= at(w134) - 0.1 }};
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#ct-bg", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power4.out" }, 0);
+  tl.fromTo("#cs-st", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
   tl.fromTo("#ct-p", { y: 1000, rotation: -8, rotationX: 30, transformPerspective: 1800 }, { y: 0, rotation: -1.5, rotationX: 0, transformPerspective: 1800, duration: 0.7, ease: "expo.out" }, {{at:w137}} - S - 0.35);
   tl.fromTo(["#ct-r1", "#ct-r2", "#ct-r3"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, {{at:w138}} - S);
   tl.fromTo("#ct-st", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, {{at:w140}} - S);
   tl.fromTo(["#ct-r4", "#ct-r5"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, {{at:w143}} - S - 0.1);
   tl.fromTo("#ct-more", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, {{at:w143}} - S + 0.1);
-  tl.to(["#ct-bg", "#ct-p"], { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w150}} - S - 0.1 - 0.16);
+  tl.to(["#cs-st", "#ct-p"], { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w150}} - S - 0.1 - 0.16);
   window.__timelines["cta"] = tl;
 })();
 </script>

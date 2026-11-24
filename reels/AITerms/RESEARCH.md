@@ -24,3 +24,10 @@ Cheat-sheet teaser rows (RAG, MCP) are blurred; both are real terms.
 ## Flags for Swati
 - "2027" is on screen (title, CTA keyword). Same exception as the AI Basics series: fine if posted before the year ends.
 - The CTA promises a cheat sheet by DM for "AI 2027" comments: needs the sheet + auto-DM or manual replies.
+
+## B-roll credits (Wikimedia Commons via ci/broll.py; credit in the pinned comment)
+Swati (24 Nov): no blue backgrounds; a real high-rise study with a New York view through the window. No interior photos
+found (and Pexels' stored key returns 401), so the study (steel mullions, desk edge, lamp glow, glass reflection) is drawn
+around real NYC window views:
+- broll-nycdusk-2.jpg: "Manhattan at December Dusk" by Roamm999, CC BY-SA 4.0 (context screen, cheat sheet)
+- broll-nycnight-1.jpg: "View west from Millenium UN Plaza Hotel at night" by David Long, CC BY 2.0 (term 2)

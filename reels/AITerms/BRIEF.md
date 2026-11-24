@@ -5,7 +5,7 @@
 "builds with AI", each shown as a real thing happening on screen. **Payoff:** a cheat sheet via comment keyword.
 **Room:** her bookshelf room as shot, no decor (bookshelf fills the frame; no empty wall to dress).
 
-**Look: "AI dictionary"** (new; not teal/tangerine, indigo/lime or market-paper): paper #F4EFE3, ink #121212,
+**Look: "AI dictionary in a high-rise study"** (24 Nov: blue screens replaced by a night study with real NYC window views; see RESEARCH.md credits). (new; not teal/tangerine, indigo/lime or market-paper): paper #F4EFE3, ink #121212,
 electric blue #2D5BFF, highlighter #FFE14D; red = fail/stop, green = pass. Fraunces headwords (dictionary serif,
 italic accents), Archivo UI/captions, JetBrains Mono labels/terminal. Captions: ink pill below her chin, the spoken
 word gets a yellow highlighter block. Each term enters a different way (page wipe · blueprint iris + number slam · index card drop).
