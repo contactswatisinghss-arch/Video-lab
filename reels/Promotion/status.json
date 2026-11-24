@@ -1,0 +1,29 @@
+{
+  "slug": "Promotion",
+  "stage": "prepare",
+  "ok": true,
+  "time": "2026-11-24 03:41:04 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45320291184",
+  "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Promotion",
+  "prepare": {
+    "stage": "prepare",
+    "ok": true,
+    "time": "2026-11-24 03:41:04 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45320291184",
+    "raw": "EF2AFC07-E442-40A6-A196-0EDE5309924D.mp4",
+    "words": 176,
+    "duration": 61.5,
+    "warnings": [
+      "HDR (iPhone) source: converted to standard range.",
+      "2 low-confidence words (check names/jargon): Your(w0), the(w86)"
+    ],
+    "token": ""
+  },
+  "history": [
+    {
+      "stage": "prepare",
+      "ok": true,
+      "time": "2026-11-24 03:41:04 UTC"
+    }
+  ]
+}
