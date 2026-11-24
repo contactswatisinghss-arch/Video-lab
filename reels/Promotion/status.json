@@ -2,8 +2,8 @@
   "slug": "Promotion",
   "stage": "preview",
   "ok": true,
-  "time": "2026-11-24 05:02:31 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
+  "time": "2026-11-24 05:20:25 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45329757835",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Promotion",
   "prepare": {
     "stage": "prepare",
@@ -34,21 +34,26 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-24 05:02:31 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-24 05:20:25 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-24 05:02:31 UTC",
-    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
+    "time": "2026-11-24 05:20:25 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45329757835",
     "hash": "efc01ecce935ab7b",
     "check": {
       "parsed": false,
-      "raw_tail": "e\": 55.408,\n        \"times\": [\n          55.408\n        ]\n      },\n      {\n        \"code\": \"contrast_aa_failure\",\n        \"severity\": \"warning\",\n        \"message\": \"Contrast is 2.66:1; WCAG AA requires 3:1.\",\n        \"text\": \"Writing less code\",\n        \"fg\": \"rgb(141,162,192)\",\n        \"bg\": \"rgb(97,87,93)\",\n        \"ratio\": 2.66,\n        \"requiredRatio\": 3,\n        \"suggestedColor\": \"rgb(154,172,199)\",\n        \"large\": true,\n        \"selector\": \"div > div:nth-of-type(10) > div > div:nth-of-type(2) > b\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/diff.html\",\n        \"bbox\": {\n          \"x\": 98.92000579833984,\n          \"y\": 288.4599914550781,\n          \"width\": 342.1600036621094,\n          \"height\": 40.258453369140625\n        },\n        \"time\": 55.408,\n        \"times\": [\n          55.408\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"samples\": [\n      3.259,\n      16.296,\n      29.334,\n      42.371,\n      55.408\n    ],\n    \"checked\": 14,\n    \"passed\": 12\n  },\n  \"craft\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 1,\n    \"infoCount\": 0,\n    \"findings\": [\n      {\n        \"code\": \"text_below_floor\",\n        \"severity\": \"warning\",\n        \"message\": \"Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \\\"NOT ABOUT\\\" renders at 26 px for 2.62 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.\",\n        \"text\": \"NOT ABOUT\",\n        \"selector\": \"#df-a > small:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/diff.html\",\n        \"bbox\": {\n          \"x\": 96.26,\n          \"y\": 247.77,\n          \"width\": 187.42,\n          \"height\": 32.45\n        },\n        \"time\": 53.175,\n        \"times\": [\n          53.175\n        ],\n        \"fontPx\": 26.32,\n        \"floorPx\": 28,\n        \"seconds\": 2.621,\n        \"elements\": [\n          {\n            \"selector\": \"#df-a > small:nth-of-type(1)\",\n            \"text\": \"NOT ABOUT\",\n            \"fontPx\": 26.32,\n            \"time\": 53.175,\n            \"seconds\": 2.621\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 470\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"ce93fa92-8b63-470b-a81c-460fbf69ef0e\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ce93fa92-8b63-470b-a81c-460fbf69ef0e.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ce93fa92-8b63-470b-a81c-460fbf69ef0e.json\n"
+      "raw_tail": "e\": 55.408,\n        \"times\": [\n          55.408\n        ]\n      },\n      {\n        \"code\": \"contrast_aa_failure\",\n        \"severity\": \"warning\",\n        \"message\": \"Contrast is 2.66:1; WCAG AA requires 3:1.\",\n        \"text\": \"Writing less code\",\n        \"fg\": \"rgb(141,162,192)\",\n        \"bg\": \"rgb(97,87,93)\",\n        \"ratio\": 2.66,\n        \"requiredRatio\": 3,\n        \"suggestedColor\": \"rgb(154,172,199)\",\n        \"large\": true,\n        \"selector\": \"div > div:nth-of-type(10) > div > div:nth-of-type(2) > b\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/diff.html\",\n        \"bbox\": {\n          \"x\": 98.92000579833984,\n          \"y\": 288.4599914550781,\n          \"width\": 342.1600036621094,\n          \"height\": 40.258453369140625\n        },\n        \"time\": 55.408,\n        \"times\": [\n          55.408\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"samples\": [\n      3.259,\n      16.296,\n      29.334,\n      42.371,\n      55.408\n    ],\n    \"checked\": 14,\n    \"passed\": 12\n  },\n  \"craft\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 1,\n    \"infoCount\": 0,\n    \"findings\": [\n      {\n        \"code\": \"text_below_floor\",\n        \"severity\": \"warning\",\n        \"message\": \"Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \\\"NOT ABOUT\\\" renders at 26 px for 2.62 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.\",\n        \"text\": \"NOT ABOUT\",\n        \"selector\": \"#df-a > small:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/diff.html\",\n        \"bbox\": {\n          \"x\": 96.26,\n          \"y\": 247.77,\n          \"width\": 187.42,\n          \"height\": 32.45\n        },\n        \"time\": 53.175,\n        \"times\": [\n          53.175\n        ],\n        \"fontPx\": 26.32,\n        \"floorPx\": 28,\n        \"seconds\": 2.621,\n        \"elements\": [\n          {\n            \"selector\": \"#df-a > small:nth-of-type(1)\",\n            \"text\": \"NOT ABOUT\",\n            \"fontPx\": 26.32,\n            \"time\": 53.175,\n            \"seconds\": 2.621\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 470\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"e6be7a47-4d3d-4dbd-a304-10301533de51\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/e6be7a47-4d3d-4dbd-a304-10301533de51.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/e6be7a47-4d3d-4dbd-a304-10301533de51.json\n"
     },
     "hf_version": "0.9.37",
     "snapshot_ok": true,
-    "render_seconds": 136,
+    "render_seconds": 180,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Promotion/preview.mp4"
   }
 }
