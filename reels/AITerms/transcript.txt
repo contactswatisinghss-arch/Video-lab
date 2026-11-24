@@ -1,0 +1,14 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.18-   4.54] I bet you cannot survive in tech in 2027 without knowing these three AI   | w0..w13
+[   4.54-   9.30] terms. The first is context engineering. Imagine asking an AI agent to prepare your   | w14..w27
+[   9.30-  12.84] weekly report. It needs to know which data to use, what matters the most,   | w28..w41
+[  12.90-  16.96] and what final report should look like. Giving it the right information at the   | w42..w55
+[  16.96-  22.06] right time, that's context engineering. Second is harness engineering. Now your agent needs to   | w56..w69
+[  22.06-  25.98] actually do the work. It needs to read files, run tools, track progress, and   | w70..w83
+[  25.98-  29.24] know when to stop. The system around the AI model that makes all of   | w84..w97
+[  29.24-  30.54] that possible is harness.   | w98..w101
+[  31.18-  35.42] The third is evals. Your agent produced a beautiful report. But are the numbers   | w102..w115
+[  35.42-  40.16] correct? Did it miss anything? Evals systematically test whether the AI is doing the   | w116..w129
+[  40.16-  44.60] job properly or not. I made a cheat sheet with real examples and more   | w130..w143
+[  44.60-  49.34] AI terms worth knowing before 2027. It meant AI 2027 and I will send   | w144..w157
+[  49.34-  49.82] them to you.   | w158..w160

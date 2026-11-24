@@ -1,0 +1,15 @@
+# [start-end] text   |   word ids (use {{at:wN}} tokens)
+[   0.00-   5.00] Your 2027 promotion needs impact, not PRs. I got promoted to tech lead at   | w0..w13
+[   5.00-   8.68] AWS this year, literally in the peak of AI era, and I'm not going   | w14..w27
+[   8.68-  13.04] to gatekeep, so here are some tips with fifth being the most important. First   | w28..w41
+[  13.04-  18.46] is stop tracking tickets. Track the outcomes. Did you improve reliability, cut latency, or   | w42..w55
+[  18.46-  19.22] unblock customers?   | w56..w57
+[  19.86-  24.64] Second is own the messy problems. When nobody knows the answer, propose a direction   | w58..w71
+[  24.64-  29.36] and drive it. Third, make your decisions visible. Explain the trade -offs you made,   | w72..w85
+[  29.36-  35.28] the risks you identified, and why your approach mattered. Fourth, don't wait for promotion   | w86..w99
+[  35.28-  39.82] season. Ask your manager what the next level expects now. Keep evidence of yourself   | w100..w113
+[  39.82-  45.66] already operating at that level. And fifth, don't outsource your judgment to AI. AI   | w114..w127
+[  45.66-  49.80] can help you move faster, but you need to be still responsible for what   | w128..w141
+[  49.80-  54.14] is getting built. So own that. Own the decision. And here is the difference.   | w142..w155
+[  54.20-  58.76] It's not about writing less code. It's about being trusted with bigger problems. Save   | w156..w169
+[  58.76-  60.80] this for your 2027 promotion plan.   | w170..w175
