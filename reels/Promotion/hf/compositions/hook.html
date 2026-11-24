@@ -1,0 +1,56 @@
+<template>
+<!-- HOOK / COVER (full screen): topic title on frame 0 + a stack of merged PRs; on "impact" each PR is struck through,
+     a gold IMPACT stamp lands, on "PRs" the stack falls away and the panel wipes up to reveal her. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #hk-pan { position: absolute; inset: 0; }
+  #hk-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 50% 30%, #1E2F4D 0%, #0E1726 60%, #080E19 100%); }
+  #hk-bg::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 120px); }
+  #hk-k { position: absolute; left: 0; right: 0; top: 210px; text-align: center; }
+  #hk-k span { display: inline-block; padding: 10px 22px; border-radius: 999px; border: 2px solid #F5B83D; color: #F5B83D; font: 700 30px 'Inter Tight', sans-serif; letter-spacing: .14em; }
+  #hk-t { position: absolute; left: 60px; right: 60px; top: 300px; text-align: center; font: 900 150px/0.92 'Fraunces', serif; color: #FBF6EA; letter-spacing: -.03em; }
+  #hk-s { position: absolute; left: 0; right: 0; top: 600px; text-align: center; font: italic 600 64px 'Fraunces', serif; color: #F5B83D; }
+  #hk-prs { position: absolute; left: 110px; right: 110px; top: 740px; }
+  .hk-pr { position: relative; height: 92px; margin-bottom: 18px; border-radius: 16px; background: #16233A; border: 2px solid #2A3B5C; display: flex; align-items: center;
+    padding: 0 26px; box-sizing: border-box; font: 500 30px 'JetBrains Mono', monospace; color: #C9D4E5; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+  .hk-pr b { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #A78BFA; margin-right: 20px; flex: none; }
+  .hk-pr i { font-style: normal; color: #8DA2C0; margin-right: 16px; }
+  .hk-pr em { font-style: normal; margin-left: auto; color: #3DDC97; font-size: 26px; }
+  .hk-x { position: absolute; left: 14px; right: 14px; top: 44px; height: 6px; border-radius: 3px; background: #FF5A5F; transform-origin: 0 50%; transform: scaleX(0); }
+  #hk-st { position: absolute; left: 0; right: 0; top: 860px; text-align: center; opacity: 0; }
+  #hk-st span { display: inline-block; padding: 18px 44px 24px; border: 8px solid #F5B83D; border-radius: 22px; color: #F5B83D; background: rgba(14,23,38,.92);
+    font: 900 120px/1 'Fraunces', serif; letter-spacing: .02em; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+</style>
+<div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+  <div id="hk-pan">
+    <div id="hk-bg"></div>
+    <div id="hk-k"><span>5 TIPS · FROM A NEW TECH LEAD</span></div>
+    <div id="hk-t">How to get<br>promoted</div>
+    <div id="hk-s">impact, not PRs</div>
+    <div id="hk-prs">
+      <div class="hk-pr" id="hk-p1"><b></b><i>#4812</i>fix flaky test<em>merged</em><div class="hk-x" id="hk-x1"></div></div>
+      <div class="hk-pr" id="hk-p2"><b></b><i>#4815</i>bump deps<em>merged</em><div class="hk-x" id="hk-x2"></div></div>
+      <div class="hk-pr" id="hk-p3"><b></b><i>#4821</i>rename var<em>merged</em><div class="hk-x" id="hk-x3"></div></div>
+      <div class="hk-pr" id="hk-p4"><b></b><i>#4830</i>add logging<em>merged</em><div class="hk-x" id="hk-x4"></div></div>
+    </div>
+    <div id="hk-st"><span>IMPACT</span></div>
+  </div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  // frame 0 already carries the title (cover); the PR rows settle in fast
+  tl.fromTo("#hk-t", { scale: 1.04 }, { scale: 1, duration: 0.5, ease: "expo.out" }, 0);
+  tl.fromTo(".hk-pr", { x: -30 }, { x: 0, duration: 0.4, ease: "power3.out", stagger: 0.06 }, 0);
+  // "impact": strike every PR, the stamp slams down over them
+  ["#hk-x1", "#hk-x2", "#hk-x3", "#hk-x4"].forEach((x, i) => tl.fromTo(x, { scaleX: 0 }, { scaleX: 1, duration: 0.14, ease: "power2.out" }, {{at:w4}} - 0.05 + i * 0.07));
+  tl.to(".hk-pr", { opacity: 0.45, duration: 0.2 }, {{at:w4}} + 0.2);
+  tl.fromTo("#hk-st", { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.28, ease: "power4.out" }, {{at:w4}} + 0.25);
+  // "not PRs": the stack falls away
+  ["#hk-p1", "#hk-p2", "#hk-p3", "#hk-p4"].forEach((p, i) => tl.to(p, { y: 1100, rotation: (i % 2 ? 9 : -9), duration: 0.5, ease: "power3.in" }, {{at:w6}} - 0.1 + i * 0.05));
+  // wipe up to reveal her
+  tl.fromTo("#hk-pan", { clipPath: "inset(0% 0 0% 0)" }, { clipPath: "inset(0% 0 100% 0)", duration: 0.32, ease: "power4.in" }, {{at:w7}} - 0.1 - 0.34);
+  window.__timelines["hook"] = tl;
+})();
+</script>
+</template>

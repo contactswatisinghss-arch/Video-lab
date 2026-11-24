@@ -1,0 +1,60 @@
+<template>
+<!-- TIP 3 TAKEOVER: a realistic design doc; "visible" shares it (avatars + "shared with team & manager"); trade-offs, risks and
+     "why" each get a gold highlighter sweep while the other sections dim (spotlight on the word that names them). -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #tc-w { position: absolute; inset: 0; }
+  #tc-bg { position: absolute; inset: 0; background: linear-gradient(160deg, #16233A 0%, #0E1726 60%, #080E19 100%); }
+  #tc-h { position: absolute; left: 70px; right: 70px; top: 190px; }
+  #tc-n { display: inline-block; padding: 8px 18px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 30px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #tc-t { margin-top: 14px; font: 900 84px/0.98 'Fraunces', serif; color: #FBF6EA; letter-spacing: -.02em; }
+  #tc-t em { font-style: italic; color: #F5B83D; }
+  #tc-doc { position: absolute; left: 70px; right: 70px; top: 470px; height: 730px; border-radius: 22px; background: #FFFFFF; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+  #tc-bar { height: 70px; background: #F1F3F7; border-bottom: 2px solid #E1E5EC; display: flex; align-items: center; padding: 0 24px; gap: 14px; font: 600 26px 'Inter Tight', sans-serif; color: #44516A; }
+  #tc-bar svg { flex: none; }
+  #tc-sh { margin-left: auto; display: flex; align-items: center; gap: 10px; opacity: 0; }
+  .tc-av { width: 42px; height: 42px; border-radius: 50%; border: 3px solid #fff; margin-left: -14px; }
+  #tc-shl { padding: 6px 14px; border-radius: 10px; background: #0E1726; color: #FBF6EA; font: 700 22px 'Inter Tight', sans-serif; }
+  #tc-body { padding: 26px 40px; }
+  #tc-dt { font: 800 44px 'Inter Tight', sans-serif; color: #0E1726; margin-bottom: 18px; }
+  .tc-s { position: relative; margin-bottom: 16px; padding: 14px 18px; border-radius: 14px; }
+  .tc-s h5 { margin: 0 0 6px; font: 800 26px 'Inter Tight', sans-serif; color: #6B7891; letter-spacing: .12em; }
+  .tc-s p { margin: 0; font: 500 32px/1.3 'Inter Tight', sans-serif; color: #1D2840; }
+  .tc-hl { position: absolute; inset: 0; border-radius: 14px; background: rgba(245,184,61,.32); border-left: 8px solid #F5B83D; transform-origin: 0 50%; transform: scaleX(0); }
+  .tc-s > *:not(.tc-hl) { position: relative; }
+</style>
+<div id="root" data-composition-id="tipc" data-width="1080" data-height="1920"><div id="tc-w">
+  <div id="tc-bg"></div>
+  <div id="tc-h"><span id="tc-n">TIP 3</span><div id="tc-t">Make your decisions <em>visible</em></div></div>
+  <div id="tc-doc">
+    <div id="tc-bar"><svg width="34" height="40" viewBox="0 0 34 40"><path d="M3 3h19l9 9v25H3z" fill="#5B8DEF"/><path d="M9 20h16M9 26h16M9 32h10" stroke="#fff" stroke-width="3"/></svg>Design doc
+      <div id="tc-sh"><span class="tc-av" style="background:#F5B83D"></span><span class="tc-av" style="background:#3DDC97"></span><span class="tc-av" style="background:#A78BFA"></span><span id="tc-shl">Shared · team + manager</span></div></div>
+    <div id="tc-body">
+      <div id="tc-dt">Move checkout to a queue</div>
+      <div class="tc-s" id="tc-s1"><div class="tc-hl"></div><h5>TRADE-OFFS</h5><p>+ survives traffic spikes<br>− orders confirm a few seconds later</p></div>
+      <div class="tc-s" id="tc-s2"><div class="tc-hl"></div><h5>RISKS</h5><p>Duplicate orders → idempotency keys</p></div>
+      <div class="tc-s" id="tc-s3"><div class="tc-hl"></div><h5>WHY THIS APPROACH</h5><p>Checkout stays up when traffic peaks</p></div>
+    </div>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w75) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#tc-w", { clipPath: "circle(0% at 50% 60%)" }, { clipPath: "circle(120% at 50% 60%)", duration: 0.45, ease: "power3.out" }, 0);
+  tl.fromTo("#tc-doc", { y: 160, rotation: 3 }, { y: 0, rotation: 0, duration: 0.5, ease: "expo.out" }, 0.1);
+  tl.fromTo(".tc-s", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.08 }, 0.3);
+  tl.fromTo("#tc-sh", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.3, ease: "back.out(2)" }, {{at:w79}} - S - 0.05);
+  // spotlight each section on its word
+  [["#tc-s1", {{at:w82}}], ["#tc-s2", {{at:w87}}], ["#tc-s3", {{at:w91}}]].forEach(([s, t], i, arr) => {
+    tl.to(arr.filter(a => a[0] !== s).map(a => a[0]), { opacity: 0.35, duration: 0.15 }, t - S - 0.05);
+    tl.to(s, { opacity: 1, scale: 1.03, duration: 0.2, ease: "power3.out" }, t - S - 0.05);
+    tl.fromTo(s + " .tc-hl", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, t - S - 0.05);
+    if (i < 2) tl.to(s, { scale: 1, duration: 0.15 }, arr[i + 1][1] - S - 0.1);
+  });
+  tl.to(".tc-s", { opacity: 1, duration: 0.2 }, {{at:w94}} - S);
+  tl.to("#tc-w", { y: -1920, duration: 0.35, ease: "power4.in" }, {{at:w95}} - S - 0.37);
+  window.__timelines["tipc"] = tl;
+})();
+</script>
+</template>

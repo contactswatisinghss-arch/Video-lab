@@ -1,0 +1,47 @@
+<template>
+<!-- TIP 2 (top band, marker doodle on a cream card): a tangled scribble draws itself on "messy", question marks pop on
+     "nobody knows", the knot clears and a straight arrow draws on "direction", then pushes forward on "drive it". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #tb-card { position: absolute; left: 60px; right: 60px; top: 178px; height: 250px; border-radius: 26px; background: #FBF6EA; box-shadow: 0 20px 44px rgba(0,0,0,.45); overflow: hidden; }
+  #tb-n { position: absolute; left: 36px; top: 30px; padding: 6px 16px; border-radius: 999px; background: #0E1726; color: #F5B83D; font: 800 26px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #tb-t { position: absolute; left: 36px; top: 86px; width: 470px; font: 900 64px/1 'Fraunces', serif; color: #0E1726; letter-spacing: -.02em; }
+  #tb-d { position: absolute; right: 20px; top: 14px; width: 430px; height: 222px; }
+  .tb-q { position: absolute; font: 900 54px 'Fraunces', serif; color: #FF5A5F; opacity: 0; }
+  #tb-lb { position: absolute; right: 40px; bottom: 18px; font: 800 26px 'Inter Tight', sans-serif; color: #1F9E68; letter-spacing: .12em; opacity: 0; }
+</style>
+<div id="root" data-composition-id="tipb" data-width="1080" data-height="1920">
+  <div id="tb-card">
+    <div id="tb-n">TIP 2</div>
+    <div id="tb-t">Own the messy problems</div>
+    <svg id="tb-d" viewBox="0 0 430 222">
+      <path id="tb-knot" d="M30 120 C70 30 130 200 170 100 S250 20 230 130 S120 190 180 80 S300 40 290 150 S200 200 260 110 S360 60 340 140 S280 170 330 100 S400 120 400 110"
+        stroke="#0E1726" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <g id="tb-arrow"><path id="tb-ln" d="M30 112 H360" stroke="#3DDC97" stroke-width="14" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+        <path id="tb-hd" d="M330 76 L392 112 L330 148" stroke="#3DDC97" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0"/></g>
+    </svg>
+    <div class="tb-q" id="tb-q1" style="right:330px;top:10px">?</div>
+    <div class="tb-q" id="tb-q2" style="right:170px;top:2px">?</div>
+    <div class="tb-q" id="tb-q3" style="right:60px;top:150px">?</div>
+    <div id="tb-lb">DIRECTION →</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w58) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#tb-card", { y: -280, rotation: -2 }, { y: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#tb-knot", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power1.inOut" }, {{at:w61}} - S);
+  ["#tb-q1", "#tb-q2", "#tb-q3"].forEach((q, i) => tl.fromTo(q, { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 1, scale: 1, rotation: (i - 1) * 12, duration: 0.25, ease: "back.out(3)" }, {{at:w65}} - S + i * 0.15));
+  // "propose a direction": the mess clears, a straight arrow draws
+  tl.to(["#tb-knot", ".tb-q"], { opacity: 0, duration: 0.2 }, {{at:w69}} - S);
+  tl.fromTo("#tb-ln", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power3.out" }, {{at:w71}} - S - 0.1);
+  tl.fromTo("#tb-hd", { opacity: 0 }, { opacity: 1, duration: 0.1 }, {{at:w71}} - S + 0.2);
+  tl.fromTo("#tb-lb", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out" }, {{at:w71}} - S + 0.2);
+  // "drive it": the arrow pushes forward
+  tl.fromTo("#tb-arrow", { x: 0 }, { x: 24, duration: 0.18, ease: "power4.out", yoyo: true, repeat: 1 }, {{at:w73}} - S);
+  tl.to("#tb-card", { y: -280, duration: 0.25, ease: "power3.in" }, {{at:w75}} - S - 0.28);
+  window.__timelines["tipb"] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,79 @@
+<template>
+<!-- TIP 1 TAKEOVER: a realistic ticket board ("Done" column) -> on "stop tracking tickets" the tickets are struck and swept
+     away -> on "outcomes" the window becomes an outcomes dashboard; reliability / latency / customers land on their words. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #ta-w { position: absolute; inset: 0; }
+  #ta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 50% 40%, #1E2F4D 0%, #0E1726 65%, #080E19 100%); }
+  #ta-h { position: absolute; left: 70px; right: 70px; top: 190px; }
+  #ta-n { display: inline-block; padding: 8px 18px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 30px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #ta-t { margin-top: 14px; font: 900 84px/0.98 'Fraunces', serif; color: #FBF6EA; letter-spacing: -.02em; }
+  #ta-t s { text-decoration: none; position: relative; color: #8DA2C0; }
+  #ta-t s i { position: absolute; left: -4px; right: -4px; top: 50%; height: 7px; border-radius: 4px; background: #FF5A5F; transform-origin: 0 50%; transform: scaleX(0); }
+  #ta-win { position: absolute; left: 70px; right: 70px; top: 470px; height: 720px; border-radius: 24px; background: #F4F6FA; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+  .ta-bar { height: 58px; background: #E3E8F0; display: flex; align-items: center; padding: 0 22px; gap: 10px; font: 600 26px 'Inter Tight', sans-serif; color: #44516A; }
+  .ta-bar b { width: 16px; height: 16px; border-radius: 50%; background: #C7CFDB; display: inline-block; }
+  .ta-bar span { margin-left: 16px; }
+  #ta-board, #ta-dash { position: absolute; left: 0; right: 0; top: 58px; bottom: 0; padding: 26px 30px; box-sizing: border-box; }
+  .ta-col { font: 800 26px 'Inter Tight', sans-serif; color: #6B7891; letter-spacing: .12em; margin-bottom: 16px; }
+  .ta-tk { position: relative; height: 92px; margin-bottom: 14px; border-radius: 14px; background: #fff; border: 2px solid #DCE2EC; display: flex; align-items: center; padding: 0 22px;
+    font: 600 30px 'Inter Tight', sans-serif; color: #1D2840; box-shadow: 0 3px 8px rgba(20,30,50,.06); }
+  .ta-tk code { font: 500 24px 'JetBrains Mono', monospace; color: #5B6B88; margin-right: 18px; }
+  .ta-tk em { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; background: #3DDC97; }
+  .ta-tk .ta-x { position: absolute; left: 12px; right: 12px; top: 43px; height: 6px; border-radius: 3px; background: #FF5A5F; transform-origin: 0 50%; transform: scaleX(0); }
+  #ta-dash { opacity: 0; background: #0F1A2C; }
+  #ta-dk { font: 800 26px 'Inter Tight', sans-serif; color: #F5B83D; letter-spacing: .14em; margin-bottom: 18px; }
+  .ta-row { height: 170px; margin-bottom: 18px; border-radius: 18px; background: #16233A; border: 2px solid #26375A; display: flex; align-items: center; padding: 0 30px; gap: 26px; opacity: 0; }
+  .ta-ic { width: 96px; height: 96px; border-radius: 22px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .ta-row h4 { margin: 0; font: 800 46px 'Inter Tight', sans-serif; color: #FBF6EA; }
+  .ta-row p { margin: 4px 0 0; font: 500 26px 'JetBrains Mono', monospace; color: #8DA2C0; }
+  .ta-row svg.sp { margin-left: auto; width: 200px; height: 90px; }
+</style>
+<div id="root" data-composition-id="tipa" data-width="1080" data-height="1920"><div id="ta-w">
+  <div id="ta-bg"></div>
+  <div id="ta-h"><span id="ta-n">TIP 1</span>
+    <div id="ta-t">Track outcomes,<br>not <s>tickets<i id="ta-tx"></i></s></div></div>
+  <div id="ta-win">
+    <div class="ta-bar"><b></b><b></b><b></b><span id="ta-bt">Sprint board</span></div>
+    <div id="ta-board">
+      <div class="ta-col">DONE · 5</div>
+      <div class="ta-tk" id="ta-k1"><code>PLAT-1042</code>Update config<em></em><div class="ta-x"></div></div>
+      <div class="ta-tk" id="ta-k2"><code>PLAT-1047</code>Fix lint warnings<em></em><div class="ta-x"></div></div>
+      <div class="ta-tk" id="ta-k3"><code>PLAT-1051</code>Add unit tests<em></em><div class="ta-x"></div></div>
+      <div class="ta-tk" id="ta-k4"><code>PLAT-1058</code>Bump library<em></em><div class="ta-x"></div></div>
+      <div class="ta-tk" id="ta-k5"><code>PLAT-1060</code>Rename endpoint<em></em><div class="ta-x"></div></div>
+    </div>
+    <div id="ta-dash">
+      <div id="ta-dk">OUTCOMES · WHAT CHANGED</div>
+      <div class="ta-row" id="ta-r1"><div class="ta-ic" style="background:#3DDC97"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 48V10M12 26 28 10l16 16" stroke="#0E1726" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4>Reliability</h4><p>fewer incidents</p></div><svg class="sp" viewBox="0 0 200 90"><path d="M4 80 40 70 76 74 112 50 148 40 196 12" stroke="#3DDC97" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ta-row" id="ta-r2"><div class="ta-ic" style="background:#F5B83D"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 8v38M12 30l16 16 16-16" stroke="#0E1726" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4>Latency</h4><p>faster responses</p></div><svg class="sp" viewBox="0 0 200 90"><path d="M4 12 40 20 76 16 112 44 148 56 196 80" stroke="#F5B83D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ta-row" id="ta-r3"><div class="ta-ic" style="background:#FBF6EA"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M10 30l12 12 24-26" stroke="#0E1726" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4>Customers</h4><p>unblocked</p></div></div>
+    </div>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w41) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ta-w", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.35, ease: "power4.out" }, 0);
+  tl.fromTo("#ta-win", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 0.1);
+  tl.fromTo(".ta-tk", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power3.out", stagger: 0.05 }, 0.2);
+  // "stop tracking tickets": strike the title word and every ticket
+  tl.fromTo("#ta-tx", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power2.out" }, {{at:w43}} - S);
+  tl.fromTo(".ta-x", { scaleX: 0 }, { scaleX: 1, duration: 0.14, ease: "power2.out", stagger: 0.06 }, {{at:w44}} - S);
+  // "Track": tickets swept off left
+  tl.to(".ta-tk", { x: -1000, rotation: -4, duration: 0.4, ease: "power3.in", stagger: 0.04 }, {{at:w46}} - S - 0.15);
+  // "outcomes": the window becomes a dashboard
+  tl.fromTo("#ta-dash", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w48}} - S - 0.1);
+  tl.fromTo(".ta-bar", { backgroundColor: "#E3E8F0" }, { backgroundColor: "#16233A", color: "#FBF6EA", duration: 0.2 }, {{at:w48}} - S - 0.1);
+  tl.fromTo("#ta-r1", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w52}} - S - 0.05);
+  tl.fromTo("#ta-r2", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w54}} - S - 0.05);
+  tl.fromTo("#ta-r3", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, {{at:w56}} - S);
+  tl.fromTo("#ta-w", { clipPath: "inset(0 0 0 0%)" }, { clipPath: "inset(0 100% 0 0)", duration: 0.3, ease: "power4.in", immediateRender: false }, {{at:w58}} - S - 0.32);
+  window.__timelines["tipa"] = tl;
+})();
+</script>
+</template>

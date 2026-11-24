@@ -1,0 +1,40 @@
+<template>
+<!-- FIVE TIPS (top band): five numbered cards deal out like a hand on "tips"; on "fifth" card 5 lifts and turns gold,
+     "MOST IMPORTANT" lands on "most important". -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  .fv-c { position: absolute; top: 214px; width: 140px; height: 180px; margin-top: -20px; margin-left: -75px; border-radius: 20px; background: #FBF6EA; border: 3px solid #0E1726;
+    box-shadow: 0 14px 30px rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; font: 900 110px 'Fraunces', serif; color: #0E1726;
+    transform-origin: 50% 140%; opacity: 0; }
+  #fv-c5 { background: #16233A; color: #FBF6EA; border-color: #16233A; }
+  #fv-lb { position: absolute; left: 0; right: 0; top: 176px; text-align: center; opacity: 0; }
+  #fv-lb span { display: inline-block; padding: 8px 20px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 30px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #fv-w { position: absolute; inset: 0; }
+  #fv-k { position: absolute; left: 0; right: 0; top: 176px; text-align: center; font: 800 32px 'Inter Tight', sans-serif; color: #FBF6EA; letter-spacing: .16em;
+    text-shadow: 0 3px 12px rgba(0,0,0,.9); opacity: 0; }
+</style>
+<div id="root" data-composition-id="five" data-width="1080" data-height="1920"><div id="fv-w">
+  <div class="fv-c" id="fv-c1" style="left:220px">1</div>
+  <div class="fv-c" id="fv-c2" style="left:380px">2</div>
+  <div class="fv-c" id="fv-c3" style="left:540px">3</div>
+  <div class="fv-c" id="fv-c4" style="left:700px">4</div>
+  <div class="fv-c" id="fv-c5" style="left:860px">5</div>
+  <div id="fv-lb"><span>★ MOST IMPORTANT</span></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w30) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  const rot = [-14, -7, 0, 7, 14];
+  ["#fv-c1", "#fv-c2", "#fv-c3", "#fv-c4", "#fv-c5"].forEach((c, i) =>
+    tl.fromTo(c, { opacity: 0, y: 160, rotation: 0, x: (2 - i) * 160 }, { opacity: 1, y: Math.abs(i - 2) * 14, rotation: rot[i], x: 0, duration: 0.45, ease: "expo.out" }, {{at:w33}} - S + i * 0.07));
+  // fifth: card 5 lifts, goes gold; the rest dim
+  tl.to("#fv-c5", { y: -10, rotation: 6, scale: 1.12, backgroundColor: "#F5B83D", color: "#0E1726", borderColor: "#F5B83D", duration: 0.35, ease: "back.out(2)" }, {{at:w36}} - S);
+  tl.to(["#fv-c1", "#fv-c2", "#fv-c3", "#fv-c4"], { opacity: 0.55, duration: 0.25 }, {{at:w36}} - S);
+  tl.to(["#fv-c1", "#fv-c2", "#fv-c3", "#fv-c4", "#fv-c5"], { y: "+=30", duration: 0.3, ease: "power3.out" }, {{at:w39}} - S - 0.1);
+  tl.fromTo("#fv-lb", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, {{at:w39}} - S);
+  tl.to("#fv-w", { opacity: 0, duration: 0.18, ease: "power2.in" }, {{at:w41}} - S - 0.2);
+  window.__timelines["five"] = tl;
+})();
+</script>
+</template>

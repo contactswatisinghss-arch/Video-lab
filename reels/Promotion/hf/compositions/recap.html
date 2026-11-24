@@ -1,0 +1,45 @@
+<template>
+<!-- RECAP + CTA (full screen, the save-worthy last frame): "Your promotion plan" checklist, five rows tick in quick
+     succession from "Save"; a gold bookmark drops in on "Save this". The last frame loops back into the hook. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #rc-w { position: absolute; inset: 0; }
+  #rc-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 50% 35%, #1E2F4D 0%, #0E1726 60%, #080E19 100%); }
+  #rc-bm { position: absolute; right: 80px; top: 170px; width: 110px; height: 150px; }
+  #rc-k { position: absolute; left: 80px; top: 200px; font: 800 30px 'Inter Tight', sans-serif; color: #F5B83D; letter-spacing: .16em; }
+  #rc-t { position: absolute; left: 80px; top: 250px; font: 900 96px/0.95 'Fraunces', serif; color: #FBF6EA; letter-spacing: -.02em; }
+  #rc-list { position: absolute; left: 70px; right: 70px; top: 500px; }
+  .rc-r { height: 118px; margin-bottom: 16px; border-radius: 20px; background: #16233A; border: 2px solid #26375A; display: flex; align-items: center; padding: 0 28px; gap: 24px; opacity: 0; }
+  .rc-r.gold { border-color: #F5B83D; }
+  .rc-bx { width: 60px; height: 60px; border-radius: 14px; border: 4px solid #8DA2C0; flex: none; position: relative; box-sizing: border-box; }
+  .rc-bx svg { position: absolute; left: 4px; top: 4px; }
+  .rc-ck { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .rc-r span { font: 700 40px 'Inter Tight', sans-serif; color: #FBF6EA; }
+  .rc-r i { font-style: normal; font: 900 40px 'Fraunces', serif; color: #F5B83D; width: 36px; }
+</style>
+<div id="root" data-composition-id="recap" data-width="1080" data-height="1920"><div id="rc-w">
+  <div id="rc-bg"></div>
+  <div id="rc-k">SAVE THIS</div>
+  <div id="rc-t">Your promotion<br>plan</div>
+  <svg id="rc-bm" viewBox="0 0 110 150"><path d="M10 6h90v138L55 112 10 144z" fill="#F5B83D"/><path d="M38 52l12 12 24-26" stroke="#0E1726" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div id="rc-list">
+    <div class="rc-r" id="rc-r1"><i>1</i><div class="rc-bx"><svg width="44" height="44" viewBox="0 0 44 44"><path class="rc-ck" pathLength="1" d="M6 22l10 10 22-24" stroke="#3DDC97" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Track outcomes, not tickets</span></div>
+    <div class="rc-r" id="rc-r2"><i>2</i><div class="rc-bx"><svg width="44" height="44" viewBox="0 0 44 44"><path class="rc-ck" pathLength="1" d="M6 22l10 10 22-24" stroke="#3DDC97" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Own the messy problems</span></div>
+    <div class="rc-r" id="rc-r3"><i>3</i><div class="rc-bx"><svg width="44" height="44" viewBox="0 0 44 44"><path class="rc-ck" pathLength="1" d="M6 22l10 10 22-24" stroke="#3DDC97" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Make decisions visible</span></div>
+    <div class="rc-r" id="rc-r4"><i>4</i><div class="rc-bx"><svg width="44" height="44" viewBox="0 0 44 44"><path class="rc-ck" pathLength="1" d="M6 22l10 10 22-24" stroke="#3DDC97" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Ask what the next level expects</span></div>
+    <div class="rc-r gold" id="rc-r5"><i>5</i><div class="rc-bx"><svg width="44" height="44" viewBox="0 0 44 44"><path class="rc-ck" pathLength="1" d="M6 22l10 10 22-24" stroke="#F5B83D" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Own the decision, not the AI</span></div>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w169) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#rc-w", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.32, ease: "power4.out" }, 0);
+  tl.fromTo("#rc-bm", { y: -220, rotation: -10 }, { y: 0, rotation: 0, duration: 0.45, ease: "bounce.out" }, 0.1);
+  tl.fromTo(".rc-r", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.25, ease: "expo.out", stagger: 0.1 }, 0.15);
+  tl.fromTo(".rc-ck", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.14, ease: "power2.out", stagger: 0.2 }, 0.6);
+  tl.fromTo("#rc-r5", { scale: 1 }, { scale: 1.04, duration: 0.25, ease: "back.out(3)" }, {{at:w173}} - S);
+  window.__timelines["recap"] = tl;
+})();
+</script>
+</template>

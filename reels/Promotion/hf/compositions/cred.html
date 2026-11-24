@@ -1,0 +1,59 @@
+<template>
+<!-- CREDIBILITY (top band, above her hair): a title card updates Software Engineer -> Tech Lead on "promoted / tech lead",
+     company + "AI era" chips land on their words, and on "gatekeep" a gate swings open. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #cr-card { position: absolute; left: 70px; right: 70px; top: 180px; height: 230px; border-radius: 28px; background: rgba(14,23,38,.93);
+    border: 2px solid rgba(245,184,61,.5); box-shadow: 0 20px 44px rgba(0,0,0,.45); overflow: hidden; }
+  #cr-lb { position: absolute; left: 40px; top: 28px; font: 700 26px 'Inter Tight', sans-serif; color: #F5B83D; letter-spacing: .16em; }
+  #cr-old { position: absolute; left: 40px; top: 70px; font: 600 64px 'Inter Tight', sans-serif; color: #8DA2C0; white-space: nowrap; }
+  #cr-oldx { position: absolute; left: 36px; top: 108px; width: 560px; height: 6px; border-radius: 3px; background: #FF5A5F; transform-origin: 0 50%; transform: scaleX(0); }
+  #cr-new { position: absolute; left: 40px; top: 62px; font: 900 92px 'Fraunces', serif; color: #F5B83D; white-space: nowrap; opacity: 0; }
+  #cr-up { position: absolute; right: 44px; top: 60px; width: 110px; height: 110px; opacity: 0; }
+  .cr-chip { position: absolute; top: 168px; padding: 6px 16px; border-radius: 999px; font: 700 28px 'Inter Tight', sans-serif; opacity: 0; }
+  #cr-c1 { left: 40px; background: #FBF6EA; color: #0E1726; }
+  #cr-c2 { left: 190px; background: #16233A; color: #FBF6EA; border: 2px solid #3DDC97; }
+  #cr-gate { position: absolute; right: 40px; top: 52px; width: 160px; height: 150px; opacity: 0; }
+  #cr-gl, #cr-gr { transform-box: fill-box; }
+  #cr-gl { transform-origin: 0% 50%; } #cr-gr { transform-origin: 100% 50%; }
+  #cr-open { position: absolute; right: 30px; top: 172px; font: 700 26px 'Inter Tight', sans-serif; color: #3DDC97; opacity: 0; }
+</style>
+<div id="root" data-composition-id="cred" data-width="1080" data-height="1920">
+  <div id="cr-card">
+    <div id="cr-lb">MY PROMOTION</div>
+    <div id="cr-old">Software Engineer</div><div id="cr-oldx"></div>
+    <div id="cr-new">Tech Lead</div>
+    <svg id="cr-up" viewBox="0 0 110 110"><circle cx="55" cy="55" r="50" fill="#F5B83D"/><path d="M55 80V32M34 52l21-21 21 21" stroke="#0E1726" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="cr-chip" id="cr-c1">AWS</div>
+    <div class="cr-chip" id="cr-c2">✦ in the AI era</div>
+    <svg id="cr-gate" viewBox="0 0 160 150">
+      <rect x="4" y="10" width="10" height="136" rx="4" fill="#8DA2C0"/><rect x="146" y="10" width="10" height="136" rx="4" fill="#8DA2C0"/>
+      <g id="cr-gl"><rect x="16" y="30" width="62" height="110" rx="6" fill="none" stroke="#F5B83D" stroke-width="7"/><path d="M36 30v110M58 30v110" stroke="#F5B83D" stroke-width="5"/></g>
+      <g id="cr-gr"><rect x="82" y="30" width="62" height="110" rx="6" fill="none" stroke="#F5B83D" stroke-width="7"/><path d="M102 30v110M124 30v110" stroke="#F5B83D" stroke-width="5"/></g>
+    </svg>
+    <div id="cr-open">no gatekeeping</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w7) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#cr-card", { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#cr-oldx", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power2.out" }, {{at:w9}} - S);
+  tl.to("#cr-old", { y: -80, opacity: 0, duration: 0.22, ease: "power2.in" }, {{at:w11}} - S - 0.2);
+  tl.to("#cr-oldx", { y: -80, opacity: 0, duration: 0.22, ease: "power2.in" }, {{at:w11}} - S - 0.2);
+  tl.fromTo("#cr-new", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, {{at:w11}} - S);
+  tl.fromTo("#cr-up", { scale: 0, rotation: -90, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.4, ease: "back.out(2)" }, {{at:w12}} - S + 0.05);
+  tl.fromTo("#cr-c1", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "back.out(2)" }, {{at:w14}} - S);
+  tl.fromTo("#cr-c2", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "back.out(2)" }, {{at:w20}} - S);
+  // gatekeep: the arrow gives way to a gate that swings open
+  tl.to("#cr-up", { scale: 0, opacity: 0, duration: 0.15, ease: "power2.in" }, {{at:w27}} - S);
+  tl.fromTo("#cr-gate", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power3.out" }, {{at:w27}} - S + 0.1);
+  tl.fromTo("#cr-gl", { scaleX: 1 }, { scaleX: 0.2, duration: 0.4, ease: "power3.out" }, {{at:w29}} - S + 0.15);
+  tl.fromTo("#cr-gr", { scaleX: 1 }, { scaleX: 0.2, duration: 0.4, ease: "power3.out" }, {{at:w29}} - S + 0.15);
+  tl.fromTo("#cr-open", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out" }, {{at:w29}} - S + 0.3);
+  tl.to("#cr-card", { y: -260, opacity: 0, duration: 0.25, ease: "power3.in" }, {{at:w30}} - S - 0.28);
+  window.__timelines["cred"] = tl;
+})();
+</script>
+</template>

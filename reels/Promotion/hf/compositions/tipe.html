@@ -1,0 +1,89 @@
+<template>
+<!-- TIP 5 TAKEOVER (the most important one): a realistic code editor with an AI assistant streaming code on "move faster";
+     on "responsible" a merge gate appears and the reviewer badge stamps YOU; "Own the decision" slams full screen. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #te-w { position: absolute; inset: 0; }
+  #te-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 50% 45%, #22304B 0%, #0E1726 60%, #070C16 100%); }
+  #te-h { position: absolute; left: 70px; right: 70px; top: 190px; }
+  #te-n { display: inline-block; padding: 8px 18px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 30px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #te-t { margin-top: 14px; font: 900 80px/0.98 'Fraunces', serif; color: #FBF6EA; letter-spacing: -.02em; }
+  #te-t em { font-style: italic; color: #F5B83D; }
+  #te-ed { position: absolute; left: 50px; right: 50px; top: 470px; height: 730px; border-radius: 22px; background: #111827; border: 2px solid #26375A; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.55); }
+  #te-tabs { height: 56px; background: #0B1220; display: flex; align-items: flex-end; padding-left: 18px; gap: 6px; }
+  .te-tab { padding: 10px 22px; border-radius: 10px 10px 0 0; font: 500 22px 'JetBrains Mono', monospace; color: #8DA2C0; background: #141D2E; }
+  .te-tab.on { color: #FBF6EA; background: #111827; }
+  #te-code { position: absolute; left: 0; top: 56px; width: 600px; bottom: 0; padding: 20px 0 0 0; font: 500 24px/1.62 'JetBrains Mono', monospace; color: #C9D4E5; }
+  .te-l { white-space: pre; padding-left: 70px; position: relative; opacity: 0; }
+  .te-l::before { content: attr(data-n); position: absolute; left: 14px; width: 40px; text-align: right; color: #4B5B78; }
+  .k { color: #C792EA; } .f { color: #82AAFF; } .s { color: #C3E88D; } .c { color: #5C6B86; font-style: italic; }
+  #te-ai { position: absolute; right: 0; top: 56px; width: 376px; bottom: 0; background: #0E1626; border-left: 2px solid #26375A; padding: 20px; box-sizing: border-box; }
+  #te-ait { font: 700 24px 'Inter Tight', sans-serif; color: #A78BFA; letter-spacing: .1em; }
+  .te-msg { margin-top: 16px; padding: 14px 16px; border-radius: 14px; font: 500 24px/1.3 'Inter Tight', sans-serif; opacity: 0; }
+  #te-m1 { background: #1B2740; color: #C9D4E5; }
+  #te-m2 { background: #2A2150; color: #E4DCFF; }
+  #te-gen { margin-top: 16px; font: 600 22px 'JetBrains Mono', monospace; color: #A78BFA; opacity: 0; }
+  #te-gate { position: absolute; left: 0; right: 0; bottom: 0; height: 170px; background: #FBF6EA; display: flex; align-items: center; padding: 0 28px; gap: 22px; transform: translateY(100%); }
+  #te-gq { font: 800 34px 'Inter Tight', sans-serif; color: #0E1726; }
+  #te-gq small { display: block; font: 600 22px 'Inter Tight', sans-serif; color: #6B7891; }
+  #te-btn { margin-left: auto; padding: 18px 28px; border-radius: 14px; background: #3DDC97; color: #0E1726; font: 800 30px 'Inter Tight', sans-serif; }
+  #te-you { position: absolute; right: 230px; bottom: 110px; padding: 10px 22px; border: 6px solid #F5B83D; border-radius: 14px; color: #F5B83D; background: #0E1726;
+    font: 900 44px 'Fraunces', serif; letter-spacing: .04em; opacity: 0; }
+  #te-slam { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: #F5B83D; opacity: 0; }
+  #te-sw { position: absolute; left: 60px; right: 60px; top: 420px; text-align: center; font: 900 150px/0.92 'Fraunces', serif; color: #0E1726; letter-spacing: -.03em; }
+  #te-sw span { display: block; }
+  #te-sk { position: absolute; left: 0; right: 0; top: 320px; text-align: center; font: 800 32px 'Inter Tight', sans-serif; color: #0E1726; letter-spacing: .18em; }
+</style>
+<div id="root" data-composition-id="tipe" data-width="1080" data-height="1920"><div id="te-w">
+  <div id="te-bg"></div>
+  <div id="te-h"><span id="te-n">TIP 5 ★ MOST IMPORTANT</span><div id="te-t">Don't outsource your <em>judgment</em></div></div>
+  <div id="te-ed">
+    <div id="te-tabs"><span class="te-tab on">checkout.py</span><span class="te-tab">queue.py</span></div>
+    <div id="te-code">
+      <div class="te-l" data-n="1"><span class="k">def</span> <span class="f">place_order</span>(cart, user):</div>
+      <div class="te-l" data-n="2">    <span class="c"># AI suggestion</span></div>
+      <div class="te-l" data-n="3">    order = Order.create(cart)</div>
+      <div class="te-l" data-n="4">    queue.<span class="f">publish</span>(order)</div>
+      <div class="te-l" data-n="5">    <span class="k">if</span> order.total &gt; <span class="s">LIMIT</span>:</div>
+      <div class="te-l" data-n="6">        <span class="f">charge_now</span>(user)</div>
+      <div class="te-l" data-n="7">    <span class="k">return</span> order.id</div>
+      <div class="te-l" data-n="8"></div>
+      <div class="te-l" data-n="9"><span class="k">def</span> <span class="f">retry</span>(job):</div>
+      <div class="te-l" data-n="10">    queue.<span class="f">requeue</span>(job)</div>
+    </div>
+    <div id="te-ai"><div id="te-ait">AI ASSISTANT</div>
+      <div class="te-msg" id="te-m1">Build the checkout queue</div>
+      <div class="te-msg" id="te-m2">Done ✨ Here's the full implementation.</div>
+      <div id="te-gen">▍ generating…</div></div>
+    <div id="te-gate"><div id="te-gq">Ship to production?<small>Who answers for this code?</small></div><div id="te-btn">Approve</div></div>
+    <div id="te-you">YOU</div>
+  </div>
+  <div id="te-slam"><div id="te-sk">TIP 5</div><div id="te-sw"><span id="te-s1">OWN</span><span id="te-s2">THE</span><span id="te-s3">DECISION.</span></div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w119) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#te-w", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.38, ease: "power4.out" }, 0);
+  tl.fromTo("#te-n", { scale: 1.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 0.1);
+  tl.fromTo("#te-ed", { y: 140, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.15);
+  tl.fromTo("#te-m1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w122}} - S);
+  // AI moves fast: reply lands, code streams in
+  tl.fromTo("#te-m2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w127}} - S);
+  tl.fromTo("#te-gen", { opacity: 0 }, { opacity: 1, duration: 0.1 }, {{at:w127}} - S + 0.1);
+  tl.fromTo(".te-l", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.08, stagger: 0.1 }, {{at:w129}} - S);
+  tl.to("#te-gen", { opacity: 0, duration: 0.1 }, {{at:w133}} - S);
+  // responsible: the merge gate rises, the reviewer is YOU
+  tl.fromTo("#te-gate", { yPercent: 100 }, { yPercent: 0, duration: 0.4, ease: "expo.out" }, {{at:w134}} - S);
+  tl.fromTo("#te-you", { opacity: 0, scale: 2.4, rotation: -16 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.3, ease: "power4.out" }, {{at:w139}} - S);
+  // own the decision: gold slam, words land one by one
+  tl.fromTo("#te-slam", { opacity: 0, clipPath: "circle(0% at 70% 80%)" }, { opacity: 1, clipPath: "circle(150% at 70% 80%)", duration: 0.4, ease: "power3.in" }, {{at:w146}} - S - 0.25);
+  tl.fromTo("#te-sk", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w146}} - S + 0.1);
+  tl.fromTo("#te-s1", { opacity: 0, y: 60, scale: 1.3 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "power4.out" }, {{at:w146}} - S);
+  tl.fromTo("#te-s2", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.2, ease: "power4.out" }, {{at:w149}} - S);
+  tl.fromTo("#te-s3", { opacity: 0, y: 60, scale: 1.3 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "power4.out" }, {{at:w150}} - S);
+  tl.to("#te-w", { clipPath: "inset(0 0 100% 0)", duration: 0.28, ease: "power4.in" }, {{at:w151}} - S - 0.3);
+  window.__timelines["tipe"] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,38 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  /* under her chin; ink pill, cream words, the spoken word turns gold with a thin gold rule under it (new look for this Reel) */
+  #pc-stage { position: absolute; left: 60px; right: 60px; top: 1250px; height: 130px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; padding: 10px 24px 14px; border-radius: 999px; background: rgba(14,23,38,.86); font-family: 'Inter Tight', sans-serif;
+    font-weight: 800; color: #FBF6EA; line-height: 1.1; letter-spacing: -.015em; box-shadow: 0 10px 24px rgba(0,0,0,.35); border: 2px solid rgba(245,184,61,.35); }
+  .cap-word { display: inline-block; position: relative; }
+  .cap-word .cap-txt { position: relative; z-index: 1; }
+  .cap-word .pc-u { position: absolute; left: 2px; right: 2px; bottom: -3px; height: 5px; border-radius: 3px; background: #F5B83D; transform-origin: 0 50%; transform: scaleX(0); }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="pc-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  HFCaps.build({
+    tl, container: "#pc-stage", words: {{words}}, idPrefix: "pcap",
+    maxWords: 3, maxChars: 20, pauseBreak: 0.28, hold: 0.3,
+    font: { family: "Inter Tight", weight: 800, size: 64, min: 44, maxWidth: 920 },
+    enter(tl, g, spans, grp) {
+      spans.forEach(s => { const u = document.createElement("span"); u.className = "pc-u"; s.appendChild(u); });
+      tl.fromTo(g, { opacity: 0, y: 16, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.18, ease: "power3.out" }, grp.start);
+    },
+    word(tl, span, w, grp, i) {
+      const u = span.querySelector(".pc-u"), t = span.querySelector(".cap-txt");
+      tl.fromTo(t, { color: "#FBF6EA" }, { color: "#F5B83D", duration: 0.06 }, Math.max(grp.start, w.start - 0.02));
+      tl.fromTo(u, { scaleX: 0 }, { scaleX: 1, duration: 0.12, ease: "power2.out" }, Math.max(grp.start, w.start - 0.02));
+      tl.to(t, { color: "#FBF6EA", duration: 0.06 }, w.end + 0.02);
+      tl.to(u, { scaleX: 0, duration: 0.08 }, w.end + 0.02);
+    },
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, y: -8, duration: 0.09, ease: "power2.in" }, grp.end - 0.09); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>
