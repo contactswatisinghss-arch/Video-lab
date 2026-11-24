@@ -1,9 +1,9 @@
 {
   "slug": "AITerms",
-  "stage": "preview",
+  "stage": "broll",
   "ok": true,
-  "time": "2026-11-24 04:25:24 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45323259092",
+  "time": "2026-11-24 04:54:18 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/AITerms",
   "prepare": {
     "stage": "prepare",
@@ -34,6 +34,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-24 04:25:24 UTC"
+    },
+    {
+      "stage": "broll",
+      "ok": true,
+      "time": "2026-11-24 04:54:18 UTC"
     }
   ],
   "preview": {
@@ -50,5 +55,22 @@
     "snapshot_ok": true,
     "render_seconds": 104,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/AITerms/preview.mp4"
+  },
+  "broll": {
+    "stage": "broll",
+    "ok": true,
+    "time": "2026-11-24 04:54:18 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843",
+    "hash": "95f428187ea34258",
+    "count": 6,
+    "pixabay": false,
+    "notes": [
+      "study: no usable result for 'home office window Manhattan skyline'",
+      "studyb: no usable result for 'apartment interior window view New York City skyline'",
+      "broll-deskny-1.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)",
+      "deskny: no usable result for 'desk by window New York skyline'",
+      "nycwin: no usable result for 'Manhattan skyline view from window high floor'",
+      "broll-nycnight-1.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)"
+    ]
   }
 }

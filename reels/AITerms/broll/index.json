@@ -1,0 +1,79 @@
+{
+  "source": "wikimedia (no PIXABAY_KEY)",
+  "items": [
+    {
+      "shot": "nycdusk",
+      "query": "Midtown Manhattan skyline at dusk",
+      "file": "broll-nycdusk-1.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:Midtown_Manhattan_from_Weehawken_September_2021_HDR_panorama.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Midtown Manhattan from Weehawken September 2021 HDR panorama.jpg",
+      "tags": null
+    },
+    {
+      "shot": "nycdusk",
+      "query": "Midtown Manhattan skyline at dusk",
+      "file": "broll-nycdusk-2.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:20211213_170421_Manhattan_at_December_Dusk.jpg",
+      "author": "Roamm999",
+      "license": "CC BY-SA 4.0",
+      "title": "File:20211213 170421 Manhattan at December Dusk.jpg",
+      "tags": null
+    },
+    {
+      "shot": "nycdusk",
+      "query": "Midtown Manhattan skyline at dusk",
+      "file": "broll-nycdusk-3.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:Dusk_view_of_Manhattan_Skyline,_New_York,_New_York_LCCN2011632074.tif",
+      "author": "Carol M. Highsmith",
+      "license": "Public domain",
+      "title": "File:Dusk view of Manhattan Skyline, New York, New York LCCN2011632074.tif",
+      "tags": null
+    },
+    {
+      "shot": "nycnight",
+      "query": "New York City skyline night from window",
+      "file": "broll-nycnight-1.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:View_west_from_Millenium_UN_Plaza_Hotel_at_night.jpg",
+      "author": "David Long",
+      "license": "CC BY 2.0",
+      "title": "File:View west from Millenium UN Plaza Hotel at night.jpg",
+      "tags": null
+    },
+    {
+      "shot": "nycnight",
+      "query": "New York City skyline night from window",
+      "file": "broll-nycnight-2.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:Sutphin_Bl_94th_Av_td_(2022-01-27)_04_-_Alvista_Towers.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Sutphin Bl 94th Av td (2022-01-27) 04 - Alvista Towers.jpg",
+      "tags": null
+    },
+    {
+      "shot": "nycnight",
+      "query": "New York City skyline night from window",
+      "file": "broll-nycnight-3.jpg",
+      "kind": "photo",
+      "page": "https://commons.wikimedia.org/wiki/File:Sutphin_Bl_94th_Av_td_(2022-01-27)_07_-_Alvista_Towers.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Sutphin Bl 94th Av td (2022-01-27) 07 - Alvista Towers.jpg",
+      "tags": null
+    }
+  ],
+  "notes": [
+    "study: no usable result for 'home office window Manhattan skyline'",
+    "studyb: no usable result for 'apartment interior window view New York City skyline'",
+    "broll-deskny-1.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)",
+    "deskny: no usable result for 'desk by window New York skyline'",
+    "nycwin: no usable result for 'Manhattan skyline view from window high floor'",
+    "broll-nycnight-1.jpg: HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)"
+  ]
+}
