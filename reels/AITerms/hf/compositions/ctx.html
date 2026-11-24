@@ -1,0 +1,77 @@
+<template>
+<!-- CONTEXT TAKEOVER (realistic agent app): she asks for a weekly report; the agent picks the 3 right files out of 6
+     (data / priorities / format) on her words, and the CONTEXT meter fills. Generic UI, no brand marks. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #cx-bg { position: absolute; inset: 0; background: radial-gradient(rgba(255,255,255,.09) 2px, transparent 2.5px) 0 0/34px 34px, linear-gradient(160deg, #3D69FF, #1F3FC4); }
+  #cx-win { position: absolute; left: 44px; right: 44px; top: 186px; height: 1090px; border-radius: 26px; background: #FBFAF7; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,.45); }
+  #cx-bar { height: 70px; background: #ECEAE4; display: flex; align-items: center; gap: 12px; padding: 0 24px; font: 600 28px 'Archivo', sans-serif; color: #444; }
+  #cx-bar i { width: 16px; height: 16px; border-radius: 50%; background: #C9C6BE; display: inline-block; }
+  #cx-bar span { margin-left: 14px; }
+  .cx-b { position: absolute; padding: 18px 26px; border-radius: 26px; font: 600 40px/1.2 'Archivo', sans-serif; }
+  #cx-u { right: 30px; top: 104px; background: #2D5BFF; color: #fff; border-bottom-right-radius: 6px; }
+  #cx-ut { display: inline-block; white-space: nowrap; overflow: hidden; vertical-align: bottom; }
+  #cx-a { left: 30px; top: 214px; background: #ECEAE4; color: #121212; border-bottom-left-radius: 6px; }
+  #cx-a b { color: #2D5BFF; }
+  #cx-grid { position: absolute; left: 30px; right: 30px; top: 340px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .cx-f { position: relative; height: 190px; border-radius: 18px; background: #fff; border: 3px solid #DDD9D0; padding: 16px; box-sizing: border-box; }
+  .cx-f svg { width: 54px; height: 64px; display: block; }
+  .cx-f p { margin: 12px 0 0; font: 600 25px 'JetBrains Mono', monospace; color: #121212; word-break: break-all; }
+  .cx-f em { position: absolute; right: 12px; top: 12px; padding: 4px 10px; border-radius: 8px; background: #2D5BFF; color: #fff; font: 700 20px 'JetBrains Mono', monospace; font-style: normal; letter-spacing: .06em; opacity: 0; }
+  .cx-ck { position: absolute; right: 14px; bottom: 14px; width: 46px; height: 46px; border-radius: 50%; background: #22A447; opacity: 0; }
+  .cx-ck::after { content: ""; position: absolute; left: 15px; top: 8px; width: 12px; height: 22px; border: solid #fff; border-width: 0 6px 6px 0; transform: rotate(45deg); }
+  #cx-m { position: absolute; left: 30px; right: 30px; top: 790px; padding: 24px 26px 28px; border-radius: 20px; background: #121212; color: #F4EFE3; }
+  #cx-mt { display: flex; justify-content: space-between; font: 600 28px 'JetBrains Mono', monospace; letter-spacing: .1em; }
+  #cx-mt b { color: #FFE14D; }
+  #cx-segs { margin-top: 18px; display: flex; gap: 12px; }
+  .cx-sg { flex: 1; height: 44px; border-radius: 10px; background: #2b2b2b; position: relative; overflow: hidden; }
+  .cx-sg i { position: absolute; inset: 0; background: #FFE14D; transform-origin: 0 50%; transform: scaleX(0); }
+  #cx-lab { margin-top: 14px; display: flex; gap: 12px; font: 600 24px 'JetBrains Mono', monospace; color: #9a978f; }
+  #cx-lab span { flex: 1; text-align: center; }
+</style>
+<div id="root" data-composition-id="ctx" data-width="1080" data-height="1920">
+  <div id="cx-bg"></div>
+  <div id="cx-win">
+    <div id="cx-bar"><i></i><i></i><i></i><span>AI agent · new task</span></div>
+    <div class="cx-b" id="cx-u"><span id="cx-ut">Prepare my weekly report</span></div>
+    <div class="cx-b" id="cx-a">First, I need the <b>right context</b>.</div>
+    <div id="cx-grid">
+      <div class="cx-f" id="cx-f1"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#22A447"/><path d="M12 30h30M12 40h30M12 50h30M24 24v32" stroke="#fff" stroke-width="3"/></svg><p>sales_week.csv</p><em>DATA</em><i class="cx-ck"></i></div>
+      <div class="cx-f" id="cx-x1"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#B9B5AC"/></svg><p>old_notes.txt</p></div>
+      <div class="cx-f" id="cx-f2"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#E5484D"/><path d="M14 28l6 6 12-12M14 46h26" stroke="#fff" stroke-width="4" fill="none"/></svg><p>goals.md</p><em>PRIORITY</em><i class="cx-ck"></i></div>
+      <div class="cx-f" id="cx-x2"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#B9B5AC"/></svg><p>budget_2019.xls</p></div>
+      <div class="cx-f" id="cx-x3"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#B9B5AC"/></svg><p>lunch_menu.pdf</p></div>
+      <div class="cx-f" id="cx-f3"><svg viewBox="0 0 54 64"><path d="M4 2h32l14 14v46H4z" fill="#2D5BFF"/><path d="M12 26h30v8H12zM12 40h30M12 48h20" stroke="#fff" stroke-width="3" fill="none"/></svg><p>report_template</p><em>FORMAT</em><i class="cx-ck"></i></div>
+    </div>
+    <div id="cx-m"><div id="cx-mt"><span>CONTEXT WINDOW</span><b id="cx-n">0 / 3</b></div>
+      <div id="cx-segs"><div class="cx-sg"><i id="cx-s1"></i></div><div class="cx-sg"><i id="cx-s2"></i></div><div class="cx-sg"><i id="cx-s3"></i></div></div>
+      <div id="cx-lab"><span>which data</span><span>what matters</span><span>what it looks like</span></div></div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w20) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#cx-bg", { clipPath: "circle(0% at 50% 40%)" }, { clipPath: "circle(120% at 50% 40%)", duration: 0.45, ease: "power3.out" }, 0);
+  tl.fromTo("#cx-win", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "expo.out" }, 0.08);
+  tl.fromTo("#cx-u", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, {{at:w24}} - S);
+  tl.fromTo("#cx-ut", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.7, ease: "steps(24)" }, {{at:w24}} - S);
+  tl.fromTo("#cx-a", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w30}} - S);
+  tl.fromTo(".cx-f", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out", stagger: 0.06 }, {{at:w33}} - S - 0.3);
+  const pick = [["#cx-f1", "#cx-s1", {{at:w35}}, "1 / 3"], ["#cx-f2", "#cx-s2", {{at:w39}}, "2 / 3"], ["#cx-f3", "#cx-s3", {{at:w44}}, "3 / 3"]];
+  pick.forEach(([f, s, at, n]) => {
+    const t = at - S - 0.05;
+    tl.to(f, { borderColor: "#2D5BFF", scale: 1.04, boxShadow: "0 12px 26px rgba(45,91,255,.35)", duration: 0.2, ease: "power3.out" }, t);
+    tl.fromTo(f + " em", { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.2 }, t);
+    tl.fromTo(f + " .cx-ck", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.5)" }, t + 0.1);
+    tl.fromTo(s, { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, t + 0.1);
+    tl.set("#cx-n", { textContent: n }, t + 0.1);
+  });
+  tl.to(["#cx-x1", "#cx-x2", "#cx-x3"], { opacity: 0.3, scale: 0.94, duration: 0.3, ease: "power2.out" }, {{at:w35}} - S + 0.2);
+  tl.to("#cx-n", { color: "#22A447", duration: 0.1 }, {{at:w44}} - S + 0.05);
+  tl.to(["#cx-win", "#cx-bg"], { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w49}} - S - 0.1 - 0.16);
+  window.__timelines["ctx"] = tl;
+})();
+</script>
+</template>

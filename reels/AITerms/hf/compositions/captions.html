@@ -1,0 +1,39 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  /* AITerms caption look: ink pill, the spoken word gets a highlighter block (yellow) like a marked dictionary entry. Below her chin. */
+  #ac-stage { position: absolute; left: 50px; right: 50px; top: 1318px; height: 140px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; padding: 10px 20px 14px; border-radius: 14px; background: #121212; font-family: 'Archivo', sans-serif;
+    font-weight: 800; color: #F4EFE3; line-height: 1.1; letter-spacing: -.005em; box-shadow: 0 8px 22px rgba(0,0,0,.4); }
+  .cap-word { display: inline-block; position: relative; }
+  .cap-word .cap-txt { position: relative; z-index: 1; }
+  .cap-word .ac-hl { position: absolute; left: -6px; right: -6px; top: 4px; bottom: -2px; border-radius: 6px; background: #FFE14D; opacity: 0; }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="ac-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  HFCaps.build({
+    tl, container: "#ac-stage", words: {{words}}, idPrefix: "acap",
+    maxWords: 3, maxChars: 20, pauseBreak: 0.28, hold: 0.3,
+    font: { family: "Archivo", weight: 800, size: 68, min: 46, maxWidth: 940 },
+    enter(tl, g, spans, grp) {
+      spans.forEach(s => { const u = document.createElement("span"); u.className = "ac-hl"; s.insertBefore(u, s.firstChild); });
+      tl.fromTo(g, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.16, ease: "power3.out" }, grp.start);
+    },
+    word(tl, span, w, grp, i) {
+      const u = span.querySelector(".ac-hl"), t = span.querySelector(".cap-txt");
+      const a = Math.max(grp.start, w.start - 0.02);
+      tl.fromTo(u, { opacity: 0 }, { opacity: 1, duration: 0.05 }, a);
+      tl.fromTo(t, { color: "#F4EFE3" }, { color: "#121212", duration: 0.01 }, a);
+      tl.to(u, { opacity: 0, duration: 0.05 }, w.end + 0.03);
+      tl.to(t, { color: "#F4EFE3", duration: 0.01 }, w.end + 0.05);
+    },
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, duration: 0.08, ease: "power2.in" }, grp.end - 0.08); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "slug": "AITerms",
+  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.2, "remove": []},
+  "fixes": [["It meant", "Comment"]],
+  "fonts": ["Fraunces", "Archivo", "JetBrains Mono"],
+  "cover_at": 0.05,
+  "audio": {"loudnorm": true},
+  "post": {"caption": "", "hashtags": []}
+}
