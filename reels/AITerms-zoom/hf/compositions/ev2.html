@@ -1,0 +1,36 @@
+<template>
+<!-- EVAL RUN (top band over her, realistic terminal): checks run one by one on her words; the missing region fails; score bar 2/3. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  #e2-w { position: absolute; left: 44px; right: 44px; top: 182px; border-radius: 20px; background: #0E0F12; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.45); border: 2px solid #2a2c33; }
+  #e2-bar { height: 46px; background: #1c1e24; display: flex; align-items: center; gap: 10px; padding: 0 18px; font: 500 28px 'JetBrains Mono', monospace; color: #a3a7b0; }
+  #e2-bar i { width: 13px; height: 13px; border-radius: 50%; background: #444; display: inline-block; }
+  #e2-bar span { margin-left: 10px; }
+  #e2-b { padding: 16px 24px 20px; font: 500 34px/1.5 'JetBrains Mono', monospace; color: #d4d4d4; white-space: pre; }
+  .e2-l { opacity: 0; }
+  .ok { color: #3fb950; } .er { color: #f85149; } .dm { color: #7d8590; } .pr { color: #FFE14D; }
+  #e2-sc { display: flex; align-items: center; gap: 18px; margin-top: 8px; }
+  #e2-tr { flex: 1; height: 26px; border-radius: 13px; background: #2a2c33; position: relative; overflow: hidden; }
+  #e2-fl { position: absolute; left: 0; top: 0; bottom: 0; width: 66.6%; background: #FFE14D; transform-origin: 0 50%; transform: scaleX(0); }
+  #e2-n { font: 800 40px 'Archivo', sans-serif; color: #FFE14D; }
+</style>
+<div id="root" data-composition-id="ev2" data-width="1080" data-height="1920">
+  <div id="e2-w"><div id="e2-bar"><i></i><i></i><i></i><span>evals · weekly_report</span></div>
+    <div id="e2-b"><div class="e2-l" id="e2-l0"><span class="pr">$</span> run evals <span class="dm">--report weekly</span></div><div class="e2-l" id="e2-l1"><span class="ok">✓ PASS</span>  totals add up</div><div class="e2-l" id="e2-l2"><span class="ok">✓ PASS</span>  matches template</div><div class="e2-l" id="e2-l3"><span class="er">✗ FAIL</span>  region "West" missing</div><div class="e2-l" id="e2-sc"><div id="e2-tr"><i id="e2-fl"></i></div><span id="e2-n">2 / 3</span></div></div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w121) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#e2-w", { opacity: 0, y: -40, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 0.05);
+  tl.fromTo("#e2-l0", { opacity: 0 }, { opacity: 1, duration: 0.05 }, {{at:w122}} - S);
+  [["#e2-l1", {{at:w124}}], ["#e2-l2", {{at:w128}}], ["#e2-l3", {{at:w131}}]].forEach(([l, at]) =>
+    tl.fromTo(l, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.18, ease: "power3.out" }, at - S));
+  tl.fromTo("#e2-sc", { opacity: 0 }, { opacity: 1, duration: 0.1 }, {{at:w133}} - S - 0.05);
+  tl.fromTo("#e2-fl", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, {{at:w133}} - S);
+  tl.to("#e2-w", { opacity: 0, y: -20, duration: 0.16, ease: "power2.in" }, {{at:w134}} - S - 0.1 - 0.18);
+  window.__timelines["ev2"] = tl;
+})();
+</script>
+</template>
