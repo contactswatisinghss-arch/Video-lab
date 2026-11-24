@@ -1,9 +1,9 @@
 {
   "slug": "Newjob",
-  "stage": "final",
+  "stage": "preview",
   "ok": true,
-  "time": "2026-11-24 02:39:58 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45311411030",
+  "time": "2026-11-24 02:50:20 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45314141248",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/Newjob",
   "prepare": {
     "stage": "prepare",
@@ -45,21 +45,26 @@
       "stage": "final",
       "ok": true,
       "time": "2026-11-24 02:39:58 UTC"
+    },
+    {
+      "stage": "preview",
+      "ok": true,
+      "time": "2026-11-24 02:50:20 UTC"
     }
   ],
   "preview": {
     "stage": "preview",
     "ok": true,
-    "time": "2026-11-23 17:27:28 UTC",
-    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45224934424",
-    "hash": "1ef57d5e99f0240b",
+    "time": "2026-11-24 02:50:20 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45314141248",
+    "hash": "bbe1bd486c301b69",
     "check": {
       "parsed": false,
-      "raw_tail": "  \"heightPx\": 117\n          },\n          {\n            \"time\": 67.808,\n            \"opacity\": 1,\n            \"heightPx\": 117\n          }\n        ]\n      },\n      {\n        \"code\": \"line_unread\",\n        \"severity\": \"warning\",\n        \"message\": \"The film's last line \\\"before your next tech interview\\\" (5 words) is on screen 1.96 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.\",\n        \"text\": \"before your next tech interview\",\n        \"selector\": \"#en > div:nth-of-type(1) > span:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/endc.html\",\n        \"bbox\": {\n          \"x\": 229.22,\n          \"y\": 295.75,\n          \"width\": 623.86,\n          \"height\": 64.75999999999999\n        },\n        \"time\": 65.974,\n        \"words\": 5,\n        \"seconds\": 1.963,\n        \"floorSeconds\": 2,\n        \"measured\": [\n          {\n            \"time\": 65.685,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 65.81,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 65.935,\n            \"opacity\": 0.29,\n            \"heightPx\": 103\n          },\n          {\n            \"time\": 66.06,\n            \"opacity\": 0.89,\n            \"heightPx\": 65\n          },\n          {\n            \"time\": 66.185,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 66.31,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 66.434,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.433,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.558,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.683,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.808,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 544\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/78d45cd0-25eb-46e3-a7a8-86db1bbbf7ff.json\n"
+      "raw_tail": "  \"heightPx\": 117\n          },\n          {\n            \"time\": 67.808,\n            \"opacity\": 1,\n            \"heightPx\": 117\n          }\n        ]\n      },\n      {\n        \"code\": \"line_unread\",\n        \"severity\": \"warning\",\n        \"message\": \"The film's last line \\\"before your next tech interview\\\" (5 words) is on screen 1.96 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.\",\n        \"text\": \"before your next tech interview\",\n        \"selector\": \"#en > div:nth-of-type(1) > span:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/endc.html\",\n        \"bbox\": {\n          \"x\": 229.22,\n          \"y\": 295.75,\n          \"width\": 623.86,\n          \"height\": 64.75999999999999\n        },\n        \"time\": 65.974,\n        \"words\": 5,\n        \"seconds\": 1.963,\n        \"floorSeconds\": 2,\n        \"measured\": [\n          {\n            \"time\": 65.685,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 65.81,\n            \"opacity\": null,\n            \"heightPx\": null\n          },\n          {\n            \"time\": 65.935,\n            \"opacity\": 0.29,\n            \"heightPx\": 103\n          },\n          {\n            \"time\": 66.06,\n            \"opacity\": 0.89,\n            \"heightPx\": 65\n          },\n          {\n            \"time\": 66.185,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 66.31,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 66.434,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.433,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.558,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.683,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          },\n          {\n            \"time\": 67.808,\n            \"opacity\": 1,\n            \"heightPx\": 58\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.125,\n    \"samples\": 544\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"57e9d145-61a2-4036-bf43-b82a27068f1b\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/57e9d145-61a2-4036-bf43-b82a27068f1b.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Newjob/.hyperframes/artifacts/checks/57e9d145-61a2-4036-bf43-b82a27068f1b.json\n"
     },
     "hf_version": "0.9.37",
     "snapshot_ok": true,
-    "render_seconds": 143,
+    "render_seconds": 236,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/Newjob/preview.mp4"
   },
   "broll": {
