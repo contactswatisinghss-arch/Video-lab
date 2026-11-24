@@ -24,8 +24,14 @@
     "loudnorm": true
   },
   "post": {
-    "caption": "",
-    "hashtags": []
+    "caption": "3 AI terms you need to know before 2027: context engineering, harness engineering and AI evals.\n\nMost people just use AI. Learn these three and you can actually build with it. I'd start with evals, nobody talks about them.\n\nComment AI 2027 and I'll send you my cheat sheet with real examples.",
+    "hashtags": [
+      "#aiagents",
+      "#contextengineering",
+      "#learnai",
+      "#techcareers",
+      "#artificialintelligence"
+    ]
   },
   "release": "AITerms"
 }

@@ -1,10 +1,36 @@
 {
   "version": 2,
   "slug": "AITerms",
-  "cuts": {"max_pause": 0.4, "pad": 0.1, "keep_head": 0.6, "keep_tail": 1.2, "remove": []},
-  "fixes": [["It meant", "Comment"]],
-  "fonts": ["Fraunces", "Archivo", "JetBrains Mono"],
+  "cuts": {
+    "max_pause": 0.4,
+    "pad": 0.1,
+    "keep_head": 0.6,
+    "keep_tail": 1.2,
+    "remove": []
+  },
+  "fixes": [
+    [
+      "It meant",
+      "Comment"
+    ]
+  ],
+  "fonts": [
+    "Fraunces",
+    "Archivo",
+    "JetBrains Mono"
+  ],
   "cover_at": 0.05,
-  "audio": {"loudnorm": true},
-  "post": {"caption": "", "hashtags": []}
+  "audio": {
+    "loudnorm": true
+  },
+  "post": {
+    "caption": "3 AI terms you need to know before 2027: context engineering, harness engineering and AI evals.\n\nMost people just use AI. Learn these three and you can actually build with it. I'd start with evals, nobody talks about them.\n\nComment AI 2027 and I'll send you my cheat sheet with real examples.",
+    "hashtags": [
+      "#aiagents",
+      "#contextengineering",
+      "#learnai",
+      "#techcareers",
+      "#artificialintelligence"
+    ]
+  }
 }
