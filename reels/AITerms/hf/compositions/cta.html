@@ -1,0 +1,48 @@
+<template>
+<!-- CHEAT SHEET TAKEOVER: a printed cheat sheet tilts up onto a blue desk; the 3 terms are filled in, "+ more terms" rows sit blurred (teaser);
+     "with real examples" stamp on her words. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #ct-bg { position: absolute; inset: 0; background: radial-gradient(rgba(255,255,255,.09) 2px, transparent 2.5px) 0 0/34px 34px, linear-gradient(200deg, #3D69FF, #1F3FC4); }
+  #ct-p { position: absolute; left: 80px; right: 80px; top: 200px; height: 1070px; background: #F4EFE3; border-radius: 10px; box-shadow: 0 30px 70px rgba(0,0,0,.45); padding: 40px 44px; box-sizing: border-box; }
+  #ct-p h3 { margin: 0; font: 900 76px/0.95 'Fraunces', serif; color: #121212; letter-spacing: -.03em; }
+  #ct-p h3 em { color: #2D5BFF; }
+  #ct-p h4 { margin: 12px 0 22px; font: 600 24px 'JetBrains Mono', monospace; color: #777; letter-spacing: .1em; }
+  .ct-r { display: flex; gap: 18px; align-items: flex-start; padding: 16px 0; border-top: 3px solid #121212; }
+  .ct-r b { flex: none; width: 58px; height: 58px; border-radius: 12px; background: #2D5BFF; color: #fff; text-align: center; font: 900 38px/58px 'Fraunces', serif; }
+  .ct-r p { margin: 0; font: 600 28px/1.25 'Archivo', sans-serif; color: #444; }
+  .ct-r p strong { display: block; font: 800 38px 'Archivo', sans-serif; color: #121212; }
+  .ct-bl { filter: blur(9px); }
+  .ct-bl b { background: #999; }
+  #ct-more { position: absolute; left: 0; right: 0; top: 850px; text-align: center; }
+  #ct-more span { display: inline-block; padding: 12px 26px; border-radius: 14px; background: #121212; color: #FFE14D; font: 800 42px 'Archivo', sans-serif; }
+  #ct-st { position: absolute; right: 50px; top: 960px; padding: 10px 20px; border: 6px solid #22A447; border-radius: 12px; color: #22A447; font: 900 40px 'Archivo', sans-serif; transform: rotate(-10deg); letter-spacing: .04em; opacity: 0; }
+</style>
+<div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+  <div id="ct-bg"></div>
+  <div id="ct-p">
+    <h3>AI terms <em>cheat sheet</em></h3><h4>KNOW THEM BEFORE 2027</h4>
+    <div class="ct-r" id="ct-r1"><b>1</b><p><strong>Context engineering</strong>right info, right time</p></div>
+    <div class="ct-r" id="ct-r2"><b>2</b><p><strong>Harness engineering</strong>the system around the model</p></div>
+    <div class="ct-r" id="ct-r3"><b>3</b><p><strong>Evals</strong>test if the AI did the job</p></div>
+    <div class="ct-r ct-bl" id="ct-r4"><b>4</b><p><strong>Retrieval augmented gen</strong>looks up facts first</p></div>
+    <div class="ct-r ct-bl" id="ct-r5"><b>5</b><p><strong>Model context protocol</strong>plugs tools into agents</p></div>
+    <div id="ct-st">REAL EXAMPLES ✓</div>
+    <div id="ct-more"><span>+ more terms</span></div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w134) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ct-bg", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power4.out" }, 0);
+  tl.fromTo("#ct-p", { y: 1000, rotation: -8, rotationX: 30, transformPerspective: 1800 }, { y: 0, rotation: -1.5, rotationX: 0, transformPerspective: 1800, duration: 0.7, ease: "expo.out" }, {{at:w137}} - S - 0.35);
+  tl.fromTo(["#ct-r1", "#ct-r2", "#ct-r3"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, {{at:w138}} - S);
+  tl.fromTo("#ct-st", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, {{at:w140}} - S);
+  tl.fromTo(["#ct-r4", "#ct-r5"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, {{at:w143}} - S - 0.1);
+  tl.fromTo("#ct-more", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, {{at:w143}} - S + 0.1);
+  tl.to(["#ct-bg", "#ct-p"], { opacity: 0, duration: 0.16, ease: "power2.in" }, {{at:w150}} - S - 0.1 - 0.16);
+  window.__timelines["cta"] = tl;
+})();
+</script>
+</template>

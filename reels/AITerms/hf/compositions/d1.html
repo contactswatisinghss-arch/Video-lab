@@ -1,0 +1,40 @@
+<template>
+<!-- TERM 1 TAKEOVER: a dictionary page wipes across the frame; the headword types on her words. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #d1-pg { position: absolute; inset: 0; background:
+      repeating-linear-gradient(#F4EFE3 0 63px, rgba(45,91,255,.14) 63px 65px), #F4EFE3; }
+  #d1-pg::before { content: ""; position: absolute; left: 120px; top: 0; bottom: 0; width: 3px; background: rgba(229,72,77,.45); }
+  #d1-hd { position: absolute; left: 150px; right: 60px; top: 200px; display: flex; justify-content: space-between; font: 600 28px 'JetBrains Mono', monospace; color: #121212; letter-spacing: .12em; }
+  #d1-tab { padding: 6px 14px; border-radius: 8px; background: #2D5BFF; color: #fff; }
+  #d1-w { position: absolute; left: 150px; right: 50px; top: 330px; font: 900 150px/0.92 'Fraunces', serif; color: #121212; letter-spacing: -.04em; }
+  .d1-l { display: block; overflow: hidden; }
+  .d1-l span { display: inline-block; }
+  #d1-l2 span { font-style: italic; color: #2D5BFF; }
+  #d1-pr { position: absolute; left: 150px; top: 680px; font: 500 34px 'JetBrains Mono', monospace; color: #555; }
+  #d1-df { position: absolute; left: 150px; right: 70px; top: 770px; font: 600 50px/1.25 'Archivo', sans-serif; color: #121212; }
+  #d1-df b { background: linear-gradient(transparent 55%, #FFE14D 55%); }
+</style>
+<div id="root" data-composition-id="d1" data-width="1080" data-height="1920">
+  <div id="d1-pg">
+    <div id="d1-hd"><span>THE AI DICTIONARY</span><span id="d1-tab">01 / 03</span></div>
+    <div id="d1-w"><span class="d1-l" id="d1-l1"><span>context</span></span><span class="d1-l" id="d1-l2"><span>engineering</span></span></div>
+    <div id="d1-pr">/ˈkɒn·tekst ˌen·dʒɪˈnɪə·rɪŋ/ <i>noun</i></div>
+    <div id="d1-df">Giving AI <b>the right info</b>,<br>at <b>the right time</b>.</div>
+  </div>
+</div>
+<script>
+(function () {
+  const S = {{= at(w15) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#d1-pg", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.35, ease: "power4.out" }, 0);
+  tl.fromTo("#d1-hd", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 0.15);
+  tl.fromTo("#d1-l1 span", { yPercent: 105 }, { yPercent: 0, duration: 0.4, ease: "expo.out" }, {{at:w18}} - S - 0.08);
+  tl.fromTo("#d1-l2 span", { yPercent: 105 }, { yPercent: 0, duration: 0.4, ease: "expo.out" }, {{at:w19}} - S - 0.06);
+  tl.fromTo("#d1-pr", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w19}} - S + 0.2);
+  tl.fromTo("#d1-df", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, {{at:w19}} - S + 0.35);
+  tl.to("#d1-pg", { yPercent: -100, duration: 0.22, ease: "power3.in" }, {{at:w20}} - S - 0.22 - 0.1);
+  window.__timelines["d1"] = tl;
+})();
+</script>
+</template>
