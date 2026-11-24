@@ -5,25 +5,25 @@
   #root { position: absolute; inset: 0; pointer-events: none; }
   #td-card { position: absolute; left: 60px; right: 60px; top: 178px; height: 250px; border-radius: 26px; background: rgba(14,23,38,.94); border: 2px solid rgba(245,184,61,.45);
     box-shadow: 0 20px 44px rgba(0,0,0,.45); overflow: hidden; }
-  #td-n { position: absolute; left: 34px; top: 26px; padding: 6px 16px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 26px 'Inter Tight', sans-serif; letter-spacing: .12em; }
+  #td-n { position: absolute; left: 34px; top: 26px; padding: 6px 16px; border-radius: 999px; background: #F5B83D; color: #0E1726; font: 800 28px 'Inter Tight', sans-serif; letter-spacing: .12em; }
   .td-p { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
   #td-t1 { position: absolute; left: 190px; top: 22px; font: 900 48px 'Fraunces', serif; color: #FBF6EA; white-space: nowrap; }
   #td-line { position: absolute; left: 60px; right: 60px; top: 160px; height: 6px; border-radius: 3px; background: #2A3B5C; }
-  #td-now { position: absolute; left: 50px; top: 120px; text-align: center; font: 800 24px 'Inter Tight', sans-serif; color: #3DDC97; }
+  #td-now { position: absolute; left: 50px; top: 120px; text-align: center; font: 800 28px 'Inter Tight', sans-serif; color: #3DDC97; }
   #td-now i { display: block; margin: 6px auto 0; width: 26px; height: 26px; border-radius: 50%; background: #3DDC97; }
-  #td-flag { position: absolute; right: 50px; top: 104px; text-align: right; font: 800 24px 'Inter Tight', sans-serif; color: #8DA2C0; }
+  #td-flag { position: absolute; right: 50px; top: 104px; text-align: right; font: 800 28px 'Inter Tight', sans-serif; color: #8DA2C0; }
   #td-flag svg { display: block; margin: 6px 0 0 auto; }
   #td-fx { position: absolute; right: 40px; top: 118px; width: 200px; height: 6px; border-radius: 3px; background: #FF5A5F; transform-origin: 0 50%; transform: scaleX(0); }
   #td-dots { position: absolute; left: 120px; right: 260px; top: 156px; height: 14px; background: radial-gradient(circle, #8DA2C0 4px, transparent 5px) 0 0/40px 14px; opacity: .6; }
   #td-p2, #td-p3 { opacity: 0; }
   #td-who { position: absolute; left: 34px; top: 30px; display: flex; align-items: center; gap: 14px; font: 700 28px 'Inter Tight', sans-serif; color: #FBF6EA; }
   #td-who b { width: 50px; height: 50px; border-radius: 50%; background: #A78BFA; display: inline-block; }
-  #td-who small { font: 500 22px 'JetBrains Mono', monospace; color: #8DA2C0; }
+  #td-who small { font: 500 28px 'JetBrains Mono', monospace; color: #8DA2C0; }
   #td-bub { position: absolute; right: 34px; top: 100px; max-width: 760px; padding: 18px 26px; border-radius: 26px 26px 6px 26px; background: #F5B83D; color: #0E1726;
     font: 700 38px/1.15 'Inter Tight', sans-serif; transform-origin: 100% 100%; }
-  #td-seen { position: absolute; right: 40px; top: 212px; font: 600 20px 'Inter Tight', sans-serif; color: #3DDC97; opacity: 0; }
+  #td-seen { position: absolute; right: 40px; top: 212px; font: 600 28px 'Inter Tight', sans-serif; color: #3DDC97; opacity: 0; }
   #td-fold { position: absolute; left: 34px; top: 70px; width: 200px; height: 150px; }
-  #td-fl { position: absolute; left: 34px; top: 22px; font: 800 24px 'Inter Tight', sans-serif; color: #F5B83D; letter-spacing: .12em; }
+  #td-fl { position: absolute; left: 34px; top: 22px; font: 800 28px 'Inter Tight', sans-serif; color: #F5B83D; letter-spacing: .12em; }
   .td-doc { position: absolute; left: 270px; height: 50px; padding: 0 18px; border-radius: 12px; background: #FBF6EA; color: #0E1726; display: flex; align-items: center; gap: 12px;
     font: 700 30px 'Inter Tight', sans-serif; white-space: nowrap; }
   .td-doc i { width: 26px; height: 26px; border-radius: 6px; background: #3DDC97; display: inline-block; }
@@ -57,13 +57,13 @@
   tl.to("#td-p1", { opacity: 0, y: -30, duration: 0.15, ease: "power2.in" }, {{at:w101}} - S - 0.2);
   tl.fromTo("#td-p2", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w101}} - S - 0.05);
   tl.fromTo("#td-who", { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, {{at:w101}} - S - 0.05);
-  tl.fromTo("#td-bub", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, {{at:w103}} - S);
+  tl.fromTo("#td-bub", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, {{at:w101}} - S + 0.05);
   tl.fromTo("#td-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w109}} - S);
   // Keep evidence: the card becomes a folder that fills
-  tl.to("#td-p2", { opacity: 0, y: -30, duration: 0.15, ease: "power2.in" }, {{at:w110}} - S - 0.2);
-  tl.fromTo("#td-p3", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w110}} - S - 0.05);
-  tl.fromTo("#td-fold", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w110}} - S - 0.05);
-  [["#td-d1", {{at:w111}}], ["#td-d2", {{at:w114}}], ["#td-d3", {{at:w116}}]].forEach(([d, t]) =>
+  tl.to("#td-p2", { opacity: 0, y: -30, duration: 0.15, ease: "power2.in" }, {{at:w111}} - S - 0.15);
+  tl.fromTo("#td-p3", { opacity: 0 }, { opacity: 1, duration: 0.01 }, {{at:w111}} - S);
+  tl.fromTo("#td-fold", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, {{at:w111}} - S);
+  [["#td-d1", {{at:w111}} + 0.1], ["#td-d2", {{at:w113}}], ["#td-d3", {{at:w115}}]].forEach(([d, t]) =>
     tl.fromTo(d, { x: 500, opacity: 0, rotation: 6 }, { x: 0, opacity: 1, rotation: 0, duration: 0.35, ease: "expo.out" }, t - S));
   tl.to("#td-card", { y: -280, duration: 0.25, ease: "power3.in" }, {{at:w119}} - S - 0.28);
   window.__timelines["tipd"] = tl;
