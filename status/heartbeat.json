@@ -1,10 +1,10 @@
 {
   "state": "running",
-  "current": "preview AITerms-zoom",
+  "current": "preview Promotion",
   "pending": [
     "preview AITerms-zoom",
     "preview Promotion"
   ],
-  "time": "2026-11-24 04:54:20 UTC",
+  "time": "2026-11-24 04:58:13 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45326751843"
 }
