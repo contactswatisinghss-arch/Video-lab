@@ -1,4 +1,4 @@
-[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/a7d4233c-db10-4c97-a0a6-1eb910f15eeb.json when the check ends, unless a warning says it could not be saved
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ce93fa92-8b63-470b-a81c-460fbf69ef0e.json when the check ends, unless a warning says it could not be saved
 [hyperframes] browserGpuMode probe → software (WebGL unavailable)
 [INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
 [INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
@@ -521,42 +521,9 @@
   "lint": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 2,
+    "warningCount": 0,
     "infoCount": 0,
-    "findings": [
-      {
-        "code": "svg_round_cap_hidden_dash",
-        "severity": "warning",
-        "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
-        "selector": "#tb-knot",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Promotion/compositions/tipb.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
-      },
-      {
-        "code": "svg_round_cap_hidden_dash",
-        "severity": "warning",
-        "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
-        "selector": "#tb-ln",
-        "dataAttributes": {},
-        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/Promotion/compositions/tipb.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0,
-        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
-      }
-    ],
+    "findings": [],
     "filesScanned": 12
   },
   "runtime": {
@@ -648,19 +615,19 @@
   "contrast": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 3,
+    "warningCount": 2,
     "infoCount": 0,
     "findings": [
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.93:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.92:1; WCAG AA requires 3:1.",
         "text": "NOT ABOUT",
         "fg": "rgb(255,90,95)",
-        "bg": "rgb(70,74,77)",
-        "ratio": 2.93,
+        "bg": "rgb(75,73,77)",
+        "ratio": 2.92,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(255,95,99)",
+        "suggestedColor": "rgb(255,96,101)",
         "large": true,
         "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(2) > small",
         "dataAttributes": {},
@@ -669,7 +636,7 @@
           "x": 98.92000579833984,
           "y": 248.98001098632812,
           "width": 342.1600036621094,
-          "height": 27.259979248046875
+          "height": 31.959991455078125
         },
         "time": 55.408,
         "times": [
@@ -679,47 +646,22 @@
       {
         "code": "contrast_aa_failure",
         "severity": "warning",
-        "message": "Contrast is 2.52:1; WCAG AA requires 3:1.",
+        "message": "Contrast is 2.66:1; WCAG AA requires 3:1.",
         "text": "Writing less code",
         "fg": "rgb(141,162,192)",
-        "bg": "rgb(103,90,95)",
-        "ratio": 2.52,
+        "bg": "rgb(97,87,93)",
+        "ratio": 2.66,
         "requiredRatio": 3,
-        "suggestedColor": "rgb(159,177,202)",
+        "suggestedColor": "rgb(154,172,199)",
         "large": true,
         "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(2) > b",
         "dataAttributes": {},
         "sourceFile": "compositions/diff.html",
         "bbox": {
           "x": 98.92000579833984,
-          "y": 283.760009765625,
+          "y": 288.4599914550781,
           "width": 342.1600036621094,
-          "height": 40.2584228515625
-        },
-        "time": 55.408,
-        "times": [
-          55.408
-        ]
-      },
-      {
-        "code": "contrast_aa_failure",
-        "severity": "warning",
-        "message": "Contrast is 1.92:1; WCAG AA requires 3:1.",
-        "text": "IT'S ABOUT",
-        "fg": "rgb(31,158,104)",
-        "bg": "rgb(245,184,61)",
-        "ratio": 1.92,
-        "requiredRatio": 3,
-        "suggestedColor": "rgb(24,121,80)",
-        "large": true,
-        "selector": "div > div:nth-of-type(10) > div > div:nth-of-type(3) > small",
-        "dataAttributes": {},
-        "sourceFile": "compositions/diff.html",
-        "bbox": {
-          "x": 616.7999877929688,
-          "y": 237.75,
-          "width": 386.39996337890625,
-          "height": 30.45001220703125
+          "height": 40.258453369140625
         },
         "time": 55.408,
         "times": [
@@ -736,464 +678,42 @@
       55.408
     ],
     "checked": 14,
-    "passed": 11
+    "passed": 12
   },
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 7,
+    "warningCount": 1,
     "infoCount": 0,
     "findings": [
       {
         "code": "text_below_floor",
         "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"MY PROMOTION\" renders at 26 px for 5.62 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "MY PROMOTION",
-        "selector": "#cr-lb",
-        "dataAttributes": {},
-        "sourceFile": "compositions/cred.html",
-        "bbox": {
-          "x": 112,
-          "y": 133.37,
-          "width": 250.03,
-          "height": 31
-        },
-        "time": 3.62,
-        "times": [
-          3.62
-        ],
-        "fontPx": 26,
-        "floorPx": 28,
-        "seconds": 5.617,
-        "elements": [
-          {
-            "selector": "#cr-lb",
-            "text": "MY PROMOTION",
-            "fontPx": 26,
-            "time": 3.62,
-            "seconds": 5.617
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"TIP 2\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "TIP 2",
-        "selector": "#tb-n",
-        "dataAttributes": {},
-        "sourceFile": "compositions/tipb.html",
-        "bbox": {
-          "x": 111.4,
-          "y": 161.71,
-          "width": 76.37,
-          "height": 31.51
-        },
-        "time": 18.848,
-        "times": [
-          18.848,
-          23.592
-        ],
-        "fontPx": 26,
-        "floorPx": 28,
-        "seconds": 5.992,
-        "elements": [
-          {
-            "selector": "#tb-n",
-            "text": "TIP 2",
-            "fontPx": 26,
-            "time": 18.848,
-            "seconds": 5.992
-          },
-          {
-            "selector": "#tb-lb",
-            "text": "DIRECTION →",
-            "fontPx": 26,
-            "time": 23.592,
-            "seconds": 1.248
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"1:1 · today\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
-        "text": "1:1 · today",
-        "selector": "#td-who > span:nth-of-type(1) > small:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/tipd.html",
-        "bbox": {
-          "x": 157.75,
-          "y": 249,
-          "width": 145.2,
-          "height": 29
-        },
-        "time": 34.202,
-        "times": [
-          31.58,
-          31.58,
-          31.58,
-          34.202,
-          36.698
-        ],
-        "fontPx": 22,
-        "floorPx": 28,
-        "seconds": 2.496,
-        "elements": [
-          {
-            "selector": "#td-who > span:nth-of-type(1) > small:nth-of-type(1)",
-            "text": "1:1 · today",
-            "fontPx": 22,
-            "time": 34.202,
-            "seconds": 2.496
-          },
-          {
-            "selector": "#td-now",
-            "text": "NOW",
-            "fontPx": 24,
-            "time": 31.58,
-            "seconds": 1.998
-          },
-          {
-            "selector": "#td-flag",
-            "text": "PROMO SEASON",
-            "fontPx": 24,
-            "time": 31.58,
-            "seconds": 1.998
-          },
-          {
-            "selector": "#td-fl",
-            "text": "EVIDENCE · NEXT LEVEL",
-            "fontPx": 24,
-            "time": 36.698,
-            "seconds": 3.246
-          },
-          {
-            "selector": "#td-n",
-            "text": "TIP 4",
-            "fontPx": 26,
-            "time": 31.58,
-            "seconds": 2.497
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"What does the next level expect from me?\" (8 words) is on screen 2.10 s (±0.01 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
-        "text": "What does the next level expect from me?",
-        "selector": "#td-bub",
-        "dataAttributes": {},
-        "sourceFile": "compositions/tipd.html",
-        "bbox": {
-          "x": 264.21,
-          "y": 298.85,
-          "width": 694.95,
-          "height": 43.94
-        },
-        "time": 34.537,
-        "words": 8,
-        "seconds": 2.099,
-        "floorSeconds": 2.175,
-        "measured": [
-          {
-            "time": 34.202,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 34.326,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 34.451,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 34.576,
-            "opacity": 0.93,
-            "heightPx": 44
-          },
-          {
-            "time": 34.701,
-            "opacity": 1,
-            "heightPx": 49
-          },
-          {
-            "time": 34.826,
-            "opacity": 1,
-            "heightPx": 46
-          },
-          {
-            "time": 34.951,
-            "opacity": 1,
-            "heightPx": 46
-          },
-          {
-            "time": 36.199,
-            "opacity": 1,
-            "heightPx": 46
-          },
-          {
-            "time": 36.324,
-            "opacity": 1,
-            "heightPx": 46
-          },
-          {
-            "time": 36.448,
-            "opacity": 1,
-            "heightPx": 46
-          },
-          {
-            "time": 36.573,
-            "opacity": 0.85,
-            "heightPx": 46
-          },
-          {
-            "time": 36.698,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 36.823,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 36.948,
-            "opacity": null,
-            "heightPx": null
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "\"Customer I unblocked\" (3 words) is on screen 0.97 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
-        "text": "Customer I unblocked",
-        "selector": "#td-d3",
-        "dataAttributes": {},
-        "sourceFile": "compositions/tipd.html",
-        "bbox": {
-          "x": 447.46,
-          "y": 367.35,
-          "width": 302.69,
-          "height": 39.76999999999998
-        },
-        "time": 38.867,
-        "words": 3,
-        "seconds": 0.968,
-        "floorSeconds": 1.05,
-        "measured": [
-          {
-            "time": 38.57,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 38.695,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 38.82,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 38.945,
-            "opacity": 0.88,
-            "heightPx": 40
-          },
-          {
-            "time": 39.07,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.195,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.319,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.444,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.569,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.694,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.819,
-            "opacity": 1,
-            "heightPx": 36
-          },
-          {
-            "time": 39.943,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 40.068,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 40.193,
-            "opacity": null,
-            "heightPx": null
-          }
-        ]
-      },
-      {
-        "code": "text_below_floor",
-        "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"NOT ABOUT\" at 23 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"NOT ABOUT\" renders at 26 px for 2.62 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
         "text": "NOT ABOUT",
         "selector": "#df-a > small:nth-of-type(1)",
         "dataAttributes": {},
         "sourceFile": "compositions/diff.html",
         "bbox": {
-          "x": 24.34,
-          "y": 244,
-          "width": 168.28,
-          "height": 29
+          "x": 96.26,
+          "y": 247.77,
+          "width": 187.42,
+          "height": 32.45
         },
-        "time": 51.677,
+        "time": 53.175,
         "times": [
-          51.178,
-          51.677,
-          53.674
+          53.175
         ],
-        "fontPx": 22.56,
+        "fontPx": 26.32,
         "floorPx": 28,
-        "seconds": 4.119,
+        "seconds": 2.621,
         "elements": [
           {
             "selector": "#df-a > small:nth-of-type(1)",
             "text": "NOT ABOUT",
-            "fontPx": 22.56,
-            "time": 51.677,
-            "seconds": 4.119
-          },
-          {
-            "selector": "#df-b > small:nth-of-type(1)",
-            "text": "IT'S ABOUT",
-            "fontPx": 24,
-            "time": 53.674,
-            "seconds": 2.122
-          },
-          {
-            "selector": "#df-k > span:nth-of-type(1)",
-            "text": "THE DIFFERENCE",
-            "fontPx": 26,
-            "time": 51.178,
-            "seconds": 4.618
-          }
-        ]
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "The film's last line \"IT'S ABOUT\" (2 words) is on screen 1.57 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "IT'S ABOUT",
-        "selector": "#df-b > small:nth-of-type(1)",
-        "dataAttributes": {},
-        "sourceFile": "compositions/diff.html",
-        "bbox": {
-          "x": 615.68,
-          "y": 237.23,
-          "width": 175.94999999999993,
-          "height": 30.630000000000024
-        },
-        "time": 54.204,
-        "words": 2,
-        "seconds": 1.568,
-        "floorSeconds": 2,
-        "measured": [
-          {
-            "time": 53.924,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 54.049,
-            "opacity": 1,
-            "heightPx": 29
-          },
-          {
-            "time": 54.173,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 54.298,
-            "opacity": 1,
-            "heightPx": 31
-          },
-          {
-            "time": 54.423,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 54.548,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 54.673,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 55.297,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 55.422,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 55.546,
-            "opacity": 1,
-            "heightPx": 30
-          },
-          {
-            "time": 55.671,
-            "opacity": 0.97,
-            "heightPx": 30
-          },
-          {
-            "time": 55.796,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 55.921,
-            "opacity": null,
-            "heightPx": null
-          },
-          {
-            "time": 56.046,
-            "opacity": null,
-            "heightPx": null
+            "fontPx": 26.32,
+            "time": 53.175,
+            "seconds": 2.621
           }
         ]
       }
@@ -1220,9 +740,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "a7d4233c-db10-4c97-a0a6-1eb910f15eeb",
+    "id": "ce93fa92-8b63-470b-a81c-460fbf69ef0e",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/a7d4233c-db10-4c97-a0a6-1eb910f15eeb.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ce93fa92-8b63-470b-a81c-460fbf69ef0e.json",
     "attribution": "unversioned"
   },
   "_meta": {
@@ -1230,4 +750,4 @@
     "updateAvailable": false
   }
 }
-[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/a7d4233c-db10-4c97-a0a6-1eb910f15eeb.json
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/Promotion/.hyperframes/artifacts/checks/ce93fa92-8b63-470b-a81c-460fbf69ef0e.json
