@@ -17,8 +17,8 @@ word gets a yellow highlighter block. Each term enters a different way (page wip
 | 5.0–6.6 | "The first is context engineering." | full-screen page wipe | dictionary page, headword rises on her words, 01/03 | takeover (STYLE 23 Nov) |
 | 6.6–14.4 | "Imagine asking an AI agent… report should look like." | realistic app takeover | agent chat; picks 3 of 6 files (data / priority / format), CONTEXT WINDOW meter fills 1/3→3/3 | realistic screens (STYLE Newjob) |
 | 14.4–18.4 | "Giving it the right information at the right time…" | equation build, top band | right info + right time (clock spins) = context engineering | her face back between takeovers |
-| 18.4–20.0 | "Second is harness engineering." | blueprint iris + number slam | "02" slams from 5×, headword | different entry from term 1 |
-| 20.0–25.9 | "…read files, run tools, track progress, know when to stop." | checklist, top band | dark job list; each chip ticks on its word, stop in red | checklist on spoken items |
+| 18.4–20.7 | "Second is harness engineering. Now your agent…" | blueprint iris + number slam | "02" slams from 5×, headword | different entry from term 1 |
+| 20.7–25.9 | "…read files, run tools, track progress, know when to stop." | checklist, top band | dark job list; each chip ticks on its word, stop in red | checklist on spoken items |
 | 25.9–29.9 | "The system around the AI model… is harness." | diagram takeover | AI model chip; ring draws "around" it; job nodes snap on; "= the harness" | one diagram that shows the mechanism |
 | 29.9–31.3 | "The third is evals." | index card drop, top band | yellow card falls in, red 03 stamp | third entry style |
 | 31.3–35.8 | "…beautiful report. But are the numbers correct? Did it miss anything?" | doc takeover + spotlight | AI-generated weekly report; "looks great" sticker; spotlight on numbers "?", then table: West row missing | spotlight = "look at this" |

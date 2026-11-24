@@ -27,7 +27,7 @@
   tl.fromTo("#d2-tab", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.2);
   tl.fromTo("#d2-w", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, {{at:w63}} - S - 0.08);
   tl.fromTo("#d2-pr", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w64}} - S);
-  tl.to(["#d2-bg", "#d2-n", "#d2-w", "#d2-pr", "#d2-tab"], { clipPath: "circle(0% at 50% 45%)", duration: 0.22, ease: "power3.in" }, {{at:w65}} - S - 0.1 - 0.22);
+  tl.to(["#d2-bg", "#d2-n", "#d2-w", "#d2-pr", "#d2-tab"], { opacity: 0, scale: 1.08, duration: 0.2, ease: "power3.in" }, {{at:w68}} - S - 0.1 - 0.22);
   window.__timelines["d2"] = tl;
 })();
 </script>
