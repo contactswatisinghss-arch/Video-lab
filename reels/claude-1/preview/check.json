@@ -1,0 +1,3551 @@
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/claude-1/.hyperframes/artifacts/checks/41f10a50-e878-4e79-97c2-a62e171ed92c.json when the check ends, unless a warning says it could not be saved
+[hyperframes] check: starting Chrome
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
+[hyperframes] check: loading the page
+[hyperframes] check: waiting for the page to be ready
+[hyperframes] check: checking samples
+[hyperframes] check: samples 1/9
+[hyperframes] check: samples 2/9
+[hyperframes] check: samples 3/9
+[hyperframes] check: samples 4/9
+[hyperframes] check: samples 5/9
+[hyperframes] check: samples 6/9
+[hyperframes] check: samples 7/9
+[hyperframes] check: samples 8/9
+[hyperframes] check: samples 9/9
+[hyperframes] check: running the overlap pass
+[hyperframes] check: craft 1/599
+[hyperframes] check: craft 2/599
+[hyperframes] check: craft 3/599
+[hyperframes] check: craft 4/599
+[hyperframes] check: craft 5/599
+[hyperframes] check: craft 6/599
+[hyperframes] check: craft 7/599
+[hyperframes] check: craft 8/599
+[hyperframes] check: craft 9/599
+[hyperframes] check: craft 10/599
+[hyperframes] check: craft 11/599
+[hyperframes] check: craft 12/599
+[hyperframes] check: craft 13/599
+[hyperframes] check: craft 14/599
+[hyperframes] check: craft 15/599
+[hyperframes] check: craft 16/599
+[hyperframes] check: craft 17/599
+[hyperframes] check: craft 18/599
+[hyperframes] check: craft 19/599
+[hyperframes] check: craft 20/599
+[hyperframes] check: craft 21/599
+[hyperframes] check: craft 22/599
+[hyperframes] check: craft 23/599
+[hyperframes] check: craft 24/599
+[hyperframes] check: craft 25/599
+[hyperframes] check: craft 26/599
+[hyperframes] check: craft 27/599
+[hyperframes] check: craft 28/599
+[hyperframes] check: craft 29/599
+[hyperframes] check: craft 30/599
+[hyperframes] check: craft 31/599
+[hyperframes] check: craft 32/599
+[hyperframes] check: craft 33/599
+[hyperframes] check: craft 34/599
+[hyperframes] check: craft 35/599
+[hyperframes] check: craft 36/599
+[hyperframes] check: craft 37/599
+[hyperframes] check: craft 38/599
+[hyperframes] check: craft 39/599
+[hyperframes] check: craft 40/599
+[hyperframes] check: craft 41/599
+[hyperframes] check: craft 42/599
+[hyperframes] check: craft 43/599
+[hyperframes] check: craft 44/599
+[hyperframes] check: craft 45/599
+[hyperframes] check: craft 46/599
+[hyperframes] check: craft 47/599
+[hyperframes] check: craft 48/599
+[hyperframes] check: craft 49/599
+[hyperframes] check: craft 50/599
+[hyperframes] check: craft 51/599
+[hyperframes] check: craft 52/599
+[hyperframes] check: craft 53/599
+[hyperframes] check: craft 54/599
+[hyperframes] check: craft 55/599
+[hyperframes] check: craft 56/599
+[hyperframes] check: craft 57/599
+[hyperframes] check: craft 58/599
+[hyperframes] check: craft 59/599
+[hyperframes] check: craft 60/599
+[hyperframes] check: craft 61/599
+[hyperframes] check: craft 62/599
+[hyperframes] check: craft 63/599
+[hyperframes] check: craft 64/599
+[hyperframes] check: craft 65/599
+[hyperframes] check: craft 66/599
+[hyperframes] check: craft 67/599
+[hyperframes] check: craft 68/599
+[hyperframes] check: craft 69/599
+[hyperframes] check: craft 70/599
+[hyperframes] check: craft 71/599
+[hyperframes] check: craft 72/599
+[hyperframes] check: craft 73/599
+[hyperframes] check: craft 74/599
+[hyperframes] check: craft 75/599
+[hyperframes] check: craft 76/599
+[hyperframes] check: craft 77/599
+[hyperframes] check: craft 78/599
+[hyperframes] check: craft 79/599
+[hyperframes] check: craft 80/599
+[hyperframes] check: craft 81/599
+[hyperframes] check: craft 82/599
+[hyperframes] check: craft 83/599
+[hyperframes] check: craft 84/599
+[hyperframes] check: craft 85/599
+[hyperframes] check: craft 86/599
+[hyperframes] check: craft 87/599
+[hyperframes] check: craft 88/599
+[hyperframes] check: craft 89/599
+[hyperframes] check: craft 90/599
+[hyperframes] check: craft 91/599
+[hyperframes] check: craft 92/599
+[hyperframes] check: craft 93/599
+[hyperframes] check: craft 94/599
+[hyperframes] check: craft 95/599
+[hyperframes] check: craft 96/599
+[hyperframes] check: craft 97/599
+[hyperframes] check: craft 98/599
+[hyperframes] check: craft 99/599
+[hyperframes] check: craft 100/599
+[hyperframes] check: craft 101/599
+[hyperframes] check: craft 102/599
+[hyperframes] check: craft 103/599
+[hyperframes] check: craft 104/599
+[hyperframes] check: craft 105/599
+[hyperframes] check: craft 106/599
+[hyperframes] check: craft 107/599
+[hyperframes] check: craft 108/599
+[hyperframes] check: craft 109/599
+[hyperframes] check: craft 110/599
+[hyperframes] check: craft 111/599
+[hyperframes] check: craft 112/599
+[hyperframes] check: craft 113/599
+[hyperframes] check: craft 114/599
+[hyperframes] check: craft 115/599
+[hyperframes] check: craft 116/599
+[hyperframes] check: craft 117/599
+[hyperframes] check: craft 118/599
+[hyperframes] check: craft 119/599
+[hyperframes] check: craft 120/599
+[hyperframes] check: craft 121/599
+[hyperframes] check: craft 122/599
+[hyperframes] check: craft 123/599
+[hyperframes] check: craft 124/599
+[hyperframes] check: craft 125/599
+[hyperframes] check: craft 126/599
+[hyperframes] check: craft 127/599
+[hyperframes] check: craft 128/599
+[hyperframes] check: craft 129/599
+[hyperframes] check: craft 130/599
+[hyperframes] check: craft 131/599
+[hyperframes] check: craft 132/599
+[hyperframes] check: craft 133/599
+[hyperframes] check: craft 134/599
+[hyperframes] check: craft 135/599
+[hyperframes] check: craft 136/599
+[hyperframes] check: craft 137/599
+[hyperframes] check: craft 138/599
+[hyperframes] check: craft 139/599
+[hyperframes] check: craft 140/599
+[hyperframes] check: craft 141/599
+[hyperframes] check: craft 142/599
+[hyperframes] check: craft 143/599
+[hyperframes] check: craft 144/599
+[hyperframes] check: craft 145/599
+[hyperframes] check: craft 146/599
+[hyperframes] check: craft 147/599
+[hyperframes] check: craft 148/599
+[hyperframes] check: craft 149/599
+[hyperframes] check: craft 150/599
+[hyperframes] check: craft 151/599
+[hyperframes] check: craft 152/599
+[hyperframes] check: craft 153/599
+[hyperframes] check: craft 154/599
+[hyperframes] check: craft 155/599
+[hyperframes] check: craft 156/599
+[hyperframes] check: craft 157/599
+[hyperframes] check: craft 158/599
+[hyperframes] check: craft 159/599
+[hyperframes] check: craft 160/599
+[hyperframes] check: craft 161/599
+[hyperframes] check: craft 162/599
+[hyperframes] check: craft 163/599
+[hyperframes] check: craft 164/599
+[hyperframes] check: craft 165/599
+[hyperframes] check: craft 166/599
+[hyperframes] check: craft 167/599
+[hyperframes] check: craft 168/599
+[hyperframes] check: craft 169/599
+[hyperframes] check: craft 170/599
+[hyperframes] check: craft 171/599
+[hyperframes] check: craft 172/599
+[hyperframes] check: craft 173/599
+[hyperframes] check: craft 174/599
+[hyperframes] check: craft 175/599
+[hyperframes] check: craft 176/599
+[hyperframes] check: craft 177/599
+[hyperframes] check: craft 178/599
+[hyperframes] check: craft 179/599
+[hyperframes] check: craft 180/599
+[hyperframes] check: craft 181/599
+[hyperframes] check: craft 182/599
+[hyperframes] check: craft 183/599
+[hyperframes] check: craft 184/599
+[hyperframes] check: craft 185/599
+[hyperframes] check: craft 186/599
+[hyperframes] check: craft 187/599
+[hyperframes] check: craft 188/599
+[hyperframes] check: craft 189/599
+[hyperframes] check: craft 190/599
+[hyperframes] check: craft 191/599
+[hyperframes] check: craft 192/599
+[hyperframes] check: craft 193/599
+[hyperframes] check: craft 194/599
+[hyperframes] check: craft 195/599
+[hyperframes] check: craft 196/599
+[hyperframes] check: craft 197/599
+[hyperframes] check: craft 198/599
+[hyperframes] check: craft 199/599
+[hyperframes] check: craft 200/599
+[hyperframes] check: craft 201/599
+[hyperframes] check: craft 202/599
+[hyperframes] check: craft 203/599
+[hyperframes] check: craft 204/599
+[hyperframes] check: craft 205/599
+[hyperframes] check: craft 206/599
+[hyperframes] check: craft 207/599
+[hyperframes] check: craft 208/599
+[hyperframes] check: craft 209/599
+[hyperframes] check: craft 210/599
+[hyperframes] check: craft 211/599
+[hyperframes] check: craft 212/599
+[hyperframes] check: craft 213/599
+[hyperframes] check: craft 214/599
+[hyperframes] check: craft 215/599
+[hyperframes] check: craft 216/599
+[hyperframes] check: craft 217/599
+[hyperframes] check: craft 218/599
+[hyperframes] check: craft 219/599
+[hyperframes] check: craft 220/599
+[hyperframes] check: craft 221/599
+[hyperframes] check: craft 222/599
+[hyperframes] check: craft 223/599
+[hyperframes] check: craft 224/599
+[hyperframes] check: craft 225/599
+[hyperframes] check: craft 226/599
+[hyperframes] check: craft 227/599
+[hyperframes] check: craft 228/599
+[hyperframes] check: craft 229/599
+[hyperframes] check: craft 230/599
+[hyperframes] check: craft 231/599
+[hyperframes] check: craft 232/599
+[hyperframes] check: craft 233/599
+[hyperframes] check: craft 234/599
+[hyperframes] check: craft 235/599
+[hyperframes] check: craft 236/599
+[hyperframes] check: craft 237/599
+[hyperframes] check: craft 238/599
+[hyperframes] check: craft 239/599
+[hyperframes] check: craft 240/599
+[hyperframes] check: craft 241/599
+[hyperframes] check: craft 242/599
+[hyperframes] check: craft 243/599
+[hyperframes] check: craft 244/599
+[hyperframes] check: craft 245/599
+[hyperframes] check: craft 246/599
+[hyperframes] check: craft 247/599
+[hyperframes] check: craft 248/599
+[hyperframes] check: craft 249/599
+[hyperframes] check: craft 250/599
+[hyperframes] check: craft 251/599
+[hyperframes] check: craft 252/599
+[hyperframes] check: craft 253/599
+[hyperframes] check: craft 254/599
+[hyperframes] check: craft 255/599
+[hyperframes] check: craft 256/599
+[hyperframes] check: craft 257/599
+[hyperframes] check: craft 258/599
+[hyperframes] check: craft 259/599
+[hyperframes] check: craft 260/599
+[hyperframes] check: craft 261/599
+[hyperframes] check: craft 262/599
+[hyperframes] check: craft 263/599
+[hyperframes] check: craft 264/599
+[hyperframes] check: craft 265/599
+[hyperframes] check: craft 266/599
+[hyperframes] check: craft 267/599
+[hyperframes] check: craft 268/599
+[hyperframes] check: craft 269/599
+[hyperframes] check: craft 270/599
+[hyperframes] check: craft 271/599
+[hyperframes] check: craft 272/599
+[hyperframes] check: craft 273/599
+[hyperframes] check: craft 274/599
+[hyperframes] check: craft 275/599
+[hyperframes] check: craft 276/599
+[hyperframes] check: craft 277/599
+[hyperframes] check: craft 278/599
+[hyperframes] check: craft 279/599
+[hyperframes] check: craft 280/599
+[hyperframes] check: craft 281/599
+[hyperframes] check: craft 282/599
+[hyperframes] check: craft 283/599
+[hyperframes] check: craft 284/599
+[hyperframes] check: craft 285/599
+[hyperframes] check: craft 286/599
+[hyperframes] check: craft 287/599
+[hyperframes] check: craft 288/599
+[hyperframes] check: craft 289/599
+[hyperframes] check: craft 290/599
+[hyperframes] check: craft 291/599
+[hyperframes] check: craft 292/599
+[hyperframes] check: craft 293/599
+[hyperframes] check: craft 294/599
+[hyperframes] check: craft 295/599
+[hyperframes] check: craft 296/599
+[hyperframes] check: craft 297/599
+[hyperframes] check: craft 298/599
+[hyperframes] check: craft 299/599
+[hyperframes] check: craft 300/599
+[hyperframes] check: craft 301/599
+[hyperframes] check: craft 302/599
+[hyperframes] check: craft 303/599
+[hyperframes] check: craft 304/599
+[hyperframes] check: craft 305/599
+[hyperframes] check: craft 306/599
+[hyperframes] check: craft 307/599
+[hyperframes] check: craft 308/599
+[hyperframes] check: craft 309/599
+[hyperframes] check: craft 310/599
+[hyperframes] check: craft 311/599
+[hyperframes] check: craft 312/599
+[hyperframes] check: craft 313/599
+[hyperframes] check: craft 314/599
+[hyperframes] check: craft 315/599
+[hyperframes] check: craft 316/599
+[hyperframes] check: craft 317/599
+[hyperframes] check: craft 318/599
+[hyperframes] check: craft 319/599
+[hyperframes] check: craft 320/599
+[hyperframes] check: craft 321/599
+[hyperframes] check: craft 322/599
+[hyperframes] check: craft 323/599
+[hyperframes] check: craft 324/599
+[hyperframes] check: craft 325/599
+[hyperframes] check: craft 326/599
+[hyperframes] check: craft 327/599
+[hyperframes] check: craft 328/599
+[hyperframes] check: craft 329/599
+[hyperframes] check: craft 330/599
+[hyperframes] check: craft 331/599
+[hyperframes] check: craft 332/599
+[hyperframes] check: craft 333/599
+[hyperframes] check: craft 334/599
+[hyperframes] check: craft 335/599
+[hyperframes] check: craft 336/599
+[hyperframes] check: craft 337/599
+[hyperframes] check: craft 338/599
+[hyperframes] check: craft 339/599
+[hyperframes] check: craft 340/599
+[hyperframes] check: craft 341/599
+[hyperframes] check: craft 342/599
+[hyperframes] check: craft 343/599
+[hyperframes] check: craft 344/599
+[hyperframes] check: craft 345/599
+[hyperframes] check: craft 346/599
+[hyperframes] check: craft 347/599
+[hyperframes] check: craft 348/599
+[hyperframes] check: craft 349/599
+[hyperframes] check: craft 350/599
+[hyperframes] check: craft 351/599
+[hyperframes] check: craft 352/599
+[hyperframes] check: craft 353/599
+[hyperframes] check: craft 354/599
+[hyperframes] check: craft 355/599
+[hyperframes] check: craft 356/599
+[hyperframes] check: craft 357/599
+[hyperframes] check: craft 358/599
+[hyperframes] check: craft 359/599
+[hyperframes] check: craft 360/599
+[hyperframes] check: craft 361/599
+[hyperframes] check: craft 362/599
+[hyperframes] check: craft 363/599
+[hyperframes] check: craft 364/599
+[hyperframes] check: craft 365/599
+[hyperframes] check: craft 366/599
+[hyperframes] check: craft 367/599
+[hyperframes] check: craft 368/599
+[hyperframes] check: craft 369/599
+[hyperframes] check: craft 370/599
+[hyperframes] check: craft 371/599
+[hyperframes] check: craft 372/599
+[hyperframes] check: craft 373/599
+[hyperframes] check: craft 374/599
+[hyperframes] check: craft 375/599
+[hyperframes] check: craft 376/599
+[hyperframes] check: craft 377/599
+[hyperframes] check: craft 378/599
+[hyperframes] check: craft 379/599
+[hyperframes] check: craft 380/599
+[hyperframes] check: craft 381/599
+[hyperframes] check: craft 382/599
+[hyperframes] check: craft 383/599
+[hyperframes] check: craft 384/599
+[hyperframes] check: craft 385/599
+[hyperframes] check: craft 386/599
+[hyperframes] check: craft 387/599
+[hyperframes] check: craft 388/599
+[hyperframes] check: craft 389/599
+[hyperframes] check: craft 390/599
+[hyperframes] check: craft 391/599
+[hyperframes] check: craft 392/599
+[hyperframes] check: craft 393/599
+[hyperframes] check: craft 394/599
+[hyperframes] check: craft 395/599
+[hyperframes] check: craft 396/599
+[hyperframes] check: craft 397/599
+[hyperframes] check: craft 398/599
+[hyperframes] check: craft 399/599
+[hyperframes] check: craft 400/599
+[hyperframes] check: craft 401/599
+[hyperframes] check: craft 402/599
+[hyperframes] check: craft 403/599
+[hyperframes] check: craft 404/599
+[hyperframes] check: craft 405/599
+[hyperframes] check: craft 406/599
+[hyperframes] check: craft 407/599
+[hyperframes] check: craft 408/599
+[hyperframes] check: craft 409/599
+[hyperframes] check: craft 410/599
+[hyperframes] check: craft 411/599
+[hyperframes] check: craft 412/599
+[hyperframes] check: craft 413/599
+[hyperframes] check: craft 414/599
+[hyperframes] check: craft 415/599
+[hyperframes] check: craft 416/599
+[hyperframes] check: craft 417/599
+[hyperframes] check: craft 418/599
+[hyperframes] check: craft 419/599
+[hyperframes] check: craft 420/599
+[hyperframes] check: craft 421/599
+[hyperframes] check: craft 422/599
+[hyperframes] check: craft 423/599
+[hyperframes] check: craft 424/599
+[hyperframes] check: craft 425/599
+[hyperframes] check: craft 426/599
+[hyperframes] check: craft 427/599
+[hyperframes] check: craft 428/599
+[hyperframes] check: craft 429/599
+[hyperframes] check: craft 430/599
+[hyperframes] check: craft 431/599
+[hyperframes] check: craft 432/599
+[hyperframes] check: craft 433/599
+[hyperframes] check: craft 434/599
+[hyperframes] check: craft 435/599
+[hyperframes] check: craft 436/599
+[hyperframes] check: craft 437/599
+[hyperframes] check: craft 438/599
+[hyperframes] check: craft 439/599
+[hyperframes] check: craft 440/599
+[hyperframes] check: craft 441/599
+[hyperframes] check: craft 442/599
+[hyperframes] check: craft 443/599
+[hyperframes] check: craft 444/599
+[hyperframes] check: craft 445/599
+[hyperframes] check: craft 446/599
+[hyperframes] check: craft 447/599
+[hyperframes] check: craft 448/599
+[hyperframes] check: craft 449/599
+[hyperframes] check: craft 450/599
+[hyperframes] check: craft 451/599
+[hyperframes] check: craft 452/599
+[hyperframes] check: craft 453/599
+[hyperframes] check: craft 454/599
+[hyperframes] check: craft 455/599
+[hyperframes] check: craft 456/599
+[hyperframes] check: craft 457/599
+[hyperframes] check: craft 458/599
+[hyperframes] check: craft 459/599
+[hyperframes] check: craft 460/599
+[hyperframes] check: craft 461/599
+[hyperframes] check: craft 462/599
+[hyperframes] check: craft 463/599
+[hyperframes] check: craft 464/599
+[hyperframes] check: craft 465/599
+[hyperframes] check: craft 466/599
+[hyperframes] check: craft 467/599
+[hyperframes] check: craft 468/599
+[hyperframes] check: craft 469/599
+[hyperframes] check: craft 470/599
+[hyperframes] check: craft 471/599
+[hyperframes] check: craft 472/599
+[hyperframes] check: craft 473/599
+[hyperframes] check: craft 474/599
+[hyperframes] check: craft 475/599
+[hyperframes] check: craft 476/599
+[hyperframes] check: craft 477/599
+[hyperframes] check: craft 478/599
+[hyperframes] check: craft 479/599
+[hyperframes] check: craft 480/599
+[hyperframes] check: craft 481/599
+[hyperframes] check: craft 482/599
+[hyperframes] check: craft 483/599
+[hyperframes] check: craft 484/599
+[hyperframes] check: craft 485/599
+[hyperframes] check: craft 486/599
+[hyperframes] check: craft 487/599
+[hyperframes] check: craft 488/599
+[hyperframes] check: craft 489/599
+[hyperframes] check: craft 490/599
+[hyperframes] check: craft 491/599
+[hyperframes] check: craft 492/599
+[hyperframes] check: craft 493/599
+[hyperframes] check: craft 494/599
+[hyperframes] check: craft 495/599
+[hyperframes] check: craft 496/599
+[hyperframes] check: craft 497/599
+[hyperframes] check: craft 498/599
+[hyperframes] check: craft 499/599
+[hyperframes] check: craft 500/599
+[hyperframes] check: craft 501/599
+[hyperframes] check: craft 502/599
+[hyperframes] check: craft 503/599
+[hyperframes] check: craft 504/599
+[hyperframes] check: craft 505/599
+[hyperframes] check: craft 506/599
+[hyperframes] check: craft 507/599
+[hyperframes] check: craft 508/599
+[hyperframes] check: craft 509/599
+[hyperframes] check: craft 510/599
+[hyperframes] check: craft 511/599
+[hyperframes] check: craft 512/599
+[hyperframes] check: craft 513/599
+[hyperframes] check: craft 514/599
+[hyperframes] check: craft 515/599
+[hyperframes] check: craft 516/599
+[hyperframes] check: craft 517/599
+[hyperframes] check: craft 518/599
+[hyperframes] check: craft 519/599
+[hyperframes] check: craft 520/599
+[hyperframes] check: craft 521/599
+[hyperframes] check: craft 522/599
+[hyperframes] check: craft 523/599
+[hyperframes] check: craft 524/599
+[hyperframes] check: craft 525/599
+[hyperframes] check: craft 526/599
+[hyperframes] check: craft 527/599
+[hyperframes] check: craft 528/599
+[hyperframes] check: craft 529/599
+[hyperframes] check: craft 530/599
+[hyperframes] check: craft 531/599
+[hyperframes] check: craft 532/599
+[hyperframes] check: craft 533/599
+[hyperframes] check: craft 534/599
+[hyperframes] check: craft 535/599
+[hyperframes] check: craft 536/599
+[hyperframes] check: craft 537/599
+[hyperframes] check: craft 538/599
+[hyperframes] check: craft 539/599
+[hyperframes] check: craft 540/599
+[hyperframes] check: craft 541/599
+[hyperframes] check: craft 542/599
+[hyperframes] check: craft 543/599
+[hyperframes] check: craft 544/599
+[hyperframes] check: craft 545/599
+[hyperframes] check: craft 546/599
+[hyperframes] check: craft 547/599
+[hyperframes] check: craft 548/599
+[hyperframes] check: craft 549/599
+[hyperframes] check: craft 550/599
+[hyperframes] check: craft 551/599
+[hyperframes] check: craft 552/599
+[hyperframes] check: craft 553/599
+[hyperframes] check: craft 554/599
+[hyperframes] check: craft 555/599
+[hyperframes] check: craft 556/599
+[hyperframes] check: craft 557/599
+[hyperframes] check: craft 558/599
+[hyperframes] check: craft 559/599
+[hyperframes] check: craft 560/599
+[hyperframes] check: craft 561/599
+[hyperframes] check: craft 562/599
+[hyperframes] check: craft 563/599
+[hyperframes] check: craft 564/599
+[hyperframes] check: craft 565/599
+[hyperframes] check: craft 566/599
+[hyperframes] check: craft 567/599
+[hyperframes] check: craft 568/599
+[hyperframes] check: craft 569/599
+[hyperframes] check: craft 570/599
+[hyperframes] check: craft 571/599
+[hyperframes] check: craft 572/599
+[hyperframes] check: craft 573/599
+[hyperframes] check: craft 574/599
+[hyperframes] check: craft 575/599
+[hyperframes] check: craft 576/599
+[hyperframes] check: craft 577/599
+[hyperframes] check: craft 578/599
+[hyperframes] check: craft 579/599
+[hyperframes] check: craft 580/599
+[hyperframes] check: craft 581/599
+[hyperframes] check: craft 582/599
+[hyperframes] check: craft 583/599
+[hyperframes] check: craft 584/599
+[hyperframes] check: craft 585/599
+[hyperframes] check: craft 586/599
+[hyperframes] check: craft 587/599
+[hyperframes] check: craft 588/599
+[hyperframes] check: craft 589/599
+[hyperframes] check: craft 590/599
+[hyperframes] check: craft 591/599
+[hyperframes] check: craft 592/599
+[hyperframes] check: craft 593/599
+[hyperframes] check: craft 594/599
+[hyperframes] check: craft 595/599
+[hyperframes] check: craft 596/599
+[hyperframes] check: craft 597/599
+[hyperframes] check: craft 598/599
+[hyperframes] check: craft 599/599
+[hyperframes] check: overlap 1/23
+[hyperframes] check: overlap 2/23
+[hyperframes] check: overlap 3/23
+[hyperframes] check: overlap 4/23
+[hyperframes] check: overlap 5/23
+[hyperframes] check: overlap 6/23
+[hyperframes] check: overlap 7/23
+[hyperframes] check: overlap 8/23
+[hyperframes] check: overlap 9/23
+[hyperframes] check: overlap 10/23
+[hyperframes] check: overlap 11/23
+[hyperframes] check: overlap 12/23
+[hyperframes] check: overlap 13/23
+[hyperframes] check: overlap 14/23
+[hyperframes] check: overlap 15/23
+[hyperframes] check: overlap 16/23
+[hyperframes] check: overlap 17/23
+[hyperframes] check: overlap 18/23
+[hyperframes] check: overlap 19/23
+[hyperframes] check: overlap 20/23
+[hyperframes] check: overlap 21/23
+[hyperframes] check: overlap 22/23
+[hyperframes] check: overlap 23/23
+[hyperframes] check: checking samples
+[hyperframes] check: analyze 0/3
+[hyperframes] check: analyzing the samples
+[hyperframes] check: analyze 1/3
+[hyperframes] check: analyze 2/3
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_repeated_fromto_without_baseline",
+        "severity": "warning",
+        "message": "2 tl.fromTo() calls target \"#am-n\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
+        "selector": "#am-n",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/Video-lab/Video-lab/_build/claude-1/compositions/aimeter.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 0s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
+      }
+    ],
+    "filesScanned": 19
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 0,
+    "infoCount": 13,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 46.484,
+        "selector": "#a1-r1",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 590.45,
+          "top": 261,
+          "right": 893.48,
+          "bottom": 295,
+          "width": 303.03,
+          "height": 34
+        },
+        "containerSelector": "#a1-ok",
+        "text": "2 FOCUS THIS QUARTER",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 590.45,
+          "y": 261,
+          "width": 303.03,
+          "height": 34
+        },
+        "firstSeen": 45.704,
+        "lastSeen": 46.743,
+        "occurrences": 4,
+        "heldMs": 1039.0000000000014,
+        "times": [
+          45.704,
+          46.224,
+          46.484,
+          46.743
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 46.484,
+        "selector": "#a1-r1 > i:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 563,
+          "top": 262.5,
+          "right": 578.45,
+          "bottom": 293.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "containerSelector": "#a1-ok",
+        "text": "2",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 563,
+          "y": 262.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "firstSeen": 45.704,
+        "lastSeen": 46.743,
+        "occurrences": 4,
+        "heldMs": 1039.0000000000014,
+        "times": [
+          45.704,
+          46.224,
+          46.484,
+          46.743
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-h",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 96,
+          "top": 200,
+          "right": 294,
+          "bottom": 239,
+          "width": 198,
+          "height": 39
+        },
+        "containerSelector": "#a1-ok",
+        "text": "about-me.md",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 96,
+          "y": 200,
+          "width": 198,
+          "height": 39
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r0",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 137.45,
+          "top": 261,
+          "right": 209.81,
+          "bottom": 295,
+          "width": 72.36,
+          "height": 34
+        },
+        "containerSelector": "#a1-ok",
+        "text": "ROLE",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 137.45,
+          "y": 261,
+          "width": 72.36,
+          "height": 34
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r0 > i:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 110,
+          "top": 262.5,
+          "right": 125.45,
+          "bottom": 293.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "containerSelector": "#a1-ok",
+        "text": "1",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 110,
+          "y": 262.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r1",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 590.45,
+          "top": 261,
+          "right": 893.48,
+          "bottom": 295,
+          "width": 303.03,
+          "height": 34
+        },
+        "containerSelector": "#a1-ok",
+        "text": "FOCUS THIS QUARTER",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 590.45,
+          "y": 261,
+          "width": 303.03,
+          "height": 34
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r1 > i:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 563,
+          "top": 262.5,
+          "right": 578.45,
+          "bottom": 293.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "containerSelector": "#a1-ok",
+        "text": "2",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 563,
+          "y": 262.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r2",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 137.45,
+          "top": 325,
+          "right": 511.98,
+          "bottom": 359,
+          "width": 374.53,
+          "height": 34
+        },
+        "containerSelector": "#a1-ok",
+        "text": "DECISIONS ALREADY MADE",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 137.45,
+          "y": 325,
+          "width": 374.53,
+          "height": 34
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r2 > i:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 110,
+          "top": 326.5,
+          "right": 125.45,
+          "bottom": 357.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "containerSelector": "#a1-ok",
+        "text": "3",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 110,
+          "y": 326.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r3",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 590.45,
+          "top": 325,
+          "right": 702.61,
+          "bottom": 359,
+          "width": 112.16,
+          "height": 34
+        },
+        "containerSelector": "#a1-ok",
+        "text": "#1 GOAL",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 590.45,
+          "y": 325,
+          "width": 112.16,
+          "height": 34
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 46.484,
+        "selector": "#a1-r3 > i:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 563,
+          "top": 326.5,
+          "right": 578.45,
+          "bottom": 357.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "containerSelector": "#a1-ok",
+        "text": "4",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 563,
+          "y": 326.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "firstSeen": 46.484,
+        "lastSeen": 46.484,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 56.611,
+        "selector": "#tk-no",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 157.27,
+          "top": 1411.44,
+          "right": 922.73,
+          "bottom": 1518.31,
+          "width": 765.46,
+          "height": 106.87
+        },
+        "containerSelector": "#c1cap-w220 > span:nth-of-type(2)",
+        "text": "DON'T WRITE IT YOURSELF",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 157.27,
+          "y": 1411.44,
+          "width": 765.46,
+          "height": 106.87
+        },
+        "firstSeen": 56.611,
+        "lastSeen": 56.611,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          56.611
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 77.473,
+        "selector": "#am-g > circle:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 774,
+          "top": 354,
+          "right": 802,
+          "bottom": 382,
+          "width": 28,
+          "height": 28
+        },
+        "containerSelector": "#am-g",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 598,
+          "top": 198,
+          "right": 978,
+          "bottom": 378,
+          "width": 380,
+          "height": 180
+        },
+        "overflow": {
+          "bottom": 4
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/aimeter.html",
+        "bbox": {
+          "x": 774,
+          "y": 354,
+          "width": 28,
+          "height": 28
+        },
+        "firstSeen": 77.473,
+        "lastSeen": 77.473,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          77.473
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 79.983,
+        "selector": "#zr-p1 > h3:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 374,
+          "top": 1264,
+          "right": 681.2,
+          "bottom": 1305,
+          "width": 307.2,
+          "height": 41
+        },
+        "containerSelector": "#zr-p2 > h3:nth-of-type(1)",
+        "text": "voice-profile.md",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/zero.html",
+        "bbox": {
+          "x": 374,
+          "y": 1264,
+          "width": 307.2,
+          "height": 41
+        },
+        "firstSeen": 79.983,
+        "lastSeen": 79.983,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          79.983
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 83.099,
+        "selector": "#zr-0",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 475.59,
+          "top": 896.36,
+          "right": 604.41,
+          "bottom": 1260.36,
+          "width": 128.82,
+          "height": 364
+        },
+        "containerSelector": "#zr-you",
+        "text": "0",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/zero.html",
+        "bbox": {
+          "x": 475.59,
+          "y": 896.36,
+          "width": 128.82,
+          "height": 364
+        },
+        "firstSeen": 83.099,
+        "lastSeen": 83.099,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          83.099
+        ]
+      }
+    ],
+    "duration": 92.967,
+    "samples": [
+      5.165,
+      15.494,
+      25.824,
+      36.154,
+      46.484,
+      56.813,
+      67.143,
+      77.473,
+      87.802
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 15,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.93:1; WCAG AA requires 3:1.",
+        "text": "this",
+        "fg": "rgb(21,18,14)",
+        "bg": "rgb(138,81,48)",
+        "ratio": 2.93,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(179,178,177)",
+        "large": true,
+        "selector": "div > div:nth-of-type(19) > div > div > div:nth-of-type(7) > div > span:nth-of-type(1) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 317.375,
+          "y": 1424.0777587890625,
+          "width": 125.234375,
+          "height": 85
+        },
+        "time": 5.165,
+        "times": [
+          5.165
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.61:1; WCAG AA requires 3:1.",
+        "text": "to",
+        "fg": "rgb(21,18,14)",
+        "bg": "rgb(147,61,35)",
+        "ratio": 2.61,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(169,168,166)",
+        "large": true,
+        "selector": "div > div:nth-of-type(19) > div > div > div:nth-of-type(30) > div > span:nth-of-type(1) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 277.40625,
+          "y": 1424,
+          "width": 70.109375,
+          "height": 85
+        },
+        "time": 25.824,
+        "times": [
+          25.824
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.2:1; WCAG AA requires 3:1.",
+        "text": "is",
+        "fg": "rgb(86,82,76)",
+        "bg": "rgb(95,64,46)",
+        "ratio": 1.2,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(149,146,143)",
+        "large": true,
+        "selector": "div > div:nth-of-type(19) > div > div > div:nth-of-type(54) > div > span:nth-of-type(3) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 629.28125,
+          "y": 1424,
+          "width": 56.109375,
+          "height": 85
+        },
+        "time": 46.484,
+        "times": [
+          46.484
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.28:1; WCAG AA requires 3:1.",
+        "text": "never",
+        "fg": "rgb(21,18,14)",
+        "bg": "rgb(133,55,31)",
+        "ratio": 2.28,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(159,157,156)",
+        "large": true,
+        "selector": "div > div:nth-of-type(19) > div > div > div:nth-of-type(79) > div > span:nth-of-type(2) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 449.65625,
+          "y": 1424,
+          "width": 184.84375,
+          "height": 85
+        },
+        "time": 67.143,
+        "times": [
+          67.143
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.88:1; WCAG AA requires 3:1.",
+        "text": "whole",
+        "fg": "rgb(21,18,14)",
+        "bg": "rgb(146,74,47)",
+        "ratio": 2.88,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(178,177,176)",
+        "large": true,
+        "selector": "div > div:nth-of-type(19) > div > div > div:nth-of-type(102) > div > span:nth-of-type(1) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 259.421875,
+          "y": 1424,
+          "width": 196.140625,
+          "height": 85
+        },
+        "time": 87.802,
+        "times": [
+          87.802
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      5.165,
+      25.824,
+      46.484,
+      67.143,
+      87.802
+    ],
+    "checked": 38,
+    "passed": 33
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 28,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"CLAUDE POWER USER · EP 1\" at 26 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "CLAUDE POWER USER · EP 1",
+        "selector": "#hk-k",
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 102,
+          "y": 202,
+          "width": 431.7,
+          "height": 34
+        },
+        "time": 0,
+        "times": [
+          0,
+          0
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 3.725,
+        "elements": [
+          {
+            "selector": "#hk-k",
+            "text": "CLAUDE POWER USER · EP 1",
+            "fontPx": 26,
+            "time": 0,
+            "seconds": 3.725
+          },
+          {
+            "selector": "#hk-m",
+            "text": "3 .md files",
+            "fontPx": 26,
+            "time": 0,
+            "seconds": 3.725
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"5 EPISODES · CLAUDE POWER USER\" renders at 26 px for 10.24 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "5 EPISODES · CLAUDE POWER USER",
+        "selector": "#ep-l",
+        "dataAttributes": {},
+        "sourceFile": "compositions/eps.html",
+        "bbox": {
+          "x": 96,
+          "y": 102.55,
+          "width": 570.77,
+          "height": 34
+        },
+        "time": 3.725,
+        "times": [
+          3.725
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 10.243,
+        "elements": [
+          {
+            "selector": "#ep-l",
+            "text": "5 EPISODES · CLAUDE POWER USER",
+            "fontPx": 26,
+            "time": 3.725,
+            "seconds": 10.243
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"ANSWERS BUILT FOR…\" renders at 26 px for 5.12 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "ANSWERS BUILT FOR…",
+        "selector": "#go-l",
+        "dataAttributes": {},
+        "sourceFile": "compositions/goals.html",
+        "bbox": {
+          "x": 96,
+          "y": 153.83,
+          "width": 357.61,
+          "height": 34
+        },
+        "time": 13.968,
+        "times": [
+          13.968
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 5.122,
+        "elements": [
+          {
+            "selector": "#go-l",
+            "text": "ANSWERS BUILT FOR…",
+            "fontPx": 26,
+            "time": 13.968,
+            "seconds": 5.122
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.37 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a0",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 81.34,
+          "y": 247.42,
+          "width": 396.17999999999995,
+          "height": 60.03999999999999
+        },
+        "time": 33.505,
+        "words": 12,
+        "seconds": 1.368,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.058,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.214,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": 0.59,
+            "heightPx": 60
+          },
+          {
+            "time": 33.679,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.34 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 566.59,
+          "y": 245.2,
+          "width": 446.39,
+          "height": 67.63999999999999
+        },
+        "time": 33.534,
+        "words": 12,
+        "seconds": 1.339,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.214,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": 0.13,
+            "heightPx": 44
+          },
+          {
+            "time": 33.679,
+            "opacity": 1,
+            "heightPx": 68
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.27 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 55.12,
+          "y": 417.16,
+          "width": 447.3,
+          "height": 67.78000000000003
+        },
+        "time": 33.602,
+        "words": 12,
+        "seconds": 1.271,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.214,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": 1,
+            "heightPx": 68
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.23 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 581.68,
+          "y": 418.5,
+          "width": 416.97,
+          "height": 63.19
+        },
+        "time": 33.64,
+        "words": 12,
+        "seconds": 1.232,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.214,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": 0.9,
+            "heightPx": 63
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.16 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a4",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 57.37,
+          "y": 589.35,
+          "width": 442.92,
+          "height": 67.12
+        },
+        "time": 33.708,
+        "words": 12,
+        "seconds": 1.165,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": 0.42,
+            "heightPx": 51
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 67
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.14 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a5",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 565.06,
+          "y": 589.06,
+          "width": 449.38,
+          "height": 68.10000000000002
+        },
+        "time": 33.737,
+        "words": 12,
+        "seconds": 1.135,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.834,
+            "opacity": 1,
+            "heightPx": 68
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.07 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a6",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 63.02,
+          "y": 761.84,
+          "width": 431.9,
+          "height": 65.45000000000005
+        },
+        "time": 33.805,
+        "words": 12,
+        "seconds": 1.068,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.834,
+            "opacity": 0.99,
+            "heightPx": 65
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 1.04 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a7",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 606.42,
+          "y": 764.64,
+          "width": 368.72,
+          "height": 55.879999999999995
+        },
+        "time": 33.834,
+        "words": 12,
+        "seconds": 1.039,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.369,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.834,
+            "opacity": 0.62,
+            "heightPx": 56
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 68
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 21 text elements stay under it for 0.5 s or more, the smallest \"Here are 10 general tips that work fo...\" at 21 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Here are 10 general tips that work for most people…",
+        "selector": "#ge-a7",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 606.42,
+          "y": 764.64,
+          "width": 368.72,
+          "height": 55.88
+        },
+        "time": 33.834,
+        "times": [
+          27.161,
+          33.524,
+          33.524,
+          33.679,
+          33.679,
+          33.679,
+          33.679,
+          33.679,
+          33.679,
+          33.834,
+          33.834,
+          33.834,
+          33.834,
+          33.834,
+          33.834,
+          33.834,
+          33.834,
+          33.99,
+          33.99,
+          33.99,
+          33.99
+        ],
+        "fontPx": 21.25,
+        "floorPx": 28,
+        "seconds": 1.087,
+        "elements": [
+          {
+            "selector": "#ge-a7",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 21.25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a7 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 21.25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a0",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 22.83,
+            "time": 33.524,
+            "seconds": 1.397
+          },
+          {
+            "selector": "#ge-a0 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 22.83,
+            "time": 33.524,
+            "seconds": 1.397
+          },
+          {
+            "selector": "#ge-a3",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 24.03,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a3 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 24.03,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a9",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 24.03,
+            "time": 33.99,
+            "seconds": 0.931
+          },
+          {
+            "selector": "#ge-a9 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 24.03,
+            "time": 33.99,
+            "seconds": 0.931
+          },
+          {
+            "selector": "#ge-a6",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 24.89,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a6 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 24.89,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a1",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 25,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a1 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 25,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a2",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 25,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a2 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 25,
+            "time": 33.679,
+            "seconds": 1.242
+          },
+          {
+            "selector": "#ge-a4",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a4 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a5",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a5 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 25,
+            "time": 33.834,
+            "seconds": 1.087
+          },
+          {
+            "selector": "#ge-a8",
+            "text": "Here are 10 general tips that work for most people…",
+            "fontPx": 25,
+            "time": 33.99,
+            "seconds": 0.931
+          },
+          {
+            "selector": "#ge-a8 > b:nth-of-type(1)",
+            "text": "Great question!",
+            "fontPx": 25,
+            "time": 33.99,
+            "seconds": 0.931
+          },
+          {
+            "selector": "#ge-l",
+            "text": "WHAT CLAUDE KNOWS ABOUT YOU",
+            "fontPx": 26,
+            "time": 27.161,
+            "seconds": 6.363
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 0.97 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a8",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 55.12,
+          "y": 933.16,
+          "width": 447.3,
+          "height": 67.77999999999997
+        },
+        "time": 33.902,
+        "words": 12,
+        "seconds": 0.97,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.834,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.99,
+            "opacity": 1,
+            "heightPx": 68
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Great question! Here are 10 general tips that work for mo...\" (12 words) is on screen 0.93 s (±0.01 s), under its 3.07 s floor: hold it about 0.5 s + 0.3 s a word (4.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Great question! Here are 10 general tips that work for most people…",
+        "selector": "#ge-a9",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 581.68,
+          "y": 934.5,
+          "width": 416.97,
+          "height": 63.190000000000055
+        },
+        "time": 33.941,
+        "words": 12,
+        "seconds": 0.931,
+        "floorSeconds": 3.075,
+        "measured": [
+          {
+            "time": 33.524,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.679,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.834,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 33.99,
+            "opacity": 0.9,
+            "heightPx": 63
+          },
+          {
+            "time": 34.145,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.3,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.455,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.61,
+            "opacity": 1,
+            "heightPx": 66
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 66
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"built for everyone\" (3 words) is on screen 0.40 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "built for everyone",
+        "selector": "#ge-big",
+        "dataAttributes": {},
+        "sourceFile": "compositions/generic.html",
+        "bbox": {
+          "x": 277.34,
+          "y": 1063.24,
+          "width": 525.3200000000002,
+          "height": 112
+        },
+        "time": 34.474,
+        "words": 3,
+        "seconds": 0.398,
+        "floorSeconds": 1.05,
+        "measured": [
+          {
+            "time": 34.145,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 34.3,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 34.455,
+            "opacity": 0.41,
+            "heightPx": 112
+          },
+          {
+            "time": 34.61,
+            "opacity": 0.99,
+            "heightPx": 112
+          },
+          {
+            "time": 34.766,
+            "opacity": 0.99,
+            "heightPx": 112
+          },
+          {
+            "time": 34.921,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.076,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 35.231,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 8 text elements stay under it for 0.5 s or more, the smallest \"1\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "1",
+        "selector": "#a1-r0 > i:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/f1.html",
+        "bbox": {
+          "x": 111.03,
+          "y": 262.5,
+          "width": 15.45,
+          "height": 31
+        },
+        "time": 37.714,
+        "times": [
+          37.714,
+          37.714,
+          38.646,
+          38.646,
+          40.043,
+          40.043,
+          43.767,
+          43.767
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 9.468,
+        "elements": [
+          {
+            "selector": "#a1-r0 > i:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 24,
+            "time": 37.714,
+            "seconds": 9.468
+          },
+          {
+            "selector": "#a1-r1 > i:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 24,
+            "time": 38.646,
+            "seconds": 8.536
+          },
+          {
+            "selector": "#a1-r2 > i:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 24,
+            "time": 40.043,
+            "seconds": 7.139
+          },
+          {
+            "selector": "#a1-r3 > i:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 43.767,
+            "seconds": 3.415
+          },
+          {
+            "selector": "#a1-r0",
+            "text": "ROLE",
+            "fontPx": 26,
+            "time": 37.714,
+            "seconds": 9.468
+          },
+          {
+            "selector": "#a1-r1",
+            "text": "FOCUS THIS QUARTER",
+            "fontPx": 26,
+            "time": 38.646,
+            "seconds": 8.536
+          },
+          {
+            "selector": "#a1-r2",
+            "text": "DECISIONS ALREADY MADE",
+            "fontPx": 26,
+            "time": 40.043,
+            "seconds": 7.139
+          },
+          {
+            "selector": "#a1-r3",
+            "text": "#1 GOAL",
+            "fontPx": 26,
+            "time": 43.767,
+            "seconds": 3.415
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"what makes you cringe\" (4 words) is on screen 0.53 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "what makes you cringe",
+        "selector": "#v2-c3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/f2.html",
+        "bbox": {
+          "x": 113.95,
+          "y": 334.66,
+          "width": 321.85,
+          "height": 36.93000000000001
+        },
+        "time": 53.138,
+        "words": 4,
+        "seconds": 0.533,
+        "floorSeconds": 1.275,
+        "measured": [
+          {
+            "time": 52.769,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 52.924,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 53.08,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 53.235,
+            "opacity": 1,
+            "heightPx": 37
+          },
+          {
+            "time": 53.39,
+            "opacity": 1,
+            "heightPx": 36
+          },
+          {
+            "time": 53.545,
+            "opacity": 1,
+            "heightPx": 36
+          },
+          {
+            "time": 53.7,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 53.856,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 54.011,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"My voice is… friendly? Professional but fun? I like…\" (9 words) is on screen 1.70 s (±0.01 s), under its 2.40 s floor: hold it about 0.5 s + 0.3 s a word (3.20 s here) before it leaves or changes; see references/motion.md.",
+        "text": "My voice is… friendly? Professional but fun? I like…",
+        "selector": "#tk-draft",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 203.44,
+          "y": 645.46,
+          "width": 651.3799999999999,
+          "height": 159.78999999999996
+        },
+        "time": 54.942,
+        "words": 9,
+        "seconds": 1.697,
+        "floorSeconds": 2.4,
+        "measured": [
+          {
+            "time": 54.476,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 54.632,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 54.787,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 54.942,
+            "opacity": 0.66,
+            "heightPx": 160
+          },
+          {
+            "time": 55.097,
+            "opacity": 0.96,
+            "heightPx": 160
+          },
+          {
+            "time": 55.253,
+            "opacity": 1,
+            "heightPx": 160
+          },
+          {
+            "time": 55.408,
+            "opacity": 1,
+            "heightPx": 160
+          },
+          {
+            "time": 56.029,
+            "opacity": 1,
+            "heightPx": 160
+          },
+          {
+            "time": 56.184,
+            "opacity": 1,
+            "heightPx": 160
+          },
+          {
+            "time": 56.339,
+            "opacity": 1,
+            "heightPx": 160
+          },
+          {
+            "time": 56.494,
+            "opacity": 0.96,
+            "heightPx": 155
+          },
+          {
+            "time": 56.649,
+            "opacity": 0.48,
+            "heightPx": 135
+          },
+          {
+            "time": 56.805,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 56.96,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"DON'T WRITE IT YOURSELF\" (4 words) is on screen 0.97 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "DON'T WRITE IT YOURSELF",
+        "selector": "#tk-no",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 134.29,
+          "y": 837.78,
+          "width": 811.42,
+          "height": 74.44000000000005
+        },
+        "time": 55.67,
+        "words": 4,
+        "seconds": 0.97,
+        "floorSeconds": 1.275,
+        "measured": [
+          {
+            "time": 55.253,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 55.408,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 55.563,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 55.718,
+            "opacity": 0.84,
+            "heightPx": 74
+          },
+          {
+            "time": 55.873,
+            "opacity": 1,
+            "heightPx": 70
+          },
+          {
+            "time": 56.029,
+            "opacity": 1,
+            "heightPx": 70
+          },
+          {
+            "time": 56.184,
+            "opacity": 1,
+            "heightPx": 70
+          },
+          {
+            "time": 56.339,
+            "opacity": 1,
+            "heightPx": 70
+          },
+          {
+            "time": 56.494,
+            "opacity": 0.96,
+            "heightPx": 74
+          },
+          {
+            "time": 56.649,
+            "opacity": 0.48,
+            "heightPx": 126
+          },
+          {
+            "time": 56.805,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 56.96,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"CLAUDE · Q1 What's a phrase people would never hear you say?\" (11 words) is on screen 1.80 s (±0.01 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "CLAUDE · Q1 What's a phrase people would never hear you say?",
+        "selector": "#tk-q1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 124,
+          "y": 747.94,
+          "width": 638.34,
+          "height": 98.38999999999999
+        },
+        "time": 59.269,
+        "words": 11,
+        "seconds": 1.804,
+        "floorSeconds": 2.85,
+        "measured": [
+          {
+            "time": 58.822,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 58.977,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 59.133,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 59.288,
+            "opacity": 0.54,
+            "heightPx": 98
+          },
+          {
+            "time": 59.443,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 59.598,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 59.753,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.529,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.685,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.84,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.995,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 61.15,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.305,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.461,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"CLAUDE · Q1\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "CLAUDE · Q1",
+        "selector": "#tk-q1 > b:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 124,
+          "y": 713.94,
+          "width": 160.52,
+          "height": 28
+        },
+        "time": 59.288,
+        "times": [
+          59.288,
+          60.374
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 1.862,
+        "elements": [
+          {
+            "selector": "#tk-q1 > b:nth-of-type(1)",
+            "text": "CLAUDE · Q1",
+            "fontPx": 22,
+            "time": 59.288,
+            "seconds": 1.862
+          },
+          {
+            "selector": "#tk-q2 > b:nth-of-type(1)",
+            "text": "CLAUDE · Q2",
+            "fontPx": 22,
+            "time": 60.374,
+            "seconds": 0.776
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"CLAUDE · Q2 Read me something you wrote that sounded exac...\" (15 words) is on screen 0.83 s (±0.01 s), under its 3.75 s floor: hold it about 0.5 s + 0.3 s a word (5.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "CLAUDE · Q2 Read me something you wrote that sounded exactly like you. Why that one?",
+        "selector": "#tk-q2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/trick.html",
+        "bbox": {
+          "x": 124,
+          "y": 934.21,
+          "width": 708.84,
+          "height": 98.3900000000001
+        },
+        "time": 60.238,
+        "words": 15,
+        "seconds": 0.834,
+        "floorSeconds": 3.75,
+        "measured": [
+          {
+            "time": 59.909,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 60.064,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 60.219,
+            "opacity": 0.28,
+            "heightPx": 98
+          },
+          {
+            "time": 60.374,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.529,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.685,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.84,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 60.995,
+            "opacity": 1,
+            "heightPx": 98
+          },
+          {
+            "time": 61.15,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.305,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 61.461,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 7 text elements stay under it for 0.5 s or more, the smallest \"Q3\" at 19 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Q3",
+        "selector": "#gn-q2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/gen.html",
+        "bbox": {
+          "x": 323.48,
+          "y": 258.6,
+          "width": 23.04,
+          "height": 24.8
+        },
+        "time": 62.392,
+        "times": [
+          61.461,
+          62.237,
+          62.392,
+          62.392,
+          62.547,
+          62.702,
+          62.857
+        ],
+        "fontPx": 19.2,
+        "floorPx": 28,
+        "seconds": 2.793,
+        "elements": [
+          {
+            "selector": "#gn-q2",
+            "text": "Q3",
+            "fontPx": 19.2,
+            "time": 62.392,
+            "seconds": 2.793
+          },
+          {
+            "selector": "#gn-q3",
+            "text": "Q4",
+            "fontPx": 23.61,
+            "time": 62.547,
+            "seconds": 2.638
+          },
+          {
+            "selector": "#gn-q0",
+            "text": "Q1",
+            "fontPx": 24,
+            "time": 62.237,
+            "seconds": 2.948
+          },
+          {
+            "selector": "#gn-q1",
+            "text": "Q2",
+            "fontPx": 24,
+            "time": 62.392,
+            "seconds": 2.793
+          },
+          {
+            "selector": "#gn-q4",
+            "text": "Q5",
+            "fontPx": 24,
+            "time": 62.702,
+            "seconds": 2.483
+          },
+          {
+            "selector": "#gn-q5",
+            "text": "Q6",
+            "fontPx": 24,
+            "time": 62.857,
+            "seconds": 2.328
+          },
+          {
+            "selector": "#gn-h",
+            "text": "CLAUDE ASKS · YOU ANSWER",
+            "fontPx": 26,
+            "time": 61.461,
+            "seconds": 3.724
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"✕ No summary at the end\" (5 words) is on screen 1.11 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "✕ No summary at the end",
+        "selector": "#n3-r1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/f3.html",
+        "bbox": {
+          "x": 166.84,
+          "y": 321,
+          "width": 382.54999999999995,
+          "height": 44
+        },
+        "time": 74.634,
+        "words": 5,
+        "seconds": 1.105,
+        "floorSeconds": 1.5,
+        "measured": [
+          {
+            "time": 74.187,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 74.343,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 74.498,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 74.653,
+            "opacity": 0.63,
+            "heightPx": 44
+          },
+          {
+            "time": 74.808,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 74.963,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 75.119,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 75.274,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 75.429,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 75.584,
+            "opacity": 1,
+            "heightPx": 44
+          },
+          {
+            "time": 75.739,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 75.895,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 76.05,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"YOU\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "YOU",
+        "selector": "#am-g > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/aimeter.html",
+        "bbox": {
+          "x": 662,
+          "y": 117.16,
+          "width": 46.16,
+          "height": 28
+        },
+        "time": 75.739,
+        "times": [
+          75.739,
+          75.739,
+          75.739
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 4.035,
+        "elements": [
+          {
+            "selector": "#am-g > text:nth-of-type(1)",
+            "text": "YOU",
+            "fontPx": 22,
+            "time": 75.739,
+            "seconds": 4.035
+          },
+          {
+            "selector": "#am-g > text:nth-of-type(2)",
+            "text": "ROBOT",
+            "fontPx": 22,
+            "time": 75.739,
+            "seconds": 4.035
+          },
+          {
+            "selector": "#am-h",
+            "text": "YOUR WRITING SOUNDS…",
+            "fontPx": 26,
+            "time": 75.739,
+            "seconds": 3.88
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"less like AI, more like you\" (6 words) is on screen 1.57 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "less like AI, more like you",
+        "selector": "#am-t",
+        "dataAttributes": {},
+        "sourceFile": "compositions/aimeter.html",
+        "bbox": {
+          "x": 96,
+          "y": 246.7,
+          "width": 309.64,
+          "height": 141.3
+        },
+        "time": 78.067,
+        "words": 6,
+        "seconds": 1.571,
+        "floorSeconds": 1.725,
+        "measured": [
+          {
+            "time": 77.602,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 77.757,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 77.912,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 78.067,
+            "opacity": 0.61,
+            "heightPx": 141
+          },
+          {
+            "time": 78.223,
+            "opacity": 0.99,
+            "heightPx": 148
+          },
+          {
+            "time": 78.378,
+            "opacity": 1,
+            "heightPx": 148
+          },
+          {
+            "time": 78.533,
+            "opacity": 1,
+            "heightPx": 148
+          },
+          {
+            "time": 79.154,
+            "opacity": 1,
+            "heightPx": 148
+          },
+          {
+            "time": 79.309,
+            "opacity": 1,
+            "heightPx": 148
+          },
+          {
+            "time": 79.464,
+            "opacity": 1,
+            "heightPx": 148
+          },
+          {
+            "time": 79.619,
+            "opacity": 1,
+            "heightPx": 127
+          },
+          {
+            "time": 79.775,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 79.93,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 80.085,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"NEXT · EP 2\" renders at 26 px for 4.34 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "NEXT · EP 2",
+        "selector": "#e2-h",
+        "dataAttributes": {},
+        "sourceFile": "compositions/ep2.html",
+        "bbox": {
+          "x": 112,
+          "y": 152.46,
+          "width": 179.39,
+          "height": 34
+        },
+        "time": 84.431,
+        "times": [
+          84.431
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 4.345,
+        "elements": [
+          {
+            "selector": "#e2-h",
+            "text": "NEXT · EP 2",
+            "fontPx": 26,
+            "time": 84.431,
+            "seconds": 4.345
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"about-me.md\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "about-me.md",
+        "selector": "#ec-l > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/endc.html",
+        "bbox": {
+          "x": 140.11,
+          "y": 308.16,
+          "width": 158.41,
+          "height": 31
+        },
+        "time": 89.242,
+        "times": [
+          89.242,
+          89.397,
+          89.553
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 3.725,
+        "elements": [
+          {
+            "selector": "#ec-l > div:nth-of-type(1)",
+            "text": "about-me.md",
+            "fontPx": 24,
+            "time": 89.242,
+            "seconds": 3.725
+          },
+          {
+            "selector": "#ec-l > div:nth-of-type(2)",
+            "text": "voice-profile.md",
+            "fontPx": 24,
+            "time": 89.397,
+            "seconds": 3.57
+          },
+          {
+            "selector": "#ec-l > div:nth-of-type(3)",
+            "text": "never-list.md",
+            "fontPx": 24,
+            "time": 89.553,
+            "seconds": 3.414
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.15500000000000114,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "41f10a50-e878-4e79-97c2-a62e171ed92c",
+    "revision": null,
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/claude-1/.hyperframes/artifacts/checks/41f10a50-e878-4e79-97c2-a62e171ed92c.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.37",
+    "updateAvailable": false
+  }
+}
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/claude-1/.hyperframes/artifacts/checks/41f10a50-e878-4e79-97c2-a62e171ed92c.json
