@@ -1,9 +1,9 @@
 {
   "slug": "claude-1",
-  "stage": "preview",
+  "stage": "final",
   "ok": true,
-  "time": "2026-11-27 10:30:59 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45981778865",
+  "time": "2026-11-27 10:56:00 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45982455894",
   "release": "https://github.com/contactswatisinghss-arch/Video-lab/releases/tag/claude-1",
   "prepare": {
     "stage": "prepare",
@@ -30,6 +30,11 @@
       "stage": "preview",
       "ok": true,
       "time": "2026-11-27 10:30:59 UTC"
+    },
+    {
+      "stage": "final",
+      "ok": true,
+      "time": "2026-11-27 10:56:00 UTC"
     }
   ],
   "preview": {
@@ -46,5 +51,38 @@
     "snapshot_ok": true,
     "render_seconds": 198,
     "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/claude-1/preview.mp4"
+  },
+  "final": {
+    "stage": "final",
+    "ok": true,
+    "time": "2026-11-27 10:56:00 UTC",
+    "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45982455894",
+    "hash": "7049f3520bb18783",
+    "check": {
+      "parsed": false,
+      "raw_tail": "look.md.\",\n        \"text\": \"NEXT · EP 2\",\n        \"selector\": \"#e2-h\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/ep2.html\",\n        \"bbox\": {\n          \"x\": 112,\n          \"y\": 152.46,\n          \"width\": 179.39,\n          \"height\": 34\n        },\n        \"time\": 84.431,\n        \"times\": [\n          84.431\n        ],\n        \"fontPx\": 26,\n        \"floorPx\": 28,\n        \"seconds\": 4.345,\n        \"elements\": [\n          {\n            \"selector\": \"#e2-h\",\n            \"text\": \"NEXT · EP 2\",\n            \"fontPx\": 26,\n            \"time\": 84.431,\n            \"seconds\": 4.345\n          }\n        ]\n      },\n      {\n        \"code\": \"text_below_floor\",\n        \"severity\": \"warning\",\n        \"message\": \"Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \\\"about-me.md\\\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.\",\n        \"text\": \"about-me.md\",\n        \"selector\": \"#ec-l > div:nth-of-type(1)\",\n        \"dataAttributes\": {},\n        \"sourceFile\": \"compositions/endc.html\",\n        \"bbox\": {\n          \"x\": 140.11,\n          \"y\": 308.16,\n          \"width\": 158.41,\n          \"height\": 31\n        },\n        \"time\": 89.242,\n        \"times\": [\n          89.242,\n          89.397,\n          89.553\n        ],\n        \"fontPx\": 24,\n        \"floorPx\": 28,\n        \"seconds\": 3.725,\n        \"elements\": [\n          {\n            \"selector\": \"#ec-l > div:nth-of-type(1)\",\n            \"text\": \"about-me.md\",\n            \"fontPx\": 24,\n            \"time\": 89.242,\n            \"seconds\": 3.725\n          },\n          {\n            \"selector\": \"#ec-l > div:nth-of-type(2)\",\n            \"text\": \"voice-profile.md\",\n            \"fontPx\": 24,\n            \"time\": 89.397,\n            \"seconds\": 3.57\n          },\n          {\n            \"selector\": \"#ec-l > div:nth-of-type(3)\",\n            \"text\": \"never-list.md\",\n            \"fontPx\": 24,\n            \"time\": 89.553,\n            \"seconds\": 3.414\n          }\n        ]\n      }\n    ],\n    \"enabled\": true,\n    \"step\": 0.15500000000000114,\n    \"samples\": 599\n  },\n  \"audio\": {\n    \"ok\": true,\n    \"errorCount\": 0,\n    \"warningCount\": 0,\n    \"infoCount\": 0,\n    \"findings\": []\n  },\n  \"hdr\": {\n    \"autoPromotion\": null,\n    \"inspection\": \"available\"\n  },\n  \"snapshots\": {\n    \"enabled\": false,\n    \"files\": [],\n    \"times\": [],\n    \"findingFiles\": []\n  },\n  \"saved\": {\n    \"id\": \"ece1921a-f30e-4e97-80fe-b96796ae155f\",\n    \"revision\": null,\n    \"report\": \"/home/runner/work/Video-lab/Video-lab/_build/claude-1/.hyperframes/artifacts/checks/ece1921a-f30e-4e97-80fe-b96796ae155f.json\",\n    \"attribution\": \"unversioned\"\n  },\n  \"_meta\": {\n    \"version\": \"0.9.37\",\n    \"updateAvailable\": false\n  }\n}\n[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/claude-1/.hyperframes/artifacts/checks/ece1921a-f30e-4e97-80fe-b96796ae155f.json\n"
+    },
+    "hf_version": "0.9.37",
+    "mode": "overlay-on-original",
+    "graphics_seconds": 532,
+    "compose": {
+      "seconds": 790,
+      "hdr": true,
+      "size": [
+        2160,
+        3840
+      ],
+      "fps": "60/1",
+      "audio": "re-encoded (cut)"
+    },
+    "seconds": 92.97,
+    "size": [
+      2160,
+      3840
+    ],
+    "fps": "60/1",
+    "transfer": "arib-std-b67",
+    "size_mb": 238.2,
+    "video": "https://github.com/contactswatisinghss-arch/Video-lab/releases/download/claude-1/final_reel.mp4"
   }
 }
