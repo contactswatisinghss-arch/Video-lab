@@ -1,8 +1,8 @@
-[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json when the check ends, unless a warning says it could not be saved
+[hyperframes] check: the report is saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/ace15dad-a05d-4954-a47b-aa5d2c8f80c9.json when the check ends, unless a warning says it could not be saved
 [INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /home/runner/.cache/hyperframes/fonts/jetbrains-mono)
 [INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
-[hyperframes] browserGpuMode probe → software (WebGL unavailable)
 [hyperframes] check: starting Chrome
+[hyperframes] browserGpuMode probe → software (WebGL unavailable)
 [hyperframes] check: loading the page
 [hyperframes] check: waiting for the page to be ready
 [hyperframes] check: checking samples
@@ -2060,9 +2060,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "656311f7-e805-4587-b7c2-6dd7c9e2451c",
+    "id": "ace15dad-a05d-4954-a47b-aa5d2c8f80c9",
     "revision": null,
-    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json",
+    "report": "/home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/ace15dad-a05d-4954-a47b-aa5d2c8f80c9.json",
     "attribution": "unversioned"
   },
   "_meta": {
@@ -2070,4 +2070,4 @@
     "updateAvailable": false
   }
 }
-[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/656311f7-e805-4587-b7c2-6dd7c9e2451c.json
+[hyperframes] check: report saved to /home/runner/work/Video-lab/Video-lab/_build/AITerms/.hyperframes/artifacts/checks/ace15dad-a05d-4954-a47b-aa5d2c8f80c9.json
