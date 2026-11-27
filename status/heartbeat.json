@@ -1,13 +1,9 @@
 {
-  "state": "idle",
-  "last": [
-    "preview AITerms",
-    "final Promotion"
+  "state": "running",
+  "current": "prepare claude-1",
+  "pending": [
+    "prepare claude-1"
   ],
-  "done": [
-    "preview AITerms",
-    "final Promotion"
-  ],
-  "time": "2026-11-24 06:33:44 UTC",
-  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45338599481"
+  "time": "2026-11-27 08:47:33 UTC",
+  "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45968313697"
 }
