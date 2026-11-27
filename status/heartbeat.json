@@ -1,9 +1,11 @@
 {
-  "state": "running",
-  "current": "prepare claude-1",
-  "pending": [
+  "state": "idle",
+  "last": [
     "prepare claude-1"
   ],
-  "time": "2026-11-27 08:47:33 UTC",
+  "done": [
+    "prepare claude-1"
+  ],
+  "time": "2026-11-27 09:01:32 UTC",
   "run": "https://github.com/contactswatisinghss-arch/Video-lab/actions/runs/45968313697"
 }
