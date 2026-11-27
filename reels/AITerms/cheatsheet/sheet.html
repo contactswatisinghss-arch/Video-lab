@@ -1,0 +1,133 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Fraunces';src:url('fonts/Fraunces-Italic_SOFT_WONK_opsz_wght_.ttf');font-weight:100 900;font-style:italic}
+@font-face{font-family:'Fraunces';src:url('fonts/Fraunces_SOFT_WONK_opsz_wght_.ttf');font-weight:100 900;font-style:normal}
+@font-face{font-family:'Archivo';src:url('fonts/Archivo_wdth_wght_.ttf');font-weight:100 900;font-style:normal}
+:root{--paper:#F4EFE3;--ink:#121212;--blue:#2D5BFF;--hl:#FFE14D;--red:#E5484D;--green:#22A447;--mono:'DejaVu Sans Mono',monospace}
+@page{size:1080px 1350px;margin:0}
+html,body{margin:0;background:#888}
+.pg{position:relative;width:1080px;height:1350px;overflow:hidden;box-sizing:border-box;padding:70px 72px 60px;
+  background:repeating-linear-gradient(var(--paper) 0 59px,rgba(45,91,255,.10) 59px 61px),var(--paper);color:var(--ink);font-family:'Archivo',sans-serif;page-break-after:always}
+.pg::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:3px;background:rgba(229,72,77,.35)}
+.hd{display:flex;justify-content:space-between;align-items:center;font:600 24px var(--mono);letter-spacing:.12em}
+.tab{padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff}
+.ft{position:absolute;left:72px;right:72px;bottom:42px;display:flex;justify-content:space-between;font:600 22px var(--mono);letter-spacing:.1em;color:#555}
+h1{margin:40px 0 0;font:900 150px/.9 'Fraunces',serif;letter-spacing:-.04em}
+h1 em,h2 em{color:var(--blue)}
+h2{margin:26px 0 0;font:900 104px/.95 'Fraunces',serif;letter-spacing:-.035em}
+.pr{margin-top:14px;font:500 28px var(--mono);color:#555}
+.def{margin-top:22px;font:700 41px/1.22 'Archivo',sans-serif}
+mark{background:linear-gradient(transparent 55%,var(--hl) 55%);color:inherit}
+.box{margin-top:24px;border:4px solid var(--ink);border-radius:20px;background:#fff;padding:24px 28px;box-shadow:8px 8px 0 var(--ink)}
+.lab{display:inline-block;padding:4px 12px;border-radius:8px;background:var(--ink);color:var(--hl);font:700 22px var(--mono);letter-spacing:.1em;margin-bottom:12px}
+.box p,.box li{font:500 30px/1.38 'Archivo',sans-serif;margin:0}
+.box ul{margin:0;padding-left:34px}.box li{margin:4px 0}
+.ok{color:var(--green);font-weight:800}.no{color:var(--red);font-weight:800}
+.try{margin-top:22px;border-radius:18px;background:var(--hl);padding:20px 26px;font:600 31px/1.35 'Archivo',sans-serif}
+.try b{font:800 22px var(--mono);letter-spacing:.1em;display:block;margin-bottom:6px}
+.code{font:500 26px/1.5 var(--mono);background:#121212;color:#d4d4d4;border-radius:14px;padding:18px 22px;margin-top:14px;white-space:pre}
+.list{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.li{display:flex;gap:16px;align-items:center;font:700 36px 'Archivo',sans-serif;border-top:3px solid var(--ink);padding-top:12px}
+.li b{flex:none;width:54px;height:54px;border-radius:12px;background:var(--blue);color:#fff;text-align:center;font:900 32px/54px 'Fraunces',serif}
+.li.top b{background:var(--ink);color:var(--hl)}
+.t{border-top:3px solid var(--ink);padding:13px 0 11px}
+.t h3{margin:0;font:900 44px/1 'Fraunces',serif;letter-spacing:-.02em}
+.t p{margin:6px 0 0;font:500 27px/1.3 'Archivo',sans-serif}
+.t p.ex{color:#333}.t p.ex::before{content:"e.g. ";font:700 24px var(--mono);color:var(--blue)}
+.big{margin-top:200px;font:900 120px/.95 'Fraunces',serif;letter-spacing:-.04em}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">CHEAT SHEET</span></div>
+  <h1>AI terms<br><em>to know</em><br>before 2027</h1>
+  <div class="pr">14 terms · plain English · real examples</div>
+  <div class="list">
+    <div class="li top"><b>1</b>Context engineering</div>
+    <div class="li top"><b>2</b>Harness engineering</div>
+    <div class="li top"><b>3</b>Evals</div>
+    <div class="li"><b>4</b>AI agent</div>
+    <div class="li"><b>5</b>Tokens</div>
+    <div class="li"><b>6</b>Context window</div>
+    <div class="li"><b>7</b>Tool calling</div>
+    <div class="li"><b>8</b>RAG</div>
+    <div class="li"><b>9</b>MCP</div>
+    <div class="li"><b>10</b>Fine-tuning</div>
+    <div class="li"><b>11</b>Hallucination</div>
+    <div class="li"><b>12</b>Guardrails</div>
+    <div class="li"><b>13</b>Prompt injection</div>
+    <div class="li"><b>14</b>Human in the loop</div>
+  </div>
+  <div class="ft"><span>SWATI TALKS TECH</span><span>SAVE THIS · 1 / 6</span></div>
+</section>
+
+<!-- 2 CONTEXT -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">01 / 03</span></div>
+  <h2>context<br><em>engineering</em></h2>
+  <div class="pr">/ˈkɒn·tekst ˌen·dʒɪˈnɪə·rɪŋ/ noun</div>
+  <div class="def">Giving AI <mark>the right information</mark>, at <mark>the right time</mark>. Not more information: the right information.</div>
+  <div class="box"><span class="lab">REAL EXAMPLE</span>
+    <p>You ask an agent: "Prepare my weekly report." It needs:</p>
+    <ul><li><span class="ok">✓</span> the data: this week's sales file</li>
+    <li><span class="ok">✓</span> what matters: your goals and priorities</li>
+    <li><span class="ok">✓</span> the format: last week's report as a template</li>
+    <li><span class="no">✗</span> not: old notes, a 2019 budget, the lunch menu</li></ul></div>
+  <div class="try"><b>TRY IT TODAY</b>Before you ask ChatGPT or Claude for anything, paste 3 things: the data, what matters most, and one example of a good result.</div>
+  <div class="ft"><span>SWATI TALKS TECH</span><span>2 / 6</span></div>
+</section>
+
+<!-- 3 HARNESS -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">02 / 03</span></div>
+  <h2><em>harness</em><br>engineering</h2>
+  <div class="pr">/ˈhɑː·nɪs ˌen·dʒɪˈnɪə·rɪŋ/ noun</div>
+  <div class="def">The model is the brain. The <mark>harness</mark> is everything around it that lets it actually <mark>do the work</mark>.</div>
+  <div class="code">agent = model + harness</div>
+  <div class="box"><span class="lab">REAL EXAMPLE · A CODING AGENT</span>
+    <p>Coding agents like Claude Code and Codex are harnesses around a model. The harness lets it:</p>
+    <ul><li><b>read files</b> in your project</li>
+    <li><b>run tools</b>: the terminal, the tests</li>
+    <li><b>track progress</b> with a to-do list</li>
+    <li><b>know when to stop</b>: tests pass, or ask you first</li></ul></div>
+  <div class="try"><b>WHY IT MATTERS</b>Same model, better harness = a much more useful agent. That's why two AI tools built on the same model can feel so different.</div>
+  <div class="ft"><span>SWATI TALKS TECH</span><span>3 / 6</span></div>
+</section>
+
+<!-- 4 EVALS -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">03 / 03</span></div>
+  <h2><em>evals</em></h2>
+  <div class="pr">/iːˈvælz/ noun · short for evaluations</div>
+  <div class="def">Tests that check, <mark>systematically</mark>, whether the AI is doing the job properly. Not "it looks good". Proof.</div>
+  <div class="box"><span class="lab">REAL EXAMPLE</span>
+    <p>Your agent wrote a beautiful weekly report. Run the evals:</p>
+    <div class="code"><span style="color:#3fb950">✓ PASS</span>  totals add up
+<span style="color:#3fb950">✓ PASS</span>  matches the template
+<span style="color:#f85149">✗ FAIL</span>  region "West" missing
+score: 2 / 3  → fix before you trust it</div></div>
+  <div class="try"><b>HOW TO START</b>Keep 10–20 past tasks where you know the right answer. Run them again every time you change the prompt, the model or the tools. Track the score.</div>
+  <div class="ft"><span>SWATI TALKS TECH</span><span>4 / 6</span></div>
+</section>
+
+<!-- 5 MORE TERMS A -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">+ MORE TERMS</span></div>
+  <div class="t" style="margin-top:22px"><h3>AI agent</h3><p>An AI that plans and takes several steps with tools to reach a goal, not just one answer.</p><p class="ex">"Book a meeting with Priya": checks your calendar, drafts the email, sends the invite.</p></div>
+  <div class="t"><h3>Tokens</h3><p>The small chunks of text a model reads and writes. Roughly ¾ of an English word each. Pricing and limits are counted in tokens.</p><p class="ex">"unbelievable" can be split into a few tokens.</p></div>
+  <div class="t"><h3>Context window</h3><p>How much text (in tokens) the model can see at once: its working memory.</p><p class="ex">In a very long chat, early details can fall out or get ignored.</p></div>
+  <div class="t"><h3>Tool calling</h3><p>The model asks to run a tool (search, calculator, an app) and uses the result.</p><p class="ex">"Weather in Delhi?" → calls a weather service → answers with live data.</p></div>
+  <div class="t"><h3>RAG <span style="font:500 26px var(--mono)">retrieval-augmented generation</span></h3><p>Look up the right documents first, then answer using them.</p><p class="ex">An HR bot searches the leave policy before answering "how many sick days do I get?"</p></div>
+  <div class="ft"><span>SWATI TALKS TECH</span><span>5 / 6</span></div>
+</section>
+
+<!-- 6 MORE TERMS B -->
+<section class="pg">
+  <div class="hd"><span>THE AI DICTIONARY</span><span class="tab">+ MORE TERMS</span></div>
+  <div class="t" style="margin-top:22px"><h3>MCP <span style="font:500 26px var(--mono)">model context protocol</span></h3><p>An open standard for plugging AI apps into tools and data, like a USB-C port for AI.</p><p class="ex">Connect your assistant to GitHub or Google Drive once; any MCP app can use it.</p></div>
+  <div class="t"><h3>Fine-tuning</h3><p>Extra training on your own examples to change how a model behaves. Try context engineering first: it's cheaper.</p><p class="ex">Training on 1,000 of your support replies so it writes in your brand voice.</p></div>
+  <div class="t"><h3>Hallucination</h3><p>A confident answer that's simply wrong or made up. RAG and evals help catch it.</p><p class="ex">Citing a research paper that doesn't exist.</p></div>
+  <div class="t"><h3>Guardrails &amp; prompt injection</h3><p>Guardrails are checks around what goes in and out. Prompt injection is hidden text that tries to hijack the AI.</p><p class="ex">A web page hides "ignore your instructions"; a guardrail can flag or block the agent from obeying it.</p></div>
+  <div class="t"><h3>Human in the loop</h3><p>A person approves risky steps before the AI acts.</p><p class="ex">The agent drafts a refund; you click approve.</p></div>
+  <div class="ft"><span>SWATI TALKS TECH · FOLLOW FOR MORE</span><span>6 / 6</span></div>
+</section>
+</body></html>
