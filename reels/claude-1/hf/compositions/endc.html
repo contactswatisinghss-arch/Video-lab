@@ -1,0 +1,28 @@
+<template>
+<!-- END CARD (top band): FOLLOW for EP 2 with the three files ticked, holds to the end; loops back to the hook's 'unfair to yourself'. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #ec-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #ec-f { position: absolute; left: 34px; top: 26px; padding: 10px 26px; border-radius: 999px; background: #F6F1E7; color: #15120E; font: 800 36px 'Geist', sans-serif; letter-spacing: .06em; }
+  #ec-s { position: absolute; left: 300px; top: 34px; font: 600 30px 'Geist', sans-serif; color: #E8DCCB; }
+  #ec-l { position: absolute; left: 34px; right: 34px; top: 112px; display: flex; gap: 14px; }
+  .ec-i { flex: 1; height: 62px; border-radius: 14px; background: #221D18; display: flex; align-items: center; gap: 10px; padding: 0 14px; font: 600 24px 'Geist Mono', monospace; color: #F6F1E7; white-space: nowrap; }
+  .ec-i b { color: #6FD08C; font-family: 'Geist', sans-serif; }
+
+</style>
+<div id="root" data-composition-id="endc" data-width="1080" data-height="1920"><div id="endc-all" style="position:absolute;inset:0">
+  <div id="ec-card"><div id="ec-f">FOLLOW</div><div id="ec-s">Claude Power User · EP 2 next</div>
+    <div id="ec-l"><div class="ec-i"><b>✓</b>about-me.md</div><div class="ec-i"><b>✓</b>voice-profile.md</div><div class="ec-i"><b>✓</b>never-list.md</div></div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w318) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ec-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#ec-f", { scale: 0.7 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, {{at:w318}} - S);
+  tl.fromTo(".ec-i", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 0.4);
+  window.__timelines["endc"] = tl;
+})();
+</script>
+</template>

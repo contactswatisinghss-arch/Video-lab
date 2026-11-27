@@ -1,0 +1,37 @@
+<template>
+<!-- SOUNDS LIKE AI? (top band): a gauge needle swings from 'robotic' to 'you' as she says 'stops sounding like AI'. No fake numbers. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #am-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #am-h { position: absolute; left: 34px; top: 26px; font: 800 26px 'Geist', sans-serif; color: #A89F92; letter-spacing: .14em; }
+  #am-t { position: absolute; left: 34px; top: 70px; width: 470px; font: 400 64px/1.02 'Instrument Serif', serif; color: #F6F1E7; }
+  #am-t i { color: #6FD08C; }
+  #am-g { position: absolute; right: 40px; top: 20px; width: 380px; height: 180px; }
+
+</style>
+<div id="root" data-composition-id="aimeter" data-width="1080" data-height="1920"><div id="aimeter-all" style="position:absolute;inset:0">
+  <div id="am-card"><div id="am-h">YOUR WRITING SOUNDS…</div><div id="am-t">less like AI,<br><i>more like you</i></div>
+    <svg id="am-g" viewBox="0 0 380 180">
+      <path d="M30 170 A160 160 0 0 1 350 170" fill="none" stroke="#2C2620" stroke-width="26"/>
+      <path d="M30 170 A160 160 0 0 1 190 10" fill="none" stroke="#6FD08C" stroke-width="26" opacity=".85"/>
+      <path d="M190 10 A160 160 0 0 1 350 170" fill="none" stroke="#FF4D4D" stroke-width="26" opacity=".85"/>
+      <text x="64" y="162" font-family="Geist" font-weight="800" font-size="22" fill="#6FD08C">YOU</text>
+      <text x="246" y="162" font-family="Geist" font-weight="800" font-size="22" fill="#FF4D4D">ROBOT</text>
+      <g id="am-n" ><path d="M186 170 L190 40 L194 170 Z" fill="#F6F1E7"/></g>
+      <circle cx="190" cy="170" r="14" fill="#F6F1E7"/>
+    </svg></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w280) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#am-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#am-n", { rotation: 62, svgOrigin: "190 170" }, { rotation: 62, svgOrigin: "190 170", duration: 0.01 }, 0);
+  tl.fromTo("#am-n", { rotation: 62, svgOrigin: "190 170" }, { rotation: -60, svgOrigin: "190 170", duration: 0.9, ease: "elastic.out(1, 0.5)" }, {{at:w287}} - S);
+  tl.fromTo("#am-t", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, {{at:w287}} - S);
+  tl.to("#am-card", { y: -260, duration: 0.25, ease: "power3.in" }, {{at:w291}} - 0.1 - S - 0.28);
+  window.__timelines["aimeter"] = tl;
+})();
+</script>
+</template>

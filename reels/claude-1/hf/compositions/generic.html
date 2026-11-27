@@ -1,0 +1,60 @@
+<template>
+<!-- NO FILES = GENERIC (top band): an 'about you' meter reads 0 facts; on 'answers built for everyone' the same generic answer clones into a full-screen wall, then clears. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+  #ge-desk { position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 30% at 82% 4%, rgba(255,196,128,.55), rgba(255,170,100,.12) 55%, transparent 75%),
+      radial-gradient(ellipse 120% 70% at 50% 110%, rgba(0,0,0,.65), transparent 60%),
+      repeating-linear-gradient(94deg, rgba(0,0,0,.10) 0 2px, transparent 2px 9px, rgba(255,230,200,.035) 9px 11px, transparent 11px 23px, rgba(0,0,0,.06) 23px 26px, transparent 26px 41px),
+      repeating-linear-gradient(91deg, rgba(90,55,30,.0) 0 140px, rgba(30,18,10,.35) 140px 143px, rgba(90,55,30,0) 143px 260px),
+      linear-gradient(180deg, #4A3323 0%, #36251A 45%, #241810 100%); }
+  #ge-desk::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
+
+  #ge-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #ge-l { position: absolute; left: 34px; top: 26px; font: 800 26px 'Geist', sans-serif; color: #A89F92; letter-spacing: .14em; }
+  #ge-n { position: absolute; left: 34px; top: 66px; font: 400 120px/1 'Instrument Serif', serif; color: #FF4D4D; }
+  #ge-t { position: absolute; left: 150px; top: 86px; font: 700 40px 'Geist', sans-serif; color: #F6F1E7; }
+  #ge-t small { display: block; margin-top: 6px; font: 500 28px 'Geist Mono', monospace; color: #8F8577; }
+  #ge-wall { position: absolute; inset: 0; opacity: 0; }
+  #ge-grid { position: absolute; left: 40px; right: 40px; top: 190px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .ge-a { height: 150px; border-radius: 20px; background: #F6F1E7; padding: 18px 22px; box-sizing: border-box; font: 500 25px/1.35 'Geist', sans-serif; color: #5C5348; box-shadow: 0 14px 30px rgba(0,0,0,.45); }
+  .ge-a b { display: block; color: #2A241D; font-weight: 700; margin-bottom: 4px; }
+  #ge-big { position: absolute; left: 0; right: 0; top: 1060px; text-align: center; }
+  #ge-big span { display: inline-block; padding: 16px 36px 22px; border-radius: 20px; background: rgba(21,18,14,.92); font: 400 86px/1 'Instrument Serif', serif; color: #F6F1E7; }
+  #ge-big i { color: #FF4D4D; }
+
+</style>
+<div id="root" data-composition-id="generic" data-width="1080" data-height="1920"><div id="generic-all" style="position:absolute;inset:0">
+  <div id="ge-card"><div id="ge-l">WHAT CLAUDE KNOWS ABOUT YOU</div><div id="ge-n">0</div><div id="ge-t">facts<small>&gt; starting from a generic state</small></div></div>
+  <div id="ge-wall"><div id="ge-desk"></div><div id="ge-grid">
+    <div class="ge-a" id="ge-a0"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a1"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a2"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a3"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a4"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a5"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a6"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a7"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a8"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+    <div class="ge-a" id="ge-a9"><b>Great question!</b>Here are 10 general tips that work for most people…</div>
+  </div><div id="ge-big"><span>built for <i>everyone</i></span></div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w102) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#ge-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#ge-n", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, {{at:w109}} - S);
+  tl.fromTo("#ge-n", { x: 0 }, { x: 8, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, {{at:w117}} - S);
+  tl.to("#ge-card", { y: -260, duration: 0.22, ease: "power3.in" }, {{at:w123}} - S - 0.25);
+  tl.fromTo("#ge-wall", { opacity: 0 }, { opacity: 1, duration: 0.12 }, {{at:w123}} - S - 0.05);
+  tl.fromTo(".ge-a", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(1.6)", stagger: 0.05 }, {{at:w123}} - S - 0.05);
+  tl.fromTo("#ge-big", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "expo.out" }, {{at:w126}} - S);
+  tl.to("#ge-wall", { opacity: 0, duration: 0.2, ease: "power2.in" }, {{at:w149}} - 0.1 - S - 0.22);
+  window.__timelines["generic"] = tl;
+})();
+</script>
+</template>

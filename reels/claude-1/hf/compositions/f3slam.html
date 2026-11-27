@@ -1,0 +1,40 @@
+<template>
+<!-- FILE 03 SLAM (full screen, ~2 s): 'never-list.md' lands on the desk as a sheet of paper; big number in the serif. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+  #f3s-desk { position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 30% at 82% 4%, rgba(255,196,128,.55), rgba(255,170,100,.12) 55%, transparent 75%),
+      radial-gradient(ellipse 120% 70% at 50% 110%, rgba(0,0,0,.65), transparent 60%),
+      repeating-linear-gradient(94deg, rgba(0,0,0,.10) 0 2px, transparent 2px 9px, rgba(255,230,200,.035) 9px 11px, transparent 11px 23px, rgba(0,0,0,.06) 23px 26px, transparent 26px 41px),
+      repeating-linear-gradient(91deg, rgba(90,55,30,.0) 0 140px, rgba(30,18,10,.35) 140px 143px, rgba(90,55,30,0) 143px 260px),
+      linear-gradient(180deg, #4A3323 0%, #36251A 45%, #241810 100%); }
+  #f3s-desk::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
+
+  #f3s-num { position: absolute; left: 0; right: 0; top: 220px; text-align: center; font: 400 300px/1 'Instrument Serif', serif; color: #FF4D4D; text-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  #f3s-lab { position: absolute; left: 0; right: 0; top: 520px; text-align: center; font: 800 30px 'Geist', sans-serif; color: #E8DCCB; letter-spacing: .2em; }
+  #f3s-pap { position: absolute; left: 170px; right: 170px; top: 620px; height: 640px; border-radius: 10px; background: #F6F1E7; box-shadow: 0 36px 70px rgba(0,0,0,.6); padding: 50px 50px; box-sizing: border-box; }
+  #f3s-pap h2 { margin: 0 0 28px; font: 700 52px 'Geist Mono', monospace; color: #15120E; }
+  #f3s-pap p { margin: 0; font: 400 52px/1.15 'Instrument Serif', serif; color: #5C5348; }
+  .f3s-rl { height: 14px; border-radius: 7px; background: #E2D8C8; margin-top: 26px; }
+
+</style>
+<div id="root" data-composition-id="f3slam" data-width="1080" data-height="1920"><div id="f3slam-all" style="position:absolute;inset:0">
+  <div id="f3s-desk"></div>
+  <div id="f3s-num">03</div>
+  <div id="f3s-lab">FILE 3 OF 3</div>
+  <div id="f3s-pap"><h2>never-list.md</h2><p>What Claude must never write.</p><div class="f3s-rl" style="width:90%"></div><div class="f3s-rl" style="width:76%"></div><div class="f3s-rl" style="width:84%"></div><div class="f3s-rl" style="width:60%"></div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w251) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#f3s-num", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "expo.out" }, 0);
+  tl.fromTo("#f3s-lab", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.15);
+  tl.fromTo("#f3s-pap", { y: -900, rotation: -8 }, { y: 0, rotation: -2, duration: 0.5, ease: "power4.out" }, 0.05);
+  tl.to("#f3slam-all", { clipPath: "inset(0% 0 100% 0)", duration: 0.28, ease: "power4.in" }, {{at:w258}} - 0.05 - S - 0.3);
+  window.__timelines["f3slam"] = tl;
+})();
+</script>
+</template>

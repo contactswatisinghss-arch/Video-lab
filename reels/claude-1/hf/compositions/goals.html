@@ -1,0 +1,35 @@
+<template>
+<!-- KNOWS YOU (top band): on 'know you better' a profile chip lights; on 'your goals' a target locks on YOU, on 'someone else's' the generic target is struck. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #go-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #go-l { position: absolute; left: 34px; top: 24px; font: 800 26px 'Geist', sans-serif; color: #A89F92; letter-spacing: .14em; }
+  #go-a, #go-b { position: absolute; top: 70px; width: 440px; height: 108px; border-radius: 20px; display: flex; align-items: center; gap: 20px; padding: 0 24px; box-sizing: border-box; }
+  #go-a { left: 34px; background: #2A241E; border: 2px solid #3A332C; color: #A89F92; font: 600 34px 'Geist', sans-serif; }
+  #go-b { right: 34px; background: rgba(111,208,140,.14); border: 2px solid #6FD08C; color: #F6F1E7; font: 700 38px 'Geist', sans-serif; }
+  #go-a svg, #go-b svg { flex: none; }
+  #go-ax { position: absolute; left: 20px; right: 20px; top: 50px; height: 7px; border-radius: 4px; background: #FF4D4D; transform-origin: 0 50%; transform: scaleX(0); }
+
+</style>
+<div id="root" data-composition-id="goals" data-width="1080" data-height="1920"><div id="goals-all" style="position:absolute;inset:0">
+  <div id="go-card">
+    <div id="go-l">ANSWERS BUILT FOR…</div>
+    <div id="go-a"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#7C7368" stroke-width="4"/><circle cx="28" cy="28" r="13" fill="none" stroke="#7C7368" stroke-width="4"/><circle cx="28" cy="28" r="4" fill="#7C7368"/></svg>someone else's goals<div id="go-ax"></div></div>
+    <div id="go-b"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#6FD08C" stroke-width="4"/><circle cx="28" cy="28" r="13" fill="none" stroke="#6FD08C" stroke-width="4"/><circle cx="28" cy="28" r="5" fill="#6FD08C"/><path d="M28 4v10M28 42v10M4 28h10M42 28h10" stroke="#6FD08C" stroke-width="4"/></svg>YOUR goals</div>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w47) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#go-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#go-a", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.15);
+  tl.fromTo("#go-b", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.2)" }, {{at:w60}} - S);
+  tl.fromTo("#go-ax", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power2.out" }, {{at:w63}} - S);
+  tl.to("#go-a", { opacity: 0.45, duration: 0.2 }, {{at:w64}} - S);
+  tl.to("#go-card", { y: -260, duration: 0.25, ease: "power3.in" }, {{at:w76}} - 0.15 - S - 0.28);
+  window.__timelines["goals"] = tl;
+})();
+</script>
+</template>

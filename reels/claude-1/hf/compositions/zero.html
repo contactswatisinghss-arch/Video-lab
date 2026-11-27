@@ -1,0 +1,48 @@
+<template>
+<!-- SET UP ONCE (full-screen takeover): the three files fan out on the desk on 'set these three up once'; a big 0 is struck and replaced by YOU on 'from you, not zero'. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+  #zr-desk { position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 30% at 82% 4%, rgba(255,196,128,.55), rgba(255,170,100,.12) 55%, transparent 75%),
+      radial-gradient(ellipse 120% 70% at 50% 110%, rgba(0,0,0,.65), transparent 60%),
+      repeating-linear-gradient(94deg, rgba(0,0,0,.10) 0 2px, transparent 2px 9px, rgba(255,230,200,.035) 9px 11px, transparent 11px 23px, rgba(0,0,0,.06) 23px 26px, transparent 26px 41px),
+      repeating-linear-gradient(91deg, rgba(90,55,30,.0) 0 140px, rgba(30,18,10,.35) 140px 143px, rgba(90,55,30,0) 143px 260px),
+      linear-gradient(180deg, #4A3323 0%, #36251A 45%, #241810 100%); }
+  #zr-desk::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
+
+  #zr-t { position: absolute; left: 0; right: 0; top: 210px; text-align: center; font: 800 40px 'Geist', sans-serif; color: #E8DCCB; letter-spacing: .2em; }
+  .zr-p { position: absolute; left: 340px; top: 330px; width: 400px; height: 520px; border-radius: 10px; background: #F6F1E7; box-shadow: 0 30px 60px rgba(0,0,0,.55); padding: 34px; box-sizing: border-box; transform-origin: 50% 100%; }
+  .zr-p h3 { margin: 0; font: 700 32px 'Geist Mono', monospace; color: #15120E; }
+  .zr-p i { display: block; height: 12px; border-radius: 6px; background: #E2D8C8; margin-top: 24px; }
+  #zr-big { position: absolute; left: 0; right: 0; top: 930px; height: 300px; text-align: center; }
+  #zr-0 { position: absolute; left: 0; right: 0; top: 0; font: 400 280px/1 'Instrument Serif', serif; color: #A89F92; }
+  #zr-0x { position: absolute; left: 430px; width: 220px; top: 140px; height: 16px; border-radius: 8px; background: #FF4D4D; transform-origin: 0 50%; transform: scaleX(0) rotate(-20deg); }
+  #zr-you { position: absolute; left: 0; right: 0; top: 0; font: 400 280px/1 'Instrument Serif', serif; color: #FF6A3D; font-style: italic; opacity: 0; }
+
+</style>
+<div id="root" data-composition-id="zero" data-width="1080" data-height="1920"><div id="zero-all" style="position:absolute;inset:0">
+  <div id="zr-desk"></div>
+  <div id="zr-t">SET UP ONCE</div>
+  <div class="zr-p" id="zr-p0"><h3>about-me.md</h3><i style="width:80%"></i><i></i><i style="width:60%"></i></div>
+  <div class="zr-p" id="zr-p1"><h3>voice-profile.md</h3><i style="width:70%"></i><i></i><i style="width:85%"></i></div>
+  <div class="zr-p" id="zr-p2"><h3>never-list.md</h3><i style="width:90%"></i><i style="width:55%"></i><i></i></div>
+  <div id="zr-big"><div id="zr-0">0</div><div id="zr-0x"></div><div id="zr-you">you</div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w291) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#zr-t", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0);
+  [["#zr-p0", -16, -170], ["#zr-p1", 0, 0], ["#zr-p2", 16, 170]].forEach(([p, r, x], i) =>
+    tl.fromTo(p, { y: 900, rotation: 0, x: 0 }, { y: 0, rotation: r, x: x, duration: 0.5, ease: "expo.out" }, {{at:w292}} - S + i * 0.12));
+  tl.fromTo("#zr-0", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, {{at:w297}} - S);
+  tl.fromTo("#zr-0x", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power2.out" }, {{at:w301}} - S - 0.1);
+  tl.to(["#zr-0", "#zr-0x"], { opacity: 0, y: 60, duration: 0.2, ease: "power2.in" }, {{at:w301}} - S + 0.12);
+  tl.fromTo("#zr-you", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, {{at:w301}} - S + 0.2);
+  tl.to("#zero-all", { clipPath: "inset(0% 0 100% 0)", duration: 0.28, ease: "power4.in" }, {{at:w304}} - 0.1 - S - 0.3);
+  window.__timelines["zero"] = tl;
+})();
+</script>
+</template>

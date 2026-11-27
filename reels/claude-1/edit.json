@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "slug": "claude-1",
+  "cuts": {
+    "max_pause": 0.4,
+    "pad": 0.1,
+    "keep_head": 0.6,
+    "keep_tail": 1.2,
+    "remove": [
+      [
+        3.62,
+        9.25
+      ],
+      [
+        19.85,
+        23.1
+      ],
+      [
+        25.95,
+        28.05
+      ],
+      [
+        41.85,
+        48.55
+      ],
+      [
+        78.7,
+        80.33
+      ]
+    ]
+  },
+  "fixes": [
+    [
+      "auto -generate",
+      "auto-generate"
+    ],
+    [
+      "Delve,",
+      "delve,"
+    ]
+  ],
+  "fonts": [
+    "Instrument Serif",
+    "Geist",
+    "Geist Mono"
+  ],
+  "cover_at": 0.05,
+  "audio": {
+    "loudnorm": true
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    {{fontfaces}}
+    html, body { margin: 0; background: #000; }
+    #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+    #cam { position: absolute; inset: 0; }
+    #base { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- claude-1 · "Claude Power User EP 1" · look "ember & markdown": warm ink #15120E, paper #F6F1E7, ember #FF6A3D,
+       sage #6FD08C (fix/do), red #FF4D4D (don't), muted #A89F92. Instrument Serif (display, italic), Geist (UI), Geist Mono (.md files).
+       Full-screen takeovers sit on a warm walnut desk under lamp light (no flat colour backgrounds), with a realistic laptop/editor.
+       Her real room as shot, no decor (her face fills the frame: hair top ~y 400, chin ~1260). Top-band cards stay in 170-380;
+       captions under her chin (~1440). No camera moves (overlay on the 4K original). -->
+  <div id="root" data-composition-id="main" data-start="0" data-duration="{{dur}}" data-width="1080" data-height="1920" data-fps="30">
+    <div id="cam" style="z-index:1"><video id="base" src="assets/base.mp4" data-start="0" data-duration="{{dur}}" data-track-index="0" data-has-audio="true" playsinline></video></div>
+    <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="{{= 0 }}" data-duration="{{= (at(w29) - 0.1) - (0) }}" data-track-index="1" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="eps" data-composition-id="eps" data-composition-src="compositions/eps.html" data-start="{{= at(w29) - 0.1 }}" data-duration="{{= (at(w47) - 0.1) - (at(w29) - 0.1) }}" data-track-index="2" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="goals" data-composition-id="goals" data-composition-src="compositions/goals.html" data-start="{{= at(w47) - 0.1 }}" data-duration="{{= (at(w76) - 0.15) - (at(w47) - 0.1) }}" data-track-index="3" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="mdfiles" data-composition-id="mdfiles" data-composition-src="compositions/mdfiles.html" data-start="{{= at(w76) - 0.15 }}" data-duration="{{= (at(w102) - 0.1) - (at(w76) - 0.15) }}" data-track-index="4" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="generic" data-composition-id="generic" data-composition-src="compositions/generic.html" data-start="{{= at(w102) - 0.1 }}" data-duration="{{= (at(w149) - 0.1) - (at(w102) - 0.1) }}" data-track-index="5" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f1slam" data-composition-id="f1slam" data-composition-src="compositions/f1slam.html" data-start="{{= at(w149) - 0.1 }}" data-duration="{{= (at(w156) - 0.05) - (at(w149) - 0.1) }}" data-track-index="6" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f1" data-composition-id="f1" data-composition-src="compositions/f1.html" data-start="{{= at(w156) - 0.05 }}" data-duration="{{= (at(w188) - 0.1) - (at(w156) - 0.05) }}" data-track-index="7" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f2slam" data-composition-id="f2slam" data-composition-src="compositions/f2slam.html" data-start="{{= at(w188) - 0.1 }}" data-duration="{{= (at(w194) - 0.05) - (at(w188) - 0.1) }}" data-track-index="8" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f2" data-composition-id="f2" data-composition-src="compositions/f2.html" data-start="{{= at(w194) - 0.05 }}" data-duration="{{= (at(w211) - 0.1) - (at(w194) - 0.05) }}" data-track-index="9" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="trick" data-composition-id="trick" data-composition-src="compositions/trick.html" data-start="{{= at(w211) - 0.1 }}" data-duration="{{= (at(w232) - 0.05) - (at(w211) - 0.1) }}" data-track-index="10" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="gen" data-composition-id="gen" data-composition-src="compositions/gen.html" data-start="{{= at(w232) - 0.05 }}" data-duration="{{= (at(w251) - 0.1) - (at(w232) - 0.05) }}" data-track-index="11" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f3slam" data-composition-id="f3slam" data-composition-src="compositions/f3slam.html" data-start="{{= at(w251) - 0.1 }}" data-duration="{{= (at(w258) - 0.05) - (at(w251) - 0.1) }}" data-track-index="12" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="f3" data-composition-id="f3" data-composition-src="compositions/f3.html" data-start="{{= at(w258) - 0.05 }}" data-duration="{{= (at(w280) - 0.1) - (at(w258) - 0.05) }}" data-track-index="13" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="aimeter" data-composition-id="aimeter" data-composition-src="compositions/aimeter.html" data-start="{{= at(w280) - 0.1 }}" data-duration="{{= (at(w291) - 0.1) - (at(w280) - 0.1) }}" data-track-index="14" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="zero" data-composition-id="zero" data-composition-src="compositions/zero.html" data-start="{{= at(w291) - 0.1 }}" data-duration="{{= (at(w304) - 0.1) - (at(w291) - 0.1) }}" data-track-index="15" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="ep2" data-composition-id="ep2" data-composition-src="compositions/ep2.html" data-start="{{= at(w304) - 0.1 }}" data-duration="{{= (at(w318) - 0.1) - (at(w304) - 0.1) }}" data-track-index="16" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="endc" data-composition-id="endc" data-composition-src="compositions/endc.html" data-start="{{= at(w318) - 0.1 }}" data-duration="{{= (dur) - (at(w318) - 0.1) }}" data-track-index="17" data-track-kind="graphics" style="z-index:3"></div>
+    <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="{{dur}}" data-track-index="18" data-track-kind="captions" style="z-index:5"></div>
+  </div>
+  <script>const tl = gsap.timeline({ paused: true }); window.__timelines["main"] = tl;</script>
+</body>
+</html>

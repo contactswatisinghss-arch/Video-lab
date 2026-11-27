@@ -1,0 +1,46 @@
+<template>
+<!-- ABOUT ME (top band): a markdown checklist; each section ticks on the word that names it (role, focus this quarter, decisions made, #1 goal); on 'Claude knows who it is helping' the card flips to a green profile-loaded chip. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #a1-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #a1-h { position: absolute; left: 34px; top: 22px; font: 700 30px 'Geist Mono', monospace; color: #FF6A3D; }
+  #a1-g { position: absolute; left: 34px; right: 34px; top: 74px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+  .a1-r { position: relative; height: 52px; border-radius: 12px; background: #221D18; display: flex; align-items: center; gap: 12px; padding: 0 14px; font: 700 26px 'Geist', sans-serif; color: #F6F1E7; letter-spacing: .04em; white-space: nowrap; }
+  .a1-r i { font: 700 24px 'Geist Mono', monospace; color: #8F8577; font-style: normal; }
+  .a1-r svg { position: absolute; right: 12px; top: 12px; }
+  #a1-ok { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 22px; background: #15120E; opacity: 0; font: 400 66px 'Instrument Serif', serif; color: #F6F1E7; }
+  #a1-ok b { width: 80px; height: 80px; border-radius: 50%; background: #6FD08C; display: inline-flex; align-items: center; justify-content: center; }
+
+</style>
+<div id="root" data-composition-id="f1" data-width="1080" data-height="1920"><div id="f1-all" style="position:absolute;inset:0">
+  <div id="a1-card"><div id="a1-h">about-me.md</div>
+    <div id="a1-g">
+      <div class="a1-r" id="a1-r0"><i>1</i>ROLE<svg width="28" height="28" viewBox="0 0 28 28"><path id="a1-c0" d="M4 15l7 7L24 6" fill="none" stroke="#6FD08C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="40"/></svg></div>
+      <div class="a1-r" id="a1-r1"><i>2</i>FOCUS THIS QUARTER<svg width="28" height="28" viewBox="0 0 28 28"><path id="a1-c1" d="M4 15l7 7L24 6" fill="none" stroke="#6FD08C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="40"/></svg></div>
+      <div class="a1-r" id="a1-r2"><i>3</i>DECISIONS ALREADY MADE<svg width="28" height="28" viewBox="0 0 28 28"><path id="a1-c2" d="M4 15l7 7L24 6" fill="none" stroke="#6FD08C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="40"/></svg></div>
+      <div class="a1-r" id="a1-r3"><i>4</i>#1 GOAL<svg width="28" height="28" viewBox="0 0 28 28"><path id="a1-c3" d="M4 15l7 7L24 6" fill="none" stroke="#6FD08C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="40"/></svg></div>
+    </div>
+    <div id="a1-ok"><b><svg width="46" height="46" viewBox="0 0 28 28"><path d="M4 15l7 7L24 6" fill="none" stroke="#15120E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></b>Claude knows <i style="color:#6FD08C">you</i></div>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w156) - 0.05 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#a1-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  tl.fromTo("#a1-r0", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "expo.out" }, {{at:w159}} - S - 0.15);
+  tl.fromTo("#a1-c0", { strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, {{at:w159}} - S + 0.15);
+  tl.fromTo("#a1-r1", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "expo.out" }, {{at:w162}} - S - 0.15);
+  tl.fromTo("#a1-c1", { strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, {{at:w162}} - S + 0.15);
+  tl.fromTo("#a1-r2", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "expo.out" }, {{at:w167}} - S - 0.15);
+  tl.fromTo("#a1-c2", { strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, {{at:w167}} - S + 0.15);
+  tl.fromTo("#a1-r3", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "expo.out" }, {{at:w178}} - S - 0.15);
+  tl.fromTo("#a1-c3", { strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, {{at:w178}} - S + 0.15);
+  tl.fromTo("#a1-ok", { opacity: 0 }, { opacity: 1, duration: 0.2 }, {{at:w182}} - S);
+  tl.fromTo("#a1-ok b", { scale: 0.3 }, { scale: 1, duration: 0.4, ease: "back.out(2.5)" }, {{at:w182}} - S);
+  tl.to("#a1-card", { y: -260, duration: 0.25, ease: "power3.in" }, {{at:w188}} - 0.1 - S - 0.28);
+  window.__timelines["f1"] = tl;
+})();
+</script>
+</template>

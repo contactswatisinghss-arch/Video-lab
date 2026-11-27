@@ -1,0 +1,74 @@
+<template>
+<!-- WHAT .md FILES ARE (full-screen takeover): a laptop on the walnut desk shows a Claude Project's files; about-me.md opens and plain text types in; on 'reads before it replies' the files stream into the reply. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+  #md-desk { position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 30% at 82% 4%, rgba(255,196,128,.55), rgba(255,170,100,.12) 55%, transparent 75%),
+      radial-gradient(ellipse 120% 70% at 50% 110%, rgba(0,0,0,.65), transparent 60%),
+      repeating-linear-gradient(94deg, rgba(0,0,0,.10) 0 2px, transparent 2px 9px, rgba(255,230,200,.035) 9px 11px, transparent 11px 23px, rgba(0,0,0,.06) 23px 26px, transparent 26px 41px),
+      repeating-linear-gradient(91deg, rgba(90,55,30,.0) 0 140px, rgba(30,18,10,.35) 140px 143px, rgba(90,55,30,0) 143px 260px),
+      linear-gradient(180deg, #4A3323 0%, #36251A 45%, #241810 100%); }
+  #md-desk::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
+
+  #md-tag { position: absolute; left: 0; right: 0; top: 200px; text-align: center; font: 400 92px/1 'Instrument Serif', serif; color: #F6F1E7; text-shadow: 0 6px 24px rgba(0,0,0,.5); }
+  #md-tag i { color: #FF6A3D; font-family: 'Geist Mono', monospace; font-style: normal; font-size: 84px; }
+  #md-sub { position: absolute; left: 0; right: 0; top: 312px; text-align: center; font: 600 32px 'Geist', sans-serif; color: #E8DCCB; letter-spacing: .08em; }
+  #md-lap { position: absolute; left: 50px; right: 50px; top: 400px; height: 720px; border-radius: 30px; background: #0E0D0C; padding: 18px; box-sizing: border-box; box-shadow: 0 40px 80px rgba(0,0,0,.6), inset 0 0 0 2px #2B2621; }
+  #md-scr { position: relative; width: 100%; height: 100%; border-radius: 16px; background: #1B1814; overflow: hidden; }
+  #md-side { position: absolute; left: 0; top: 0; bottom: 0; width: 330px; background: #15120F; border-right: 2px solid #2B2621; padding: 26px 20px; box-sizing: border-box; }
+  #md-side h4 { margin: 0 0 18px; font: 700 24px 'Geist', sans-serif; color: #A89F92; letter-spacing: .12em; }
+  .md-f { height: 62px; border-radius: 12px; display: flex; align-items: center; gap: 14px; padding: 0 14px; font: 500 27px 'Geist Mono', monospace; color: #D9CFBF; margin-bottom: 10px; }
+  .md-f i { width: 24px; height: 30px; border-radius: 4px; background: #F6F1E7; display: inline-block; flex: none; position: relative; }
+  .md-f i::after { content: "M↓"; position: absolute; left: 1px; top: 8px; font: 700 10px 'Geist', sans-serif; color: #15120E; }
+  #md-f1 { background: rgba(255,106,61,.18); color: #FFB08F; }
+  #md-ed { position: absolute; left: 330px; right: 0; top: 0; bottom: 0; padding: 30px 34px; box-sizing: border-box; font: 500 30px/1.55 'Geist Mono', monospace; color: #E8DCCB; }
+  #md-ed .h { color: #FF6A3D; font-weight: 700; }
+  #md-ed .c { color: #8F8577; }
+  .md-ln { white-space: nowrap; overflow: hidden; }
+  #md-flow { position: absolute; left: 110px; right: 110px; top: 1150px; height: 200px; }
+  #md-arrow { position: absolute; left: 0; right: 0; top: 0; text-align: center; font: 700 34px 'Geist', sans-serif; color: #F6F1E7; letter-spacing: .1em; }
+  #md-arrow b { color: #6FD08C; }
+  #md-rep { position: absolute; left: 60px; right: 60px; top: 62px; height: 110px; border-radius: 24px; background: #F6F1E7; display: flex; align-items: center; padding: 0 28px; font: 600 32px 'Geist', sans-serif; color: #2A241D; box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+  #md-rep i { width: 16px; height: 16px; border-radius: 50%; background: #FF6A3D; margin-right: 18px; display: inline-block; }
+
+</style>
+<div id="root" data-composition-id="mdfiles" data-width="1080" data-height="1920"><div id="mdfiles-all" style="position:absolute;inset:0">
+  <div id="md-desk"></div>
+  <div id="md-tag"><i>.md</i> = markdown</div>
+  <div id="md-sub">PLAIN-TEXT FILES IN A CLAUDE PROJECT</div>
+  <div id="md-lap"><div id="md-scr">
+    <div id="md-side"><h4>PROJECT FILES</h4>
+      <div class="md-f" id="md-f1"><i></i>about-me.md</div>
+      <div class="md-f" id="md-f2"><i></i>voice-profile.md</div>
+      <div class="md-f" id="md-f3"><i></i>never-list.md</div></div>
+    <div id="md-ed">
+      <div class="md-ln" id="md-l1"><span class="h"># About me</span></div>
+      <div class="md-ln" id="md-l2"><span class="c">## Role</span></div>
+      <div class="md-ln" id="md-l3">Software engineer, AI team</div>
+      <div class="md-ln" id="md-l4"><span class="c">## Focus this quarter</span></div>
+      <div class="md-ln" id="md-l5">Ship the search launch</div>
+      <div class="md-ln" id="md-l6"><span class="c">## #1 goal</span></div>
+      <div class="md-ln" id="md-l7">Get promoted</div>
+    </div>
+  </div></div>
+  <div id="md-flow"><div id="md-arrow">READ <b>BEFORE</b> EVERY REPLY ↓</div><div id="md-rep"><i></i>Got it. For your search launch…</div></div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w76) - 0.15 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#md-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0);
+  tl.fromTo("#md-lap", { y: 260, rotationX: 18, opacity: 0 }, { y: 0, rotationX: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 0.05);
+  tl.fromTo("#md-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, {{at:w85}} - S);
+  tl.fromTo(".md-f", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power3.out", stagger: 0.1 }, {{at:w80}} - S);
+  ["#md-l1","#md-l2","#md-l3","#md-l4","#md-l5","#md-l6","#md-l7"].forEach((l, i) =>
+    tl.fromTo(l, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.28, ease: "none" }, {{at:w87}} - S + i * 0.3));
+  tl.fromTo("#md-arrow", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, {{at:w94}} - S);
+  tl.fromTo("#md-rep", { y: 40, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, {{at:w97}} - S);
+  tl.fromTo("#mdfiles-all", { clipPath: "inset(0% 0 0% 0)" }, { clipPath: "inset(0% 0 0% 100%)", duration: 0.3, ease: "power4.in" }, {{at:w102}} - 0.1 - S - 0.32);
+  window.__timelines["mdfiles"] = tl;
+})();
+</script>
+</template>

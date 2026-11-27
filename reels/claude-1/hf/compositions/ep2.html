@@ -1,0 +1,37 @@
+<template>
+<!-- EP 2 TEASER (top band): the series map returns with EP2 lit; bubbles ping-pong ('back and forth') while a clock eats the afternoon. -->
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  #e2-card { position: absolute; left: 60px; right: 60px; top: 176px; height: 208px; border-radius: 28px; background: rgba(21,18,14,.94);
+    border: 2px solid rgba(255,106,61,.42); box-shadow: 0 22px 48px rgba(0,0,0,.42); overflow: hidden; }
+  #e2-h { position: absolute; left: 34px; top: 22px; padding: 6px 16px; border-radius: 999px; background: #FF6A3D; color: #15120E; font: 800 26px 'Geist', sans-serif; letter-spacing: .12em; }
+  #e2-t { position: absolute; left: 34px; top: 82px; width: 560px; font: 400 54px/1.05 'Instrument Serif', serif; color: #F6F1E7; }
+  #e2-t i { color: #FF6A3D; }
+  .e2-b { position: absolute; width: 120px; height: 40px; border-radius: 20px; }
+  #e2-clk { position: absolute; right: 40px; top: 30px; }
+
+</style>
+<div id="root" data-composition-id="ep2" data-width="1080" data-height="1920"><div id="ep2-all" style="position:absolute;inset:0">
+  <div id="e2-card"><div id="e2-h">NEXT · EP 2</div><div id="e2-t">the back-and-forth that eats your <i>afternoon</i></div>
+    <div class="e2-b" id="e2-b0" style="left:640px;top:34px;background:#FF6A3D"></div>
+    <div class="e2-b" id="e2-b1" style="left:610px;top:84px;background:#3A332C"></div>
+    <div class="e2-b" id="e2-b2" style="left:640px;top:134px;background:#FF6A3D"></div>
+    <svg id="e2-clk" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#221D18" stroke="#F6F1E7" stroke-width="6"/>
+      <g id="e2-hh" ><path d="M72 75 L75 38 L78 75 Z" fill="#F6F1E7"/></g>
+      <g id="e2-mh" ><path d="M73 75 L75 20 L77 75 Z" fill="#FF6A3D"/></g>
+      <circle cx="75" cy="75" r="7" fill="#F6F1E7"/></svg>
+  </div>
+</div></div>
+<script>
+(function () {
+  const S = {{= at(w304) - 0.1 }};
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#e2-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
+  ["#e2-b0", "#e2-b1", "#e2-b2"].forEach((b, i) => tl.fromTo(b, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.5)" }, {{at:w310}} - S + i * 0.18));
+  tl.fromTo("#e2-hh", { rotation: 30, svgOrigin: "75 75" }, { rotation: 150, svgOrigin: "75 75", duration: 2.4, ease: "power1.inOut" }, {{at:w313}} - S);
+  tl.fromTo("#e2-mh", { rotation: 0, svgOrigin: "75 75" }, { rotation: 1440, svgOrigin: "75 75", duration: 2.4, ease: "power1.inOut" }, {{at:w313}} - S);
+  tl.to("#e2-card", { y: -260, duration: 0.25, ease: "power3.in" }, {{at:w318}} - 0.1 - S - 0.28);
+  window.__timelines["ep2"] = tl;
+})();
+</script>
+</template>

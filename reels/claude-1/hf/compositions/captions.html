@@ -1,0 +1,39 @@
+<template>
+<style>
+  #root { position: absolute; inset: 0; pointer-events: none; }
+  /* under her chin (~1440). No pill: warm-white Geist with a soft dark halo; the spoken word gets an ember marker block
+     behind it (like a highlighted line in a .md file). New look for this Reel. */
+  #c1-stage { position: absolute; left: 60px; right: 60px; top: 1430px; height: 130px; }
+  .cap-group { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+  .cap-line { display: inline-block; font-family: 'Geist', sans-serif; font-weight: 800; color: #FFF8EE; line-height: 1.12; letter-spacing: -.01em;
+    text-shadow: 0 3px 14px rgba(0,0,0,.75), 0 0 2px rgba(0,0,0,.9); }
+  .cap-word { display: inline-block; position: relative; padding: 0 6px; }
+  .cap-word .cap-txt { position: relative; z-index: 1; }
+  .cap-word .c1-m { position: absolute; left: 0; right: 0; top: 8%; bottom: 2%; border-radius: 10px; background: #FF6A3D; transform-origin: 0 50%; transform: scaleX(0); z-index: 0; }
+</style>
+<div id="root" data-composition-id="captions" data-width="1080" data-height="1920"><div id="c1-stage"></div></div>
+<script>
+(function () {
+  {{lib:captions}}
+  const tl = gsap.timeline({ paused: true });
+  HFCaps.build({
+    tl, container: "#c1-stage", words: {{words}}, idPrefix: "c1cap",
+    maxWords: 3, maxChars: 20, pauseBreak: 0.28, hold: 0.3,
+    font: { family: "Geist", weight: 800, size: 66, min: 46, maxWidth: 940 },
+    enter(tl, g, spans, grp) {
+      spans.forEach(s => { const m = document.createElement("span"); m.className = "c1-m"; s.insertBefore(m, s.firstChild); });
+      tl.fromTo(g, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.16, ease: "power3.out" }, grp.start);
+    },
+    word(tl, span, w, grp, i) {
+      const m = span.querySelector(".c1-m"), t = span.querySelector(".cap-txt");
+      tl.fromTo(m, { scaleX: 0 }, { scaleX: 1, duration: 0.1, ease: "power2.out" }, Math.max(grp.start, w.start - 0.03));
+      tl.fromTo(t, { color: "#FFF8EE" }, { color: "#15120E", duration: 0.05 }, Math.max(grp.start, w.start - 0.02));
+      tl.to(m, { scaleX: 0, transformOrigin: "100% 50%", duration: 0.08 }, w.end + 0.02);
+      tl.to(t, { color: "#FFF8EE", duration: 0.05 }, w.end + 0.02);
+    },
+    exit(tl, g, grp) { tl.to(g, { opacity: 0, y: -8, duration: 0.09, ease: "power2.in" }, grp.end - 0.09); }
+  });
+  window.__timelines["captions"] = tl;
+})();
+</script>
+</template>
