@@ -1,61 +1,31 @@
 <template>
-<!-- HOOK / COVER: frame 0 carries the topic (Claude Power User EP 1) + the claim. A generic chat window sits on the desk; on 'chatbot' it is struck and stamped, then the desk wipes away to reveal her. -->
+<!-- HOOK / COVER (top band, her window clip stays visible): series badge + title on frame 0; on 'chatbot' the word is struck in red and 'power user' slides in under it. -->
 <style>
   #root { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-
-  #hk-desk { position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 55% 30% at 82% 4%, rgba(255,196,128,.55), rgba(255,170,100,.12) 55%, transparent 75%),
-      radial-gradient(ellipse 120% 70% at 50% 110%, rgba(0,0,0,.65), transparent 60%),
-      repeating-linear-gradient(94deg, rgba(0,0,0,.10) 0 2px, transparent 2px 9px, rgba(255,230,200,.035) 9px 11px, transparent 11px 23px, rgba(0,0,0,.06) 23px 26px, transparent 26px 41px),
-      repeating-linear-gradient(91deg, rgba(90,55,30,.0) 0 140px, rgba(30,18,10,.35) 140px 143px, rgba(90,55,30,0) 143px 260px),
-      linear-gradient(180deg, #4A3323 0%, #36251A 45%, #241810 100%); }
-  #hk-desk::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
-
-  #hk-pan { position: absolute; inset: 0; }
-  #hk-k { position: absolute; left: 0; right: 0; top: 196px; text-align: center; }
-  #hk-k span { display: inline-block; padding: 10px 24px; border-radius: 999px; background: #FF6A3D; color: #15120E; font: 800 32px 'Geist', sans-serif; letter-spacing: .14em; }
-  #hk-t { position: absolute; left: 50px; right: 50px; top: 290px; text-align: center; font: 400 150px/0.9 'Instrument Serif', serif; color: #F6F1E7; letter-spacing: -.01em; text-shadow: 0 8px 30px rgba(0,0,0,.5); }
-  #hk-t i { color: #FF6A3D; }
-  #hk-s { position: absolute; left: 0; right: 0; top: 615px; text-align: center; font: 600 46px 'Geist', sans-serif; color: #F6F1E7; opacity: .92; }
-  #hk-s b { color: #FF6A3D; font-family: 'Geist Mono', monospace; font-weight: 600; }
-  #hk-win { position: absolute; left: 110px; right: 110px; top: 740px; height: 520px; border-radius: 26px; background: #F6F1E7; box-shadow: 0 30px 70px rgba(0,0,0,.55); overflow: hidden; }
-  #hk-bar { height: 62px; background: #E9E1D3; display: flex; align-items: center; gap: 12px; padding: 0 24px; }
-  #hk-bar i { width: 18px; height: 18px; border-radius: 50%; background: #CFC4B2; display: inline-block; }
-  #hk-bar span { margin-left: 16px; font: 600 26px 'Geist', sans-serif; color: #8C8274; }
-  #hk-hi { position: absolute; left: 0; right: 0; top: 150px; text-align: center; font: 400 66px 'Instrument Serif', serif; color: #2A241D; }
-  #hk-in { position: absolute; left: 50px; right: 50px; top: 300px; height: 110px; border-radius: 22px; border: 2px solid #D8CEBD; background: #fff; display: flex; align-items: center; padding: 0 30px; font: 500 34px 'Geist', sans-serif; color: #A89F92; }
-  #hk-in b { margin-left: auto; width: 58px; height: 58px; border-radius: 14px; background: #FF6A3D; }
-  #hk-x { position: absolute; left: 70px; right: 70px; top: 255px; height: 12px; border-radius: 6px; background: #FF4D4D; transform-origin: 0 50%; transform: scaleX(0); }
-  #hk-st { position: absolute; left: 0; right: 0; top: 920px; text-align: center; opacity: 0; }
-  #hk-st span { display: inline-block; padding: 14px 40px 20px; border: 8px solid #FF4D4D; border-radius: 20px; color: #FF4D4D; background: rgba(21,18,14,.9); font: 800 104px/1 'Geist', sans-serif; letter-spacing: .06em; }
+  #hk-card { position: absolute; left: 50px; right: 50px; top: 172px; height: 222px; border-radius: 30px; background: rgba(21,18,14,.93);
+    border: 2px solid rgba(255,106,61,.5); box-shadow: 0 24px 50px rgba(0,0,0,.45); overflow: hidden; }
+  #hk-k { position: absolute; left: 34px; top: 22px; padding: 6px 16px; border-radius: 999px; background: #FF6A3D; color: #15120E; font: 800 26px 'Geist', sans-serif; letter-spacing: .12em; }
+  #hk-m { position: absolute; right: 34px; top: 26px; font: 600 26px 'Geist Mono', monospace; color: #A89F92; }
+  #hk-t { position: absolute; left: 34px; right: 34px; top: 92px; font: 400 80px/1 'Instrument Serif', serif; color: #F6F1E7; white-space: nowrap; letter-spacing: -.01em; }
+  #hk-w { position: relative; display: inline-block; color: #FF6A3D; font-style: italic; }
+  #hk-x { position: absolute; left: -6px; right: -6px; top: 52px; height: 10px; border-radius: 5px; background: #FF4D4D; transform-origin: 0 50%; transform: scaleX(0); }
+  #hk-pu { position: absolute; left: 34px; right: 34px; top: 76px; font: 400 96px/1 'Instrument Serif', serif; color: #6FD08C; font-style: italic; opacity: 0; white-space: nowrap; }
 
 </style>
 <div id="root" data-composition-id="hook" data-width="1080" data-height="1920"><div id="hook-all" style="position:absolute;inset:0">
-  <div id="hk-pan">
-    <div id="hk-desk"></div>
-    <div id="hk-k"><span>CLAUDE POWER USER · EP 1</span></div>
-    <div id="hk-t">Stop using Claude<br>as a <i>chatbot</i></div>
-    <div id="hk-s">3 <b>.md</b> files that make it know you</div>
-    <div id="hk-win">
-      <div id="hk-bar"><i></i><i></i><i></i><span>New chat</span></div>
-      <div id="hk-hi">How can I help you today?</div>
-      <div id="hk-in">Ask anything…<b></b></div>
-      <div id="hk-x"></div>
-    </div>
-    <div id="hk-st"><span>JUST A CHATBOT?</span></div>
+  <div id="hk-card">
+    <div id="hk-k">CLAUDE POWER USER · EP 1</div><div id="hk-m">3 .md files</div>
+    <div id="hk-t">Stop using Claude as a <span id="hk-w">chatbot<i id="hk-x"></i></span></div>
   </div>
 </div></div>
 <script>
 (function () {
   const S = 0;
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo("#hk-t", { scale: 1.04 }, { scale: 1, duration: 0.5, ease: "expo.out" }, 0);
-  tl.fromTo("#hk-win", { y: 40, rotation: -1.5 }, { y: 0, rotation: 0, duration: 0.6, ease: "expo.out" }, 0);
-  tl.fromTo("#hk-x", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power2.out" }, {{at:w9}} - S);
-  tl.to("#hk-win", { rotation: -4, y: 30, opacity: 0.55, duration: 0.3, ease: "power2.out" }, {{at:w10}} - S);
-  tl.fromTo("#hk-st", { opacity: 0, scale: 2.2, rotation: -12 }, { opacity: 1, scale: 1, rotation: -5, duration: 0.26, ease: "power4.out" }, {{at:w10}} - S + 0.05);
-  tl.fromTo("#hk-pan", { clipPath: "inset(0% 0 0% 0)" }, { clipPath: "inset(0% 0 100% 0)", duration: 0.32, ease: "power4.in" }, {{at:w29}} - 0.1 - S - 0.34);
+  tl.fromTo("#hk-t", { y: 8 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0);
+  tl.fromTo("#hk-x", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power2.out" }, {{at:w10}} - S);
+  tl.fromTo("#hk-w", { y: 0 }, { y: 6, rotation: 3, duration: 0.2, ease: "power2.out" }, {{at:w10}} - S + 0.15);
+  tl.to("#hk-card", { y: -260, duration: 0.25, ease: "power3.in" }, {{at:w11}} - 0.1 - S - 0.28);
   window.__timelines["hook"] = tl;
 })();
 </script>

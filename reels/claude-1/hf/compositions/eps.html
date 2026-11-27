@@ -7,8 +7,8 @@
   #ep-l { position: absolute; left: 34px; top: 24px; font: 800 26px 'Geist', sans-serif; color: #FF6A3D; letter-spacing: .14em; }
   #ep-row { position: absolute; left: 34px; right: 34px; top: 66px; display: flex; gap: 14px; }
   .ep-t { flex: 1; height: 70px; border-radius: 16px; border: 2px solid #3A332C; display: flex; align-items: center; justify-content: center; font: 700 30px 'Geist Mono', monospace; color: #7C7368; }
-  #ep-1 { background: #FF6A3D; color: #15120E; border-color: #FF6A3D; }
-  #ep-bar { position: absolute; left: 34px; right: 210px; top: 162px; height: 16px; border-radius: 8px; background: #2C2620; }
+  #ep-1 { border-color: #FF6A3D; }
+  #ep-bar { position: absolute; left: 34px; right: 260px; top: 162px; height: 16px; border-radius: 8px; background: #2C2620; }
   #ep-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: 8px; background: linear-gradient(90deg, #FF6A3D, #FFB27A); transform-origin: 0 50%; transform: scaleX(0); }
   #ep-pu { position: absolute; right: 34px; top: 148px; font: 800 30px 'Geist', sans-serif; color: #F6F1E7; letter-spacing: .06em; opacity: 0; }
 
@@ -22,10 +22,11 @@
 </div></div>
 <script>
 (function () {
-  const S = {{= at(w29) - 0.1 }};
+  const S = {{= at(w11) - 0.1 }};
   const tl = gsap.timeline({ paused: true });
   tl.fromTo("#ep-card", { y: -260 }, { y: 0, duration: 0.45, ease: "expo.out" }, 0);
-  tl.fromTo(".ep-t", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out", stagger: 0.07 }, {{at:w29}} - S);
+  tl.fromTo(".ep-t", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out", stagger: 0.07 }, {{at:w15}} - S);
+  tl.fromTo("#ep-1", { backgroundColor: "rgba(0,0,0,0)", color: "#7C7368" }, { backgroundColor: "#FF6A3D", color: "#15120E", duration: 0.2 }, {{at:w29}} - S);
   tl.fromTo("#ep-1", { scale: 1 }, { scale: 1.1, duration: 0.18, ease: "back.out(3)", yoyo: true, repeat: 1 }, {{at:w30}} - S + 0.3);
   tl.fromTo("#ep-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: "power2.inOut" }, {{at:w35}} - S);
   tl.fromTo("#ep-pu", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, {{at:w39}} - S);

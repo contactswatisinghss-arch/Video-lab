@@ -9,9 +9,10 @@ credits, YouTube/TikTok blocked; partial notes in RESEARCH.md).
 - Spoken (kept as is): "Stop being unfair to yourself by using Claude as a chatbot." hookscore.py **81.4 STRONG** (tool).
 - Frame 0 (cover): "CLAUDE POWER USER · EP 1" + "Stop using Claude as a chatbot" + "3 .md files that make it know you".
 
-## Length / cuts (raw 112.9 s -> 87.8 s)
-Removed: "So I'm starting the series and this might be the most useful one that you'll watch in 2026" (date + slow),
-"To get there, you need to know how Claude actually works", "Those are markdown files" (said on screen instead),
+## Length / cuts (raw 112.9 s -> 93.0 s)
+**Swati (27 Nov): the opening clips are visual hooks, keep them.** The window (raw 0–3.6), balcony (3.6–12.8) and living-room
+(12.8–19.7) clips stay whole and uncovered (top-band cards only). Spoken "…watch in 2026" therefore stays (caption shows it).
+Removed: "To get there, you need to know how Claude actually works", "Those are markdown files" (said on screen instead),
 "Now let's make them specific so you never have to explain yourself…" (repeats the stake), "you need to answer and"
 (stretched filler). Pauses > 0.4 s cut. Ends on her loop line "…stop being unfair to yourself" (echoes the hook).
 
@@ -25,9 +26,9 @@ hair; captions under her chin (~1430) with an ember marker on the spoken word. N
 ## Beat table (final clock)
 | Time | Her words | Device | What appears |
 |---|---|---|---|
-| 0–3.6 | "Stop being unfair… as a chatbot" | Full-screen cover + UI strike | Title on frame 0; a generic "How can I help you today?" chat window gets struck, JUST A CHATBOT? stamp; wipe to her |
-| 3.6–8.7 | "Five episodes… power user" | Series map + meter (top band) | EP1–EP5 tiles, EP1 lit; POWER USER bar fills |
-| 8.7–13.9 | "Claude will know you… not someone else's" | Two-way compare (top band) | "someone else's goals" struck vs "YOUR goals" target |
+| 0–3.6 (window clip) | "Stop being unfair… as a chatbot" | Title card (top band) + strike | Frame 0: CLAUDE POWER USER · EP 1 + "Stop using Claude as a chatbot"; "chatbot" struck in red |
+| 3.6–13.9 (balcony clip) | "So I'm starting the series… power user" | Series map + meter (top band) | EP1–EP5 tiles on "series", EP1 lit on "Five episodes"; POWER USER bar fills |
+| 13.9–19.1 (living-room clip) | "Claude will know you… not someone else's" | Two-way compare (top band) | "someone else's goals" struck vs "YOUR goals" target |
 | 13.9–21.9 | ".md files… reads before it replies" | Realistic laptop takeover | Claude Project file list (3 .md files), about-me.md types in, "read BEFORE every reply" → reply bubble |
 | 21.9–29.8 | "starts from a generic state… built for everyone" | Counter → clone wall | "0 facts about you"; same generic answer clones into a full-screen wall, "built for everyone" |
 | 29.8–31.9 | "The first file is about me file" | File slam (full screen) | 01 + about-me.md sheet drops on the desk |
@@ -43,8 +44,8 @@ hair; captions under her chin (~1430) with an ember marker on the spoken word. N
 | 79.1–83.5 | "In episode two… eats your whole afternoon" | Teaser card (top band) | NEXT · EP 2, ping-pong bubbles, clock spins |
 | 83.5–87.8 | "Follow so you don't miss it…" | End card (top band) | FOLLOW + 3 files ticked |
 
-Devices used: 11 different (cover strike, series meter, compare, realistic laptop, clone wall, file slam, checklist,
-waveform chips, chat takeover, gauge, fan-out kinetic type). Full-screen takeovers: 7.
+Beat times after the opening shift by ~5.2 s (see the token-anchored composition). Devices used: 11 different (cover strike, series meter, compare, realistic laptop, clone wall, file slam, checklist,
+waveform chips, chat takeover, gauge, fan-out kinetic type). Full-screen takeovers: 6 (none over the opening clips).
 
 ## Facts / flags
 - "Claude reads .md files before it replies to anything" is true when the files are in a **Claude Project** (project
