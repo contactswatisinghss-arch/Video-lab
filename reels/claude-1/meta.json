@@ -1,0 +1,21 @@
+{
+  "width": 2160,
+  "height": 3840,
+  "fps": 60.0,
+  "codec": "hevc",
+  "transfer": "arib-std-b67",
+  "duration": 112.9,
+  "has_audio": true,
+  "size_mb": 405.2,
+  "model": "medium.en",
+  "language": "en",
+  "audio_mean_db": -27.6,
+  "audio_peak_db": -4.4,
+  "words": 330,
+  "warnings": [
+    "HDR (iPhone) source: converted to standard range.",
+    "Raw length 113s: tighten, or split into a 2-part series (sweet spot 35-90 s).",
+    "9 low-confidence words (check names/jargon): Claude(w7), way(w55), in(w89), Claude(w182), interview(w222), and(w242), never(w255), like(w266), fix(w308)"
+  ],
+  "hdr_mode": "tonemap"
+}
